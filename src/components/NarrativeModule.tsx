@@ -4,6 +4,7 @@ import { sourcesList } from '../content/sourcesData.ts';
 import { Check, X, Shield, ExternalLink, Sparkles, Building, Briefcase, Award } from 'lucide-react';
 import buxtonImage from '../assets/images/buxton_urban_renewal_1792778749005.jpg';
 import { MessageHouseVisual } from './visuals/MessageHouseVisual.tsx';
+import { BeforeAfterSlider } from './visuals/BeforeAfterSlider.tsx';
 
 export const NarrativeModule: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'pillars' | 'variants' | 'guidelines'>('pillars');
@@ -12,8 +13,8 @@ export const NarrativeModule: React.FC = () => {
   const currentPillar = narrativePillars[selectedPillarIndex];
 
   return (
-    <section id="narrative" className="py-14 bg-neutral-50 border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+    <section id="narrative" className="py-10 sm:py-14 bg-neutral-50 border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-10">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-2">
@@ -22,10 +23,10 @@ export const NarrativeModule: React.FC = () => {
             <span aria-hidden="true">·</span>
             <span>Strategic Narrative Architecture</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight leading-tight">
             Issue &amp; Narrative Framework (Message House)
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             A cohesive, evidence-backed narrative system that sets the campaign agenda. Instead of responding 
             to political distractions, the campaign consistently anchors public discourse around economic competence, 
             modern housing, port value retention, and trader dignity.
@@ -35,62 +36,67 @@ export const NarrativeModule: React.FC = () => {
         {/* Visual Message House Architecture (Visual Guide §5.4 & §2.3) */}
         <MessageHouseVisual />
 
+        {/* Visual Infrastructure Delivery Proof: Before / After Slider (Visual Guide §5.6 & §14) */}
+        <BeforeAfterSlider />
+
         {/* The Umbrella Message House Roof */}
-        <div className="bg-white rounded-xl border border-neutral-200 p-6 sm:p-8 space-y-4 shadow-xs">
-          <div className="flex items-center justify-between gap-4 border-b border-neutral-200 pb-4">
+        <div className="bg-white rounded-xl sm:rounded-2xl border border-neutral-200 p-5 sm:p-8 space-y-4 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-200 pb-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 font-mono">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-800 font-mono">
                 Overarching Campaign Roof Narrative
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 mt-1">
+              <h3 className="text-lg sm:text-2xl font-extrabold text-neutral-950 mt-1">
                 {umbrellaNarrative.title}
               </h3>
             </div>
-            <span className="text-xs font-medium text-neutral-600 bg-neutral-100 px-3 py-1 rounded-md hidden sm:inline">
+            <span className="text-[11px] sm:text-xs font-semibold text-neutral-800 bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-md self-start sm:self-auto font-mono">
               Core Campaign Thesis
             </span>
           </div>
 
-          <p className="text-base sm:text-lg text-neutral-800 font-medium leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-900 font-semibold leading-relaxed">
             {umbrellaNarrative.headline}: {umbrellaNarrative.subheadline}
           </p>
 
-          <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed pt-2 border-t border-neutral-100">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed pt-2 border-t border-neutral-100">
             {umbrellaNarrative.context}
           </p>
         </div>
 
         {/* Narrative Sub-Navigation Tabs */}
-        <div className="flex items-center gap-2 border-b border-neutral-200 pb-2">
+        <div className="flex items-center gap-2 border-b border-neutral-200 pb-2 overflow-x-auto no-scrollbar touch-pan-x">
           <button
             onClick={() => setActiveTab('pillars')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors ${
+            className={`px-3.5 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'pillars'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                : 'bg-white text-neutral-700 hover:text-neutral-950 border border-neutral-200'
             }`}
           >
-            Four Core Policy Pillars &amp; Proof Points
+            <span className="sm:hidden">4 Pillars &amp; Proof</span>
+            <span className="hidden sm:inline">Four Core Policy Pillars &amp; Proof Points</span>
           </button>
           <button
             onClick={() => setActiveTab('variants')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors ${
+            className={`px-3.5 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'variants'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                : 'bg-white text-neutral-700 hover:text-neutral-950 border border-neutral-200'
             }`}
           >
-            Audience-Specific Message Variants
+            <span className="sm:hidden">Message Variants</span>
+            <span className="hidden sm:inline">Audience-Specific Message Variants</span>
           </button>
           <button
             onClick={() => setActiveTab('guidelines')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors ${
+            className={`px-3.5 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'guidelines'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                : 'bg-white text-neutral-700 hover:text-neutral-950 border border-neutral-200'
             }`}
           >
-            Message Do's &amp; Don'ts
+            <span>Message Do's &amp; Don'ts</span>
           </button>
         </div>
 

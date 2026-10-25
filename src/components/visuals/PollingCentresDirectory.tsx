@@ -29,14 +29,13 @@ export const PollingCentresDirectory: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Official IEBC Gazette Registry · Mombasa County (Code: 001)
+            Electoral Infrastructure Registry · Visual Guide §4.11 &amp; §8.6
           </span>
           <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mt-0.5">
-            Registration Centres &amp; Polling Station Defense Plan
+            37 Mega-Centres Account for Over 50% of Mombasa's Total Vote
           </h3>
           <p className="text-xs sm:text-sm text-neutral-600 mt-1 leading-relaxed">
-            Forensic breakdown of all registration centres, official IEBC codes, and voter concentrations across 
-            the 6 constituencies and 30 wards extracted directly from official IEBC returns.
+            Exhaustive forensic registry of all 100+ gazetted registration centres across 30 wards with a 2,080 accredited polling agent defense deployment calculator.
           </p>
         </div>
 

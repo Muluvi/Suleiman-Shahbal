@@ -22,8 +22,8 @@ export const ContentPlanModule: React.FC = () => {
   });
 
   return (
-    <section id="content" className="py-14 bg-white border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+    <section id="content" className="py-10 sm:py-14 bg-white border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-10">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-2">
@@ -32,66 +32,71 @@ export const ContentPlanModule: React.FC = () => {
             <span aria-hidden="true">·</span>
             <span>Digital Distribution &amp; Editorial Engine</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight leading-tight">
             Social Media &amp; 12-Week Content Calendar
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             A comprehensive, multi-platform communication plan synchronising WhatsApp community broadcasts, 
             TikTok short-form storytelling, executive X policy debates, and an interactive 12-week pre-campaign sprint.
           </p>
         </div>
 
         {/* Sub-Tabs */}
-        <div className="flex items-center gap-2 border-b border-neutral-200 pb-2 overflow-x-auto no-scrollbar">
+        <div className="flex items-center gap-1.5 sm:gap-2 border-b border-neutral-200 pb-2 overflow-x-auto no-scrollbar touch-pan-x">
           <button
             onClick={() => setActiveTab('calendar')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'calendar'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-neutral-100 text-neutral-600 hover:text-neutral-900'
+                : 'bg-neutral-100 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200'
             }`}
           >
-            Interactive 12-Week Sprint Calendar
+            <span className="sm:hidden">12-Week Sprint</span>
+            <span className="hidden sm:inline">Interactive 12-Week Sprint Calendar</span>
           </button>
           <button
             onClick={() => setActiveTab('shareables')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'shareables'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-neutral-100 text-neutral-600 hover:text-neutral-900'
+                : 'bg-neutral-100 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200'
             }`}
           >
-            Shareable WhatsApp Cards
+            <span className="sm:hidden">WhatsApp Cards</span>
+            <span className="hidden sm:inline">Shareable WhatsApp Cards</span>
           </button>
           <button
             onClick={() => setActiveTab('platforms')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'platforms'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-neutral-100 text-neutral-600 hover:text-neutral-900'
+                : 'bg-neutral-100 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200'
             }`}
           >
-            Platform Strategy Matrix
+            <span className="sm:hidden">Platforms</span>
+            <span className="hidden sm:inline">Platform Strategy Matrix</span>
           </button>
           <button
             onClick={() => setActiveTab('slogans')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'slogans'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-neutral-100 text-neutral-600 hover:text-neutral-900'
+                : 'bg-neutral-100 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200'
             }`}
           >
-            Swahili Slogans &amp; Hashtags
+            <span className="sm:hidden">Slogans</span>
+            <span className="hidden sm:inline">Swahili Slogans &amp; Hashtags</span>
           </button>
           <button
             onClick={() => setActiveTab('creators')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold rounded-lg whitespace-nowrap shrink-0 transition-colors ${
               activeTab === 'creators'
                 ? 'bg-neutral-900 text-white shadow-xs'
-                : 'bg-neutral-100 text-neutral-600 hover:text-neutral-900'
+                : 'bg-neutral-100 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200'
             }`}
           >
-            Creator Collaboration Framework
+            <span className="sm:hidden">Creators</span>
+            <span className="hidden sm:inline">Creator Collaboration Framework</span>
           </button>
         </div>
 

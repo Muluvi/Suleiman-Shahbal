@@ -25,13 +25,13 @@ export const TurnoutWaffleChart: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Part-to-Whole Visualisation · Section 4.7 (10×10 Waffle Grid)
+            Part-to-Whole Composition · Visual Guide §4.7 (10×10 Waffle Grid)
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            Two in Three Mombasa Voters Stayed Home in 2022
+            66% of Mombasa's Gazetted Electorate (424,725 Citizens) Did Not Vote in 2022
           </h3>
           <p className="text-xs text-neutral-600 mt-0.5">
-            Each tile represents 1% of the gazetted electorate (~6,419 registered citizens).
+            Part-to-whole 10×10 waffle grid mapping 217,188 ballots cast vs 424,725 unmobilised citizens (1 tile = 1% = 6,419 voters).
           </p>
         </div>
 

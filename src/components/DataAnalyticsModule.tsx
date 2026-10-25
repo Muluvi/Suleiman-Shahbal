@@ -5,6 +5,7 @@ import { InteractiveMombasaMap } from './visuals/InteractiveMombasaMap.tsx';
 import { StrategicQuadrant } from './visuals/StrategicQuadrant.tsx';
 import { PollingCentresDirectory } from './visuals/PollingCentresDirectory.tsx';
 import { WardLeagueTable } from './visuals/WardLeagueTable.tsx';
+import { WardScatterPlot } from './visuals/WardScatterPlot.tsx';
 
 export const DataAnalyticsModule: React.FC = () => {
   const [selectedSubCounty, setSelectedSubCounty] = useState<string>('All');
@@ -108,6 +109,9 @@ export const DataAnalyticsModule: React.FC = () => {
 
         {/* Visual System Feature 4: Strategic 2x2 Positioning Matrix */}
         <StrategicQuadrant />
+
+        {/* Visual Turnout vs Density Scatter Plot & Bubble Matrix (Visual Guide §4.2 & §14) */}
+        <WardScatterPlot />
 
         {/* Filter & Search Bar */}
         <div className="bg-white rounded-xl border border-neutral-200 p-4 sm:p-5 space-y-4 shadow-xs">

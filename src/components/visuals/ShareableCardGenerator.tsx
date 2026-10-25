@@ -83,13 +83,13 @@ export const ShareableCardGenerator: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Visual Storytelling · Section 6.5 &amp; 12.1 (Shareable WhatsApp &amp; Social Cards)
+            Visual Storytelling · Visual Guide §6.5 &amp; §12.1 (Shareable WhatsApp &amp; Social Cards)
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            Shareable Campaign Visual Card Generator
+            High-Contrast WhatsApp &amp; Social Cards Built for Viral P2P Forwarding
           </h3>
           <p className="text-xs text-neutral-600 mt-0.5">
-            Format high-contrast shareable cards designed for WhatsApp Status, X, and Instagram feeds.
+            Format 1:1 square and 16:9 landscape cards carrying verifiable quotes, Swahili soundbites, and direct campaign links.
           </p>
         </div>
 

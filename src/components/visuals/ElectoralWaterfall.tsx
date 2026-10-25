@@ -19,11 +19,14 @@ export const ElectoralWaterfall: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Explanatory Arithmetic · Section 5.8
+            Explanatory Arithmetic · Visual Guide §5.8 &amp; §4.9 (Waterfall Build-Up)
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            The Mathematical Formula for Victory (Waterfall Build-Up)
+            From 641,913 Baseline to 243,000 Votes: Strategic Arithmetic of a Turnout Surge
           </h3>
+          <p className="text-xs text-neutral-600 mt-0.5">
+            Interactive explanatory waterfall decomposing Mombasa's voter pool into modeled turnout targets and defended victory ballots.
+          </p>
         </div>
         
         <button

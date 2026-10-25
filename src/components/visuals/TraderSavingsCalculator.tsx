@@ -38,13 +38,13 @@ export const TraderSavingsCalculator: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Interactive Calculator · Section 6.3 &amp; 14
+            Explorable Explanation · Visual Guide §6.3 &amp; §14 (Interactive Policy Calculator)
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            Mama Mboga &amp; Trader Single Permit Savings Calculator
+            Single Digital Permit Delivers KSh 21,900 Direct Annual Savings to Micro-Traders
           </h3>
           <p className="text-xs text-neutral-600 mt-0.5">
-            Calculate how much an informal trader loses to overlapping county cess fees vs Shahbal's Unified Digital License.
+            Comparative financial model demonstrating how eliminating overlapping daily market cess unlocks liquidity for coastal small enterprises.
           </p>
         </div>
 

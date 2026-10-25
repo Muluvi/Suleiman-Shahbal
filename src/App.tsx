@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ReadingProgressBar } from './components/visuals/ReadingProgressBar.tsx';
 import { DisclaimerBanner } from './components/DisclaimerBanner.tsx';
 import { Header } from './components/Header.tsx';
+import { LiveCampaignMarquee } from './components/visuals/LiveCampaignMarquee.tsx';
 import { HeroSection } from './components/HeroSection.tsx';
 import { ExecutiveSummaryView } from './components/ExecutiveSummaryView.tsx';
 import { PersuasionModule } from './components/PersuasionModule.tsx';
@@ -71,6 +72,9 @@ export default function App() {
       <main className="flex-1">
         <HeroSection onExploreSection={scrollToSection} />
         
+        {/* Continuous High-Impact 4K Live Campaign Marquee */}
+        <LiveCampaignMarquee />
+
         <ExecutiveSummaryView onNavigate={scrollToSection} />
 
         <PersuasionModule />

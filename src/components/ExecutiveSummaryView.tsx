@@ -11,27 +11,27 @@ interface ExecutiveSummaryViewProps {
 
 export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNavigate }) => {
   return (
-    <section id="overview" className="py-12 bg-neutral-50 border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+    <section id="overview" className="py-10 sm:py-14 bg-neutral-50 border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-10">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-neutral-200 pb-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-neutral-200 pb-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500 font-mono">
               <span>Executive Briefing</span>
               <span aria-hidden="true">·</span>
-              <span className="flex items-center gap-1 text-neutral-700">
+              <span className="flex items-center gap-1 text-sky-800 font-bold">
                 <Clock className="w-3.5 h-3.5" /> 2-Minute Candidate Read
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight mt-1 leading-tight">
               The Path to a Decisive 2027 Victory
             </h2>
           </div>
-          <div className="text-xs text-neutral-500 sm:text-right">
+          <div className="text-xs text-neutral-600 sm:text-right">
             <span>Prepared for: </span>
-            <span className="font-semibold text-neutral-900">{executiveSummary.candidate}</span>
-            <span className="block">{executiveSummary.preparedBy}</span>
+            <span className="font-bold text-neutral-950">{executiveSummary.candidate}</span>
+            <span className="block text-neutral-500">{executiveSummary.preparedBy}</span>
           </div>
         </div>
 
@@ -39,33 +39,33 @@ export const ExecutiveSummaryView: React.FC<ExecutiveSummaryViewProps> = ({ onNa
         <CampaignKPIRibbon />
 
         {/* The Core Strategic Thesis Callout */}
-        <div className="bg-white rounded-xl border border-neutral-200 p-6 sm:p-8 shadow-xs">
+        <div className="bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 p-5 sm:p-8 shadow-xs">
           <div className="max-w-4xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-sky-800 font-mono">
               The Core Strategic Thesis
             </span>
-            <p className="text-lg sm:text-xl font-medium text-neutral-900 leading-relaxed">
+            <p className="text-base sm:text-xl font-bold text-neutral-950 leading-relaxed">
               "{executiveSummary.coreThesis}"
             </p>
-            <div className="pt-2 text-xs text-neutral-500">
+            <div className="pt-2 text-xs text-neutral-600">
               Based on official IEBC 2022 voter audit and KNBS demographic data · Zero individual personal data profiling.
             </div>
           </div>
         </div>
 
         {/* 4 Quantitative Anchor Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {executiveSummary.keyPillarsSummary.map((pillar, idx) => (
-            <div key={idx} className="bg-white rounded-xl border border-neutral-200 p-6 flex flex-col justify-between space-y-4 hover:border-neutral-300 transition-colors">
+            <div key={idx} className="bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 p-4 sm:p-6 flex flex-col justify-between space-y-3 sm:space-y-4 hover:border-neutral-300 transition-colors shadow-2xs">
               <div>
-                <span className="text-3xl font-extrabold text-neutral-900 font-mono tabular-nums block">
+                <span className="text-2xl sm:text-3xl font-extrabold text-neutral-950 font-mono tabular-nums block">
                   {pillar.metric}
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider text-neutral-600 block mt-1">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-neutral-700 block mt-1 font-mono">
                   {pillar.sublabel}
                 </span>
               </div>
-              <p className="text-xs text-neutral-600 leading-relaxed pt-2 border-t border-neutral-100">
+              <p className="text-xs text-neutral-700 leading-relaxed pt-2 border-t border-neutral-100 font-normal">
                 {pillar.insight}
               </p>
             </div>

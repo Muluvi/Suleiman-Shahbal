@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100 rounded-md transition-colors"
+            className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center p-2 text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 rounded-lg transition-colors border border-neutral-200"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -80,18 +80,21 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-neutral-200 px-4 pt-2 pb-4 space-y-1">
+        <div className="lg:hidden bg-white border-b border-neutral-200 px-4 pt-2 pb-4 space-y-1.5 shadow-lg">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`block w-full text-left px-3 py-2 rounded-md text-sm font-medium ${
+              className={`block w-full text-left px-3.5 py-3 rounded-lg text-sm font-semibold transition-colors min-h-[44px] flex items-center justify-between ${
                 activeSection === item.id
-                  ? 'bg-neutral-100 text-neutral-950 font-semibold'
-                  : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-950'
+                  ? 'bg-neutral-900 text-white shadow-xs'
+                  : 'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950'
               }`}
             >
-              {item.label}
+              <span>{item.label}</span>
+              {activeSection === item.id && (
+                <span className="text-[10px] font-mono uppercase bg-neutral-800 px-2 py-0.5 rounded text-neutral-300">Active</span>
+              )}
             </button>
           ))}
         </div>

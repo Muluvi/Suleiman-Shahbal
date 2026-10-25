@@ -22,7 +22,7 @@ export const InteractiveMombasaMap: React.FC = () => {
       path: 'M 40,80 L 150,60 L 170,120 L 100,160 L 30,120 Z',
       labelX: 95,
       labelY: 105,
-      voters: '75,085',
+      voters: '75,082',
       color: activeSubCounty === 'Jomvu' ? '#0f172a' : '#cbd5e1',
       textColor: activeSubCounty === 'Jomvu' ? '#ffffff' : '#1e293b'
     },
@@ -31,7 +31,7 @@ export const InteractiveMombasaMap: React.FC = () => {
       path: 'M 100,160 L 180,120 L 220,160 L 170,220 L 110,210 Z',
       labelX: 160,
       labelY: 175,
-      voters: '93,561',
+      voters: '93,572',
       color: activeSubCounty === 'Changamwe' ? '#0f172a' : '#cbd5e1',
       textColor: activeSubCounty === 'Changamwe' ? '#ffffff' : '#1e293b'
     },
@@ -40,7 +40,7 @@ export const InteractiveMombasaMap: React.FC = () => {
       path: 'M 180,40 L 320,30 L 350,110 L 250,130 L 180,80 Z',
       labelX: 250,
       labelY: 75,
-      voters: '135,276',
+      voters: '135,263',
       color: activeSubCounty === 'Kisauni' ? '#0f172a' : '#cbd5e1',
       textColor: activeSubCounty === 'Kisauni' ? '#ffffff' : '#1e293b'
     },
@@ -49,7 +49,7 @@ export const InteractiveMombasaMap: React.FC = () => {
       path: 'M 250,130 L 350,110 L 330,220 L 240,200 L 220,160 Z',
       labelX: 280,
       labelY: 165,
-      voters: '124,253',
+      voters: '124,510',
       color: activeSubCounty === 'Nyali' ? '#0f172a' : '#cbd5e1',
       textColor: activeSubCounty === 'Nyali' ? '#ffffff' : '#1e293b'
     },
@@ -59,7 +59,7 @@ export const InteractiveMombasaMap: React.FC = () => {
       path: 'M 180,220 L 230,195 L 240,240 L 195,265 Z',
       labelX: 212,
       labelY: 232,
-      voters: '118,974',
+      voters: '118,699',
       color: activeSubCounty === 'Mvita' ? '#0f172a' : '#94a3b8',
       textColor: activeSubCounty === 'Mvita' ? '#ffffff' : '#0f172a'
     },
@@ -68,7 +68,7 @@ export const InteractiveMombasaMap: React.FC = () => {
       path: 'M 140,265 L 250,260 L 280,340 L 160,350 Z',
       labelX: 210,
       labelY: 305,
-      voters: '94,764',
+      voters: '94,787',
       color: activeSubCounty === 'Likoni' ? '#0f172a' : '#cbd5e1',
       textColor: activeSubCounty === 'Likoni' ? '#ffffff' : '#1e293b'
     }
@@ -81,13 +81,13 @@ export const InteractiveMombasaMap: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Spatial Visualisation · Section 4.8 &amp; 12.2
+            Spatial Geographic Architecture · Visual Guide §4.8 &amp; §12.2
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            Mombasa County Sub-County Electorate Map
+            Kisauni and Nyali Anchor 40.5% of the County's 641,913 Gazetted Voters
           </h3>
           <p className="text-xs text-neutral-600 mt-0.5">
-            Tap or click any sub-county to inspect registered voters, turnout baseline, and ward clusters.
+            Spatial GIS model displaying sub-county voter weights, average turnout, and top registration hubs. Tap any region to inspect.
           </p>
         </div>
 

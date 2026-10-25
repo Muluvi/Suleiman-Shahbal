@@ -27,13 +27,13 @@ export const StrategicQuadrant: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
           <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Positioning Matrix · Section 5.6 (2×2 Strategic Quadrant)
+            Positioning Matrix · Visual Guide §5.6 &amp; §14 (2×2 Strategic Quadrant)
           </span>
           <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            Electorate Density vs Turnout Upside Across 6 Sub-Counties
+            Tier 1 Battlegrounds: High-Density Sub-Counties with Depressed Turnout Hold 168,000 Votes
           </h3>
           <p className="text-xs text-neutral-600 mt-0.5">
-            Identifying where mobilization effort yields the highest mathematical return on investment.
+            2×2 strategic matrix plotting 2022 voter turnout against registration volume across all 30 wards.
           </p>
         </div>
 
