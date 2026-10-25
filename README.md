@@ -87,3 +87,14 @@ Alternatively, push this repository to GitHub and import it directly into your V
 - **Primary Sources**: Official IEBC 2022 gazetted voter register, 2019 KNBS Census, Office of the Controller of Budget FY23/24 reports, County Government of Mombasa CIDP 2023-2027.
 - **Data Protection**: Strict adherence to Kenya's **Data Protection Act, 2019** (Sections 26 & 31); no harvesting or profiling of individual voters' private personal data.
 - **National Cohesion**: Compliant with Kenya's **National Cohesion and Integration Act** and **Elections Act, 2011**; zero ethnic, religious, or personal attacks.
+
+* * *
+
+## Decision Instrument (private cockpit)
+
+A second, separate entry point (`instrument.html`, source in `src/instrument/`) holds the dual-domain decision cockpit: **Public & Electoral** (Turnout Path, Abstention Structure, Trader Permit) and **Business & Investment** (Portfolio Command, Macro & Markets, Trade Corridor, Project Finance, Sector Entry, Real Assets), with Cockpit / Briefing density modes.
+
+- Served at `/instrument.html` in dev and production; it has its own stylesheet and design tokens so nothing leaks into the proposal site.
+- It is **not linked** from the proposal and carries `noindex, nofollow`. It is still reachable by URL, so do not deploy it publicly with real business data (see below).
+- Electoral baselines are VERIFIED (IEBC 2022). All Business data is **PROVISIONAL**; replace the placeholder series in `src/instrument/data/business/schemas.ts`, update each module's `provenance`, and re-run the sensitivity check.
+- Every module follows the MODEL → INSIGHT → DECISION contract enforced by `src/instrument/components/ModuleShell.tsx`.

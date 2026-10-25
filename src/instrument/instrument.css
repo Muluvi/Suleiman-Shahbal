@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import "./design/tokens.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--surface-paper);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+    touch-action: manipulation;
+  }
+
+  .font-mono,
+  .font-data {
+    font-family: var(--font-data);
+    font-feature-settings: "tnum" 1, "lnum" 1;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-signal);
+    outline-offset: 2px;
+  }
+}
+
+/* 4K Ultra-Definition Border & Card Utilities */
+.card-4k {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(15, 23, 42, 0.08);
+  border-radius: 0.75rem;
+}
+
+.card-4k-elevated {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+}
+
+/* Sunlight-Readable Mobile High-Contrast Surfaces */
+.sunlight-surface {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #091e3a;
+}
+
+/* Custom Hide Scrollbar for touch carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* GPU-Accelerated Marquee Animations (WCAG 2.2.2 Compliant) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-continuous {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-continuous-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-continuous-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-reverse 45s linear infinite;
+  will-change: transform;
+}
+
+/* Hover or manual pause state */
+.animate-marquee-continuous:hover,
+.animate-marquee-continuous-reverse:hover,
+.marquee-is-paused {
+  animation-play-state: paused !important;
+}
+
+/* Mobile Touch Snap Carousel */
+.touch-carousel-snap {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.touch-carousel-snap > * {
+  scroll-snap-align: start;
+}
+
+/* Reduced motion support (Guide Section 7.5 & 10) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee-continuous,
+  .animate-marquee-continuous-reverse,
+  .animate-marquee-continuous-fast {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+@media print {
+  header, nav, footer, .no-print, button:not(.allow-print) {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid;
+  }
+}
