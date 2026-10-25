@@ -61,11 +61,11 @@ export const CrisisDecisionTree: React.FC = () => {
       {/* Header and Toggle */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-200 pb-4">
         <div>
-          <span className="text-xs font-mono font-bold text-neutral-500 uppercase tracking-wider block">
-            Information Design · Visual Guide §5.1 &amp; §5.2 (Decision Tree &amp; Playbook)
+          <span className="text-[11px] font-mono font-bold text-amber-800 uppercase tracking-wider block">
+            Incident Triage Protocol · Playbook Architecture
           </span>
-          <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mt-0.5">
-            Strict Triage Tree Directs Rumor Rebuttal Within 60 Minutes
+          <h3 className="text-base sm:text-xl font-extrabold text-neutral-950 mt-0.5 leading-snug">
+            Strict Escalation Tree Neutralises Synthetic Audio and Disinformation in Under 20 Minutes
           </h3>
           <p className="text-xs text-neutral-600 mt-0.5">
             Interactive incident evaluation protocol routing digital attacks to verified statutory fact-checking cards.

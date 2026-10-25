@@ -193,10 +193,14 @@ export const ShareableCardGenerator: React.FC = () => {
               </p>
             </div>
 
-            {/* Card Footer with Brand and Source */}
-            <div className="pt-3 border-t border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
-              <span className="truncate max-w-[200px]">{currentCard.sourceCitation}</span>
-              <span className="font-mono font-bold text-white">{currentCard.hashtag.split(' ')[0]}</span>
+            {/* Card Footer with Brand, Web Address, and Source (§6.5 & §15) */}
+            <div className="pt-3 border-t border-neutral-800 flex items-center justify-between text-[11px] text-neutral-400 font-mono">
+              <div className="flex items-center gap-1.5 truncate max-w-[220px]">
+                <span className="text-amber-400 font-bold">Firefly Strategy</span>
+                <span>·</span>
+                <span className="text-slate-300">mombasa2027.firefly.ke</span>
+              </div>
+              <span className="font-bold text-white shrink-0">{currentCard.hashtag.split(' ')[0]}</span>
             </div>
           </div>
         </div>

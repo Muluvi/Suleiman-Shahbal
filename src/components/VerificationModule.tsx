@@ -13,20 +13,18 @@ export const VerificationModule: React.FC = () => {
   });
 
   return (
-    <section id="verification" className="py-14 bg-white border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
+    <section id="verification" className="py-10 sm:py-14 bg-white border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-12">
         
-        {/* Module Header */}
+        {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-            <span>Module 07</span>
-            <span aria-hidden="true">·</span>
-            <span>Data Integrity &amp; Factual Grounding</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-800">
+            Data Integrity &amp; Factual Grounding Standards
+          </span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight leading-tight">
             Verification Checklist &amp; Primary Sources Directory
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             In accordance with Firefly Management’s research integrity rules, every claim is anchored in verified 
             public authority records. All unconfirmed political variables are flagged with explicit 
             <strong className="text-neutral-900 font-mono"> [VERIFY]</strong> markers for candidate and advisory board clearance.

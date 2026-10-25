@@ -48,14 +48,14 @@ export const WardScatterPlot: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-200 pb-5">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
-              Visual · Correlation &amp; Density Analysis
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-800">
+              Electoral Density Correlation · Turnout vs Registration Volume
             </span>
-            <span className="text-[10px] font-mono bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded">
-              Scatter Plot &amp; Bubble Matrix (Visual Guide §4.2 &amp; §14)
+            <span className="text-[10px] font-mono bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded border border-neutral-200">
+              Visual Guide §4.2 &amp; §14
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mt-1">
+          <h3 className="text-lg sm:text-2xl font-extrabold text-neutral-950 mt-1 leading-snug">
             Turnout vs Density: Kisauni &amp; Nyali Mega-Wards Hold the Balance of Power
           </h3>
           <p className="text-xs sm:text-sm text-neutral-600 mt-0.5">

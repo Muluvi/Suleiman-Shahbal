@@ -32,20 +32,18 @@ export const DataAnalyticsModule: React.FC = () => {
   ).toFixed(1);
 
   return (
-    <section id="wards" className="py-14 bg-neutral-50 border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+    <section id="wards" className="py-10 sm:py-14 bg-neutral-50 border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-10">
         
-        {/* Module Header */}
+        {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-            <span>Module 04</span>
-            <span aria-hidden="true">·</span>
-            <span>Targeting &amp; Sentiment Listening Architecture</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-800">
+            Forensic Demographics &amp; Electoral Geography
+          </span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight leading-tight">
             Data, Analytics &amp; 30-Ward Targeting Framework
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             Mombasa County comprises 6 sub-counties and 30 electoral wards. This analytical framework models 
             official IEBC 2022 voter registration numbers, turnout differentials, and hyper-local priority issues 
             without collecting or profiling individual voters' personal data.

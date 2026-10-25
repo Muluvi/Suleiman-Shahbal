@@ -11,20 +11,18 @@ export const RapidResponseModule: React.FC = () => {
   const currentLevel = escalationLadder.find((l) => l.level === selectedLevel) || escalationLadder[2];
 
   return (
-    <section id="rapid-response" className="py-14 bg-white border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+    <section id="rapid-response" className="py-10 sm:py-14 bg-white border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-10">
         
-        {/* Module Header */}
+        {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-            <span>Module 05</span>
-            <span aria-hidden="true">·</span>
-            <span>Reputational Shield &amp; Crisis Management</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-800">
+            Reputational Shield &amp; Crisis Management Protocol
+          </span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight leading-tight">
             Rapid Response &amp; Misinformation Management
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             In modern coastal campaigns, malicious rumors spread across WhatsApp groups within minutes. 
             This protocol outlines an unyielding 5-level escalation ladder, SLA response times, deepfake mitigation 
             workflows, and spokesperson authorization rules.

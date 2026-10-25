@@ -6,20 +6,18 @@ import { RivalsComparisonMatrix } from './visuals/RivalsComparisonMatrix.tsx';
 
 export const RivalsModule: React.FC = () => {
   return (
-    <section id="rivals" className="py-14 bg-neutral-50 border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+    <section id="rivals" className="py-10 sm:py-14 bg-neutral-50 border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 space-y-8 sm:space-y-10">
         
-        {/* Module Header */}
+        {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-            <span>Module 06</span>
-            <span aria-hidden="true">·</span>
-            <span>Comparative Electoral Strategy</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-800">
+            Comparative Electoral Strategy &amp; Governance Audits
+          </span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-950 tracking-tight leading-tight">
             Rivals: Issue-Based Contrast Only
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
             A strictly policy-centered, delivery-focused contrast matrix based exclusively on verified public records, 
             Controller of Budget financial audits, and official legislative tenure. 
             Zero personal attacks, zero rumors, zero religious or ethnic commentary.

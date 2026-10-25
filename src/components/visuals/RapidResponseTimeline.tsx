@@ -108,19 +108,19 @@ export const RapidResponseTimeline: React.FC = () => {
 
   return (
     <div className="bg-white rounded-xl border border-neutral-200 p-6 sm:p-8 space-y-8 shadow-xs">
-      {/* Header */}
+      {/* Header conforming to Visual Handbook §4.12: Headline states finding */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-200 pb-5">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
-              Visual 05 · Crisis Management Architecture
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-800">
+              Rapid Response SLA Protocol · Vector Heatmap
             </span>
-            <span className="text-[10px] font-mono bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded">
-              SLA Chronometer &amp; Vector Heatmap (Visual Guide §5.1 &amp; §5.6)
+            <span className="text-[10px] font-mono bg-neutral-100 text-neutral-700 px-2 py-0.5 rounded border border-neutral-200">
+              Visual Guide §5.1 &amp; §5.6
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mt-1">
-            60-Minute SLA Rapid Rebuttal Chronometer
+          <h3 className="text-lg sm:text-2xl font-extrabold text-neutral-950 mt-1 leading-snug">
+            60-Minute Turnaround Chronometer Enforces Zero Disinformation Permeation Across 30 Wards
           </h3>
           <p className="text-xs sm:text-sm text-neutral-600 mt-0.5">
             Strict turn-around protocol ensuring false narratives are neutralized before establishing public root.
