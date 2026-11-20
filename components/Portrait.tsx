@@ -31,8 +31,9 @@ export type PortraitId =
 /**
  * Intrinsic dimensions of the sources, so next/image never has to guess.
  *
- * Mombasa edition: the five photographs supplied by the campaign (November 2026), cut out and
- * enlarged to about 2,800-3,200px tall with a plain Lanczos resample and a light unsharp mask. No
+ * Mombasa edition: the photographs supplied by the campaign (November 2026). The four replaced on
+ * 20 November came at 1,365-2,044px; each was enlarged to 3,840px on its long side (4K) with a
+ * plain Lanczos resample and a light unsharp mask, then cut out. No
  * generative upscaler was used, so the face is exactly as photographed; the enlargement adds no
  * detail the camera did not record. The three original slot names are kept so every placement
  * keeps working.
@@ -40,15 +41,15 @@ export type PortraitId =
 const PORTRAITS: Record<PortraitId, { file: string; w: number; h: number; alt: string }> = {
   "hero-clasped-hands": {
     file: "quilted-jacket-smile-4k",
-    w: 3065,
-    h: 3026,
+    w: 3652,
+    h: 3595,
     alt: "Hon. Suleiman Shahbal, smiling, in a navy quilted jacket and tie.",
   },
   "three-piece-formal": {
-    file: "shirt-tie-cuff-4k",
-    w: 2760,
-    h: 3111,
-    alt: "Hon. Suleiman Shahbal in a white shirt and navy tie, adjusting his cuff.",
+    file: "quilted-jacket-portrait-4k",
+    w: 3499,
+    h: 3067,
+    alt: "Hon. Suleiman Shahbal in a navy quilted jacket, white shirt and tie.",
   },
   "gesture-explaining": {
     file: "kofia-kanzu-smile-4k",
@@ -58,14 +59,14 @@ const PORTRAITS: Record<PortraitId, { file: string; w: number; h: number; alt: s
   },
   "red-polo-arms-crossed": {
     file: "red-polo-arms-crossed-4k",
-    w: 2622,
-    h: 3197,
+    w: 3115,
+    h: 3795,
     alt: "Hon. Suleiman Shahbal in a red polo shirt, arms crossed.",
   },
   "black-tee-arms-crossed": {
     file: "black-tee-arms-crossed-4k",
-    w: 2235,
-    h: 2818,
+    w: 2612,
+    h: 3289,
     alt: "Hon. Suleiman Shahbal in a black T-shirt, arms crossed.",
   },
 };
