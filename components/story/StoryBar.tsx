@@ -2,11 +2,9 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { BookOpen, ChevronRight, Compass, Database, LogIn, PenLine, Sparkles, Table2, Users, X } from "lucide-react";
-import { useChromeVisible } from "../../hooks/use-chrome-visible";
+import { BookOpen, ChevronRight, Compass, Database, Sparkles, Table2, X } from "lucide-react";
 import { TOOL_META } from "@/lib/tools/meta";
-import { FEED_HOME, RECORD_HOMES } from "@/lib/story/embeds";
+import { RECORD_HOMES } from "@/lib/story/embeds";
 import { COLLECTION_BY_ID } from "@/lib/platform/collections";
 import { PARTS, SECTIONS, partOf, type TabId } from "@/lib/heading-slug";
 import { recentlyUsed } from "@/lib/tools/used";
@@ -17,14 +15,8 @@ const CHAPTER_LABEL: Record<string, string> = Object.fromEntries(SECTIONS.map((s
 const ORDER: string[] = SECTIONS.map((s) => s.id);
 const chapterOf = (home: string) => home.split("-sec-")[0];
 
-/**
- * The one header the site has: the brand, the team's live status and its sign-in (flow pass, WP7).
- * Search and every tool live in the dock at the foot of the screen, one entry point each; the live
- * status, when the team has changed something, jumps to What changed in the Welcome. The Tools panel
- * still opens from here, on the "story:open-tools" event the dock and the Welcome send.
- */
+/** Keeps the tools sheet available to the story dock without adding a persistent top banner. */
 export function StoryBar({ onJump }: { onJump: (sectionId: string) => void }) {
-  const visible = useChromeVisible();
   const { live } = useLive();
   const [sheet, setSheet] = useState(false);
   useEffect(() => {
@@ -34,30 +26,6 @@ export function StoryBar({ onJump }: { onJump: (sectionId: string) => void }) {
   }, []);
   return (
     <>
-      <header className="sx-bar-top print:hidden" data-hidden={visible || sheet ? "false" : "true"}>
-        <div className="sx-brand">
-          <a className="sx-brand__identity" href="#section-welcome" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} aria-label="The New Democrats — Mombasa 2027">
-            <span className="sx-brand__emblem"><Image src="/brand/tnd-logo.png" alt="" width={32} height={42} /></span>
-            <span className="sx-brand__name"><b>The New Democrats</b><small>Mombasa 2027 · Together We Can</small></span>
-          </a>
-          {live?.lastChange ? (
-            <button type="button" className="sx-brand__live" data-tour="live" onClick={() => onJump(FEED_HOME)}>
-              <span className="sx-live-dot" data-on="true" aria-hidden="true" />Team update {ago(live.lastChange.at)}
-              <span className="sr-only">: see what changed</span>
-            </button>
-          ) : (
-            <span data-tour="live"><span className="sx-live-dot" data-on="false" aria-hidden="true" />Strategy and the campaign’s tools</span>
-          )}
-        </div>
-        {live?.signedIn ? (
-          <>
-            {live.role === "firefly" && <Link className="sx-top-btn sx-top-btn--wide-only" href="/team/admin" aria-label="Team members"><Users size={16} aria-hidden="true" /><span className="sx-top-label">Team</span></Link>}
-            <Link className="sx-top-btn" href="/team/data" aria-label="Edit the data"><PenLine size={16} aria-hidden="true" /><span className="sx-top-label">Edit data</span></Link>
-          </>
-        ) : live?.loginEnabled ? (
-          <Link className="sx-top-btn" href="/team/login" aria-label="Team sign-in"><LogIn size={16} aria-hidden="true" /><span className="sx-top-label">Sign in</span></Link>
-        ) : null}
-      </header>
       {sheet && <ToolsSheet onClose={() => setSheet(false)} onJump={(id) => { setSheet(false); onJump(id); }} signedIn={!!live?.signedIn} name={live?.name ?? null} />}
     </>
   );

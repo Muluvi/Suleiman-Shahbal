@@ -2056,7 +2056,10 @@ span[data-fold-body][hidden] { display: inline-block; }
   --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-card: var(--card);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-recessed: var(--surface-recessed);
   --color-line: var(--line);
+  --color-focus: var(--focus-ring);
   --color-accent: var(--accent);
   --color-gold: var(--gold);
   --color-dark: var(--dark);
@@ -2121,7 +2124,10 @@ span[data-fold-body][hidden] { display: inline-block; }
   --muted: oklch(0.46 0.035 262); /* 6.6:1 on paper */
   --paper: oklch(0.972 0.012 85); /* warm paper, a faint sisal tint */
   --card: oklch(1 0 0);
+  --surface-raised: oklch(1 0 0);
+  --surface-recessed: oklch(0.948 0.012 85);
   --line: oklch(0.88 0.015 85);
+  --focus-ring: #1476B8;
   --accent: #0B3C75;
   --accent-solid: #0B3C75;
   --on-accent: oklch(1 0 0);
@@ -2195,7 +2201,10 @@ span[data-fold-body][hidden] { display: inline-block; }
   --muted: oklch(0.78 0.025 255); /* 9.7:1 on paper, 9.0:1 on card */
   --paper: oklch(0.16 0.03 262); /* deep indigo-black, not pure black */
   --card: oklch(0.205 0.032 262); /* one step lighter than the ground */
+  --surface-raised: oklch(0.235 0.034 262);
+  --surface-recessed: oklch(0.135 0.028 262);
   --line: oklch(0.31 0.03 262);
+  --focus-ring: #8CC8FF;
   --accent: #79B6F2;
   --accent-solid: #0B3C75;
   --on-accent: oklch(1 0 0);
@@ -2923,7 +2932,7 @@ table,
    (accent inside, paper outside) so the ring stays legible on both the card and paper grounds
    and in both themes. */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
@@ -2932,14 +2941,14 @@ a:focus-visible,
 [role="button"]:focus-visible,
 [role="tab"]:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   box-shadow: 0 0 0 4px var(--color-paper);
 }
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 1px;
 }
 /* A focus ring on a control sitting on the accent itself needs the inverse treatment. */
