@@ -2056,7 +2056,10 @@ span[data-fold-body][hidden] { display: inline-block; }
   --color-muted: var(--muted);
   --color-paper: var(--paper);
   --color-card: var(--card);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-recessed: var(--surface-recessed);
   --color-line: var(--line);
+  --color-focus: var(--focus-ring);
   --color-accent: var(--accent);
   --color-gold: var(--gold);
   --color-dark: var(--dark);
@@ -2121,17 +2124,20 @@ span[data-fold-body][hidden] { display: inline-block; }
   --muted: oklch(0.46 0.035 262); /* 6.6:1 on paper */
   --paper: oklch(0.972 0.012 85); /* warm paper, a faint sisal tint */
   --card: oklch(1 0 0);
+  --surface-raised: oklch(1 0 0);
+  --surface-recessed: oklch(0.948 0.012 85);
   --line: oklch(0.88 0.015 85);
-  --accent: oklch(0.43 0.20 265); /* Wiper royal blue, deep: text and stroke, 7.9:1 on paper */
-  --accent-solid: oklch(0.47 0.21 265); /* as a fill: 7.3:1 against --on-accent */
+  --focus-ring: #1476B8;
+  --accent: #0B3C75;
+  --accent-solid: #0B3C75;
   --on-accent: oklch(1 0 0);
   /* The field. Cooler hue, a third of the chroma: a rival's 37.4% must never look more
      energetic than the campaign's own 22.1%. Distinct from accent for a deuteranope too,
      because the separation is lightness and chroma, not just hue. */
   --rival: oklch(0.49 0.045 205);
   --rival-solid: oklch(0.50 0.04 205); /* 5.9:1 against white */
-  --gold: oklch(0.50 0.15 40);    /* laterite, darker: the pool, the gap. 5.9:1 on paper */
-  --gold-solid: oklch(0.53 0.15 40); /* as a fill: white sits on it at 5.7:1 */
+  --gold: #C41E3A;
+  --gold-solid: #C41E3A;
   --on-gold: oklch(1 0 0);
   --align-a: #b3121e;   /* alignment category A — 7.1:1 on white */
   --align-b: #8a4a06;   /* alignment category B — 7.0:1 on white */
@@ -2195,14 +2201,17 @@ span[data-fold-body][hidden] { display: inline-block; }
   --muted: oklch(0.78 0.025 255); /* 9.7:1 on paper, 9.0:1 on card */
   --paper: oklch(0.16 0.03 262); /* deep indigo-black, not pure black */
   --card: oklch(0.205 0.032 262); /* one step lighter than the ground */
+  --surface-raised: oklch(0.235 0.034 262);
+  --surface-recessed: oklch(0.135 0.028 262);
   --line: oklch(0.31 0.03 262);
-  --accent: oklch(0.74 0.14 262); /* Wiper royal blue, bright enough for text: 7.7:1 on card */
-  --accent-solid: oklch(0.50 0.20 265); /* the fill stays dark in both themes; white sits on it at 6.3:1 */
+  --focus-ring: #8CC8FF;
+  --accent: #79B6F2;
+  --accent-solid: #0B3C75;
   --on-accent: oklch(1 0 0);
   --rival: oklch(0.74 0.04 200);
   --rival-solid: oklch(0.50 0.04 205);
-  --gold: oklch(0.74 0.13 45);    /* laterite: text and stroke, 7.4:1 on card */
-  --gold-solid: oklch(0.53 0.15 40); /* the fill stays dark in both themes; white sits on it at 5.7:1 */
+  --gold: #FF7788;
+  --gold-solid: #9E1830;
   --on-gold: oklch(1 0 0);
   --align-a: #ff6b73;   /* the same three categories, lifted to read on the dark ground */
   --align-b: #f0a742;
@@ -2300,8 +2309,16 @@ button, a, input, select, textarea, [role="button"], .cursor-pointer {
   /* Vertical rhythm. Every margin under .prose is a multiple of this, so spacing is one
      decision rather than a per-element guess — and the reading-density control below moves the
      whole document by changing the multiplier, not by restating each rule. */
-  --rhythm: 0.5rem;
+  --rhythm: 0.625rem;
   --rhythm-scale: 1;
+
+  /* Semantic reading-surface tokens keep long-form pages consistent across routes. */
+  --surface-canvas: #f7f5f0;
+  --surface-paper: #fffefa;
+  --text-primary: #18201f;
+  --text-secondary: #56605d;
+  --text-tertiary: #737a76;
+  --border-subtle: rgb(24 32 31 / 12%);
 
   /* Fluid type. Rebased to 16px at 360px viewport, interpolating to 1280px desktop.
      The three steps below body were each a notch lower than this document can carry. Its
@@ -2326,8 +2343,8 @@ button, a, input, select, textarea, [role="button"], .cursor-pointer {
   --fs-display:  clamp(2.25rem, 1.50rem + 4.5vw,  4.5rem);   /* 36 → 72px */
 
   /* Page gutter and the gap between sections, both fluid on the same interval. */
-  --gutter: clamp(0.875rem, 0.55rem + 1.5vw, 2.5rem);
-  --section-gap: clamp(1.75rem, 1.1rem + 2.6vw, 3.5rem);
+  --gutter: clamp(1rem, 0.65rem + 1.7vw, 2.5rem);
+  --section-gap: clamp(2rem, 1.25rem + 2.8vw, 4rem);
 
   /* Comfortable line length for running prose. Wide elements (tables, ASCII figures, charts)
      opt out via .prose-wide so they still use the full shell width. */
@@ -2923,7 +2940,7 @@ table,
    (accent inside, paper outside) so the ring stays legible on both the card and paper grounds
    and in both themes. */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
@@ -2932,14 +2949,14 @@ a:focus-visible,
 [role="button"]:focus-visible,
 [role="tab"]:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   box-shadow: 0 0 0 4px var(--color-paper);
 }
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 1px;
 }
 /* A focus ring on a control sitting on the accent itself needs the inverse treatment. */

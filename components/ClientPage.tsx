@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { Toaster } from "./Toaster";
@@ -103,14 +104,8 @@ interface ClientPageProps {
  */
 const ALWAYS_OPEN: ReadonlySet<string> = new Set(["welcome", "brief", "ask"]);
 
-/** The campaign mark: three rising blocks, the builder's skyline. Original, typographic-free. */
 const CampaignMark = () => (
-  <svg width="38" height="38" viewBox="0 0 120 120" fill="none" className="shrink-0 select-none" aria-hidden="true">
-    <rect x="22" y="62" width="20" height="34" rx="3" fill="#00209f" />
-    <rect x="50" y="44" width="20" height="52" rx="3" fill="#e31d2b" />
-    <rect x="78" y="24" width="20" height="72" rx="3" fill="#00209f" />
-    <path d="M14 100 H106" stroke="#00209f" strokeWidth="6" strokeLinecap="round" />
-  </svg>
+  <Image src="/brand/tnd-logo.png" alt="The New Democrats — Together We Can" width={56} height={74} className="shrink-0 select-none object-contain" />
 );
 
 const TAB_IDS: string[] = SECTIONS.map((s) => s.id);
