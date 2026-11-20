@@ -33,15 +33,17 @@ export interface OpenItem {
 const HOLDERS: [RegExp, string][] = [
   [/IEBC/, "IEBC"],
   [/Meta|Insights|Week 1|post coding|export/i, "His team: the Week 1 export"],
-  [/The New Democrats|party|NEC/i, "The New Democrats Patriotic Front secretariat"],
+  [/The New Democrats|party|NEC/i, "The New Democrats party secretariat"],
   [/Communications Authority|CA\/KNBS/, "Communications Authority"],
-  [/KNBS/, "KNBS"],
+  [/KNBS|KDHS/, "KNBS"],
   [/TSC|Public Service Board|Ministry of Health/, "Public-sector employers"],
   [/GeoPoll|KARF|listenership/i, "Audience-research publishers"],
   [/Central Bank|Safaricom/, "Central Bank of Kenya or Safaricom"],
   [/NTSA|transport/i, "NTSA or the county transport department"],
   [/NG-CDF/, "NG-CDF Mvita"],
-  [/county|diocesan|denominational/i, "County government or church offices"],
+  [/Auditor-General/, "Office of the Auditor-General"],
+  [/Department of Health|surveillance/i, "Mombasa County Department of Health"],
+  [/county/i, "Mombasa County Government"],
   [/public/i, "Public pages, Week 1 audit"],
 ];
 const holderOf = (doc: string) => HOLDERS.find(([re]) => re.test(doc))?.[1] ?? "To be named";

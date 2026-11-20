@@ -418,8 +418,8 @@ export const FIG_3_12: FigureSpec = {
   },
   columns: [{ key: "item", label: "Item" }, { key: "closes", label: "The document that would close it" }],
   rows: [
-    { cells: { item: "Projects by ward", closes: F("scorecard.itemised").closesWith ?? "" }, state: "needed" },
-    { cells: { item: "Spend by constituency", closes: F("scorecard.attributed.ksh").closesWith ?? "" }, state: "needed" },
+    { cells: { item: "Projects by ward", closes: F("scorecard.itemised").closesWith ?? "" }, state: "needed", closesWith: F("scorecard.itemised").closesWith },
+    { cells: { item: "Spend by constituency", closes: F("scorecard.attributed.ksh").closesWith ?? "" }, state: "needed", closesWith: F("scorecard.attributed.ksh").closesWith },
   ],
 };
 

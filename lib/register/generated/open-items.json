@@ -71,7 +71,7 @@
     "kind": "data",
     "gap": "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",
     "closes": "Mombasa County Government's own published delivery scorecard or annual progress report",
-    "holder": "County government or church offices",
+    "holder": "Mombasa County Government",
     "status": "Open",
     "where": [
       "Section 3.7",
@@ -82,11 +82,12 @@
     "kind": "data",
     "gap": "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",
     "closes": "Mombasa County Annual Progress Report: itemised projects with cost, ward and status (the ADP 2026/27, now in hand, plans projects but does not report delivery by ward)",
-    "holder": "County government or church offices",
+    "holder": "Mombasa County Government",
     "status": "Open",
     "where": [
       "Section 3.7",
-      "Data layer: scorecard.itemised"
+      "Data layer: scorecard.itemised",
+      "Figure fig-3-12-projects"
     ]
   },
   {
@@ -104,7 +105,7 @@
     "kind": "data",
     "gap": "audit.ifmis",
     "closes": "Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",
-    "holder": "County government or church offices",
+    "holder": "Office of the Auditor-General",
     "status": "Open",
     "where": [
       "Data layer: audit.ifmis"
@@ -114,7 +115,7 @@
     "kind": "data",
     "gap": "audit.transfers",
     "closes": "Office of the Auditor-General, Mombasa County Executive audit report: unsupported transfers",
-    "holder": "County government or church offices",
+    "holder": "Office of the Auditor-General",
     "status": "Open",
     "where": [
       "Data layer: audit.transfers"
@@ -124,7 +125,7 @@
     "kind": "data",
     "gap": "audit.pending.contested",
     "closes": "Office of the Auditor-General, Mombasa County Executive audit report: pending bills disputed by the auditor",
-    "holder": "County government or church offices",
+    "holder": "Office of the Auditor-General",
     "status": "Open",
     "where": [
       "Data layer: audit.pending.contested"
@@ -164,7 +165,7 @@
     "kind": "data",
     "gap": "health.typhoid.2025",
     "closes": "Mombasa County Department of Health, disease surveillance, 2025",
-    "holder": "County government or church offices",
+    "holder": "Mombasa County Department of Health",
     "status": "Open",
     "where": [
       "Data layer: health.typhoid.2025"
@@ -174,7 +175,7 @@
     "kind": "data",
     "gap": "health.typhoid.2024",
     "closes": "Mombasa County Department of Health, disease surveillance, 2024",
-    "holder": "County government or church offices",
+    "holder": "Mombasa County Department of Health",
     "status": "Open",
     "where": [
       "Data layer: health.typhoid.2024"
@@ -194,10 +195,11 @@
     "kind": "data",
     "gap": "scorecard.attributed.ksh",
     "closes": "Mombasa County progress report: itemised spend by constituency",
-    "holder": "County government or church offices",
+    "holder": "Mombasa County Government",
     "status": "Open",
     "where": [
-      "Data layer: scorecard.attributed.ksh"
+      "Data layer: scorecard.attributed.ksh",
+      "Figure fig-3-12-projects"
     ]
   },
   {
@@ -244,7 +246,7 @@
     "kind": "data",
     "gap": "kpis.nomination",
     "closes": "The New Democrats' nomination rules, once certified",
-    "holder": "The New Democrats Patriotic Front secretariat",
+    "holder": "The New Democrats party secretariat",
     "status": "Open",
     "where": [
       "Data layer: kpis.nomination"
@@ -254,7 +256,7 @@
     "kind": "data",
     "gap": "edu.none.men",
     "closes": "KDHS 2022 Mombasa factsheet: men aged 6+ with no education",
-    "holder": "To be named",
+    "holder": "KNBS",
     "status": "Open",
     "where": [
       "Data layer: edu.none.men"
@@ -264,7 +266,7 @@
     "kind": "data",
     "gap": "disability.men",
     "closes": "KDHS 2022 Mombasa factsheet: men 15+ with a disability",
-    "holder": "To be named",
+    "holder": "KNBS",
     "status": "Open",
     "where": [
       "Data layer: disability.men"
@@ -274,7 +276,7 @@
     "kind": "data",
     "gap": "disability.women",
     "closes": "KDHS 2022 Mombasa factsheet: women 15+ with a disability",
-    "holder": "To be named",
+    "holder": "KNBS",
     "status": "Open",
     "where": [
       "Data layer: disability.women"
@@ -298,26 +300,6 @@
     "status": "Open",
     "where": [
       "Data layer: reach.phone.adult"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "Projects by ward",
-    "closes": "To be named",
-    "holder": "To be named",
-    "status": "Open",
-    "where": [
-      "Figure fig-3-12-projects"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "Spend by constituency",
-    "closes": "To be named",
-    "holder": "To be named",
-    "status": "Open",
-    "where": [
-      "Figure fig-3-12-projects"
     ]
   }
 ]
