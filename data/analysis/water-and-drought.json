@@ -1,0 +1,80 @@
+{
+  "id": "water-and-drought",
+  "title": "Water in Mombasa",
+  "description": "Mombasa needs about 200,000 m³ of water a day and receives about 40,000.",
+  "chart_type": "bar",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "Demand and supply as stated by the governor (2025); the Coast-wide figures as stated by the Water CS to the Senate (June 2026)."
+  ],
+  "values": [
+    {
+      "label": "Daily demand",
+      "value": 200000,
+      "unit": "m³/day",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2025",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "Daily supply",
+      "value": 40000,
+      "unit": "m³/day",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2025",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "Reaching residents",
+      "value": 20000,
+      "unit": "m³/day",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2025",
+      "method": "official",
+      "status": "confirmed",
+      "note": "After leaks and illegal connections"
+    },
+    {
+      "label": "Non-revenue water",
+      "value": 60,
+      "unit": "percent",
+      "source_id": "S42",
+      "tier": 2,
+      "as_of": "2026-10",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "Mwache Dam, added capacity",
+      "value": 186000,
+      "unit": "m³/day",
+      "source_id": "S43",
+      "tier": 1,
+      "as_of": "2026-06",
+      "method": "official",
+      "status": "confirmed",
+      "note": "86% complete, June 2026"
+    },
+    {
+      "label": "Coast deficit (four counties)",
+      "value": 327000,
+      "unit": "m³/day",
+      "source_id": "S43",
+      "tier": 1,
+      "as_of": "2026-06",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    }
+  ]
+}

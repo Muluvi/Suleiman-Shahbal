@@ -1,0 +1,13 @@
+{
+  "id": "projects-register",
+  "title": "County projects",
+  "description": "No itemised Mombasa county project register is in hand.",
+  "chart_type": "table",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "Data needed: Mombasa County Annual Development Plan and annual progress report, itemised with cost, ward and status."
+  ],
+  "values": []
+}

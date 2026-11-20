@@ -1,0 +1,142 @@
+import { val } from "../lib/data/read.ts";
+// §5.2.3.3's USSD menu and §5.2.3.3's SMS layer, as data for the feature-phone specimen.
+//
+// Two rules govern this file, and they are the reason it is data rather than copy inside a
+// component.
+//
+// 1. THE MENU IS QUOTED, NOT WRITTEN. Every line below appears in §5.2.3.3 exactly as it is
+//    printed there, Kiswahili and English together, in that order. The document wrote a bilingual
+//    menu; the widget shows a bilingual menu. Native-speaker review signs it off before launch.
+//
+// 2. THE SHORTCODE IS A PLACEHOLDER AND STAYS ONE. §5.2.3.3 prints `*[Insert shortcode]#`, and
+//    Appendix A logs the vendor allocation as an open item owned by the campaign. Inventing a
+//    number here would be the exact failure the provenance system exists to prevent, so the
+//    widget renders the placeholder with the badge it deserves.
+//
+// The SMS side follows §4.4.10's four-stage approval chain rather than shipping Kiswahili copy
+// as though it were finished. English is Stage 1 — a master source that can be checked against
+// the document. Kiswahili sits at Stage 2, and the chain names exactly who has to clear it: a
+// Lead Kiswahili Writer drafts, an independent reviewer reverse-translates, and a native Mombasa
+// Kiswahili speaker or senior Coast broadcaster holds mandatory sign-off. None of those people
+// has been appointed — §8.5 puts that in Phase −1 — so no Kiswahili SMS is presented here as
+// final, and none is invented to fill the gap. Sheng is never sent by SMS.
+
+export type SpecimenLanguage = "kiswahili" | "sheng" | "english";
+
+export const SPECIMEN_LANGUAGES: { id: SpecimenLanguage; label: string; note: string }[] = [
+  { id: "kiswahili", label: "Kiswahili", note: "Default. The county's first language." },
+  { id: "sheng", label: "Sheng", note: "Voice notes and short video only; never SMS." },
+  { id: "english", label: "English", note: "Master source for drafting." },
+];
+
+/** §5.2.3.3, verbatim. The header line and six options as the document prints them. */
+export const USSD_HEADER = "MOMBASA NA SHAHBAL";
+
+export interface UssdOption {
+  key: string;
+  /** As printed: Kiswahili first, English after the slash, where the document gives both. */
+  kiswahili: string | null;
+  english: string;
+  /** What choosing it does, in one line. */
+  does: string;
+  /** §5.2.1's service-delivery tracker is reachable from this option. */
+  crossReference?: string;
+}
+
+/**
+ * THE USSD MENU, defined once (consolidation pass, Step 2). Read by the menu figure
+ * (fig-5-2-3-ussd-menu), the menu tree in Platforms & content, the reach split on the cover, the
+ * phone showcase and the feature-phone specimen. An earlier four-option tree (manifesto,
+ * tracker, volunteer, privacy) disagreed with it; its plan items now sit under option 1
+ * (PLAN_ITEMS) and its privacy option is the charter's opt-out, whose menu position is set when
+ * the shortcode is provisioned.
+ */
+export const USSD_MENU: UssdOption[] = [
+  { key: "1", kiswahili: "Mpango wa Shahbal", english: "Shahbal's plan for my ward", does: "His plan, ward by ward." },
+  { key: "2", kiswahili: "Kujiandikisha kupiga kura", english: "Voter registration info", does: "Where and how to register." },
+  { key: "3", kiswahili: "Ripoti tatizo", english: "Report a local issue", does: "Opens a report in the service-delivery tracker: the option that matters most.", crossReference: "Section 4.5" },
+  { key: "4", kiswahili: "Jitolee", english: "Volunteer", does: "Joins the volunteer list." },
+  { key: "5", kiswahili: "Pata habari", english: "Get updates (opt-in)", does: "Consent to the SMS list." },
+  { key: "6", kiswahili: null, english: "Kiswahili / English", does: "Switches the menu language." },
+];
+
+/** Option 1's plan items: the policy proposals the menu reads out (proposals for the campaign to decide). */
+export const PLAN_ITEMS = [
+  "Water at the tap: hours and price published",
+  "Jobs that stay in Mombasa: the port and the SEZ",
+  "A county that pays its bills, oldest first",
+];
+
+/** A menu line as the handset prints it: "1. Mpango wa Shahbal / Shahbal's plan for my ward". */
+export const menuLine = (o: UssdOption): string => `${o.key}. ${o.kiswahili ? `${o.kiswahili} / ` : ""}${o.english}`;
+
+/** §5.2.3.3 prints the shortcode as an unresolved placeholder. It stays one. */
+export const USSD_SHORTCODE_PLACEHOLDER = "the campaign shortcode";
+
+/**
+ * A USSD session is a network round trip, and a menu that appears instantly is the one detail
+ * that gives a mockup away. §5.2.3.3's own framing is that this works on every phone over 2G.
+ */
+export const USSD_LATENCY_MS = 1400;
+
+// ---------------------------------------------------------------------------
+// The SMS layer — §5.2.3.3
+// ---------------------------------------------------------------------------
+
+/** §5.2.3.3: "Message architecture — 160 characters, three languages, ward-tagged". */
+export const SMS_LIMIT = 160;
+
+export type ApprovalStage = 1 | 2 | 3 | 4;
+
+export const APPROVAL_CHAIN: { stage: ApprovalStage; title: string; who: string }[] = [
+  { stage: 1, title: "English master source drafting", who: "Policy Team, verified by Legal & Economic Lead" },
+  { stage: 2, title: "Parallel adaptation (not literal translation)", who: "Lead Kiswahili Writer · Sheng Specialist" },
+  { stage: 3, title: "Reverse-translation integrity audit", who: "Independent reviewer" },
+  { stage: 4, title: "Kiswahili cultural sign-off & executive clearance", who: "Lead Cultural & Vernacular Communications Advisor" },
+];
+
+export interface SmsSpecimen {
+  /** One of §5.2.3.3's six message types, named as the table names them. */
+  type: string;
+  /** §5.2.3.3's own description of what that type contains. */
+  structure: string;
+  frequency: string;
+  /**
+   * The English master. Written from figures and commitments this document already carries,
+   * and counted against the 160-character limit the document sets.
+   */
+  english: string;
+  /**
+   * The Kiswahili version is null on purpose. §4.4.10 requires a named drafter, an independent
+   * reverse-translation audit and a native-speaker sign-off before Kiswahili copy is released,
+   * and §8.5 places those appointments in Phase −1. Nothing here fills that in.
+   */
+  kiswahili: null;
+}
+
+export const SMS_SPECIMENS: SmsSpecimen[] = [
+  {
+    type: "Registration drive",
+    structure: "Deadline, nearest centre, what to bring",
+    frequency: "Phase-specific",
+    english:
+      "Mombasa: voter registration is open. Bring your national ID to your nearest IEBC centre. Your ward, your vote. Reply STOP to opt out.",
+  } as SmsSpecimen,
+  {
+    type: "Policy drop",
+    structure: "One issue, one commitment, one verification promise",
+    frequency: "Weekly",
+    english:
+      "Mr Shahbal: water hours and the jerrican price for every ward, published each quarter. Check them, then hold him to them. Reply STOP to opt out.",
+  } as SmsSpecimen,
+  {
+    type: "GOTV sequence",
+    structure: "Countdown, polling station, time",
+    frequency: "Final 30 days",
+    english:
+      "Voting is tomorrow. Polls open 6am, close 5pm. Find your polling station on your ID slip. Every vote in this ward counts. Reply STOP to opt out.",
+  } as SmsSpecimen,
+];
+
+/** §5.2.3.3's consented-contact target at Phase 3. */
+export const CONSENTED_CONTACTS = val("target.sms");

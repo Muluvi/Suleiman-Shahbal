@@ -1,0 +1,23 @@
+{
+  "$comment": [
+    "Paragraphs that say the same thing twice, and which copy the reader meets second.",
+    "",
+    "RULE 1b, IN FULL: a duplicate is COLLAPSED, not cut. Until Firefly approves deletion, the",
+    "second copy stays in the document and stays in the printed kit; it is folded behind a one-line",
+    "cross-reference naming the section that said it first. Nothing here removes a word.",
+    "",
+    "WHICH SIDE IS THE DUPLICATE is a reading-order judgement, made here rather than by the detector,",
+    "which walks the chapters alphabetically. The duplicate is the copy the reader reaches SECOND in",
+    "lib/flow.ts's FLOW_ORDER — collapsing the first would point a reader forward at something they",
+    "have not read, which is worse than the repetition.",
+    "",
+    "TWO OF THE THREE FLIPPED in the 2026 restructure. The ask moved from the front of the document",
+    "to the end of it, so the paragraphs it used to state first it now states last, and the copy in",
+    "§4.1 and §5.5 became the one the reader meets first.",
+    "",
+    "2026 REBUILD. 'mulu-already-in-the-conversation' is gone: §4.1.0 The mandate was cut as prose by the brief's cut table, so §6.3.2 is now the only copy.",
+    "",
+    "OCTOBER 2026 RESTRUCTURE. Neither repetition crosses a chapter any more. The ask (now 1.1) and 'What this proposal commits to' (now 1.6) both sit in the decision part, and the detector leaves a chapter restating itself to the Brief fold. The second copy of the Level 2 recommendation (old 5.1.4) was cut as a duplicate of 1.5.2 (docs/restructure-2026-10/CHANGELOG.md). The declaration is therefore empty, and the check holds it there."
+  ],
+  "duplicates": []
+}

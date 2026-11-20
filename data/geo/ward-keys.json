@@ -1,0 +1,553 @@
+{
+  "id": "ward-keys",
+  "description": "One row per ward: the register's spelling and slug, the boundary file's wardcode, the census sub-county, and every other spelling in use.",
+  "sources": {
+    "register": "IEBC, Registered Voters per County Assembly Ward (2022): data/ward-register.json",
+    "wardcode": "Omare & Omare (2017), Kenya County Assembly Boundaries, CC BY 4.0: public/geo/mombasa-wards.topo.json",
+    "knbs_subcounty": "KNBS 2019 census: Mombasa's six sub-counties, which coincide with its six constituencies"
+  },
+  "constituency_aliases": [],
+  "knbs_subcounty_method": "In Mombasa the census sub-counties and the IEBC constituencies are the same six areas, so every ward sits wholly in the sub-county of its constituency's name.",
+  "wards": [
+    {
+      "slug": "port-reitz",
+      "name": "Port Reitz",
+      "constituency": "Changamwe",
+      "constituency_id": "changamwe",
+      "wardcode": "1",
+      "knbs_subcounty": "CHANGAMWE",
+      "knbs_code": "0101",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "CHANGAMWE",
+          "code": "0101",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "kipevu",
+      "name": "Kipevu",
+      "constituency": "Changamwe",
+      "constituency_id": "changamwe",
+      "wardcode": "2",
+      "knbs_subcounty": "CHANGAMWE",
+      "knbs_code": "0101",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "CHANGAMWE",
+          "code": "0101",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "airport",
+      "name": "Airport",
+      "constituency": "Changamwe",
+      "constituency_id": "changamwe",
+      "wardcode": "3",
+      "knbs_subcounty": "CHANGAMWE",
+      "knbs_code": "0101",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "CHANGAMWE",
+          "code": "0101",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "changamwe",
+      "name": "Changamwe",
+      "constituency": "Changamwe",
+      "constituency_id": "changamwe",
+      "wardcode": "4",
+      "knbs_subcounty": "CHANGAMWE",
+      "knbs_code": "0101",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "CHANGAMWE",
+          "code": "0101",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "chaani",
+      "name": "Chaani",
+      "constituency": "Changamwe",
+      "constituency_id": "changamwe",
+      "wardcode": "5",
+      "knbs_subcounty": "CHANGAMWE",
+      "knbs_code": "0101",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "CHANGAMWE",
+          "code": "0101",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "jomvu-kuu",
+      "name": "Jomvu Kuu",
+      "constituency": "Jomvu",
+      "constituency_id": "jomvu",
+      "wardcode": "6",
+      "knbs_subcounty": "JOMVU",
+      "knbs_code": "0102",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "JOMVU",
+          "code": "0102",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "miritini",
+      "name": "Miritini",
+      "constituency": "Jomvu",
+      "constituency_id": "jomvu",
+      "wardcode": "7",
+      "knbs_subcounty": "JOMVU",
+      "knbs_code": "0102",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "JOMVU",
+          "code": "0102",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mikindani",
+      "name": "Mikindani",
+      "constituency": "Jomvu",
+      "constituency_id": "jomvu",
+      "wardcode": "8",
+      "knbs_subcounty": "JOMVU",
+      "knbs_code": "0102",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "JOMVU",
+          "code": "0102",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mjambere",
+      "name": "Mjambere",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "9",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "junda",
+      "name": "Junda",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "10",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "bamburi",
+      "name": "Bamburi",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "11",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mwakirunge",
+      "name": "Mwakirunge",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "12",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mtopanga",
+      "name": "Mtopanga",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "13",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "magogoni",
+      "name": "Magogoni",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "14",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "shanzu",
+      "name": "Shanzu",
+      "constituency": "Kisauni",
+      "constituency_id": "kisauni",
+      "wardcode": "15",
+      "knbs_subcounty": "KISAUNI",
+      "knbs_code": "0103",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "KISAUNI",
+          "code": "0103",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "frere-town",
+      "name": "Frere Town",
+      "constituency": "Nyali",
+      "constituency_id": "nyali",
+      "wardcode": "16",
+      "knbs_subcounty": "NYALI",
+      "knbs_code": "0104",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "NYALI",
+          "code": "0104",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "ziwa-la-ng-ombe",
+      "name": "Ziwa la Ng'ombe",
+      "constituency": "Nyali",
+      "constituency_id": "nyali",
+      "wardcode": "17",
+      "knbs_subcounty": "NYALI",
+      "knbs_code": "0104",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "NYALI",
+          "code": "0104",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mkomani",
+      "name": "Mkomani",
+      "constituency": "Nyali",
+      "constituency_id": "nyali",
+      "wardcode": "18",
+      "knbs_subcounty": "NYALI",
+      "knbs_code": "0104",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "NYALI",
+          "code": "0104",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "kongowea",
+      "name": "Kongowea",
+      "constituency": "Nyali",
+      "constituency_id": "nyali",
+      "wardcode": "19",
+      "knbs_subcounty": "NYALI",
+      "knbs_code": "0104",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "NYALI",
+          "code": "0104",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "kadzandani",
+      "name": "Kadzandani",
+      "constituency": "Nyali",
+      "constituency_id": "nyali",
+      "wardcode": "20",
+      "knbs_subcounty": "NYALI",
+      "knbs_code": "0104",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "NYALI",
+          "code": "0104",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mtongwe",
+      "name": "Mtongwe",
+      "constituency": "Likoni",
+      "constituency_id": "likoni",
+      "wardcode": "21",
+      "knbs_subcounty": "LIKONI",
+      "knbs_code": "0105",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "LIKONI",
+          "code": "0105",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "shika-adabu",
+      "name": "Shika Adabu",
+      "constituency": "Likoni",
+      "constituency_id": "likoni",
+      "wardcode": "22",
+      "knbs_subcounty": "LIKONI",
+      "knbs_code": "0105",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "LIKONI",
+          "code": "0105",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "bofu",
+      "name": "Bofu",
+      "constituency": "Likoni",
+      "constituency_id": "likoni",
+      "wardcode": "23",
+      "knbs_subcounty": "LIKONI",
+      "knbs_code": "0105",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "LIKONI",
+          "code": "0105",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "likoni",
+      "name": "Likoni",
+      "constituency": "Likoni",
+      "constituency_id": "likoni",
+      "wardcode": "24",
+      "knbs_subcounty": "LIKONI",
+      "knbs_code": "0105",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "LIKONI",
+          "code": "0105",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "timbwani",
+      "name": "Timbwani",
+      "constituency": "Likoni",
+      "constituency_id": "likoni",
+      "wardcode": "25",
+      "knbs_subcounty": "LIKONI",
+      "knbs_code": "0105",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "LIKONI",
+          "code": "0105",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "mji-wa-kale-makadara",
+      "name": "Mji wa Kale/Makadara",
+      "constituency": "Mvita",
+      "constituency_id": "mvita",
+      "wardcode": "26",
+      "knbs_subcounty": "MVITA",
+      "knbs_code": "0106",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "MVITA",
+          "code": "0106",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "tudor",
+      "name": "Tudor",
+      "constituency": "Mvita",
+      "constituency_id": "mvita",
+      "wardcode": "27",
+      "knbs_subcounty": "MVITA",
+      "knbs_code": "0106",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "MVITA",
+          "code": "0106",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "tononoka",
+      "name": "Tononoka",
+      "constituency": "Mvita",
+      "constituency_id": "mvita",
+      "wardcode": "28",
+      "knbs_subcounty": "MVITA",
+      "knbs_code": "0106",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "MVITA",
+          "code": "0106",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "shimanzi-ganjoni",
+      "name": "Shimanzi/Ganjoni",
+      "constituency": "Mvita",
+      "constituency_id": "mvita",
+      "wardcode": "29",
+      "knbs_subcounty": "MVITA",
+      "knbs_code": "0106",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "MVITA",
+          "code": "0106",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    },
+    {
+      "slug": "majengo",
+      "name": "Majengo",
+      "constituency": "Mvita",
+      "constituency_id": "mvita",
+      "wardcode": "30",
+      "knbs_subcounty": "MVITA",
+      "knbs_code": "0106",
+      "knbs_split": false,
+      "knbs_shares": [
+        {
+          "subcounty": "MVITA",
+          "code": "0106",
+          "share": 1
+        }
+      ],
+      "aliases": []
+    }
+  ]
+}

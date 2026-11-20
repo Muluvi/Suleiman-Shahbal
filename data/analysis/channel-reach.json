@@ -1,0 +1,60 @@
+{
+  "id": "channel-reach",
+  "title": "How many voters each channel can reach",
+  "description": "The electorate split into three mutually exclusive reach segments, modelled from published rates.",
+  "chart_type": "stacked-bar",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "MODELLED. Published rates multiplied by the register: not a measurement.",
+    "Internet use is the CA/KNBS 2023/24 county rate (46.9%); phone ownership is the 2019 census rate (61.8%), because the 2023/24 county phone row is not yet in hand. Mixing years makes the SMS-only layer an estimate.",
+    "Rates are for all persons aged 3 and over, so applying them to adult voters understates phone ownership among voters."
+  ],
+  "values": [
+    {
+      "label": "Reachable by smartphone or data",
+      "value": 301057,
+      "unit": "voters",
+      "source_id": "CA-ICT-KHS-2024",
+      "tier": 1,
+      "as_of": "2023-24",
+      "method": "modelled",
+      "status": "placeholder",
+      "note": "46.9% internet use, CA/KNBS 2023/24, up from 39.2% in 2019"
+    },
+    {
+      "label": "Reachable by SMS only (phone, no data)",
+      "value": 95645,
+      "unit": "voters",
+      "source_id": "KNBS-2019",
+      "tier": 2,
+      "as_of": "2019",
+      "method": "modelled",
+      "status": "placeholder",
+      "note": "61.8% phone ownership (2019) less 46.9% internet use"
+    },
+    {
+      "label": "No phone — radio or in person only",
+      "value": 245211,
+      "unit": "voters",
+      "source_id": "KNBS-2019",
+      "tier": 2,
+      "as_of": "2019",
+      "method": "modelled",
+      "status": "placeholder",
+      "note": "The remainder"
+    },
+    {
+      "label": "Total electorate (2022 register in use)",
+      "value": 641913,
+      "unit": "voters",
+      "source_id": "S2",
+      "tier": 1,
+      "as_of": "2022",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    }
+  ]
+}

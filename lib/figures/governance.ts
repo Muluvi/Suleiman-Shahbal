@@ -1,0 +1,238 @@
+/**
+ * §5.3.5 and §4.6 — what the campaign has to clear, and who is accountable for clearing it.
+ *
+ * WHAT THESE REPLACE. Six box-drawing blocks: a statutory compliance architecture, an IEBC
+ * clearance checklist, a DPA and Election Offences matrix, an org chart, a roles and ownership
+ * matrix, and the reporting line between the existing team and Firefly.
+ *
+ * C-22, SETTLED (November 2026). The endorsement requirement can be read two ways: 500 signatures
+ * per sub-county (3,000 across six) or 500 from a majority of the sub-counties. A nomination paper
+ * short of the statutory count is rejected; one with more signatures than the law needs is not. So
+ * the campaign works to the stricter reading, 500 from each of the six, and the Field Ops roll
+ * (250 per ward, 7,500 in all) already clears it. The statutory figure itself
+ * is still to be confirmed against the Elections Act regulations, and row 6 says so.
+ *
+ * §5.3.5's STATUS COLUMN IS THE OTHER THING WORTH KEEPING EXACTLY. Nothing about the candidate is
+ * marked verified until the document is in hand.
+ */
+import type { FigureSeries } from "./types";
+
+/* ------------------------------------------------------------------ §5.3.5 the architecture */
+
+export const COMPLIANCE_TIERS = [
+  {
+    label: "1. IEBC nomination & statutory clearance requirements",
+    items: [
+      "University degree recognition & Commission for University Education (CUE) clearance",
+      "EACC Chapter Six integrity clearance self-declaration",
+      "Kenya Revenue Authority (KRA) tax compliance certificate",
+      "Directorate of Criminal Investigations (DCI) police clearance certificate",
+      "Higher Education Loans Board (HELB) clearance certificate",
+      "500 registered voter nomination endorsement signatures from each of the 6 sub-counties (3,000; the stricter reading)",
+    ],
+  },
+  {
+    label: "2. Data Protection Act (DPA 2019) & telco privacy compliance",
+    items: [
+      "Lawful basis: explicit opt-in consent for the 2G SMS and USSD registry",
+      "Certificate of registration with the Office of the Data Protection Commissioner (ODPC)",
+      "100% on-premise encrypted storage (AES-256) within Kenyan borders",
+      'Direct "STOP" opt-out mechanism via the Africa\'s Talking API',
+    ],
+  },
+  {
+    label: "3. Election Offences Act (EOA 2016) defence & liability matrix",
+    items: [
+      "Prohibition of bribery, treating and undue influence",
+      "Defamation and hate speech quarantine (NCIC / Penal Code compliance)",
+      "Strict campaign ad blackout window — 48 hours prior to polling station opening",
+    ],
+  },
+];
+
+export const COMPLIANCE_SERIES: FigureSeries = {
+  id: "compliance-architecture",
+  headline: "Three statutes, and a signature count worked to its stricter reading",
+  measure: "§19.4's statutory compliance architecture",
+  points: [],
+  note:
+    "The endorsement count can be read two ways, 500 per sub-county (3,000) or 500 from a majority " +
+    "of the six. A paper short of the statutory count is rejected and a surplus is not, so the " +
+    "campaign works to 3,000; the statutory figure is confirmed with counsel before filing.",
+};
+
+/* ------------------------------------------------------------------ §5.3.5 the clearances */
+
+export const IEBC_CLEARANCES: string[][] = [
+  [
+    "1. Academic degree requirement",
+    "Bachelor's degree from a recognised university (Article 180(2) and Elections Act s.22). CUE recognition letter.",
+    "To be confirmed in Week 1: his degree certificates and the CUE recognition letter, copied to counsel.",
+  ],
+  [
+    "2. Chapter Six integrity clearance",
+    "Self-declaration form cleared by the Ethics and Anti-Corruption Commission (EACC). Zero pending corruption trials.",
+    "Pending filing window: formal clearance submitted during the official statutory nomination window.",
+  ],
+  [
+    "3. Tax compliance certificate (TCC)",
+    "Valid tax compliance certificate issued by the Kenya Revenue Authority.",
+    "To be confirmed: the current KRA certificate, renewed before the nomination window.",
+  ],
+  [
+    "4. Police clearance certificate (CID/DCI)",
+    "Valid certificate of good conduct from the Directorate of Criminal Investigations.",
+    "Scheduled: application to be filed 60 days prior to the IEBC date.",
+  ],
+  [
+    "5. HELB clearance certificate",
+    "Certificate of compliance from the Higher Education Loans Board.",
+    "To be confirmed: the HELB certificate of compliance.",
+  ],
+  [
+    "6. Voter nomination endorsement roll",
+    "500 registered voter signatures from each of the 6 sub-counties, 3,000 in all: the stricter of the two readings (Elections Act regulations; to be confirmed with counsel).",
+    "Planned: Field Ops registering 250 signatures per ward — a 7,500 total buffer roll, clearing either reading.",
+  ],
+  [
+    "7. Party nomination / direct ticket seal",
+    "Certificate of nomination issued by The New Democrats' National Executive Council or elections board.",
+    "[Requires legal confirmation]: exact internal party dispute filing timelines and gazette deadlines.",
+  ],
+];
+
+export const CLEARANCE_SERIES: FigureSeries = {
+  id: "iebc-clearance",
+  headline: "Seven clearances, none claimed until the paper is in hand",
+  measure: "§19.4's IEBC statutory nomination clearance checklist — dimension, statutory standard, current status",
+  points: [],
+  note:
+    "The status column is the point: nothing is marked verified until the certificate is in hand. " +
+    "Four are to be confirmed in Week 1, one is scheduled, one is pending the filing window, and one " +
+    "reads “[Requires legal confirmation]”: the document declining to claim what it has not confirmed.",
+};
+
+/* ------------------------------------------------------------------ §5.3.5 the liability matrix */
+
+export const LIABILITY_MATRIX: string[][] = [
+  [
+    "1. Data Protection Act (DPA 2019) compliance",
+    "Unlawful processing of personal voter phone numbers carries fines up to Ksh 5,000,000 or 2 years jail.",
+    'Campaign registered with the ODPC as a Data Controller; all voter phone numbers sourced via opt-in barazas; mandatory "STOP" SMS opt-out.',
+  ],
+  [
+    "2. Election Offences Act (EOA 2016) — bribery",
+    "Voter bribery, distribution of cash or free merchandise at rallies is an electoral offence causing candidate disqualification and 5-year jail.",
+    "Strict prohibition of direct cash handouts at rallies; all logistics payments to agents made via audited M-Pesa bulk business disbursements.",
+  ],
+  [
+    "3. 48-hour campaign blackout window",
+    "All campaign advertising, broadcasts and public rallies must cease 48 hours prior to polling station opening.",
+    "All radio spots, SMS engines and sound caravans terminate exactly at 18:00 EAT on the 2nd day prior to polling day.",
+  ],
+];
+
+export const LIABILITY_SERIES: FigureSeries = {
+  id: "liability-matrix",
+  headline: "Three exposures, and two of them end in a custodial sentence",
+  measure: "§19.4's DPA 2019 and Election Offences statutory matrix — obligation, exposure, mitigation",
+  points: [],
+  note:
+    "The exposure column carries the penalty as the document states it — Ksh 5,000,000 or two " +
+    "years, and disqualification plus five years — because a mitigation protocol read without its " +
+    "exposure is a procedure rather than a reason.",
+};
+
+/* ------------------------------------------------------------------ §4.6 the org chart */
+
+export const ORG_CHAIN = [
+  { role: "Suleiman Shahbal (candidate) & strategic advisory board" },
+  { role: "Campaign Manager & Chief of Operations (lead operator)" },
+];
+
+export const ORG_BRANCHES = [
+  {
+    label: "Communications & media lead",
+    items: ["Kiswahili audio production", "Video crews", "Graphic design", "Radio buying"],
+  },
+  {
+    label: "Field ops & logistics lead",
+    items: ["PA sound rig crews", "Tent / staging providers", "Fuel / transport"],
+  },
+  {
+    label: "Data, tech & compliance lead",
+    items: ["SMS/USSD development (Africa's Talking)", "Cloud host", "DPA legal"],
+  },
+];
+
+export const ORG_SERIES: FigureSeries = {
+  id: "org-chart",
+  headline: "A lean core of three leads, each directing subcontracted specialists",
+  measure: "§17's lean core plus specialist vendor model",
+  points: [],
+  note:
+    "The three leads report to the Campaign Manager and the specialists are subcontracted, not " +
+    "hired. No role or headcount has been added: this is exactly the set the block named.",
+};
+
+/* ------------------------------------------------------------------ §4.6.4 roles and ownership */
+
+export const ROLE_OWNERSHIP: string[][] = [
+  [
+    "1. Campaign Manager & Chief of Operations",
+    "Overall campaign execution, budget allocation, strategic schedule and coalition alignment · direct liaison with Mr Shahbal and the advisory board · primary escalation authority for all domains",
+    "General logistics vendors · security coordination firm",
+  ],
+  [
+    "2. Communications & Media Lead",
+    "Narrative framing, press relations, crisis communications and message discipline · vernacular radio interview briefing notes and the social media publishing calendar",
+    "Vernacular audio studio · video production crew · digital ad buying agency · vernacular radio media buyer",
+  ],
+  [
+    "3. Field Operations & Ground Logistics Lead",
+    "Operational leadership of 6 constituency leads and 30 ward coordinators · market day caravan routes, baraza scheduling and volunteer deployment logistics",
+    "Sound truck & PA rig rentals · event staging & marquee company · boda boda stage champions · transport & fuel fleet SACCOs",
+  ],
+  [
+    "4. Data, Technology & Compliance Lead (DPO)",
+    "Management of the CRM database, analytics BI dashboards and voter registration targets · statutory compliance with DPA 2019, consent logging and cyber incident management",
+    "SMS/USSD gateway vendor (selected at contracting) · cloud infrastructure · legal data protection counsel",
+  ],
+];
+
+export const ROLES_SERIES: FigureSeries = {
+  id: "role-ownership",
+  headline: "Four core roles, and every specialist in the campaign reports through one of them",
+  measure: "§17.4's core campaign roles and ownership matrix — role, ownership, subcontractors directed",
+  points: [],
+  note:
+    "No role, headcount or vendor has been added. The SMS/USSD gateway vendor is stated as " +
+    "“selected at contracting”, which is the same pending state §15.4.3's procurement matrix " +
+    "records for every one of its five rows.",
+};
+
+/* ------------------------------------------------------------------ §4.6.5 the reporting line */
+
+export const REPORTING_TEAMS = [
+  {
+    label: "Your team (existing)",
+    items: ["Team lead / publisher", "Content producers", "Kiswahili producer", "Community responders"],
+  },
+  { label: "Strategy core (three campaign roles)", items: ["Strategy Director", "Analyst", "Offline-layer operator"] },
+];
+
+export const REPORTING_CHAIN = [
+  { role: "Campaign counterpart (one named person)", note: "Both teams meet here, through the weekly brief." },
+  { role: "Campaign Manager" },
+  { role: "Suleiman Shahbal" },
+];
+
+export const REPORTING_SERIES: FigureSeries = {
+  id: "reporting-lines",
+  headline: "Two teams, one weekly brief, and a single named counterpart between them and the candidate",
+  measure: "§17.4's reporting lines",
+  points: [],
+  note:
+    "The weekly brief is the join: the publishing team and the strategy core meet there, and " +
+    "one named counterpart carries it upward. Firefly runs the platform beneath both.",
+};

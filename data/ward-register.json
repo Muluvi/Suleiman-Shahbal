@@ -1,0 +1,175 @@
+{
+  "source": {
+    "name": "IEBC — Registered Voters per County Assembly Ward",
+    "url": "https://www.iebc.or.ke/docs/rov_per_caw.pdf",
+    "publicationDate": "2022",
+    "tier": 1
+  },
+  "prisonVoters": 0,
+  "countyTotalWards": 641913,
+  "countyTotalWithPrisons": 641913,
+  "constituencies": [
+    {
+      "id": "changamwe",
+      "name": "Changamwe",
+      "voters": 93561,
+      "wards": [
+        {
+          "name": "Port Reitz",
+          "voters": 17817
+        },
+        {
+          "name": "Kipevu",
+          "voters": 16132
+        },
+        {
+          "name": "Airport",
+          "voters": 18557
+        },
+        {
+          "name": "Changamwe",
+          "voters": 18182
+        },
+        {
+          "name": "Chaani",
+          "voters": 22873
+        }
+      ]
+    },
+    {
+      "id": "jomvu",
+      "name": "Jomvu",
+      "voters": 75085,
+      "wards": [
+        {
+          "name": "Jomvu Kuu",
+          "voters": 24243
+        },
+        {
+          "name": "Miritini",
+          "voters": 18048
+        },
+        {
+          "name": "Mikindani",
+          "voters": 32794
+        }
+      ]
+    },
+    {
+      "id": "kisauni",
+      "name": "Kisauni",
+      "voters": 135276,
+      "wards": [
+        {
+          "name": "Mjambere",
+          "voters": 22692
+        },
+        {
+          "name": "Junda",
+          "voters": 25602
+        },
+        {
+          "name": "Bamburi",
+          "voters": 20470
+        },
+        {
+          "name": "Mwakirunge",
+          "voters": 6423
+        },
+        {
+          "name": "Mtopanga",
+          "voters": 19474
+        },
+        {
+          "name": "Magogoni",
+          "voters": 15105
+        },
+        {
+          "name": "Shanzu",
+          "voters": 25510
+        }
+      ]
+    },
+    {
+      "id": "nyali",
+      "name": "Nyali",
+      "voters": 124253,
+      "wards": [
+        {
+          "name": "Frere Town",
+          "voters": 24849
+        },
+        {
+          "name": "Ziwa la Ng'ombe",
+          "voters": 23296
+        },
+        {
+          "name": "Mkomani",
+          "voters": 24154
+        },
+        {
+          "name": "Kongowea",
+          "voters": 28846
+        },
+        {
+          "name": "Kadzandani",
+          "voters": 23108
+        }
+      ]
+    },
+    {
+      "id": "likoni",
+      "name": "Likoni",
+      "voters": 94764,
+      "wards": [
+        {
+          "name": "Mtongwe",
+          "voters": 13937
+        },
+        {
+          "name": "Shika Adabu",
+          "voters": 15437
+        },
+        {
+          "name": "Bofu",
+          "voters": 18188
+        },
+        {
+          "name": "Likoni",
+          "voters": 13273
+        },
+        {
+          "name": "Timbwani",
+          "voters": 33929
+        }
+      ]
+    },
+    {
+      "id": "mvita",
+      "name": "Mvita",
+      "voters": 118974,
+      "wards": [
+        {
+          "name": "Mji wa Kale/Makadara",
+          "voters": 22341
+        },
+        {
+          "name": "Tudor",
+          "voters": 22926
+        },
+        {
+          "name": "Tononoka",
+          "voters": 23379
+        },
+        {
+          "name": "Shimanzi/Ganjoni",
+          "voters": 18556
+        },
+        {
+          "name": "Majengo",
+          "voters": 31772
+        }
+      ]
+    }
+  ]
+}

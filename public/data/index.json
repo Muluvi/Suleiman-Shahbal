@@ -1,0 +1,583 @@
+[
+  {
+    "id": "fig-cover-map",
+    "section": "Cover",
+    "title": "More than half the register, 55.0%, lives where the 2022 race was decided by under 2,000 votes",
+    "question": "Where does the electorate sit, and where was the last race closest?",
+    "takeaway": "The 353,090-voter pool in Kisauni, Nyali and Changamwe is the ground the race is won or lost on; the Island, the incumbent's strongest ground, is 18.53% of the register."
+  },
+  {
+    "id": "fig-cover-spine",
+    "section": "Cover",
+    "title": "The plan runs evidence first: what Mombasa is and needs, where he stands, the strategy, the plan, how it is proven and kept lawful, and the decision",
+    "question": "What is the shape of the argument?",
+    "takeaway": "Mombasa today and His standing are the evidence; The strategy and The plan are built on it; Proof and safeguards shows how it is measured and kept lawful; The decision closes with what Mr Shahbal is asked to decide. The evidence behind it follows, then the working platform."
+  },
+  {
+    "id": "fig-1-1-timeline",
+    "section": "1.2",
+    "title": "There are about eleven months to the election, and the nomination window comes first, within weeks",
+    "question": "How long is there?",
+    "takeaway": "The New Democrats ticket is settled in a window reported for 23 March to 6 June 2027; everything the engagement does before then is aimed at it."
+  },
+  {
+    "id": "fig-1-3-objectives",
+    "section": "1.3",
+    "title": "Each of the five objectives answers one finding and is judged by one observable measure",
+    "question": "What are the five objectives, and what does each serve?",
+    "takeaway": "No objective stands on its own: each starts from a finding in Section 2 and ends in an indicator in Section 18.1."
+  },
+  {
+    "id": "fig-1-4-flow",
+    "section": "1.4.1",
+    "title": "His team analyses, sets the strategy and directs on the platform, and keeps publishing throughout",
+    "question": "How does the work run?",
+    "takeaway": "Firefly publishes nothing on his accounts and operates no channel: it runs the platform the team works on."
+  },
+  {
+    "id": "fig-1-5-scorecard",
+    "section": "1.9",
+    "title": "Every measure of success is observable on his channels or the SMS list, and each baseline is set in Week 1",
+    "question": "How will success be judged?",
+    "takeaway": "The scorecard starts empty by design: the Week 1 export sets each baseline from his own channels and the SMS list."
+  },
+  {
+    "id": "fig-2-1-register",
+    "section": "2.1",
+    "title": "641,913 registered voters in six constituencies; Kisauni and Nyali hold two in five",
+    "question": "How big is the register, and where is it?",
+    "takeaway": "Mombasa had 641,913 registered voters in 2022 at 1,041 polling stations. No 2026 Mombasa register figure is in hand, so the 2022 register is the base for every calculation."
+  },
+  {
+    "id": "fig-2-2-results",
+    "section": "2.2",
+    "title": "He came within 37,678 votes in 2013; in 2022 the seat was won with 119,083",
+    "question": "What does it take to win the governorship in Mombasa?",
+    "takeaway": "His 2013 tally, 94,905, is within 25,095 of the 120,000 benchmark; the 2022 winning total fell to 119,083 on a turnout of about a third."
+  },
+  {
+    "id": "fig-2-4-people",
+    "section": "1.1",
+    "title": "Mombasa is young and entirely urban: half its residents are 24.0 or younger",
+    "question": "Who lives in Mombasa?",
+    "takeaway": "A county of 1,208,333 people on 220 km², the densest outside Nairobi; 31.8% were poor in 2021."
+  },
+  {
+    "id": "fig-2-5-budget",
+    "section": "1.5",
+    "title": "The county ran a KSh 18.73bn budget in FY2025/26, and raised a third of it itself",
+    "question": "What does the next governor actually control?",
+    "takeaway": "Own-source revenue, KSh 6.21bn, is a larger share in Mombasa than in almost any county; KSh 5.62bn of the budget was for development."
+  },
+  {
+    "id": "fig-2-6-connectivity",
+    "section": "2.9.1",
+    "title": "Internet use rose from two in five residents to nearly half between 2019 and 2023/24",
+    "question": "How do people get online, and has that changed?",
+    "takeaway": "Mombasa is the fourth most online county in Kenya; 53.1% are still not online. The 2023/24 county row for phone ownership is still to be read, so the phone line holds the 2019 rate."
+  },
+  {
+    "id": "fig-2-7-media",
+    "section": "4.2",
+    "title": "Paid placement goes to the commercial stations; the faith stations are partners for programming, never for advertising",
+    "question": "Who owns the airwaves, and where do we place vs partner?",
+    "takeaway": "Pwani FM, Radio Citizen and Radio Maisha carry the campaign's paid placements; Radio Rahma, Radio Salaam and Baraka FM carry community programming on water, health and jobs."
+  },
+  {
+    "id": "fig-2-8-record",
+    "section": "6.1",
+    "title": "A builder's record: a bank in 2008, two governor's races, and a KSh 12bn industrial zone",
+    "question": "What has he actually done?",
+    "takeaway": "His distinguishing proof is things built that voters can visit; the SEZ jobs figure is a projection until the jobs exist."
+  },
+  {
+    "id": "fig-2-9-channels",
+    "section": "6.4",
+    "title": "His channels are read on the Week 1 export, not estimated",
+    "question": "What does his presence look like?",
+    "takeaway": "Every count on this figure is set in Week 1 from his own exports."
+  },
+  {
+    "id": "fig-3-1-funnel",
+    "section": "2.1",
+    "title": "To win, he needs about 54.3% of the ballots cast, on the 2022 register",
+    "question": "What is the winning number?",
+    "takeaway": "120,000 votes is the 2022 winner's total rounded: a floor, set on the lowest turnout on record. The 2017 winner needed 221,177."
+  },
+  {
+    "id": "fig-3-2-register-map",
+    "section": "2.3",
+    "title": "The twelve largest wards hold 50.08% of the register, and half the wards hold 76.24%",
+    "question": "Where are the votes?",
+    "takeaway": "Registration is concentrated in the mainland estates: the ten smallest wards together hold 23.76% of voters."
+  },
+  {
+    "id": "fig-3-3-paths",
+    "section": "2.4",
+    "title": "No route clears 120,000 on its own ballots at the 2022 turnout",
+    "question": "Which route builds the margin, and what does turnout change?",
+    "takeaway": "At the 2022 turnout no route carries the number alone; the close-contest belt is where the margin is built, and turnout decides whether it is enough."
+  },
+  {
+    "id": "fig-3-4-footprint",
+    "section": "6.2",
+    "title": "55.0% of the register lives in the three constituencies decided by fewer than 2,000 votes in 2022",
+    "question": "Where was the last race closest?",
+    "takeaway": "The 353,090-voter pool is structural, derived from the 2022 margins and the register, not from any measure of opinion; 7 of the twelve largest wards are in it."
+  },
+  {
+    "id": "fig-3-6-party-flow",
+    "section": "6.3",
+    "title": "In 2022 the winner's lead was under 2,000 votes in three constituencies, and he contests 2027 without a big party behind him",
+    "question": "Where will party loyalty not carry him?",
+    "takeaway": "No party vote carries to him anywhere: The New Democrats has no Mombasa machine. The margins show where the last race was close enough to turn."
+  },
+  {
+    "id": "fig-3-7-zones",
+    "section": "1.2",
+    "title": "The three zones hold 79.3% of residents; Likoni, across the ferry, rotates",
+    "question": "How do the three zones differ, and who is left out?",
+    "takeaway": "About 250,000 residents and 14.76% of the register are in Likoni, which takes a rotating share of effort and the campaign's ward tests."
+  },
+  {
+    "id": "fig-3-8-ceiling",
+    "section": "2.9.3",
+    "title": "Digital can reach about 332,211 voters, 276.8% of the benchmark, but reach is not turnout",
+    "question": "What can digital physically reach?",
+    "takeaway": "Mombasa is half online, so digital reach is large; 376,128 registered voters are still not reachable online, and SMS, USSD, radio and the ground carry them."
+  },
+  {
+    "id": "fig-3-9-audit",
+    "section": "2.10.3",
+    "title": "Six profile checks and three audit figures, all set from the Week 1 export",
+    "question": "What does his current presence actually show?",
+    "takeaway": "The six checks are Section 14.3; the three audit figures are drawn from the Week 1 export, never from an estimate."
+  },
+  {
+    "id": "fig-3-10-gaps",
+    "section": "2.11",
+    "title": "34 things no published source can tell the analysis, and none is estimated",
+    "question": "What can't the data tell us yet, and what closes each gap?",
+    "takeaway": "The analysis works from the register, declared totals and the 2022 constituency tallies, not from ward-level preference or ward returns not yet in hand."
+  },
+  {
+    "id": "fig-3-11-evidence",
+    "section": "7.1",
+    "title": "The diagnosis is a turnout and machinery gap, and his 2017 drop is the strongest evidence against it",
+    "question": "How strong is the diagnosis, and what would overturn it?",
+    "takeaway": "Week 1 tests it against his own channel data, and the 2017 Forms 37B test where his 2013 voters went."
+  },
+  {
+    "id": "fig-3-12-projects",
+    "section": "3.7",
+    "title": "No itemised county project register is in hand yet, so nothing is drawn ward by ward",
+    "question": "Where has the county placed its projects, ward by ward?",
+    "takeaway": "When the county's Annual Development Plan and progress report are in hand, their itemised projects load here and in the ward tools."
+  },
+  {
+    "id": "fig-4-1-message-house",
+    "section": "3.2.1",
+    "title": "One position, three pillars that argue it, and a record that holds it up",
+    "question": "What is the position, and what holds it up?",
+    "takeaway": "Every message rests on something already on the public record; none rests on a promise alone."
+  },
+  {
+    "id": "fig-4-2-effort",
+    "section": "3.3.1",
+    "title": "In the Ballot line phase, 65% of the effort goes to the mainland belt, above its share of residents",
+    "question": "Where does the effort go in the Ballot line phase?",
+    "takeaway": "The weighting over-indexes on the close-contest belt on the working hypothesis that his gap there is turnout and machinery; 60% of digital reach effort is geofenced to it."
+  },
+  {
+    "id": "fig-4-3-segments",
+    "section": "3.4.3",
+    "title": "Six segments, two sized in voters and four with context but no published voter count",
+    "question": "Who are we trying to move, and how much do they matter?",
+    "takeaway": "Sizes overlap and are not additive; where no source publishes a voter count, none is given."
+  },
+  {
+    "id": "fig-4-4-message-region",
+    "section": "10.4",
+    "title": "Each zone hears a different case for the same candidate, all of it in Kiswahili first",
+    "question": "What do we say where, and in which language?",
+    "takeaway": "The Island hears the bills and the bank, the north mainland hears water and jobs, the west mainland hears the port and the SEZ; Kiswahili leads everywhere."
+  },
+  {
+    "id": "fig-4-5-calendar",
+    "section": "3.7",
+    "title": "The same seven days become six briefed posts across four content types, and Thursday's commitment returns as a Sunday check",
+    "question": "What gets published, and when?",
+    "takeaway": "Two fields on a Thursday post and a language rule change the week; who takes the photograph and who presses publish do not."
+  },
+  {
+    "id": "fig-4-6-channel-shift",
+    "section": "3.3.2",
+    "title": "Digital's share of effort falls to 30%, and radio and SMS rise, because reach is not turnout",
+    "question": "How does effort move between channels?",
+    "takeaway": "70% of effort goes offline; radio placement goes only to the stations Section 4.2 marks for placement."
+  },
+  {
+    "id": "fig-4-7-profile-fixes",
+    "section": "4.2.3",
+    "title": "Six profile checks, each minutes of work, and the builder's proof comes first",
+    "question": "What gets fixed first?",
+    "takeaway": "The SEZ and the bank are his differentiators; they belong in the one field a voter checks. Each check is settled against his live profiles in Week 1."
+  },
+  {
+    "id": "fig-4-8-decision-rules",
+    "section": "3.8",
+    "title": "Six findings the Week 1 audit could return, each with the change it triggers, fixed in advance",
+    "question": "When does the plan change?",
+    "takeaway": "Stating the rules before the audit means the data cannot be read backwards into whatever was already planned."
+  },
+  {
+    "id": "fig-5-2-workstream-panels",
+    "section": "4.5",
+    "title": "Fourteen workstreams in four groups: your team runs them on Firefly's platform, and keeps publishing",
+    "question": "What does each group produce, and who owns each workstream?",
+    "takeaway": "Most of the output is your team's existing work, now directed by the team itself; Firefly's own product is the platform. Workstream 9, the offline layer, is the one the race turns on; two workstreams sit outside the operation."
+  },
+  {
+    "id": "fig-5-3-four-weeks",
+    "section": "4.2.1",
+    "title": "The first week measures, and nothing is committed against the diagnosis until it has",
+    "question": "What happens in the first four weeks?",
+    "takeaway": "Week 1 is the audit; the brief starts in Week 2, weighted to the pool, and the six profile checks ship by the end of it."
+  },
+  {
+    "id": "fig-5-4-phases",
+    "section": "4.3",
+    "title": "Five phases run to the election; the Ballot line runs ahead of The New Democrats decision, not with it",
+    "question": "How does the plan run to August 2027?",
+    "takeaway": "The Ballot line is the team's work period, weeks 1–6 from the go-ahead; The New Democrats' decision is a separate window, reported for 23 March to 6 June 2027. Three general-election phases keep their calendar dates to 10 August 2027."
+  },
+  {
+    "id": "fig-5-4-ladder",
+    "section": "4.3.1",
+    "title": "Three indicators climb through every phase, and every other target belongs to one phase",
+    "question": "What does each phase have to deliver?",
+    "takeaway": "Consented SMS contacts rise from 40,000 in the Awareness phase to 120,000 by the Turnout phase; rows marked ° are operational diagnostics, not performance indicators."
+  },
+  {
+    "id": "fig-5-5-cadence",
+    "section": "1.5.2",
+    "title": "He receives a brief every week and a read every month, and the level sets how deep each goes",
+    "question": "What does he receive, and how often?",
+    "takeaway": "Standard, the recommended level, is the one at which all 30 wards carry reach reporting and an active SMS and USSD layer."
+  },
+  {
+    "id": "fig-5-6-kpis",
+    "section": "5.1",
+    "title": "Nine indicators judge the work, four for the nomination and five for the election, each observable on his own channels or lists",
+    "question": "How is progress measured?",
+    "takeaway": "Every indicator is observable on his channels, the SMS list or the field record, and each stays empty until its baseline is taken."
+  },
+  {
+    "id": "fig-5-7-approval",
+    "section": "4.1.3",
+    "title": "Your team drafts and publishes, and one named counterpart approves",
+    "question": "How are decisions made?",
+    "takeaway": "Your strategy core approves new claims and Kiswahili output, your team publishes everything, the offline broadcasts included, and Firefly publishes nothing."
+  },
+  {
+    "id": "fig-5-9-team",
+    "section": "4.6",
+    "title": "The campaign names three strategy roles and removes no one, with five surge roles each tied to a trigger; Firefly runs the platform",
+    "question": "What shape is the team?",
+    "takeaway": "The campaign's command structure and his publishing team stay as they are; the strategy director reports to one named counterpart and briefs one named lead."
+  },
+  {
+    "id": "fig-5-2-1-report-flow",
+    "section": "4.5.1",
+    "title": "Every report ends in a published outcome, and the reporter hears back twice",
+    "question": "What happens to a report in the service-delivery tracker?",
+    "takeaway": "The register shows what was reported, what was raised and what happened, failures included."
+  },
+  {
+    "id": "fig-5-2-3-field-loop",
+    "section": "4.5.8",
+    "title": "The doorstep and the ad audience update each other within a day",
+    "question": "How do the field and digital operations learn from each other?",
+    "takeaway": "The opt-in rate on routed doors keeps both sides honest: if routed doors do no better than the rest, the routing is wrong."
+  },
+  {
+    "id": "fig-5-2-3-ussd-menu",
+    "section": "4.5.9",
+    "title": "Six options on any phone, and the third puts the tracker in reach of a feature phone in Likoni",
+    "question": "What does the USSD menu offer?",
+    "takeaway": "Dial the shortcode, read the plan, register, report an issue, volunteer or opt in, with no internet and close to no cost."
+  },
+  {
+    "id": "fig-5-2-4-stack",
+    "section": "G.4",
+    "title": "Five components, and the personal data concentrates in the first two",
+    "question": "What does each component of the stack do, hold and risk?",
+    "takeaway": "The gateway and the CRM carry the high and critical data-protection exposure; the other three work on public or anonymised data, and every one awaits a campaign decision."
+  },
+  {
+    "id": "fig-6-1-dependencies",
+    "section": "1.7",
+    "title": "The campaign provides 9 things, and three of them gate everything else",
+    "question": "What does the campaign provide?",
+    "takeaway": "A counterpart, the team's analytics exports and the data-protection reviewer come first; the rest follow once the engagement is running."
+  },
+  {
+    "id": "fig-6-3-decision",
+    "section": "1.1",
+    "title": "The ask is one decision, to approve the platform, because the nomination window sets the clock",
+    "question": "What is being asked?",
+    "takeaway": "Each week of delay is a week less of directed output before a window reported for late October; the 353,090-voter pool is where that output goes."
+  },
+  {
+    "id": "audience-overview",
+    "section": "reference",
+    "title": "Six ways of cutting the same electorate, and two of them decide the channel plan",
+    "question": "This plan's Mombasa County audience architecture overview",
+    "takeaway": "Connectivity and turnout are the two facets the rest of the proposal turns on: 46.9% online sets the channel mix (CA/KNBS 2023/24, Tier 1), and a 2022 turnout of about a third sets the task. No published study gives Mombasa's home-language shares, so none is printed."
+  },
+  {
+    "id": "visit-loop",
+    "section": "reference",
+    "title": "Every visit logs a commitment, and twelve weeks later the tracker says what happened to it",
+    "question": "The visit-to-verification loop",
+    "takeaway": "It is a loop: the verification publishes to the tracker whether the commitment was kept or not, and that record is what the next visit is measured against. “Published either way” is the block's own phrase and the whole of its argument."
+  },
+  {
+    "id": "provenance-mandate",
+    "section": "reference",
+    "title": "Three things every figure in this document has to carry",
+    "question": "The tri-partite provenance mandate",
+    "takeaway": "Source, date and geographic unit. Every figure in this pass carries all three in its “View the data” disclosure, which is the document's own rule applied to the document's own charts."
+  },
+  {
+    "id": "tier-classification",
+    "section": "reference",
+    "title": "Three tiers, and only one of them may move money",
+    "question": "The three-tier evidential classification — tier, source types, authorised strategic use",
+    "takeaway": "The authorised-use column is what makes the tiers operational rather than descriptive: Tier 3 is strictly prohibited from driving financial or resource reallocation without escalation. Every figure in this pass carries the tier the section states, and flags disagreement rather than resolving it — which is C-8 and C-9."
+  },
+  {
+    "id": "conflict-protocol",
+    "section": "reference",
+    "title": "What to do when two sources disagree, in four steps the document wrote for itself",
+    "question": "The conflict resolution protocol, in order",
+    "takeaway": "Step 4 is the one this audit has been applying throughout: where the document disagrees with itself, both numbers are shown with their sources and neither is averaged away. The steps are numbered because they are tried in order — the methodological audit only applies once the tier test comes back equal."
+  },
+  {
+    "id": "message-by-segment",
+    "section": "reference",
+    "title": "Six segments, six messages, and a named evidence source behind every one",
+    "question": "The message-by-demographic-segment matrix — segment, tailored message and Kiswahili framing, verifiable evidence",
+    "takeaway": "The evidence column is not decoration: the approval gateway makes a primary citation mandatory at drafting, and this matrix is where each segment's citation is named. The Kiswahili lines are drafts until the native-speaker reviewer signs them off."
+  },
+  {
+    "id": "message-by-channel",
+    "section": "reference",
+    "title": "Five channels, each with its own register and its own proof",
+    "question": "The message-by-channel matrix — channel and reach, format and linguistic style, evidential proof points",
+    "takeaway": "Reach is shown only where a source supports it: the SMS layer (phone owners not online) and the online audience, both read from the registry. Radio, the stages and faith networks have no measured reach in Mombasa. The channels overlap and must not be added."
+  },
+  {
+    "id": "escalation-ladder",
+    "section": "reference",
+    "title": "Three decision levels, three authorities, and the candidate is only in the last",
+    "question": "The operational escalation path — issues, resolution authority and the rule at each decision level",
+    "takeaway": "The levels are numbered because escalation is ordered: a level 1 issue that is not resolved inside the hour becomes a level 2 issue, and the authority changes with it. Each level names who decides and what they must do, which is what makes it a protocol rather than a list."
+  },
+  {
+    "id": "compliance-architecture",
+    "section": "reference",
+    "title": "Three statutes, and a signature count worked to its stricter reading",
+    "question": "The statutory compliance architecture",
+    "takeaway": "The endorsement count can be read two ways, 500 per sub-county (3,000) or 500 from a majority of the six. A paper short of the statutory count is rejected and a surplus is not, so the campaign works to 3,000; the statutory figure is confirmed with counsel before filing."
+  },
+  {
+    "id": "iebc-clearance",
+    "section": "reference",
+    "title": "Seven clearances, none claimed until the paper is in hand",
+    "question": "This plan's IEBC statutory nomination clearance checklist — dimension, statutory standard, current status",
+    "takeaway": "The status column is the point: nothing is marked verified until the certificate is in hand. Four are to be confirmed in Week 1, one is scheduled, one is pending the filing window, and one reads “[Requires legal confirmation]”: the document declining to claim what it has not confirmed."
+  },
+  {
+    "id": "liability-matrix",
+    "section": "reference",
+    "title": "Three exposures, and two of them end in a custodial sentence",
+    "question": "This plan's DPA 2019 and Election Offences statutory matrix — obligation, exposure, mitigation",
+    "takeaway": "The exposure column carries the penalty as the document states it — Ksh 5,000,000 or two years, and disqualification plus five years — because a mitigation protocol read without its exposure is a procedure rather than a reason."
+  },
+  {
+    "id": "org-chart",
+    "section": "reference",
+    "title": "A lean core of three leads, each directing subcontracted specialists",
+    "question": "The lean core plus specialist vendor model",
+    "takeaway": "The three leads report to the Campaign Manager and the specialists are subcontracted, not hired. No role or headcount has been added: this is exactly the set the block named."
+  },
+  {
+    "id": "role-ownership",
+    "section": "reference",
+    "title": "Four core roles, and every specialist in the campaign reports through one of them",
+    "question": "The core campaign roles and ownership matrix — role, ownership, subcontractors directed",
+    "takeaway": "No role, headcount or vendor has been added. The SMS/USSD gateway vendor is stated as “selected at contracting”, which is the same pending state the procurement matrix records for every one of its five rows."
+  },
+  {
+    "id": "reporting-lines",
+    "section": "reference",
+    "title": "Two teams, one weekly brief, and a single named counterpart between them and the candidate",
+    "question": "The reporting lines",
+    "takeaway": "The weekly brief is the join: the publishing team and the strategy core meet there, and one named counterpart carries it upward. Firefly runs the platform beneath both."
+  },
+  {
+    "id": "research-and-tracker",
+    "section": "reference",
+    "title": "One programme tests whether the deficit is real; the other is the evidence it argues with",
+    "question": "The tests of the recognition hypothesis, and the service-delivery tracker",
+    "takeaway": "The research programme feeds the tracker: what the audit establishes about a ward becomes a baseline the tracker publishes against. 19B is stated as a dual asset — campaign evidence now, and a governing dashboard from day one."
+  },
+  {
+    "id": "research-modules",
+    "section": "reference",
+    "title": "Three instruments, and each one names the decision it unlocks",
+    "question": "The tests of the turnout-and-machinery hypothesis — module, method, record, timing and the decision it unlocks",
+    "takeaway": "The last column is what makes this a decision instrument: the audit's result routes directly to a stated change of plan, set out in advance in this plan. All three read records that already exist: his own analytics, the IEBC's published forms and the line his team operates."
+  },
+  {
+    "id": "delivery-tracker",
+    "section": "reference",
+    "title": "Four delivery dimensions, two of which are still waiting on a ward-level record",
+    "question": "The public service-delivery tracker — dimension, statutory sources, update cadence and verification",
+    "takeaway": "Water hours by ward and the pending-bills schedule are stated as pending the record, and they are printed that way rather than filled with an estimate. The SEZ jobs figure is the promoters' projection, and the tracker reports jobs that exist against it."
+  },
+  {
+    "id": "production-pipeline",
+    "section": "reference",
+    "title": "Four content types feed two engines, and everything leaves through one gateway",
+    "question": "This plan's 360° content production pipeline",
+    "takeaway": "The gateway is the point of the diagram: both engines converge on it, so no asset reaches a voter without the four-step sign-off this plan specifies. Nothing routes around it."
+  },
+  {
+    "id": "format-specs",
+    "section": "reference",
+    "title": "Five channels, each with its own format and language rule",
+    "question": "The production format specifications — channel, technical specification, language and creative treatment",
+    "takeaway": "The SMS row states the rule: “Kiswahili or English only (CA rule)”, single-part GSM-7 text. Plain Kiswahili fits GSM-7; Sheng and the Mijikenda languages travel by voice note and radio instead."
+  },
+  {
+    "id": "weekly-cycle",
+    "section": "reference",
+    "title": "Approval falls on Wednesday, which is what makes Friday's market broadcast possible",
+    "question": "The weekly 7-day content production cycle — focus and output deliverables per day",
+    "takeaway": "The week is built backwards from Friday's markets: scripts Monday, studio Tuesday, the approval gateway Wednesday, print and radio dispatch Thursday. Friday's row states 100,000 ward SMS delivered, which this plan's KPI ladder is the place to check against."
+  },
+  {
+    "id": "approval-gateway",
+    "section": "reference",
+    "title": "Nothing reaches a voter without a citation at the front and a logged signature at the end",
+    "question": "The four-step content approval gateway, in order",
+    "takeaway": "Numbered because the order is the control: a citation attached at step 1 is what steps 2 and 3 have to check, and the audit register entry at step 4 is what makes the whole chain reviewable afterwards."
+  },
+  {
+    "id": "asset-library",
+    "section": "reference",
+    "title": "Seven vaults, and the second one holds the evidence every asset has to cite",
+    "question": "The campaign asset repository",
+    "takeaway": "02_PRIMARY_EVIDENCE_VAULT is the one that makes the approval gateway's first step workable: the OAG certificates, the Hansard records and the KNBS baselines a drafter must attach a citation from are filed in one place rather than looked up each time."
+  },
+  {
+    "id": "field-loop",
+    "section": "reference",
+    "title": "What a ward coordinator hears at 18:00 can be answered on air the next morning",
+    "question": "The closed-loop field and digital integration engine",
+    "takeaway": "It is a loop, not a funnel: the inbound pipeline feeds the war room, the war room feeds the outbound pipeline and the physical channels, and what those produce comes back as field intelligence. The ASCII drew that with arrows; the order and this line carry it instead."
+  },
+  {
+    "id": "field-reports",
+    "section": "reference",
+    "title": "Four report types, one of which has a thirty-minute clock on it",
+    "question": "The ward coordinator field reporting protocol — type, frequency, channel and fields captured",
+    "takeaway": "The Critical Threat Flash is the only one with a deadline measured in minutes, and the only one routed to a direct phone rather than a queue. The other three are daily, weekly and weekly, and every one names the fields it captures."
+  },
+  {
+    "id": "operating-rhythm",
+    "section": "reference",
+    "title": "Seven standing forums, and the candidate is named in three of them",
+    "question": "The campaign operational rhythm and governance cadence — time, forum, agenda, owner and participants",
+    "takeaway": "The cadence is repeated on every row rather than merged down a column. A merged cell is a thing a screen reader reads once and a stacked phone layout loses entirely, and the cost of repeating it is two words."
+  },
+  {
+    "id": "data-layer",
+    "section": "reference",
+    "title": "Everything captured is tagged, consented and tiered before it reaches a channel",
+    "question": "The campaign data layer architecture — capture, validation, output, and the core beneath them",
+    "takeaway": "The ASCII original joined these with arrows. Arrows are the part that cannot survive a reflow, so the order carries the flow and the line above says in words what the arrows said: capture feeds validation, validation feeds the channels, and everything passes through the encrypted core."
+  },
+  {
+    "id": "supporter-schema",
+    "section": "reference",
+    "title": "Nineteen fields, four of them about consent and one that can never be reversed",
+    "question": "The supporter record schema — field, type, and the constraint on each",
+    "takeaway": "Transcribed field for field, including the enum members and their order: msisdn_hash is a one-way SHA-256 identifier and phone_encrypted is reversible AES-256-GCM for authorised SMS, and those are not interchangeable. It is now a real table — searchable, readable in order by a screen reader, and wrapping rather than scrolling sideways on a phone."
+  },
+  {
+    "id": "dpa-compliance",
+    "section": "reference",
+    "title": "Six sections of the Data Protection Act 2019, and what each one obliges the campaign to build",
+    "question": "The statutory compliance checklist — the legal requirement against the operational implementation",
+    "takeaway": "Each requirement cites its section of the Act. The pairing is the content, so each is drawn as one card rather than two columns that could shear apart at a narrow width."
+  },
+  {
+    "id": "tech-stack",
+    "section": "reference",
+    "title": "Four tiers, and the personal data lives in exactly one of them",
+    "question": "The campaign technology stack architecture",
+    "takeaway": "Tier 1 collects the phone numbers and tier 2 holds them encrypted; tiers 3 and 4 work on public and anonymised data. The procurement matrix rates the DPA risk of each accordingly, and every one of its five rows is still awaiting a campaign decision."
+  },
+  {
+    "id": "procurement-matrix",
+    "section": "reference",
+    "title": "Five components, rated for data-protection risk, and not one of them decided",
+    "question": "The technology stack master procurement matrix",
+    "takeaway": "All five rows read “Awaiting campaign decision” in the source and all five read it here. A figure that rendered a pending procurement as settled would be inventing the most consequential kind of thing in this chapter."
+  },
+  {
+    "id": "bypass-architecture",
+    "section": "reference",
+    "title": "Four ways to reach 641,913 voters without a commercial gatekeeper's permission",
+    "question": "The gatekeeper bypass and direct reach architecture: the operational protocol for each route",
+    "takeaway": "Four routes run in parallel but are stood up in order. Mang'elete, named in the first route, is in no ownership map; the ownership map in Who owns the airwaves governs."
+  },
+  {
+    "id": "cultural-registers",
+    "section": "reference",
+    "title": "Four terms where the literal translation loses the argument",
+    "question": "The framing protocol — the term, the translation that fails, and the working idiom",
+    "takeaway": "The working framings are drafts in plain coastal Kiswahili; the rules of engagement forbid machine translation, and the native-speaker reviewer signs off every line before it publishes."
+  },
+  {
+    "id": "qc-gateway",
+    "section": "reference",
+    "title": "Four gates between an English draft and a Kiswahili broadcast",
+    "question": "The translation and quality-control gateway, in order",
+    "takeaway": "Numbered because it is a real sequence: the reverse-translation audit cannot run before the adaptation it audits exists, and the cultural sign-off is the last gate before release."
+  },
+  {
+    "id": "language-map",
+    "section": "reference",
+    "title": "Kiswahili first, English for policy, Sheng and the Mijikenda languages where they are spoken",
+    "question": "The share of published content per language: the this plan target",
+    "takeaway": "These are targets for what the campaign publishes, not a measure of who speaks what: no published study gives Mombasa's home-language shares. Bulk SMS carries Kiswahili and English only."
+  },
+  {
+    "id": "language-deployment",
+    "section": "reference",
+    "title": "Every medium is allocated to the whole, and only one of them is allocated to Kiswahili alone",
+    "question": "The language allocation per campaign output medium. Each row totals 100%.",
+    "takeaway": "The bulk SMS row gives Kiswahili no allocation, as the bulk SMS rule requires: the Communications Authority restricts political bulk SMS to English or Kiswahili. USSD is not restricted, and takes 50% Kiswahili here."
+  },
+  {
+    "id": "constituency-power",
+    "section": "reference",
+    "title": "Four of the six constituencies hold 473,267 voters, 73.73% of the county, across 22 wards",
+    "question": "Registered voters per constituency, largest first, with ward count and average ward size",
+    "takeaway": "The \"Big 4\" (Kisauni, Nyali, Mvita, Likoni) are where the register is; read with the ward map, they are where the effort is weighed."
+  }
+]

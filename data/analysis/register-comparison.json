@@ -1,0 +1,37 @@
+{
+  "id": "register-comparison",
+  "title": "The register the arithmetic rests on",
+  "description": "No 2026 Mombasa register figure is in hand; the 2022 register is the working base.",
+  "chart_type": "comparison",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "The 2022 register (641,913) is the base for every calculation until IEBC publishes the Mombasa row of the 2026 ECVR annex.",
+    "Because the register has only grown since 2022, every ballot figure built on it is a floor."
+  ],
+  "values": [
+    {
+      "label": "IEBC 2022 register",
+      "value": 641913,
+      "unit": "voters",
+      "source_id": "S2",
+      "tier": 1,
+      "as_of": "2022",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "Register in use for 2026 calculations",
+      "value": 641913,
+      "unit": "voters",
+      "source_id": "S2",
+      "tier": 3,
+      "as_of": "2026",
+      "method": "modelled",
+      "status": "verify",
+      "note": "The 2022 register, carried forward: a floor"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+ "timeline-sec-14-0": {
+  "id": "timeline-sec-14-0",
+  "tab": "timeline",
+  "level": 2,
+  "number": "14.0",
+  "title": "Securing the ballot line",
+  "kind": "stepper",
+  "data": {
+   "steps": [
+    {
+     "n": 1,
+     "label": "The clock",
+     "body": "from the go-ahead to the IEBC's party deadlines in 2027 (certified membership lists by 23 March, nominations from 3 June), then…"
+    },
+    {
+     "n": 2,
+     "label": "Success",
+     "body": "a valid nomination on The New Democrats' ticket, backed by organised ground reach and trained agents across all six…"
+    },
+    {
+     "n": 3,
+     "label": "The party and nomination deadlines, March",
+     "body": "The party and nomination deadlines, March–June 2027: <window-chip></window-chip> The New Democrats' certified membership list by…"
+    },
+    {
+     "n": 4,
+     "label": "The general election, 10 August 2027",
+     "body": "turning out the 120,000-vote coalition a plurality win needs in a multi-candidate field."
+    }
+   ]
+  }
+ }
+}

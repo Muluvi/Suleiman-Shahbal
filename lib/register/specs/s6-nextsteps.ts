@@ -1,0 +1,75 @@
+/**
+ * Section 1, Next Steps: what the campaign provides, what is still open, and the decision.
+ */
+import { NOMINATION_WINDOW } from "../../phases.ts";
+import type { FigureSpec } from "../types.ts";
+import { fmt } from "./_util.ts";
+
+const DEPS: { item: string; gating: boolean; why: string }[] = [
+  { item: "One named counterpart who approves, and one named lead on the digital team who receives the brief", gating: true, why: "Decisions in one place" },
+  { item: "The team's own analytics exports from every channel, entered on the platform: no access to the accounts changes hands", gating: true, why: "Without them there is nothing to analyse and the engagement cannot start" },
+  { item: "Appointment of the data-protection reviewer", gating: true, why: "The long-lead item; gates the voter-file work and the offline layer" },
+  { item: "About three hours a week of candidate time", gating: false, why: "One Facebook Live, one voice-note session, one interview or content block" },
+  { item: "Daily photo and video uploads from the ground team", gating: false, why: "The raw material of Pillar 4" },
+  { item: "The IEBC 2026 register, county total then ward", gating: false, why: "The highest-priority data request: it re-bases every ward figure in Section 3, which stand on the 2022 register until then" },
+  { item: "The SEZ, Gulf African Bank and EALA records he can share", gating: false, why: "Verified proof points for the builder's record; no customer or beneficiary data" },
+  { item: "Sign-off on the engagement level", gating: false, why: "So the team can be assembled" },
+  { item: "The New Democrats' 2027 nomination rules and timetable, or the NEC resolution, as soon as the party issues them", gating: false, why: "The document that confirms or overturns the Phase −1 plan" },
+];
+
+export const FIG_6_1: FigureSpec = {
+  id: "fig-6-1-dependencies",
+  section: "1.7",
+  title: `The campaign provides ${DEPS.length} things, and three of them gate everything else`,
+  question: "What does the campaign provide?",
+  takeaway: "A counterpart, the team's analytics exports and the data-protection reviewer come first; the rest follow once the engagement is running.",
+  sources: [{ name: "This plan, Section 22.2", tier: null, state: "target" }],
+  chart: { type: "steps", steps: DEPS.map((d, i) => ({ when: d.gating ? `${i + 1} · gating` : `${i + 1}`, title: d.item, body: d.why, current: d.gating })) },
+  columns: [{ key: "n", label: "#", numeric: true }, { key: "item", label: "Dependency" }, { key: "gating", label: "Gates the rest" }, { key: "why", label: "Why" }],
+  rows: DEPS.map((d, i) => ({ cells: { n: i + 1, item: d.item, gating: d.gating ? "Yes" : "No", why: d.why } })),
+};
+
+export const FIG_6_3: FigureSpec = {
+  id: "fig-6-3-decision",
+  section: "1.1",
+  title: "The ask is one decision, to approve the platform, because the nomination window sets the clock",
+  question: "What is being asked?",
+  takeaway: `Each week of delay is a week less of directed output before a window reported for late October; the ${fmt("pool")}-voter pool is where that output goes.`,
+  sources: [{ name: NOMINATION_WINDOW.source, tier: NOMINATION_WINDOW.tier }, { name: "This plan", tier: null, state: "target" }],
+  chart: {
+    type: "composite",
+    parts: [
+      {
+        heading: "The decision",
+        chart: {
+          type: "cards",
+          columns: 2,
+          cards: [
+            { kicker: "The ask", title: "Approve the platform", body: "At the recommended Standard level. His team runs the campaign through it; Firefly runs the platform.", tone: "accent" },
+            { kicker: "What it starts", title: "The presence audit, then the first brief", body: "About six weeks for a first directed cycle, the first of them the audit that sets its targets." },
+          ],
+        },
+      },
+      {
+        heading: "Week 1",
+        chart: {
+          type: "steps",
+          horizontal: true,
+          steps: [
+            { when: "Day 1", title: "The team signs in", body: "Team accounts opened on the platform; Firefly holds no credentials to his channels." },
+            { when: "Days 1–2", title: "The export", body: "His team enters ninety days of reach, engagement, language and geography from its own accounts; the Page-or-profile question settled." },
+            { when: "Day 5", title: "The read", body: "The three audit figures filled, the diagnosis tested, the first brief drafted for Week 2." },
+          ],
+        },
+      },
+    ],
+  },
+  columns: [{ key: "when", label: "When" }, { key: "what", label: "What happens" }],
+  rows: [
+    { cells: { when: "Day 1", what: "Team accounts opened on the platform" } },
+    { cells: { when: "Days 1–2", what: "Ninety-day export entered by the team; Page-or-profile settled" } },
+    { cells: { when: "Day 5", what: "Audit read; diagnosis tested; first brief drafted" } },
+  ],
+};
+
+export const S6: FigureSpec[] = [FIG_6_1, FIG_6_3];

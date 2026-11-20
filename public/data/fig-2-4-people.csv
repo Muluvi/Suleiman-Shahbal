@@ -1,0 +1,11 @@
+Measure,Value,Unit,Source,Basis
+Population (2019),1208333,people,KNBS 2019 Census (Official),Sourced
+Median age,24,years,Calculated from KNBS 2019 Census Volume III (Official),Sourced
+Aged 15–34,41.8,%,KNBS 2019 Census (Official),Sourced
+Poverty rate (2021),31.8,%,KNBS via Stats Kenya (Reported),Sourced
+"Kisauni, population",291930,people,KNBS 2019 Census (Official),Sourced
+"Likoni, population",250358,people,KNBS 2019 Census (Official),Sourced
+"Nyali, population",216577,people,KNBS 2019 Census (Official),Sourced
+"Jomvu, population",163415,people,KNBS 2019 Census (Official),Sourced
+"Mvita, population",154171,people,KNBS 2019 Census (Official),Sourced
+"Changamwe, population",131882,people,KNBS 2019 Census (Official),Sourced
