@@ -28,7 +28,7 @@ export const AUDIENCE_FACETS = [
   { label: "Geographic locus", items: ["Rural: 95.2%", "Urban: 4.8%"] },
   { label: "Age demographic", items: ["Youth (18–35): ~44%", "Mid/senior (36+): 56%"] },
   { label: "Connectivity status", items: ["Offline: 73.8%", "Online: 26.2%"] },
-  { label: "Primary language", items: ["Kikamba: ~76%", "Kiswahili: ~16%", "English: ~8%"] },
+  { label: "Primary language", items: ["Kiswahili: ~76%", "Kiswahili: ~16%", "English: ~8%"] },
   { label: "Livelihood clusters", items: ["Dryland agrarian", "Pastoral / livestock", "Informal / bodaboda"] },
   { label: "Diaspora matrix", items: ["Nairobi / Mombasa", "Remittance leverage", "Family opinion shapers"] },
 ];
@@ -36,11 +36,11 @@ export const AUDIENCE_FACETS = [
 export const AUDIENCE_SERIES: FigureSeries = {
   id: "audience-overview",
   headline: "Six ways of cutting the same electorate, and two of them decide the channel plan",
-  measure: "§11's Kitui County audience architecture overview",
+  measure: "§11's Mombasa County audience architecture overview",
   points: [],
   note:
     "Connectivity and language are the two facets the rest of the proposal turns on: 73.8% offline " +
-    "sets the channel mix, ~76% Kikamba sets the language mix. The 73.8% / 26.2% split is the " +
+    "sets the channel mix, ~76% Kiswahili sets the language mix. The 73.8% / 26.2% split is the " +
     "CA/KNBS 2023/24 rate, which supersedes the 2019 census's 86.4% / 13.6%.",
 };
 
@@ -51,7 +51,7 @@ export const AUDIENCE_SEGMENTS: string[][] = [
     "1. Rural smallholders (agrarian core)",
     `${sizeText(segment("agrarian"))} — ${shareText(segment("agrarian"))}`,
     "Tier 1 KNBS/IEBC",
-    "Kamba radio & offline SMS",
+    "Coast radio & offline SMS",
     "Guaranteed minimum returns & sand dams",
   ],
   [
@@ -83,7 +83,7 @@ export const AUDIENCE_SEGMENTS: string[][] = [
     "Meritocracy, reliable medicine & pension flow",
   ],
   [
-    "6. Out-of-county Kamba diaspora",
+    "6. Out-of-county Coast diaspora",
     `Not sized: ${segment("diaspora").notSized?.context()}`,
     "No published count",
     "Nairobi/coast ads & town halls",
@@ -134,7 +134,7 @@ export const PROVENANCE_MANDATE: string[][] = [
   [
     "3. Geographic unit",
     "Exact administrative boundary to which the data applies",
-    'e.g. "Countywide", "Mwingi North", "Kyuso Ward"',
+    'e.g. "Countywide", "Kisauni", "Kyuso Ward"',
   ],
 ];
 
@@ -227,44 +227,44 @@ export const PROTOCOL_SERIES: FigureSeries = {
 export const MESSAGE_BY_SEGMENT: string[][] = [
   [
     "1. Smallholder crop farmers — not sized: voters by livelihood are not published",
-    '"Never sell Ndengu at Ksh 40 again." · County guaranteed aggregation minimum floor price (Ksh 85/kg) plus local storage · Kikamba: "Uithio wa Ndengu na Mbemba"',
-    "KNBS agrarian data: Kitui farmers lose ~68% of value to middlemen during peak harvest · pilot Kitui Central Farmers SACCO",
+    '"Never sell Ndengu at Ksh 40 again." · County guaranteed aggregation minimum floor price (Ksh 85/kg) plus local storage · Kiswahili: "Uithio wa Ndengu na Mbemba"',
+    "KNBS agrarian data: Mombasa farmers lose ~68% of value to middlemen during peak harvest · pilot Mvita Farmers SACCO",
   ],
   [
-    `2. Agro-pastoralists & herders (Mwingi/South) — not sized: ${segment("pastoralist").notSized?.context()}`,
-    '"Water pans, livestock feed reserves, and border security lighting." · Decentralised veterinary cold-chain · Kikamba: "Kithima kya Kyalo na Syana"',
+    `2. Agro-pastoralists & herders (the north mainland/South) — not sized: ${segment("pastoralist").notSized?.context()}`,
+    '"Water pans, livestock feed reserves, and border security lighting." · Decentralised veterinary cold-chain · Kiswahili: "Kithima kya Kyalo na Syana"',
     "National Drought Management Authority reports: livestock mortality drops 45% with localised water points",
   ],
   [
     `3. Youth hustlers & boda operators (18–35) — ${shareText(segment("youth"))}, ${sizeText(segment("youth"))}`,
-    '"The Youth Innovation & Enterprise Fund: zero-interest equipment loans." · Free driving licences & digital hubs · Kikamba: "Wathi wa Mwanya kwa Mwanake"',
-    "Kitui Central NG-CDF data: over 4,200 youth sponsored with NITA/TVET technical bursaries",
+    '"The Youth Innovation & Enterprise Fund: zero-interest equipment loans." · Free driving licences & digital hubs · Kiswahili: "Wathi wa Mwanya kwa Mwanake"',
+    "Mvita NG-CDF data: over 4,200 youth sponsored with NITA/TVET technical bursaries",
   ],
   [
     `4. Rural women, caregivers & chamas — women are ${regFmt("census.female.share")}% of residents (2019 Census); voters by sex are not published`,
-    '"Clean water within 1 km and stocked maternity dispensaries in every sub-location." · Ksh 50,000 table-banking seed capital · Kikamba: "Mumo kwa Aka na Syana"',
-    "Kitui Central project log: 84 functional solar boreholes built with clean water tariffs · Ksh 120M disbursed to women CBOs",
+    '"Clean water within 1 km and stocked maternity dispensaries in every sub-location." · Ksh 50,000 table-banking seed capital · Kiswahili: "Mumo kwa Aka na Syana"',
+    "Mvita project log: 84 functional solar boreholes built with clean water tariffs · Ksh 120M disbursed to women CBOs",
   ],
   [
     `5. Urban MSMEs, traders & market stall keepers — ${shareText(segment("msme"))}, ${sizeText(segment("msme"))}`,
-    '"Single Business Permit reform and 0% harassment of mama mbogas." · Modern solar market shades & drainage · Kikamba: "Biashara Nzeo na Kazi"',
-    "Parliamentary Hansard: Dr. Mulu's defence of MSME tax relief in the Finance Bill 2024 · Kitui Market Vendor Council log",
+    '"Single Business Permit reform and 0% harassment of mama mbogas." · Modern solar market shades & drainage · Kiswahili: "Biashara Nzeo na Kazi"',
+    "Parliamentary Hansard: Mr Shahbal's defence of MSME tax relief in the Finance Bill 2024 · Mombasa Market Vendor Council log",
   ],
   [
     "6. Teachers, civil servants & elite professionals — not sized: headcounts are not published",
     '"Timely county salaries, meritocratic promotions, and NHIF/SHIF hospital cover." · Strict adherence to SRC salary codes',
-    "Auditor-General & CRA data: Dr. Mulu's published fiscal blueprints on county debt relief",
+    "Auditor-General & CRA data: Mr Shahbal's published fiscal blueprints on county debt relief",
   ],
 ];
 
 export const SEGMENT_MESSAGE_SERIES: FigureSeries = {
   id: "message-by-segment",
   headline: "Six segments, six messages, and a named evidence source behind every one",
-  measure: "§C.1's message-by-demographic-segment matrix — segment, tailored message and Kikamba framing, verifiable evidence",
+  measure: "§C.1's message-by-demographic-segment matrix — segment, tailored message and Kiswahili framing, verifiable evidence",
   points: [],
   note:
     "The evidence column is not decoration: §15.1.2's approval gateway makes a primary citation " +
-    "mandatory at drafting, and this matrix is where each segment's citation is named. The Kikamba " +
+    "mandatory at drafting, and this matrix is where each segment's citation is named. The Kiswahili " +
     "framings are transcribed exactly, diacritics included.",
 };
 
@@ -272,18 +272,18 @@ export const SEGMENT_MESSAGE_SERIES: FigureSeries = {
 
 export const MESSAGE_BY_CHANNEL: string[][] = [
   [
-    `1. Kikamba vernacular radio (${PLACEMENT_STATIONS}) — reach not measured`,
-    "45-second testimonials and live studio debates · conversational, authentic, culturally grounded Kikamba with elder idioms",
+    `1. Kiswahili vernacular radio (${PLACEMENT_STATIONS}) — reach not measured`,
+    "45-second testimonials and live studio debates · conversational, authentic, culturally grounded Kiswahili with elder idioms",
     "Auditor-General clean audit certificates · concrete CDF school and water case studies, with GPS location names",
   ],
   [
     `2. Direct 2G bulk SMS & USSD — up to ${regFmt("reach.sms-only")} phone owners not online`,
-    '160-character hyper-local alerts · "Tseikuru: Dr. Mulu will publish the needs-weighted formula for ward water funds before any allocation"',
+    '160-character hyper-local alerts · "Tseikuru: Mr Shahbal will publish the needs-weighted formula for ward water funds before any allocation"',
     "The published, needs-weighted ward allocation formula · free USSD code to read the manifesto",
   ],
   [
     "3. Market caravans & barazas — reach not measured",
-    "High-energy PA speeches and jingles · rhythmic Kikamba music, local merchant endorsements, candidate Q&A",
+    "High-energy PA speeches and jingles · rhythmic Kiswahili music, local merchant endorsements, candidate Q&A",
     "Physical display of project photobooks and contractor logs · live testimony from beneficiaries",
   ],
   [
@@ -306,7 +306,7 @@ export const CHANNEL_MESSAGE_SERIES: FigureSeries = {
   note:
     "Reach is shown only where a source supports it: the SMS layer (phone owners not online) and " +
     "the online audience, both read from the registry. Radio, caravans and church have no measured " +
-    "reach in Kitui. The channels overlap and must not be added.",
+    "reach in Mombasa. The channels overlap and must not be added.",
 };
 
 /* ------------------------------------------------------------------ §D.2 the escalation ladder */
@@ -331,8 +331,8 @@ export const ESCALATION_LADDER = [
   {
     title: "Governance, coalition & red-line escalation — under 4 hours",
     steps: [
-      "Issues: Wiper Party leadership alignments, major endorsements or defections, litigation and legal threats, or fundamental policy manifesto revisions.",
-      "Resolution authority: Dr. Makali Mulu & the Strategic Advisory Board.",
+      "Issues: The New Democrats Party leadership alignments, major endorsements or defections, litigation and legal threats, or fundamental policy manifesto revisions.",
+      "Resolution authority: Suleiman Shahbal & the Strategic Advisory Board.",
       "Rule: the candidate delivers the final executive directive.",
     ],
   },

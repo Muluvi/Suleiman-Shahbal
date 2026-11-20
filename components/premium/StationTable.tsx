@@ -18,10 +18,10 @@ import { tierCode } from "../../data/types";
 export function StationTable() {
   return (
     <div className="pf-g6">
-      <div className="pf-table-wrap pf-table-wrap--pin" role="region" aria-label="Kikamba-language stations: ownership, frequency and reach" tabIndex={0}>
+      <div className="pf-table-wrap pf-table-wrap--pin" role="region" aria-label="Kiswahili-language stations: ownership, frequency and reach" tabIndex={0}>
         <table className="pf-table pf-table--cards">
           <caption className="pf-table__caption">
-            Kikamba-language stations: who owns them, where they broadcast, and how far they reach (a qualitative read, not a measured audience)
+            Kiswahili-language stations: who owns them, where they broadcast, and how far they reach (a qualitative read, not a measured audience)
           </caption>
           <thead>
             <tr>

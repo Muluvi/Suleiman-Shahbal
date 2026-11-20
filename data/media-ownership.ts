@@ -13,15 +13,15 @@ import { LOCAL_DIGITAL_MEDIA_OWNERSHIP } from "./sources.ts";
 import { withTeamEdits } from "../lib/data/team-overlay.ts";
 
 const ROYAL_MEDIA: Source = { name: "Royal Media Services corporate ownership (public record)", publicationDate: "2026", tier: 2 };
-const SDA_CHURCH: Source = { name: "Seventh-Day Adventist Church, Kitui (publicly known denominational ownership)", publicationDate: "2026", tier: 2 };
+const STANDARD_GROUP: Source = { name: "Standard Group corporate ownership (public record)", publicationDate: "2026", tier: 2 };
+const CATHOLIC: Source = { name: "Catholic Archdiocese of Mombasa (publicly known denominational ownership)", publicationDate: "2026", tier: 2 };
 const KBC_STATE: Source = { name: "Kenya Broadcasting Corporation, state ownership (public record)", publicationDate: "2026", tier: 2 };
-const INDEPENDENT_LAUNCH: Source = { name: "Reported independent ownership, launched 2023", publicationDate: "2023", tier: 2 };
 
 export interface RadioStation {
   name: string;
   /**
-   * Frequency as publicly listed for the Kitui/Mwingi service area, or null where the Kitui
-   * frequency is not published and only a Nairobi/Machakos one is. Tier 3 (aggregator listings);
+   * Frequency as publicly listed for the Mombasa service area, or null where it is not yet
+   * confirmed. Tier 3 (aggregator listings);
    * the Communications Authority broadcast frequency register is the Tier 1 confirmation and is
    * a named data request in §6.1.
    */
@@ -34,76 +34,12 @@ export interface RadioStation {
 }
 
 export const RADIO_STATIONS: RadioStation[] = withTeamEdits<RadioStation>("radio-stations", "name", [
-  {
-    name: "Mbaitu FM",
-    frequency: "100.4 (Mwingi & Kitui)",
-    alignment: "Reported: politically affiliated ownership",
-    source: LOCAL_DIGITAL_MEDIA_OWNERSHIP,
-    reachTier: 3,
-    reachLabel: "High (qualitative read — monitoring target)",
-    posture: "Monitor closely; do not rely on placement.",
-  },
-  {
-    name: "Syokimau FM",
-    frequency: null,
-    alignment: "Reported: politically affiliated ownership",
-    source: LOCAL_DIGITAL_MEDIA_OWNERSHIP,
-    reachTier: 2,
-    reachLabel: "Medium (qualitative read — monitoring target)",
-    posture: "As above.",
-  },
-  {
-    name: "Athiani FM",
-    frequency: "97.7 (Kitui)",
-    alignment: "Reported: associated with Kalonzo Musyoka, Wiper leader",
-    source: LOCAL_DIGITAL_MEDIA_OWNERSHIP,
-    reachTier: 2,
-    reachLabel: "Medium (qualitative read — party gatekeeper)",
-    posture: "Party-aligned, not neutral. Coverage may track party leadership sentiment.",
-  },
-  {
-    name: "Musyi FM",
-    frequency: "102.2 (Nairobi/Machakos); Kitui frequency not published",
-    alignment: "Royal Media Services (commercial)",
-    source: ROYAL_MEDIA,
-    reachTier: 3,
-    reachLabel: "High (qualitative read — priority placement)",
-    posture: "Priority — commercially independent, broad Ukambani reach.",
-  },
-  {
-    name: "Wikwatyo FM",
-    frequency: "Kitui; frequency not published",
-    alignment: "Seventh-Day Adventist Church, Kitui-based",
-    source: SDA_CHURCH,
-    reachTier: 2,
-    reachLabel: "Medium (qualitative read — priority for community programming)",
-    posture: "Priority for community and service-delivery programming.",
-  },
-  {
-    name: "Akamba FM",
-    frequency: "100.8 (Nairobi)",
-    alignment: "Independent, launched 2023",
-    source: INDEPENDENT_LAUNCH,
-    reachTier: 1,
-    reachLabel: "Emerging (qualitative read — newer station)",
-    posture: "Secondary — newer, may be more accessible.",
-  },
-  {
-    name: "County FM",
-    frequency: "90.3 (Kitui), 91.8 (Mwingi)",
-    alignment: "Kitui-based independent",
-    source: LOCAL_DIGITAL_MEDIA_OWNERSHIP,
-    reachTier: 2,
-    reachLabel: "Medium (qualitative read — priority placement)",
-    posture: "Priority — the only station carrying separate Kitui and Mwingi frequencies.",
-  },
-  {
-    name: "KBC Mwatu FM",
-    frequency: "93.1 (Machakos)",
-    alignment: "State-owned (Kenya Broadcasting Corporation)",
-    source: KBC_STATE,
-    reachTier: 1,
-    reachLabel: "Low in Kitui (qualitative read — Machakos service area)",
-    posture: "Secondary — state broadcaster, Machakos-centred, limited Kitui service.",
-  },
+  { name: "Pwani FM", frequency: null, alignment: "Royal Media Services", source: ROYAL_MEDIA, reachTier: 1, reachLabel: "Coast-wide, Kiswahili", posture: "Priority — commercial, coast-wide reach" },
+  { name: "Radio Citizen", frequency: null, alignment: "Royal Media Services", source: ROYAL_MEDIA, reachTier: 1, reachLabel: "National, Kiswahili", posture: "Priority — national reach, strong at the coast" },
+  { name: "Radio Maisha", frequency: null, alignment: "Standard Group", source: STANDARD_GROUP, reachTier: 2, reachLabel: "National, Kiswahili", posture: "Priority — commercial" },
+  { name: "Radio Rahma", frequency: null, alignment: "Islamic community broadcaster (to be checked against the CA register)", source: LOCAL_DIGITAL_MEDIA_OWNERSHIP, reachTier: 2, reachLabel: "Mombasa, Kiswahili", posture: "Community programming only — no partisan placement" },
+  { name: "Radio Salaam", frequency: null, alignment: "Islamic broadcaster (to be checked against the CA register)", source: LOCAL_DIGITAL_MEDIA_OWNERSHIP, reachTier: 2, reachLabel: "Coast, Kiswahili", posture: "Community programming only — no partisan placement" },
+  { name: "Baraka FM", frequency: null, alignment: "Catholic Archdiocese of Mombasa", source: CATHOLIC, reachTier: 2, reachLabel: "Coast, Kiswahili", posture: "Community programming only — no partisan placement" },
+  { name: "Radio Kaya", frequency: null, alignment: "Community broadcaster (to be checked against the CA register)", source: LOCAL_DIGITAL_MEDIA_OWNERSHIP, reachTier: 3, reachLabel: "Mijikenda languages", posture: "Secondary — the Mijikenda audience on the mainland" },
+  { name: "KBC Pwani", frequency: null, alignment: "State-owned (KBC)", source: KBC_STATE, reachTier: 3, reachLabel: "Coast, Kiswahili", posture: "Secondary — institutional coverage" },
 ]);

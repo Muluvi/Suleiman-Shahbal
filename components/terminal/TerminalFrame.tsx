@@ -153,7 +153,7 @@ export function TerminalFrame({
             <div className="flex items-center gap-1 px-2 py-0.5 rounded bg-slate-900/90 border border-slate-700/60">
               <Shield className="w-3 h-3 text-amber-400" />
               <span className="font-mono text-slate-200 font-bold" style={{ fontSize: "0.625em" }}>
-                KITUI-TAC 40
+                MSA-TAC 30
               </span>
             </div>
 

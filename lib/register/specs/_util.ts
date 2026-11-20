@@ -48,7 +48,7 @@ export function secHref(num: string): string {
   // per workstream group: 15.1 platforms, 15.2 media, 15.3 ground, 15.4 data. The consolidation pass
   // merged chapters 16, 17 and 22 and annexes B and H into the routes that now hold them.
   const chapter: Record<string, string> = {
-    "1": "kitui", "2": "votes", "3": "needs", "4": "news", "6": "record", "7": "diagnosis",
+    "1": "mombasa", "2": "votes", "3": "needs", "4": "news", "6": "record", "7": "diagnosis",
     "8": "goal", "9": "position", "10": "message", "11": "voters", "12": "channels", "13": "engagement",
     "14": "timeline", "16": "timeline", "17": "engagement", "18": "success", "19": "lawful",
     "21": "receives", "22": "receives", "23": "ask",

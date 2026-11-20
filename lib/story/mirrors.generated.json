@@ -45,7 +45,7 @@
     "roles": [
       "Firefly",
       "Your team",
-      "Dr. Mulu",
+      "Mr Shahbal",
       "Counterpart",
       "Reviewer"
     ],
@@ -101,7 +101,7 @@
         ]
       },
       {
-        "activity": "Kikamba language review",
+        "activity": "Kiswahili language review",
         "cells": [
           "—",
           "R/A",
@@ -204,13 +204,13 @@
       "deliverable": "Daily multilingual social",
       "cadence": "Daily",
       "by": "Your team",
-      "form": "Post, graphic or short video in English, Kiswahili and Kikamba",
+      "form": "Post, graphic or short video in Kiswahili and English",
       "where": "15.1.2"
     },
     {
-      "deliverable": "Kikamba voice note",
+      "deliverable": "Kiswahili voice note",
       "cadence": "Weekly",
-      "by": "Your team, Kikamba reviewer signs off",
+      "by": "Your team, Kiswahili reviewer signs off",
       "form": "Audio for WhatsApp and community networks",
       "where": "15.1.2"
     },
@@ -222,17 +222,17 @@
       "where": "15.1.2"
     },
     {
-      "deliverable": "Kitui Economic Brief",
+      "deliverable": "Mombasa Delivery Brief",
       "cadence": "Monthly",
       "by": "Your team",
       "form": "Plain-language explainer, print and digital",
       "where": "15.1.2"
     },
     {
-      "deliverable": "\"Dr. Mulu Explains\"",
+      "deliverable": "\"Shahbal Explains\"",
       "cadence": "Weekly",
       "by": "Your team",
-      "form": "Explainer video or audio on county finance",
+      "form": "Explainer video or audio on water, jobs and county finance",
       "where": "15"
     },
     {
@@ -253,7 +253,7 @@
       "deliverable": "SMS touch to the consented list",
       "cadence": "Fortnightly, rising to a GOTV surge",
       "by": "Your team",
-      "form": "160-character Kiswahili or English SMS — Kikamba is not permitted on the bulk SMS rail (§15.3.3)",
+      "form": "160-character Kiswahili or English SMS — no other language is permitted on the bulk SMS rail (§15.3.3)",
       "where": "15.3.3"
     },
     {
@@ -267,7 +267,7 @@
       "deliverable": "Ward coordinator field report",
       "cadence": "Daily",
       "by": "Campaign ground team",
-      "form": "Structured report from all 40 wards into the CRM",
+      "form": "Structured report from all 30 wards into the CRM",
       "where": "15.3.1"
     },
     {

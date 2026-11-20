@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { useReducedMotionSafe } from "../../hooks/use-reduced-motion-safe";
 
 /**
- * The Kitui chapter's map, told in steps as the reader scrolls (visual upgrade, C15).
+ * The Mombasa chapter's map, told in steps as the reader scrolls (visual upgrade, C15).
  *
  * The county's real ward boundaries stay pinned while short captions scroll past; each caption
  * swaps the layer (voters, polling stations, county projects, the zones) and the last one closes in
@@ -37,7 +37,7 @@ function Legend({ layer }: { layer: StoryStep["layer"] }) {
   if (layer === "zones")
     return (
       <p className="ms__legend">
-        <span className="ms-key ms-z--anchor" /> anchor <span className="ms-key ms-z--mwingi" /> Mwingi <span className="ms-key ms-z--arid" /> arid belt <span className="ms-key ms-z--none" /> in no zone
+        <span className="ms-key ms-z--anchor" /> anchor <span className="ms-key ms-z--mwingi" /> the north mainland <span className="ms-key ms-z--arid" /> arid belt <span className="ms-key ms-z--none" /> in no zone
       </p>
     );
   if (layer === "pool")
@@ -48,7 +48,7 @@ function Legend({ layer }: { layer: StoryStep["layer"] }) {
     );
   return (
     <p className="ms__legend">
-      fewest <span className="ms-key ms-q0" /><span className="ms-key ms-q1" /><span className="ms-key ms-q2" /><span className="ms-key ms-q3" /><span className="ms-key ms-q4" /> most, by fifths of the 40 wards
+      fewest <span className="ms-key ms-q0" /><span className="ms-key ms-q1" /><span className="ms-key ms-q2" /><span className="ms-key ms-q3" /><span className="ms-key ms-q4" /> most, by fifths of the 30 wards
     </p>
   );
 }

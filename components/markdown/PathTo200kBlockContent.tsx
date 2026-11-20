@@ -44,8 +44,8 @@ export function PathTo200kBlockContent() {
         <h4 className="font-serif text-sm font-bold text-ink">Path to {fmt("benchmark")} — Wards Ranked by Register</h4>
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
-        All 40 wards, ranked descending by register size (bars, coloured by constituency) with the cumulative running
-        total (line) against the ~{fmt("benchmark")}-vote benchmark. <strong className="text-ink">The three Mwingi
+        All 30 wards, ranked descending by register size (bars, coloured by constituency) with the cumulative running
+        total (line) against the ~{fmt("benchmark")}-vote benchmark. <strong className="text-ink">The three the north mainland
         constituencies alone total {MWINGI_BLOC_TOTAL.toLocaleString()}</strong> — the threshold is reachable from
         that bloc on its own, a real targeting finding.
       </p>
@@ -65,15 +65,15 @@ export function PathTo200kBlockContent() {
         </LazyMount>
       </div>
 
-      {/* Accessible table equivalent — all 40 wards */}
+      {/* Accessible table equivalent — all 30 wards */}
       <div
         tabIndex={0}
         role="region"
-        aria-label="All 40 wards ranked by register size"
+        aria-label="All 30 wards ranked by register size"
         className="not-prose fx-focus overflow-x-auto max-h-72 overflow-y-auto border border-line/40 rounded-xl"
       >
         <table className="w-full text-left t-small">
-          <caption className="sr-only">All 40 wards ranked by 2022 register size with cumulative running total</caption>
+          <caption className="sr-only">All 30 wards ranked by 2022 register size with cumulative running total</caption>
           <thead className="sticky top-0 bg-paper">
             <tr className="t-micro font-bold text-muted">
               <th className="py-2 px-2">#</th>

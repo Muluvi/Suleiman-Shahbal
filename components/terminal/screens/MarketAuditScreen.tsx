@@ -60,7 +60,7 @@ export function MarketAuditScreen({ data }: { data: WardPulseData }) {
           <div className="font-bold font-mono text-emerald-400" style={{ fontSize: "0.75em" }}>
             {market?.leafletsDistributed.toLocaleString() || "1,500"}
           </div>
-          <div className="text-slate-400" style={{ fontSize: "0.5625em" }}>Kikamba/ENG</div>
+          <div className="text-slate-400" style={{ fontSize: "0.5625em" }}>Kiswahili/ENG</div>
         </div>
 
         <div className="bg-slate-900/70 p-2 rounded-lg border border-slate-800 text-center">
@@ -128,7 +128,7 @@ export function MarketAuditScreen({ data }: { data: WardPulseData }) {
 
       {/* Sync Footer */}
       <div className="pt-1 flex items-center justify-between font-mono text-slate-400 border-t border-slate-800" style={{ fontSize: "0.625em" }}>
-        <span>Channel: Kikamba Sound Notes</span>
+        <span>Channel: Kiswahili Sound Notes</span>
         <span className="text-emerald-400">War Room Synced</span>
       </div>
     </div>

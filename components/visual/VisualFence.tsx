@@ -10,7 +10,7 @@ import { isStatusTag } from "../../lib/inline-marks";
 import { CountUp } from "../premium/CountUp";
 import { SaveImage } from "./SaveImage";
 import type { CardRef } from "../../lib/card/spec";
-import { KituiIcon, PICTOGRAM_PATHS, type KituiIconName, type PictogramName } from "../icons/kitui";
+import { MombasaIcon, PICTOGRAM_PATHS, type MombasaIconName, type PictogramName } from "../icons/mombasa";
 
 /**
  * The renderer for a ```visual fence (lib/visual.ts holds the shapes and what each shows on load).
@@ -308,13 +308,13 @@ function ShareBars({ items, md }: { items: Item[]; md: Md }) {
   );
 }
 
-/** Kitui icons for card sets whose titles name a channel or a theme (visual upgrade, D1). */
-const CARD_ICONS: [RegExp, KituiIconName][] = [
+/** Mombasa icons for card sets whose titles name a channel or a theme (visual upgrade, D1). */
+const CARD_ICONS: [RegExp, MombasaIconName][] = [
   [/radio/i, "radio"], [/sms|ussd/i, "feature-phone"], [/money|agent/i, "coin"], [/market|caravan/i, "market"], [/church|clergy/i, "church"],
   [/water/i, "jerrycan"], [/economic|agri|farm/i, "maize"], [/fiscal|money|finance/i, "coin"], [/youth|digital/i, "phone"], [/health/i, "clinic"], [/educat|school/i, "school"],
   [/boda|matatu|transit|route/i, "matatu"], [/baraza|gathering/i, "person"],
 ];
-function cardIcon(preset: string | undefined, it: Item): KituiIconName | null {
+function cardIcon(preset: string | undefined, it: Item): MombasaIconName | null {
   if (!preset || !["channel", "theme", "network"].includes(preset)) return null;
   const t = labelOf(it);
   return CARD_ICONS.find(([re]) => re.test(t))?.[1] ?? null;
@@ -335,7 +335,7 @@ function OrgChart({ items, md }: { items: Item[]; md: Md }) {
       <ul className="oc__roles">
         {items.map((it, i) => (
           <li key={i} className="oc__role xv-rise" style={{ "--i": i } as React.CSSProperties}>
-            <KituiIcon name="person" size={24} className="oc__icon" />
+            <MombasaIcon name="person" size={24} className="oc__icon" />
             <h5 className="oc__name">{md(labelOf(it), true)}</h5>
             <ItemFace it={it} md={md} />
             <ItemDetails it={it} md={md} label="Decision rights" />
@@ -385,7 +385,7 @@ function Cards({ items, md, preset }: { items: Item[]; md: Md; preset?: string }
           </div>
           {(() => {
             const icon = cardIcon(preset, it);
-            return icon ? <KituiIcon name={icon} size={32} className="vz-card__icon" /> : null;
+            return icon ? <MombasaIcon name={icon} size={32} className="vz-card__icon" /> : null;
           })()}
           {labelOf(it) ? <h5 className="vz-card__title">{md(labelOf(it), true)}</h5> : null}
           {it.value ? <p className="vz-card__value">{md(it.value, true)}</p> : null}

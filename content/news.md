@@ -1,44 +1,42 @@
 ```lead
-**{{ict.offline}}%** of Kitui's residents are offline, and the Kikamba radio stations with the widest reach have political owners. Digital alone reaches about **{{reach.smartphone}} voters** (modelled), so the election is reached mainly by phone, radio and in person.
+**{{ict.internet}}%** of Mombasa's residents use the internet, the fourth-highest share in Kenya. Digital can in principle reach about **{{reach.smartphone}} voters** (modelled), more than the {{benchmark}} benchmark, but reach is not votes: the 2022 race was lost by the side that did not turn its voters out.
 ```
 
-**{{ict.offline}}%** of Kitui's residents are offline, and the Kikamba radio stations with the widest reach have political owners. Digital alone reaches about **{{reach.smartphone}} voters** (modelled), so the election is reached mainly by phone, radio and in person. This chapter sets out where people get information, who owns the airwaves, what each channel can reach, and the infrastructure that reaches the offline majority.
+**{{ict.internet}}%** of Mombasa's residents use the internet (Tier 1, CA/KNBS 2023/24), the fourth-highest share in Kenya, and **{{ict.mombasa.youth}}%** of its young people do. Digital can in principle reach about **{{reach.smartphone}} voters** (modelled), more than the {{benchmark}} benchmark. But reach is not votes, and in 2022 {{abstained.2022}} registered voters cast no valid governor vote. The election is reached online and won on the phone, on the radio, at the mosque and the church, and at the stage.
 
 ## 4.1 Where people get information
 
 ```visual
 kind: stats
 preset: people
-title: "Phones, internet and money agents (CA/KNBS)"
+title: "Phones, internet and money agents (CA/KNBS; KNBS 2019)"
 items:
   - value: "{{ict.internet}}%"
     label: "use the internet"
     tier: 1
   - value: "{{ict.offline}}%"
-    label: "of residents offline"
+    label: "of residents not online"
     tier: 1
   - value: "{{ict.phone}}%"
-    label: "own a mobile phone"
+    label: "own a mobile phone (2019)"
     tier: 1
   - value: "{{ict.agents}}"
     label: "mobile-money agents, nationally"
     tier: 1
-    body: "Up from {{ict.agents.2025}} in late 2025 (Tier 1). In settlements without broadband, the agent kiosk is a trusted local point of contact, and it is commercially motivated."
-body: "The **CA/KNBS ICT report on the 2023/24 Kenya Housing Survey** (Tier 1) puts internet use in Kitui at **{{ict.internet}}%** (up from {{ict.internet.2019}}% in the 2019 KNBS Census), leaving **{{ict.offline}}% of residents offline**. Mobile phone ownership is **{{ict.phone}}%** (up from {{ict.phone.2019}}% in 2019)."
+    body: "In every estate the agent kiosk is a trusted local point of contact, and it is commercially motivated."
+body: "The **CA/KNBS ICT report on the 2023/24 Kenya Housing Survey** (Tier 1) puts internet use in Mombasa at **{{ict.internet}}%**, up from {{ict.internet.2019}}% in the 2019 census, behind only Nairobi, Kiambu and Nyeri. Mobile phone ownership was **{{ict.phone}}%** of residents aged 3 and over in 2019 (Tier 1, KNBS); the 2023/24 county row for phone ownership is to be read from the same CA/KNBS report."
 ```
 
-*Source conflict: an earlier version named this source as the 2023/24 Kenya Continuous Household Survey and Communications Authority reports; the figures come from the CA/KNBS ICT Analytical Report on the 2023/24 Kenya Housing Survey, and that is the source named above.*
-
-| Measure | Kitui, 2023/24 | Kitui, 2019 | National context |
+| Measure | Mombasa | By constituency, 2019 | National context |
 |---|---|---|---|
-| Mobile phone ownership | **{{ict.phone}}%** of residents (CA/KNBS 2023/24) (Tier 1) | {{ict.phone.2019.people}} people ({{ict.phone.2019}}%) (Tier 1) | {{ict.sims.national|m1}} million active SIM cards; {{ict.sim-penetration}}% penetration (CA, Q3 FY2025/26) |
-| Internet use | **{{ict.internet}}%** ({{ict.offline}}% offline) (Tier 1) | {{ict.internet.2019.people}} people ({{ict.internet.2019}}%) (Tier 1) | {{ict.broadband.national|m1}} million mobile broadband subscriptions (Tier 1) |
-| Devices | Feature-phone and USSD-capable devices dominate | Feature phones dominate (Tier 1) | Smartphones are {{ict.smartphone-share}}% of active SIMs nationally ({{ict.smartphones.national|m1}} million of {{ict.sims.national|m1}} million, CA Q3 FY2025/26, Tier 2); a national rate, which overstates Kitui |
-| Mobile money | Near-universal use of mobile transactions | Mobile money dominant | {{ict.momo.national|m1}} million subscriptions ({{ict.momo-penetration}}%, Tier 1); **{{ict.agents}} registered agents** (March 2026) |
-| Phone ownership, adults (KDHS 2022) | Men 18+ **{{ict.phone.adult.men}}%**, women 18+ **{{ict.phone.adult.women}}%** (Tier 1, County Gender Data Sheet, October 2025) | — | Kenya: men {{ict.kenya.phone.adult.men}}%, women {{ict.kenya.phone.adult.women}}% (Tier 1) |
-| Internet use, ages 15–49 (KDHS 2022) | Men **{{ict.internet.1549.men}}%**, women **{{ict.internet.1549.women}}%** (Tier 1) | — | Kenya: men {{ict.kenya.internet.1549.men}}%, women {{ict.kenya.internet.1549.women}}% (Tier 1) |
+| Internet use | **{{ict.internet}}%** in 2023/24 (Tier 1); {{ict.internet.2019}}% in 2019 ({{ict.internet.2019.people}} people) | Mvita {{ict.internet.2019.mvita}}%, Nyali {{ict.internet.2019.nyali}}%, Changamwe {{ict.internet.2019.changamwe}}%, Kisauni {{ict.internet.2019.kisauni}}%, Likoni {{ict.internet.2019.likoni}}%, Jomvu {{ict.internet.2019.jomvu}}% (Tier 1) | Kenya {{ict.kenya.internet}}%; Nairobi {{ict.nairobi.internet}}% (Tier 1) |
+| Mobile phone ownership | **{{ict.phone}}%** in 2019 ({{ict.phone.2019.people}} people) (Tier 1) | Mvita {{ict.phone.2019.mvita}}%, Nyali {{ict.phone.2019.nyali}}%, Changamwe {{ict.phone.2019.changamwe}}%, Jomvu {{ict.phone.2019.jomvu}}%, Likoni {{ict.phone.2019.likoni}}%, Kisauni {{ict.phone.2019.kisauni}}% (Tier 1) | {{ict.sims.national|m1}} million active SIM cards; {{ict.sim-penetration}}% penetration (CA, Q3 FY2025/26) |
+| Young people online | **{{ict.mombasa.youth}}%** (Tier 1, 2023/24) | — | Kenya {{ict.kenya.youth}}%; Nairobi {{ict.nairobi.youth}}% (Tier 1) |
+| Mobile money | Near-universal | — | {{ict.momo.national|m1}} million subscriptions ({{ict.momo-penetration}}%, Tier 1); **{{ict.agents}} registered agents** (March 2026) |
 
-**Two bases, never averaged.** {{ict.phone}}% and {{ict.internet}}% are shares of all residents, children included. The register holds adults only, and adults own phones at about three times in four. Section 4.3 models voter reach on both bases and says which it uses.
+**Two bases, never averaged.** {{ict.phone}}% and {{ict.internet}}% are shares of all residents aged 3 and over, children included. The register holds adults only, and adults own phones at a higher rate. Section 4.3 models voter reach on the resident basis and says so.
+
+**The Island and the mainland are different audiences.** More than half of Mvita used the internet in 2019; a third of Jomvu and Likoni did. The same message goes online on the Island and by SMS, radio and the stage on the west and south mainland.
 
 ```figure
 id: fig-2-6-connectivity
@@ -47,10 +45,10 @@ id: fig-2-6-connectivity
 ## 4.2 Who owns the airwaves
 
 ```lead
-**The highest-reach commercial radio stations broadcasting in Kikamba are owned, financed or editorially steered by political figures or party gatekeepers.** The ownership map and posture for every station are set out once, below.
+**Coast radio speaks Kiswahili, and Mombasa listens to faith broadcasters as much as to commercial ones.** Ownership and posture for every station are set out once, below, to be checked against the licensing register before any booking.
 ```
 
-Kikamba radio is the main source of news and political talk in rural and peri-urban Kitui, and it is the dominant information channel for the {{ict.offline}}% of residents outside the internet-using population (CA/KNBS 2023/24). But ownership is concentrated: **the highest-reach commercial radio stations broadcasting in Kikamba are owned, financed or editorially steered by political figures or party gatekeepers**. So the campaign works with the commercial stations on disciplined terms, and builds routes around the rest (Section 15.2.2).
+Kiswahili radio is the main source of news and political talk for the {{ict.offline}}% of residents who are not online, and for many who are. Mombasa's dial mixes national commercial stations broadcasting in Kiswahili with faith-based and community stations whose audiences trust them for more than news.
 
 ```figure
 id: fig-2-7-media
@@ -60,44 +58,42 @@ id: fig-2-7-media
 kind: checklist
 title: "The three facts that shape the radio plan"
 items:
-  - label: "**Two stations have politically affiliated ownership**:"
-    text: "**Mbaitu FM** and **Syokimau FM**. Both are monitoring targets, not placement targets."
-  - label: "**One station is associated with Kalonzo Musyoka**, the Wiper party leader:"
-    text: "**Athiani FM**. It is party-sensitive rather than hostile, and it matters most during the nomination window, when coverage may track party leadership sentiment rather than merit."
-  - label: "**The stations open to the campaign are commercially or institutionally independent**:"
-    text: "**Musyi FM** (Royal Media Services), **County FM** (Kitui-based independent) and **Wikwatyo FM** (Seventh-Day Adventist Church, Kitui). These are the placement targets."
+  - label: "**Faith broadcasters carry trust as well as reach**:"
+    text: "Islamic stations such as **Radio Rahma** and **Radio Salaam**, and the Catholic **Baraka FM**. They are approached for community and service-delivery programming, never for partisan placement."
+  - label: "**National commercial stations broadcast in Kiswahili on the coast**:"
+    text: "**Pwani FM** and **Radio Citizen** (Royal Media Services) and **Radio Maisha** (Standard Group). These are the paid placement targets."
+  - label: "**No Mombasa station's political ownership is assumed**:"
+    text: "Ownership is mapped from the Communications Authority's register of licensees and company records before any booking, and every station's posture is recorded in `data/media-ownership.ts`."
 ```
 
-**The ownership map.** This table governs. It is the version reconciled against `data/media-ownership.ts`, which the site renders directly.
+**The ownership map.** This table governs. It is the version reconciled against `data/media-ownership.ts`, which the site renders directly. Ownership entries are Tier 3 until checked against the CA licensing register.
 
-| Station | Kitui frequency | Ownership association | Campaign posture |
+| Station | Language | Ownership association | Campaign posture |
 |---|---|---|---|
-| **Mbaitu FM** | 100.4 (Kitui/Mwingi) | Politically affiliated ownership (publicly reported) | Monitor closely; do not rely on placement |
-| **Syokimau FM** | — | Politically affiliated ownership (publicly reported) | As above |
-| **Athiani FM** | 97.7 | Associated with **Kalonzo Musyoka**, Wiper Patriotic Front leader | Party-aligned, not neutral. Relevant during the nomination window — coverage may track party leadership sentiment rather than merit |
-| **Musyi FM** | 102.2 (regional) | Royal Media Services | **Priority — commercially independent, broad Ukambani reach** |
-| **County FM** | 90.3 Kitui / 91.8 Mwingi | Kitui-based independent | **Priority — local, independent, Mwingi reach** |
-| **Wikwatyo FM** | 105.3 | Seventh-Day Adventist Church, Kitui-based | Priority for community and service-delivery programming |
-| **Ene FM** | 90.6 (Kitui) | Makueni-based | Secondary |
-| **Akamba FM** | 103.3 (Kitui) | Independent, launched 2023 | Secondary — newer, may be more accessible |
-| **KBC Mwatu FM** | 93.1 | Public broadcaster | Institutional coverage |
+| **Pwani FM** | Kiswahili | Royal Media Services | **Priority — commercial, coast-wide reach** |
+| **Radio Citizen** | Kiswahili | Royal Media Services | **Priority — national reach, strong at the coast** |
+| **Radio Maisha** | Kiswahili | Standard Group | Priority — commercial |
+| **Radio Rahma** | Kiswahili | Islamic community broadcaster | Community and service-delivery programming; no partisan placement |
+| **Radio Salaam** | Kiswahili | Islamic broadcaster | As above |
+| **Baraka FM** | Kiswahili | Catholic Archdiocese of Mombasa | As above |
+| **Radio Kaya** | Mijikenda languages | Community broadcaster | Secondary — the Mijikenda audience on the mainland |
+| **KBC Pwani** | Kiswahili | Public broadcaster | Institutional coverage |
 
+**What it means for the campaign:** the paid radio plan runs through Pwani FM, Radio Citizen and Radio Maisha; the faith stations are partners for programming on water, health and jobs, where trust matters more than reach.
 
-**What it means for the campaign:** the radio plan runs through Musyi, County FM and Wikwatyo, treats Athiani as party-sensitive, and treats Mbaitu and Syokimau as monitoring targets rather than placement targets.
+> **Listenership.** No published audience share for Mombasa is in hand: Radio Rahma {{radio.rahma}}, Pwani FM {{radio.pwani}}, Baraka FM {{radio.baraka}}. The record that would close it is a KARF or GeoPoll audience report for the Coast. Until then the stations are ranked by reach as their owners describe it, and no booking is sized on a share.
 
-> **Listenership.** The published audience share is regional: the CA/KARF report for **Lower Eastern** (Kitui, Machakos and Makueni together) puts Musyi FM at {{radio.musyi}}%, Athiani FM at {{radio.athiani}}%, Mbaitu FM at {{radio.mbaitu}}% and County FM at {{radio.county}}% of listeners (Tier 2, an earlier measurement). It ranks the stations; it does not size Kitui's own audience.
-
-Ownership associations are publicly reported rather than certified, and ownership changes. The certifiable records are the Communications Authority's register of broadcast licensees and the Business Registration Service's company records. The map is checked against both before any placement is booked, and updated when either changes.
+Ownership associations are publicly reported rather than certified, and ownership changes. The certifiable records are the Communications Authority's register of broadcast licensees and the Business Registration Service's company records.
 
 ## 4.3 What each channel can reach
 
 ```lead
-If the campaign reached 100% of every internet-connected voter in Kitui County, it would reach about **{{reach.smartphone}} voters** (modelled), and even if every one of them voted for him he would be **{{reach.smartphone.short}} votes short** of the {{benchmark}} benchmark.
+If the campaign reached every internet-connected voter in Mombasa, it would reach about **{{reach.smartphone}} voters** (modelled), {{reach.smartphone.of-benchmark}}% of the {{benchmark}} benchmark. Mombasa is one of the few counties where digital alone could, on paper, carry the number. It will not, because reach is not turnout.
 ```
 
-**The digital ceiling.** If the campaign reached 100% of every internet-connected voter in Kitui County, it would reach about **{{reach.smartphone}} voters** (modelled: {{ict.internet}}% internet use applied to the July 2026 register), and even if every one of them voted for him he would be **{{reach.smartphone.short}} votes short** of the {{benchmark}} benchmark (modelled). Reach is not votes. Digital alone cannot win this election: the offline channels and the field operation (Section 15.3.3) carry the reach, and digital is used precisely, to shape opinion among those who set the agenda, to organise young volunteers, and to reach the diaspora.
+**The digital ceiling.** If the campaign reached every internet-connected voter in Mombasa, it would reach about **{{reach.smartphone}} voters** (modelled: {{ict.internet}}% internet use applied to the register in use), **{{reach.smartphone.of-benchmark}}%** of the {{benchmark}} benchmark (modelled). That is the difference from a rural county: online reach is large enough to matter on its own. But the voters it reaches are disproportionately on the Island and in Nyali, and young; the 2022 abstainers, and the estates on the west and south mainland, are reached as much by SMS, radio and people.
 
-Digital use is concentrated in towns (Kitui Town, Mwingi Town, the Kwa Vonza university corridor) and among educated young people. In-county users per platform are not published, so this section sizes what digital can reach from the published rates alone.
+Digital use is concentrated on the Island, in Nyali and among young people. In-county users per platform are not published, so this section sizes what digital can reach from the published rates alone.
 
 ```figure
 id: fig-3-8-ceiling
@@ -107,14 +103,12 @@ id: fig-3-8-ceiling
 
 | | Figure |
 |---|---|
-| Reachable by smartphone or data, in county | ~{{reach.smartphone}} voters (modelled: {{ict.internet}}% of the July 2026 register) |
+| Reachable by smartphone or data, in county | ~{{reach.smartphone}} voters (modelled: {{ict.internet}}% of the register in use) |
 | Share of the {{benchmark}} benchmark digital could reach | **{{reach.smartphone.of-benchmark}}%** (modelled), reach not votes |
-| Reachable by SMS only | ~{{reach.sms-only}} voters (modelled: {{ict.phone}}% phone ownership less {{ict.internet}}% internet use) |
-| Phone owners: the SMS and USSD layer | ~{{reach.phone.resident}} voters on the resident rate ({{ict.phone}}%); ~{{reach.phone.adult}} on the adult rate (KDHS 2022: {{ict.phone.adult}}%). Both modelled, never averaged (Section 4.3) |
-| No phone: radio or in person only | ~{{reach.nophone}} voters on the resident rate; ~{{reach.nophone.adult}} on the adult rate (both modelled) |
-| Vernacular radio reach | Lower Eastern shares: Musyi FM {{radio.musyi}}%, Athiani FM {{radio.athiani}}%, Mbaitu FM {{radio.mbaitu}}%, County FM {{radio.county}}% (CA/KARF, an earlier measurement, Tier 2). |
-
-**The SMS and USSD layer reaches more voters than the resident rate implies.** On the resident basis ({{ict.phone}}% of all residents) about {{reach.phone.resident}} voters own a phone (modelled). On the adult basis ({{ict.phone.adult}}% of adults, KDHS 2022, weighted by the register's {{register.women.share}}% women) about **{{reach.phone.adult}}** do and about {{reach.nophone.adult}} do not (both modelled on the July 2026 register as reported, so Tier 3). That is roughly {{reach.phone.ratio}} times as many voters within reach of SMS and USSD. The digital ceiling does not move: internet use among adults aged 15–49 is {{ict.internet.1549.men}}% for men and {{ict.internet.1549.women}}% for women.
+| Reachable by SMS only | ~{{reach.sms-only}} voters (modelled: {{ict.phone}}% phone ownership, 2019, less {{ict.internet}}% internet use, 2023/24: an estimate that mixes years) |
+| Phone owners: the SMS and USSD layer | ~{{reach.phone.resident}} voters on the resident rate (modelled) |
+| No phone: radio or in person only | ~{{reach.nophone}} voters on the resident rate (modelled) |
+| Radio reach | No Coast audience share in hand; named data gap (Section 4.2) |
 
 ```visual
 kind: contrast
@@ -122,85 +116,85 @@ left:
   title: "What digital can do"
   items:
     - label: "Set the agenda"
-      body: "The working premise is that local radio producers, vernacular talk-show hosts, church leaders and county assembly members follow X and Facebook, so what is posted there can shape what radio goes on to discuss. No source in this plan measures that link or its timing; the channel audit (Section 18.5) records it from the first month rather than assuming it."
+      body: "Coast journalists, radio presenters, imams, pastors and county assembly members follow X, Facebook and TikTok, so what is posted there can shape what radio goes on to discuss. No source in this plan measures that link; the channel audit (Section 18.5) records it from the first month rather than assuming it."
     - label: "Recruit young volunteers"
-      body: "Reaching the ~{{segment.youth.voters}} young voters on TikTok and WhatsApp recruits field volunteers who run ground logistics and serve as polling agents."
-    - label: "Target urban traders"
-      body: "Geofencing commercial centres (Kitui CBD, Mwingi Central) tests policy messages (\"The Economist's Single Business Permit\") with little waste."
+      body: "Reaching the ~{{segment.youth.voters}} young adults on TikTok, Instagram and WhatsApp recruits field volunteers who run ground logistics and serve as polling agents."
+    - label: "Target traders and commuters"
+      body: "Geofencing Kongowea, Marikiti, the CBD and the ferry approaches tests policy messages (a single business permit; the price of water) with little waste."
 right:
   title: "What digital cannot do"
   items:
-    - label: "Deliver the {{benchmark}} vote benchmark alone"
-      body: "Capped at about {{reach.smartphone}} reachable voters inside Kitui County (modelled)."
-    - label: "Reach the rural farming base"
-      body: "{{ict.offline}}% of Kitui's residents are offline (CA/KNBS 2023/24), and rural smallholders do not meet political content through social media: few smartphones, high data costs, and weak 3G/4G coverage in rural wards (for example Tharaka, Tseikuru, Voo/Kyamatu, Endau, Mutha)."
+    - label: "Turn reach into turnout"
+      body: "In 2022 {{abstained.2022}} registered voters cast no valid governor vote. An online audience does not walk to a polling station without someone to ask it to."
+    - label: "Reach the west and south mainland evenly"
+      body: "A third of Jomvu and Likoni used the internet in 2019 (Tier 1). Their estates are reached by SMS, the stage, the market and the mosque."
     - label: "Answer rumours on the ground"
-      body: "WhatsApp and Facebook rarely reach dryland farming communities without someone to carry the message in person."
+      body: "WhatsApp rumours in an estate are answered in that estate, by someone the residents know."
 ```
 
-## 4.4 Reaching the offline majority
+## 4.4 Reaching the voters who did not vote
 
 ```lead
-The election will be won or lost across the **{{reach.offline}} registered voters not reachable online** (modelled: the July 2026 register less the {{reach.smartphone}} reachable by smartphone or data).
+The election will be won or lost among the **{{abstained.2022}} registered voters who cast no valid governor vote in 2022** (calculated: the 2022 register less {{result.2022.gov.valid}} valid votes), and the **{{reach.offline}}** not reachable online (modelled).
 ```
 
-The election will be won or lost across the **{{reach.offline}} registered voters not reachable online** (modelled: the July 2026 register less the {{reach.smartphone}} reachable by smartphone or data). They are reached by five channels together: SMS and USSD, Kikamba radio, mobile-money agents, market days and churches.
+The election will be won or lost among the **{{abstained.2022}} registered voters who cast no valid governor vote in 2022** (calculated), and the **{{reach.offline}} registered voters not reachable online** (modelled: the register in use less the {{reach.smartphone}} reachable by smartphone or data). They are reached by six channels together: SMS and USSD, Kiswahili radio, mobile-money agents, markets and stages, mosques and churches, and the ward captains.
 
 ```visual
 kind: cards
 preset: channel
 items:
-  - title: "Kikamba radio"
+  - title: "Kiswahili radio"
     fields:
-      - { label: "Reach", text: "the CA/KARF audience report for Lower Eastern (Kitui, Machakos and Makueni together) puts Musyi FM at {{radio.musyi}}% of listeners, Citizen Radio {{radio.citizen}}%, Athiani FM {{radio.athiani}}%, Mbaitu FM {{radio.mbaitu}}%, County FM {{radio.county}}% and Mwatu FM {{radio.mwatu}}% (Tier 2). It is a regional and an earlier measurement, so it ranks the stations rather than sizing Kitui's audience." }
-      - { label: "The stations", text: "*   *Musyi FM (Royal Media Services):* the market leader in Ukambani; commercially independent. **Priority placement.**\n    *   *County FM (Kitui-based independent):* local ward news and debates, strong in Kitui Town, Kabati and Kwa Vonza. **Priority placement.**\n    *   *Wikwatyo FM (Seventh-Day Adventist Church, Kitui):* broad rural trust. **Priority for community and service-delivery programming.**\n    *   *Mbaitu FM, Syokimau FM (politically affiliated) and Athiani FM (Wiper leadership):* **monitoring targets, not placement targets** — Section 4.2 has the ownership map and the posture for each." }
-      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   *Weekly morning interviews:* two-hour studio interviews (06:30–08:30) with Dr. Mulu in the weeks a policy is launched.\n    *   *Kikamba jingles and testimonials:* 45-second stories from farmers in Mwingi North, Kitui South and Kitui Rural on how Dr. Mulu's economic plan protects their harvest prices.\n    *   *Outside broadcasts:* sponsored live broadcast vans at major market rallies in Kalundu, Kabati and Mutomo." }
+      - { label: "Reach", text: "no Coast audience share is in hand (Section 4.2); stations are ranked by their own reach claims until a KARF or GeoPoll report is." }
+      - { label: "The stations", text: "*   *Pwani FM and Radio Citizen (Royal Media Services):* coast-wide reach in Kiswahili. **Priority placement.**\n    *   *Radio Maisha (Standard Group):* commercial, Kiswahili. **Priority placement.**\n    *   *Radio Rahma, Radio Salaam and Baraka FM:* faith broadcasters; programming on water, health and jobs, never partisan placement." }
+      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   *Morning interviews:* studio interviews with Mr Shahbal in the weeks a policy is launched.\n    *   *Kiswahili spots and testimonials:* 45-second stories from traders in Kongowea, water vendors' customers in Mikindani and young people in Kisauni, on what his plan changes for them." }
   - title: "SMS and USSD"
-    head: { label: "Reach", text: "mobile phone ownership is {{ict.phone}}% of residents countywide (CA/KNBS 2023/24, Tier 1); a feature phone is enough for SMS and USSD." }
+    head: { label: "Reach", text: "{{ict.phone}}% of residents owned a mobile phone in 2019 (Tier 1); a feature phone is enough for SMS and USSD." }
     fields:
-      - { label: null, text: "**What your team operates** (Section 15.3.3):\n*   *A free USSD menu (`*[shortcode]#`):* any feature phone can dial it to read Dr. Mulu's five-point manifesto in Kikamba, register as a volunteer, or find the nearest Ward Captain.\n    *   *Ward-targeted SMS:* **Kiswahili** messages to consented supporters in specific wards on the eve of market days, and on election morning to get out the vote (GOTV)." }
+      - { label: null, text: "**What your team operates** (Section 15.3.3):\n*   *A free USSD menu (`*[shortcode]#`):* any feature phone can dial it to read Mr Shahbal's five-point plan in Kiswahili, register as a volunteer, find the nearest ward captain, or check where to vote.\n    *   *Ward-targeted SMS:* **Kiswahili or English** messages to consented supporters in specific wards, on the eve of events, and on election morning." }
   - title: "Mobile-money agents"
     head: { label: "Reach", text: "nationally there are {{ict.agents}} registered agents (March 2026, Tier 1, Section 4.1)." }
     fields:
-      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   M-Pesa agents are trusted community hubs where residents deposit money, buy airtime and talk about local news. **Agent networks are regulated financial infrastructure**; Section 15.3.3 requires campaign counsel to review any commercial arrangement with them before recruitment begins. The ambassador network is untiered and needs a source.\n    *   The campaign would recruit {{target.ambassadors}}+ shopkeepers and M-Pesa agents (a target) as \"Economic Ambassadors\", with branded ledgers, counter pens, calendar posters and daily economic talking points." }
-  - title: "Market days and caravans"
-    head: { label: "Reach", text: "for scale only: the 2023 Kitui Agricultural Show drew more than {{show.2023}} people over three days (Tier 3), and market days are gazetted by market. Neither is a market-day count." }
+      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   M-Pesa agents are trusted estate hubs. **Agent networks are regulated financial infrastructure**; Section 15.3.3 requires campaign counsel to review any commercial arrangement with them before recruitment." }
+  - title: "Markets, stages and the ferry"
+    head: { label: "Reach", text: "Kongowea, Marikiti and Majengo markets, the matatu and tuk-tuk stages, and the Likoni ferry approaches gather the county's working population every day. None is counted." }
     fields:
-      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3): two sound trucks (*The Mulu Economic Caravans*) with PA systems, Kikamba music and local young speakers, at market entrances on market days. Section 15.3.1 sets out how the ground team runs them." }
-  - title: "Churches and clergy"
-    head: { label: "Reach", text: "denominations present: Catholic, AIC, Redeemed Gospel, Anglican and Baptist. The Catholic Diocese of Kitui alone counts over {{church.catholic}} baptised members (Tier 3), a floor for one denomination rather than attendance." }
+      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3): two sound trucks with Kiswahili music and local young speakers at market entrances and stages, rotating by ward. Section 15.3.1 sets out how the ground team runs them." }
+  - title: "Mosques and churches"
+    head: { label: "Reach", text: "Friday prayers at the mosques of the Island, Kisauni and Likoni, and Sunday services across the mainland, are the largest regular gatherings in the county. Neither is counted." }
     fields:
-      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3): Sunday visits across all eight constituencies, respecting the liturgy, asking for prayers, and meeting parish development committees after the service." }
+      - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3): visits that respect the place of worship: no campaigning inside, meetings with mosque and parish committees after prayers or service, and service-delivery forums the community hosts." }
 ```
 
 ```visual
 kind: week
-title: "Market rotation"
+title: "Market and stage rotation"
 items:
   - day: "Mondays"
     items:
-      - { label: "Nguni Livestock Market (Mwingi Central)" }
-      - { label: "Kabati (Kitui West)" }
+      - { label: "Kongowea Market (Nyali)" }
+      - { label: "Changamwe stages (Changamwe)" }
   - day: "Tuesdays"
     items:
-      - { label: "Kalundu Market (Kitui Central)" }
-      - { label: "Tseikuru (Mwingi North)" }
+      - { label: "Marikiti Market (Mvita)" }
+      - { label: "Mtopanga and Bamburi stages (Kisauni)" }
   - day: "Wednesdays"
     items:
-      - { label: "Mbondoni (Mwingi West)" }
-      - { label: "Mutomo (Kitui South)" }
+      - { label: "Mikindani and Miritini (Jomvu)" }
+      - { label: "Likoni ferry approaches (Likoni)" }
   - day: "Thursdays"
     items:
-      - { label: "Chuluni (Kitui East)" }
-      - { label: "Kyuso (Mwingi North)" }
+      - { label: "Majengo Market (Mvita)" }
+      - { label: "Mjambere and Junda (Kisauni)" }
   - day: "Fridays"
     items:
-      - { label: "Kisasi (Kitui Rural)" }
-      - { label: "Migwani (Mwingi West)" }
+      - { label: "After Jumaa prayers: the Island, Kisauni and Likoni" }
+      - { label: "Chaani and Port Reitz (Changamwe)" }
   - day: "Saturdays"
     items:
-      - { label: "Kitui Town Central Market" }
-      - { label: "Mwingi Town Main Market" }
+      - { label: "Timbwani and Shika Adabu (Likoni)" }
+      - { label: "Kadzandani and Ziwa la Ng'ombe (Nyali)" }
 ```
 
-**What it means for the campaign.** The offline majority is reached through infrastructure that already exists in every ward, and the campaign's job is to put its message on it.
+**What it means for the campaign.** The voters who stayed home in 2022 are reached through places that already gather people in every ward, and the campaign's job is to give them a reason to come out.

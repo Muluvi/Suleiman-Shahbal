@@ -10,14 +10,12 @@ interface ConstituencyChartDatum {
 }
 
 const ABBR: Record<string, string> = {
-  "Mwingi North": "Mw.N",
-  "Mwingi West": "Mw.W",
-  "Mwingi Central": "Mw.C",
-  "Kitui West": "Kt.W",
-  "Kitui Rural": "Kt.R",
-  "Kitui Central": "Kt.C",
-  "Kitui East": "Kt.E",
-  "Kitui South": "Kt.S",
+  "Kisauni": "Kis",
+  "Nyali": "Nya",
+  "Changamwe": "Cha",
+  "Jomvu": "Jom",
+  "Likoni": "Lik",
+  "Mvita": "Mvi",
 };
 
 export default function ConstituencyBarChart({

@@ -12,7 +12,7 @@ import { ScreenShell } from "../primitives";
 
 /**
  * WhatsApp — §2.6's "primary closed-group organizing hub", carrying the dispatch §5.2.3.1
- * describes: a localized ward pledge, then a voice note from Dr. Mulu, out to the ward captains
+ * describes: a localized ward pledge, then a voice note from Mr Shahbal, out to the ward captains
  * for peer forwarding.
  *
  * The resident's reply is the single character the SMS copy itself asks for ("Reply 1 to join"),

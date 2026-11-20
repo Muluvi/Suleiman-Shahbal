@@ -21,7 +21,7 @@ export const BYPASS_PILLARS = [
     label: "Faith-based, diocesan and community radio",
     summary: "Neutral and church-owned stations \u2014 Wikwatyo, Mang'elete, County FM",
     detail:
-      "Direct media buying and civic issue programming on Radio Wikwatyo (Seventh-Day Adventist, Kitui), " +
+      "Direct media buying and civic issue programming on Radio Wikwatyo (Seventh-Day Adventist, Mombasa), " +
       "County FM and Mang'elete. These stations hold the highest qualitative credibility among rural women, " +
       "church elders and farming chamas; strictly neutral and immune to commercial political vetoes.",
   },
@@ -46,7 +46,7 @@ export const BYPASS_PILLARS = [
     summary: "Grassroots baraza audio \u2014 pre-loaded megaphones and WhatsApp voice",
     detail:
       "400 ward captains equipped with high-output portable megaphones and pre-loaded USB memory sticks " +
-      "containing 45-second Kikamba policy tracks. Direct dispatch of Kikamba audio notes across 180+ local " +
+      "containing 45-second Kiswahili policy tracks. Direct dispatch of Kiswahili audio notes across 180+ local " +
       "WhatsApp groups for organic peer-to-peer sharing among teachers, youth and traders.",
   },
 ];

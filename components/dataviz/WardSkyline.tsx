@@ -4,7 +4,7 @@ import { TOOL_WARDS } from "../../lib/tools/dataset";
 import { ExportableVisual } from "../visual/ExportableVisual";
 
 /**
- * The 40 wards as a skyline (visual upgrade, C16): each ward a column on its tile-map square,
+ * The 30 wards as a skyline (visual upgrade, C16): each ward a column on its tile-map square,
  * raised by its registered voters.
  *
  * ORTHOGRAPHIC, NOT PERSPECTIVE. A perspective camera makes a far column look shorter than a near
@@ -42,7 +42,7 @@ export function WardSkyline() {
       card={{ type: "ranked", params: { measure: "voters" } }}
     >
       <div className="sk-wrap">
-        <svg viewBox={`0 0 ${width} ${height}`} className="sk" role="img" aria-label={`Skyline of the 40 wards by registered voters. Tallest: ${tallest.map((id) => `${wards.find((w) => w.id === id)!.name}, ${fmt(`ward.${id}`)}`).join("; ")}.`}>
+        <svg viewBox={`0 0 ${width} ${height}`} className="sk" role="img" aria-label={`Skyline of the 30 wards by registered voters. Tallest: ${tallest.map((id) => `${wards.find((w) => w.id === id)!.name}, ${fmt(`ward.${id}`)}`).join("; ")}.`}>
           {order.map((w, i) => {
             const h = (w.voters / max) * MAX_H;
             const [x, y] = iso(w.col, w.row);

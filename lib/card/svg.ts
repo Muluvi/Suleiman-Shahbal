@@ -3,7 +3,7 @@
  * so maps and icon arrays reach the image with their real geometry.
  */
 import { BOX, COUNTY } from "../premium/county";
-import { PICTOGRAM_PATHS, type PictogramName } from "../../components/icons/kitui";
+import { PICTOGRAM_PATHS, type PictogramName } from "../../components/icons/mombasa";
 import { C } from "./palette";
 
 export const dataUri = (svg: string) => `data:image/svg+xml;base64,${Buffer.from(svg).toString("base64")}`;

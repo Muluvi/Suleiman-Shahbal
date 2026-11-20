@@ -98,7 +98,7 @@ export const IEBC_CLEARANCES: string[][] = [
   ],
   [
     "7. Party nomination / direct ticket seal",
-    "Certificate of nomination issued by the Wiper Patriotic Front NEC/NEB.",
+    "Certificate of nomination issued by The New Democrats Patriotic Front NEC/NEB.",
     "[Requires legal confirmation]: exact internal party dispute filing timelines and gazette deadlines.",
   ],
 ];
@@ -148,14 +148,14 @@ export const LIABILITY_SERIES: FigureSeries = {
 /* ------------------------------------------------------------------ §4.6 the org chart */
 
 export const ORG_CHAIN = [
-  { role: "Dr. Makali Mulu (candidate) & strategic advisory board" },
+  { role: "Suleiman Shahbal (candidate) & strategic advisory board" },
   { role: "Campaign Manager & Chief of Operations (lead operator)" },
 ];
 
 export const ORG_BRANCHES = [
   {
     label: "Communications & media lead",
-    items: ["Kikamba audio production", "Video crews", "Graphic design", "Radio buying"],
+    items: ["Kiswahili audio production", "Video crews", "Graphic design", "Radio buying"],
   },
   {
     label: "Field ops & logistics lead",
@@ -182,7 +182,7 @@ export const ORG_SERIES: FigureSeries = {
 export const ROLE_OWNERSHIP: string[][] = [
   [
     "1. Campaign Manager & Chief of Operations",
-    "Overall campaign execution, budget allocation, strategic schedule and coalition alignment · direct liaison with Dr. Mulu and the advisory board · primary escalation authority for all domains",
+    "Overall campaign execution, budget allocation, strategic schedule and coalition alignment · direct liaison with Mr Shahbal and the advisory board · primary escalation authority for all domains",
     "General logistics vendors · security coordination firm",
   ],
   [
@@ -218,7 +218,7 @@ export const ROLES_SERIES: FigureSeries = {
 export const REPORTING_TEAMS = [
   {
     label: "Your team (existing)",
-    items: ["Team lead / publisher", "Content producers", "Kikamba producer", "Community responders"],
+    items: ["Team lead / publisher", "Content producers", "Kiswahili producer", "Community responders"],
   },
   { label: "Strategy core (three campaign roles)", items: ["Strategy Director", "Analyst", "Offline-layer operator"] },
 ];
@@ -226,7 +226,7 @@ export const REPORTING_TEAMS = [
 export const REPORTING_CHAIN = [
   { role: "Campaign counterpart (one named person)", note: "Both teams meet here, through the weekly brief." },
   { role: "Campaign Manager" },
-  { role: "Dr. Makali Mulu" },
+  { role: "Suleiman Shahbal" },
 ];
 
 export const REPORTING_SERIES: FigureSeries = {

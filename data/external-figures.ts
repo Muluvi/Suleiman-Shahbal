@@ -44,7 +44,7 @@ export interface PlatformAudience {
 
 /**
  * National (Kenya-wide) platform sizing, for ad planning only. These are national figures, not
- * Kitui figures — §9A.1 sizes in-county reach separately, and the two must not be confused.
+ * Mombasa figures — §9A.1 sizes in-county reach separately, and the two must not be confused.
  *
  * WhatsApp is deliberately absent: the source describes it as "effectively universal among
  * connected users" and gives no audience figure, so it is not plotted rather than assigned an

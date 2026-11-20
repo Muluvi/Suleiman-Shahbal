@@ -35,16 +35,17 @@ export interface TileLayer {
 const k = (n: number) => `${(n / 1000).toFixed(1)}k`;
 const INK = "var(--ink)";
 
-// Register size: five ordinal steps. The breaks are binning, not data: they split the 40 wards
+// Register size: five ordinal steps. The breaks are binning, not data: they split the 30 wards
 // into bands a reader can compare at a glance, and every tile prints its own value regardless.
-const BREAKS = [9_000, 11_000, 13_000, 15_500];
+const BREAKS = [16_000, 19_000, 23_000, 26_000];
 const bin = (v: number) => 1 + BREAKS.filter((b) => v >= b).length;
 const seqInk = (s: number) => (s >= 3 ? "var(--seq-ink-dark)" : "var(--seq-ink-light)");
 
-const POOL = new Set(["mwingi-north", "mwingi-west", "mwingi-central", "kitui-south"]);
-const NO_WIPER_MP: Record<string, string> = { "kitui-east": "UDA MP", "kitui-south": "Jubilee MP" };
+const POOL = new Set(["kisauni", "nyali", "changamwe"]);
+// The 2022 governor margins by constituency (Section 2.4), in votes: the closest three are the pool.
+const MARGIN: Record<string, string> = Object.fromEntries(["changamwe", "jomvu", "kisauni", "nyali", "mvita", "likoni"].map((c) => [c, formatFigure(FIGURES[`result.2022.gov.${c}.margin`])]));
 const ZONE_FILL = { anchor: "var(--zone-a)", mwingi: "var(--zone-b)", arid: "var(--zone-c)" } as const;
-const ZONE_NAME = { anchor: "Urban and central anchor", mwingi: "Northern block (Mwingi)", arid: "Arid and resource belt", none: "In no zone" };
+const ZONE_NAME = { anchor: "The Island (Mvita)", mwingi: "The north mainland (Kisauni, Nyali)", arid: "The west mainland (Changamwe, Jomvu)", none: "Likoni, rotating" };
 
 const EFFORT: Record<string, number> = {
   anchor: FIGURES["effort.p-1.anchor"].value ?? 0,
@@ -65,11 +66,11 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
     tier: "T1",
     state: "sourced",
     legend: [
-      { label: "under 9,000", fill: "var(--seq-1)" },
-      { label: "9,000–10,999", fill: "var(--seq-2)" },
-      { label: "11,000–12,999", fill: "var(--seq-3)" },
-      { label: "13,000–15,499", fill: "var(--seq-4)" },
-      { label: "15,500 and over", fill: "var(--seq-5)" },
+      { label: "under 16,000", fill: "var(--seq-1)" },
+      { label: "16,000–18,999", fill: "var(--seq-2)" },
+      { label: "19,000–22,999", fill: "var(--seq-3)" },
+      { label: "23,000–25,999", fill: "var(--seq-4)" },
+      { label: "26,000 and over", fill: "var(--seq-5)" },
     ],
     style: (t) => {
       const s = bin(t.voters);
@@ -78,46 +79,40 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
   },
   footprint: {
     id: "footprint",
-    name: "Where he has held office",
-    description: `Kitui Central is the constituency he has represented since 2013. The pool, ${formatFigure(FIGURES["pool"])} voters and ${formatFigure(FIGURES["pool.share"])}% of the register, is Mwingi North, West, Central and Kitui South. Structural, derived from where he has held office, not from any measure of opinion.`,
-    source: "Parliament of Kenya record; IEBC ward register (2022)",
-    tier: "T1",
+    name: "Where the 2022 race was closest",
+    description: `The pool, ${formatFigure(FIGURES["pool"])} voters and ${formatFigure(FIGURES["pool.share"])}% of the register, is Kisauni, Nyali and Changamwe: the three constituencies the 2022 governor's race was decided by fewer than 2,000 votes. Derived from the declared result and the register, not from any measure of opinion.`,
+    source: "Declared 2022 governor result by constituency (as reported); IEBC ward register (2022)",
+    tier: "T2",
     state: "sourced",
     legend: [
-      { label: "Held office: Kitui Central", fill: "var(--accent-solid)" },
-      { label: "Never held office: the pool", fill: "var(--gold-solid)", weave: true },
-      { label: "Never held office, outside the pool", fill: "var(--neutral-fill)" },
+      { label: "The pool: decided by under 2,000 votes", fill: "var(--gold-solid)", weave: true },
+      { label: "Decided by more", fill: "var(--neutral-fill)" },
     ],
     style: (t) =>
-      t.constituency === "kitui-central"
-        ? { fill: "var(--accent-solid)", ink: "var(--on-accent)", label: "Held" }
-        : POOL.has(t.constituency)
-          ? { fill: "var(--gold-solid)", ink: "#ffffff", label: "Pool", weave: true }
-          : { fill: "var(--neutral-fill)", ink: INK, label: "—" },
+      POOL.has(t.constituency)
+        ? { fill: "var(--gold-solid)", ink: "#ffffff", label: "Pool", weave: true }
+        : { fill: "var(--neutral-fill)", ink: INK, label: "—" },
   },
   "party-flow": {
     id: "party-flow",
-    name: "Where party loyalty won't carry him",
-    description: `Kitui East returned a UDA MP and Kitui South a Jubilee MP in 2022: ${formatFigure(FIGURES["east-south"])} voters, ${formatFigure(FIGURES["east-south.share"])}% of the register. Kitui Central has its own MP succession contest. The other constituencies are not assessed here.`,
-    source: "Constituency records, 2022 (single-source)",
-    tier: "T3",
+    name: "The 2022 margin, by constituency",
+    description: "The 2022 governor winner's lead over the runner-up in each constituency, in votes (Likoni calculated). He contests 2027 outside ODM and UDA, so no party vote carries to him anywhere; this layer shows where the last race was close enough to turn.",
+    source: "Constituency tallies as reported by The Standard and KNA, 30 August 2022",
+    tier: "T2",
     state: "sourced",
     legend: [
-      { label: "No Wiper MP (2022)", fill: "var(--div-neg)", hatch: true },
-      { label: "Home seat in its own contest", fill: "var(--accent-solid)" },
-      { label: "Not assessed", fill: "var(--neutral-fill)" },
+      { label: "Lead under 2,000", fill: "var(--div-neg)", hatch: true },
+      { label: "Lead of 2,000 or more", fill: "var(--neutral-fill)" },
     ],
     style: (t) =>
-      NO_WIPER_MP[t.constituency]
-        ? { fill: "var(--div-neg)", ink: "#ffffff", label: NO_WIPER_MP[t.constituency].split(" ")[0], hatch: true }
-        : t.constituency === "kitui-central"
-          ? { fill: "var(--accent-solid)", ink: "var(--on-accent)", label: "Own race" }
-          : { fill: "var(--neutral-fill)", ink: INK, label: "" },
+      POOL.has(t.constituency)
+        ? { fill: "var(--div-neg)", ink: "#ffffff", label: MARGIN[t.constituency], hatch: true }
+        : { fill: "var(--neutral-fill)", ink: INK, label: MARGIN[t.constituency] },
   },
   zones: {
     id: "zones",
     name: "The three regions",
-    description: `The three zones cover ${formatFigure(FIGURES["zones.share"])}% of residents. Kitui Rural falls in none of them, and needs adding to a zone or a stated reason it is out.`,
+    description: `The three zones cover ${formatFigure(FIGURES["zones.share"])}% of residents. Likoni sits across the ferry in none of them and takes a rotating share of effort.`,
     source: "KNBS 2019 Census, by sub-county; this plan's zoning",
     tier: "T1",
     state: "sourced",
@@ -125,25 +120,25 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
       { label: ZONE_NAME.anchor, fill: ZONE_FILL.anchor },
       { label: ZONE_NAME.mwingi, fill: ZONE_FILL.mwingi },
       { label: ZONE_NAME.arid, fill: ZONE_FILL.arid },
-      { label: "Kitui Rural: in no zone", fill: "transparent", dashed: true },
+      { label: "Likoni: rotating", fill: "transparent", dashed: true },
     ],
     style: (t) =>
       t.zone === "none"
         ? { fill: "transparent", ink: "var(--muted)", label: "none", dashed: true }
-        : { fill: ZONE_FILL[t.zone], ink: "#ffffff", label: t.zone === "anchor" ? "A" : t.zone === "mwingi" ? "N" : "S" },
+        : { fill: ZONE_FILL[t.zone], ink: "#ffffff", label: t.zone === "anchor" ? "I" : t.zone === "mwingi" ? "N" : "W" },
   },
   effort: {
     id: "effort",
     name: "Where the effort goes in Phase −1",
-    description: "Share of Phase −1 communications effort by zone: Firefly's weighting, not a measurement. The remainder rotates across wards as testing effort, and Kitui Rural is covered only by it.",
+    description: "Share of Phase −1 communications effort by zone: Firefly's weighting, not a measurement. The remainder goes to Likoni and to rotating ward tests.",
     source: "This plan, Section 3.3.1",
     tier: null,
     state: "target",
     legend: [
-      { label: `${EFFORT.mwingi}% Mwingi`, fill: `var(--seq-${effortStep(EFFORT.mwingi)})`, hatch: true },
-      { label: `${EFFORT.arid}% arid belt`, fill: `var(--seq-${effortStep(EFFORT.arid)})`, hatch: true },
-      { label: `${EFFORT.anchor}% anchor`, fill: `var(--seq-${effortStep(EFFORT.anchor)})`, hatch: true },
-      { label: "Rotating only", fill: "transparent", dashed: true },
+      { label: `${EFFORT.mwingi}% north mainland`, fill: `var(--seq-${effortStep(EFFORT.mwingi)})`, hatch: true },
+      { label: `${EFFORT.arid}% west mainland`, fill: `var(--seq-${effortStep(EFFORT.arid)})`, hatch: true },
+      { label: `${EFFORT.anchor}% Island`, fill: `var(--seq-${effortStep(EFFORT.anchor)})`, hatch: true },
+      { label: "Likoni and rotating", fill: "transparent", dashed: true },
     ],
     style: (t) => {
       if (t.zone === "none") return { fill: "transparent", ink: "var(--muted)", label: "rot.", dashed: true };
@@ -155,13 +150,13 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
   largest: {
     id: "largest",
     name: "The twelve largest wards",
-    description: `The twelve wards with the most registered voters, which together hold ${formatFigure(FIGURES["pareto.top12.share"])}% of the 2022 register; ${formatFigure(FIGURES["pareto.top12.in-pool"])} of them are in the pool where he has never held office.`,
+    description: `The twelve wards with the most registered voters, which together hold ${formatFigure(FIGURES["pareto.top12.share"])}% of the 2022 register; ${formatFigure(FIGURES["pareto.top12.in-pool"])} of them are in the pool where the 2022 race was closest.`,
     source: "IEBC, Registered Voters per County Assembly Ward (2022)",
     tier: "T1",
     state: "sourced",
     legend: [
       { label: "One of the twelve largest", fill: "var(--accent-solid)" },
-      { label: "The other 28 wards", fill: "var(--neutral-fill)" },
+      { label: "The other 18 wards", fill: "var(--neutral-fill)" },
     ],
     style: (t) => (LARGEST.has(t.id) ? { fill: "var(--accent-solid)", ink: "var(--on-accent)", label: k(t.voters) } : { fill: "var(--neutral-fill)", ink: INK, label: k(t.voters) }),
   },
@@ -173,7 +168,7 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
     tier: null,
     state: "target",
     legend: [{ label: "Set in Week 1", fill: "transparent", dashed: true }],
-    // A named gap, not a blank: every tile says when its value arrives (D-12). A map of forty
+    // A named gap, not a blank: every tile says when its value arrives (D-12). A map of thirty
     // dashes read as broken rather than as data that does not exist yet.
     style: () => ({ fill: "transparent", ink: "var(--muted)", label: "Week 1", dashed: true }),
   },

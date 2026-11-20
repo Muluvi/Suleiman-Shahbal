@@ -1,11 +1,11 @@
 ```lead
-**Anyone with the link sees everything. Once the engagement starts, Dr. Mulu's team signs in to change it. Firefly keeps it running.**
+**Anyone with the link sees everything. Once the engagement starts, Mr Shahbal's team signs in to change it. Firefly keeps it running.**
 ```
 
-**Anyone with the link sees everything. Once the engagement starts, Dr. Mulu's team signs in to change it. Firefly keeps it running.** The data behind this story, the analysis, the strategies and the team's own working records live in one place, and the team updates them itself.
+**Anyone with the link sees everything. Once the engagement starts, Mr Shahbal's team signs in to change it. Firefly keeps it running.** The data behind this story, the analysis, the strategies and the team's own working records live in one place, and the team updates them itself.
 
 ```visual
-{"kind":"contrast","left":{"title":"Open to view","items":[{"label":"Everyone with the link","text":"every dataset, chart, strategy and record, with no account"},{"label":"Search, filter, share, download","text":"any view is a link; any table is a CSV or a PDF"}]},"right":{"title":"Sign in to edit","items":[{"label":"Dr. Mulu's team","text":"adds and changes records and data, from a phone, once team sign-in is switched on at the start of the engagement"},{"label":"Every change logged","text":"who, what and when, and any change can be put back exactly"}]}}
+{"kind":"contrast","left":{"title":"Open to view","items":[{"label":"Everyone with the link","text":"every dataset, chart, strategy and record, with no account"},{"label":"Search, filter, share, download","text":"any view is a link; any table is a CSV or a PDF"}]},"right":{"title":"Sign in to edit","items":[{"label":"Mr Shahbal's team","text":"adds and changes records and data, from a phone, once team sign-in is switched on at the start of the engagement"},{"label":"Every change logged","text":"who, what and when, and any change can be put back exactly"}]}}
 ```
 
 ```visual
@@ -13,7 +13,7 @@
 ```
 
 ```visual
-{"kind":"cards","title":"The work, and the chapter where the team does it","items":[{"title":"Analyse","text":"the tools and charts in How Kitui voted, What voters need and How voters get news"},{"title":"Decide","text":"the message, segment and channel tools in The message, The voters and Channels and language"},{"title":"Direct the publishing team","text":"the weekly brief beside the weekly rhythm, and the content calendar beside a week of publishing"},{"title":"Run the channels","text":"the SMS, USSD and WhatsApp dispatch log, beside reaching the offline majority"},{"title":"Measure","text":"the KPI tracker and channel audit in Measuring success; creative tests and field reports where that work is set"},{"title":"Update the data","text":"the data editor and the change history, in Evidence and sources"}]}
+{"kind":"cards","title":"The work, and the chapter where the team does it","items":[{"title":"Analyse","text":"the tools and charts in How Mombasa voted, What voters need and How voters get news"},{"title":"Decide","text":"the message, segment and channel tools in The message, The voters and Channels and language"},{"title":"Direct the publishing team","text":"the weekly brief beside the weekly rhythm, and the content calendar beside a week of publishing"},{"title":"Run the channels","text":"the SMS, USSD and WhatsApp dispatch log, beside reaching the offline majority"},{"title":"Measure","text":"the KPI tracker and channel audit in Measuring success; creative tests and field reports where that work is set"},{"title":"Update the data","text":"the data editor and the change history, in Evidence and sources"}]}
 ```
 
 ```visual

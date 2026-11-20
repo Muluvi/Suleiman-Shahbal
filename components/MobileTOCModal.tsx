@@ -13,7 +13,7 @@ import type { SectionItem } from "../lib/section-index";
 const TAB_ICONS: Record<TabId, React.ComponentType<{ size?: number; className?: string }>> = {
   welcome: Handshake,
   brief: FileText,
-  kitui: Database,
+  mombasa: Database,
   votes: Gauge,
   needs: ClipboardList,
   news: Radio,

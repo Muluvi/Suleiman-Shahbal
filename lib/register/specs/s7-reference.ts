@@ -110,12 +110,12 @@ function paired(id: string, series: FigureSeries, left: string, right: string, r
 
 const DEPLOYMENT_SERIES: FigureSeries = {
   id: "language-deployment",
-  headline: "Every medium is allocated to the whole, and only one of them is allocated to Kikamba alone",
+  headline: "Every medium is allocated to the whole, and only one of them is allocated to Kiswahili alone",
   measure: "The language allocation per campaign output medium. Each row totals 100%.",
   points: [],
   note:
-    "The bulk SMS row gives Kikamba no allocation, as the bulk SMS rule requires: the Communications " +
-    "Authority restricts political bulk SMS to English or Kiswahili. USSD is not restricted, and takes 50% Kikamba here.",
+    "The bulk SMS row gives Kiswahili no allocation, as the bulk SMS rule requires: the Communications " +
+    "Authority restricts political bulk SMS to English or Kiswahili. USSD is not restricted, and takes 50% Kiswahili here.",
 };
 
 const BYPASS_SERIES: FigureSeries = {
@@ -165,7 +165,7 @@ const FIG_LANGUAGE_MAP: FigureSpec = {
     },
     keys(["Language", "Estimated primary reach, %", "Audiences", "Channels", "Objective"]),
     LANGUAGES.map((l) => ({ cells: cellsOf([l.name, String(l.share), l.audiences.join(" · "), l.channels.join(" · "), l.objective]) })),
-    ["Political bulk SMS is English or Kiswahili only (Communications Authority); Kikamba travels by voice note and radio."],
+    ["Political bulk SMS is English or Kiswahili only (Communications Authority); Kiswahili travels by voice note and radio."],
   ),
 };
 
@@ -183,7 +183,7 @@ const RAW: FigureSpec[] = [
   table("provenance-mandate", MANDATE_SERIES, ["Requirement", "What it means", "Example"], PROVENANCE_MANDATE),
   table("tier-classification", TIERS_SERIES, ["Tier", "Source types", "Authorised strategic use"], TIER_CLASSIFICATION),
   stepper("conflict-protocol", PROTOCOL_SERIES, CONFLICT_PROTOCOL),
-  table("message-by-segment", SEGMENT_MESSAGE_SERIES, ["Target segment", "Tailored message & Kikamba framing", "Verifiable evidence & data source"], MESSAGE_BY_SEGMENT),
+  table("message-by-segment", SEGMENT_MESSAGE_SERIES, ["Target segment", "Tailored message & Kiswahili framing", "Verifiable evidence & data source"], MESSAGE_BY_SEGMENT),
   table("message-by-channel", CHANNEL_MESSAGE_SERIES, ["Channel & reach", "Format, tone & linguistic style", "Evidential proof points"], MESSAGE_BY_CHANNEL),
   stepper("escalation-ladder", ESCALATION_SERIES, ESCALATION_LADDER),
   grid("compliance-architecture", COMPLIANCE_SERIES, COMPLIANCE_TIERS, "Nomination clearance first, then the data-protection regime the voter database sits under, then the offences that govern what may be said and when.", 3),
@@ -231,7 +231,7 @@ const RAW: FigureSpec[] = [
   grid("tech-stack", STACK_SERIES, STACK_TIERS, "The gateway collects, the CRM holds it encrypted, and the analysis and publishing tiers work on public and anonymised data."),
   table("procurement-matrix", PROCUREMENT_SERIES, ["System component", "Recommended vendor", "DPA risk level", "Decision status"], PROCUREMENT),
   stepper("bypass-architecture", BYPASS_SERIES, BYPASS_PILLARS.map((p) => ({ title: p.label, steps: [p.detail] }))),
-  paired("cultural-registers", REGISTERS_SERIES, "Literal / bad translation", "Approved cultural Kikamba framing", CULTURAL_REGISTERS.map((r) => ({ left: `${r.literal} (${r.literalWhy}, for “${r.term}”)`, right: [r.approved, `“${r.gloss}”`] }))),
+  paired("cultural-registers", REGISTERS_SERIES, "Literal / bad translation", "Approved cultural Kiswahili framing", CULTURAL_REGISTERS.map((r) => ({ left: `${r.literal} (${r.literalWhy}, for “${r.term}”)`, right: [r.approved, `“${r.gloss}”`] }))),
   stepper("qc-gateway", QC_SERIES, QC_STAGES),
   FIG_LANGUAGE_MAP,
   FIG_LANGUAGE_DEPLOYMENT,

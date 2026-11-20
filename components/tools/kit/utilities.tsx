@@ -30,14 +30,14 @@ export function UssdBuilder({ header, menu }: { header: string; menu: Opt[] }) {
             {opts.map((o, i) => (
               <div key={i} className="grid grid-cols-[2.5rem_1fr_1fr_auto] items-end gap-2">
                 <input aria-label="Key" className="plat-input" value={o.key} onChange={(e) => set(i, "key", e.target.value)} />
-                <input aria-label="Kikamba" className="plat-input" value={o.kikamba} placeholder="Kikamba" onChange={(e) => set(i, "kikamba", e.target.value)} />
+                <input aria-label="Kiswahili" className="plat-input" value={o.kikamba} placeholder="Kiswahili" onChange={(e) => set(i, "kikamba", e.target.value)} />
                 <input aria-label="English" className="plat-input" value={o.english} placeholder="English" onChange={(e) => set(i, "english", e.target.value)} />
                 <button type="button" className="plat-btn plat-btn-sm" aria-label={`Remove option ${o.key}`} onClick={() => setOpts(opts.filter((_, j) => j !== i))}>✕</button>
               </div>
             ))}
           </div>
           <button type="button" className="plat-btn plat-btn-sm mt-3" onClick={() => setOpts([...opts, { key: String(opts.length + 1), kikamba: "", english: "", does: "" }])}>Add an option</button>
-          <div className="mt-4"><Select label="Menu language" value={lang} onChange={setLang} options={[{ value: "both", label: "Kikamba / English" }, { value: "kikamba", label: "Kikamba" }, { value: "english", label: "English" }]} /></div>
+          <div className="mt-4"><Select label="Menu language" value={lang} onChange={setLang} options={[{ value: "both", label: "Kiswahili / English" }, { value: "kikamba", label: "Kiswahili" }, { value: "english", label: "English" }]} /></div>
         </Card>
         <div>
           <div className="mx-auto w-64 rounded-[2rem] bg-[#222] p-4 shadow-lg">
@@ -52,7 +52,7 @@ export function UssdBuilder({ header, menu }: { header: string; menu: Opt[] }) {
         <pre className="mt-2 max-h-56 overflow-auto rounded-md bg-paper p-3 font-mono text-[0.75rem] text-ink ring-1 ring-line">{json}</pre>
         <button type="button" className="plat-btn plat-btn-sm mt-2" onClick={() => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([json], { type: "application/json" })); a.download = "ussd-menu.json"; a.click(); }}>Download JSON</button>
       </Card>
-      <Note>A prototype. Kikamba wording must pass the Kikamba reviewer before it goes to the shortcode provider, and the opt-out position is set when the shortcode is provisioned.</Note>
+      <Note>A prototype. Kiswahili wording must pass the Kiswahili reviewer before it goes to the shortcode provider, and the opt-out position is set when the shortcode is provisioned.</Note>
     </div>
   );
 }
@@ -72,7 +72,7 @@ export function Compliance({ smsLimit }: { smsLimit: number }) {
   const hour = sendAt ? sendAt.getHours() + sendAt.getMinutes() / 60 : null;
   const checks = [
     { ok: [...text].length > 0 && [...text].length <= smsLimit, label: `Length: ${[...text].length} of ${smsLimit} characters`, rule: "One SMS, no split messages" },
-    { ok: lang !== "kikamba", label: lang === "kikamba" ? "Kikamba is not sent as SMS" : "English or Kiswahili", rule: "SMS carries English and Kiswahili; Kikamba goes by voice note and radio" },
+    { ok: lang !== "kikamba", label: lang === "kikamba" ? "Kiswahili is not sent as SMS" : "English or Kiswahili", rule: "SMS carries English and Kiswahili; Kiswahili goes by voice note and radio" },
     { ok: /\bSTOP\b/i.test(text), label: /\bSTOP\b/i.test(text) ? "Opt-out included" : "No opt-out found (add \"STOP\" and how to send it)", rule: "Every message carries a clear opt-out" },
     { ok: hoursAhead !== null && hoursAhead >= 48, label: hoursAhead === null ? "Enter the lodging and sending times" : `Lodged ${Math.floor(hoursAhead)} hours before sending`, rule: "Lodged with the operator 48 hours ahead" },
     { ok: hour !== null && hour >= 7 && hour < 19, label: hour === null ? "Enter the sending time" : `Sends at ${sendAt!.toTimeString().slice(0, 5)}`, rule: "Sending window 7am to 7pm (a 2020 draft proposed 8am to 6pm: verify which is in force)" },
@@ -85,7 +85,7 @@ export function Compliance({ smsLimit }: { smsLimit: number }) {
       <Card>
         <label className="plat-label block">Message<textarea className="plat-input mt-1 block min-h-24 w-full" value={text} onChange={(e) => setText(e.target.value)} /></label>
         <div className="mt-3 grid gap-4 sm:grid-cols-3">
-          <Select label="Language" value={lang} onChange={setLang} options={[{ value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }, { value: "kikamba", label: "Kikamba" }]} />
+          <Select label="Language" value={lang} onChange={setLang} options={[{ value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }, { value: "kikamba", label: "Kiswahili" }]} />
           <label className="plat-label block">Lodged with the operator<input className="plat-input mt-1 block w-full" type="datetime-local" value={lodged} onChange={(e) => setLodged(e.target.value)} /></label>
           <label className="plat-label block">Planned send<input className="plat-input mt-1 block w-full" type="datetime-local" value={send} onChange={(e) => setSend(e.target.value)} /></label>
         </div>
@@ -185,7 +185,7 @@ function Qr({ text }: { text: string }) {
 export function LinkBuilder({ wards, base }: { wards: ToolWard[]; base: string }) {
   const [url, setUrl] = useState(base);
   const [channel, setChannel] = useState("sms");
-  const [campaign, setCampaign] = useState("kitui-2027");
+  const [campaign, setCampaign] = useState("mombasa-2027");
   const [con, setCon] = useState("all");
   const cons = [...new Set(wards.map((w) => w.constituencyName))].sort();
   const valid = /^https?:\/\/\S+$/.test(url);
@@ -198,7 +198,7 @@ export function LinkBuilder({ wards, base }: { wards: ToolWard[]; base: string }
           <label className="plat-label block">Page to link to<input className="plat-input mt-1 block w-full" value={url} onChange={(e) => setUrl(e.target.value)} /></label>
           <label className="plat-label block">Campaign tag<input className="plat-input mt-1 block w-full" value={campaign} onChange={(e) => setCampaign(e.target.value.toLowerCase().replace(/[^a-z0-9-]+/g, "-"))} /></label>
           <Select label="Channel" value={channel} onChange={setChannel} options={CHANNELS.map((c) => ({ value: c, label: c }))} />
-          <Select label="Wards" value={con} onChange={setCon} options={[{ value: "all", label: "All 40 wards" }, ...cons.map((c) => ({ value: c, label: c }))]} />
+          <Select label="Wards" value={con} onChange={setCon} options={[{ value: "all", label: "All 30 wards" }, ...cons.map((c) => ({ value: c, label: c }))]} />
         </div>
         {!valid && <p className="mt-2 text-[0.85rem] text-gold">Enter a full web address, starting with https://</p>}
       </Card>

@@ -22,8 +22,8 @@ const MODEL_VARIABLES: ModelVariable[] = [
   { variable: "polling_station", description: "Station identifier", source: "IEBC register", type: "String", format: "Unique code" },
   { variable: "station_turnout_2017", description: "Polling-station turnout, 2017", source: "IEBC Forms 37A", type: "Continuous", format: "0–100" },
   { variable: "station_turnout_2022", description: "Polling-station turnout, 2022", source: "IEBC Forms 37A", type: "Continuous", format: "0–100" },
-  { variable: "station_wiper_share_2017", description: "Wiper governor share at the station, 2017", source: "IEBC Forms 37A", type: "Continuous", format: "0–100" },
-  { variable: "station_wiper_share_2022", description: "Wiper governor share at the station, 2022", source: "IEBC Forms 37A", type: "Continuous", format: "0–100" },
+  { variable: "station_wiper_share_2017", description: "The New Democrats governor share at the station, 2017", source: "IEBC Forms 37A", type: "Continuous", format: "0–100" },
+  { variable: "station_wiper_share_2022", description: "The New Democrats governor share at the station, 2022", source: "IEBC Forms 37A", type: "Continuous", format: "0–100" },
   { variable: "area_poverty_rate", description: "Poverty headcount, finest published unit (not ward)", source: "KNBS", type: "Continuous", format: "0–100" },
   { variable: "area_literacy_rate", description: "Adult literacy, finest published unit", source: "KNBS", type: "Continuous", format: "0–100" },
   { variable: "area_water_access", description: "% households, improved water, finest published unit", source: "KNBS", type: "Continuous", format: "0–100" },
@@ -36,7 +36,7 @@ const MODEL_VARIABLES: ModelVariable[] = [
   { variable: "volunteer_status", description: "Sign-up status", source: "Campaign", type: "Categorical", format: "None/Inactive/Active" },
   { variable: "donor_status", description: "Donation history", source: "Campaign", type: "Categorical", format: "None/One-time/Recurring" },
   { variable: "field_contact_outcome", description: "Doorstep contact result", source: "Field team", type: "Categorical", format: "Opted in/Reached, no opt-in/Do not contact/No one home", highlight: true },
-  { variable: "support_score", description: "Predicted Wiper support at the station (output)", source: "Model", type: "Continuous", format: "0–1" },
+  { variable: "support_score", description: "Predicted The New Democrats support at the station (output)", source: "Model", type: "Continuous", format: "0–1" },
   { variable: "turnout_score", description: "Predicted turnout (output)", source: "Model", type: "Continuous", format: "0–1" },
 ];
 

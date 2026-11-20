@@ -21,9 +21,9 @@ import { fmt as reg } from "../../lib/data/read";
  * sources them to the 2019 KNBS census. Phase weightings are quoted from §3.5.4.
  *
  * One honest wrinkle the UI has to carry rather than smooth over: §3.5 groups the county by
- * SUB-COUNTY (Kitui Central, Katulani, Migwani …) while the IEBC register is published by
+ * SUB-COUNTY (Mvita, Katulani, Migwani …) while the IEBC register is published by
  * CONSTITUENCY. The two do not nest. So the zones map onto whole constituencies here, and
- * Kitui Rural — which §3.5's three zones do not name at all — is surfaced as unassigned rather
+ * Likoni — which §3.5's three zones do not name at all — is surfaced as unassigned rather
  * than quietly folded into a neighbour to make the totals look tidy.
  */
 
@@ -61,7 +61,7 @@ const GEOGRAPHIC_ZONES: GeographicZone[] = [
   {
     id: "anchor",
     name: "The Urban & Central Anchor",
-    subCounties: "Kitui Central · Kitui West · Katulani",
+    subCounties: "Mvita · Jomvu · Katulani",
     constituencyIds: ["kitui-central", "kitui-west"],
     population: reg("zone.anchor.population"),
     popShare: "19.7%",
@@ -71,12 +71,12 @@ const GEOGRAPHIC_ZONES: GeographicZone[] = [
     generalWeight: 25,
     connectivityProfile: "Highest in the county — the urban core is where the connected minority is concentrated.",
     primaryStrategicImperative:
-      "Consolidate the home base early and intensely. This is the only zone where Dr. Mulu starts with a structural advantage, and in a countywide nomination contest consolidating a base is cheaper than converting a stranger.",
+      "Consolidate the home base early and intensely. This is the only zone where Mr Shahbal starts with a structural advantage, and in a countywide nomination contest consolidating a base is cheaper than converting a stranger.",
   },
   {
     id: "mwingi",
-    name: "The Northern Block — Mwingi",
-    subCounties: "Mwingi Central · Kyuso · Mumoni · Tseikuru",
+    name: "The Northern Block — the north mainland",
+    subCounties: "Kisauni · Kyuso · Mumoni · Tseikuru",
     constituencyIds: ["mwingi-north", "mwingi-west", "mwingi-central"],
     population: reg("zone.mwingi.population"),
     popShare: "22.5%",
@@ -84,14 +84,14 @@ const GEOGRAPHIC_ZONES: GeographicZone[] = [
     households: reg("zone.mwingi.households"),
     nominationWeight: 35,
     generalWeight: 25,
-    connectivityProfile: "Low to medium. Kikamba radio and SMS carry the load; USSD reaches the rest.",
+    connectivityProfile: "Low to medium. Kiswahili radio and SMS carry the load; USSD reaches the rest.",
     primaryStrategicImperative:
-      "Nearly a quarter of the county, and where a Kitui Central MP is structurally least known. Messaging must assure northern voters that devolved funds will be distributed equitably per ward — a commitment Dr. Mulu can make credibly, because he can publish the allocation methodology and then evaluate against it.",
+      "Nearly a quarter of the county, and where a Mvita MP is structurally least known. Messaging must assure northern voters that devolved funds will be distributed equitably per ward — a commitment Mr Shahbal can make credibly, because he can publish the allocation methodology and then evaluate against it.",
   },
   {
     id: "arid-belt",
     name: "The Arid & Resource Belt",
-    subCounties: "Mutomo · Ikutha · Mwingi East · Mutitu · Migwani",
+    subCounties: "Mutomo · Ikutha · the north mainland East · Mutitu · Migwani",
     constituencyIds: ["kitui-south", "kitui-east"],
     population: reg("zone.arid.population"),
     popShare: "36.6%",
@@ -266,7 +266,7 @@ export function GeographicZoneMatrix() {
         <p className="t-small text-muted font-medium flex items-start gap-1">
           <Percent size={12} className="text-accent shrink-0 mt-0.5" aria-hidden="true" />
           <span>
-            Phase −1 deliberately over-indexes on Mwingi and the arid belt relative to population share, because the
+            Phase −1 deliberately over-indexes on the north mainland and the arid belt relative to population share, because the
             nomination deficit is a recognition deficit concentrated outside the home base. A further{" "}
             {ROTATING_WEIGHT.nomination}% is held back for rotating tests. Weightings are reviewed monthly and
             reallocated.

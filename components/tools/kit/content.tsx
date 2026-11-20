@@ -24,7 +24,7 @@ function split(n: number, weights: number[]): number[] {
 export function ContentCalendar({ pillars, types, wards }: { pillars: string[]; types: { code: string; short: string }[]; wards: ToolWard[] }) {
   const [weights, setWeights] = useState<number[]>(() => split(100, pillars.map(() => 1)));
   const [posts, setPosts] = useState(6);
-  const [kikamba, setKikamba] = useState(4);
+  const [kikamba, setKiswahili] = useState(4);
   const poolWards = useMemo(() => [...wards].filter((w) => w.pool).sort((a, b) => b.voters - a.voters), [wards]);
   const [start, setStart] = useState(0);
   const plan = useMemo(() => {
@@ -38,7 +38,7 @@ export function ContentCalendar({ pillars, types, wards }: { pillars: string[]; 
       day: DAYS[Math.min(6, Math.floor((j * 7) / Math.max(posts, 1)))],
       pillar: pillars[p],
       type: types[j % types.length],
-      language: j < kikamba ? "Kikamba first" : j % 2 ? "Kiswahili" : "English",
+      language: j < kikamba ? "Kiswahili first" : j % 2 ? "Kiswahili" : "English",
       ward: j < 2 ? poolWards[(start + j) % poolWards.length]?.name ?? "—" : "Countywide",
     }));
   }, [posts, weights, kikamba, pillars, types, poolWards, start]);
@@ -50,11 +50,11 @@ export function ContentCalendar({ pillars, types, wards }: { pillars: string[]; 
         <div className="mt-3 grid gap-4 sm:grid-cols-3">{pillars.map((p, i) => <Slider key={p} label={p} value={weights[i]} onChange={(v) => setWeights(weights.map((w, j) => (j === i ? v : w)))} min={0} max={100} suffix="%" />)}</div>
         <div className="mt-4 grid gap-4 sm:grid-cols-3">
           <Slider label="Posts this week" value={posts} onChange={setPosts} min={3} max={14} />
-          <Slider label="Kikamba-first posts" value={kikamba} onChange={(v) => setKikamba(Math.min(v, posts))} min={0} max={posts} hint="The brief's rule: at least four" />
+          <Slider label="Kiswahili-first posts" value={kikamba} onChange={(v) => setKiswahili(Math.min(v, posts))} min={0} max={posts} hint="The brief's rule: at least four" />
           <Slider label="Rotate the pool wards" value={start} onChange={setStart} min={0} max={Math.max(0, poolWards.length - 1)} hint="Two posts originate in a pool ward" />
         </div>
       </Card>
-      {kikamba < 4 && <Note>Below the brief&rsquo;s rule of at least four Kikamba-first posts a week.</Note>}
+      {kikamba < 4 && <Note>Below the brief&rsquo;s rule of at least four Kiswahili-first posts a week.</Note>}
       <Table rows={plan} rowKey={(_, i) => String(i)} cols={[
         { key: "d", label: "Day", render: (r) => r.day },
         { key: "p", label: "Pillar", render: (r) => r.pillar },
@@ -77,7 +77,7 @@ export function MessageStudio({ smsLimit }: { smsLimit: number }) {
   const parts = chars === 0 ? 0 : chars <= smsLimit ? 1 : Math.ceil(chars / 153);
   const checks = [
     { ok: chars <= smsLimit, label: `SMS: ${chars} of ${smsLimit} characters${parts > 1 ? `, ${parts} parts` : ""}` },
-    { ok: lang !== "kikamba", label: lang === "kikamba" ? "SMS: Kikamba goes out as a WhatsApp voice note or on radio, not as SMS" : "SMS: English or Kiswahili" },
+    { ok: lang !== "kikamba", label: lang === "kikamba" ? "SMS: Kiswahili goes out as a WhatsApp voice note or on radio, not as SMS" : "SMS: English or Kiswahili" },
     { ok: chars <= 182, label: `USSD screen: ${chars} of 182 characters` },
     { ok: chars <= 280, label: `X: ${chars} of 280 characters` },
   ];
@@ -88,7 +88,7 @@ export function MessageStudio({ smsLimit }: { smsLimit: number }) {
         <label className="plat-label block">Your message
           <textarea className="plat-input mt-1 block min-h-28 w-full" value={text} onChange={(e) => setText(e.target.value)} placeholder="Write it once; see it on every channel." />
         </label>
-        <div className="mt-3 grid gap-4 sm:grid-cols-2"><Select label="Language" value={lang} onChange={setLang} options={[{ value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }, { value: "kikamba", label: "Kikamba" }]} /></div>
+        <div className="mt-3 grid gap-4 sm:grid-cols-2"><Select label="Language" value={lang} onChange={setLang} options={[{ value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }, { value: "kikamba", label: "Kiswahili" }]} /></div>
       </Card>
       <Stats>
         <Stat label="Characters" value={n0(chars)} />

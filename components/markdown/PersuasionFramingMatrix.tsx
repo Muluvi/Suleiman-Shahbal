@@ -24,12 +24,12 @@ const PERSUASION_THEMES: PersuasionTheme[] = [
       {
         name: "Loss Aversion",
         description: "Losses are felt 2x more intensely than equivalent gains.",
-        scriptFraming: `“Approximately ${fmt("water.surface")} people in Kitui still depend on surface water for drinking. Every dry season costs our families more than permanent boreholes would.”`
+        scriptFraming: `“Approximately ${fmt("water.surface")} people in Mombasa still depend on surface water for drinking. Every dry season costs our families more than permanent boreholes would.”`
       },
       {
         name: "Social Proof",
         description: "People take cues from the verified actions of their peers.",
-        scriptFraming: "“Families across Kitui East and Mwingi North are signing the sand dam resolution. Add your household.”"
+        scriptFraming: "“Families across Likoni and Kisauni are signing the sand dam resolution. Add your household.”"
       },
       {
         name: "Verification Bias",
@@ -46,7 +46,7 @@ const PERSUASION_THEMES: PersuasionTheme[] = [
       {
         name: "Anchoring Effect",
         description: "The initial figure establishes the psychological baseline.",
-        scriptFraming: "“Kitui County will receive KSh 13.79 billion this financial year. Do you know where it goes? Dr. Mulu will publish every single shilling.”"
+        scriptFraming: "“Mombasa County will receive KSh 13.79 billion this financial year. Do you know where it goes? Mr Shahbal will publish every single shilling.”"
       },
       {
         name: "Loss Aversion",
@@ -68,7 +68,7 @@ const PERSUASION_THEMES: PersuasionTheme[] = [
       {
         name: "Commitment Device",
         description: "Small public commitments drastically increase voter turnout.",
-        scriptFraming: "“Pledge to register to vote today, and Dr. Mulu pledges a quarterly county jobs and procurement audit. Hold him to it.”"
+        scriptFraming: "“Pledge to register to vote today, and Mr Shahbal pledges a quarterly county jobs and procurement audit. Hold him to it.”"
       },
       {
         name: "Messenger Effect",
@@ -90,17 +90,17 @@ const PERSUASION_THEMES: PersuasionTheme[] = [
       {
         name: "Loss Aversion",
         description: "Contrast local poverty against national benchmarks as a policy choice.",
-        scriptFraming: "“55.2% of Kitui lived in poverty in 2021 (KNBS). That is a policy choice, not a fact of nature.”"
+        scriptFraming: "“55.2% of Mombasa lived in poverty in 2021 (KNBS). That is a policy choice, not a fact of nature.”"
       },
       {
         name: "Messenger Effect (Chama Leaders)",
         description: "Grassroots women chairladies validating indigenous economy.",
-        scriptFraming: "“A table-banking chairlady speaks on poultry income — a sector in over 90% of Kitui households that county budgets have completely ignored.”"
+        scriptFraming: "“A table-banking chairlady speaks on poultry income — a sector in over 90% of Mombasa households that county budgets have completely ignored.”"
       },
       {
         name: "Verification Bias",
         description: `Empirical proof of ${fmt("record.bursary.recipients")} bursary disbursements.`,
-        scriptFraming: `“KSh ${fmt("record.bursary.ksh", "m")} million directly disbursed to ${fmt("record.bursary.recipients")} students in Kitui Central. Scrutinize the published beneficiary register.”`
+        scriptFraming: `“KSh ${fmt("record.bursary.ksh", "m")} million directly disbursed to ${fmt("record.bursary.recipients")} students in Mvita. Scrutinize the published beneficiary register.”`
       }
     ]
   }

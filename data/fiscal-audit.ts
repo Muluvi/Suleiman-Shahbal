@@ -1,61 +1,52 @@
-// Phase 4b — county fiscal and audit record. Feeds §B.2 and the Phase 6d fiscal/audit
-// panel. The FY2025/26 Q1 absorption rate (18%, the Controller of Budget's) sits in data/disputed-figures.ts,
-// id "kitui-fy2025-26-q1-absorption" — and is not duplicated here as a single number.
+// Phase 4b — county fiscal and audit record. Feeds §3.7 and the fiscal/audit panel.
+// Every value is read from the figure registry; the Auditor-General's itemised queries are named
+// gaps until the report is retrieved, so they are listed with the document that closes them and
+// never summed.
 import type { SourcedFigure } from "./types";
-import { AUDITOR_GENERAL_FY2023_24, CONTROLLER_OF_BUDGET, FISCAL_STRATEGY_PAPER_FY2026_27 } from "./sources";
-import { val } from "../lib/data/read.ts";
+import { figure, val } from "../lib/data/read.ts";
 
-// §2.5's resource envelope, restated here as a typed figure so the Phase 6d chart can
-// plot it without a hardcoded number in the component file.
-export const RESOURCE_ENVELOPE_FY2026_27: SourcedFigure = {
-  label: "Total resource envelope, FY2026/27",
+const src = (id: string, tier: 1 | 2 | 3) => ({ name: figure(id).source ?? "", publicationDate: figure(id).asOf ?? "", tier });
+
+// §1.5's budget, restated as a typed figure so the chart can plot it without a hardcoded number.
+export const RESOURCE_ENVELOPE: SourcedFigure = {
+  label: "Approved supplementary budget, FY2025/26",
   value: val("budget.total"),
   unit: "KSh",
-  provenance: { source: FISCAL_STRATEGY_PAPER_FY2026_27, granularity: "county" },
+  provenance: { source: src("budget.total", 3), granularity: "county", note: "Read through secondary reporting of the Controller of Budget's review." },
 };
 
-export const AUDIT_QUERIES_FY2023_24: SourcedFigure[] = [
+/** The county's unpaid obligations, each from its own source and year: never added together. */
+export const FISCAL_PRESSURES: SourcedFigure[] = [
   {
-    label: "Unconfirmed cash balances",
-    value: val("audit.cash"),
+    label: "Pending bills, 30 June 2026",
+    value: val("budget.pending-bills.2026"),
     unit: "KSh",
-    provenance: { source: AUDITOR_GENERAL_FY2023_24, granularity: "county" },
+    provenance: { source: src("budget.pending-bills.2026", 3), granularity: "county", note: "Almost all owed by the executive." },
   },
   {
-    label: "Uncollected county rates and rents",
-    value: val("audit.uncollected"),
+    label: "Pending bills, as reported in 2024",
+    value: val("budget.pending-bills.2021"),
     unit: "KSh",
-    provenance: { source: AUDITOR_GENERAL_FY2023_24, granularity: "county" },
+    provenance: { source: src("budget.pending-bills.2021", 2), granularity: "county", note: "Third-highest of the 47 counties at the time." },
   },
   {
-    label: "IFMIS variance",
-    value: val("audit.ifmis"),
+    label: "Overdraft to pay June 2026 salaries",
+    value: val("budget.overdraft.2026-06"),
     unit: "KSh",
-    provenance: { source: AUDITOR_GENERAL_FY2023_24, granularity: "county" },
-  },
-  {
-    label: "Unexplained inter-account transfer variance",
-    value: val("audit.transfers"),
-    unit: "KSh",
-    provenance: { source: AUDITOR_GENERAL_FY2023_24, granularity: "county" },
+    provenance: { source: src("budget.overdraft.2026-06", 3), granularity: "county" },
   },
 ];
 
-export const PENDING_BILLS_FY2020_21: SourcedFigure = {
-  label: "County pending bills, FY2020/21",
-  value: val("budget.pending-bills.2021"),
-  unit: "KSh (approx.)",
-  provenance: {
-    source: CONTROLLER_OF_BUDGET,
-    granularity: "county",
-    note: "The research hand-off did not name the specific CBIRR edition this figure comes from — flagged in the Data Gaps Register alongside the current (post-FY2020/21) pending-bills figure, which was not supplied at all.",
-  },
-};
+/** Share of pending bills older than three years (Tier 2). */
+export const PENDING_BILLS_AGED_PCT = val("budget.pending-bills.aged");
 
-/**
- * Stalled health projects are flagged by the Auditor-General in the research hand-off, but no
- * count, facility list, or specific amount was supplied — rendered as a named gap rather than
- * invented. See the Data Gaps Register (Appendix C).
- */
+/** The Auditor-General's itemised queries: named gaps until the report is retrieved. */
+export const AUDIT_QUERY_GAPS: { label: string; closesWith: string }[] = [
+  ["audit.cash", "Unconfirmed cash balances"],
+  ["audit.uncollected", "Uncollected county rates and rents"],
+  ["audit.ifmis", "Payments outside IFMIS"],
+  ["audit.transfers", "Unsupported inter-account transfers"],
+].map(([id, label]) => ({ label, closesWith: figure(id).closesWith ?? "The Auditor-General's report" }));
+
 export const STALLED_HEALTH_PROJECTS_GAP =
-  "Stalled county health projects are flagged in Auditor-General reporting, but this research pass did not supply a count, facility list, or committed amount.";
+  "Stalled county health projects are flagged in Auditor-General reporting, but no count, facility list or committed amount is in hand.";

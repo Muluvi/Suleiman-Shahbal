@@ -55,9 +55,9 @@ export const viewport: Viewport = {
   ],
 };
 
-const TITLE = 'Kitui 2027 — The campaign’s data, analysis and plan';
+const TITLE = 'Mombasa 2027 — The campaign’s data, analysis and plan';
 const DESCRIPTION =
-  'Built by Firefly Management for Hon. Dr. Benson Makali Mulu, MP for Kitui Central and gubernatorial aspirant, Kitui County, and for his team. Open to view; the team signs in to edit.';
+  'Built by Firefly Management for Hon. Dr. Benson Suleiman Shahbal, MP for Mvita and gubernatorial aspirant, Mombasa County, and for his team. Open to view; the team signs in to edit.';
 
 /**
  * The share card, and why there is one.
@@ -78,7 +78,7 @@ const OG_IMAGE = {
   url: '/og/kitui-2027.png',
   width: 1200,
   height: 630,
-  alt: 'Kitui 2027 — The campaign’s data, analysis and plan. Built for Dr. Mulu and his team. Firefly Management, September 2026, revised November 2026. Open to view.',
+  alt: 'Mombasa 2027 — The campaign’s data, analysis and plan. Built for Mr Shahbal and his team. Firefly Management, September 2026, revised November 2026. Open to view.',
 };
 
 /**

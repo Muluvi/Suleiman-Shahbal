@@ -1,8 +1,8 @@
 ```lead
-Kitui has **{{register.2022}}** registered voters on the 2022 register, and Governor Malombe won in 2022 with **{{result.2022.gov.nassir}}** votes. The number to win is about **{{benchmark}}**, and no single region holds it.
+Mombasa has **{{register.2022}}** registered voters on the 2022 register, and Governor Nassir won in 2022 with **{{result.2022.gov.nassir}}** votes, on a turnout of about a third. The number to win is about **{{benchmark}}**, and no single zone holds it.
 ```
 
-Kitui has **{{register.2022}}** registered voters on the 2022 register, and Governor Malombe won in 2022 with **{{result.2022.gov.nassir}}** votes (Tier 1, IEBC). The number to win is about **{{benchmark}}** (target), and no single region holds it. This chapter sets out the electorate, how it has voted, where the votes are, and the arithmetic of winning.
+Mombasa has **{{register.2022}}** registered voters on the 2022 register, and Governor Nassir won in 2022 with **{{result.2022.gov.nassir}}** votes (Tier 2, IEBC declaration as reported). The number to win is about **{{benchmark}}** (target), and no single zone holds it. This chapter sets out the electorate, how it has voted, where the votes are, and the arithmetic of winning.
 
 ## 2.1 The electorate and polling stations
 
@@ -12,56 +12,53 @@ items:
   - value: "{{register.2022}}"
     label: "registered voters, 2022"
     tier: 1
-    body: "**{{register.2022}}** voters registered in wards, plus **{{register.2022.prisons}}** registered in prisons: **{{register.2022.with-prisons}}** in all (Tier 1, IEBC)."
-  - value: "40"
-    label: "wards across 8 constituencies"
+    body: "**{{register.2022}}** voters registered across the county's 30 wards (Tier 1, IEBC). The ward sum and the county total agree exactly."
+  - value: "30"
+    label: "wards across 6 constituencies"
     tier: 1
-    body: "40 county assembly wards in eight constituencies (Tier 1, IEBC)."
+    body: "30 county assembly wards in six constituencies (Tier 1, IEBC)."
   - value: "{{register.polling-stations}}"
     label: "polling stations"
     tier: 1
-    body: "{{register.polling-stations}} polling stations (Tier 1, IEBC 2022 polling station register)."
-  - value: "{{register.2026}}"
-    label: "registered, July 2026"
-    tier: 3
-    body: "**{{register.2026}}** registered voters in July 2026 (Tier 3, reported by Venas News; unconfirmed until IEBC's own July 2026 figure is in hand). Of the **{{register.2026.growth}}** added since 2022 (Tier 3, unconfirmed), **{{register.2026.ecvr-drive}}** registered in ECVR Phase 1 (Tier 1, IEBC), the 30-day drive that closed on 28 April 2026, and **{{register.2026.continuous}}** through continuous registration outside it (modelled: the growth less the drive). A second ECVR phase ran from 25 June to 25 July 2026 (IEBC gazette notice, 24 June 2026); whether the July figure includes it is not stated, so the remainder may carry some of it. The 2026 register is not yet published by ward."
+    body: "{{register.polling-stations}} polling stations at {{register.registration-centres}} registration centres (Tier 1, IEBC 2022 polling station register)."
   - value: "{{turnout.2022}}%"
-    label: "turnout, 2022"
-    tier: 1
-    body: "**{{turnout.2022}}%** certified: {{result.2022.gov.valid}} valid votes for governor, of {{register.2022}} registered (Tier 1, IEBC Form 37C). Chapter 2 carries this rate forward to 2027 as a stated assumption."
+    label: "turnout, 2022 governor election"
+    tier: 2
+    body: "**{{turnout.2022}}%**: {{result.2022.gov.valid}} valid votes for governor, of {{register.2022}} registered (Tier 2, calculated from the declared result; the returning officer gave 34%). Chapter 2 carries this rate forward to 2027 as a stated, and cautious, assumption."
 ```
 
 ```figure
 id: fig-2-1-register
 ```
 
-**Which turnout.** Two turnout figures are in circulation, on different bases, and this plan says which it uses. **{{turnout.2022}}%** is governor valid votes ({{result.2022.gov.valid}}) divided by the register (Tier 1, IEBC Form 37C). The presidential turnout in Kitui was about **{{result.2022.pres.turnout}}%**, and it includes {{result.2022.pres.rejected}} rejected ballots (Tier 2, Equal Politics aggregation of IEBC results). Every calculation in this plan uses {{turnout.2022}}%.
+**No 2026 figure yet.** The IEBC has run two enhanced registration drives in 2026, but the Mombasa row of the county annex is not in hand. Until it is, the 2022 register is the base for every calculation, and every ballot figure built on it is a floor: the register has only grown.
 
-The full 40-ward register, by constituency, is in Annex B.
+**Why turnout was so low.** Mombasa's governor election did not happen on 9 August 2022. The IEBC suspended it the day before over a ballot-paper mix-up, rescheduled it, and held it on 29 August, three weeks after the presidential result was known (Tier 2, KNA and The Standard). Turnout fell to **{{turnout.2022}}%**. In 2017, on the general-election day, Joho alone received {{result.2017.gov.joho}} votes (Tier 1). The 2027 governor's race will be held on the same day as the presidential race, so 2022's turnout is a floor, not a forecast.
+
+The full 30-ward register, by constituency, is in Annex B.
 
 ## 2.2 Results from 2013 to 2022
 
 ```lead
-Julius Malombe won 2022 with **{{result.2022.gov.nassir}} votes** on a certified turnout of **{{turnout.2022}}%** (Tier 1, IEBC Form 37C); Charity Ngilu won 2017 with **{{result.2017.gov.joho}} votes** (Tier 1).
+Abdulswamad Nassir won 2022 with **{{result.2022.gov.nassir}} votes** against Hassan Omar's **{{result.2022.gov.omar}}**. Mr Shahbal received **{{result.2013.gov.shahbal}}** in 2013 and **{{result.2017.gov.shahbal}}** in 2017, both times second to Hassan Joho.
 ```
 
-*   **Governor, 2013:** a **named data gap** (Tier 1 gap). No certified result is in hand, and the plan does not use recollection in its place. The record that closes it is the IEBC's 2013 declaration and its Kenya Gazette notice.
-*   **Governor, 2017:** Charity Ngilu (NARC) won with **{{result.2017.gov.joho}} votes** (Tier 1), in an election the Court of Appeal confirmed (*Malombe v Ngilu* [2018] KECA 460) (Tier 1). David Musila was the certified runner-up with **{{result.2017.gov.shahbal}} votes** (Tier 1), and the incumbent, Julius Malombe, came third with **{{result.2017.gov.omar}} votes** (Tier 1).
-*   **Governor, 2022:** Julius Malombe (Wiper Democratic Movement, renamed the Wiper Patriotic Front in 2025) won with **{{result.2022.gov.nassir}} votes** on a certified turnout of **{{turnout.2022}}%**, {{result.2022.gov.valid}} valid votes of {{register.2022}} registered (Tier 1, IEBC Form 37C). David Musila (Jubilee) was runner-up with **{{result.2022.gov.omar}} votes** (Tier 1); The Star's early total of {{result.2022.gov.omar.media}} is a media variant, and the certified share ({{result.2022.gov.omar.share}}%, calculated) matches {{result.2022.gov.omar}}. Jonathan Mueke (UDA) came third with **{{result.2022.gov.awiti}} votes** (Tier 2).
-*   **President, 2022 (Kitui):** Raila Odinga won **{{result.2022.pres.odinga}}** votes (**{{result.2022.pres.odinga.share}}%**) and William Ruto **{{result.2022.pres.ruto}}** (**{{result.2022.pres.ruto.share}}%**); George Wajackoyah won {{result.2022.pres.wajackoyah}} and David Mwaure {{result.2022.pres.mwaure}}, with {{result.2022.pres.rejected}} ballots rejected (Tier 2, Equal Politics aggregation of IEBC results). The Tier 1 record is IEBC Forms 34B and 34C, not yet in hand.
-*   **Kitui Central MP, 2022:** Dr. Makali Mulu was re-elected on the Wiper ticket with **{{result.2013.gov.shahbal}} votes** (Tier 1, IEBC declaration as gazetted); Boniface Musambi was second with {{result.2013.gov.joho}}. Early media totals differ from the gazetted figure and are not used. The figure reached this plan through a press reproduction of the declaration; the Kenya Gazette notice itself is the record to hold.
-*   **Senator and Woman Representative, 2022:** Senator Enoch Wambua (Wiper) won with **{{result.2022.senate.faki}} votes** (Tier 2), and Woman Representative Irene Kasalu (Wiper) with **{{result.2022.womanrep.zamzam}} votes** (Tier 2). Both totals are media reports. The certified declarations (IEBC Form 38C for the Senate, Form 39C for the Woman Representative) are the Tier 1 record and are not yet in hand; until they are, both figures stay Tier 2.
-*   **Ward and polling-station results:** the constituency and polling-station forms for the 2017 and 2022 governor races (IEBC Forms 37B and 37A) are public records, not yet in hand. Section 6.2 needs them to test where each candidate's vote came from, ward by ward.
+*   **Governor, 2013:** Hassan Joho (ODM) won with **{{result.2013.gov.joho}} votes**; Suleiman Shahbal (Wiper) was runner-up with **{{result.2013.gov.shahbal}} votes** (Tier 1, as recited in *Shahbal v IEBC* [2013] KEHC 2189). The court-ordered scrutiny moved the totals by a few dozen votes and the petition was dismissed. The gap, {{result.2013.gov.gap}} votes, is the closest any challenger has come to winning the seat.
+*   **Governor, 2017:** Hassan Joho (ODM) was re-elected with **{{result.2017.gov.joho}} votes**; Suleiman Shahbal (Jubilee) was second with **{{result.2017.gov.shahbal}}** and Hassan Omar (Wiper) third with **{{result.2017.gov.omar}}** (Tier 1, as recited in *Hassan Omar Hassan v IEBC* [2018] KEHC 8291). The election court upheld the result.
+*   **Governor, 2022:** Abdulswamad Nassir (ODM) won with **{{result.2022.gov.nassir}} votes** of {{result.2022.gov.valid}} valid votes; Hassan Omar (UDA) was runner-up with **{{result.2022.gov.omar}}** (Tier 2). A second published total of {{result.2022.gov.omar.media}} is a media variant; Form 37C settles it. The other five candidates received under 1,000 each, led by Hezron Awiti (VDP) with {{result.2022.gov.awiti}}. Mr Shahbal sought the ODM ticket and stepped down in Nassir's favour.
+*   **President, 2022 (Mombasa):** Raila Odinga took **{{result.2022.pres.odinga.share}}%** and William Ruto **{{result.2022.pres.ruto.share}}%**; George Wajackoyah {{result.2022.pres.wajackoyah.share}}% and David Mwaure {{result.2022.pres.mwaure.share}}% (Tier 1, IEBC Form 34C county summary). Vote totals are to be read from the same form.
+*   **Senator, 2022:** Mohamed Faki (ODM) won with **{{result.2022.senate.faki}} votes** (Tier 2, IEBC declaration as gazetted, via Mzalendo). The Woman Representative total is a named data gap.
+*   **Ward and polling-station results:** the constituency and polling-station forms for the 2013, 2017 and 2022 governor races (IEBC Forms 37B and 37A) are public records, not yet in hand. Section 6.2 needs them to test where his own vote came from, ward by ward.
 
 ```figure
 id: fig-2-2-results
 ```
 
-**What it means for the campaign.** Kitui voted for the opposition presidential ticket by more than two to one in 2022, and for Wiper candidates in every countywide race.
+**What it means for the campaign.** Mombasa has elected the ODM candidate for governor three times, and voted for the ODM presidential ticket in 2022 by {{result.2022.pres.odinga.share}}% to {{result.2022.pres.ruto.share}}%. But the winning tally fell from {{result.2017.gov.joho}} in 2017 to {{result.2022.gov.nassir}} in 2022, and in 2022 the runner-up came within {{result.2022.gov.margin}} votes. The ODM vote is large, and it is no longer sure to turn out.
 
 ## 2.3 The twelve largest wards
 
-The register is concentrated. Spread evenly, the 40 wards would hold {{register.2022.ward-mean}} voters each (calculated); in fact voters cluster in urban corridors, farming belts and sub-county headquarters.
+The register is concentrated. Spread evenly, the 30 wards would hold {{register.2022.ward-mean}} voters each (calculated); in fact voters cluster in the dense mainland estates of Likoni, Jomvu and Kisauni.
 
 ```figure
 id: fig-3-2-register-map
@@ -75,111 +72,123 @@ items:
   - value: "{{pareto.top12.share}}%"
     label: "of the register in the 12 largest wards"
     tier: 1
-    body: "**Twelve wards, 30% of the total, hold {{pareto.top12}} registered voters** ({{pareto.top12.share}}% of the county, calculated from IEBC's 2022 register). That is as many registered voters as the 2022 winning tally, but registration is not turnout: at the {{turnout.constant}}% turnout rate they cast about **{{path.c.ballots}} ballots** (calculated)."
+    body: "**Twelve wards, 40% of the total, hold {{pareto.top12}} registered voters** ({{pareto.top12.share}}% of the county, calculated from IEBC's 2022 register). At the {{turnout.constant}}% turnout rate they cast about **{{path.c.ballots}} ballots** (calculated)."
   - value: "{{pareto.top20.share}}%"
     label: "in the largest 20"
     tier: 1
-    body: "**The largest 20 wards**, half the total, hold **{{pareto.top20}} registered voters** (**{{pareto.top20.share}}%** of the county, calculated)."
+    body: "**The largest 20 wards**, two-thirds of the total, hold **{{pareto.top20}} registered voters** (**{{pareto.top20.share}}%** of the county, calculated)."
   - value: "{{pareto.bottom10.share}}%"
     label: "in the smallest 10"
     tier: 1
-    body: "**The ten smallest wards** (from Mui down to Tharaka), a quarter of the total, hold **{{pareto.bottom10}} registered voters** (**{{pareto.bottom10.share}}%** of the register, calculated) across large areas that are slow and costly to cover on the ground."
+    body: "**The ten smallest wards** (from Mwakirunge, the smallest, upward), a third of the total, hold **{{pareto.bottom10}} registered voters** (**{{pareto.bottom10.share}}%** of the register, calculated)."
 ```
 
 ```lead
-This annex holds the 40-ward register: background the argument rests on rather than part of the argument.
+This annex holds the 30-ward register: background the argument rests on rather than part of the argument.
 ```
 
-This annex holds the 40-ward register: background the argument rests on rather than part of the argument. The audit record is now in Section 3.7, drought and food security in Section 3.2, and the Mui Basin in Section 3.8.
+This annex holds the 30-ward register: background the argument rests on rather than part of the argument. The county's finances are in Section 3.7, water in Section 3.2, and the port economy and the SEZ in Section 3.8.
 
 The register of every ward, with its voters and polling stations, is at the end of Evidence and sources.
 
 ## 2.4 The constituencies that decide it
 
 ```lead
-Mwingi North, Mwingi West and Mwingi Central together command {{bloc.north}} registered voters (Tier 1), roughly {{path.a.ballots}} ballots at the certified turnout. Mwingi is therefore **necessary and not sufficient**: no path to {{benchmark}} runs around it, and none ends there.
+Kisauni, Nyali and Changamwe were each decided by fewer than 2,000 votes in 2022. Together they hold {{pool}} registered voters, {{pool.share}}% of the county: **necessary and not sufficient**. No path to {{benchmark}} runs around them, and none ends there.
 ```
 
-A constituency's weight comes from its voters, the density of its wards, and its role in past party nominations:
+A constituency's weight comes from its voters, the density of its wards, and how close it was last time:
 
 ```figure
 id: constituency-power
 ```
 
-#### The Mwingi bloc: necessary, not sufficient
+```visual
+kind: bars
+title: "The 2022 governor's race by constituency: Nassir's lead over Omar, in votes"
+source: "The Standard and KNA, 30 August 2022 (Tier 2); Likoni calculated"
+items:
+  - label: "Nyali: {{result.2022.gov.nyali.nassir}} to {{result.2022.gov.nyali.omar}}"
+    value: "{{result.2022.gov.nyali.margin}}"
+    tier: 2
+  - label: "Kisauni: {{result.2022.gov.kisauni.nassir}} to {{result.2022.gov.kisauni.omar}}"
+    value: "{{result.2022.gov.kisauni.margin}}"
+    tier: 2
+  - label: "Changamwe: {{result.2022.gov.changamwe.nassir}} to {{result.2022.gov.changamwe.omar}}"
+    value: "{{result.2022.gov.changamwe.margin}}"
+    tier: 2
+  - label: "Jomvu: {{result.2022.gov.jomvu.nassir}} to {{result.2022.gov.jomvu.omar}}"
+    value: "{{result.2022.gov.jomvu.margin}}"
+    tier: 2
+  - label: "Mvita: {{result.2022.gov.mvita.nassir}} to {{result.2022.gov.mvita.omar}}"
+    value: "{{result.2022.gov.mvita.margin}}"
+    tier: 2
+  - label: "Likoni (calculated): {{result.2022.gov.likoni.nassir}} to {{result.2022.gov.likoni.omar}}"
+    value: "{{result.2022.gov.likoni.margin}}"
+    tier: 2
+```
 
-**Mwingi North, Mwingi West and Mwingi Central together command {{bloc.north}} registered voters (Tier 1).** That is more *registered voters* than the 2022 winning tally ({{result.2022.gov.nassir}} votes, Tier 1), but registration is not turnout. At the certified {{turnout.2022}}% turnout the bloc casts roughly **{{path.a.ballots}} ballots**, so even every vote there leaves the campaign about {{path.a.margin|abs}} short of {{benchmark}} (calculated). Mwingi is therefore **necessary and not sufficient**: no path to {{benchmark}} runs around it, and none ends there. So SMS, USSD and digital outreach go into Mwingi first, to establish Dr. Mulu as the leading alternative there.
+*Five constituency tallies as reported by The Standard and KNA (Tier 2); Likoni is the county total less the five, so it is calculated.*
+
+#### The close-contest belt: necessary, not sufficient
+
+**Kisauni, Nyali and Changamwe together command {{pool}} registered voters (Tier 1).** In 2022 the leader's margin was {{result.2022.gov.nyali.margin}} in Nyali, {{result.2022.gov.kisauni.margin}} in Kisauni and {{result.2022.gov.changamwe.margin}} in Changamwe (Tier 2). At the {{turnout.constant}}% turnout the belt casts roughly **{{path.d.ballots}} ballots**, so even every vote there leaves the campaign about {{path.d.margin|abs}} short of {{benchmark}} (calculated). So SMS, USSD and digital outreach go into the belt first, to establish Mr Shahbal as the leading alternative there.
 
 #### The four constituencies that decide it
 
-1.  **The Big Four ({{big4.share}}% of the county):** Kitui Central, Kitui South, Mwingi Central and Mwingi North hold **{{big4}} registered voters** across 22 wards (calculated from IEBC's 2022 register, Tier 1). The candidate who leads in these four, or holds level in them, is in reach of the governorship.
-2.  **Mwingi North ({{con.kisauni}} voters, Tier 1):** fourth by voters, but it holds the county's largest ward (**Kyuso, {{ward.timbwani}} voters**), the political home of the Wiper Patriotic Front leader, Hon. Kalonzo Musyoka (**Tseikuru, {{ward.mikindani}} voters**), and **Mumoni ({{ward.majengo}} voters)**, all Tier 1 (IEBC). It is both a large electorate and the party's heartland.
-3.  **Kitui South ({{con.likoni}} voters):** the second-largest constituency, anchored by the dense wards of Athi ({{ward.athi}}) and Ikanga/Kyatune ({{ward.ikanga-kyatune}}).
+1.  **The Big Four ({{big4.share}}% of the county):** Kisauni, Nyali, Mvita and Likoni hold **{{big4}} registered voters** across 22 wards (calculated from IEBC's 2022 register, Tier 1). The candidate who leads in these four, or holds level in them, is in reach of the governorship.
+2.  **Kisauni ({{con.kisauni}} voters, Tier 1):** the largest constituency, with seven wards from Mwakirunge ({{ward.mwakirunge}}), the smallest in the county, to Junda ({{ward.junda}}) and Shanzu ({{ward.shanzu}}). It was decided by {{result.2022.gov.kisauni.margin}} votes in 2022.
+3.  **Likoni ({{con.likoni}} voters, Tier 1):** holds the county's largest ward, **Timbwani ({{ward.timbwani}})**, and the constituency where Nassir's lead was largest ({{result.2022.gov.likoni.margin}}, calculated).
+4.  **Mvita ({{con.mvita}} voters, Tier 1):** the governor's former constituency and the county's commercial heart, holding **Majengo ({{ward.majengo}})**, the third-largest ward.
 
-## B.1 The 40-ward register
+## B.1 The 30-ward register
 
 Registered voters per county assembly ward, 2022 (IEBC, Tier 1). The 2026 register is not yet published by ward.
 
-#### 1. Mwingi North Constituency ({{con.kisauni}} total registered voters, Tier 1)
+#### 1. Changamwe Constituency ({{con.changamwe}} total registered voters, Tier 1)
 
-*   **Kyuso Ward:** {{ward.timbwani}} voters
-*   **Tseikuru Ward:** {{ward.mikindani}} voters
-*   **Mumoni Ward:** {{ward.majengo}} voters
-*   **Ngomeni Ward:** {{ward.ngomeni}} voters
-*   **Tharaka Ward:** {{ward.tharaka}} voters
+*   **Chaani Ward:** {{ward.chaani}} voters
+*   **Airport Ward:** {{ward.airport}} voters
+*   **Changamwe Ward:** {{ward.changamwe}} voters
+*   **Port Reitz Ward:** {{ward.port-reitz}} voters
+*   **Kipevu Ward:** {{ward.kipevu}} voters
 
-#### 2. Mwingi West Constituency ({{con.mwingi-west}} total registered voters, Tier 1)
+#### 2. Jomvu Constituency ({{con.jomvu}} total registered voters, Tier 1)
 
-*   **Nguutani Ward:** {{ward.nguutani}} voters
-*   **Kyome/Thaana Ward:** {{ward.kyome-thaana}} voters
-*   **Migwani Ward:** {{ward.shanzu}} voters
-*   **Kiomo/Kyethani Ward:** {{ward.kiomo-kyethani}} voters
+*   **Mikindani Ward:** {{ward.mikindani}} voters
+*   **Jomvu Kuu Ward:** {{ward.jomvu-kuu}} voters
+*   **Miritini Ward:** {{ward.miritini}} voters
 
-#### 3. Mwingi Central Constituency ({{con.mwingi-central}} total registered voters, Tier 1)
+#### 3. Kisauni Constituency ({{con.kisauni}} total registered voters, Tier 1)
 
-*   **Central Ward:** {{ward.central}} voters
-*   **Nguni Ward:** {{ward.nguni}} voters
-*   **Nuu Ward:** {{ward.nuu}} voters
-*   **Kivou Ward:** {{ward.kivou}} voters
-*   **Mui Ward:** {{ward.mui}} voters
-*   **Waita Ward:** {{ward.waita}} voters
+*   **Junda Ward:** {{ward.junda}} voters
+*   **Shanzu Ward:** {{ward.shanzu}} voters
+*   **Mjambere Ward:** {{ward.mjambere}} voters
+*   **Bamburi Ward:** {{ward.bamburi}} voters
+*   **Mtopanga Ward:** {{ward.mtopanga}} voters
+*   **Magogoni Ward:** {{ward.magogoni}} voters
+*   **Mwakirunge Ward:** {{ward.mwakirunge}} voters
 
-#### 4. Kitui West Constituency ({{con.kitui-west}} total registered voters, Tier 1)
+#### 4. Nyali Constituency ({{con.nyali}} total registered voters, Tier 1)
 
-*   **Mutonguni Ward:** {{ward.mutonguni}} voters
-*   **Kauwi Ward:** {{ward.kauwi}} voters
-*   **Matinyani Ward:** {{ward.matinyani}} voters
-*   **Kwa Mutonga/Kithumula Ward:** {{ward.kwa-mutonga-kithumula}} voters
+*   **Kongowea Ward:** {{ward.kongowea}} voters
+*   **Frere Town Ward:** {{ward.frere-town}} voters
+*   **Mkomani Ward:** {{ward.mkomani}} voters
+*   **Ziwa la Ng'ombe Ward:** {{ward.ziwa-la-ng-ombe}} voters
+*   **Kadzandani Ward:** {{ward.kadzandani}} voters
 
-#### 5. Kitui Rural Constituency ({{con.jomvu}} total registered voters, Tier 1)
+#### 5. Likoni Constituency ({{con.likoni}} total registered voters, Tier 1)
 
-*   **Kwa Vonza/Yatta Ward:** {{ward.kwa-vonza-yatta}} voters
-*   **Kisasi Ward:** {{ward.kisasi}} voters
-*   **Mbitini Ward:** {{ward.mbitini}} voters
-*   **Kanyangi Ward:** {{ward.kanyangi}} voters
+*   **Timbwani Ward:** {{ward.timbwani}} voters
+*   **Bofu Ward:** {{ward.bofu}} voters
+*   **Shika Adabu Ward:** {{ward.shika-adabu}} voters
+*   **Mtongwe Ward:** {{ward.mtongwe}} voters
+*   **Likoni Ward:** {{ward.likoni}} voters
 
-#### 6. Kitui Central Constituency ({{con.mvita}} total registered voters, Tier 1)
+#### 6. Mvita Constituency ({{con.mvita}} total registered voters, Tier 1)
 
-*   **Township Ward:** {{ward.tudor}} voters
-*   **Kyangwithya West Ward:** {{ward.kyangwithya-west}} voters
-*   **Kyangwithya East Ward:** {{ward.kyangwithya-east}} voters
-*   **Mulango Ward:** {{ward.mulango}} voters
-*   **Miambani Ward:** {{ward.bofu}} voters
-
-#### 7. Kitui East Constituency ({{con.kitui-east}} total registered voters, Tier 1)
-
-*   **Zombe/Mwitika Ward:** {{ward.zombe-mwitika}} voters
-*   **Chuluni Ward:** {{ward.chuluni}} voters
-*   **Nzambani Ward:** {{ward.nzambani}} voters
-*   **Voo/Kyamatu Ward:** {{ward.voo-kyamatu}} voters
-*   **Mutito/Kaliku Ward:** {{ward.mutito-kaliku}} voters
-*   **Endau/Malalani Ward:** {{ward.endau-malalani}} voters
-
-#### 8. Kitui South Constituency ({{con.likoni}} total registered voters, Tier 1)
-
-*   **Athi Ward:** {{ward.athi}} voters
-*   **Ikanga/Kyatune Ward:** {{ward.ikanga-kyatune}} voters
-*   **Mutomo Ward:** {{ward.mutomo}} voters
-*   **Ikutha Ward:** {{ward.ikutha}} voters
-*   **Mutha Ward:** {{ward.mwakirunge}} voters
-*   **Kanziko Ward:** {{ward.kanziko}} voters
+*   **Majengo Ward:** {{ward.majengo}} voters
+*   **Tononoka Ward:** {{ward.tononoka}} voters
+*   **Tudor Ward:** {{ward.tudor}} voters
+*   **Mji wa Kale/Makadara Ward:** {{ward.mji-wa-kale-makadara}} voters
+*   **Shimanzi/Ganjoni Ward:** {{ward.shimanzi-ganjoni}} voters

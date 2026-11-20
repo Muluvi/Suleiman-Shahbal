@@ -72,7 +72,7 @@ function Shell({ kicker, title, icon: Icon, children, tone = "accent", className
 /* ------------------------------------------------------------------ 9.1 the claim, and what proves it */
 
 const PROOF: { step: string; text: string; to: string; where: string }[] = [
-  { step: "The premise", text: "Kitui voters are ready for a leader who understands economics, respects public money, communicates with clarity and respect — and is willing to be measured.", to: "position-sec-9-1", where: "9.1" },
+  { step: "The premise", text: "Mombasa voters are ready for a leader who understands economics, respects public money, communicates with clarity and respect — and is willing to be measured.", to: "position-sec-9-1", where: "9.1" },
   { step: "What makes it his", text: "A specialist in verifying whether public expenditure delivers what it promised.", to: "record-sec-6-1", where: "6.1" },
   { step: "The gap it answers", text: "Unconfirmed balances, pending bills and low development absorption, in the county's own audit record.", to: "spend-sec-3-7", where: "3.7" },
   { step: "Made visible every day", text: "A public service-delivery tracker: a line on a CV becomes a daily, public demonstration of accountability.", to: "workstreams-sec-15-1-1", where: "15.1.1" },
@@ -80,7 +80,7 @@ const PROOF: { step: string; text: string; to: string; where: string }[] = [
 
 export function ProofStack() {
   return (
-    <Shell kicker="The claim, and what it rests on" title="Dr. Makali Mulu is the Economist Governor Kitui needs" icon={Layers}>
+    <Shell kicker="The claim, and what it rests on" title="Suleiman Shahbal is the Builder Governor Mombasa needs" icon={Layers}>
       <ol className="sx-proof">
         {PROOF.map((p, i) => (
           <li key={p.step} style={{ "--i": i } as React.CSSProperties}>
@@ -96,7 +96,7 @@ export function ProofStack() {
         ))}
       </ol>
       <blockquote className="sx-proof__line">
-        &ldquo;Kitui has resources. What it has lacked is leadership that understands how to use them — and the discipline to prove it did.&rdquo;
+        &ldquo;Mombasa has resources. What it has lacked is leadership that understands how to use them — and the discipline to prove it did.&rdquo;
         <cite>The governing line</cite>
       </blockquote>
     </Shell>
@@ -115,7 +115,7 @@ export function Paradox() {
   const [tap, setTap] = useState<string | null>(null);
   return (
     <Shell kicker="The resource paradox" title="The money is there. The discipline to use it is the gap." icon={Gauge} tone="gold">
-      <p className="sx-vis__lead">Kitui has ample developmental resources; what it lacks is disciplined, accountable deployment.</p>
+      <p className="sx-vis__lead">Mombasa has ample developmental resources; what it lacks is disciplined, accountable deployment.</p>
       <div className="sx-envelope">
         <div className="sx-envelope__bar"><span>Annual envelope, FY2026/27</span><b>KSh {figText("budget.total", "bn")} bn</b></div>
         <p className="sx-envelope__tier">{tierOf("budget.total")} · County Fiscal Strategy Paper</p>
@@ -186,7 +186,7 @@ export function AskWindow() {
           <li style={{ "--i": 2 } as React.CSSProperties}><button type="button" onClick={() => jumpTo("timeline-sec-14-1")}><span><b>Everything after that is evidence</b> for the team to act on</span> <ArrowRight size={13} aria-hidden="true" /></button></li>
         </ol>
         <div className="sx-ask__cta">
-          <a className="sx-btn sx-btn--solid sx-pulse" href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Firefly, about the Kitui 2027 platform:")}`} target="_blank" rel="noreferrer"><MessageCircle size={15} aria-hidden="true" /> WhatsApp Firefly</a>
+          <a className="sx-btn sx-btn--solid sx-pulse" href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Firefly, about the Mombasa 2027 platform:")}`} target="_blank" rel="noreferrer"><MessageCircle size={15} aria-hidden="true" /> WhatsApp Firefly</a>
           <a className="sx-btn" href={`tel:+${WHATSAPP}`}><Phone size={15} aria-hidden="true" /> Call</a>
         </div>
       </div>
@@ -234,18 +234,18 @@ export function RoleLens() {
 /* ------------------------------------------------------------------ 12.4 which language goes where */
 
 const LANGS = [
-  { id: "Kikamba", share: 50, does: "WhatsApp, TikTok, Facebook grassroots, voice notes, radio, USSD — not bulk SMS" },
+  { id: "Kiswahili", share: 50, does: "WhatsApp, TikTok, Facebook grassroots, voice notes, radio, USSD — not bulk SMS" },
   { id: "Kiswahili", share: 30, does: "General social, national reach, SMS" },
   { id: "English", share: 20, does: "Policy documents, website, X, YouTube, national media" },
 ];
 const CHANNELS: { id: string; langs: string[]; rule?: string }[] = [
-  { id: "WhatsApp", langs: ["Kikamba"] },
-  { id: "Voice notes", langs: ["Kikamba"] },
-  { id: "Radio", langs: ["Kikamba"] },
-  { id: "USSD", langs: ["Kikamba"] },
-  { id: "TikTok", langs: ["Kikamba"] },
-  { id: "Facebook", langs: ["Kikamba", "Kiswahili"] },
-  { id: "Bulk SMS", langs: ["Kiswahili", "English"], rule: "Bulk political SMS cannot be sent in Kikamba (Section 15.3.3)." },
+  { id: "WhatsApp", langs: ["Kiswahili"] },
+  { id: "Voice notes", langs: ["Kiswahili"] },
+  { id: "Radio", langs: ["Kiswahili"] },
+  { id: "USSD", langs: ["Kiswahili"] },
+  { id: "TikTok", langs: ["Kiswahili"] },
+  { id: "Facebook", langs: ["Kiswahili", "Kiswahili"] },
+  { id: "Bulk SMS", langs: ["Kiswahili", "English"], rule: "Bulk political SMS cannot be sent in Kiswahili (Section 15.3.3)." },
   { id: "Website", langs: ["English"] },
   { id: "X", langs: ["English"] },
   { id: "YouTube", langs: ["English"] },
@@ -274,7 +274,7 @@ export function LanguagePicker() {
         })}
       </ul>
       {c.rule && <p className="sx-rule"><ShieldCheck size={14} aria-hidden="true" /> {c.rule}</p>}
-      <p className="sx-vis__foot">The percentages are the content-mix target for locally facing platforms. Every Kikamba line is signed off by a native speaker before it publishes.</p>
+      <p className="sx-vis__foot">The percentages are the content-mix target for locally facing platforms. Every Kiswahili line is signed off by a native speaker before it publishes.</p>
     </Shell>
   );
 }
@@ -417,7 +417,7 @@ const CHAPTER_LABEL: Record<string, string> = Object.fromEntries(SECTIONS.map((s
 const chapterOf = (home: string) => home.split("-sec-")[0];
 type Job = { id: string; label: string; icon: typeof Check; chapters?: string[]; group?: string; extra?: { label: string; to: string }[] };
 const JOBS: Job[] = [
-  { id: "analyse", label: "Analyse", icon: BarChart3, chapters: ["kitui", "needs", "news", "votes", "winning", "known", "spend", "annex-evidence"] },
+  { id: "analyse", label: "Analyse", icon: BarChart3, chapters: ["mombasa", "needs", "news", "votes", "winning", "known", "spend", "annex-evidence"] },
   { id: "decide", label: "Decide", icon: Compass, chapters: ["diagnosis", "goal", "message", "voters", "channels"] },
   { id: "direct", label: "Direct the team", icon: Users, group: "Direct the team" },
   { id: "run", label: "Run the channels", icon: RadioIcon, group: "Run the channels", chapters: ["week", "lawful", "annex-technology"] },
@@ -443,7 +443,7 @@ export function PlatformMap() {
         <svg viewBox="0 0 100 100" aria-hidden="true" className="sx-pmap__lines">
           {JOBS.map((x, i) => { const a = (i / JOBS.length) * Math.PI * 2 - Math.PI / 2; return <line key={x.id} x1="50" y1="50" x2={50 + R * Math.cos(a)} y2={50 + R * Math.sin(a)} data-on={x.id === job ? "true" : "false"} style={{ "--i": i } as React.CSSProperties} />; })}
         </svg>
-        <span className="sx-pmap__core">Kitui 2027</span>
+        <span className="sx-pmap__core">Mombasa 2027</span>
         {JOBS.map((x, i) => {
           const a = (i / JOBS.length) * Math.PI * 2 - Math.PI / 2;
           return (
@@ -487,7 +487,7 @@ export function ContactCard() {
       </div>
       <FireflyContact className="sx-contact__details" />
       <div className="sx-contact__row">
-        <a className="sx-btn sx-btn--solid" href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Firefly, about the Kitui 2027 platform:")}`} target="_blank" rel="noreferrer"><MessageCircle size={15} aria-hidden="true" /> WhatsApp</a>
+        <a className="sx-btn sx-btn--solid" href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Firefly, about the Mombasa 2027 platform:")}`} target="_blank" rel="noreferrer"><MessageCircle size={15} aria-hidden="true" /> WhatsApp</a>
         <a className="sx-btn" href={`tel:+${WHATSAPP}`}><Phone size={15} aria-hidden="true" /> Call</a>
         <a className="sx-btn" href={`mailto:${mirrors.contact.email}`}><Mail size={15} aria-hidden="true" /> Email</a>
         <button type="button" className="sx-btn" onClick={() => jumpTo("annex-terms-sec-g-1")}><BookOpen size={15} aria-hidden="true" /> Terms of use</button>

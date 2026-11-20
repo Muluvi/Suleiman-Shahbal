@@ -23,9 +23,9 @@ const STRATEGIC_PILLARS: StrategicPillar[] = [
     title: "Fiscal Accountability & Devolution",
     subtitle: "Public Finance Governance & Equitable Ward Share",
     icon: Building2,
-    corePremise: "Translates parliamentary leadership in national budget appropriations into a transparent manifesto for Kitui's 40 wards, showing line-by-line management of the KSh 13.79B county resource envelope.",
+    corePremise: "Translates parliamentary leadership in national budget appropriations into a transparent manifesto for Mombasa's 30 wards, showing line-by-line management of the KSh 13.79B county resource envelope.",
     tangibleProofPoint: "KSh 1.339B own-source revenue optimization model & published ward allocation formula.",
-    deliveryFormat: "Ward-by-ward budget allocation sheets, Kikamba vernacular explainers, and open expenditure tables.",
+    deliveryFormat: "Ward-by-ward budget allocation sheets, Kiswahili vernacular explainers, and open expenditure tables.",
     verificationAudit: "Pre-allocation public disclosure matched against post-expenditure Auditor General queries."
   },
   {
@@ -45,9 +45,9 @@ const STRATEGIC_PILLARS: StrategicPillar[] = [
     title: "Policy-to-People Translation",
     subtitle: "Linguistic & Cultural Vernacular Localization",
     icon: Languages,
-    corePremise: "Converts complex technical topics (climate adaptation, water pipeline financing, agricultural value chains) into culturally resonant Kikamba idioms, proverbs, and audio voice notes.",
-    tangibleProofPoint: "Kikamba audio briefs ('Kĩla kĩndũ kĩ na thayũ, ĩtina nĩ kũmenya') and 60-second animated explainers.",
-    deliveryFormat: "WhatsApp voice notes from Dr. Mulu, weekly radio barazas, and grassroots chama toolkits.",
+    corePremise: "Converts complex technical topics (climate adaptation, water pipeline financing, agricultural value chains) into culturally resonant Kiswahili idioms, proverbs, and audio voice notes.",
+    tangibleProofPoint: "Kiswahili audio briefs ('Kĩla kĩndũ kĩ na thayũ, ĩtina nĩ kũmenya') and 60-second animated explainers.",
+    deliveryFormat: "WhatsApp voice notes from Mr Shahbal, weekly radio barazas, and grassroots chama toolkits.",
     verificationAudit: "Certified by native-speaker linguist with zero identity-based wedge targeting."
   },
   {
@@ -56,7 +56,7 @@ const STRATEGIC_PILLARS: StrategicPillar[] = [
     title: "Verification & Follow-Through",
     subtitle: "The M&E Signature Differentiator",
     icon: CheckSquare,
-    corePremise: "The single pillar that sets Dr. Mulu apart: publishing what was promised, then systematically publishing whether it actually happened. An evaluator who measures outcomes.",
+    corePremise: "The single pillar that sets Mr Shahbal apart: publishing what was promised, then systematically publishing whether it actually happened. An evaluator who measures outcomes.",
     tangibleProofPoint: "Public Service-Delivery Tracker (Chapter 15) operational on USSD, SMS, WhatsApp, and Web.",
     deliveryFormat: "Quarterly evidence scorecards, live issue resolution registers, and transparent ad-spend ledger.",
     verificationAudit: "Independent verification through Evaluation Society of Kenya standards."
@@ -179,7 +179,7 @@ export function StrategicPillarsMatrix() {
       <div className="p-3 bg-paper/60 border-t border-line t-small text-muted flex items-center justify-between px-4 font-semibold">
         <span className="flex items-center gap-1">
           <ArrowRight size={12} className="text-accent" />
-          <span>Underlying Campaign Doctrine: &ldquo;Kitui has resources. What it has lacked is leadership that understands how to use them — and the discipline to prove it did.&rdquo;</span>
+          <span>Underlying Campaign Doctrine: &ldquo;Mombasa has resources. What it has lacked is leadership that understands how to use them — and the discipline to prove it did.&rdquo;</span>
         </span>
       </div>
     </div>

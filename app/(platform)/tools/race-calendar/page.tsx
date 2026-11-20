@@ -3,7 +3,7 @@ import { RaceCalendar } from "@/components/tools/public/RaceCalendar";
 import { ToolLimits } from "@/components/tools/public/ToolLimits";
 import { PUBLIC_SOURCES, RACE_CALENDAR } from "@/lib/public-data";
 
-export const metadata = { title: "Governor race calendar | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Governor race calendar | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default function Page() {
   return <>

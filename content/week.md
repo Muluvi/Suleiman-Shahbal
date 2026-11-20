@@ -52,13 +52,13 @@ id: fig-5-7-approval
 
 **Same week. Same events. Same team. Different structure.**
 
-The current pattern, as observed from the public page, is a daily record of where Dr. Mulu was, mostly in English, with no ward named outside Kitui Central, no commitment attached and no ask. Week 1 checks it against his actual week before it is put in front of him.
+The current pattern, as observed from the public page, is a daily record of where Mr Shahbal was and whom he met, with no ward named, no commitment attached and no ask (to be confirmed from his public pages in Week 1). Week 1 checks it against his actual week before it is put in front of him.
 
 ```figure
 id: fig-4-5-calendar
 ```
 
-**Two rules on top.** At least two of the seven originate in a ward inside the deficit pool. At least four are Kikamba-first. Both rules are set by the Week 1 audit rather than by preference, and both are checked in the Monday review.
+**Two rules on top.** At least two of the seven originate in a ward inside the deficit pool. At least five are Kiswahili-first. Both rules are set by the Week 1 audit rather than by preference, and both are checked in the Monday review.
 
 ```visual
 kind: contrast
@@ -86,7 +86,7 @@ The meeting rhythm and the escalation path are schedule material: what a reader 
 | **Daily (15 min)** | Stand-up | Strategy core | Priorities, escalations, live issues |
 | **Daily (async)** | Ground asset upload | Ground team → shared repository | Raw photo/video edited and published within hours |
 | **Weekly (60 min)** | Strategy sync | Strategy Director + Campaign Comms Director | Prior-week performance; next-week calendar approved; itinerary alignment |
-| **Weekly** | Creative review | Content Lead + Kikamba Producer | Language and cultural sign-off before scheduling |
+| **Weekly** | Creative review | Content Lead + Kiswahili Producer | Language and cultural sign-off before scheduling |
 | **Fortnightly** | Ward champion call | Volunteer Coordinator + ward champions | Ground sentiment; content distribution; leaderboard |
 | **Monthly** | Performance review | Strategy Director + Campaign leadership + `[campaign counsel, where voter-file work is live]` | Analytics report |
 | **Monthly** | Consented-list review | Strategy Director + Volunteer Coordinator | Consented-list growth against the phase target (Chapter 14); opt-out rate; ward coverage |

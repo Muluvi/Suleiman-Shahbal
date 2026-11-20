@@ -71,7 +71,7 @@ export function LockScreen() {
 
 /* ------------------------------------------------------------------------------- status */
 
-/** A Status: the slogan in English and Kikamba, on the campaign's colour. The bar is static. */
+/** A Status: the slogan in English and Kiswahili, on the campaign's colour. The bar is static. */
 export function WhatsAppStatusScreen() {
   return (
     <div className="absolute inset-0 flex flex-col overflow-hidden text-white" style={{ background: "linear-gradient(160deg,#00209f 0%,#0b1a30 100%)", fontSize: "16px" }}>
@@ -86,7 +86,7 @@ export function WhatsAppStatusScreen() {
           <ArrowLeft size={20} aria-hidden="true" />
           <Avatar size={34} />
           <span className="flex-1 min-w-0">
-            <span className="block font-semibold truncate" style={{ fontSize: "0.9375em" }}>Dr. Makali Mulu</span>
+            <span className="block font-semibold truncate" style={{ fontSize: "0.9375em" }}>Suleiman Shahbal</span>
             <span className="block opacity-80" style={{ fontSize: "0.75em" }}>{WHATSAPP_STATUS.posted}</span>
           </span>
           <MoreVertical size={20} aria-hidden="true" />

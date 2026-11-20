@@ -4,7 +4,7 @@ import { getSession, readStore } from "@/lib/platform/auth";
 import { PageHead } from "@/components/platform/PageHead";
 import { MemberAdmin } from "@/components/platform/MemberAdmin";
 
-export const metadata = { title: "Team accounts | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Team accounts | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default async function Admin() {
   // Sign-in is switched off: the site is open to view, and the team pages are not served.
@@ -15,7 +15,7 @@ export default async function Admin() {
   const members = (await readStore()!.members()).map(({ email, name, role, active, addedAt }) => ({ email, name, role, active, addedAt }));
   return (
     <>
-      <PageHead kicker="Firefly · platform owner" title="Team accounts" lead="Add the people on Dr. Mulu's team who edit the platform, and remove anyone who should no longer. A removed account loses edit access on its next request. Viewing never needs an account." />
+      <PageHead kicker="Firefly · platform owner" title="Team accounts" lead="Add the people on Mr Shahbal's team who edit the platform, and remove anyone who should no longer. A removed account loses edit access on its next request. Viewing never needs an account." />
       <MemberAdmin members={members} self={session.email} />
     </>
   );

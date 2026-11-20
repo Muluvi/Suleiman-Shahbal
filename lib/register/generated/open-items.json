@@ -1,8 +1,324 @@
 [
   {
     "kind": "data",
+    "gap": "County health outcome indicators (stunting, facility births, access to care) are to be read from the KDHS 2022 Mombasa factsheet; until…",
+    "closes": "KDHS 2022 Mombasa factsheet: stunting",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Section 3.3",
+      "Data layer: health.stunting"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "A county youth unemployment rate is a named data gap",
+    "closes": "KNBS Quarterly Labour Force Survey county tables, Mombasa",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Section 3.5",
+      "Data layer: unemployment.youth.county"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "No published audience share for Mombasa is in hand: Radio Rahma , Pwani FM , Baraka FM",
+    "closes": "KARF or GeoPoll audience report, Coast region: Radio Rahma share",
+    "holder": "Audience-research publishers",
+    "status": "Open",
+    "where": [
+      "Section 4.2",
+      "Data layer: radio.rahma"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "No published audience share for Mombasa is in hand: Radio Rahma , Pwani FM , Baraka FM",
+    "closes": "KARF or GeoPoll audience report, Coast region: Pwani FM share",
+    "holder": "Audience-research publishers",
+    "status": "Open",
+    "where": [
+      "Section 4.2",
+      "Data layer: radio.pwani"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "No published audience share for Mombasa is in hand: Radio Rahma , Pwani FM , Baraka FM",
+    "closes": "KARF or GeoPoll audience report, Coast region: Baraka FM share",
+    "holder": "Audience-research publishers",
+    "status": "Open",
+    "where": [
+      "Section 4.2",
+      "Data layer: radio.baraka"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated",
+    "closes": "His public Facebook page, follower count read on the Week 1 export",
+    "holder": "His team: the Week 1 export",
+    "status": "Open",
+    "where": [
+      "Section 6.4",
+      "Section 18.5",
+      "Data layer: channel.fb.followers"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated",
+    "closes": "His public Facebook page, post count read on the Week 1 export",
+    "holder": "His team: the Week 1 export",
+    "status": "Open",
+    "where": [
+      "Section 6.4",
+      "Section 18.5",
+      "Data layer: channel.fb.posts"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated",
+    "closes": "His public X profile, follower count read on the Week 1 export",
+    "holder": "His team: the Week 1 export",
+    "status": "Open",
+    "where": [
+      "Section 6.4",
+      "Data layer: channel.x.followers"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…",
+    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: the basis-for-qualification paragraphs",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Section 3.7",
+      "Data layer: audit.cash"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…",
+    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: revenue arrears",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Section 3.7",
+      "Data layer: audit.uncollected"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…",
+    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Section 3.7",
+      "Data layer: audit.ifmis"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",
+    "closes": "Mombasa County Government's own published delivery scorecard or annual progress report",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Section 3.7",
+      "Data layer: scorecard.claimed"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",
+    "closes": "Mombasa County Annual Development Plan and progress report: itemised projects with cost and ward",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Section 3.7",
+      "Data layer: scorecard.itemised"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "Women are 49.5% of Mombasa's residents (Tier 1, KNBS 2019 Census); their share of the register is a named data gap ()",
+    "closes": "IEBC 2022 register by sex, Mombasa",
+    "holder": "IEBC",
+    "status": "Open",
+    "where": [
+      "Section 11.2",
+      "Data layer: register.women.share"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "register.2026.ecvr-drive",
+    "closes": "IEBC ECVR county annex, Mombasa row (new registrations, 2026 drives)",
+    "holder": "IEBC",
+    "status": "Open",
+    "where": [
+      "Data layer: register.2026.ecvr-drive"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "register.2026.growth",
+    "closes": "IEBC 2026 register, Mombasa total, less the 2022 register",
+    "holder": "IEBC",
+    "status": "Open",
+    "where": [
+      "Data layer: register.2026.growth"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "register.2026.continuous",
+    "closes": "IEBC 2026 register, Mombasa total, less 2022 and the ECVR drive",
+    "holder": "IEBC",
+    "status": "Open",
+    "where": [
+      "Data layer: register.2026.continuous"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "result.2022.womanrep.zamzam",
+    "closes": "IEBC Form 38C or the gazette notice, Mombasa Woman Representative 2022",
+    "holder": "IEBC",
+    "status": "Open",
+    "where": [
+      "Data layer: result.2022.womanrep.zamzam"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "budget.absorption.q1",
+    "closes": "Controller of Budget, County Governments Budget Implementation Review Report (Mombasa chapter): Mombasa development absorption, latest quarter",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Data layer: budget.absorption.q1"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "audit.transfers",
+    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: unsupported transfers",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Data layer: audit.transfers"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "audit.pending.contested",
+    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: pending bills disputed by the auditor",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Data layer: audit.pending.contested"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "population.2025",
+    "closes": "KNBS county population projection, Mombasa, 2025",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: population.2025"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "population.2030",
+    "closes": "KNBS county population projection, Mombasa, 2030",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: population.2030"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "ict.phone.adult",
+    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership by sex",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: ict.phone.adult"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "ict.phone.adult.men",
+    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: men 18+ owning a phone",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: ict.phone.adult.men"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "ict.phone.adult.women",
+    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: women 18+ owning a phone",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: ict.phone.adult.women"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "reach.phone.adult",
+    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership, applied to the register",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: reach.phone.adult"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "health.typhoid.2025",
+    "closes": "Mombasa County Department of Health, disease surveillance, 2025",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Data layer: health.typhoid.2025"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "health.typhoid.2024",
+    "closes": "Mombasa County Department of Health, disease surveillance, 2024",
+    "holder": "County government or church offices",
+    "status": "Open",
+    "where": [
+      "Data layer: health.typhoid.2024"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "water.basic.kdhs",
+    "closes": "KDHS 2022 Mombasa factsheet: at least basic drinking water",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Data layer: water.basic.kdhs"
+    ]
+  },
+  {
+    "kind": "data",
     "gap": "literacy.county",
-    "closes": "KNBS county literacy table (2019 Census or KDHS 2022 county report); the draft's 56.3% and 87.4% have no confirmed source",
+    "closes": "KNBS county literacy table (2019 Census or KDHS 2022)",
     "holder": "KNBS",
     "status": "Open",
     "where": [
@@ -11,52 +327,122 @@
   },
   {
     "kind": "data",
-    "gap": "admin.villages",
-    "closes": "Kitui County Integrated Development Plan 2023–2027 (the count of villages, reported as 247)",
+    "gap": "scorecard.attributed.ksh",
+    "closes": "Mombasa County progress report: itemised spend by constituency",
     "holder": "County government or church offices",
     "status": "Open",
     "where": [
-      "Data layer: admin.villages"
+      "Data layer: scorecard.attributed.ksh"
     ]
   },
   {
     "kind": "data",
-    "gap": "cidp.sectors",
-    "closes": "Kitui County Integrated Development Plan 2023–2027 (KIPPRA repository), the priority-sector list",
-    "holder": "County government or church offices",
+    "gap": "radio.salaam",
+    "closes": "KARF or GeoPoll audience report, Coast region: Radio Salaam share",
+    "holder": "Audience-research publishers",
     "status": "Open",
     "where": [
-      "Data layer: cidp.sectors"
+      "Data layer: radio.salaam"
     ]
   },
   {
     "kind": "data",
-    "gap": "unemployment.youth.county",
-    "closes": "KNBS Quarterly Labour Force Survey county tables, or the 2019 Census Volume IV labour table",
-    "holder": "KNBS",
+    "gap": "radio.citizen",
+    "closes": "KARF or GeoPoll audience report, Coast region: Radio Citizen share",
+    "holder": "Audience-research publishers",
     "status": "Open",
     "where": [
-      "Data layer: unemployment.youth.county"
+      "Data layer: radio.citizen"
     ]
   },
   {
     "kind": "data",
-    "gap": "cpi.county",
-    "closes": "KNBS county consumer price index series",
-    "holder": "KNBS",
+    "gap": "radio.kaya",
+    "closes": "KARF or GeoPoll audience report, Coast region: Radio Kaya share",
+    "holder": "Audience-research publishers",
     "status": "Open",
     "where": [
-      "Data layer: cpi.county"
+      "Data layer: radio.kaya"
     ]
   },
   {
     "kind": "data",
-    "gap": "roads.county",
-    "closes": "Kitui County roads inventory (CIDP 2023–2027) and KeRRA/KURA classified-road data",
-    "holder": "County government or church offices",
+    "gap": "boda.riders",
+    "closes": "NTSA or county register of boda-boda and tuk-tuk operators, Mombasa",
+    "holder": "NTSA or the county transport department",
     "status": "Open",
     "where": [
-      "Data layer: roads.county"
+      "Data layer: boda.riders"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "kpis.nomination",
+    "closes": "The New Democrats' nomination rules, once certified",
+    "holder": "The New Democrats Patriotic Front secretariat",
+    "status": "Open",
+    "where": [
+      "Data layer: kpis.nomination"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "edu.none.women",
+    "closes": "KDHS 2022 Mombasa factsheet: women aged 6+ with no education",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Data layer: edu.none.women"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "edu.none.men",
+    "closes": "KDHS 2022 Mombasa factsheet: men aged 6+ with no education",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Data layer: edu.none.men"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "disability.men",
+    "closes": "KDHS 2022 Mombasa factsheet: men 15+ with a disability",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Data layer: disability.men"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "disability.women",
+    "closes": "KDHS 2022 Mombasa factsheet: women 15+ with a disability",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Data layer: disability.women"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "Projects by ward",
+    "closes": "To be named",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Figure fig-3-12-projects"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "Spend by constituency",
+    "closes": "To be named",
+    "holder": "To be named",
+    "status": "Open",
+    "where": [
+      "Figure fig-3-12-projects"
     ]
   }
 ]

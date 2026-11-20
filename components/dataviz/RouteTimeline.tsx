@@ -2,7 +2,7 @@
 
 import { useMemo, useSyncExternalStore } from "react";
 
-import { KituiIcon } from "../icons/kitui";
+import { MombasaIcon } from "../icons/mombasa";
 
 /**
  * The road to 2027 as a matatu route (visual upgrade, C5), with a tear-off calendar for the next
@@ -62,7 +62,7 @@ export function RouteTimeline({ stops }: { stops: RouteStop[] }) {
           const stop = (
             <li key={`${s.date}-${i}`} className="rt__stop" data-state={state} style={{ "--i": i } as React.CSSProperties}>
               <span className="rt__node" aria-hidden="true">
-                {state === "next" ? <KituiIcon name="matatu" size={20} className="rt__bus" /> : null}
+                {state === "next" ? <MombasaIcon name="matatu" size={20} className="rt__bus" /> : null}
               </span>
               <span className="rt__date">{dayMonth(s.date)} <span className="sr-only">{year(s.date)}</span></span>
               <span className="rt__event">

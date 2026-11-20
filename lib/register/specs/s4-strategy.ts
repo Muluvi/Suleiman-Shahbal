@@ -19,43 +19,41 @@ export const FIG_4_1: FigureSpec = {
   title: `One position, ${countWord(PILLARS.length)} pillars that argue it, and a record that holds it up`,
   question: "What is the position, and what holds it up?",
   takeaway: "Every message rests on something already on the public record; none rests on a promise alone.",
-  sources: [src("record.bursary.recipients"), { name: "Parliament of Kenya record; NG-CDF Board evaluation FY2014/15; Ministry of Finance designation", tier: "T1" }],
+  sources: [src("record.sez.ksh"), { name: "EALA record; Gulf African Bank; reporting on the Jomvu SEZ agreement", tier: "T2" }],
   chart: {
     type: "house",
-    roof: "Dr. Makali Mulu is the Economist Governor Kitui needs: an expert who shows his working and enforces accountability.",
+    roof: "Suleiman Shahbal is the Builder Governor Mombasa needs: a manager who delivers, fixes what is broken and moves the port city forward.",
     pillars: PILLARS.map((p) => ({ title: p.title, body: `${p.argued.replace("the county's budget", `the county's KSh ${fmt("budget.total", "bn")}bn`)} Carries: ${p.carries.join("; ")}.` })),
     foundation: [
-      "PhD in Economics, Kenyatta University",
-      "Budget and Appropriations Committee",
-      `KSh ${fmt("record.bursary.ksh", "m")}m in bursaries to ${fmt("record.bursary.recipients")} students`,
-      "Best-evaluated constituency, Eastern region, FY2014/15",
-      "M&E Champion, Ministry of Finance; Evaluation Society of Kenya",
-      "Thirteen years as MP for Kitui Central",
+      `Founded Gulf African Bank, ${fmt("record.gab.founded")}`,
+      `Jomvu SEZ, KSh ${fmt("record.sez.ksh", "bn")}bn, ${fmt("record.sez.acres")} acres, signed 2026`,
+      "Chair, EALA Communication, Trade and Investment Committee",
+      `${fmt("result.2013.gov.shahbal")} votes for governor in 2013`,
+      "Chairman, GulfCap Investment Group",
     ],
   },
   columns: [{ key: "level", label: "Level" }, { key: "text", label: "Content" }],
   rows: [
-    { cells: { level: "Roof: the position", text: "The Economist Governor Kitui needs" } },
+    { cells: { level: "Roof: the position", text: "The Builder Governor Mombasa needs" } },
     ...PILLARS.map((p) => ({ cells: { level: "Pillar", text: `${p.title} (carries: ${p.carries.join("; ")})` } })),
-    { cells: { level: "Foundation", text: "PhD in Economics (T1)" } },
-    { cells: { level: "Foundation", text: "Budget and Appropriations Committee (T1)" } },
-    { cells: { level: "Foundation", text: `Bursaries: ${fmt("record.bursary.recipients")} students, KSh ${fmt("record.bursary.ksh", "m")}m (T1)` } },
-    { cells: { level: "Foundation", text: "Best-evaluated constituency, Eastern region, FY2014/15 (T1)" } },
-    { cells: { level: "Foundation", text: "M&E Champion; Evaluation Society of Kenya (T1)" } },
+    { cells: { level: "Foundation", text: "Founded Gulf African Bank (T2)" } },
+    { cells: { level: "Foundation", text: `Jomvu SEZ, KSh ${fmt("record.sez.ksh", "bn")}bn (T2)` } },
+    { cells: { level: "Foundation", text: "Chair, EALA Communication, Trade and Investment Committee (T2)" } },
+    { cells: { level: "Foundation", text: `${fmt("result.2013.gov.shahbal")} votes in 2013 (T1)` } },
   ],
 };
 
 /* ------------------------------------------------------------------ fig-4-2-effort */
 
-const ZONE_ROWS = [["anchor", "Anchor (Central/West)"], ["mwingi", "Mwingi block"], ["arid", "Arid and resource belt"], ["rotating", "Rotating / testing"]] as const;
+const ZONE_ROWS = [["anchor", "The Island (Mvita)"], ["mwingi", "North mainland (Kisauni, Nyali)"], ["arid", "West mainland (Changamwe, Jomvu)"], ["rotating", "Likoni and rotating tests"]] as const;
 const PHASES = [["p-1", "Phase −1 (nomination)"], ["p12", "Phases 1–2"], ["p3", "Phase 3 (GOTV)"]] as const;
 
 export const FIG_4_2: FigureSpec = {
   id: "fig-4-2-effort",
   section: "3.3.1",
-  title: `In Phase −1, ${num("effort.p-1.mwingi") + num("effort.p-1.arid")}% of the effort goes to Mwingi and the arid belt, well above their share of residents`,
+  title: `In Phase −1, ${num("effort.p-1.mwingi") + num("effort.p-1.arid")}% of the effort goes to the mainland belt, above its share of residents`,
   question: "Where does the effort go in Phase −1?",
-  takeaway: `The weighting over-indexes on the pool on the working hypothesis that his gap there is one of recognition; ${fmt("effort.digital.pool")}% of digital reach effort is geofenced to it.`,
+  takeaway: `The weighting over-indexes on the close-contest belt on the working hypothesis that his gap there is turnout and machinery; ${fmt("effort.digital.pool")}% of digital reach effort is geofenced to it.`,
   sources: [T_FIREFLY, src("zone.mwingi.share")],
   chart: {
     type: "composite",
@@ -87,22 +85,22 @@ const typeName = (code: string) => {
 };
 /** Segment sizes and what is known about the unsized ones: data/segments.ts. Language, channel and content type stay here. */
 const SEGMENT_PLAN: Record<string, { pillar: string; lang: string; channel: string }> = {
-  agrarian: { pillar: "P2", lang: "Kikamba on voice; Kiswahili on SMS", channel: "WhatsApp voice note, SMS" },
-  pastoralist: { pillar: "P1", lang: "Kikamba on radio and USSD; Kiswahili on SMS", channel: "SMS, USSD, radio" },
-  youth: { pillar: "P3", lang: "Kiswahili and Sheng, Kikamba hooks", channel: "TikTok, Facebook" },
-  msme: { pillar: "P3", lang: "Kiswahili", channel: "Facebook, WhatsApp" },
-  professionals: { pillar: "P1", lang: "English, Kiswahili", channel: "Facebook, X, YouTube" },
-  diaspora: { pillar: "P3", lang: "English, Kikamba", channel: "Facebook, YouTube, WhatsApp" },
+  agrarian: { pillar: "P2", lang: "Kiswahili", channel: "Drive-time radio, workplace visits" },
+  pastoralist: { pillar: "P1", lang: "Kiswahili", channel: "WhatsApp voice note, chamas, SMS" },
+  youth: { pillar: "P3", lang: "Kiswahili and Sheng", channel: "TikTok, Instagram, the stages" },
+  msme: { pillar: "P1", lang: "Kiswahili; English for associations", channel: "Market walks, WhatsApp" },
+  professionals: { pillar: "P3", lang: "English, Kiswahili", channel: "X, LinkedIn, talk radio" },
+  diaspora: { pillar: "P4", lang: "Kiswahili", channel: "Ward captains, SMS and USSD" },
 };
 const SEGMENTS = SEGMENT_DATA.map((g) => ({ ...g, ...SEGMENT_PLAN[g.id], context: g.notSized?.context, closes: g.notSized?.closesWith }));
 
 export const FIG_4_3: FigureSpec = {
   id: "fig-4-3-segments",
   section: "3.4.3",
-  title: "Six segments, three sized in voters from the census and three with context but no published voter count",
+  title: "Six segments, two sized in voters and four with context but no published voter count",
   question: "Who are we trying to move, and how much do they matter?",
   takeaway: "Sizes overlap and are not additive; where no source publishes a voter count, none is given.",
-  sources: [src("census.rural.share"), { name: "Segment sizes: census shares applied to the 2022 register, derived", tier: "T1", state: "modelled" }],
+  sources: [src("census.adults.18-34.share"), src("abstained.2022"), { name: "Segment sizes: census shares and 2022 results applied to the 2022 register, derived", tier: "T1", state: "modelled" }],
   chart: {
     type: "matrix",
     header: ["Segment", "Size (registered voters)", "Content type", "Language", "Lead channel"],
@@ -117,23 +115,23 @@ export const FIG_4_3: FigureSpec = {
 
 export const FIG_4_4: FigureSpec = {
   id: "fig-4-4-message-region",
-  section: "3.5",
-  title: "Each region hears a different case for the same candidate, and Kikamba travels by voice, never by bulk SMS",
+  section: "10.4",
+  title: "Each zone hears a different case for the same candidate, all of it in Kiswahili first",
   question: "What do we say where, and in which language?",
-  takeaway: "The anchor hears his record, Mwingi hears a published allocation method, the arid belt hears infrastructure; the language follows the channel.",
+  takeaway: "The Island hears the bills and the bank, the north mainland hears water and jobs, the west mainland hears the port and the SEZ; Kiswahili leads everywhere.",
   sources: [{ name: "This plan, Sections 1.2 and 10.2; political-messaging rules", tier: null, state: "target" }],
   chart: {
     type: "composite",
     parts: [
       {
-        heading: "Region by message",
+        heading: "Zone by message",
         chart: {
           type: "matrix",
-          header: ["Region", "Lead message", "Why it fits", "Language"],
+          header: ["Zone", "Lead message", "Why it fits", "Language"],
           rows: [
-            { head: "Urban and central anchor", cells: ["Track record, professional competence, national reputation", "The only zone where he starts with a structural advantage", "English and Kiswahili; Kikamba by voice"] },
-            { head: "Northern block (Mwingi)", cells: ["Devolved funds distributed equitably per ward, with the allocation method published", "Where a Kitui Central MP is least known", "Kikamba on voice and radio; Kiswahili on SMS"] },
-            { head: "Arid and resource belt", cells: ["Water, roads, and mineral wealth managed for local benefit", "Where the connectivity gap bites hardest", "Kikamba on radio and USSD; Kiswahili on SMS"] },
+            { head: "The Island (Mvita)", cells: ["A county that pays its bills; the builder's record", "Traders, the CBD and the public service, owed by the county", "Kiswahili and English"] },
+            { head: "North mainland (Kisauni, Nyali)", cells: ["Water at the tap, jobs for the young", "The largest block, decided by about a thousand votes in 2022", "Kiswahili and Sheng"] },
+            { head: "West mainland (Changamwe, Jomvu)", cells: ["The port's value kept in Mombasa: the Jomvu SEZ", "The SEZ site and the port's workforce", "Kiswahili"] },
           ],
         },
       },
@@ -143,21 +141,21 @@ export const FIG_4_4: FigureSpec = {
           type: "cards",
           columns: 2,
           cards: [
-            { kicker: "Rule 1", title: "Bulk political SMS in English or Kiswahili only", body: "Kikamba travels by voice note and radio." },
-            { kicker: "Rule 2", title: "No machine translation", body: "Not for Kikamba, not for Kiswahili: native-speaker review signs off every public line." },
-            { kicker: "Rule 3", title: "Pan-Kamba vocabulary", body: "Natural to both Mwingi and Kitui South listeners." },
-            { kicker: "Rule 4", title: "Bilingual print", body: "Kikamba on the primary spread, Kiswahili or English on the reverse." },
+            { kicker: "Rule 1", title: "Kiswahili first", body: "Mombasa Kiswahili leads every public channel; English carries the national press and professionals." },
+            { kicker: "Rule 2", title: "No machine translation", body: "Native-speaker review signs off every public line." },
+            { kicker: "Rule 3", title: "Sheng only where it is natural", body: "Short video and the stages, written by young people from the estates." },
+            { kicker: "Rule 4", title: "Faith stations carry programming, not adverts", body: "Water, health and jobs programming on Rahma, Salaam and Baraka FM; no paid political placement." },
           ],
         },
       },
     ],
   },
-  columns: [{ key: "region", label: "Region" }, { key: "message", label: "Lead message" }, { key: "language", label: "Language" }],
+  columns: [{ key: "region", label: "Zone" }, { key: "message", label: "Lead message" }, { key: "language", label: "Language" }],
   rows: [
-    { cells: { region: "Urban and central anchor", message: "Track record and competence", language: "English, Kiswahili; Kikamba by voice" } },
-    { cells: { region: "Northern block (Mwingi)", message: "Equitable per-ward distribution, method published", language: "Kikamba by voice and radio; Kiswahili on SMS" } },
-    { cells: { region: "Arid and resource belt", message: "Water, roads, mineral wealth for local benefit", language: "Kikamba by radio and USSD; Kiswahili on SMS" } },
-    { cells: { region: "Rule", message: "Bulk political SMS in English or Kiswahili only", language: "—" } },
+    { cells: { region: "The Island (Mvita)", message: "A county that pays its bills", language: "Kiswahili, English" } },
+    { cells: { region: "North mainland (Kisauni, Nyali)", message: "Water at the tap, jobs for the young", language: "Kiswahili, Sheng" } },
+    { cells: { region: "West mainland (Changamwe, Jomvu)", message: "The port's value kept in Mombasa", language: "Kiswahili" } },
+    { cells: { region: "Rule", message: "Faith stations carry programming, never paid placement", language: "—" } },
   ],
 };
 
@@ -166,13 +164,13 @@ export const FIG_4_4: FigureSpec = {
 /** The calendar's slots are the four content types (data/message-architecture.ts), not the pillars. */
 const TYPES = CONTENT_TYPES.map((t) => t.short);
 const WEEK: { day: string; pillar: 1 | 2 | 3 | 4 | null; after: string; now: string }[] = [
-  { day: "Mon", pillar: 2, after: "Same photos; Kikamba caption on one family's poultry income; one figure.", now: "Church, Kitui Central; English caption." },
-  { day: "Tue", pillar: 3, after: "45-second vertical clip: what the delegation asked for. Kiswahili.", now: "Delegation meeting; group photo." },
-  { day: "Wed", pillar: 1, after: "What the committee released to Kitui this quarter, and whether it arrived. Kikamba voice note.", now: "Budget Committee photo." },
-  { day: "Thu", pillar: 4, after: "Same photos, plus the ward, one commitment and one date; to that ward's WhatsApp and SMS list.", now: "Road inspection photos." },
-  { day: "Fri", pillar: null, after: "Unchanged: not every post is a campaign asset.", now: "Funeral attendance." },
-  { day: "Sat", pillar: 2, after: "One household, one income stream, one number. Kikamba.", now: "Harambee photos." },
-  { day: "Sun", pillar: 1, after: "A twelve-week-old Thursday commitment, revisited: delivered, delayed or not done.", now: "Church photos." },
+  { day: "Mon", pillar: 1, after: "Same photos; one ward's hours of water this week, and what the household pays. Kiswahili voice note.", now: "Meeting with a residents' association; group photo." },
+  { day: "Tue", pillar: 3, after: "45-second vertical clip: the port, the SEZ and one job title. Kiswahili and Sheng.", now: "Business forum photo." },
+  { day: "Wed", pillar: 2, after: "The SEZ site in Jomvu: what is there now, and the jobs figure called a projection.", now: "Site visit photos." },
+  { day: "Thu", pillar: 4, after: "Same photos, plus the ward, one commitment and one date; to that ward's WhatsApp and SMS list.", now: "Ward tour photos." },
+  { day: "Fri", pillar: null, after: "Unchanged: not every post is a campaign asset.", now: "Jumu'ah and community visit." },
+  { day: "Sat", pillar: 1, after: "One trader, one unpaid county bill or one fee, one number. Kiswahili.", now: "Market walk photos." },
+  { day: "Sun", pillar: 1, after: "A twelve-week-old Thursday commitment, revisited: delivered, delayed or not done.", now: "Community event photos." },
 ];
 
 export const FIG_4_5: FigureSpec = {
@@ -181,22 +179,22 @@ export const FIG_4_5: FigureSpec = {
   title: `The same seven days become six briefed posts across ${countWord(CONTENT_TYPES.length)} content types, and Thursday's commitment returns as a Sunday check`,
   question: "What gets published, and when?",
   takeaway: "Two fields on a Thursday post and a language rule change the week; who takes the photograph and who presses publish do not.",
-  sources: [{ name: "His public page, as observed; checked against his actual week in Week 1", tier: "T3" }, { name: "The briefed week: this plan", tier: null, state: "target" }],
+  sources: [{ name: "An illustrative week; checked against his actual week in Week 1", tier: "T3" }, { name: "The briefed week: this plan", tier: null, state: "target" }],
   chart: { type: "calendar", days: WEEK, pillars: TYPES },
-  notes: ["Two rules on top: at least two of the seven originate in a pool ward, and at least four are Kikamba-first."],
+  notes: ["Two rules on top: at least two of the seven originate in a ward of the close-contest belt, and every one leads in Kiswahili."],
   columns: [{ key: "day", label: "Day" }, { key: "pillar", label: "Content type" }, { key: "after", label: "After" }, { key: "now", label: "Now" }],
   rows: WEEK.map((d) => ({ cells: { day: d.day, pillar: d.pillar ? `${CONTENT_TYPES[d.pillar - 1].code} · ${TYPES[d.pillar - 1]}` : "Unchanged", after: d.after, now: d.now } })),
 };
 
 /* ------------------------------------------------------------------ fig-4-6-channel-shift */
 
-const CHANNELS = [["radio", "Vernacular radio"], ["sms", "SMS and USSD"], ["markets", "Caravans and barazas"], ["digital", "Digital and social"], ["church", "Church and community"]] as const;
+const CHANNELS = [["radio", "Coast radio"], ["sms", "SMS and USSD"], ["markets", "Markets, stages and barazas"], ["digital", "Digital and social"], ["church", "Mosque, church and community"]] as const;
 const POSTURE = RADIO_STATIONS.map((s) => ({ name: s.name, posture: /^Priority/.test(s.posture) ? "Place" : /^Secondary/.test(s.posture) ? "Secondary" : "Monitor" }));
 
 export const FIG_4_6: FigureSpec = {
   id: "fig-4-6-channel-shift",
   section: "3.3.2",
-  title: `Radio's share of effort nearly doubles and digital's falls to ${fmt("channel.digital.rebalanced")}%, because digital cannot reach the number`,
+  title: `Digital's share of effort falls to ${fmt("channel.digital.rebalanced")}%, and radio and SMS rise, because reach is not turnout`,
   question: "How does effort move between channels?",
   takeaway: `${fmt("channel.offline.rebalanced")}% of effort goes offline; radio placement goes only to the stations Section 4.2 marks for placement.`,
   sources: [T_FIREFLY, src("reach.smartphone")],
@@ -227,21 +225,21 @@ export const FIG_4_6: FigureSpec = {
 /* ------------------------------------------------------------------ fig-4-7-profile-fixes */
 
 const FIXES = [
-  { order: 1, finding: 5, before: "Education lists Kenyatta University, but not the PhD", after: "Add the PhD in Economics (Kenyatta University, 2009–2014)" },
-  { order: 2, finding: 1, before: "MP start date “Aug 2012”", after: "Correct to 2013" },
-  { order: 3, finding: 2, before: "“Programmer Officer — CDTF”", after: "M&E Officer, CDTF, 1997–2004" },
-  { order: 4, finding: 3, before: "“Forms of government — Economist”", after: "Economist, Ministry of Planning & Finance, 1991–1997" },
-  { order: 5, finding: 4, before: "Current city: Nairobi", after: "Consider showing Kitui" },
-  { order: 6, finding: 6, before: "Bio: “Incoming Governor Kitui County 2027”", after: "A deliberate messaging choice to review" },
+  { order: 1, finding: 5, before: "The record, as his profiles show it today", after: "Put the SEZ and the bank first: the builder's proof" },
+  { order: 2, finding: 3, before: "Party, as his profiles show it today", after: "The New Democrats, consistently on every channel" },
+  { order: 3, finding: 1, before: "Name and title, as displayed", after: "One name and title across every channel" },
+  { order: 4, finding: 2, before: "Work history, as displayed", after: "GulfCap, Gulf African Bank and EALA, dated" },
+  { order: 5, finding: 4, before: "Current city, as displayed", after: "Mombasa" },
+  { order: 6, finding: 6, before: "Bio, as displayed", after: "No claim of a nomination or a result" },
 ];
 
 export const FIG_4_7: FigureSpec = {
   id: "fig-4-7-profile-fixes",
   section: "4.2.3",
-  title: `${CountWord(FIXES.length)} profile corrections, each minutes of work, and the missing PhD comes first`,
+  title: `${CountWord(FIXES.length)} profile checks, each minutes of work, and the builder's proof comes first`,
   question: "What gets fixed first?",
-  takeaway: "The doctorate is his differentiator, and it is absent from the one field a voter checks.",
-  sources: [{ name: "His public profile, as displayed; Parliament of Kenya record", tier: "T1" }],
+  takeaway: "The SEZ and the bank are his differentiators; they belong in the one field a voter checks. Each check is settled against his live profiles in Week 1.",
+  sources: [{ name: "His public profiles, checked in Week 1; EALA record", tier: "T2" }],
   chart: {
     type: "cards",
     columns: 2,
@@ -254,10 +252,10 @@ export const FIG_4_7: FigureSpec = {
 /* ------------------------------------------------------------------ fig-4-8-decision-rules */
 
 const RULES = [
-  { if: "follower and reach geography concentrates in Kitui Central and Nairobi", then: "the recognition thesis is confirmed; output weight shifts to Mwingi and the arid belt, headline indicator R-02" },
-  { if: "reach in Mwingi is material but engagement there is flat", then: "the problem is message, not reach: the weekly creative test cycle re-cuts the message rather than buying more geofenced reach; the Section 12.1 weighting is revised" },
-  { if: "Kikamba posts out-engage English by a wide margin", then: "language becomes a rule in the weekly brief" },
-  { if: "video watch time collapses before ten seconds", then: "short vertical and Kikamba voice notes replace long video; the Section 21.2 cadence is re-cut" },
+  { if: "reach concentrates on the Island and among existing supporters", then: "the turnout thesis is confirmed; output weight shifts to the north and west mainland, headline indicator R-02" },
+  { if: "reach in the belt is material but engagement there is flat or hostile", then: "the problem is a reason to vote against him, not reach: the weekly creative test cycle re-cuts the message; the Section 12.1 weighting is revised" },
+  { if: "Sheng posts out-engage Kiswahili among the young by a wide margin", then: "Sheng becomes a rule for P3 in the weekly brief" },
+  { if: "video watch time collapses before ten seconds", then: "short vertical and voice notes replace long video; the Section 21.2 cadence is re-cut" },
   { if: "most engagement comes from a few hundred repeat accounts", then: "priority moves from page growth to consented WhatsApp and SMS lists" },
   { if: "the presence is a personal profile, not a Page", then: "nothing can be directed against it until it migrates: settled in the first hour" },
 ];

@@ -1,8 +1,7 @@
 "use client";
 
-import { CloudSun, LineChart, Sun, Users } from "lucide-react";
+import { Droplets, LineChart, Users } from "lucide-react";
 
-import waterAndDrought from "@/data/analysis/water-and-drought.json";
 import { NOMINATION_KPIS } from "@/data/kpis";
 import { type WardPulseData } from "@/data/terminal-showcase";
 import { fmt } from "../../../lib/data/read";
@@ -32,27 +31,22 @@ function Tile({ k, v, note, tone = "text-white" }: { k: string; v: string; note?
   );
 }
 
-type Phase = { label: string; value: string; as_of: string; unit: string; tier: number };
-
-export function DroughtWatchScreen(_: { data: WardPulseData }) {
-  const phases = (waterAndDrought as { values: Phase[] }).values.filter((v) => v.unit === "phase");
+export function WaterWatchScreen(_: { data: WardPulseData }) {
   return (
     <div className="flex flex-col h-full bg-[#0d121b] text-slate-100 p-4 font-sans select-none overflow-hidden">
-      <Head code="DRW" name="Drought Watch" right="Kitui County · NDMA" />
-      <div className="grid grid-cols-4 gap-1.5 mb-3">
-        {phases.map((p) => (
-          <div key={p.as_of} className="rounded-md border border-slate-800 bg-slate-900/80 p-2 text-center">
-            <div className="font-mono text-slate-400" style={{ fontSize: "0.5em" }}>{p.as_of}</div>
-            {p.value === "Normal" ? <CloudSun className="mx-auto my-1 h-4 w-4 text-cyan-400" aria-hidden="true" /> : <Sun className="mx-auto my-1 h-4 w-4 text-amber-400" aria-hidden="true" />}
-            <div className="font-mono font-bold" style={{ fontSize: "0.625em" }}>{p.value}</div>
-          </div>
-        ))}
+      <Head code="WTR" name="Water Watch" right="Mombasa County" />
+      <div className="bg-slate-900/90 rounded-lg p-3 border border-slate-800 mb-3 flex items-center gap-3">
+        <Droplets className="h-5 w-5 text-cyan-400" aria-hidden="true" />
+        <div>
+          <div className="font-mono text-slate-400 uppercase" style={{ fontSize: "0.5625em" }}>Reaching residents, m³ a day (Tier 2)</div>
+          <div className="font-bold font-mono text-white" style={{ fontSize: "1.375em" }}>{fmt("water.delivered")} <span className="text-slate-400" style={{ fontSize: "0.5em" }}>of {fmt("water.demand")} needed</span></div>
+        </div>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        <Tile k="Water points down" v={`${fmt("water.points.down.share")}%`} note={`${fmt("water.points.working")} of ${fmt("water.points.total")} working · Tier 1`} tone="text-amber-400" />
-        <Tile k="Goat, medium" v={`KSh ${fmt("price.goat")}`} note={`5-yr avg KSh ${fmt("price.goat.average")} · Tier 1`} />
-        <Tile k="Maize, per kg" v={`KSh ${fmt("price.maize")}`} note={`5-yr avg KSh ${fmt("price.maize.average")} · Tier 1`} />
-        <Tile k="Basic water service" v={`${fmt("water.basic.kdhs")}%`} note="KDHS 2022 · Tier 1" />
+        <Tile k="Supplied" v={`${fmt("water.supply.share")}%`} note="of daily demand · Tier 2" tone="text-amber-400" />
+        <Tile k="Lost (NRW)" v={`${fmt("water.nrw")}%`} note="before it is paid for · Tier 2" tone="text-amber-400" />
+        <Tile k="Jerrican, vendor" v={`KSh ${fmt("price.water.vendor")}`} note={`county source KSh ${fmt("price.water.county")} · Tier 2`} />
+        <Tile k="Mwache Dam" v={`${fmt("water.mwache.complete")}%`} note={`complete · adds ${fmt("water.mwache")} m³ a day · Tier 1`} tone="text-emerald-400" />
       </div>
     </div>
   );
@@ -65,17 +59,17 @@ export function RegisterGrowthScreen(_: { data: WardPulseData }) {
       <div className="bg-slate-900/90 rounded-lg p-3 border border-slate-800 mb-3 flex items-center gap-3">
         <Users className="h-5 w-5 text-cyan-400" aria-hidden="true" />
         <div>
-          <div className="font-mono text-slate-400 uppercase" style={{ fontSize: "0.5625em" }}>Registered, July 2026 (Tier 3, reported)</div>
-          <div className="font-bold font-mono text-white" style={{ fontSize: "1.375em" }}>{fmt("register.2026")}</div>
+          <div className="font-mono text-slate-400 uppercase" style={{ fontSize: "0.5625em" }}>Registered, 2022 (Tier 1)</div>
+          <div className="font-bold font-mono text-white" style={{ fontSize: "1.375em" }}>{fmt("register.2022")}</div>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        <Tile k="2022 register" v={fmt("register.2022")} note="Certified · Tier 1" />
-        <Tile k="Growth since 2022" v={`+${fmt("register.2026.growth")}`} note="Calculated · Tier 3" tone="text-emerald-400" />
-        <Tile k="ECVR drive, April 2026" v={`+${fmt("register.2026.ecvr-drive")}`} note="IEBC · Tier 1" />
-        <Tile k="Outside the drive" v={`+${fmt("register.2026.continuous")}`} note="Calculated · Tier 3" />
+        <Tile k="Polling stations" v={fmt("register.polling-stations")} note="2022 · Tier 1" />
+        <Tile k="Growth since 2022" v={fmt("register.2026.growth")} note="Data needed: IEBC 2026 register" />
+        <Tile k="2026 registration drive" v={fmt("register.2026.ecvr-drive")} note="Data needed: IEBC ECVR annex" />
+        <Tile k="2022 turnout" v={`${fmt("turnout.2022")}%`} note="Governor race · Tier 2" tone="text-amber-400" />
       </div>
-      <p className="mt-3 text-slate-400" style={{ fontSize: "0.5625em" }}>Ward-level 2026 figures are not published yet.</p>
+      <p className="mt-3 text-slate-400" style={{ fontSize: "0.5625em" }}>The 2026 Mombasa register is not published yet; the 2022 register stands in.</p>
     </div>
   );
 }

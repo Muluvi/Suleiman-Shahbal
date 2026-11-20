@@ -5,9 +5,8 @@
  * research architecture table of three modules, and a service-delivery tracker architecture.
  *
  * THE HONEST GAPS ARE THE SUBSTANCE HERE and they are transcribed as gaps. §4.5.1's tracker names
- * two counts it does not have — classroom and TVET counts "pending the project ledger", and a
- * bursary receipt count likewise pending, with §2.10.1's 12,573 given as the Tier 1 figure it does
- * have. The brief forbids filling an empty data state with an estimate; these figures print the
+ * counts it does not have — water hours by ward and the county pending-bills schedule — and
+ * prints them as pending. The brief forbids filling an empty data state with an estimate; these figures print the
  * absence in the cell where the number would go, which is what the source does.
  *
  * The decision column is the other thing worth preserving exactly. Each module names the decision
@@ -27,7 +26,7 @@ export const RESEARCH_TIERS = [
   {
     label: "19A: the evidence tests",
     items: [
-      "The Week 1 channel audit (confirm or refute the recognition thesis on his own data)",
+      "The Week 1 channel audit (confirm or refute the turnout thesis on his own data)",
       "The 2017 and 2022 ward-level results (IEBC Forms 37A and 37B)",
       "Inbound feedback on the campaign's SMS and USSD line, logged on the platform",
       "Gatekeeper decision triggers",
@@ -63,19 +62,19 @@ export const RESEARCH_MODULES: string[][] = [
     "Ninety days of his own channels, exported and coded twice · reach by city mapped to sub-county · engagement on reach · language and format mix",
     "Every post in the window · his Meta Insights export · no personal data",
     "Week 1",
-    "If reach concentrates in Kitui Central, output weight shifts to Mwingi and the arid belt. If it lands in Mwingi but does not convert, the problem is message, not reach.",
+    "If reach concentrates on the Island and among existing supporters, output weight shifts to the north and west mainland. If it lands in the belt but does not convert, the problem is a reason to vote against him, not reach.",
   ],
   [
     "2. The ward-level record",
-    "The 2017 and 2022 governor results by ward and polling station, set against the pool and the twelve decisive wards · Wiper's 2022 share, ward by ward",
-    "IEBC Forms 37A and 37B for all 40 wards · public records, not yet in hand",
+    "The 2017 and 2022 governor results by ward and polling station, set against the close-contest belt and the twelve largest wards · his 2013 and 2017 votes, ward by ward",
+    "IEBC Forms 37A and 37B for all 30 wards · public records, not yet in hand",
     "On receipt",
-    "If Wiper carried the pool wards in 2022, the gap there is his own recognition and reach is the answer. If it did not, party flow is part of the problem and Section 6.3's direct-contact plan widens.",
+    "If his 2013 voters stayed home in 2017 and 2022, the gap is turnout and the ground plan is the answer. If they voted for someone else, the gap is a reason to vote against him and the message changes first.",
   ],
   [
     "3. Inbound feedback log",
     "What arrives unprompted on the SMS/USSD line and the tracker · reports, questions and market-day rumours · counted and coded, never solicited",
-    "Every inbound message from consented contacts across 40 wards · aggregated via the Africa's Talking API",
+    "Every inbound message from consented contacts across 30 wards · aggregated via the Africa's Talking API",
     "Weekly, ongoing",
     "Rapid pivots for weekly radio and SMS copy.",
   ],
@@ -84,7 +83,7 @@ export const RESEARCH_MODULES: string[][] = [
 export const MODULES_SERIES: FigureSeries = {
   id: "research-modules",
   headline: "Three instruments, and each one names the decision it unlocks",
-  measure: "§18.5's tests of the recognition-deficit hypothesis — module, method, record, timing and the decision it unlocks",
+  measure: "§18.5's tests of the turnout-and-machinery hypothesis — module, method, record, timing and the decision it unlocks",
   points: [],
   note:
     "The last column is what makes this a decision instrument: the audit's result routes directly " +
@@ -96,34 +95,34 @@ export const MODULES_SERIES: FigureSeries = {
 
 export const TRACKER_DIMENSIONS: string[][] = [
   [
-    "1. Ward infrastructure & school laboratories",
-    "Kitui Central NG-CDF project ledger · Ministry of Education infrastructure DB · classroom and TVET counts pending the project ledger",
-    "Monthly sync · on-site geotagged photo audit; certified contractor handovers",
+    "1. Water hours and price, by ward",
+    "MOWASCO supply schedules · county water kiosk records · hours of supply and price pending a ward-level record",
+    "Weekly · residents' reports on the consented line, checked against the supply schedule",
   ],
   [
-    "2. Solar boreholes & water access points",
-    "National Water Resources Authority · county water master plan baseline · 84 operational solar borehole sites",
-    "Bi-weekly water quality and pump telemetry feed · real-time GPS and yield logs",
+    "2. Mwache Dam and the last mile",
+    "Ministry of Water progress reports · Coast Water Works Development Agency · reticulation into the estates",
+    "Quarterly · project status as the agency reports it; site visits",
   ],
   [
     "3. Public financial stewardship ledger",
-    "Office of the Auditor-General certified reports (2013–2025) · Controller of Budget reports",
-    "Annual / statutory audit cycle · each year's audit opinion as the OAG report states it; the 2013–2025 reports are not yet retrieved",
+    "Office of the Auditor-General reports (2013–2025) · Controller of Budget reports · the county pending-bills schedule",
+    "Annual / statutory audit cycle · each year's audit opinion as the OAG report states it; the reports are not yet retrieved",
   ],
   [
-    "4. Secondary & tertiary bursary distribution",
-    "NG-CDF bursary disbursements ledger · NG-CDF constituency records — not HELB, which holds national loan data",
-    `Termly disbursement audit · receipt count pending the ledger; the record gives ${regFmt("record.bursary.recipients")} as Tier 1`,
+    "4. Jobs at the Jomvu SEZ",
+    "Special Economic Zones Authority · the promoters' reports · county business permits",
+    `Quarterly · jobs that exist, against the ${regFmt("record.sez.jobs")} projected (Tier 2, a projection)`,
   ],
 ];
 
 export const TRACKER_SERIES: FigureSeries = {
   id: "delivery-tracker",
-  headline: "Four delivery dimensions, two of which are still waiting on a ledger",
+  headline: "Four delivery dimensions, two of which are still waiting on a ward-level record",
   measure: "§15.1.1's public service-delivery tracker — dimension, statutory sources, update cadence and verification",
   points: [],
   note:
-    "The classroom and TVET counts and the bursary receipt count are stated as pending the project " +
-    "ledger, and they are printed that way rather than filled with an estimate. The record's " +
-    `${regFmt("record.bursary.recipients")} bursary recipients is the Tier 1 figure the document does have, and the row says so.`,
+    "Water hours by ward and the pending-bills schedule are stated as pending the record, and they " +
+    "are printed that way rather than filled with an estimate. The SEZ jobs figure is the promoters' " +
+    "projection, and the tracker reports jobs that exist against it.",
 };

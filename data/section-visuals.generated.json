@@ -1,59 +1,32 @@
 {
- "needs-sec-3-5": {
-  "id": "needs-sec-3-5",
-  "tab": "needs",
+ "timeline-sec-14-0": {
+  "id": "timeline-sec-14-0",
+  "tab": "timeline",
   "level": 2,
-  "number": "3.5",
-  "title": "Jobs and the young",
-  "kind": "checklist",
-  "data": {
-   "items": [
-    {
-     "label": "No verified youth unemployment figure",
-     "body": "is available yet for the county; the record that would settle it is the KNBS Quarterly Labour Force Survey…"
-    },
-    {
-     "label": "Education.",
-     "body": "15.1% of females and 9.7% of males aged six and over have no education (Tier 1, KDHS 2022; this replaces an…"
-    },
-    {
-     "label": "Attendance.",
-     "body": "Girls attend secondary school more than boys: net attendance 51.6% against 40.8% (Tier 1)."
-    },
-    {
-     "label": "School meals.",
-     "body": "They reach a minority of schools, much of the provision is parent-funded, and NDMA links the gap to…"
-    },
-    {
-     "label": "Digital access.",
-     "body": "Smartphones are 59.7% of active SIMs nationally (Tier 2, CA), a national rate that overstates Kitui (Section…"
-    }
-   ]
-  }
- },
- "votes-sec-2-4": {
-  "id": "votes-sec-2-4",
-  "tab": "votes",
-  "level": 2,
-  "number": "2.4",
-  "title": "The constituencies that decide it",
+  "number": "14.0",
+  "title": "Securing the ballot line",
   "kind": "stepper",
   "data": {
    "steps": [
     {
      "n": 1,
-     "label": "The Big Four (55.60% of the county)",
-     "body": "Kitui Central, Kitui South, Mwingi Central and Mwingi North hold 296,196 registered voters across 22 wards (calculated from…"
+     "label": "The clock",
+     "body": "from the go-ahead to the IEBC's party deadlines in 2027 (certified membership lists by 23 March, nominations from 3 June), then…"
     },
     {
      "n": 2,
-     "label": "Mwingi North (68,829 voters, Tier 1)",
-     "body": "fourth by voters, but it holds the county's largest ward (Kyuso, 19,921 voters), the political home of the Wiper Patriotic Front…"
+     "label": "Success",
+     "body": "a valid nomination on The New Democrats' ticket, backed by organised ground reach and trained agents across all six…"
     },
     {
      "n": 3,
-     "label": "Kitui South (75,372 voters)",
-     "body": "the second-largest constituency, anchored by the dense wards of Athi (15,843) and Ikanga/Kyatune (15,384)."
+     "label": "The party and nomination deadlines, March",
+     "body": "The party and nomination deadlines, March–June 2027: <window-chip></window-chip> The New Democrats' certified membership list by…"
+    },
+    {
+     "n": 4,
+     "label": "The general election, 10 August 2027",
+     "body": "turning out the 120,000-vote coalition a plurality win needs in a multi-candidate field."
     }
    ]
   }

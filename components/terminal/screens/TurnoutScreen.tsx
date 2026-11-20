@@ -17,7 +17,7 @@ export function TurnoutScreen({ data }: { data: WardPulseData }) {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
           </span>
           <span className="font-mono text-cyan-400 font-semibold" style={{ fontSize: "0.6875em" }}>
-            TPC-200K • Turnout & Pacing Check
+            TPC-120K • Turnout & Pacing Check
           </span>
         </div>
         <div className="font-mono text-slate-400" style={{ fontSize: "0.625em" }}>

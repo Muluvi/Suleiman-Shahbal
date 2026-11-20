@@ -22,7 +22,7 @@ export function SaveImage({ card, title, formats }: { card: CardRef; title?: str
   const dialog = useRef<HTMLDialogElement>(null);
   const headingId = useId();
   const src = cardUrl(card, format);
-  const fileName = `kitui-2027-${card.type}${card.params?.ward ? `-${card.params.ward}` : ""}-${format}.png`;
+  const fileName = `mombasa-2027-${card.type}${card.params?.ward ? `-${card.params.ward}` : ""}-${format}.png`;
 
   const open = () => {
     const d = dialog.current;
@@ -62,7 +62,7 @@ export function SaveImage({ card, title, formats }: { card: CardRef; title?: str
     setBusy(true);
     try {
       const file = await fetchFile();
-      const data: ShareData = { files: [file], title: title ?? "Kitui 2027" };
+      const data: ShareData = { files: [file], title: title ?? "Mombasa 2027" };
       if (typeof navigator !== "undefined" && navigator.canShare?.(data)) {
         await navigator.share(data);
         setNote("");

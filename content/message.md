@@ -2,7 +2,7 @@
 The message is one claim, argued through three pillars, evidenced by six themes, and made week by week in four content types. Every claim carries its source.
 ```
 
-The message is one claim, argued through three pillars, evidenced by six themes, and made week by week in four content types. Every claim carries its source. This chapter sets out that architecture, the discipline and persuasion principles it is delivered under, framing worked through in examples, sample messaging Firefly would hand the team, and the answer to disinformation.
+The message is one claim, argued through three pillars, evidenced by six themes, and made week by week in four content types. Every claim carries its source. This chapter sets out that architecture, the discipline and persuasion principles it is delivered under, framing worked through in examples, and sample messaging Firefly would hand the team.
 
 ## 10.1 One claim, three pillars, six themes
 
@@ -10,18 +10,18 @@ The message is one claim, argued through three pillars, evidenced by six themes,
 One claim, argued through three pillars, evidenced by six themes, and made week by week in four content types: each layer carries the one above it.
 ```
 
-One claim, argued through three pillars, evidenced by six themes, and made week by week in four content types: each layer carries the one above it. Earlier drafts carried five overlapping groupings under four names (four campaign pillars, three message pillars, four production pillars, four content buckets and six themes). They are merged here into one architecture, and every fact from each is kept.
+One claim, argued through three pillars, evidenced by six themes, and made week by week in four content types: each layer carries the one above it.
 
 ```visual
 kind: crosswalk
 title: "The message, layer by layer"
 columns: ["Layer", "How many", "What it is", "Where"]
 rows:
-  - cells: ["The claim", "1", "the Economist Governor", "Section 9.1"]
+  - cells: ["The claim", "1", "the Builder Governor", "Section 9.1"]
   - cells: ["Pillars", "3", "how the claim is argued to a voter", "below"]
   - cells: ["Themes", "6", "the issues each pillar is evidenced on", "below; evidence in Chapter 3"]
   - cells: ["Content types, P1 to P4", "4", "what the team makes each week, and what the weekly brief commissions", "below"]
-note: "Each layer maps to the one above it. The four campaign pillars of earlier drafts fold into the three pillars, and the four content buckets into the four content types."
+note: "Each layer maps to the one above it."
 ```
 
 ```figure
@@ -30,98 +30,75 @@ id: fig-4-1-message-house
 
 #### The claim
 
-**"The mission is for Kitui to prosper. From Poverty to Wealth Creation."** That is Dr. Makali Mulu's own cover line, and the architecture below argues it. It has carried no content so far; the content types turn it into a weekly production cycle. The claim itself, that he is the Economist Governor Kitui needs, is set out in Section 9.1.
+**"Mombasa needs managers who can deliver, fix what is broken and move the port city forward."** That is Mr Shahbal's own line (as reported, September 2026), and the architecture below argues it. The claim itself, that he is the Builder Governor Mombasa needs, is set out in Section 9.1.
 
 #### The three pillars
-
-Each pillar carries what the earlier campaign pillars set out to do: fiscal accountability and devolution, data-driven civic engagement, policy translated into what it changes, and verification and follow-through.
 
 ```visual
 kind: cards
 preset: message
 items:
-  - title: "Pillar 1: Fiscal integrity and transparent public finance"
+  - title: "Pillar 1: Water at the tap"
     fields:
-      - { label: "How it is argued", text: "Dr. Mulu's parliamentary work for fair distribution of resources becomes a clear manifesto for Kitui's 40 wards, showing line by line how the county's KSh {{budget.total|bn}} billion should be allocated and audited. And the pillar that sets him apart: **publishing what was promised, then publishing whether it happened**, through the public service-delivery tracker (Section 15.1.1), the analytics cadence in Section 15.4.4, and the disclosure of every paid placement under the Digital Ethics and Data Charter (Section 19.3). An M&E specialist who campaigns without a way to verify is wasting his strongest asset." }
-      - { label: "Narrative Statement *(held until the Auditor-General's reports below are in hand)*", text: "*\"Kitui's KSh {{budget.total|bn}} billion annual budget has been crippled by pending bills, procurement inflation, and ghost projects. Dr. Makali Mulu has a verified track record of managing public funds with zero financial audit queries.\"*" }
-      - { label: "Proof Point — awaiting primary documents", text: "**Office of the Auditor-General (OAG) NG-CDF audit reports, 2013–2025.** The team has not yet retrieved the underlying reports, so the claim of consistently unqualified opinions is untiered pending that. It is worth settling early: because the claim is precisely checkable, a single qualified year would carry more weight in public debate than the record deserves. The \"top 5 best-managed constituencies in Kenya\" ranking is also wider than the Tier 1 claim in Section 6.1, best-evaluated constituency in the Eastern region, FY2014/15. The team would use the narrower, documented version until the wider one is sourced." }
-      - { label: "Contrast — awaiting primary documents", text: "Kitui County Government audited accounts under both predecessor administrations are reported to have accumulated over **KSh {{audit.pending.contested|bn}} billion in contested pending bills** (Tier 3; OAG County Executive Audit FY2021/22 and FY2022/23, Tier 3). This is a **different measure** from the KSh {{budget.pending-bills.2021|bn}} billion pending-bill figure at FY2020/21 carried as Tier 1 in Section 3.7: different years, different scopes. Both are usable; whichever is quoted is named with its year." }
-    badge: "sources pending"
-  - title: "Pillar 2: Household economic empowerment and agricultural value"
+      - { label: "How it is argued", text: "Mombasa receives about {{water.supply.share}}% of the water it needs and loses {{water.nrw}}% of what it buys (Section 3.1). Mwache Dam arrives in the next term whoever governs; the pillar is the last mile: reticulation into the estates, a public price ceiling at county kiosks, and the share of water lost, published every quarter, ward by ward." }
+      - { label: "Narrative Statement", text: "*\"The dam is coming. The question is whether its water reaches your tap or the vendor's tank. Mr Shahbal will publish, every quarter, how many hours each ward had water and what a jerrican cost.\"*" }
+      - { label: "Proof Point", text: "The governor's own figures: {{water.demand}} m³ needed, {{water.supply}} m³ supplied, {{water.delivered}} m³ reaching residents (Tier 2); Mwache Dam {{water.mwache.complete}}% complete, +{{water.mwache}} m³ a day (Tier 1, the Water CS to the Senate)." }
+  - title: "Pillar 2: Jobs that stay in Mombasa"
     fields:
-      - { label: "How it is argued", text: "Dense policy, such as climate investment in water and the revival of farming, made relatable in the vernacular: a 90-second video, a Kikamba voice note or a shareable card makes each policy tangible and personal." }
-      - { label: "Narrative Statement *(the farming shares are the county government's own figures, Tier 2)*", text: "*\"Agriculture employs {{farm.employs}}% of Kitui's people and sustains {{farm.rural-households}}% of its rural households, by the county's own count, yet our farmers sell raw green grams and charcoal at throwaway prices. Dr. Mulu's economic plan introduces solar-powered cold storage, green gram aggregation centers, and honey processing to double household farm incomes.\"*" }
-      - { label: "Proof Point — awaiting page references", text: "**KNBS 2019 Census and the Agricultural Sector Transformation and Growth Strategy (ASTGS).** The {{policy.ndengu-output}} tonne output and the sub-32% value-capture figure are not yet tiered to a specific page. Both carry the floor-price commitment, so the team sources them before either appears in published copy." }
-      - { label: "Policy Intervention — one point to confirm with your office", text: "sessional papers are ordinarily Executive instruments rather than backbench sponsorships, so the precise role is worth stating exactly as the Hansard record has it. The team will describe it accordingly." }
-    badge: "sources pending"
-  - title: "Pillar 3: Fair devolution, water for all and health care"
+      - { label: "How it is argued", text: "The port moves the country's cargo; the pillar is that more of its value should stay in the county. The Jomvu SEZ is the proof he can attract it: a signed agreement, a partner, a site and a projected number, reported as a projection until the jobs exist." }
+      - { label: "Narrative Statement", text: "*\"He did not promise an industrial zone. He signed one. {{record.sez.jobs}} jobs are projected in Jomvu; the campaign will publish every quarter how many are real.\"*" }
+      - { label: "Proof Point", text: "The GulfCap–DP World–county agreement, KSh {{record.sez.ksh|bn}} billion, {{record.sez.acres}} acres, signed 8 September 2026 (Tier 2, as reported). The jobs figure is the promoters' projection and is always called one." }
+    badge: "projection, not a count"
+  - title: "Pillar 3: A county that pays its bills"
     fields:
-      - { label: "How it is argued", text: "Dr. Mulu's record, including the NG-CDF-funded projects in Kitui Central, broken down in infographics so voters can see the impact: budget documents turned into simple charts, ward maps and before-and-after comparisons." }
-      - { label: "Narrative Statement", text: "*\"Development in Kitui must no longer depend on which ward voted for the Governor. Dr. Mulu will allocate ward development funds by one needs-weighted formula, published before any allocation and audited after, prioritizing solar borehole reticulation and stocked village dispensaries.\"* (policy commitment; see the decision below)" }
-      - { label: "Proof Point — awaiting page reference", text: "**Kitui County Integrated Development Plan (CIDP III).** Its 61% water figure is not yet tiered. The County Gender Data Sheet (October 2025) gives {{water.over30}}% of residents taking more than 30 minutes to reach drinking water (KDHS 2022, Tier 1); it is not substituted until the CIDP's 61% is confirmed to be the same measure. Section 3.1 carries the documented water figures, which measure different things." }
-      - { label: "CDF Proof — a request to your constituency office", text: "{{record.cdf.boreholes}} community solar boreholes and {{record.cdf.school-water}} school water-harvesting projects (Kitui Central Project Inventory 2013–2026, Tier 3 until its line items are in hand). Earlier drafts also cited the same inventory for a classroom count, a different project category; all now defer to the inventory's own line items, which would let the team use one consistent set of figures throughout." }
-    badge: "sources pending"
+      - { label: "How it is argued", text: "A county that owes KSh {{budget.pending-bills.2021|bn}} billion, {{budget.pending-bills.aged}}% of it older than three years, and borrows to pay salaries cannot be trusted to finish a project (Section 3.7). The pillar is a published pending-bills schedule, paid oldest first, and a ward development share every ward can check." }
+      - { label: "Narrative Statement", text: "*\"Mombasa's suppliers wait years to be paid, and its traders pay the price. Mr Shahbal will publish every bill the county owes and pay them in order, oldest first.\"*" }
+      - { label: "Proof Point", text: "Controller of Budget, as reported: KSh {{budget.pending-bills.2021|bn}} billion pending (2024), {{budget.pending-bills.aged}}% older than three years (Tier 2); overdraft of KSh {{budget.overdraft.2026-06|m}} million for June 2026 salaries (Tier 3)." }
 ```
 
-**The ward fund forces a choice.** The county government's equal-ward allocation is open to criticism, and Pillar 3 proposes an equal-ward guarantee of its own. The campaign cannot run both.
-
-```visual
-kind: cards
-preset: policy
-items:
-  - title: "Settled: the needs-weighted formula."
-    text: "**The platform is the second position: a published, needs-weighted allocation formula, because it is the stronger fit with the verification pillar (Pillar 1) and leaves the campaign free to make the argument against equal-ward allocation.** The equal-ward guarantee of Ksh {{policy.ward-fund|m}} million per ward (about Ksh {{policy.ward-fund.total|bn}} billion a year, {{policy.ward-fund.share}}% of the envelope) is withdrawn from campaign copy."
-    body: "Criticism of the county government's equal-ward funding allocation is a live policy argument, and one where the campaign's own position needs settling first: Pillar 3 currently proposes an equal-ward guarantee of its own. Either the equal-ward guarantee is the platform, and this line of argument is not available to the campaign, or the argument is made and the guarantee is restated as a needs-weighted formula."
-```
+**The ward fund, settled.** The County Assembly passed a County Equitable Share Bill that would have shared 30% of the development budget equally across the 30 wards, and the governor rejected it (Section 3.7). The campaign backs a ward development share on the bill's terms, KSh {{policy.ward-fund|m}} million per ward a year, published and audited ward by ward.
 
 ```visual
 kind: bars
-title: "What the two flagship commitments would take from the county envelope, and what still has to be decided."
-note: "Share of the KSh {{budget.total|bn}} billion envelope in Section 1.5. Envelope arithmetic, not a full sizing."
+title: "What the ward development share would take from the county budget"
+note: "Share of the KSh {{budget.total|bn}} billion FY2025/26 budget in Section 1.5. Envelope arithmetic, not a full sizing."
 items:
-  - label: "A Ward Development Equalization Fund at KSh {{policy.ward-fund|m}} million across 40 wards"
+  - label: "A ward development share of KSh {{policy.ward-fund|m}} million across 30 wards"
     value: "{{policy.ward-fund.share}}%"
-  - label: "Both flagship commitments together, on the bridge case"
-    value: "{{policy.flagships.share}}%"
-body: "Against the KSh {{budget.total|bn}} billion envelope in Section 1.5: a Ward Development Equalization\nFund at KSh {{policy.ward-fund|m}} million across 40 wards is **KSh {{policy.ward-fund.total|bn}} billion a year, or {{policy.ward-fund.share}}% of the\nenvelope** before salaries (modelled). A *ndengu* floor price at KSh {{policy.ndengu-floor}}/kg against the {{policy.ndengu-output}} tonnes\ncited in Pillar 2 is **a further ~KSh {{policy.ndengu.bridge|bn}} billion** (modelled) if the county bridges from the\nKSh {{price.ndengu.farmgate}} farm-gate price, or KSh {{policy.ndengu.purchase|bn}} billion (modelled) if it buys the crop outright. Together, on the\nbridge case, **~KSh {{policy.flagships.bridge|bn}} billion, {{policy.flagships.share}}% of the envelope** (modelled).\n\nThese are envelope arithmetic, not a full sizing: the delivery mechanism for each is still to be\nset, and a floor price may be structured as a revolving fund or a partial aggregation\nscheme rather than a purchase guarantee, which changes the figure materially. Firefly's\nrecommendation is that both are sized and structured with the campaign's fiscal team before\nthey go into broadcast copy, since the figures already appear in the radio scripts, SMS\ncopy and USSD menu in Annex C.2. **This is the campaign's call, and one worth settling\nearly rather than on air.**"
+body: "Against the KSh {{budget.total|bn}} billion FY2025/26 budget in Section 1.5, a ward development share of KSh {{policy.ward-fund|m}} million across 30 wards is **KSh {{policy.ward-fund.total|bn}} billion a year, or {{policy.ward-fund.share}}% of the budget** (modelled). It is envelope arithmetic, not a full sizing: Firefly's recommendation is that it is sized against the FY2027/28 budget with the campaign's fiscal team before it goes into broadcast copy. **This is the campaign's call, and one worth settling early rather than on air.**"
 ```
 
 #### The six themes
 
-Each theme is an issue the pillars are evidenced on. The evidence is in Chapter 3, with its tier and source; three supporting figures are not yet established anywhere in this plan and say so, rather than borrowing authority from those beside them.
+Each theme is an issue the pillars are evidenced on. The evidence is in Chapter 3, with its tier and source.
 
 ```visual
 kind: cards
 preset: theme
 items:
-  - title: "Water security and climate resilience"
-    text: "sand dams, boreholes, irrigation, and adaptation to both drought and flood."
-    head: { label: "Evidence", text: "Kitui has the lowest share of any county with at least a basic drinking-water service, {{water.basic.kdhs}}% (Tier 1, Section 3.1)." }
+  - title: "Water"
+    text: "reticulation, kiosks, the vendors' price, and the water lost to leaks and theft."
+    head: { label: "Evidence", text: "{{water.demand}} m³ needed against {{water.supply}} m³ supplied, {{water.nrw}}% lost (Tier 2, Section 3.1)." }
     fields:
-      - { label: "Why this is the strongest theme", text: "it is the only issue on which Kitui is measurably last in the country, and it is measured by a Tier 1 source with a monthly update cycle — so a claim made about it can be re-verified every month rather than argued." }
-  - title: "Economic transformation"
-    text: "farm value chains, mango processing, livestock markets, county investment."
-    head: { label: "Evidence", text: "{{poverty.2021}}% in poverty in 2021 and food at {{food.share}}% of household spending (Sections 3.2 and 3.6)." }
-    fields:
-      - { label: "Why it matters", text: "a household spending seven shillings in ten on food has no margin to invest, and every content type that raises household income is aimed at it." }
-  - title: "Fiscal discipline and verified delivery"
+      - { label: "Why this is the strongest theme", text: "every ward shares it, every household pays for it daily, and it can be re-measured every quarter rather than argued." }
+  - title: "Jobs and the port economy"
+    text: "the SEZ, port-linked industry, youth enterprise."
+    head: { label: "Evidence", text: "Mombasa produces {{gva.share}}% of national output; six adults in ten are 18–34 (Sections 1.1 and 3.5)." }
+  - title: "Paid bills and verified delivery"
     text: "the flagship theme."
-    head: { label: "Evidence", text: "the KSh {{budget.total|bn}} billion envelope, the audit findings and the county's own KESTA agenda (Sections 1.5 and 3.7)." }
+    head: { label: "Evidence", text: "the KSh {{budget.total|bn}} billion budget, the pending bills and the salary overdraft (Sections 1.5 and 3.7)." }
     fields:
-      - { label: "Why it matters", text: "the county government's own scorecard names Dr. Mulu's frame, which makes the argument about *execution* rather than direction: the ground an evaluator wins on." }
-  - title: "Youth employment and digital skills"
-    text: "vocational training, county innovation hubs, enterprise credit."
-    head: { label: "Evidence", text: "a median age of {{census.median-age}} and youth concentrated in Kitui Central, Mwingi Central and Mutomo (Section 3.5)." }
+      - { label: "Why it matters", text: "it makes the argument about execution rather than direction: the ground a builder wins on." }
+  - title: "Traders and the cost of doing business"
+    text: "permits, market fees, market sanitation."
+    head: { label: "Evidence", text: "own-source revenue of KSh {{budget.osr|bn}} billion is raised largely from residents and traders (Section 1.5)." }
   - title: "Health care"
-    text: "hospital upgrades, maternal health, insurance coverage."
-    head: { label: "Evidence", text: "{{health.insurance}}% with any health insurance and {{health.stunting}}% of children under five stunted (Tier 1, Section 3.3)." }
-  - title: "Education"
-    text: "ECDE, bursaries, school infrastructure."
-    head: { label: "Evidence", text: "{{edu.none.women}}% of women and {{edu.none.men}}% of men aged six and over have no education (Tier 1, Section 3.5); the secondary-completion figure is not yet tiered." }
-    badge: "not yet tiered"
+    text: "Coast General, sub-county hospitals, drugs on the shelf."
+    head: { label: "Evidence", text: "health is the largest line in the county budget, KSh {{budget.health.2025-26|bn}} billion in the FY2025/26 estimates (Section 3.3)." }
+  - title: "Youth and registration"
+    text: "first-time voters, TVET, digital skills."
+    head: { label: "Evidence", text: "a median age of {{census.median-age}}; {{ict.mombasa.youth}}% of young people online (Sections 1.1 and 4.1)." }
 ```
-
-A further theme the evidence supports is security and resource conflict on the Tana River border, framed as resource and border security, never in community or ethnic terms (Section 3.2).
 
 #### The four content types and the visit-to-verification loop
 
@@ -129,22 +106,20 @@ A further theme the evidence supports is security and resource conflict on the T
 **The engine is the loop between the fourth content type and the first**: a commitment with no date is not logged, and twelve weeks later that commitment and that date become a P1 post.
 ```
 
-The content types are what the team makes, week by week, and what the weekly brief commissions. Their weights are set by the Week 1 audit (Section 14.1) and re-set at each monthly review, not chosen in advance. Each absorbs one of the earlier content buckets, with its formats and tone. The fourth feeds the first, so the campaign compounds instead of repeating.
-
-The Kikamba name for each type comes from the native-speaker reviewer. The names below are working drafts from the earlier buckets, and none is published before that review.
+The content types are what the team makes, week by week, and what the weekly brief commissions. Their weights are set by the Week 1 audit (Section 14.1) and re-set at each monthly review, not chosen in advance. The fourth feeds the first, so the campaign compounds instead of repeating.
 
 ```visual
 kind: matrix
 columns: ["Content type", "Segment", "Language", "Channel", "Format"]
 rows:
-  - cells: ["P1 — Where the money went", "smallholders and traders in Mwingi and Kitui South — the **{{pool}}** registered voters in the pool (Section 6.2).", "Kikamba primary, Kiswahili secondary.", "WhatsApp voice note, SMS, Facebook.", "45–60 seconds. One figure. One named place. One verdict: delivered, delayed, or not done."]
-    body: "**Why it exists:** it is built on a qualification his public record carries: Dr. Mulu is an M&E Champion designated by the Ministry of Finance, and Kitui Central was evaluated the best constituency in the Eastern region for FY2014/15 (Section 6.1). It turns that from a line in a CV into a weekly habit, and it answers *\"who is this man\"* with a ward name rather than a qualification. **From the Integrity and Stewardship Ledger bucket** (working Kikamba name *Kĩtĩo kya Kũthũkũma*): 13 years of Kitui Central NG-CDF management, shown through the Auditor-General's opinion for every year, with no year characterised before its report is in hand. Formats: radio debate evidence cards, documentary video case studies, audit certificate infographics, press statements. Tone: authoritative, calm, documented, transparent."
-  - cells: ["P2 — From poverty to wealth creation, one household", "the rural farming majority, and the women's household economy — **{{census.female}}** women, {{census.female.share}}% of residents (Section 1.1).", "Kikamba.", "WhatsApp, SMS, Facebook.", "one household, one income stream, one number. Poultry is in **over 90%** of Kitui households (Section 3.2) and carries no county policy at all."]
-    body: "**Why it exists:** the cover line is currently a banner, and a slogan with no weekly proof behind it stays a banner. This type is the proof, and it is the only one that speaks to the county's largest group in the register's own terms. **From the Agrarian and Household Wealth bucket** (working Kikamba name *Ũtonga wa Mĩsyĩ na Mĩũnda*): guaranteed minimum floor prices for *ndengu* (KSh {{policy.ndengu-floor}}/kg), county aggregation and cold-storage hubs, solar borehole irrigation, and livestock feed reserves. Formats: morning radio skits in the vernacular, 2G market-day SMS alerts, printed agricultural policy fold-outs. Tone: practical, warm, farmer-first, culturally right in Kikamba."
-  - cells: ["P3 — The economist explains", "youth 18–35, traders, professionals, and the out-of-county Kamba diaspora.", "Kiswahili and Sheng with Kikamba hooks; English for diaspora and national press.", "TikTok, Facebook, X, YouTube.", "45-second vertical video. One county figure made physical — the **KSh {{budget.total|bn}} billion** envelope, or the **KSh {{audit.cash|m}} million** in unconfirmed cash balances, shown with objects rather than charts."]
-    body: "**Why it exists:** it turns \"PhD in Economics\" from a title into a demonstrated skill, and it is the only type that travels beyond the county. **From the Youth Enterprise and TVET bucket** (working Kikamba name *Mwanya wa Mwanake na Wathi*): zero-interest equipment loans, digital cottage hubs, fee waivers for artisan TVET courses, and dignity for boda boda riders. Formats: vertical TikTok and Reels clips, sound-truck music tracks, boda boda shed stickers, WhatsApp voice notes. Tone: energetic, aspirational, street-smart Sheng and Kikamba, action-oriented."
-  - cells: ["P4 — He came, and this is what he said he would do", "the specific ward visited, that day.", "Kikamba and Kiswahili.", "Facebook, the ward's WhatsApp group, SMS to that ward's consented list.", "the photograph the team already takes — **plus one commitment and one date**."]
-    body: "**Why it exists:** this is not new work. It is the current daily activity post with two fields added. Twelve weeks later, that commitment and that date become a P1 post. **From the Devolution Equity and Basic Services bucket** (working Kikamba name *Kĩla Kĩtheka na Mwanya Wayo*): a Ward Equalization Fund allocated by one published, needs-weighted formula, solar water within 1 km, functional maternity dispensaries, and bursary equity. Formats: ward-by-ward budget pledge cards, an interactive USSD budget explorer, market caravan speeches. Tone: inclusive, forward-looking, accountable, ward-led."
+  - cells: ["P1 — Where the water and the money went", "residents of the close-contest belt — the **{{pool}}** registered voters in Kisauni, Nyali and Changamwe (Section 6.2).", "Kiswahili primary, English secondary.", "WhatsApp voice note, SMS, Facebook, TikTok.", "45–60 seconds. One figure. One named place. One verdict: delivered, delayed, or not done."]
+    body: "**Why it exists:** it answers *\"what would he actually do\"* with a ward name and a measured fact: hours of water, a project's status, a bill paid. Tone: calm, documented, transparent."
+  - cells: ["P2 — He built it, go and see", "traders, port and transport workers, and the young.", "Kiswahili and English.", "Facebook, Instagram, YouTube, WhatsApp.", "a site visit: the bank branch, the SEZ site, a business he backed. One thing built, one number, one person who works there."]
+    body: "**Why it exists:** it turns the builder's record from a biography into something a voter can visit. The SEZ jobs figure is always called a projection. Tone: practical, confident, never boastful."
+  - cells: ["P3 — The builder explains", "youth 18–35, traders, professionals.", "Kiswahili and Sheng; English for national press.", "TikTok, Instagram, X, YouTube.", "45-second vertical video. One county figure made physical — the **{{water.nrw}}%** of water lost, or the **KSh {{budget.pending-bills.2021|bn}} billion** owed — shown with objects rather than charts."]
+    body: "**Why it exists:** it is the type that travels furthest online, in a county where {{ict.mombasa.youth}}% of young people use the internet. Tone: energetic, direct, Mombasa Kiswahili."
+  - cells: ["P4 — He came, and this is what he said he would do", "the specific ward visited, that day.", "Kiswahili.", "Facebook, the ward's WhatsApp group, SMS to that ward's consented list.", "the photograph the team already takes — **plus one commitment and one date**."]
+    body: "**Why it exists:** this is not new work. It is the current daily activity post with two fields added. Twelve weeks later, that commitment and that date become a P1 post."
 ```
 
 **The engine is the loop between the fourth content type and the first**, and nothing else in this chapter matters as much:
@@ -161,9 +136,9 @@ A commitment with no date is not logged. A date that passes with no verification
 Under the campaign's Provenance Discipline (Annex A.1.1), **no claim is made without an attached primary empirical source**.
 ```
 
-**Every claim carries its source.** Under the campaign's Provenance Discipline (Annex A.1.1), **no claim is made without an attached primary empirical source**. Every message, from a 160-character Kiswahili SMS to a two-hour Kikamba radio debate, rests on parliamentary records, Auditor-General reports or KNBS data. The three regions differ and most residents are offline (Sections 1.2 and 4.1), so the message and its language are set region by region and channel by channel.
+**Every claim carries its source.** Under the campaign's Provenance Discipline (Annex A.1.1), **no claim is made without an attached primary empirical source**. Every message, from a 160-character Kiswahili SMS to a two-hour radio interview, rests on IEBC, Controller of Budget, Auditor-General or KNBS records. The three zones differ (Section 1.2), so the message and its language are set zone by zone and channel by channel.
 
-**The county's own slogan already claims resources.** The county scorecard runs *"Rasilimali Zetu, Maisha Bora"* ("Our Resources, Better Lives") on every page. The campaign's governing line, quoted in full in Section 9.1, answers it: Kitui has the resources, and lacks the leadership to use them. The campaign leads with the line's verification half: publish whether each promised project happened.
+**The governing line answers the county's own claim.** The campaign's governing line, quoted in full in Section 9.1, says Mombasa has the port, the people and the money, and lacks leadership that finishes what it starts. The campaign leads with the receipts: publish whether each promised thing happened.
 
 #### Framing true claims, transparently
 
@@ -180,7 +155,7 @@ kind: cards
 preset: principle
 items:
   - title: "**Loss aversion**"
-    text: "Frame water scarcity as what Kitui loses daily without action"
+    text: "Frame the water deficit as what each household pays every day without action"
     fields:
       - { label: "Definition", text: "Losses felt more intensely than equivalent gains" }
   - title: "**Social proof**"
@@ -192,7 +167,7 @@ items:
     fields:
       - { label: "Definition", text: "Small public commitments increase follow-through" }
   - title: "**Messenger effects**"
-    text: "Respected local figures — teachers, pastors, cooperative and women's leaders — alongside Dr. Mulu"
+    text: "Respected local figures — teachers, imams, pastors, traders' and women's leaders — alongside Mr Shahbal"
     fields:
       - { label: "Definition", text: "Who delivers a message matters as much as the message" }
   - title: "**Scarcity and urgency**"
@@ -213,7 +188,7 @@ items:
       - { label: "Definition", text: "Claims that can be checked are trusted more than claims that cannot" }
 ```
 
-The last principle is the campaign's own. It turns Dr. Mulu's M&E credential into a persuasion technique built on his own record.
+The last principle is the campaign's own. It turns a builder's habit, showing the finished thing, into a persuasion technique built on his own record.
 
 ## 10.3 Framing, in worked examples
 
@@ -222,41 +197,28 @@ Each example applies one principle from Section 10.2 to evidence from Chapter 3.
 ```visual
 kind: tabs
 preset: message
-note: "All figures drawn from KNBS and county sources; each is verified before\npublication under the Section 19.3 fact-check protocol."
+note: "All figures drawn from county, national and KNBS sources; each is verified before\npublication under the Section 19.3 fact-check protocol."
 items:
-  - title: "Water scarcity"
+  - title: "Water"
     fields:
-      - { label: "Loss aversion", text: "\"Approximately {{water.surface}} people in Kitui still depend on surface water for drinking. Every dry season takes more from us than the boreholes would.\"" }
-      - { label: "Verification", text: "\"We will publish every borehole location, cost and completion date. Dial `[shortcode]` to check the one nearest you.\"" }
-      - { label: "Loss aversion (July 2025)", text: "\"More than a quarter of Kitui's water points were not working in July 2025 (NDMA). Every broken borehole is a longer walk for a woman in Mutha.\" {{water.points.down.share}}% of {{water.points.total}} sources, Tier 1." }
-      - { label: "Verification (the county's own count)", text: "\"The county says it drilled {{scorecard.boreholes.drilled}} boreholes. Dial `[shortcode]` and check the one nearest you.\" During the nomination window, the verification half only (Section 10.2)." }
-  - title: "Fiscal accountability"
+      - { label: "Loss aversion", text: "\"A jerrican costs KSh 5 at the county's source and KSh 30 to 40 from the vendor. Every day without piped water, your household pays the difference.\" The governor's own figures, Tier 2." }
+      - { label: "Verification", text: "\"We will publish, every quarter, how many hours each ward had water. Dial `[shortcode]` to check yours.\"" }
+      - { label: "Anchoring", text: "\"Mombasa needs {{water.demand}} cubic metres of water a day and gets {{water.supply}}. Half of it leaks away.\" Tier 2." }
+  - title: "Paid bills"
     fields:
-      - { label: "Anchoring", text: "\"Kitui County will handle KSh {{budget.total|bn}} billion this financial year. Do you know where it goes? Dr. Mulu will publish every shilling.\"" }
-      - { label: "Loss aversion", text: "\"Every shilling lost is a borehole not drilled, a nurse not hired, a road not built.\"" }
-      - { label: "Verification", text: "\"He was certified best evaluated constituency in the Eastern region. He does not just allocate — he measures.\"" }
-  - title: "Poverty and household economics"
+      - { label: "Anchoring", text: "\"Mombasa's county spends KSh {{budget.total|bn}} billion a year. Do you know who it owes? Mr Shahbal will publish every bill.\"" }
+      - { label: "Loss aversion", text: "\"Every bill unpaid for three years is a trader out of business and a contractor who will not bid again.\"" }
+  - title: "Jobs"
     fields:
-      - { label: "Loss aversion", text: "\"{{poverty.2021}}% of Kitui lived in poverty in 2021 (KNBS). That is a policy choice, not a fact of nature.\"" }
-      - { label: "Social proof", text: "\"Green grams beat the five-year average by {{greengrams.lr2025.vs-average}}% this season. Kitui farmers adapt; the county should help them sell.\" NDMA, long rains 2025, Tier 1." }
-  - title: "Youth unemployment"
+      - { label: "Verification", text: "\"{{record.sez.jobs}} jobs are projected at the Jomvu SEZ. We will publish every quarter how many exist.\" Always called a projection." }
+      - { label: "Commitment device", text: "\"Pledge to register, and Mr Shahbal pledges a quarterly county jobs report. Hold him to it.\"" }
+  - title: "Youth and registration"
     fields:
-      - { label: "Commitment device", text: "\"Pledge to register, and Dr. Mulu pledges a quarterly county jobs audit. Hold him to it.\"" }
-      - { label: "Messenger effect", text: "A SEKU graduate on how county digital hubs would have changed their job search." }
-  - title: "Women and household income"
+      - { label: "Messenger effect", text: "A young voter from Kisauni who did not vote in 2022, on why 2027 is different." }
+      - { label: "Scarcity and urgency", text: "Registration deadlines and the countdown to the general election, ward by ward." }
+  - title: "Traders"
     fields:
-      - { label: "Messenger effect", text: "A table-banking chairlady on poultry income — a sector in over 90% of Kitui households, and one that rarely appears in county policy conversation." }
-  - title: "Healthcare and nutrition"
-    fields:
-      - { label: "Loss aversion", text: "\"Only {{health.insurance}}% of Kitui residents have any health insurance.\" KDHS 2022, household population, Tier 1 ({{health.insurance.nhif}}% through NHIF). Say \"residents\", never \"voters\"." }
-      - { label: "Social proof", text: "\"One in four children in Kitui is stunted. Join the movement.\" KDHS 2022 puts stunting at {{health.stunting}}% of children under five (Tier 1); the county's older planning baseline gives {{health.stunting.cidp}}% (Tier 2). Quote the KDHS figure." }
-      - { label: "Anchoring", text: "\"Seven in ten Kitui residents report a problem getting health care. Dr. Mulu will publish which clinics have medicines this week.\" {{health.access.problem}}% of women, KDHS 2022, Tier 1: say \"residents report\" only with that base stated." }
-  - title: "School meals"
-    fields:
-      - { label: "Messenger effect", text: "A parent from a school running a parent-funded meals programme, on why the county should carry it. NDMA links the gap to absenteeism and dropout (Section 3.5)." }
-  - title: "Energy poverty"
-    fields:
-      - { label: "Anchoring", text: "\"Only {{fuel.clean.2022}}% of Kitui households cook with clean fuels. Energy poverty is economic poverty.\" 2022, County Gender Data Sheet, Tier 1 (Kenya {{fuel.clean.2022.kenya}}%). The 2019 Census put unclean fuels at {{fuel.unclean}}% and firewood at {{fuel.firewood}}%." }
+      - { label: "Messenger effect", text: "A Kongowea trader on what the county charges her and what she gets for it." }
 ```
 
 ## 10.4 Sample messages from the weekly brief
@@ -265,7 +227,7 @@ items:
 **No segment in these grids carries a size.** The grids assign messages; they do not measure audiences.
 ```
 
-**A demonstration, not a script.** What follows is the kind of message assignment the team's own weekly brief hands its producers: which message goes to whom, on which channel. It attributes nothing to Dr. Mulu beyond his public record, and the policies it quotes are proposals for the campaign to decide (Section 10.1). Each grid row carries the content type that commissions it (P1 to P4, Section 10.1), so a producer reading a row knows which slot in the weekly brief it fills.
+**A demonstration, not a script.** What follows is the kind of message assignment the team's own weekly brief hands its producers: which message goes to whom, on which channel. It attributes nothing to Mr Shahbal beyond his public record, and the policies it quotes are proposals for the campaign to decide (Section 10.1). Each grid row carries the content type that commissions it (P1 to P4, Section 10.1).
 
 ```figure
 id: fig-4-4-message-region
@@ -273,31 +235,27 @@ id: fig-4-4-message-region
 
 #### Message assignment by segment
 
-The segments are those of Section 11.2. **No segment in these grids carries a size.** Section 11.3 is the sizing authority, built from census and register data; it states only sourced sizes and gives none where none is published (Section 7.3). The grids assign messages; they do not measure audiences. The segments overlap: a woman farming in Mwingi is in rows 2 and 4, and a boda operator in Kitui Town in rows 1 and 3.
-
-**These segments overlap.** A woman farming in Mwingi is in both the agrarian and the women's-cooperative segments; a boda operator in Kitui Town is in both the youth and the trader segments. That is expected for messaging segments and would be an error for a population breakdown.
-
-*Source conflict: an earlier version gave a sum of segment shares, printed from a population-density figure rather than from any share, and counts applied to the {{register.2022}} register; the grids carry no shares or counts, so both are withdrawn.*
+The segments are those of Section 11.2. **No segment in these grids carries a size.** Section 11.3 is the sizing authority. **These segments overlap.** A young trader in Kisauni is in both the youth and the trader segments. That is expected for messaging segments and would be an error for a population breakdown.
 
 ```figure
 id: message-by-segment
 ```
 
-Messaging is set to the economic realities, geography and priorities of Kitui County's eight constituencies and 40 wards.
+Messaging is set to the economic realities, geography and priorities of Mombasa County's six constituencies and 30 wards.
 
-**Segmentation principle and hard constraint.** Segmentation is by **economic interest, geography, life stage and issue salience only**. It is never by ethnicity, clan or religious affiliation. Cultural and linguistic localisation — Kikamba content, local idiom, proverbs, cultural imagery — is a matter of respect and reach and stays. Identity-based wedge targeting does not: it is excluded by the Digital Ethics and Data Charter (Section 19.3), and it is a documented driver of election-period tension in Kenya. This is a live risk in the 2027 cycle, not a theoretical one: EU-funded analysis of the 2025 digital ecosystem identified coordinated cross-platform operations explicitly weaponising ethnicity.
+**Segmentation principle and hard constraint.** Segmentation is by **economic interest, geography, life stage and issue salience only**. It is never by ethnicity, community of origin or religious affiliation. Language, local idiom and respect for places of worship are matters of respect and reach and stay. Identity-based wedge targeting does not: it is excluded by the Digital Ethics and Data Charter (Section 19.3), and in a county where coast and up-country communities, Muslims and Christians live side by side it is a documented risk, not a theoretical one.
 
 | Voter Segment | Demographics & Primary Hubs | Core Priorities | Tailored Messaging & Channels |
 |---|---|---|---|
-| **Youth & Digital Natives** | 18–35; Kitui Town, Mwingi, Kwa Vonza; SEKU and MUT | Youth unemployment; TVET funding & digital skills; boda boda regulation & trade licensing; enterprise loans | **Message:** "Economic Empowerment & Tech Integration." The leader who will digitise county services and allocate bursaries transparently — with a public record of {{record.bursary.recipients}} bursary beneficiaries to prove it.<br>**Channels:** TikTok, Instagram, X, short video, infographics |
-| **Agrarian & Pastoral Communities** | {{census.rural.share}}% of residents are rural (2019 Census, Tier 2); Kitui Rural, Kitui East, Kitui South, Mwingi North | Water scarcity; farm inputs (green grams/ndengu, maize); feeder roads; livestock health; drought and flood resilience | **Message:** "Budget Discipline for Water & Food Security." Public finance experience directed at sand dams, boreholes and subsidised inputs.<br>**Channels:** **SMS/USSD (primary)**, vernacular radio, barazas, WhatsApp, visual policy summaries |
-| **MSMEs, Traders & Business Owners** | Kitui Town, Mwingi Town, Mutomo, Kabati, Kyuso, Kwa Vonza | County taxes, double licensing, cess; market infrastructure & sanitation; power reliability | **Message:** "An Economist in City Hall." A business-friendly environment that cuts red tape and reorganises county revenue collection — anchored to the KSh {{budget.osr.revised|bn}} billion own-source revenue target.<br>**Channels:** Town halls, business association roundtables, policy briefs, Facebook, X, LinkedIn |
-| **Women's Cooperatives & Table-Banking Groups** | CBOs and merry-go-rounds across all 40 wards; {{census.female}} women in {{census.households}} households | Domestic water proximity; maternal and household healthcare; market linkages for honey, mangoes, legumes; **poultry income (90%+ of households)** | **Message:** "Dignity at the Household Level." Reducing the distance walked for water; dedicated county empowerment revolving funds.<br>**Channels:** Church and cooperative networks, grassroots women leaders, **Kikamba voice notes**, WhatsApp, SMS *(SMS in Kiswahili — §15.3.3)* |
-| **Diaspora Kitui Voters** | Nairobi, Mombasa and abroad; high out-migration from Kitui Central, Mutomo, Mwingi Central | Investment opportunities; transparent county budgeting; remittance links; home-county pride | **Message:** "Your Investment, Your County." **Newly actionable: IEBC is expanding diaspora voter registration from 12 to 26 countries** (not yet sourced; the record is the IEBC's gazette notice).<br>**Channels:** Facebook, X, YouTube, WhatsApp, LinkedIn, diaspora webinars |
-| **First-Time Voters** | 18–22; secondary and early tertiary | Hope, change, youth inclusion, digital opportunity, accountability | **Message:** "A New Kind of Leader." Integrity, economic expertise, youth digital empowerment.<br>**Channels:** TikTok, Instagram, WhatsApp, short-form video |
-| **Offline Majority** | Any ward with low connectivity; older voters; the {{ict.offline}}% outside internet use (CA/KNBS 2023/24) | The same priorities as above — but reached by no digital channel currently in the plan | **Message:** identical policy substance, adapted to 160 characters and to audio.<br>**Channels:** **SMS, USSD, radio, mobile-money agent networks, printed QR-linked materials** (Section 15.3.3) |
+| **Youth & Digital Natives** | 18–35; {{census.adults.18-34.share}}% of adults (2019 Census, Tier 1); Kisauni, Likoni, Jomvu; Technical University of Mombasa | Jobs; TVET and digital skills; boda boda and tuk-tuk regulation; insecurity and drugs | **Message:** "Jobs that stay in Mombasa." The SEZ as proof, a quarterly jobs report as the test.<br>**Channels:** TikTok, Instagram, X, WhatsApp, short video |
+| **Port, Transport & Logistics Workers** | Changamwe, Jomvu, Port Reitz, Kipevu | Port jobs after the SGR; casual labour; transport costs | **Message:** "The port's value, kept here." Port-linked industry and the SEZ.<br>**Channels:** stages and workplaces, radio, WhatsApp, SMS |
+| **Traders & Small Businesses** | Kongowea, Marikiti, Majengo, the CBD | Permits and market fees; market sanitation; pending payments | **Message:** "A builder who pays his bills." A single business permit and a public pending-bills schedule.<br>**Channels:** traders' associations, market visits, Facebook, radio |
+| **Women & Household Managers** | across all 30 wards; {{census.female}} women in {{census.households}} households | Water price and hours; health care; school costs | **Message:** "Water at the tap, at the county's price."<br>**Channels:** women's groups, chamas, mosque and church networks, WhatsApp voice notes, SMS *(SMS in Kiswahili or English — §15.3.3)* |
+| **The 2022 Abstainers** | {{abstained.2022}} registered voters who cast no valid governor vote in 2022 | Whether voting changes anything | **Message:** "This time, check what you get." Every promise with a date and a way to check it.<br>**Channels:** **SMS, USSD, ward captains, radio** |
+| **First-Time Voters** | 18–22; secondary and early tertiary | Jobs, opportunity, being heard | **Message:** "A builder for a young city."<br>**Channels:** TikTok, Instagram, WhatsApp, short-form video |
+| **The Offline Layer** | the {{ict.offline}}% not using the internet (CA/KNBS 2023/24), most on the west and south mainland | The same priorities as above | **Message:** identical policy substance, adapted to 160 characters and to audio.<br>**Channels:** **SMS, USSD, radio, mobile-money agents, printed QR-linked materials** (Section 15.3.3) |
 
-The last row matters most. Treating the offline majority as a segment with its own channels, rather than as a group the campaign regrets not reaching, is the difference between a digital plan and a communications plan.
+The abstainers' row matters most. In Mombasa the election is decided less by persuading voters who turned out in 2022 than by bringing back the ones who did not.
 
 #### Message assignment by channel
 
@@ -321,16 +279,18 @@ id: format-specs
 
 #### Copy samples: radio, SMS and USSD
 
-#### A. Vernacular radio: a 45-second script (Kikamba)
+#### A. Radio: a 45-second script (Kiswahili)
 
-> **SFX:** Ambient sounds of a busy grain market (*ndengu* bags being loaded, tractor engine idling).  
-> **Elder farmer (male, 50s):** *"Mwaĩĩ, nĩtwamĩnyie kũthoozya ndengu ya mĩio mĩtheke kwa mbesa nini nũndũ wa makuli? (My brother, are we tired of selling our hard-earned green grams for pennies to exploitative middlemen?)"*  
-> **Candidate (Dr. Mulu, calm and authoritative):** *"Nĩ Mwanya Mweũ. Serikalĩ yitũ ya Kitui ĩkese kũũnganĩsya ndengu yonthe na kũthoozya kĩla kilo kĩvĩndĩ kĩla kĩũ (KSh {{policy.ndengu-floor}}). Wathi witũ nĩ ũtonga wa mĩsyĩ. Nĩ ngwenda twĩthĩwe na mbesa mĩkonĩ yitũ. (A new dawn is here. Our Kitui government will aggregate all produce and guarantee a floor price of KSh {{policy.ndengu-floor}}/kg. Our priority is household wealth. Real money in your hands.)"*  
-> **Voiceover (fast, punchy):** *"Vota Dr. Makali Mulu – Gavana wa Kitui 2027. Muvisi Mũlũngalu, Mwĩkĩi wa Wathi! (Vote Dr. Makali Mulu – Governor Kitui 2027. The Proven Economist, The Trusted Leader!)"*
+> **SFX:** A busy water kiosk in Mikindani: jerricans clanking, a vendor calling prices.  
+> **Mama (40s):** *"Kila siku tunanunua maji kwa shilingi thelathini mtungi mmoja. Kaunti yenyewe inauza kwa shilingi tano. Hiyo tofauti inaenda wapi? (Every day we buy water at thirty shillings a jerrican. The county itself sells it for five. Where does the difference go?)"*  
+> **Candidate (Mr Shahbal, calm):** *"Bwawa la Mwache linakuja. Swali ni kama maji yake yatafika kwenye bomba lako au kwenye tangi la muuzaji. Nitachapisha kila robo mwaka saa ngapi kila wadi imepata maji. (Mwache Dam is coming. The question is whether its water reaches your tap or the vendor's tank. Every quarter I will publish how many hours each ward had water.)"*  
+> **Voiceover:** *"Suleiman Shahbal — Gavana wa Mombasa 2027. Mjenzi. Anayemaliza anachoanza. (Suleiman Shahbal — Governor of Mombasa 2027. The builder. He finishes what he starts.)"*
 
-#### B. Bulk SMS on 2G: a ward-specific sample
+The Kiswahili is a draft for the native-speaker reviewer (Section 15.2.3); nothing is broadcast before that review and the legal review in Section 19.
 
-> *"Kitui Rural / Mbitini: Dr. Mulu will fund wards by need, on one published formula. Solar water to Mbitini Market first. Reply 1 to join, STOP to opt out."*
+#### B. Bulk SMS: a ward-specific sample
+
+> *"Mikindani: Mr Shahbal will publish every quarter how many hours your ward had water. Reply 1 to join, STOP to opt out."*
 
 #### C. The USSD menu
 

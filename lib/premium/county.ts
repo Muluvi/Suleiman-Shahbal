@@ -1,5 +1,5 @@
 /**
- * Kitui's 40 wards as real geography, joined to the ward register and to the tile map.
+ * Mombasa's 30 wards as real geography, joined to the ward register and to the tile map.
  *
  * Boundaries: Omare, B.D.A. and Omare, G.J.M. (2017), "Kenya County Assembly Boundaries",
  * digitised at 1:50,000 from the IEBC's proposed ward delimitation of 9 January 2012, CC BY 4.0

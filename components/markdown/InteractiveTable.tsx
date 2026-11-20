@@ -151,7 +151,7 @@ export function InteractiveTable({ children }: { children: React.ReactNode }) {
       .join("\r\n");
 
     // The BOM is what makes Excel read this as UTF-8; without it the document's en dashes,
-    // minus signs and Kikamba diacritics arrive as mojibake.
+    // minus signs and Kiswahili diacritics arrive as mojibake.
     const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -196,7 +196,7 @@ export function InteractiveTable({ children }: { children: React.ReactNode }) {
    * shipped, among others:
    *
    *     Combined 68.7%     another candidate's poll shares from two different rounds, added together
-   *     Combined 68.5%     Dr. Mulu's three poll shares, added together
+   *     Combined 68.5%     Mr Shahbal's three poll shares, added together
    *     Avg WS 7           the workstream identifiers, averaged
    *     Combined 832,002   a zone table counting its own Total row a second time
    *

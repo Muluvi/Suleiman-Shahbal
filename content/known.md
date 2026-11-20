@@ -1,38 +1,29 @@
-## 6.2 Where he is known, and where not
+## 6.2 Where he is known, and where it has not yet turned into votes
 
 ```lead
-**Five of the twelve largest wards lie where he has never held office.** The pool is {{pool.share}}% of the entire Kitui County voter register. The pool is structural: it is derived from where he has held office, not from any measure of opinion.
+**He is known countywide: {{result.2013.gov.shahbal}} people voted for him in 2013.** The question is not where he is known but where his voters were in 2013 and 2017, and whether they will turn out in 2027 without a national party behind him. The pool, {{pool.share}}% of the register, is where the 2022 race was closest.
 ```
 
-**Where he has held office.** Dr. Mulu has been Member of Parliament for Kitui Central since 2013 (Tier 1). His base is Kitui Central ({{con.mvita}} voters) and the wards next to it in Kitui West (Matinyani, Kauwi) and Kitui Rural (Kisasi, Mbitini).
+**Where his votes came from.** Mr Shahbal received {{result.2013.gov.shahbal}} votes in 2013 and {{result.2017.gov.shahbal}} in 2017 (Tier 1). Where those votes were cast, ward by ward, is in the IEBC's Forms 37A and 37B for both elections, which are public records not yet in hand. Until they are, this section reasons from the 2022 constituency results and the register, and says so.
 
-**Where he has not.**
-
-1.  **Mwingi North, Mwingi Central and Mwingi West:** **{{bloc.north}} registered voters** (**{{bloc.north.share}}%** of the county register). The hypothesis is that being known as "the Kitui Central MP" limits recall there, against candidates who hold countywide office; Week 1 tests it against his own channel data (Section 7.1).
-2.  **Kitui South (six wards):** **{{con.likoni}} registered voters** (**{{con.likoni.share}}%** of the county register, calculated). Remote, separated by long transit corridors, and shaped by its own local leadership.
-3.  **Kitui East (outside the pool):** **{{con.kitui-east}} registered voters** (Tier 1, IEBC; particularly Endau/Malalani, Voo/Kyamatu and Mutito/Kaliku). He has not held office here either, but Kitui East is not counted in the pool; it is a direct-contact target, on the party-flow finding in Section 6.3.
+**The 2017 drop.** Between 2013 and 2017 his vote fell by {{result.shahbal.drop}}, while Joho's rose to {{result.2017.gov.joho}} (Tier 1). He stood on a different party ticket each time: Wiper in 2013, Jubilee, the national ruling party, in 2017. The hypothesis is that the party label cost him more in 2017 than recognition did; the 2017 Forms 37B, ward by ward, test it.
 
 ```visual
 kind: stats
-title: "The pool: where he has never held office"
+title: "The pool: where the 2022 race was closest"
 items:
   - value: "{{pool}}"
     label: "registered voters in the pool"
     tier: 1
-    body: "`Pool (Mwingi + South) = {{bloc.north}} (Mwingi) + {{con.likoni}} (Kitui South) = {{pool}} registered voters`"
+    body: "`Pool = Kisauni {{con.kisauni}} + Nyali {{con.nyali}} + Changamwe {{con.changamwe}} = {{pool}} registered voters`"
   - value: "{{pareto.top12.in-pool.voters}}"
-    label: "in the five of the twelve largest wards that lie in it"
+    label: "in the {{pareto.top12.in-pool}} of the twelve largest wards that lie in it"
     tier: 1
 ```
 
-The pool is **{{pool.share}}% of the entire Kitui County voter register**. It is structural: it is derived from where he has held office, not from any measure of opinion.
+The pool is **{{pool.share}}% of the entire Mombasa County voter register**. It is structural: it is derived from the 2022 margins and the register, not from any measure of opinion.
 
-**Do the pool's wards overlap the decisive ones? Partly: five of the twelve largest wards lie where he has never held office.** The denominator is the twelve largest wards (Section 2.3). The numerator is those of them in Mwingi North, Mwingi West, Mwingi Central or Kitui South. Kitui Central, Kitui West and Kitui Rural, which hold the other seven, sit in or beside the constituency he has represented since 2013.
-
-1.  **Mwingi North:** Kyuso (#1 countywide, **{{ward.timbwani}}**), Tseikuru (#5, **{{ward.mikindani}}**) and Mumoni (#7, **{{ward.majengo}}**).
-2.  **Kitui South:** Athi (#8, **{{ward.athi}}**) and Ikanga/Kyatune (#11, **{{ward.ikanga-kyatune}}**).
-
-Together the five hold **{{pareto.top12.in-pool.voters}} registered voters**, **{{pareto.top12.in-pool.share}}%** of the county register (calculated). Mwingi Central, the pool's largest constituency, has no ward in the twelve: its weight is spread across six mid-sized wards, led by Central ({{ward.central}}), Nguni ({{ward.nguni}}) and Nuu ({{ward.nuu}}), all Tier 1 (IEBC).
+**Do the pool's wards overlap the decisive ones? Partly: {{pareto.top12.in-pool}} of the twelve largest wards lie in the pool**, holding **{{pareto.top12.in-pool.voters}} registered voters**, **{{pareto.top12.in-pool.share}}%** of the county register (calculated). The largest ward of all, Timbwani ({{ward.timbwani}}), is in Likoni, outside it.
 
 ```figure
 id: fig-3-4-footprint
@@ -41,12 +32,14 @@ id: fig-3-4-footprint
 ## 6.3 Where party loyalty will not carry him
 
 ```lead
-**Kitui Central will be fighting its own contest.** **Two constituencies will not carry party flow:** Kitui East returned a UDA MP and Kitui South a Jubilee MP in 2022 (Tier 3, constituency records).
+**He will be on the ballot without ODM or UDA.** His vehicle is The New Democrats, a registered party whose interim leader since September 2026 is his son, Samir Shahbal (Tier 2, Nation and Kenyans.co.ke).
 ```
 
-**Kitui Central will be fighting its own contest.** Stephen Kilonzo ("Kitundumo") has reportedly entered the Kitui Central MP race, and NLP leader Augustus Muli is weighing a bid there (Tier 3 and Tier 2 respectively; both become record only when the party nomination lists and the IEBC's gazetted nominations are published, and Mr Muli's party leadership is a matter of the Registrar of Political Parties' register). Dr. Mulu's home constituency, {{con.mvita}} voters or {{con.mvita.share}}% of the register (calculated), will therefore have its own succession fight in the same window as his bid for governor. **Loyalty in the home base cannot be left to look after itself**, and the content weights in Section 12.6 do not assume it.
+**No national machine.** Mombasa has elected the ODM candidate in every governor's race since 2013. In September 2026 Mr Shahbal left ODM in what he called a "friendly divorce", saying the party would not nominate him, and turned to The New Democrats (Tier 2, Nation). A Kenya Gazette notice dated 18 September 2026 formalised the party's leadership change (Tier 2, as reported; the gazette notice is the record to cite).
 
-**Two constituencies will not carry party flow.** Kitui East returned a **UDA** MP and Kitui South a **Jubilee** MP in 2022 (Tier 3, constituency records; the IEBC's 2022 declarations for both seats are the record to cite). Together they hold **{{east-south}} registered voters, {{east-south.share}}% of the county** (calculated). Party structures do not reach those local networks, so reaching them is a direct-contact problem, not a party-mobilisation one. Kitui South sits inside the pool and Kitui East beside it, where he has also never held office, so this adds to the Section 6.2 finding rather than offsetting it.
+**What that means.** He will not inherit an ODM vote on polling day, and he will not have a party's polling agents at the 1,041 stations unless his own campaign recruits and trains them. The upside: he cannot lose a primary he is not in, and his name, not a party symbol, carries the ballot. Section 14 sets the calendar dates that matter for a party outside the big two: membership lists, nomination rules and the submission of candidates.
+
+**The rest of the field.** This plan does not name, profile or monitor any 2027 rival (Firefly's decision for this platform). The 2022 results are history, used only to size the turnout and margins of each constituency.
 
 ```figure
 id: fig-3-6-party-flow
@@ -54,7 +47,7 @@ id: fig-3-6-party-flow
 
 ## 6.5 What his online presence shows
 
-The findings below come from the profile as displayed, and finding them took an afternoon. They matter because a brief written over a profile that contradicts the parliamentary record inherits the contradiction. The corrections are in Section 14.3.
+The findings below are set from the profile as displayed, once the Week 1 export is in hand. They matter because a brief written over a profile that contradicts the public record inherits the contradiction. The corrections go in Section 14.3.
 
 ```figure
 id: fig-3-9-audit
@@ -73,7 +66,7 @@ items:
     text: "every day in the window, coloured by content type, sized by reach."
     badge: "set in Week 1"
   - title: "Which language travels"
-    text: "engagement rate by post language."
+    text: "engagement rate by post language: Kiswahili, English, Sheng."
     badge: "set in Week 1"
 ```
 

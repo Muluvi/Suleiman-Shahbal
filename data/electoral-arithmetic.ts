@@ -16,93 +16,25 @@ export interface CertifiedResult {
 
 export const ELECTORAL_ARITHMETIC = {
   // Electorate baselines
-  register2022Certified: val("register.2022"), // 40 wards; prisons in register.2022.with-prisons - T1
-  register2026ECVRReported: val("register.2026"), // July 2026 reported - T3 uncertified
-  turnoutHistoricalAvgPct: 61.7, // Certified 2022 county turnout, IEBC Form 37C - T1
+  register2022Certified: val("register.2022"), // 30 wards, 2022 register - T1
+  register2026ECVRReported: val("register.2026"), // the register in use: 2022 until the 2026 total is published
+  turnoutHistoricalAvgPct: val("turnout.constant"), // 2022 governor election turnout, carried forward
 
-  // Winning thresholds & margins
-  victoryThresholdBenchmark: val("benchmark"), // Derived from Malombe 2022 winning total
-  malombe2022Certified: val("result.2022.gov.nassir"),
-  pathBWinningMargin: 12183, // 200,000 - 187,817 = +12,183
+  // Winning thresholds
+  victoryThresholdBenchmark: val("benchmark"), // the 2022 winning total, rounded
+  winner2022: val("result.2022.gov.nassir"),
 
-  // Sourced historical certified peak votes
+  // Results in the record
   certifiedResults: [
-    {
-      candidate: "Irene Kasalu",
-      office: "Woman Representative",
-      year: 2022,
-      votes: val("result.2022.womanrep.zamzam"),
-      tier: "T1",
-      source: "IEBC Certified Results 2022",
-    },
-    {
-      candidate: "Julius Malombe",
-      office: "Governor",
-      year: 2022,
-      votes: val("result.2022.gov.nassir"),
-      tier: "T1",
-      source: "IEBC Certified Results 2022",
-    },
-    {
-      candidate: "Enoch Wambua",
-      office: "Senator",
-      year: 2022,
-      votes: val("result.2022.senate.faki"),
-      tier: "T1",
-      source: "IEBC Certified Results 2022",
-    },
-    {
-      candidate: "Charity Ngilu",
-      office: "Governor",
-      year: 2017,
-      votes: val("result.2017.gov.joho"),
-      tier: "T1",
-      source: "IEBC Certified Results 2017",
-    },
-    {
-      candidate: "David Musila",
-      office: "Governor",
-      year: 2017,
-      votes: val("result.2017.gov.shahbal"),
-      tier: "T1",
-      source: "IEBC Certified Results 2017",
-    },
-    {
-      candidate: "David Musila",
-      office: "Governor",
-      year: 2022,
-      votes: val("result.2022.gov.omar"), // IEBC Form 37C; The Star's early total (result.2022.gov.omar.media) is not used
-      tier: "T1",
-      source: "IEBC Certified Results 2022",
-      notes: `${fmt("result.2022.gov.omar")} certified (IEBC Form 37C); The Star's early total of ${fmt("result.2022.gov.omar.media")} is not used`,
-    },
+    { candidate: "Abdulswamad Nassir", office: "Governor", year: 2022, votes: val("result.2022.gov.nassir"), tier: "T2", source: "IEBC declaration, as reported" },
+    { candidate: "Hassan Omar", office: "Governor", year: 2022, votes: val("result.2022.gov.omar"), tier: "T2", source: "IEBC declaration, as reported", notes: `${fmt("result.2022.gov.omar")} as most outlets printed it; ${fmt("result.2022.gov.omar.media")} in others` },
+    { candidate: "Mohamed Faki", office: "Senator", year: 2022, votes: val("result.2022.senate.faki"), tier: "T2", source: "IEBC declaration as gazetted" },
+    { candidate: "Hassan Joho", office: "Governor", year: 2017, votes: val("result.2017.gov.joho"), tier: "T1", source: "High Court, Election Petition 10 of 2017" },
+    { candidate: "Suleiman Shahbal", office: "Governor", year: 2017, votes: val("result.2017.gov.shahbal"), tier: "T1", source: "High Court, Election Petition 10 of 2017" },
+    { candidate: "Hassan Joho", office: "Governor", year: 2013, votes: val("result.2013.gov.joho"), tier: "T1", source: "High Court, 2013 election petition" },
+    { candidate: "Suleiman Shahbal", office: "Governor", year: 2013, votes: val("result.2013.gov.shahbal"), tier: "T1", source: "High Court, 2013 election petition" },
   ] as CertifiedResult[],
 
-  // Regional geographic distribution
-  mwingiAndSouthRegisterPct: 51.7, // 51.7% of voters live in Mwingi (North, West, Central) & Kitui South
-  topWardsPareto: {
-    top12WardsVoters: 201385,
-    top12WardsSharePct: 37.8,
-  },
-  deficitWards: {
-    mwingiNorthTop7Count: 3, // Mwingi North contains 3 of top 7 deficit wards
-    kituiSouthTop11Count: 2, // Kitui South contains 2 of top 11 deficit wards
-  },
-
-  // County fiscal envelope FY2026/27
-  fiscalEnvelopeFY2026_27: {
-    total: 12.38e9, // KSh 12.38B
-    equitableShare: 10.44e9, // KSh 10.44B (84.3%)
-    conditionalGrants: 1.00e9, // KSh 1.00B (8.1%)
-    ownSourceRevenue: 0.94e9, // KSh 0.94B (7.5%)
-  },
-
-  // Connectivity and device realities (CA / KNBS 2023/24)
-  connectivity: {
-    internetUsePct: 26.2, // CA/KNBS 2023/24
-    mobilePhoneOwnershipPct: 44.1, // CA/KNBS 2023/24
-    historical2019InternetPct: 13.6, // KNBS 2019 Census reference
-    consentedSmsTarget: val("target.sms"), // Observable rural milestone
-    supporterDatabaseTarget: val("target.supporters"), // Observable 40-ward DB milestone
-  },
+  // The close-contest belt
+  poolRegisterPct: val("pool.share"),
 } as const;

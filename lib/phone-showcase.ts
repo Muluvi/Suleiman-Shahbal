@@ -52,20 +52,20 @@ export const CHANNEL_LABELS: Record<ChannelId, string> = {
 
 /**
  * Derived from the candidate's name and office as the proposal states them
- * ("Hon. Dr. Benson Makali Mulu, PhD (Economics), CBS, Member of Parliament, Kitui Central").
+ * ("Hon. Dr. Benson Suleiman Shahbal, PhD (Economics), CBS, Member of Parliament, Mvita").
  * Identity, not a claim — no account is asserted to exist.
  */
 export const IDENTITY = {
-  displayName: "Dr. Makali Mulu",
-  fullName: "Hon. Dr. Benson Makali Mulu",
-  office: "MP, Kitui Central",
+  displayName: "Suleiman Shahbal",
+  fullName: "Hon. Dr. Benson Suleiman Shahbal",
+  office: "MP, Mvita",
   handle: "@MakaliMulu",
-  pageName: "Dr. Makali Mulu — Kitui 2027",
-  channelName: "Dr. Makali Mulu",
+  pageName: "Suleiman Shahbal — Mombasa 2027",
+  channelName: "Suleiman Shahbal",
   initials: "MM",
   /** §5.2.1.2 radio script, the campaign's only slogan line. */
   slogan: "The Proven Economist, The Trusted Leader",
-  sloganKikamba: "Muvisi Mũlũngalu, Mwĩkĩi wa Wathi",
+  sloganKiswahili: "Muvisi Mũlũngalu, Mwĩkĩi wa Wathi",
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -140,14 +140,14 @@ export const WHATSAPP = {
   dateDivider: "TODAY",
   /**
    * §8.8.2's four-hour loop describes exactly this dispatch: a localized pledge, then a 45-second
-   * audio note voiced by Dr. Mulu, pushed to Ward Captains for peer forwarding. The resident's
+   * audio note voiced by Mr Shahbal, pushed to Ward Captains for peer forwarding. The resident's
    * reply is the single character the SMS sample itself asks for.
    */
   thread: [
     {
       from: "campaign",
       kind: "text",
-      text: "Kitui Rural / Mbitini: Dr. Mulu will fund wards by need, on one published formula. Solar water to Mbitini Market first. Reply 1 to join, STOP to opt out.",
+      text: "Likoni / Mbitini: Mr Shahbal will fund wards by need, on one published formula. Solar water to Mbitini Market first. Reply 1 to join, STOP to opt out.",
       time: "07:12",
       source: "Direct 2G Bulk SMS copy sample, verbatim",
     },
@@ -163,7 +163,7 @@ export const WHATSAPP = {
       kind: "voice",
       duration: "0:45",
       time: "07:15",
-      source: "§8.8.2 [CHECK REF] — 45-second audio note voiced by Dr. Mulu, pushed via WhatsApp",
+      source: "§8.8.2 [CHECK REF] — 45-second audio note voiced by Mr Shahbal, pushed via WhatsApp",
     },
   ] satisfies WhatsAppMessage[],
   composerPlaceholder: "Message",
@@ -175,16 +175,16 @@ export const FACEBOOK = {
   /** §7.1.1 Pillar 3, narrative statement, cut to post length. */
   body: {
     value:
-      "Development in Kitui must no longer depend on which ward voted for the Governor. Dr. Mulu guarantees an institutionalized Ward Development Equalization Fund of Ksh 100 Million per ward, every year.",
+      "Development in Mombasa must no longer depend on which ward voted for the Governor. Mr Shahbal guarantees an institutionalized Ward Development Equalization Fund of Ksh 100 Million per ward, every year.",
     source: "§7.1.1 [CHECK REF] Pillar 3 — Devolution Equity, narrative statement",
   } as Sourced<string>,
   /** §7.1.1 Pillar 3, Tier 1 proof point — the card under the post. */
   card: {
     value: {
       kicker: "CIDP III — Tier 1",
-      headline: "Over 61% of rural Kitui households still walk more than 5 km for water in dry seasons",
+      headline: "Over 61% of rural Mombasa households still walk more than 5 km for water in dry seasons",
     },
-    source: "§7.1.1 [CHECK REF] Pillar 3 — Kitui County Integrated Development Plan proof point",
+    source: "§7.1.1 [CHECK REF] Pillar 3 — Mombasa County Integrated Development Plan proof point",
   } as Sourced<{ kicker: string; headline: string }>,
   /** No comment copy exists anywhere in the proposal. */
   commentPreview: { gap: "Comment preview" } as Fillable<string>,
@@ -195,11 +195,11 @@ export const X_POST = {
   /** §7.1.1 Pillar 1, evidence lines, cut to post length. */
   body: {
     value:
-      "Kitui Central NG-CDF: the Auditor-General's opinion for every year, 2013–2025, published in full.\n\nKitui County: KSh 1.3 billion in pending bills at FY2020/21 (Controller of Budget).\n\nThe record is public. Read it.",
+      "Mvita NG-CDF: the Auditor-General's opinion for every year, 2013–2025, published in full.\n\nMombasa County: KSh 1.3 billion in pending bills at FY2020/21 (Controller of Budget).\n\nThe record is public. Read it.",
     source: "§10.1 Pillar 1 — the NG-CDF opinions are quoted as each report states them once retrieved; the pending-bills figure is Tier 1",
   } as Sourced<string>,
   mediaLabel: {
-    value: "Auditor-General — Kitui Central NG-CDF audit opinions, 2013–2025",
+    value: "Auditor-General — Mvita NG-CDF audit opinions, 2013–2025",
     source: "§7.1.1 [CHECK REF] Pillar 1 — Tier 1 proof point",
   } as Sourced<string>,
 } as const;
@@ -209,7 +209,7 @@ export const INSTAGRAM = {
    * §C.1 specifies "1080x1080 square carousel cards" for social; it does not specify Reels or
    * Stories, and a Reel here would only duplicate the TikTok screen. So: a square feed carousel.
    */
-  location: "Kitui County",
+  location: "Mombasa County",
   timestamp: "6 hours ago",
   slideCount: 3,
   /** §8.3.1 Pillar B, core theme, cut to caption length. */
@@ -220,7 +220,7 @@ export const INSTAGRAM = {
   } as Sourced<string>,
   captionTitle: {
     value: "Ũtonga wa Mĩsyĩ na Mĩũnda",
-    source: "§8.3.1 [CHECK REF] Pillar B — Kikamba pillar name, verbatim",
+    source: "§8.3.1 [CHECK REF] Pillar B — Kiswahili pillar name, verbatim",
   } as Sourced<string>,
   cardHeadline: {
     value: "Ksh 85 / kg",
@@ -243,7 +243,7 @@ export const TIKTOK = {
   } as Sourced<string>,
   overlayTitle: {
     value: "Mwanya wa Mwanake na Wathi",
-    source: "§8.3.1 [CHECK REF] Pillar D — Kikamba pillar name, verbatim",
+    source: "§8.3.1 [CHECK REF] Pillar D — Kiswahili pillar name, verbatim",
   } as Sourced<string>,
   /** A hashtag is new coinage, not a reshaping of existing copy. None exist in the proposal. */
   hashtags: { gap: "Hashtags" } as Fillable<string[]>,
@@ -255,7 +255,7 @@ export const YOUTUBE = {
   /** §8.3.1 Pillar A, core theme, pulled into a title. */
   title: {
     value:
-      "The Integrity & Stewardship Ledger: 13 years of Kitui Central NG-CDF audits, opened up",
+      "The Integrity & Stewardship Ledger: 13 years of Mvita NG-CDF audits, opened up",
     source: "§8.3.1 [CHECK REF] Pillar A — core theme and primary formats (documentary video case studies)",
   } as Sourced<string>,
   /** §2.6 — YouTube's stated role in the channel mix. */
@@ -293,7 +293,7 @@ export const USSD = {
   gatewayLabel: "Zero-Rated Gateway",
   networkLabel: "USSD",
   dialingMessage: "Sending…",
-  responseHeader: "Dr. Makali Mulu — Kitui 2027",
+  responseHeader: "Suleiman Shahbal — Mombasa 2027",
   // The menu and option 1's plan items: data/ussd-specimen.ts, the one definition.
   menu: USSD_SPEC.map((o) => ({ key: o.key, label: o.english })) satisfies UssdMenuItem[],
   submenu: PLAN_ITEMS.map((p, i) => ({ key: String(i + 1), label: p })) satisfies UssdMenuItem[],
@@ -311,8 +311,8 @@ export const USSD = {
 export type WhatsAppView = "lock" | "chat" | "status" | "channel";
 export const WHATSAPP_VIEWS: { id: WhatsAppView; label: string; summary: string }[] = [
   { id: "lock", label: "Lock screen", summary: "The lock screen of a ward captain's phone: the ward group, the pledge and a registration text waiting." },
-  { id: "chat", label: "Chat", summary: "A WhatsApp thread to the Mbitini ward captains carrying the ward pledge message and a voice note from Dr. Mulu." },
-  { id: "status", label: "Status", summary: "A WhatsApp Status carrying the campaign's slogan, in English and Kikamba." },
+  { id: "chat", label: "Chat", summary: "A WhatsApp thread to the Mbitini ward captains carrying the ward pledge message and a voice note from Mr Shahbal." },
+  { id: "status", label: "Status", summary: "A WhatsApp Status carrying the campaign's slogan, in English and Kiswahili." },
   { id: "channel", label: "Channel", summary: "A WhatsApp Channel post on the Ward Development Equalization Fund, the devolution-equity pillar." },
 ];
 
@@ -324,7 +324,7 @@ export const WHATSAPP_VIEWS: { id: WhatsAppView; label: string; summary: string 
 export const LOCK_SCREEN = {
   weekday: "Thursday",
   notifications: [
-    { app: "WhatsApp", title: "Ward captains · Mwingi North", body: `${ILLUSTRATIVE_COUNTS.lockGroupMessages} new messages`, ago: "now" },
+    { app: "WhatsApp", title: "Ward captains · Kisauni", body: `${ILLUSTRATIVE_COUNTS.lockGroupMessages} new messages`, ago: "now" },
     { app: "WhatsApp", title: IDENTITY.displayName, body: WHATSAPP.thread[0].text, ago: "2m" },
     { app: "Messages", title: "Campaign shortcode", body: SMS_SPECIMENS[0].english, ago: "1h" },
   ],
@@ -334,8 +334,8 @@ export const LOCK_SCREEN = {
 /** A Status is the slogan, the campaign's only slogan line, in both languages it exists in. */
 export const WHATSAPP_STATUS = {
   posted: "Today, 07:30",
-  lines: [IDENTITY.slogan, IDENTITY.sloganKikamba],
-  source: "IDENTITY.slogan and IDENTITY.sloganKikamba, verbatim",
+  lines: [IDENTITY.slogan, IDENTITY.sloganKiswahili],
+  source: "IDENTITY.slogan and IDENTITY.sloganKiswahili, verbatim",
 } as const;
 
 /** A Channel post is the Facebook page post's body: the same pillar statement, the same proof card. */
@@ -357,12 +357,12 @@ export const WHATSAPP_CHANNEL = {
  *
  * The "after" is the ward pledge, verbatim. The "before" is NOT a real post: it is written for this
  * comparison to have the shape the finding describes ("a record of where he was, with no ward named
- * outside Kitui Central and no ask"), and it is labelled so wherever it is shown.
+ * outside Mvita and no ask"), and it is labelled so wherever it is shown.
  */
 export const BEFORE_AFTER = {
   before: {
     label: "A typical post",
-    text: "Grateful to everyone who joined us today. Great to see so many friends. God bless Kitui.",
+    text: "Grateful to everyone who joined us today. Great to see so many friends. God bless Mombasa.",
     note: "Illustrative, written for this comparison: not a real post.",
     checks: { segment: null, ward: null, pillar: null, ask: null },
   },
@@ -372,7 +372,7 @@ export const BEFORE_AFTER = {
     note: "The campaign's ward pledge, word for word.",
     checks: {
       segment: "Residents who want water",
-      ward: "Mbitini, Kitui Rural",
+      ward: "Mbitini, Likoni",
       pillar: "Fair devolution, water for all",
       ask: "Reply 1 to join",
     },
@@ -392,7 +392,7 @@ export const DISCLOSURE =
 /** What each screen is, for assistive technology and for the caption under the rail. */
 export const CHANNEL_SUMMARY: Record<ChannelId, string> = {
   whatsapp:
-    "A WhatsApp thread to the Mbitini ward captains carrying the ward pledge message and a voice note from Dr. Mulu.",
+    "A WhatsApp thread to the Mbitini ward captains carrying the ward pledge message and a voice note from Mr Shahbal.",
   facebook:
     "A Facebook page post on the Ward Development Equalization Fund, with the water-access proof point beneath it.",
   instagram:
@@ -400,8 +400,8 @@ export const CHANNEL_SUMMARY: Record<ChannelId, string> = {
   tiktok:
     "A vertical TikTok clip on youth enterprise and TVET, from the youth content pillar.",
   youtube:
-    "A YouTube feature on the Kitui Central NG-CDF audit record, from the integrity content pillar.",
-  x: "An X post contrasting the Kitui Central NG-CDF audit record with county pending bills.",
+    "A YouTube feature on the Mvita NG-CDF audit record, from the integrity content pillar.",
+  x: "An X post contrasting the Mvita NG-CDF audit record with county pending bills.",
   ussd:
     "The zero-rated USSD menu on a feature phone — the channel that reaches the offline majority.",
 };

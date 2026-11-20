@@ -43,7 +43,7 @@ export function readerDeep<T>(value: T, key = ""): T {
 }
 
 const PART_NAMES: Record<string, string> = {
-  I: "Kitui today",
+  I: "Mombasa today",
   II: "His standing",
   III: "The strategy",
   IV: "The plan",

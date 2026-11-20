@@ -121,7 +121,7 @@ export function WinningDial({ cons, benchmark, turnout2022 }: { cons: DialConsti
         </p>
         <div className="wd__btns">
           <button type="button" className="plat-btn plat-btn-sm" onClick={() => setT(turnout2022)}>Back to 2022 turnout</button>
-          <SaveImage card={{ type: "big-number", params: { view: "winning", turnout: t.toFixed(1) } }} title="What it takes to win Kitui" />
+          <SaveImage card={{ type: "big-number", params: { view: "winning", turnout: t.toFixed(1) } }} title="What it takes to win Mombasa" />
         </div>
       </div>
 

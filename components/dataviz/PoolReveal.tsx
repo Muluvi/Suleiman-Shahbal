@@ -18,13 +18,13 @@ export function PoolReveal() {
       card={{ type: "fact", params: { id: "pool" } }}
     >
       <RevealCard
-        question="How many registered voters live in the four constituencies where Dr. Mulu has never held office?"
+        question="How many registered voters live in the four constituencies where Mr Shahbal has never held office?"
         answer={
           <p className="rv__ans">
-            <strong className="rv__big">{pool.display}</strong> registered voters in {wards.display} wards of Mwingi North, West, Central and Kitui South: {share.display} of the county.
+            <strong className="rv__big">{pool.display}</strong> registered voters in {wards.display} wards of Kisauni, West, Central and Changamwe: {share.display} of the county.
           </p>
         }
-        aside={<WardLocator wards={TOOL_WARDS.filter((w) => w.pool).map((w) => w.id)} label="Map of Kitui with the pool's wards highlighted" size={150} tone="earth" className="rv__map" />}
+        aside={<WardLocator wards={TOOL_WARDS.filter((w) => w.pool).map((w) => w.id)} label="Map of Mombasa with the pool's wards highlighted" size={150} tone="earth" className="rv__map" />}
       />
     </ExportableVisual>
   );

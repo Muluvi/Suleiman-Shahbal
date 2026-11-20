@@ -2,34 +2,32 @@
 
 import { LazyMount } from "../LazyMount";
 import { ProvenanceLine } from "./ProvenanceLine";
-import { RESOURCE_ENVELOPE_FY2026_27, AUDIT_QUERIES_FY2023_24, PENDING_BILLS_FY2020_21 } from "../../data/fiscal-audit";
+import { RESOURCE_ENVELOPE, FISCAL_PRESSURES } from "../../data/fiscal-audit";
 import FiscalAuditChart, { type FiscalBar } from "../charts/FiscalAuditChart";
 
-const AUDIT_TOTAL = AUDIT_QUERIES_FY2023_24.reduce((sum, q) => sum + q.value, 0);
-const EXPOSURE_TOTAL = AUDIT_TOTAL + PENDING_BILLS_FY2020_21.value;
-
 function fmt(v: number): string {
-  return `KSh${(v / 1_000_000_000).toFixed(2)}bn`;
+  return v >= 1_000_000_000 ? `KSh${(v / 1_000_000_000).toFixed(2)}bn` : `KSh${(v / 1_000_000).toFixed(0)}m`;
 }
 
+const COLORS = ["#e31d2b", "#b45309", "#8295a9"];
 const DATA: FiscalBar[] = [
-  { name: "Resource envelope (FY2026/27)", value: RESOURCE_ENVELOPE_FY2026_27.value, display: `${fmt(RESOURCE_ENVELOPE_FY2026_27.value)} — Section 1.5`, color: "#0056a8" },
-  { name: "Audit queries (FY2023/24)", value: AUDIT_TOTAL, display: `${fmt(AUDIT_TOTAL)} — sum of the four Auditor-General queries above`, color: "#e31d2b" },
-  { name: "Pending bills (FY2020/21)", value: PENDING_BILLS_FY2020_21.value, display: `${fmt(PENDING_BILLS_FY2020_21.value)} (approx.)`, color: "#b45309" },
+  { name: "Budget (FY2025/26)", value: RESOURCE_ENVELOPE.value, display: `${fmt(RESOURCE_ENVELOPE.value)} — Section 1.5`, color: "#0056a8" },
+  ...FISCAL_PRESSURES.map((f, i) => ({ name: f.label, value: f.value, display: fmt(f.value), color: COLORS[i] })),
 ];
+const LATEST = FISCAL_PRESSURES[0];
 
 export function FiscalAuditChartBlockContent() {
   return (
     <div className="not-prose bg-card border border-line rounded-2xl p-4 sm:p-5 shadow-sm my-6 print-avoid-break">
       <div className="flex items-center gap-2 mb-1">
         <span className="w-1.5 h-6 bg-accent rounded-full shrink-0" />
-        <h4 className="font-serif text-sm font-bold text-ink">Resource Envelope Against Audit Exposure</h4>
+        <h4 className="font-serif text-sm font-bold text-ink">The Budget Against What the County Owes</h4>
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
-        Audit queries and pending bills together are <strong className="text-ink">{fmt(EXPOSURE_TOTAL)}</strong> — about{" "}
-        <strong className="text-ink">{((EXPOSURE_TOTAL / RESOURCE_ENVELOPE_FY2026_27.value) * 100).toFixed(0)}%</strong> of
-        the annual resource envelope. That comparison is this chart&apos;s only computation: a sum of figures already
-        stated above and in Section 1.5, not a new estimate.
+        The pending bills at 30 June 2026 were <strong className="text-ink">{fmt(LATEST.value)}</strong> — about{" "}
+        <strong className="text-ink">{((LATEST.value / RESOURCE_ENVELOPE.value) * 100).toFixed(0)}%</strong> of the
+        FY2025/26 budget. That ratio is this chart&apos;s only computation; the figures are from different sources and
+        years and are not added together.
       </p>
 
       <div className="w-full t-micro mb-4">
@@ -59,7 +57,7 @@ export function FiscalAuditChartBlockContent() {
       </div>
 
       <ProvenanceLine
-        provenance={[RESOURCE_ENVELOPE_FY2026_27.provenance, PENDING_BILLS_FY2020_21.provenance, ...AUDIT_QUERIES_FY2023_24.map((q) => q.provenance)]}
+        provenance={[RESOURCE_ENVELOPE.provenance, ...FISCAL_PRESSURES.map((q) => q.provenance)]}
       />
     </div>
   );

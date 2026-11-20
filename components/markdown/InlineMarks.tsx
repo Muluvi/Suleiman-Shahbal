@@ -169,13 +169,13 @@ export function WindowChip() {
   if (isPassed(NOMINATION_WINDOW.end, today)) {
     return (
       <span className="wchip">
-        <span className="wchip__k">Wiper decision:</span> Reported for {NOMINATION_WINDOW.short} · passed
+        <span className="wchip__k">The New Democrats decision:</span> Reported for {NOMINATION_WINDOW.short} · passed
       </span>
     );
   }
   return (
     <span className="wchip">
-      <span className="wchip__k">Wiper decision:</span> {NOMINATION_WINDOW.short}
+      <span className="wchip__k">The New Democrats decision:</span> {NOMINATION_WINDOW.short}
     </span>
   );
 }

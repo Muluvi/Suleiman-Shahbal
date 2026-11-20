@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 /**
- * A basic keypad phone (visual upgrade, A3): the handset many Kitui voters actually carry, for SMS
+ * A basic keypad phone (visual upgrade, A3): the handset many Mombasa voters actually carry, for SMS
  * and USSD. Generic on purpose: moulded plastic, a small monochrome panel, a twelve-key pad and
  * the two call keys. No maker, no network name.
  *

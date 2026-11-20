@@ -22,9 +22,9 @@ import { Portrait } from "../Portrait";
 
 /** §6.1, paragraph 1, verbatim. Split only so the operative phrase can carry emphasis. */
 const SEGMENTS: { text: string; accent?: boolean }[] = [
-  { text: "Dr. Makali Mulu is the" },
-  { text: "Economist Governor", accent: true },
-  { text: "Kitui needs." },
+  { text: "Suleiman Shahbal is the" },
+  { text: "Builder Governor", accent: true },
+  { text: "Mombasa needs." },
 ];
 
 export function EconomistGovernorThesis() {

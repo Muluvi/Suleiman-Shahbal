@@ -51,7 +51,7 @@ export function ResourceEnvelopeBlock() {
         The three components sum to KSh{COMPONENT_SUM.toFixed(2)}bn, KSh{(COMPONENT_SUM - STATED_TOTAL).toFixed(2)}bn above the published
         KSh{STATED_TOTAL.toFixed(2)}bn total. That gap is rounding in the source document, shown here rather than reconciled.
       </p>
-      <SourceLine sources={["Kitui County Fiscal Strategy Paper, FY2026/27"]} />
+      <SourceLine sources={["Mombasa County Fiscal Strategy Paper, FY2026/27"]} />
     </div>
   );
 }

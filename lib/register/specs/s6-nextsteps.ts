@@ -14,7 +14,7 @@ const DEPS: { item: string; gating: boolean; why: string }[] = [
   { item: "The IEBC 2026 register, county total then ward", gating: false, why: `The highest-priority data request: it re-bases every ward figure in Section 3. The county total, ${fmt("register.2026")}, is Tier 3 and unconfirmed until IEBC's own July figure is in hand` },
   { item: "Access to the NG-CDF project record, not the beneficiary list", gating: false, why: "Verified proof points; beneficiary data is off-limits" },
   { item: "Sign-off on the engagement level", gating: false, why: "So the team can be assembled" },
-  { item: "Wiper's 2027 nomination rules and timetable, or the NEC resolution, as soon as the party issues them", gating: false, why: "The document that confirms or overturns the Phase −1 plan" },
+  { item: "The New Democrats' 2027 nomination rules and timetable, or the NEC resolution, as soon as the party issues them", gating: false, why: "The document that confirms or overturns the Phase −1 plan" },
 ];
 
 export const FIG_6_1: FigureSpec = {

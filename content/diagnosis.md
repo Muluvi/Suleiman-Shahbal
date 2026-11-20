@@ -1,17 +1,17 @@
 ```lead
-The working diagnosis is that Dr. Makali Mulu's gap is one of recognition outside Kitui Central, not of credibility. It is a hypothesis, and Week 1 tests it against his own channel data before anything is committed.
+The working diagnosis is that Mr Shahbal's gap is one of turnout and machinery, not of recognition or credibility. It is a hypothesis, and Week 1 tests it against his own channel data before anything is committed.
 ```
 
-The working diagnosis is that Dr. Makali Mulu's gap is one of recognition outside Kitui Central, not of credibility. It is a hypothesis, and Week 1 tests it against his own channel data before anything is committed. This chapter states the evidence for it, what could overturn it, what the data cannot yet tell us, and the assumptions the plan rests on.
+The working diagnosis is that Mr Shahbal's gap is one of turnout and machinery, not of recognition or credibility. It is a hypothesis, and Week 1 tests it against his own channel data before anything is committed. This chapter states the evidence for it, what could overturn it, what the data cannot yet tell us, and the assumptions the plan rests on.
 
 ## 7.1 What the evidence says
 
 ```visual
 kind: hypothesis
-hypothesis: "Dr. Mulu's gap is substantially a **geography-of-recognition** problem concentrated outside Kitui Central, not a deficit of leadership credibility, and recognition is the most addressable kind of gap, through targeted digital output and SMS/USSD outreach. Phase −1 is built to close it."
-for: "{{pool.share}}% of the register lives in the four constituencies where he has never held office (Section 6.2). Five of the twelve largest wards are among them (Section 6.2). Two constituencies, Kitui East and Kitui South, will not carry party flow (Section 6.3)."
-test: "Week 1 tests the hypothesis against Dr. Mulu's own channel data before anything is committed against it (Section 7.2)."
-body: "That test is not a formality; it is the first deliverable. A further line of support: NDMA ranks Mwingi North and Kitui South the two most food-insecure sub-counties in July 2025 and Kitui Central the least (Tier 1, Section 3.2), so the pool is where county service delivery is under the most visible strain, and a candidate who verifies delivery has the most to show there."
+hypothesis: "Mr Shahbal's gap is substantially a **turnout-and-machinery** problem, not a recognition problem: Mombasa has known his name since 2013, but no party machine has carried his voters to vote, and in 2022 most registered voters stayed home. Turnout is addressable through a ward-level ground operation, consented SMS/USSD and a polling-agent network the campaign builds itself. Phase −1 is built to start it."
+for: "He received {{result.2013.gov.shahbal}} votes in 2013, more than the {{result.2022.gov.nassir}} that won in 2022 (Section 2.2). {{abstained.2022}} registered voters cast no valid governor vote in 2022 (Section 2.1). He contests 2027 outside ODM and UDA (Section 6.3). Three constituencies holding {{pool.share}}% of the register were decided by fewer than 2,000 votes each (Section 2.4)."
+test: "Week 1 tests the hypothesis against his own channel data before anything is committed against it (Section 7.2)."
+body: "That test is not a formality; it is the first deliverable. A further line of support: the 2022 governor election was held three weeks after the presidential result, on a day with no national race to bring voters out, and turnout fell to {{turnout.2022}}% (Section 2.1). In 2027 the governor's race is on general-election day, so the turnout question is who organises the extra voters, not whether they come."
 ```
 
 ```figure
@@ -20,18 +20,18 @@ id: fig-3-11-evidence
 
 ## 7.2 What could overturn it
 
-**The case against.** The 2022 Woman Representative race was won with **{{result.2022.womanrep.zamzam}} votes**, more than the **{{result.2022.gov.nassir}}** that won the governorship the same year (Tier 2, Section 2.2). Countywide votes above the benchmark have already been won in Kitui. That is not the profile of a race decided by passive name recognition alone.
+**The case against.** His vote fell from {{result.2013.gov.shahbal}} in 2013 to {{result.2017.gov.shahbal}} in 2017 while the winner's rose (Tier 1, Section 2.2). If voters who knew him chose against him in 2017, the gap is not only machinery: it is a reason to vote against him that the campaign has to find and answer. The business record, and the SEZ in particular, could be part of it (Section 3.8).
 
-**The test.** Week 1 reads ninety days of Dr. Mulu's own channels and measures how much of his reach lands in the pool (method: Section 18.5). If his reach is already landing in Mwingi and failing to convert, the problem is the message, not the reach, and the response changes. Section 12.7 sets out in advance what each finding changes, so the audit cannot be read backwards into whatever was already planned.
+**The test.** Week 1 reads ninety days of his own channels and measures how much of his reach lands in the pool and how it converts (method: Section 18.5). The 2017 Forms 37B, once in hand, show where his 2013 voters went. Section 12.7 sets out in advance what each finding changes, so the audit cannot be read backwards into whatever was already planned.
 
 ## 7.3 What the data cannot yet show
 
 Where data is missing, this plan names the gap rather than filling it:
 
-1.  **Ward-level voter preference:** **not measured, and not sought.** This plan forms strategy from existing records and its own analysis only. The nearest official record is how each ward actually voted: the IEBC's ward and polling-station forms for 2017 and 2022 (Section 2.2), which the analysis uses as soon as they are in hand. Until then it works from where he has held office.
-2.  **Ward-by-ward results for the 2013 governor's race:** a **named data gap (Tier 1 gap).** The IEBC's certified ward returns for 2013 are not in the campaign's records.
-3.  **Ward-by-ward tallies for the 2017 governor's race:** a **named data gap (Tier 1 gap).** The countywide certified totals are established (Ngilu {{result.2017.gov.joho}}, Musila {{result.2017.gov.shahbal}}, Malombe {{result.2017.gov.omar}}, Tier 1); the ward breakdown sheets are treated as unverified until they are retrieved from the IEBC.
-4.  **Three segment sizes:** the agro-pastoral, the formal-sector and the diaspora voter counts are not published by any official source. Chapter 11 gives the census context for each; none is estimated, and each stays unsized until an official source publishes it.
+1.  **Ward-level voter preference:** **not measured, and not sought.** This plan forms strategy from existing records and its own analysis only. The nearest official record is how each ward actually voted: the IEBC's ward and polling-station forms for 2013, 2017 and 2022 (Section 2.2), which the analysis uses as soon as they are in hand.
+2.  **Where his 2013 and 2017 votes were cast:** a **named data gap (Tier 1 gap).** The countywide totals are established ({{result.2013.gov.shahbal}} and {{result.2017.gov.shahbal}}, Tier 1); the constituency and ward returns (Forms 37B and 37A) are to be retrieved from the IEBC.
+3.  **The 2026 register:** a **named data gap.** The Mombasa row of the IEBC's 2026 ECVR annex is not in hand, so every figure uses the 2022 register.
+4.  **Segment sizes:** port workers, traders, and the up-country communities are not published as voter counts by any official source. Chapter 11 gives the census context for each; none is estimated.
 
 ```figure
 id: fig-3-10-gaps
@@ -54,14 +54,14 @@ The variables the voter model uses are defined in [the voter model and its varia
 kind: cards
 preset: assumption
 items:
-  - title: "1. The Wiper ticket is decided by a party-run countywide selection, not a delegates' contest."
-    head: { label: "If it fails", text: "If it becomes a delegate primary, the targeting model changes from countywide name recognition to delegate arithmetic." }
-    body: "This is reported and not confirmed by the party (Tier 3); the party's own published rules would confirm it."
-  - title: "2. The nomination window falls when it is reported to."
-    head: { label: "If it fails", text: "A later date lengthens the sprint; an earlier one compresses it and forces the decision rules in Section 12.7 sooner." }
-    body: "That is the window Section 23.1 states and the one Section 8.1's timeline is built on. It remains a **Tier 3** expectation rather than a date the party has published. Every deadline in Section 8.1 and the Phase −1 sprint in Section 14.1 are set by that window. **The campaign should confirm the window against the party's own published timetable before committing effort against it.**"
+  - title: "1. The New Democrats nominates him without a contested primary."
+    head: { label: "If it fails", text: "If the party holds a contested primary, Phase −1 adds a membership drive and the nomination dates in Section 14 become hard deadlines." }
+    body: "This is reported (Tier 2) and not confirmed by the party's certified nomination rules, which would confirm it."
+  - title: "2. The party meets the IEBC calendar."
+    head: { label: "If it fails", text: "A party that misses a membership-list or nomination deadline puts him on the ballot only as an independent, on the independent candidates' earlier deadlines." }
+    body: "The gazetted IEBC calendar (Section 14) sets the dates: certified membership lists by 23 March 2027, primaries by 8 May 2027, and governor nominations from 3 to 6 June 2027. **The campaign should confirm The New Democrats' own timetable against these dates before committing effort against it.**"
   - title: "3. The register and connectivity figures hold."
-    body: "The {{register.2026}} registered voters (July 2026), the {{ict.offline}}% of residents offline (CA/KNBS 2023/24) and the 2022 ward distribution in Section 2.3 are the most recent published figures. The offline layer in Section 15.3.3 is sized against them. The July 2026 total is Tier 3, reported by an aggregator, until IEBC's own figure is in hand."
+    body: "The {{register.2022}} registered voters (2022), the {{ict.offline}}% of residents not online (CA/KNBS 2023/24) and the 2022 ward distribution in Section 2.3 are the most recent published figures. The offline layer in Section 15.3.3 is sized against them. No 2026 Mombasa register figure is in hand."
   - title: "4. The campaign appoints the named roles."
     body: "The data-protection and electoral-law reviewer and the sign-language provider are campaign appointments, not Firefly's. Section 22.2 lists them. Firefly assembles no team: the one in post stays in post and runs the campaign on the platform (Section 17.5)."
   - title: "5. The Facebook asset is a Page, not a personal profile in professional mode."

@@ -55,12 +55,12 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
     shortName: "Rural agrarian",
     sizing: sizingOf("agrarian"),
     connectivity: "73.8% offline countywide (CA/KNBS 2023/24). 2G feature-phone dominance, high evening vernacular radio listenership.",
-    geographicBase: "Rural belts across Kitui Central, Kitui West, Kitui Rural, Mwingi Central, Mwingi West and Kitui East — 36 non-urban wards.",
+    geographicBase: "Rural belts across Mvita, Jomvu, Likoni, Kisauni, Kisauni and Likoni — 36 non-urban wards.",
     coreAnxiety:
       "Persistent seasonal crop failure, unmitigated drought shocks, exploitative middlemen for green grams and pigeon peas, erratic subsidised seed and fertiliser distribution.",
     valueProposition:
       "Public finance expertise as a guarantee of guaranteed minimum returns, county-backed cold storage and aggregate marketing boards, and decentralised solar-powered sand dam and borehole expansion.",
-    channels: ["Kamba vernacular radio, 06:00–08:30 and 19:00–21:30", "Localised bulk SMS in Kikamba", "Market-day barazas", "Church fellowships and SACCO meetings"],
+    channels: ["Coast vernacular radio, 06:00–08:30 and 19:00–21:30", "Localised bulk SMS in Kiswahili", "Market-day barazas", "Church fellowships and SACCO meetings"],
   },
   {
     id: "pastoralist",
@@ -69,11 +69,11 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
     shortName: "Agro-pastoralist",
     sizing: sizingOf("pastoralist"),
     connectivity: "Highly dispersed. Intermittent 2G coverage, heavy battery and solar radio listenership.",
-    geographicBase: "Mwingi North, Mwingi Central, Kitui South and Kitui East borderlands.",
+    geographicBase: "Kisauni, Kisauni, Changamwe and Likoni borderlands.",
     coreAnxiety:
       "Banditry along the Tana River and Garissa borders, pasture depletion, no county livestock off-take during drought, disease outbreaks, predatory livestock buyers.",
     valueProposition:
-      "County-financed livestock vaccination corridors, modern abattoir facilities in Mwingi and Mutomo, and assertive security coordination backed by parliamentary budgeting influence.",
+      "County-financed livestock vaccination corridors, modern abattoir facilities in the north mainland and Mutomo, and assertive security coordination backed by parliamentary budgeting influence.",
     channels: ["Vernacular radio pastoralist segments", "Weekly livestock market hubs", "Clan elders and grazing committee chairs"],
   },
   {
@@ -83,7 +83,7 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
     shortName: "Youth 18–35",
     sizing: sizingOf("youth"),
     connectivity: "~70%+ smartphone adoption within the cohort. WhatsApp, TikTok, Facebook Mobile, YouTube.",
-    geographicBase: "Peri-urban corridors — Kitui Township, the Kwa Vonza university belt, Mwingi Central town, Mutonguni, Kabati — and rural trading centres.",
+    geographicBase: "Peri-urban corridors — Mombasa Township, the Kwa Vonza university belt, Kisauni town, Mutonguni, Kabati — and rural trading centres.",
     coreAnxiety:
       "Chronic un- and under-employment, predatory digital lending apps, arbitrary county revenue enforcement against bodaboda riders and kiosks, no startup capital.",
     valueProposition:
@@ -97,12 +97,12 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
     shortName: "Urban commerce",
     sizing: sizingOf("msme"),
     connectivity: "~45%–55% smartphone connectivity. Constant WhatsApp business use, daily county revenue contact.",
-    geographicBase: "Kitui Township, Mwingi Central town, Kwa Vonza/Yatta, Mutomo, Matinyani and Nguutani.",
+    geographicBase: "Mombasa Township, Kisauni town, Kwa Vonza/Yatta, Mutomo, Matinyani and Nguutani.",
     coreAnxiety:
       "Excessive cess without basic market infrastructure, arbitrary harassment by county enforcement, market fires with no response.",
     valueProposition:
       "The Economist's Business Charter — a single unified business permit, 24-hour solar-lit and secured markets, modern sanitation, and predictable county tax codes.",
-    channels: ["Business-district walk-throughs", "Trader association meetings", "KNCCI Kitui chapter", "Market-day PA activations"],
+    channels: ["Business-district walk-throughs", "Trader association meetings", "KNCCI Mombasa chapter", "Market-day PA activations"],
   },
   {
     id: "professionals",
@@ -111,7 +111,7 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
     shortName: "Professionals",
     sizing: sizingOf("professionals"),
     connectivity: ">90% smartphone and laptop connectivity. Active on X, Facebook, LinkedIn and professional WhatsApp groups.",
-    geographicBase: "Concentrated in Kitui town, Mwingi town and county administrative centres.",
+    geographicBase: "Concentrated in Mombasa town, the north mainland town and county administrative centres.",
     coreAnxiety:
       "Delayed statutory deductions, stalled promotions, poor hospital drug supplies undermining medical practice, politicised public service appointments.",
     valueProposition:
@@ -121,7 +121,7 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
   {
     id: "diaspora",
     index: 6,
-    name: "Out-of-county Kamba diaspora",
+    name: "Out-of-county Coast diaspora",
     shortName: "Diaspora",
     sizing: sizingOf("diaspora"),
     connectivity: ">95% internet and smartphone connected. Active on X, Facebook, WhatsApp, YouTube and national podcasts.",
@@ -129,7 +129,7 @@ const AUDIENCE_SEGMENTS: AudienceSegment[] = [
     coreAnxiety:
       "Inefficient county spending that leaves rural parents and siblings in perpetual poverty, requiring continuous emergency bailouts from the diaspora.",
     valueProposition:
-      "Dr. Mulu as the diaspora's trusted steward — an economist who will manage county funds with audited transparency and create an enabling environment for diaspora investment.",
+      "Mr Shahbal as the diaspora's trusted steward — an economist who will manage county funds with audited transparency and create an enabling environment for diaspora investment.",
     channels: ["Nairobi and Coast geotargeted ads", "Diaspora town halls", "National podcasts"],
   },
 ];

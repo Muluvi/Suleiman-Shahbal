@@ -3,18 +3,18 @@
  *
  * WHAT THIS REPLACES. Two box-drawing blocks eleven lines apart: a MESSAGE ARCHITECTURE HIERARCHY
  * drawing the claim over three pillars, and a CENTRAL CAMPAIGN CLAIM & SLOGAN box giving the claim
- * in English, Kikamba and Kiswahili with its primary evidence. They are two halves of one message
+ * in English, Kiswahili with its primary evidence. They are two halves of one message
  * house, and neither is complete without the other: the hierarchy states the pillars without the
  * translations, the slogan box states the translations without the pillars.
  *
- * WHY THE TRANSLATIONS ARE THE POINT. §3.6.2 forbids machine translation of Kikamba outright and
+ * WHY THE TRANSLATIONS ARE THE POINT. §3.6.2 forbids machine translation of Kiswahili outright and
  * requires a named cultural sign-off for every vernacular line, and §3.6.1 puts 76% of the county's
- * primary reach in Kikamba. A message house that drew the English claim large and left the Kikamba
+ * primary reach in Kiswahili. A message house that drew the English claim large and left the Kiswahili
  * one in a footnote would invert the document's own argument about which version does the work. So
  * all three sit at the same size, in the order the campaign speaks them.
  *
  * NOTHING IS TRANSLATED, SHORTENED OR RE-PUNCTUATED HERE. Every line is the block's, character for
- * character, including the Kikamba orthography. A figure that quietly normalised a vernacular
+ * character, including the Kiswahili orthography. A figure that quietly normalised a vernacular
  * slogan would be doing the exact thing §3.6.2 exists to prevent.
  */
 import type { FigureSeries } from "./types";
@@ -22,9 +22,9 @@ import type { FigureSeries } from "./types";
 /* ------------------------------------------------------------------ §3.6.2 cultural registers */
 
 /**
- * Four technical terms, the literal translation that fails, and the approved Kikamba framing.
+ * Four technical terms, the literal translation that fails, and the approved Kiswahili framing.
  *
- * THE ORTHOGRAPHY IS THE DATA. Every Kikamba string below carries its diacritics exactly as
+ * THE ORTHOGRAPHY IS THE DATA. Every Kiswahili string below carries its diacritics exactly as
  * §3.6.2 prints them — ĩ and ũ are distinct letters, not decorated vowels, and §3.6.2's own second
  * rule of engagement forbids machine translation precisely because automated handling destroys
  * this. A figure that normalised them would be the failure the section warns about.
@@ -66,9 +66,9 @@ export const REGISTERS_SERIES: FigureSeries = {
   measure: "§12.5's proverbial framing protocol — the term, the translation that fails, and the approved idiom",
   points: [],
   note:
-    "Every Kikamba string is transcribed with its diacritics exactly as §12.5 prints them. ĩ and " +
+    "Every Kiswahili string is transcribed with its diacritics exactly as §12.5 prints them. ĩ and " +
     "ũ are distinct letters rather than decorated vowels, and §12.5's own rules of engagement " +
-    "forbid machine translation of Kikamba for this reason.",
+    "forbid machine translation of Kiswahili for this reason.",
 };
 
 /* ------------------------------------------------------------------ §3.6.3 the QC gateway */
@@ -84,7 +84,7 @@ export const QC_STAGES = [
   {
     title: "Parallel adaptation — not literal translation",
     steps: [
-      "Lead Kikamba writer drafts the culturally resonant vernacular version.",
+      "Lead Kiswahili writer drafts the culturally resonant vernacular version.",
       "Swahili/Sheng specialist drafts the street-smart and market versions.",
     ],
   },
@@ -95,16 +95,16 @@ export const QC_STAGES = [
     ],
   },
   {
-    title: "Kikamba cultural sign-off and executive clearance",
+    title: "Kiswahili cultural sign-off and executive clearance",
     steps: ["Final sign-off by the Campaign Manager before release to audio studio or print."],
     emphasis:
-      "Mandatory sign-off authority for Kikamba copy: Lead Cultural & Vernacular Communications Advisor (native Kamba elder / senior vernacular broadcaster).",
+      "Mandatory sign-off authority for Kiswahili copy: Lead Cultural & Vernacular Communications Advisor (native Coast elder / senior vernacular broadcaster).",
   },
 ];
 
 export const QC_SERIES: FigureSeries = {
   id: "qc-gateway",
-  headline: "Four gates between an English draft and a Kikamba broadcast",
+  headline: "Four gates between an English draft and a Kiswahili broadcast",
   measure: "§12.5's translation and quality-control gateway, in order",
   points: [],
   note:

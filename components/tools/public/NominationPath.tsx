@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 import { SaveImage } from "../../visual/SaveImage";
 
 type Item = { id: string; label: string; detail: string };
-const KEY = "kitui-nomination-path";
+const KEY = "mombasa-nomination-path";
 
 // Held in memory too, so ticking still works where browser storage is blocked.
 let memory = "{}";

@@ -13,10 +13,10 @@ export function ChatExplainer() {
   const offline = resolveFigure({ id: "ict.offline", label: "of residents offline" });
   const phone = resolveFigure({ id: "ict.phone", label: "own a mobile phone" });
   const lines: { who: "a" | "b"; text: string }[] = [
-    { who: "a", text: "Did you see Dr. Mulu's post on Facebook?" },
-    { who: "b", text: `Most people here never will. Only ${internet.display} of Kitui uses the internet. ${offline.display} are offline.` },
+    { who: "a", text: "Did you see Mr Shahbal's post on Facebook?" },
+    { who: "b", text: `Most people here never will. Only ${internet.display} of Mombasa uses the internet. ${offline.display} are offline.` },
     { who: "a", text: "So how does a message reach them?" },
-    { who: "b", text: `Radio in Kikamba, and the phone. ${phone.display} own one, and a basic keypad phone is enough for an SMS or the USSD menu.` },
+    { who: "b", text: `Radio in Kiswahili, and the phone. ${phone.display} own one, and a basic keypad phone is enough for an SMS or the USSD menu.` },
     { who: "a", text: "And the rest?" },
     { who: "b", text: "Market days, the church on Sunday, and the money agent's kiosk. That is where the vote is." },
   ];
@@ -31,12 +31,12 @@ export function ChatExplainer() {
       <div className="cx" role="log" aria-label="An illustrative conversation">
         <p className="cx__who">
           <span>A cousin in Nairobi</span>
-          <span>A trader in Kitui</span>
+          <span>A trader in Mombasa</span>
         </p>
         <ol className="cx__thread">
           {lines.map((l, i) => (
             <li key={i} className={`cx__msg cx__msg--${l.who} xv-rise`} style={{ "--i": i } as React.CSSProperties}>
-              <span className="sr-only">{l.who === "a" ? "Cousin in Nairobi: " : "Trader in Kitui: "}</span>
+              <span className="sr-only">{l.who === "a" ? "Cousin in Nairobi: " : "Trader in Mombasa: "}</span>
               {l.text}
             </li>
           ))}

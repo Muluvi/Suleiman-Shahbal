@@ -16,7 +16,7 @@ import { TierBadge } from "./TierBadge";
  *
  * What replaces them is what §3.4 actually asserts: a STRUCTURAL recognition status per
  * constituency — home anchor, neighbouring belt, or critical deficit — derived from where
- * Dr. Mulu has held office, not from any survey. The ward list is the top 12 by register,
+ * Mr Shahbal has held office, not from any survey. The ward list is the top 12 by register,
  * computed from data/ward-register.json rather than typed in; §3.4's own table is that same
  * top 12, so the two cannot drift apart.
  */
@@ -27,8 +27,8 @@ type RecognitionStatus = "anchor" | "belt" | "moderate" | "deficit";
  * FOUR grades, not three, because §3.4's cross-match table used four.
  *
  * The block this panel retired distinguished MODERATE/HIGH (Neighboring belt) — Mutonguni and
- * Kauwi in Kitui West — from a plain MODERATE (University/Peri-urban) for Kwa Vonza/Yatta in
- * Kitui Rural. An earlier version of this panel called both of them "Neighbouring belt", which
+ * Kauwi in Jomvu — from a plain MODERATE (University/Peri-urban) for Kwa Vonza/Yatta in
+ * Likoni. An earlier version of this panel called both of them "Neighbouring belt", which
  * would have made the retirement a quiet loss of a distinction the document drew deliberately:
  * Kwa Vonza/Yatta's recall is a campus-town effect, not a border effect.
  */
@@ -59,8 +59,8 @@ const STATUS_META: Record<RecognitionStatus, { label: string; note: string; clas
   },
 };
 
-/** Per §3.4: the anchor is Kitui Central, Kitui West is the neighbouring belt and Kitui Rural
- *  the peri-urban moderate; Mwingi (all three), Kitui South and Kitui East are the deficit zones. */
+/** Per §3.4: the anchor is Mvita, Jomvu is the neighbouring belt and Likoni
+ *  the peri-urban moderate; the north mainland (all three), Changamwe and Likoni are the deficit zones. */
 const STATUS_BY_CONSTITUENCY: Record<string, RecognitionStatus> = {
   "kitui-central": "anchor",
   "kitui-west": "belt",
@@ -76,7 +76,7 @@ const STATUS_BY_CONSTITUENCY: Record<string, RecognitionStatus> = {
  * The qualifier §3.4 printed against each ward, where it printed one more specific than its
  * constituency's.
  *
- * Tseikuru and Kyuso are both Mwingi North and both critical deficits, and the table gave them
+ * Tseikuru and Kyuso are both Kisauni and both critical deficits, and the table gave them
  * different reasons — Tseikuru is the party's own base in the north, Kyuso simply out of
  * constituency. A grade per constituency cannot carry that, so the ward carries it.
  */
@@ -90,7 +90,7 @@ const WARD_QUALIFIER: Record<string, string> = {
 
 const KITUI_SOUTH_TOTAL = CONSTITUENCIES.find((c) => c.id === "kitui-south")?.voters ?? 0;
 
-/** §3.4's "Total Decisive Deficit Pool" — Mwingi bloc plus Kitui South, both from the register. */
+/** §3.4's "Total Decisive Deficit Pool" — the north mainland bloc plus Changamwe, both from the register. */
 const DEFICIT_POOL = MWINGI_BLOC_TOTAL + KITUI_SOUTH_TOTAL;
 const DEFICIT_POOL_SHARE = (DEFICIT_POOL / COUNTY_TOTAL_WARDS) * 100;
 const POOL_CONSTITUENCIES = new Set(["mwingi-north", "mwingi-central", "mwingi-west", "kitui-south"]);
@@ -184,7 +184,7 @@ export function RecognitionDeficitOverlay() {
         <div className="p-4 sm:p-4">
           <div className="t-label font-black text-muted">Phase −1 geofenced spend</div>
           <div className="font-serif text-xl sm:text-2xl font-bold text-accent mt-0.5 tabular-nums">65%</div>
-          <div className="t-small text-muted mt-0.5">Mwingi (all three) + Kitui South</div>
+          <div className="t-small text-muted mt-0.5">the north mainland (all three) + Changamwe</div>
         </div>
       </div>
 
@@ -242,12 +242,12 @@ export function RecognitionDeficitOverlay() {
           </span>
         </p>
         <p className="t-small text-muted font-medium pl-[1.125rem]">
-          Either way, the wards that decide the election are the wards where Dr. Mulu is least known.
+          Either way, the wards that decide the election are the wards where Mr Shahbal is least known.
         </p>
         <p className="t-small text-muted flex items-start gap-1">
           <AlertTriangle size={12} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
           <span>
-            Recognition status here is <strong>structural</strong> — derived from where Dr. Mulu has held office, not
+            Recognition status here is <strong>structural</strong> — derived from where Mr Shahbal has held office, not
             from any measure of opinion. §7.3 records ward-level recognition as unmeasured; the IEBC&rsquo;s ward-level
             results are the official record the analysis reads next.
           </span>
@@ -255,7 +255,7 @@ export function RecognitionDeficitOverlay() {
         <p className="t-small text-muted flex items-start gap-1">
           <Radio size={12} className="text-accent shrink-0 mt-0.5" aria-hidden="true" />
           <span>
-            Ward figures: IEBC 2022 register, all 40 wards. Ranking computed from that register, not asserted.
+            Ward figures: IEBC 2022 register, all 30 wards. Ranking computed from that register, not asserted.
           </span>
         </p>
       </div>

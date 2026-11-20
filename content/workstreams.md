@@ -20,7 +20,7 @@ items:
     badge: "workstreams 1 to 4"
   - title: "Publishing and earned media"
     badge: "5 and 6"
-    text: "Two workstreams: paid media across the platforms that reach the connected minority, and earned media in a county whose Kamba-language radio is largely politically owned."
+    text: "Two workstreams: paid media across the platforms that reach the connected minority, and earned media in a county whose Coast radio mixes commercial, faith and community stations."
   - title: "Ground and offline reach"
     badge: "7 to 10"
     text: "Four workstreams that reach voters off the internet: ground-digital integration, the field-to-digital loop, the SMS, USSD and voice layer, and the volunteer programme behind them."
@@ -37,11 +37,11 @@ kind: checklist
 title: "Digital infrastructure, brand and civic content"
 items:
   - label: "Web management and digital architecture"
-    body: "Development and deployment of a high-performance campaign web portal hosting the manifesto, tracking media appearances, and capturing volunteer data. Lightweight, rapid-loading frameworks so the site is usable on 3G and on feature-phone browsers — non-negotiable in a county at {{ict.internet}}% internet use (CA/KNBS 2023/24). **WCAG 2.1 AA compliance from build, not retrofitted** (Section 15.1.4). Search engine optimisation for \"Kitui Governor 2027\", \"Kitui development\" and related terms. A \"Meet Dr. Mulu\" page with biography, parliamentary record, M&E credentials and vision for Kitui. **Audit before build:** an existing Kitui Central NG-CDF web presence is already live. Phase 0 audits and integrates it rather than duplicating it."
+    body: "Development and deployment of a high-performance campaign web portal hosting the manifesto, tracking media appearances, and capturing volunteer data. Lightweight, rapid-loading frameworks so the site is usable on 3G and on feature-phone browsers — non-negotiable in a county where {{ict.offline}}% are not online (CA/KNBS 2023/24). **WCAG 2.1 AA compliance from build, not retrofitted** (Section 15.1.4). Search engine optimisation for \"Mombasa Governor 2027\", \"Mombasa development\" and related terms. A \"Meet Mr Shahbal\" page with biography, EALA record, builder's records and vision for Mombasa. **Audit before build:** an existing Mombasa Central NG-CDF web presence is already live. Phase 0 audits and integrates it rather than duplicating it."
   - label: "Brand management"
     body: "Core messaging matrix ensuring consistency across broadcast, print and digital. Dynamic digital press kits for media houses and influencers — approved biographies, high-resolution assets, policy briefs (Section 15.2.2). Daily management of Facebook, X, Instagram, TikTok, YouTube and WhatsApp stays with your team, which publishes and holds the credentials (Section 13.2); the team sets the standard in its weekly brief. Community management: your team responds to comments, DMs and mentions within **2 hours** during peak periods."
   - label: "Civic content and visual data"
-    body: "Infographic analyses highlighting Kitui's economic challenges and Dr. Mulu's proposed solutions, anchored to the KSh {{budget.total|bn}} billion county envelope. Content calendars tailored to each segment in Section 10.4. Graphics, short video, motion graphics and policy explainers in English, Kiswahili and Kikamba. Human-interest storytelling: constituent testimonials, verified project outcomes, vision-driven narratives. A weekly **\"Dr. Mulu Explains\"** series breaking down county budgets, revenue sources and development economics in plain language."
+    body: "Infographic analyses highlighting Mombasa's economic challenges and Mr Shahbal's proposed solutions, anchored to the KSh {{budget.total|bn}} billion county envelope. Content calendars tailored to each segment in Section 10.4. Graphics, short video, motion graphics and policy explainers in English, Kiswahili and Sheng. Human-interest storytelling: constituent testimonials, verified project outcomes, vision-driven narratives. A weekly **\"Shahbal Explains\"** series breaking down county budgets, revenue sources and development economics in plain language."
 ```
 
 ```visual
@@ -80,7 +80,7 @@ qualification, running in public, before the election rather than after it.
 
 #### What it is
 
-A simple public tool through which any Kitui resident can report and follow up
+A simple public tool through which any Mombasa resident can report and follow up
 on a local service-delivery issue — a broken water point, an impassable feeder
 road, a market without sanitation, a stalled project.
 
@@ -120,7 +120,7 @@ items:
   - label: "Outcomes published honestly — including failures"
     body: "Where an issue is not resolved, the register says so. A tracker that only shows successes is marketing, and voters recognise it instantly. Publishing unresolved items is what makes the resolved ones credible."
   - label: "No false authority"
-    body: "Dr. Mulu is not the county government. The tracker records what was reported, what was raised, and what happened — never implying powers he does not hold. Overclaiming here would undermine the credibility the tool exists to build."
+    body: "Mr Shahbal is not the county government. The tracker records what was reported, what was raised, and what happened — never implying powers he does not hold. Overclaiming here would undermine the credibility the tool exists to build."
   - label: "Continues after the election"
     body: "Stated up front. A tracker that closes on polling day was a campaign tactic; one that continues is a governance commitment — and the commitment is the persuasive element."
 ```
@@ -145,42 +145,32 @@ items:
 Built on the USSD and SMS layer your team operates (Section 15.3.3), plus a lightweight public register on the campaign site, which Firefly hosts. **It reuses a
 layer the campaign is building anyway; nothing comparable exists in this race.**
 
-#### The opening register: the county's own scorecard
+#### The opening register: water, bills and jobs
 
-The tracker does not start from an empty list. The county's *Delivering the Kitui Promise* scorecard (August 2022 – August 2025) claims {{scorecard.claimed}} projects and itemises {{scorecard.itemised}} of them with value, ward and status, KSh {{scorecard.itemised.ksh|bn}} billion in all (Tier 1 as a record of what the county claims, not evidence that the claims are true). Those rows load as the tracker's opening register ([kitui-scorecard-projects.csv](/data/kitui-scorecard-projects.csv)): each becomes a public row, *County says: complete. Residents say: ___*, and reports through USSD option 3 fill the second column.
-
-The first verification questions are inconsistencies inside the county's document or against an official statistic. Each is a question to publish and test, not an accusation, and a county correspondent can check the first six independently (Section 15.2.2).
+The tracker does not start from an empty list. It opens with three registers the campaign can fill from public records on day one, and a fourth that waits for the county's own project list:
 
 ```visual
 kind: checklist
-title: "The tracker's first questions"
+title: "The tracker's opening registers"
 items:
-  - label: "Q1. Livestock vaccinated"
-    text: "{{scorecard.vaccinated}} claimed (Tier 1, county scorecard); the itemised rows total {{scorecard.vaccinated.itemised}} animals (calculated)."
-  - label: "Q2. Infant mortality"
-    text: "Claimed to fall from {{scorecard.imr.from}} to {{scorecard.imr.to}} per thousand births; KDHS 2022 puts Kitui at {{health.imr}}. Is the scorecard's figure a facility rate or a county rate?"
-  - label: "Q3. Roads graded"
-    text: "{{scorecard.roads.graded}} km claimed; the itemised row of {{scorecard.roads.row.km}} km (Tier 1) comes to KSh {{scorecard.roads.row.per-km}} a km (calculated)."
-  - label: "Q4. Boreholes"
-    text: "{{scorecard.boreholes.drilled}} drilled and {{scorecard.boreholes.equipped}} equipped: are the rest not yet equipped?"
-  - label: "Q5. Health beneficiaries"
-    text: "Two health projects list {{scorecard.health.beneficiaries}} beneficiaries (Tier 1, county scorecard), more than the county's 2019 population of {{census.population}}: a catchment, not people served?"
-  - label: "Q6. The unitemised projects"
-    text: "{{scorecard.claimed}} claimed, {{scorecard.itemised}} itemised: where is the list of the other {{scorecard.unitemised}} (calculated)?"
-  - label: "Q7. Kangu Kangu"
-    text: "KSh {{scorecard.kangu.ksh|m1}} million for {{scorecard.kangu.households}}+ households (Tier 1, county scorecard), commissioned after the period the scorecard covers: what has been delivered since?"
-  - label: "Q8. Boda boda sheds"
-    text: "{{scorecard.boda.sheds}} claimed; {{scorecard.boda.sheds.itemised}} itemised."
-  - label: "Q9. Ward attributions"
-    text: "Some rows place wards in the wrong constituency (Voo/Kyamatu under Kitui South; it is in Kitui East): a data-quality point for any ward-level use."
+  - label: "R1. Water hours and jerrican prices, ward by ward"
+    text: "How many hours each ward had piped water this week, and what a 20-litre jerrican cost at the kiosk and from vendors. The county's price at source is KSh {{price.water.county}} (Tier 2); vendors charge KSh {{price.water.vendor}}–40."
+  - label: "R2. The county's pending bills"
+    text: "KSh {{budget.pending-bills.2021|bn}} billion in 2024, {{budget.pending-bills.aged}}% older than three years (Tier 2, Controller of Budget as reported). The tracker logs each quarterly figure the Controller publishes."
+  - label: "R3. The Jomvu SEZ jobs"
+    text: "{{record.sez.jobs}} direct jobs projected (Tier 2). The tracker shows the projection beside the jobs actually created, from the promoters' quarterly figures, once construction begins."
+  - label: "R4. County projects by ward"
+    text: "Data needed: the county's Annual Development Plan and annual progress report, itemised with value, ward and status ({{scorecard.itemised}}). When it is in hand it loads here as the opening project register."
 ```
+
+The first verification questions are about the county's own published figures, and each is a question to publish and test, not an accusation.
 
 #### Tracker KPIs
 
 | Metric | Phase 1 | Phase 2 | Phase 3 |
 |---|---|---|---|
 | Reports received | {{target.tracker.phase-1}} | {{target.tracker.phase-2}} | {{target.tracker.phase-3}} |
-| Wards with at least one report | 25 | 40 | 40 |
+| Wards with at least one report | 20 | 30 | 30 |
 | Reports with published status update | ≥ 80% | ≥ 85% | ≥ 90% |
 | Median time to first status update | 14 days | 10 days | 7 days |
 | Reports converting to consented contacts | ≥ 60% | ≥ 65% | ≥ 70% |
@@ -188,7 +178,7 @@ items:
 
 #### The service-delivery performance tracker
 
-The campaign builds and maintains the **Kitui County Service-Delivery Performance Tracker**, a live analytical dashboard and open-data ledger that serves a dual purpose: during the campaign, it operates as an **irrefutable evidence asset** countering opposition claims. Its scope is the citizen-report register above, with Dr. Mulu's verified NG-CDF record as its proof layer. Turning it into a **Governor's Day-One Public Delivery Dashboard** after the election is a pledge Dr. Mulu may choose to make, not a deliverable of this engagement: until he holds office it must never imply powers he does not hold.
+The campaign builds and maintains the **Mombasa County Service-Delivery Performance Tracker**, a live analytical dashboard and open-data ledger that serves a dual purpose: during the campaign, it operates as an **irrefutable evidence asset** countering opposition claims. Its scope is the citizen-report register above, with Mr Shahbal's verified record (Section 6.1) as its proof layer. Turning it into a **Governor's Day-One Public Delivery Dashboard** after the election is a pledge Mr Shahbal may choose to make, not a deliverable of this engagement: until he holds office it must never imply powers he does not hold.
 
 ```figure
 id: delivery-tracker
@@ -197,11 +187,11 @@ id: delivery-tracker
 #### Dual Operational Function:
 
 1.  **As a Campaign Credibility Asset (Pre-Election):**
-    *   *Public Web & USSD Transparency:* Voters can dial `*[shortcode]#` or visit the web portal to query exact project GPS coordinates, contract values, and completion certificates in their own village.
+    *   *Public Web & USSD Transparency:* Voters can dial `*[shortcode]#` or visit the web portal to query water hours, project status, contract values and completion certificates in their own ward.
     *   *Debate & Media Resource:* Equips candidate and spokespersons with instant, primary-sourced factual data for live radio and television debates.
-2.  **As a Day-One Governing Tool (Post-Election; a pledge Dr. Mulu may make, not a deliverable of this engagement):**
-    *   *Statutory Ward Equalization Tracking:* Establishes the operational framework for managing ward development funds allocated by the published, needs-weighted formula that replaced the Ksh {{policy.ward-fund|m}} million equal-ward guarantee (Section 10.1), tracking execution velocity and contractor payments across all 40 wards in real time.
-    *   *Zero Pending Bills Enforcer:* Integrates directly into the County Treasury accounting system to ensure all ward projects are verified before invoice settlement, preventing the recurrence of county debt.
+2.  **As a Day-One Governing Tool (Post-Election; a pledge Mr Shahbal may make, not a deliverable of this engagement):**
+    *   *Statutory Ward Equalization Tracking:* Establishes the operational framework for managing the KSh {{policy.ward-fund|m}} million ward development share (Section 10.1), tracking execution velocity and contractor payments across all 30 wards in real time.
+    *   *Zero Pending Bills Enforcer:* Integrates directly into the County Treasury accounting system to publish every bill the county owes and pay them in order, oldest first.
 
 ### 15.1.2 Workstream 2 — The content brief and asset governance
 
@@ -209,7 +199,7 @@ id: delivery-tracker
 **Owner: your team, to its own brief.** Your producers write, film, edit and publish, as they do today. What this workstream adds is the brief and the approval gate.
 ```
 
-**Owner: your team, to its own brief.** Your producers write, film, edit and publish, as they do today. What this workstream adds is the brief that tells them which pillar, which ward, which language and which format — and the approval gate on new policy claims and Kikamba output.
+**Owner: your team, to its own brief.** Your producers write, film, edit and publish, as they do today. What this workstream adds is the brief that tells them which pillar, which ward, which language and which format — and the approval gate on new policy claims and Kiswahili output.
 
 Campaign communications succeed when production is treated as a pipeline rather than ad-hoc creative posting. In a county where only {{ict.internet}}% of residents use the internet (CA/KNBS 2023/24, Section 4.1), the content production engine must be **predominantly focused on offline and broadcast formats**—vernacular radio scripts, 2G bulk SMS, USSD menu trees, printed baraza photobooks, and market PA audio jingles—while maintaining a high-fidelity digital and video pipeline for youth and the diaspora.
 
@@ -276,8 +266,8 @@ body: "**Disclosure commitment.** AI assists production and optimisation. It is 
 | Meta Advantage+ Creative | Automatic variation testing and delivery reallocation | Platform dashboard |
 | Google Responsive Search Ads | Headline/description combination testing | Platform dashboard |
 | AI creative variation tools | Ad creative variations at scale | Cloud-based |
-| Design tooling with AI assist | Rapid Kikamba-language infographics and cards | Cloud-based |
-| AI writing assistance | First-draft copy for email, social and ads — **always human-edited, always native-speaker-reviewed for Kikamba** | Cloud-based |
+| Design tooling with AI assist | Rapid Kiswahili-language infographics and cards | Cloud-based |
+| AI writing assistance | First-draft copy for email, social and ads — **always human-edited, always native-speaker-reviewed for Kiswahili** | Cloud-based |
 
 *Specific vendor selection at contracting; no tool is presented as retained.*
 
@@ -308,23 +298,22 @@ items:
 ### 15.1.4 Workstream 4 — Accessibility and inclusion
 
 ```lead
-**Owner: your team sets the standard and applies it.** In a county where {{edu.none.women}}% of women and {{edu.none.men}}% of men aged six and over have no education, accessibility is reach, not compliance theatre.
+**Owner: your team sets the standard and applies it.** In a county where {{ict.offline}}% are not online and many households read better in Kiswahili than in English, accessibility is reach, not compliance theatre.
 ```
 
 **Owner: your team sets the standard and applies it.** Written into every weekly brief, at every engagement level, and never traded away.
 
 *The languages this standard works in, and the content mix for locally facing platforms, are set out in 12.4.*
 
-**Governance.** A native Kikamba speaker is a named role at every engagement
-level (Section 17.3), not an occasional reviewer. No Kikamba content publishes
+**Governance.** A native Kiswahili speaker is a named role at every engagement
+level (Section 17.3), not an occasional reviewer. No Kiswahili content publishes
 without their sign-off. Proverbs carry cultural weight and misused proverbs
 do cultural damage — in a campaign built on rigour, a mangled idiom is a
 substantive error, not a cosmetic one.
 
 #### What accessibility means here
 
-*In a county where {{edu.none.women}}% of women and {{edu.none.men}}% of men aged six and over have no education,
-accessibility is reach, not compliance theatre.*
+*In a county where {{ict.offline}}% are not online, accessibility is reach, not compliance theatre.*
 
 #### The case
 
@@ -332,15 +321,15 @@ accessibility is reach, not compliance theatre.*
 kind: stats
 preset: people
 items:
-  - value: "{{edu.none.women}}%"
-    label: "of women aged 6+ have no education"
+  - value: "{{edu.none.women}}"
+    label: "women aged 6+ with no education"
     tier: 1
-    body: "KDHS 2022 via the County Gender Data Sheet (October 2025): {{edu.none.women}}% of females and {{edu.none.men}}% of males aged six and over have no education. This replaces an untiered 13.0% (\"never attended school\", a different measure). 17.4% completed secondary is still not yet tiered."
+    body: "A named data gap: the KDHS 2022 Mombasa factsheet gives the share of women and men aged six and over with no education ({{edu.none.men}} for men)."
   - value: "{{ict.offline}}%"
     label: "outside the internet-using population"
     tier: 1
     body: "**{{ict.offline}}% are outside the internet-using population** (CA/KNBS 2023/24)"
-body: "Kenyans with disabilities are a substantial constituency systematically under-served by campaign communication in every cycle. In Kitui, {{disability.men}}% of men and {{disability.women}}% of women aged 15 and over have a disability (2022, Tier 1). Low bandwidth is itself an accessibility constraint"
+body: "Kenyans with disabilities are a substantial constituency systematically under-served by campaign communication in every cycle. The share of Mombasa's adults with a disability is a named data gap ({{disability.men}} for men, {{disability.women}} for women; KDHS 2022 Mombasa factsheet). Low bandwidth is itself an accessibility constraint"
 ```
 
 A campaign built on transparency that publishes only in dense written English
@@ -393,7 +382,7 @@ important content last.
 
 ## 15.2 Media (workstreams 5–6)
 
-Paid media on the platforms that reach the connected minority, and earned media in a county whose Kamba-language radio is largely politically owned (Section 4.2).
+Paid media on the platforms that reach the connected minority, and earned media in a county whose Coast radio mixes commercial, faith and community stations (Section 4.2).
 
 ### 15.2.1 Workstream 5 — Platform tactics and paid media
 
@@ -422,16 +411,16 @@ kind: cards
 preset: journalist
 items:
   - title: "Tier A"
-    text: "County correspondents for national outlets; Kitui-based digital publications"
+    text: "County correspondents for national outlets; Mombasa-based digital publications"
     head: { label: "Offer", text: "First access to data releases; direct line to the Digital Director" }
     chips: ["Fortnightly"]
   - title: "Tier B"
-    text: "Kamba-language radio presenters and producers at priority stations"
-    head: { label: "Offer", text: "Candidate availability; Kikamba-ready talking points and audio" }
+    text: "Kiswahili radio presenters and producers at priority stations"
+    head: { label: "Offer", text: "Candidate availability; Kiswahili-ready talking points and audio" }
     chips: ["Monthly"]
   - title: "Tier C"
     text: "National business and economics desks"
-    head: { label: "Offer", text: "Dr. Mulu as an expert source on county public finance — **not as a candidate**" }
+    head: { label: "Offer", text: "Mr Shahbal as an expert source on county public finance — **not as a candidate**" }
     chips: ["Quarterly"]
   - title: "Tier D"
     text: "Fact-checking organisations"
@@ -444,7 +433,7 @@ credible national commentator on county fiscal management earns coverage that
 money cannot buy, and it reinforces the core narrative every time it runs.
 
 **Standing press kit** — permanently available: approved biography (short,
-medium, long), high-resolution photography, the M&E and parliamentary record (Section 6.1)
+medium, long), high-resolution photography, the business and EALA record (Section 6.1)
 with sources, policy briefs by theme, verified county data with citations, and
 contact routes. The easier the campaign makes a journalist's job, the more
 often it is quoted.
@@ -453,7 +442,7 @@ often it is quoted.
 
 Three sessions, plus refreshers:
 
-1. **Core message discipline** — bridging from any question to the Economist
+1. **Core message discipline** — bridging from any question to the Builder
 Governor narrative without appearing evasive; keeping economic explanation
 under 30 seconds without losing accuracy. The characteristic risk for a
 technically expert candidate is answering at the length the question
@@ -483,7 +472,7 @@ top three issues
 | Live | Editor monitors and marks clip points in real time | Video editor |
 | +5 min | First clip cut, subtitled in Kiswahili | Video editor |
 | +15 min | Published across Facebook, X, TikTok, Instagram | Community managers |
-| +30 min | Kikamba-subtitled version published | Content lead |
+| +30 min | Kiswahili-subtitled version published | Content lead |
 | +45 min | WhatsApp-optimised version to ward champions | Volunteer coordinator |
 | +60 min | Audio-only version for radio and voice-note distribution | Content lead |
 | +2 hours | SMS with a link, or a plain-text key line, to consented contacts in relevant wards | Paid media manager |
@@ -506,12 +495,12 @@ items:
   - value: "100%"
     label: "Debate clips published within 60 minutes"
   - value: "≥ 50%"
-    label: "Share of voice in Kitui gubernatorial coverage"
+    label: "Share of voice in Mombasa gubernatorial coverage"
 ```
 
 #### Getting on air around a hostile gatekeeper
 
-So that the campaign can reach all {{register.2022}} registered voters in the 40 wards whatever the politically aligned stations do (Section 12.3), it runs four routes that need none of them:
+So that the campaign can reach all {{register.2022}} registered voters in the 30 wards whatever the politically aligned stations do (Section 12.3), it runs four routes that need none of them:
 
 ```figure
 id: bypass-architecture
@@ -522,7 +511,7 @@ id: bypass-architecture
 To win fair coverage on national and regional outlets without paying for access to broadcast gatekeepers, the press desk pitches evidence first:
 
 1.  **Hansard and audit exclusives:** verified, data-rich policy briefs for national bureau chiefs (*Daily Nation, Standard, Citizen TV, KTN News*) on national debt, equalisation-fund legislation and the county's pending bills.
-2.  **Project tours:** accredited regional correspondents taken to Kitui Central projects (solar boreholes, TVET workshops, secondary-school laboratories), with on-camera interviews with the people they serve.
+2.  **Project tours:** accredited regional correspondents taken to sites he has built or backed (the Jomvu SEZ site, Gulf African Bank's growth, businesses he has financed), with on-camera interviews with the people they serve.
 3.  **The right of reply:** using the statutory right of reply under the Media Council of Kenya (MCK) Act whenever a station misrepresents the candidate's record.
 
 <ws-mark tab="ground"></ws-mark>
@@ -557,9 +546,9 @@ preset: report
 title: "What Ward Coordinators Report"
 items:
   - title: "Issues Raised in Public"
-    text: "What residents raised at barazas, markets and public meetings, logged as it was said. E.g., *\"Farmers at the Kyuso market raised uncollected green grams.\"* No coordinator canvasses opinion or asks anyone how they will vote: the report records what was said in public, not a measured sentiment."
+    text: "What residents raised at barazas, markets and public meetings, logged as it was said. E.g., *\"Traders at Kongowea raised the market fee and the blocked drainage.\"* No coordinator canvasses opinion or asks anyone how they will vote: the report records what was said in public, not a measured sentiment."
   - title: "Field Inventory & Collateral Levels"
-    text: "Current stock of Kikamba manifesto summary leaflets, posters, audio flash drives, and volunteer T-shirts."
+    text: "Current stock of Kiswahili manifesto summary leaflets, posters, audio flash drives, and volunteer T-shirts."
 ```
 
 #### Distribution beyond social media
@@ -573,35 +562,35 @@ To bypass digital connectivity barriers, the campaign turns physical transportat
 kind: cards
 preset: network
 items:
-  - title: "The Boda Boda Stage Network ({{target.stage-champions}} Stage Champions)"
+  - title: "The Boda Boda and Tuk-Tuk Stage Network ({{target.stage-champions}} Stage Champions)"
     badge: "campaign-owned"
-    head: { label: "Operational Role", text: "The campaign identifies {{target.stage-champions}} \"Stage Champions\" (30 per ward) across all 40 wards." }
+    head: { label: "Operational Role", text: "The campaign identifies {{target.stage-champions}} \"Stage Champions\" (30 per ward) across all 30 wards." }
     fields:
-      - { label: "Infrastructure", text: "Commercial motorcycle operators in Kitui, organized into distinct stage associations (*masese*). About **{{boda.riders}} riders** by a 2026 estimate, of whom {{boda.unlicensed}} were reported riding without a valid licence (Tier 3; an estimate, not an NTSA register). In August 2026 the county and NTSA issued smart licences to {{boda.licensed.2026}} operators drawn from all 40 wards (Tier 2)." }
-      - { label: "Execution", text: "- Champions receive high-visibility reflective campaign vests branded with \"Uchumi na Kazi\" and safety helmets.\n- Equipped with mobile phone charging hubs at stages, playing looped Kikamba campaign audio podcasts and speeches to passengers awaiting transport.\n- Act as rapid physical distributors of print materials to remote interior villages inaccessible by four-wheel vehicles." }
-  - title: "Matatu & Sacco Commuter Transit Routes"
+      - { label: "Infrastructure", text: "Boda-boda and tuk-tuk operators in Mombasa, organised into stage associations. Their number is a named data gap: {{boda.riders}} (the NTSA or county operator register would close it)." }
+      - { label: "Execution", text: "- Champions receive high-visibility reflective campaign vests branded with \"Mjenzi\" and safety helmets.\n- Equipped with mobile phone charging hubs at stages, playing looped Kiswahili campaign audio podcasts and speeches to passengers awaiting transport.\n- Act as rapid physical distributors of print materials into estates the sound trucks cannot enter." }
+  - title: "Matatu and Ferry Commuter Routes"
     badge: "campaign-owned"
-    head: { label: "Operational Role", text: "Capturing passengers during long transit journeys (3–6 hours)." }
+    head: { label: "Operational Role", text: "Reaching commuters on the daily routes: the Nyali and Makupa causeways, the Likoni ferry, and the Nairobi road." }
     fields:
-      - { label: "Infrastructure", text: "Matatu SACCOs connecting Kitui Town, Mwingi, Mutomo, Nairobi, and Mombasa (e.g., Kitui Classic, Mwingi Travelers, TSS, Buscar)." }
-      - { label: "Execution", text: "- Provision of branded onboard audio USB flash drives to matatu drivers featuring popular Kamba secular and gospel music interspersed with 60-second policy messages from Dr. Mulu.\n- Placement of seatback information cards in commuter vans detailing Dr. Mulu's 5-point Economic Charter." }
+      - { label: "Infrastructure", text: "Matatu SACCOs on the Mombasa routes, and the queues at the Likoni ferry." }
+      - { label: "Execution", text: "- Provision of branded onboard audio USB flash drives to matatu drivers featuring popular coastal music, taarab and bongo, interspersed with 60-second policy messages from Mr Shahbal.\n- Placement of seatback information cards in commuter vans detailing Mr Shahbal's five-point plan." }
   - title: "Weekly Market Days & Caravan Circuits"
     badge: "campaign-owned"
     head: { label: "Operational Role", text: "Concentrated voter aggregation points." }
     fields:
-      - { label: "Infrastructure", text: "The 40 major market centres rotating across the county weekly (the rotation is in Section 4.4)." }
-      - { label: "Execution", text: "- Coordinated arrival of the *Mulu Economic Caravan* sound trucks at 10:00 AM on market days.\n- Ward Coordinators lead door-to-door merchant walk-throughs, distributing Kikamba business charters to shopkeepers, vegetable vendors (*mama mboga*), and hardware dealers." }
+      - { label: "Infrastructure", text: "Mombasa's markets and stages, rotating across the county weekly (the rotation is in Section 4.4)." }
+      - { label: "Execution", text: "- Coordinated arrival of the *Shahbal Builder Caravan* sound trucks at 10:00 AM on market days.\n- Ward Coordinators lead door-to-door merchant walk-throughs, distributing Kiswahili business charters to shopkeepers, vegetable vendors (*mama mboga*), and hardware dealers." }
   - title: "Community Barazas & Chief's Gatherings (Protocol-Compliant)"
     badge: "campaign-owned"
     head: { label: "Operational Mandate & Civility", text: "Campaign teams respect that civil service barazas are strictly non-partisan by law." }
     fields:
       - { label: "Infrastructure", text: "Monthly administrative barazas convened by National Government Administrative Officers (NGAO—Chiefs and Assistant Chiefs)." }
-      - { label: "Execution", text: "- Ward Captains attend barazas as active community citizens to listen to localized grievances (water, security, relief food).\n- Post-baraza informal engagement: Engaging elders and attendees outside official proceedings, answering questions, and sharing Dr. Mulu's policy solutions for the specific community issues raised during the baraza." }
+      - { label: "Execution", text: "- Ward Captains attend barazas as active community citizens to listen to localized grievances (water, security, drainage).\n- Post-baraza informal engagement: Engaging elders and attendees outside official proceedings, answering questions, and sharing Mr Shahbal's policy solutions for the specific community issues raised during the baraza." }
 ```
 
 #### The operating rhythm
 
-To maintain operational tempo across 8 constituencies and 40 wards, the campaign executes a strict, synchronized rhythm with assigned single-point-of-contact (SPOC) owners:
+To maintain operational tempo across 6 constituencies and 30 wards, the campaign executes a strict, synchronized rhythm with assigned single-point-of-contact (SPOC) owners:
 
 ```figure
 id: operating-rhythm
@@ -637,7 +626,7 @@ left:
       body: "reached, no opt-in; asked not to be contacted; no one home), under thirty seconds per household. Complexity kills field data collection. The form never asks how anyone will vote."
     - label: "Offline-first"
       text: "the form caches locally and syncs when signal returns."
-      body: "Non-negotiable in Ikutha and Mutitu."
+      body: "Non-negotiable in the mainland estates with weak signal."
     - label: "Latency target"
       text: "field outcomes reflected in digital targeting within **24 hours**."
     - label: "Suppression"
@@ -667,27 +656,27 @@ items:
 ### 15.3.3 Workstream 9 — What your team operates: SMS, USSD and voice
 
 ```lead
-**Owner: your team, end to end.** **Bulk political SMS cannot be sent in Kikamba**: the CA/NCIC guidelines restrict political SMS to **English or Kiswahili** (Tier 1, Communications Authority), lodged with the mobile operator at least 48 hours before sending.
+**Owner: your team, end to end.** **Bulk political SMS goes in Kiswahili or English only**: the CA/NCIC guidelines restrict political SMS to **English or Kiswahili** (Tier 1, Communications Authority), lodged with the mobile operator at least 48 hours before sending.
 ```
 
-**Owner: your team, end to end.** Two pieces of infrastructure, held and run by the campaign: the **WhatsApp Business API line** and the **USSD shortcode**. The campaign is the **data controller**; Firefly is a processor only for what the team logs on the platform — see Section 19.1, which must be settled in writing before the first dispatch. Every send is planned and logged in the platform's dispatch log, which refuses Kikamba on the bulk SMS rail.
+**Owner: your team, end to end.** Two pieces of infrastructure, held and run by the campaign: the **WhatsApp Business API line** and the **USSD shortcode**. The campaign is the **data controller**; Firefly is a processor only for what the team logs on the platform — see Section 19.1, which must be settled in writing before the first dispatch. Every send is planned and logged in the platform's dispatch log, which refuses any other language on the bulk SMS rail.
 
 #### Why this layer decides the race
 
-**{{ict.internet}}%** of Kitui's residents use the internet and **{{ict.phone}}%** own a mobile phone (CA/KNBS
+**{{ict.internet}}%** of Mombasa's residents use the internet and **{{ict.phone}}%** own a mobile phone (CA/KNBS
 2023/24, Tier 1). Nationally, smartphones are {{ict.smartphone-share}}% of active SIMs (CA Q3 FY2025/26, Tier 2),
 meaning feature phones remain a substantial share, and disproportionately so in rural, older and
 lower-income populations.
 
-Put plainly: **a purely digital campaign in Kitui addresses roughly one in
-four residents, and the three it misses are concentrated in exactly the wards
-where Dr. Mulu's recognition deficit is largest.**
+Put plainly: **a purely digital campaign in Mombasa addresses about half of
+its residents, and the half it misses is concentrated on the west and south
+mainland, among the voters who stayed home in 2022.**
 
-The phone side of this layer is larger than the resident rate suggests: How voters get news sizes it on both bases, the resident rate and the adult (KDHS 2022) rate. On its own logic that makes this the layer that decides the race: it reaches roughly three voters in four.
+The phone side of this layer is larger than the resident rate suggests, because adults own phones at a higher rate than the residents' figure, which counts children (How voters get news). It is the one layer that reaches the abstainer directly, on the day.
 
 This is not an equity footnote. It is the central strategic problem of
 campaigning in this county, and solving it is the clearest demonstration of the
-"Economist Governor" proposition: allocating resources to where the need is,
+"Builder Governor" proposition: allocating resources to where the need is,
 rather than where measurement is convenient.
 
 The critical constraint: the campaign can only message consented numbers
@@ -704,7 +693,7 @@ regulatory basis; the short version is that the industry code requires express
 opt-in for political messages and the ODPC has demonstrated willingness to
 penalise unsolicited messaging.
 
-> ### Bulk political SMS cannot be sent in Kikamba
+> ### Bulk political SMS goes in Kiswahili or English only
 >
 > The CA/NCIC guidelines on political bulk messaging restrict political SMS to **English or
 > Kiswahili** (Tier 1, Communications Authority). They also require every bulk political message
@@ -712,10 +701,9 @@ penalise unsolicited messaging.
 > text and a signed authorisation, and they allow the operator to **refuse** a non-compliant
 > message outright.
 >
-> **This changes the channel plan, not the language strategy.** Kikamba remains the campaign's
-> strongest register — it simply cannot ride the bulk SMS rail. It belongs on **radio, WhatsApp
-> voice notes, USSD menu text, barazas and person-to-person**, which is where the Section 12.6
-> pillars already put it. SMS carries the Kiswahili and English versions of the same message.
+> **In Mombasa this matters little.** Kiswahili is already its first language. Sheng
+> and the Mijikenda languages cannot ride the bulk SMS rail; they belong on **radio, WhatsApp
+> voice notes, the stage and person-to-person**. SMS carries the Kiswahili and English versions.
 >
 > Two practical consequences the operating rhythm must absorb: a 48-hour lodging lead time makes
 > **same-day SMS sends impossible**, and a **2020 draft revision** proposed narrowing the sending window to 08:00–18:00
@@ -726,7 +714,7 @@ penalise unsolicited messaging.
 | Type | Frequency | Language | Example structure |
 |---|---|---|---|
 | **Policy drop** | Weekly | Kiswahili / English | One issue, one commitment, one verification promise |
-| **Community message** | Fortnightly | Kiswahili | Policy anchor in plain register. *The Kikamba proverb version of this message goes out as a WhatsApp voice note, not as SMS* |
+| **Community message** | Fortnightly | Kiswahili | Policy anchor in plain register. *A Sheng or Mijikenda version goes out as a WhatsApp voice note, not as SMS* |
 | **Registration drive** | Phase-specific | Kiswahili / English | Deadline, nearest centre, what to bring |
 | **Event notice** | As scheduled | Kiswahili | Ward-targeted baraza details |
 | **GOTV sequence** | Final 30 days | Kiswahili / English | Countdown, polling station, time |
@@ -741,7 +729,7 @@ items:
     body: "in any message — a guideline requirement, and already a charter commitment (Section 19.3, clauses 2 and 6)"
   - label: "Sending window **7am–7pm**, per market practice and DND norms"
   - label: "Every message carries a clear opt-out; opt-outs honoured immediately and permanently"
-  - label: "Ward-tagged segmentation so a message about mango prices reaches Kitui West and not Kyuso"
+  - label: "Ward-tagged segmentation so a message about water hours reaches Mikindani and not Tudor"
   - label: "Personalisation by first name where consent covers it"
   - label: "Per-send audit trail retained, per the charter (Section 19.3)"
 ```
@@ -759,9 +747,9 @@ id: fig-5-2-3-ussd-menu
 ```
 
 **Why option 3 matters most.** The service-delivery tracker (Section 15.1.1) is
-reachable from a feature phone in Mutha. A constituent reports a broken water
-point by dialling a short code; the report enters a public register; the
-campaign follows up and publishes the outcome. That is the M&E credential
+reachable from a feature phone in Mikindani. A resident reports a dry water
+kiosk by dialling a short code; the report enters a public register; the
+campaign follows up and publishes the outcome. That is the builder's habit
 operating in public, before the election, on the cheapest possible technology.
 
 **Set-up:** 5–7 working days for a shared code; 2–4 weeks for a dedicated code
@@ -769,19 +757,19 @@ pending operator approval.
 
 #### Voice and audio
 
-* **Kikamba voice notes from Dr. Mulu** distributed by WhatsApp and by ward
+* **Kiswahili voice notes from Mr Shahbal** distributed by WhatsApp and by ward
 champions to Bluetooth-share onward. Audio travels where text does not, and
 carries the candidate's actual voice — the highest-trust format available.
 * **Radio** — see Section 15.2.2.
 * **Audio versions of all flagship policy content**, addressing both low
-literacy ({{edu.none.women}}% of women and {{edu.none.men}}% of men aged six and over have no education) and low bandwidth.
+literacy and low bandwidth.
 
 #### The mobile-money agent network
 
 Kenya's registered mobile-money agents grew from **{{ict.agents.2025}} in September 2025 to
 {{ict.agents}} in March 2026** — expanding roughly four times faster than
-subscriptions. In rural Kitui, the agent kiosk is often the most reliable
-commercial touchpoint in a settlement.
+subscriptions. In Mombasa's mainland estates, the agent kiosk is often the most reliable
+commercial touchpoint on the street.
 
 ```visual
 kind: cards
@@ -863,7 +851,7 @@ policy and the Section 19.3 charter, and it is designed out from the start.
 * **Custom WhatsApp bot** for lightweight volunteer management: registration,
 point tracking, content distribution, leaderboards
 * **USSD registration path** so volunteers without smartphones can join
-(Section 15.3.3) — a genuine differentiator in the arid belt
+(Section 15.3.3) — a genuine differentiator on the west and south mainland
 * Forms and spreadsheets for baseline collection
 * Task management via a shared board
 * Purpose-built volunteer platforms only at the premium level
@@ -936,8 +924,8 @@ items:
 kind: stepper
 items:
   - label: "What the model scores, and why"
-    text: "The campaign will build a model scoring Kitui's polling stations and wards on two dimensions:"
-    body: "likely support for the Wiper Patriotic Front ticket and likely turnout. Both are estimated from how each station actually voted in 2017 and 2022 (IEBC Forms 37A) and from the register, not from asking anyone how they will vote. This moves the campaign from broad messaging to disciplined prioritisation of persuasion and mobilisation effort, on the official record.\n\n**This entire section is conditional on the compliance gate in Section 19.2.**\nNo voter-file-based targeting is deployed until a Kenyan data-protection or\nelectoral-law specialist has reviewed and signed off the specific proposed\nprocessing. Nothing in this section should be read as a claim that such\nprocessing is already permissible.\n\n*The data sources the model draws on are listed in Annex E.2.*"
+    text: "The campaign will build a model scoring Mombasa's polling stations and wards on two dimensions:"
+    body: "likely support for the The New Democrats ticket and likely turnout. Both are estimated from how each station actually voted in 2017 and 2022 (IEBC Forms 37A) and from the register, not from asking anyone how they will vote. This moves the campaign from broad messaging to disciplined prioritisation of persuasion and mobilisation effort, on the official record.\n\n**This entire section is conditional on the compliance gate in Section 19.2.**\nNo voter-file-based targeting is deployed until a Kenyan data-protection or\nelectoral-law specialist has reviewed and signed off the specific proposed\nprocessing. Nothing in this section should be read as a claim that such\nprocessing is already permissible.\n\n*The data sources the model draws on are listed in Annex E.2.*"
   - label: "Modelling methodology"
     body: "| Model | Purpose | Strength |\n|---|---|---|\n| **Logistic regression** | Baseline support and turnout scores | Interpretability; identifies driving variables |\n| **Random forest** | Non-linear pattern detection | Captures interactions; robust to outliers |\n| **Gradient boosting (XGBoost)** | Final ensemble scoring | Highest predictive accuracy at scale |\n| **Propensity score matching** | Volunteer conversion | Estimates causal effect of touchpoints on offline action |\n\nFinal output: an ensemble score (0–1) per polling station for likely support and\nturnout likelihood.\n\n*The model's variable dictionary is in Annex E.2.*"
   - label: "How the model is evaluated"
@@ -956,7 +944,7 @@ items:
 **Mostly outside this engagement.** Firefly builds and operates one component only: the platform, which carries the **service-delivery tracker**. The **supporter CRM** and the **SMS/USSD/WhatsApp layer** are the campaign's, run by your team.
 ```
 
-**Mostly outside this engagement.** Dr. Mulu already holds accounts, hosting and the tooling in daily use, and procuring a stack the campaign already has is not a service. Firefly builds and operates one component only: the platform, which carries the **service-delivery tracker**. The **supporter CRM** and the **SMS/USSD/WhatsApp layer** are the campaign's, run by your team. The reference architecture the campaign owns and Firefly's platform sits beside — component by component, with the procurement matrix and the security protocols — is in Annex E.1.
+**Mostly outside this engagement.** Mr Shahbal already holds accounts, hosting and the tooling in daily use, and procuring a stack the campaign already has is not a service. Firefly builds and operates one component only: the platform, which carries the **service-delivery tracker**. The **supporter CRM** and the **SMS/USSD/WhatsApp layer** are the campaign's, run by your team. The reference architecture the campaign owns and Firefly's platform sits beside — component by component, with the procurement matrix and the security protocols — is in Annex E.1.
 
 ### 15.4.4 Workstream 14 — Analytics and attribution
 
@@ -995,9 +983,9 @@ To track offline-to-digital and physical engagement, four mechanisms bridge the 
 
 | Metric | Definition | Global benchmark | Campaign target |
 |---|---|---|---|
-| Share of voice | % of Kitui gubernatorial mentions about Dr. Mulu | 30–40% for leader | ≥ 50% |
+| Share of voice | % of Mombasa gubernatorial mentions about Mr Shahbal | 30–40% for leader | ≥ 50% |
 | Net sentiment | (Positive − negative) / total | +20 to +30 | ≥ +40 |
-| **Reach share in the deficit pool** | Share of his reach landing in Mwingi and Kitui South (R-02, Section 18.3) | — | **≥ {{pool.share}}%, the pool's share of the register** |
+| **Reach share in the deficit pool** | Share of his reach landing in Kisauni, Nyali and Changamwe (R-02, Section 18.3) | — | **≥ {{pool.share}}%, the pool's share of the register** |
 | Voter registration lift | Increase in target wards from campaign drives | 5–10% | ≥ 10% |
 | Digital-to-offline conversion | % of engagers attending or volunteering | 5–15% | ≥ 10% |
 | GOTV contact rate | % of target voters reached | 60–80% | ≥ 70% |

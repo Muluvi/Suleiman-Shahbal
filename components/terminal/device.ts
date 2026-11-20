@@ -1,7 +1,7 @@
 /**
  * Exact dimensions of the Rugged Field Terminal.
  *
- * Modeled as an industrial, high-durability field tablet deployed to Kitui County's
+ * Modeled as an industrial, high-durability field tablet deployed to Mombasa County's
  * 40 Ward Coordinators. Designed at fixed native proportions (480 x 640 CSS px)
  * and scaled as a single transform for responsive screens, eliminating layout shift.
  */

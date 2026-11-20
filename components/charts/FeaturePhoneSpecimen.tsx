@@ -16,22 +16,22 @@ import { UssdHandset } from "../phone/UssdHandset";
 /**
  * The channel that reaches the other 73.8%, as an object you can operate.
  *
- * §5.2.3.3 argues that a purely digital campaign in Kitui addresses roughly one resident in seven,
+ * §5.2.3.3 argues that a purely digital campaign in Mombasa addresses roughly one resident in seven,
  * and that the six it misses are concentrated in exactly the wards where the recognition deficit
  * is largest. That argument is made in prose three times. It has never been made as a thing the
- * reader can hold: a 2G handset, a system dialog, six menu options in Kikamba, and a message
+ * reader can hold: a 2G handset, a system dialog, six menu options in Kiswahili, and a message
  * that has to say something worth saying inside 160 characters.
  *
  * WHAT IS QUOTED AND WHAT IS NOT.
  *
- * The menu is §5.2.3.3 verbatim, Kikamba and English, in the order the document prints them. The
+ * The menu is §5.2.3.3 verbatim, Kiswahili and English, in the order the document prints them. The
  * shortcode is `*[Insert shortcode]#`, because that is what §5.2.3.3 says and Appendix A logs the
  * vendor allocation as an open item — a plausible-looking number here would be exactly the kind
  * of invention the provenance system exists to stop, so it carries the awaiting badge instead.
  *
  * The vernacular SMS versions are deliberately absent rather than drafted. §4.4.10 sets a
- * four-stage approval chain in which a Lead Kikamba Writer drafts, an independent reviewer
- * reverse-translates to prove no commitment was distorted, and a native Kamba elder or senior
+ * four-stage approval chain in which a Lead Kiswahili Writer drafts, an independent reviewer
+ * reverse-translates to prove no commitment was distorted, and a native Coast elder or senior
  * vernacular broadcaster holds mandatory sign-off. §8.5 puts those appointments in Phase −1.
  * None of them exists yet, so the widget shows where the copy WOULD be and who has to sign it,
  * which is a truer demonstration of the pipeline than inventing a sentence in a language nobody

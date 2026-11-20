@@ -40,7 +40,7 @@ export function CoalitionPath({ cons, benchmark, turnout, register2022, register
         <div className="mt-3 grid gap-4 sm:grid-cols-2">
           {rows.map((r) => (
             <div key={r.c.id}>
-              <Slider label={r.c.name} value={share[r.c.id]} onChange={(v) => setShare({ ...share, [r.c.id]: v })} min={0} max={90} suffix="%" hint={`${n0(r.votes)} votes of ${n0(r.ballots)} ballots${r.c.pool ? " · pool" : ""}${r.c.held ? " · held office" : ""}`} />
+              <Slider label={r.c.name} value={share[r.c.id]} onChange={(v) => setShare({ ...share, [r.c.id]: v })} min={0} max={90} suffix="%" hint={`${n0(r.votes)} votes of ${n0(r.ballots)} ballots${r.c.pool ? " · pool" : ""}`} />
             </div>
           ))}
         </div>
@@ -96,7 +96,7 @@ export function PriorityScorer({ wards }: { wards: ToolWard[] }) {
   );
 }
 
-/* ------------------------------------------------------------------ Kitui Map Studio */
+/* ------------------------------------------------------------------ Mombasa Map Studio */
 
 type Layer = "voters" | "stations" | "population" | "projects" | "per1k" | "zone";
 const LAYER_LABEL: Record<Layer, string> = { voters: "Registered voters, 2022", stations: "Polling stations, 2022", population: "Population (IEBC ward figures, 2026 gazette)", projects: "County projects (scorecard, itemised)", per1k: "County projects per 1,000 voters", zone: "Zones and the pool" };
@@ -113,7 +113,7 @@ export function MapStudio({ wards }: { wards: ToolWard[] }) {
   const zoneFill = (x: ToolWard) => (x.zone === "anchor" ? "var(--accent-solid)" : x.zone === "mwingi" ? "var(--gold-solid)" : x.zone === "arid" ? "var(--phase-2, #7a5)" : "var(--line)");
   return (
     <div className="space-y-4">
-      <div className="flex justify-end print:hidden"><SaveImage card={{ type: "map", params: { layer: layer === "zone" ? "zones" : layer } }} title="Kitui Map Studio" /></div>
+      <div className="flex justify-end print:hidden"><SaveImage card={{ type: "map", params: { layer: layer === "zone" ? "zones" : layer } }} title="Mombasa Map Studio" /></div>
       <Card><Select label="Layer" value={layer} onChange={setLayer} options={(Object.keys(LAYER_LABEL) as Layer[]).map((l) => ({ value: l, label: LAYER_LABEL[l] }))} /></Card>
       <Card>
         <div className="grid gap-1" style={{ gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))` }} role="group" aria-label={`Ward tile map: ${LAYER_LABEL[layer]}`}>
@@ -131,7 +131,7 @@ export function MapStudio({ wards }: { wards: ToolWard[] }) {
             );
           })}
         </div>
-        <Note>Schematic: every ward is one tile, placed inside its constituency block. {layer === "zone" ? "Blue: anchor zone. Gold: Mwingi. Green: arid belt. Grey: Kitui Rural. A dashed outline marks the pool." : "Five shades, lightest to darkest, split the 40 wards into fifths by this layer."}</Note>
+        <Note>Schematic: every ward is one tile, placed inside its constituency block. {layer === "zone" ? "Blue: anchor zone. Gold: the north mainland. Green: arid belt. Grey: Likoni. A dashed outline marks the pool." : "Five shades, lightest to darkest, split the 30 wards into fifths by this layer."}</Note>
       </Card>
       {cur && (
         <Card>
@@ -252,7 +252,7 @@ export function YouthVoters({ register2022, youth, firstTime, benchmark }: { reg
           <Slider label="His share of new voters" value={fs} onChange={setFs} min={0} max={90} suffix="%" />
         </div>
       </Card>
-      <Note>Every turnout and share above is your assumption; no source measures them by age in Kitui. The IEBC does not publish the register by age. New voters may overlap with the youth count: treat the two as layers, not a sum of separate people.</Note>
+      <Note>Every turnout and share above is your assumption; no source measures them by age in Mombasa. The IEBC does not publish the register by age. New voters may overlap with the youth count: treat the two as layers, not a sum of separate people.</Note>
     </div>
   );
 }

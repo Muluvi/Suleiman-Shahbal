@@ -5,8 +5,8 @@
  *
  * Two things that used to be confused, kept apart:
  *
- *   NOMINATION_WINDOW  when Wiper decides its candidate. Not Firefly's: reported for late October to
- *                      November 2026 by a single source (Tier 3). Shown only in the Timeline's
+ *   NOMINATION_WINDOW  when The New Democrats must file its membership list and its governor
+ *                      nominee with the IEBC: 23 March to 6 June 2027 (IEBC, Tier 1). Shown only in the Timeline's
  *                      milestone, "Securing the ballot line" (timeline-sec-14-0; flow pass, Q5).
  *   The Ballot line (phase "neg1")
  *                      the team's own work period aimed at that decision: Weeks 1–6 from the go-ahead.
@@ -35,7 +35,7 @@ export interface Phase {
 }
 
 /** The assumed go-ahead: the origin of "Week 1" on the dated timeline only. A planning assumption, never shown as a date. */
-export const PLANNING_SIGNATURE = "2026-09-01";
+export const PLANNING_SIGNATURE = "2026-12-01";
 
 /** Election day: the second Tuesday of August, fixed by the Constitution (Article 101). */
 export const ELECTION_DAY = "2027-08-10";
@@ -43,21 +43,21 @@ export const ELECTION_DAY = "2027-08-10";
 export const PHASES: Phase[] = [
   { id: "neg1", label: "Ballot line", window: "Weeks 1–6", focus: "Securing the nomination that puts him on the ballot", colorVar: "--phase-neg1", weeks: { from: 1, to: 6 } },
   { id: "0", label: "Set-up", window: "Weeks 4–10 · Instrumentation", focus: "instrumentation", colorVar: "--phase-0", weeks: { from: 4, to: 10 } },
-  { id: "1", label: "Awareness", window: "Oct–Dec 2026 · Awareness & Community", focus: "awareness and community building", colorVar: "--phase-1", dates: { start: "2026-10-01", end: "2026-12-31" } },
-  { id: "2", label: "Persuasion", window: "Jan–Mar 2027 · Engagement & Persuasion", focus: "engagement and persuasion", colorVar: "--phase-2", dates: { start: "2027-01-01", end: "2027-03-31" } },
-  { id: "3", label: "Turnout", window: "Apr–Aug 2027 · Mobilisation & GOTV", focus: "mobilisation and turnout", colorVar: "--phase-3", dates: { start: "2027-04-01", end: ELECTION_DAY } },
+  { id: "1", label: "Awareness", window: "Dec 2026–Feb 2027 · Awareness & Community", focus: "awareness and community building", colorVar: "--phase-1", dates: { start: "2026-12-01", end: "2027-02-28" } },
+  { id: "2", label: "Persuasion", window: "Mar–May 2027 · Engagement & Persuasion", focus: "engagement and persuasion", colorVar: "--phase-2", dates: { start: "2027-03-01", end: "2027-05-31" } },
+  { id: "3", label: "Turnout", window: "Jun–Aug 2027 · Mobilisation & GOTV", focus: "mobilisation and turnout", colorVar: "--phase-3", dates: { start: "2027-06-01", end: ELECTION_DAY } },
 ];
 
-/** When Wiper decides its candidate: reported, not confirmed (Tier 3). Not one of the campaign's phases. */
+/** The party's IEBC deadlines for the governor nomination (Tier 1). Not one of the campaign's phases. */
 export const NOMINATION_WINDOW = {
-  label: "How Wiper chooses its candidate",
-  date: "2026-10-20",
-  end: "2026-11-30",
-  whenText: "Late October to November 2026",
+  label: "The New Democrats' membership list and governor nomination",
+  date: "2027-03-23",
+  end: "2027-06-06",
+  whenText: "23 March to 6 June 2027",
   /** The same window, short enough for an inline chip. */
-  short: "late Oct–Nov 2026",
-  tier: "T3" as const,
-  source: "Nomination window: a single-source campaign report, not confirmed by the party",
+  short: "Mar–Jun 2027",
+  tier: "T1" as const,
+  source: "IEBC party deadlines for the 2027 general election (Gazette Notice 13501)",
 };
 
 const DAY = 24 * 60 * 60 * 1000;
@@ -77,10 +77,10 @@ export function phaseTitle(p: Phase): string {
   return `${p.label}: ${p.focus}`;
 }
 
-/** The first letter lower-cased, for a phrase set inside a sentence: "late October to November 2026". */
+/** The first letter lower-cased, for a phrase set inside a sentence: "23 March to 6 June 2027". */
 export const inSentence = (t: string): string => t.charAt(0).toLowerCase() + t.slice(1);
 
-/** The window as a reader sees it, without the focus suffix: "Weeks 1–6 from the go-ahead", "Oct–Dec 2026". */
+/** The window as a reader sees it, without the focus suffix: "Weeks 1–6 from the go-ahead", "Dec 2026–Feb 2027". */
 export function phaseWhen(p: Phase): string {
   return p.weeks ? `Weeks ${p.weeks.from}–${p.weeks.to} from the go-ahead` : p.window.split(" · ")[0];
 }

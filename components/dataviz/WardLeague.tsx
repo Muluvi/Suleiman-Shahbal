@@ -5,7 +5,7 @@ import { ExportableVisual } from "../visual/ExportableVisual";
 import { WardLocator } from "./Locator";
 
 /**
- * The 40 wards as a league table (visual upgrade, C1): position, ward, registered voters, and the
+ * The 30 wards as a league table (visual upgrade, C1): position, ward, registered voters, and the
  * gap to the ward above. Every count is the registry's own ward figure (`ward.<slug>`, IEBC 2022).
  *
  * No up or down arrows: a movement needs a second year of ward registers, and none is published
@@ -50,12 +50,12 @@ export function WardLeague() {
     <ExportableVisual
       id="ward-league"
       title={`The league table: twelve wards hold ${topShare.display} of the register`}
-      note="The 40 wards ranked by registered voters, with the gap to the ward above. A mark shows the wards where he has never held office."
+      note="The 30 wards ranked by registered voters, with the gap to the ward above. A mark shows the wards where he has never held office."
       figures={[register, wardFig, topShare]}
       card={{ type: "ranked", params: { measure: "voters" } }}
     >
       <div className="lg__head">
-        <WardLocator wards={top.map((r) => r.id)} label="Map of Kitui: the twelve largest wards highlighted" size={112} />
+        <WardLocator wards={top.map((r) => r.id)} label="Map of Mombasa: the twelve largest wards highlighted" size={112} />
         <p className="lg__legend">
           <span className="lg__key lg__key--pool" aria-hidden="true" /> never held office · the bar runs from zero to the largest ward
         </p>

@@ -1,7 +1,7 @@
 import type { SVGProps } from "react";
 
 /**
- * The Kitui icon set: the concepts the county's story keeps returning to that Lucide does not draw
+ * The Mombasa icon set: the concepts the county's story keeps returning to that Lucide does not draw
  * (a goat, a jerrycan, a matatu, a borehole, a maize cob, a basic keypad phone).
  *
  * Drawn on Lucide's own grid so the two sets sit together without a seam (MOTION-SYSTEM.md, Icons):
@@ -16,14 +16,14 @@ import type { SVGProps } from "react";
  * drawn once and only ever scaled as a whole.
  */
 
-export type KituiIconName =
+export type MombasaIconName =
   | "goat" | "jerrycan" | "matatu" | "radio" | "ballot-box" | "borehole" | "maize" | "school"
   | "clinic" | "road" | "phone" | "feature-phone" | "person" | "coin" | "church" | "market";
 
 type IconProps = Omit<SVGProps<SVGSVGElement>, "children"> & { size?: 16 | 20 | 24 | 32 | 48; title?: string };
 
 /** Each icon's strokes, on the 24-unit grid. */
-const PATHS: Record<KituiIconName, React.ReactNode> = {
+const PATHS: Record<MombasaIconName, React.ReactNode> = {
   goat: (
     <>
       <path d="M6 10.5h9.5a3 3 0 0 1 3 3V15" />
@@ -158,8 +158,8 @@ const PATHS: Record<KituiIconName, React.ReactNode> = {
   ),
 };
 
-/** One icon from the Kitui set, on Lucide's grid and stroke. */
-export function KituiIcon({ name, size = 24, title, strokeWidth, ...rest }: IconProps & { name: KituiIconName }) {
+/** One icon from the Mombasa set, on Lucide's grid and stroke. */
+export function MombasaIcon({ name, size = 24, title, strokeWidth, ...rest }: IconProps & { name: MombasaIconName }) {
   const stroke = strokeWidth ?? (size === 16 ? 2 : 1.5);
   return (
     <svg

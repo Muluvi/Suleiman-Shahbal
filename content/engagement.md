@@ -1,8 +1,8 @@
 ```lead
-**Your team steers and publishes. Firefly runs the platform. One brief a week holds it together.** Firefly publishes nothing on Dr. Makali Mulu's accounts and runs none of his channels.
+**Your team steers and publishes. Firefly runs the platform. One brief a week holds it together.** Firefly publishes nothing on Mr Shahbal's accounts and runs none of his channels.
 ```
 
-**Your team steers and publishes. Firefly runs the platform. One brief a week holds it together.** Firefly publishes nothing on Dr. Makali Mulu's accounts and runs none of his channels. This chapter opens Part IV. It sets out how the operation is built, who owns what, what is outside it, the weekly rhythm and approvals, and the meetings and escalation path.
+**Your team steers and publishes. Firefly runs the platform. One brief a week holds it together.** Firefly publishes nothing on Mr Shahbal's accounts and runs none of his channels. This chapter opens Part IV. It sets out how the operation is built, who owns what, what is outside it, the weekly rhythm and approvals, and the meetings and escalation path.
 
 ## 13.1 How the work is built
 
@@ -34,10 +34,10 @@ Firefly is a **Kenya-based media and consulting company**, and it made, owns and
 ## 13.2 Who owns what
 
 ```lead
-**Firefly publishes nothing on Dr. Mulu's accounts and holds no credentials to them.** It operates no channel at all: the offline layer, a WhatsApp Business API line and a USSD shortcode, is the campaign's to run.
+**Firefly publishes nothing on Mr Shahbal's accounts and holds no credentials to them.** It operates no channel at all: the offline layer, a WhatsApp Business API line and a USSD shortcode, is the campaign's to run.
 ```
 
-**The boundary.** The digital operation separates the platform, its hosting, upkeep and data checks, which Firefly provides, from analysis, strategy, messaging, voter mobilisation, ground staffing, broadcast advertising and logistics, which the campaign owns and runs. **Firefly publishes nothing on Dr. Mulu's accounts and holds no credentials to them.** It operates no channel at all: the offline layer, a WhatsApp Business API line and a USSD shortcode, is the campaign's to run. It needs no access to the owned accounts: the team enters their analytics on the platform, so the work can be measured. Everything on the owned channels stays with the people who run it now.
+**The boundary.** The digital operation separates the platform, its hosting, upkeep and data checks, which Firefly provides, from analysis, strategy, messaging, voter mobilisation, ground staffing, broadcast advertising and logistics, which the campaign owns and runs. **Firefly publishes nothing on Mr Shahbal's accounts and holds no credentials to them.** It operates no channel at all: the offline layer, a WhatsApp Business API line and a USSD shortcode, is the campaign's to run. It needs no access to the owned accounts: the team enters their analytics on the platform, so the work can be measured. Everything on the owned channels stays with the people who run it now.
 
 **The Firefly proposition.** Firefly provides the campaign's **data and analytics platform**, not a replacement for the team already publishing, and not an outside strategist. The team does the work on it: an audit of what the existing channels are doing, a strategy derived from it, a weekly brief that turns the strategy into instructions, a measurement cycle that says whether it worked, and the offline SMS, USSD and WhatsApp layer, reaching the voters no owned account can.
 
@@ -52,7 +52,7 @@ Firefly is a **Kenya-based media and consulting company**, and it made, owns and
     operation and publishing, content production, platform tactics, earned media, and the two
     ground workstreams (integration and the field-to-digital loop).
 *   **Two are not this operation's to touch** — volunteer organising, and the technology stack
-    Dr. Mulu already holds. Firefly's part is the platform beneath all fourteen.
+    Mr Shahbal already holds. Firefly's part is the platform beneath all fourteen.
 
 The figure below names the owner against each of the fourteen; Section 13.3 states what is outside scope. Commercial terms are settled separately and appear nowhere in this document.
 
@@ -74,14 +74,14 @@ items:
 R responsible · A accountable · C consulted · I informed.
 
 <!-- keep -->
-| Activity | Firefly | Your team | Dr. Mulu | Counterpart | Reviewer |
+| Activity | Firefly | Your team | Mr Shahbal | Counterpart | Reviewer |
 |---|---|---|---|---|---|
 | Presence audit and analysis | I | **R/A** | I | I | — |
 | Pillar and segment strategy | I | **R/A** | C | C | — |
 | Weekly brief | I | **R/A** | I | I | — |
 | Content calendar | I | **R** | I | **A** | — |
 | Writing, filming, editing | — | **R/A** | C | I | — |
-| Kikamba language review | — | **R/A** | I | I | — |
+| Kiswahili language review | — | **R/A** | I | I | — |
 | Publishing to owned accounts | — | **R/A** | I | I | — |
 | Community replies and moderation | — | **R/A** | I | I | — |
 | Paid targeting plan | — | **R** | I | **A** | — |
@@ -98,7 +98,7 @@ Stated as plainly as what is inside, because a boundary a plan will not draw is 
 ```visual
 kind: inout
 out:
-  - label: "Publishing to Dr. Mulu's owned accounts"
+  - label: "Publishing to Mr Shahbal's owned accounts"
     text: "Firefly runs the platform; your team briefs, approves and measures on it."
     body: "Firefly does not post, and does not hold credentials. The offline layer in §15.3.3 is your team's to operate end to end."
   - label: "Replacing or restaffing the existing team"
@@ -118,7 +118,7 @@ out:
   - label: "Candidate scheduling"
     text: "tour management, diary and constituency office operations."
   - label: "Party-level negotiation"
-    text: "with Wiper Patriotic Front organs, branch committees and the national executive."
+    text: "with The New Democrats organs, branch committees and the national executive."
   - label: "Polling agent recruitment, accreditation and payment"
     text: "The team tracks indicator GE-03 on the platform's KPI tracker;"
     body: "the campaign supplies and accredits the agents."
@@ -132,7 +132,7 @@ out:
 One team, one interface. The brief is the interface. **The campaign names three roles. Firefly adds the platform.**
 ```
 
-Dr. Makali Mulu already has a team that publishes every day. One team, one interface. The brief is the interface. **The campaign names three roles. Firefly adds the platform.** This chapter sets out how the teams fit, the strategy core, the surge roles, leadership and reporting lines, how the existing team is assessed and upskilled, and Firefly's part.
+Mr Shahbal already has a team that publishes every day. One team, one interface. The brief is the interface. **The campaign names three roles. Firefly adds the platform.** This chapter sets out how the teams fit, the strategy core, the surge roles, leadership and reporting lines, how the existing team is assessed and upskilled, and Firefly's part.
 
 ## 17.1 Three teams, and how they fit
 
@@ -146,7 +146,7 @@ id: org-chart
 
 *   **The campaign's command structure** — the Campaign Manager and three functional leads in the
     chart above. Four roles. The platform serves it and replaces no part of it.
-*   **Dr. Mulu's existing digital team** — the people producing and publishing the daily record
+*   **Mr Shahbal's existing digital team** — the people producing and publishing the daily record
     today, led by the campaign's **Digital Director**. This engagement adds a brief to their week. It does not add a manager to their line.
 *   **The strategy core** — strategy, analysis and the offline layer: three campaign roles at Standard and Premium, two at Lean with the offline-layer operator part-activated (Section 21.1). Firefly runs the platform beneath all three cores.
 
@@ -183,7 +183,7 @@ The structure below scales with the service level selected in Section 21.1.
 
 The core is retained throughout the campaign. **What this section covers, and what it does not.** The three roles below are **the campaign's** — the
 people who run the strategy on the platform. Firefly runs the platform itself: hosting, deployment, upkeep, the data checks and new features. Section 17.4 sets out the **campaign's own** leadership structure,
-which Firefly reports platform matters into and does not staff. Section 17.5 sets out how Dr. Mulu's existing
+which Firefly reports platform matters into and does not staff. Section 17.5 sets out how Mr Shahbal's existing
 digital team is assessed and upskilled — that team is neither staffed nor replaced by this
 engagement. Section 18.1's KPI owners are campaign-side roles, and they enter their numbers on the platform.
 
@@ -196,7 +196,7 @@ items:
   - title: "**Strategy Director** (campaign role)"
     text: "Owns the analysis, the strategy and the weekly brief; the relationship with the campaign counterpart"
     fields:
-      - { label: "Decision rights", text: "Approves new policy claims and Kikamba output before your team publishes. **Does not publish, and holds no account credentials**" }
+      - { label: "Decision rights", text: "Approves new policy claims and Kiswahili output before your team publishes. **Does not publish, and holds no account credentials**" }
   - title: "**Analyst**"
     text: "Owns the presence audit, the measurement cycle, attribution and the weekly read; named **data-governance owner** for the audit scope"
     fields:
@@ -219,7 +219,7 @@ Surge roles are activated by phase and scope level.
 | Role | Activated | Function |
 |---|---|---|
 | **Data Analyst / Modeller** | Phase 1 onward (standard and premium levels) | Predictive scoring, field-digital integration, attribution modelling. **Named data-governance owner** (Section 15.4.4) |
-| **Kikamba Reviewer (native speaker)** | Week 1 onward — **mandatory at all levels** | Proverb and idiom verification, cultural register review. No Kikamba content publishes without this review. Your team produces; this role signs off |
+| **Kiswahili Reviewer (native speaker)** | Week 1 onward — **mandatory at all levels** | Proverb and idiom verification, cultural register review. No Kiswahili content publishes without this review. Your team produces; this role signs off |
 | **Volunteer & Ward Champion Coordinator** | Phase 1 onward | Tiered volunteer programme (Section 15.3.4); ward champion training and reporting |
 | **Earned Media / Press Officer** | Phase −1 onward (standard and premium levels) | Journalist relationships, debate clipping, radio placement (Section 15.2.2) |
 
@@ -232,7 +232,7 @@ phase date, an engagement level, or a KPI threshold. Roles are not added specula
 
 ## 17.4 Leadership, reporting lines and local roles
 
-**Kitui roles are staffed by Kitui people.** The Kikamba reviewer is a native speaker, and the ward
+**Mombasa roles are staffed by Mombasa people.** The Kiswahili reviewer is a native speaker, and the ward
 champion network is local by design rather than by exception. These are local appointments, made locally — not a concession, but the
 reason the county-facing half of this operation will sound like the county.
 
@@ -257,7 +257,7 @@ kind: timeline
 items:
   - when: "Week 1"
     label: "the capability map, not an appraisal"
-    body: "Four axes, scored 1–4, with each person in the room while it is scored: platform mechanics, Kikamba fluency and cultural register, measurement literacy, and response speed under pressure. The map goes to Dr. Mulu and to the team at the same time. Nobody is graded in private."
+    body: "Four axes, scored 1–4, with each person in the room while it is scored: platform mechanics, Kiswahili fluency and cultural register, measurement literacy, and response speed under pressure. The map goes to Mr Shahbal and to the team at the same time. Nobody is graded in private."
   - when: "Week 2"
     label: "one written standard"
     body: "The brief template, the caption pattern, the commitment-and-date rule, the language rule, the escalation line, and the accessibility floor from Section 15.1.4. Six pages. It belongs to the team from the day it is written."
@@ -269,6 +269,6 @@ items:
     body: "The whole team writes the weekly brief; the strategy director reviews and challenges it. That is the success measure, and it is stated here so it can be held against us. A platform that makes an outsider permanently necessary has failed at the part that mattered."
 ```
 
-**Where a gap cannot be closed by upskilling** — no native Kikamba producer, nobody who can cut
+**Where a gap cannot be closed by upskilling** — no native Kiswahili producer, nobody who can cut
 vertical video — the team names the gap in the capability map and the campaign decides whether to
 fill it. Firefly does not fill it, and does not propose itself for the role.

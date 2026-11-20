@@ -1,5 +1,5 @@
 /**
- * The campaign's working records: what Dr. Mulu's team enters day to day to run the campaign
+ * The campaign's working records: what Mr Shahbal's team enters day to day to run the campaign
  * through the platform. Each collection replaces a duty the proposal used to give Firefly
  * (docs/ownership-2026-11/PHASE-1-2-REPORT.md, the task-to-function map, T1–T32).
  *
@@ -64,7 +64,7 @@ export interface Collection {
 }
 
 const STATUS = ["Planned", "In progress", "Live", "Paused", "Done"] as const;
-const LANGUAGES = ["Kikamba", "Kiswahili", "English"] as const;
+const LANGUAGES = ["Kiswahili", "Kiswahili", "English"] as const;
 const CHANNELS = ["Facebook", "X", "Instagram", "TikTok", "YouTube", "WhatsApp", "Radio", "SMS", "USSD", "Voice", "Ground", "Press"] as const;
 const RAILS = ["SMS", "USSD", "WhatsApp", "Voice"] as const;
 
@@ -137,12 +137,12 @@ export const COLLECTIONS: Collection[] = [
       { key: "language", label: "Language", type: "select", options: LANGUAGES, required: true, list: true },
       { key: "assignee", label: "Assigned to (role)", type: "text", maxLength: 80, list: true },
       { key: "status", label: "Status", type: "select", options: ["Draft", "Approved", "Published"], required: true, list: true },
-      { key: "kikambaReviewed", label: "Reviewed by the native Kikamba speaker", type: "boolean" },
+      { key: "kikambaReviewed", label: "Reviewed by the native Kiswahili speaker", type: "boolean" },
     ],
     rules: [
       (r) =>
-        r.language === "Kikamba" && (r.status === "Approved" || r.status === "Published") && r.kikambaReviewed !== true
-          ? "Kikamba content is approved only after the native Kikamba speaker has reviewed it. Tick the review box first."
+        r.language === "Kiswahili" && (r.status === "Approved" || r.status === "Published") && r.kikambaReviewed !== true
+          ? "Kiswahili content is approved only after the native Kiswahili speaker has reviewed it. Tick the review box first."
           : null,
     ],
   },
@@ -168,8 +168,8 @@ export const COLLECTIONS: Collection[] = [
     ],
     rules: [
       (r) =>
-        r.rail === "SMS" && r.language === "Kikamba"
-          ? "Bulk political SMS cannot be sent in Kikamba: the CA/NCIC guidelines restrict political SMS to English or Kiswahili. Use the WhatsApp line or a voice note for Kikamba."
+        r.rail === "SMS" && r.language === "Kiswahili"
+          ? "Bulk political SMS cannot be sent in Kiswahili: the CA/NCIC guidelines restrict political SMS to English or Kiswahili. Use the WhatsApp line or a voice note for Kiswahili."
           : null,
       (r) => {
         const time = str(r.sendTime).trim();

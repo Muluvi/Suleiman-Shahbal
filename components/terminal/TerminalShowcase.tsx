@@ -15,7 +15,7 @@ import { TerminalFrame } from "./TerminalFrame";
 import { GroundPulseScreen } from "./screens/GroundPulseScreen";
 import { MarketAuditScreen } from "./screens/MarketAuditScreen";
 import { TurnoutScreen } from "./screens/TurnoutScreen";
-import { ContentPerformanceScreen, DroughtWatchScreen, RegisterGrowthScreen } from "./screens/CountyScreens";
+import { ContentPerformanceScreen, WaterWatchScreen, RegisterGrowthScreen } from "./screens/CountyScreens";
 import { MapPin, Radio } from "lucide-react";
 import { IllustrativeTag } from "../premium/IllustrativeTag";
 
@@ -23,7 +23,7 @@ const SCREENS: Record<TerminalModeId, React.ComponentType<{ data: (typeof WARD_D
   dgp: GroundPulseScreen,
   mea: MarketAuditScreen,
   tpc: TurnoutScreen,
-  drw: DroughtWatchScreen,
+  wtr: WaterWatchScreen,
   reg: RegisterGrowthScreen,
   cpf: ContentPerformanceScreen,
 };
@@ -31,7 +31,7 @@ const SCREENS: Record<TerminalModeId, React.ComponentType<{ data: (typeof WARD_D
 export function TerminalShowcase() {
   const reduce = useReducedMotionSafe();
   const [activeMode, setActiveMode] = useState<TerminalModeId>("dgp");
-  const [selectedWard, setSelectedWard] = useState<string>("kitui-township");
+  const [selectedWard, setSelectedWard] = useState<string>("mvita-tononoka");
   const stageRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const tabRefs = useRef<Partial<Record<TerminalModeId, HTMLButtonElement | null>>>({});
@@ -82,7 +82,7 @@ export function TerminalShowcase() {
   );
 
   const currentModeInfo = TERMINAL_MODES.find((m) => m.id === activeMode)!;
-  const currentWardData = WARD_DATA[selectedWard] || WARD_DATA["kitui-township"];
+  const currentWardData = WARD_DATA[selectedWard] || WARD_DATA["mvita-tononoka"];
   const ScreenComponent = SCREENS[activeMode];
 
   return (
@@ -99,17 +99,17 @@ export function TerminalShowcase() {
               </span>
             </div>
             <h3 className="font-serif text-lg sm:text-xl font-bold text-ink">
-              Kitui Field Coordinator Terminal (TAC-40)
+              Mombasa Field Coordinator Terminal (TAC-30)
             </h3>
           </div>
           <div className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-accent/10 border border-accent/20 text-accent t-label font-mono font-semibold self-start sm:self-auto">
             <Radio className="w-3.5 h-3.5" />
-            <span>40 Wards Connected • Dual 2G/4G GSM</span>
+            <span>30 Wards Connected • Dual 2G/4G GSM</span>
           </div>
         </div>
         <p className="text-sm text-ink/80 mt-3 leading-relaxed">
-          While the phone mockup shows the connected voter’s smartphone, this terminal models the operational hardware deployed across Kitui’s 40 wards. 
-          Each of the <strong>40 Ward Coordinators</strong> supervising <strong>400 Ward Captains</strong> uses this protocol tree to feed ground intelligence back into the central campaign war room.
+          While the phone mockup shows the connected voter’s smartphone, this terminal models the operational hardware deployed across Mombasa’s 30 wards. 
+          Each of the <strong>30 Ward Coordinators</strong> supervising <strong>300 Ward Captains</strong> uses this protocol tree to feed ground intelligence back into the central campaign war room.
         </p>
       </div>
 

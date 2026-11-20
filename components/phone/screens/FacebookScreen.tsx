@@ -12,7 +12,7 @@ import { Avatar, ScreenShell, Slot } from "../primitives";
 import { CountUp } from "../../premium/CountUp";
 
 /**
- * Facebook — §2.6's "broadest public social network in Kitui". The post is §7.1.1 Pillar 3's
+ * Facebook — §2.6's "broadest public social network in Mombasa". The post is §7.1.1 Pillar 3's
  * narrative statement on the Ward Development Equalization Fund, with that pillar's own Tier 1
  * water-access proof point as the attached card.
  *

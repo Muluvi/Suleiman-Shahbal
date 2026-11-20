@@ -18,7 +18,7 @@ type Key = (typeof COLUMNS)[number]["key"];
 
 /**
  * The heat table's interactive part: sort by any column. Each cell is shaded by which fifth of the
- * 40 wards it falls in for its own column, and also carries its value, so the shade is a guide to
+ * 30 wards it falls in for its own column, and also carries its value, so the shade is a guide to
  * the number, never a replacement for it. Server-rendered sorted by voters.
  */
 export function HeatTable({ rows }: { rows: HeatRow[] }) {

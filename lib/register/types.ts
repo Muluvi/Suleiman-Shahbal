@@ -41,7 +41,7 @@ export interface Bar {
   label: string;
   value: number | null;
   state: CellState;
-  /** Dr. Mulu, or the finding the title names: the one coloured mark among neutral ones. */
+  /** Mr Shahbal, or the finding the title names: the one coloured mark among neutral ones. */
   tone?: "accent" | "rival" | "neutral" | "neg";
   /** Printed value, when it must differ from the plain number (a sign, a unit). */
   display?: string;

@@ -65,7 +65,7 @@ export function AudioSummaryPlayer() {
  language === "kik" ? "bg-gold-solid text-on-gold border-gold-solid" : "bg-card text-muted border-line"
           }`}
         >
-          Kikamba Summary
+          Kiswahili Summary
         </button>
       </div>
 
@@ -98,8 +98,8 @@ export function AudioSummaryPlayer() {
           // changes what this one plays and a screen reader user cannot see which is selected.
           aria-label={
             isPlaying
-              ? `Pause the ${language === "en" ? "English" : "Kikamba"} strategy brief`
-              : `Play the ${language === "en" ? "English" : "Kikamba"} strategy brief`
+              ? `Pause the ${language === "en" ? "English" : "Kiswahili"} strategy brief`
+              : `Play the ${language === "en" ? "English" : "Kiswahili"} strategy brief`
           }
           aria-pressed={isPlaying}
           onClick={() => setIsPlaying(!isPlaying)}
@@ -206,9 +206,9 @@ export function FlywheelSchematic() {
 export function MessagingPlayground() {
   const [lang, setLang] = useState<"en" | "kik" | "sw">("en");
   const messages = {
-    en: { slogan: "Sustainable Growth & Dev", copy: "Building a transparent, data-driven local treasury to empower Kitui Central businesses." },
-    kik: { slogan: "Mbeu Nsya na Maendeeo", copy: "Kuseuvya mitalo ya mbeo nzao ila yithataa muingi wa Kitui na biashara kwoo." },
-    sw: { slogan: "Maendeleo Mapya Kitui", copy: "Kukuza mifumo ya wazi ya hazina ili kuwezesha biashara ndogo ndogo Kitui." }
+    en: { slogan: "Sustainable Growth & Dev", copy: "Building a transparent, data-driven local treasury to empower Mvita businesses." },
+    kik: { slogan: "Mbeu Nsya na Maendeeo", copy: "Kuseuvya mitalo ya mbeo nzao ila yithataa muingi wa Mombasa na biashara kwoo." },
+    sw: { slogan: "Maendeleo Mapya Mombasa", copy: "Kukuza mifumo ya wazi ya hazina ili kuwezesha biashara ndogo ndogo Mombasa." }
   };
 
   return (
@@ -224,7 +224,7 @@ export function MessagingPlayground() {
  lang === l ? "bg-accent-solid border-accent-solid text-on-accent" : "bg-paper border-line text-muted"
             }`}
           >
-            {l === "en" ? "English" : l === "kik" ? "Kikamba" : "Swahili"}
+            {l === "en" ? "English" : l === "kik" ? "Kiswahili" : "Swahili"}
           </button>
         ))}
       </div>
@@ -238,7 +238,7 @@ export function MessagingPlayground() {
   );
 }
 
-// 2. Kikamba Radio Aircover Dial (Animated SVG wavelength)
+// 2. Kiswahili Radio Aircover Dial (Animated SVG wavelength)
 export function RadioAircoverDial() {
   return (
     <div className="bg-card border border-line rounded-2xl p-4 sm:p-5 shadow-sm my-6 flex items-center gap-5">
@@ -248,7 +248,7 @@ export function RadioAircoverDial() {
       <div>
         <h4 className="t-label font-bold text-ink leading-tight">Interactive FM Broadcasters Sync</h4>
         <p className="t-label text-muted mt-1 leading-snug">
-          Syndicated audio broadcast network schedules cover 85% of Kitui&apos;s offline districts.
+          Syndicated audio broadcast network schedules cover 85% of Mombasa&apos;s offline districts.
         </p>
       </div>
     </div>
@@ -267,7 +267,7 @@ export function MediaPlaybackMockup() {
         <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-gold/10" />
         <button
           type="button"
-          aria-label={playing ? "Pause the Kikamba radio commercial spot" : "Play the Kikamba radio commercial spot"}
+          aria-label={playing ? "Pause the Kiswahili radio commercial spot" : "Play the Kiswahili radio commercial spot"}
           aria-pressed={playing}
           onClick={() => setPlaying(!playing)}
           className="p-4 rounded-full bg-accent-solid text-on-accent hover:bg-accent/90 transition-all shadow-md relative z-10 cursor-pointer"
@@ -279,7 +279,7 @@ export function MediaPlaybackMockup() {
         </span>
       </div>
       <div className="mt-3 flex justify-between items-center t-label font-bold text-ink">
-        <span>Kikamba Radio Commercial Spot</span>
+        <span>Kiswahili Radio Commercial Spot</span>
         <span className="text-accent t-label font-black">0:45 Sec Broadcast</span>
       </div>
     </div>
@@ -295,8 +295,8 @@ export function ToneVoiceSlider() {
       return {
         type: "Authoritative & Technical",
         accent: "text-accent",
-        sloganEnglish: "Statutory fiscal prudence secures Kitui's long-term sovereign growth index.",
-        sloganKikamba: "Uthyuilo wa mbesa sya nthi syavinya nikuatitye uiilu wa utonga wiulu wa Kitui.",
+        sloganEnglish: "Statutory fiscal prudence secures Mombasa's long-term sovereign growth index.",
+        sloganKiswahili: "Uthyuilo wa mbesa sya nthi syavinya nikuatitye uiilu wa utonga wiulu wa Mombasa.",
         focus: "SME licensing transparency, own-source revenue compliance, institutional audit accountability."
       };
     } else if (val < 70) {
@@ -304,7 +304,7 @@ export function ToneVoiceSlider() {
         type: "Balanced Competence",
         accent: "text-gold",
         sloganEnglish: "A realistic economic blueprint designed to build SME wealth and secure local cooperatives.",
-        sloganKikamba: "Mbeu Nsya na kazi bora yaseitwe niguo kuongelea utonga wa masoko na makooperativi ala masumbikikae.",
+        sloganKiswahili: "Mbeu Nsya na kazi bora yaseitwe niguo kuongelea utonga wa masoko na makooperativi ala masumbikikae.",
         focus: "Combining digital cloud databases with offline SMS networks to support municipal market growth."
       };
     } else {
@@ -312,7 +312,7 @@ export function ToneVoiceSlider() {
         type: "Empathetic & Grassroots",
         accent: "text-emerald-500",
         sloganEnglish: "Livelihoods first: supporting local farmers and ensuring access to co-op development resources.",
-        sloganKikamba: "Uimi mbeu, mbesa mufuko: kuseovya kiko kya uimi niguo kuetee mwananchi mbesa na kazi bora.",
+        sloganKiswahili: "Uimi mbeu, mbesa mufuko: kuseovya kiko kya uimi niguo kuetee mwananchi mbesa na kazi bora.",
         focus: "Direct market assemblies, radio baraza syncs, physical brochures, localized cooperative alignments."
       };
     }
@@ -378,8 +378,8 @@ export function ToneVoiceSlider() {
               <p className="t-label text-ink font-medium leading-relaxed italic">&ldquo;{tone.sloganEnglish}&rdquo;</p>
             </div>
             <div>
-              <span className="t-micro font-extrabold text-muted">Kikamba Slogan Variant</span>
-              <p className="t-label text-ink/90 font-medium leading-relaxed italic">&ldquo;{tone.sloganKikamba}&rdquo;</p>
+              <span className="t-micro font-extrabold text-muted">Kiswahili Slogan Variant</span>
+              <p className="t-label text-ink/90 font-medium leading-relaxed italic">&ldquo;{tone.sloganKiswahili}&rdquo;</p>
             </div>
             <div className="pt-2 border-t border-line/40">
               <span className="t-micro font-extrabold text-muted block mb-0.5">Campaign Focus Elements</span>
@@ -442,8 +442,8 @@ export function SloganBuilder() {
 // 8. Grassroots Feedback Visualizer (SMS feed logs)
 export function SMSFeedbackVisualizer() {
   const logs = [
-    { sender: "+254 712 *** 324", text: "When is the next market Baraza in Kitui South? We need details on the local co-op loans.", time: "10:14 AM" },
-    { sender: "+254 723 *** 892", text: "Loved the radio spot on Kikamba yesterday, the economic blueprint sounds realistic.", time: "11:02 AM" }
+    { sender: "+254 712 *** 324", text: "When is the next market Baraza in Changamwe? We need details on the local co-op loans.", time: "10:14 AM" },
+    { sender: "+254 723 *** 892", text: "Loved the radio spot on Kiswahili yesterday, the economic blueprint sounds realistic.", time: "11:02 AM" }
   ];
 
   return (
@@ -471,8 +471,8 @@ export function SMSFeedbackVisualizer() {
 // 9. Interactive Community Forum Scheduler
 export function CommunityScheduler() {
   const events = [
-    { title: "Kitui West Cooperative Assembly", date: "Sept 12, 2026", time: "10:00 AM", location: "Kabati Market Square" },
-    { title: "Mwingi Central Town Hall Gathering", date: "Sept 18, 2026", time: "2:00 PM", location: "Mwingi Town Council" }
+    { title: "Jomvu Cooperative Assembly", date: "Sept 12, 2026", time: "10:00 AM", location: "Kabati Market Square" },
+    { title: "Kisauni Town Hall Gathering", date: "Sept 18, 2026", time: "2:00 PM", location: "the north mainland Town Council" }
   ];
 
   return (

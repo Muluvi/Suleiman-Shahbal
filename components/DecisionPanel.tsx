@@ -51,7 +51,7 @@ const DEPENDENCIES: { icon: typeof UserCheck; text: string; longLead?: boolean }
   { icon: MapPin, text: "Current ward-level registration data from the IEBC published file" },
   { icon: Briefcase, text: "Access to the existing NG-CDF project record for verified proof points" },
   { icon: CheckCircle2, text: "Sign-off on the service level, and the names of the team accounts to create" },
-  { icon: FileText, text: "Wiper's 2027 nomination rules or NEC resolution, as soon as the party issues them" },
+  { icon: FileText, text: "The New Democrats' 2027 nomination rules or NEC resolution, as soon as the party issues them" },
 ];
 
 export function DecisionPanel() {
@@ -75,7 +75,7 @@ export function DecisionPanel() {
             <div className="t-label font-black text-accent">The recommendation</div>
             <div className="font-sans text-xl font-bold text-ink mt-1">Tier 2 — Standard</div>
             <p className="t-label text-muted leading-relaxed mt-2">
-              Tier 1 concentrates spend where Dr. Mulu is already strong and leaves the recognition
+              Tier 1 concentrates spend where Mr Shahbal is already strong and leaves the recognition
               deficit untouched. Tier 3 is defensible but presses against a statutory ceiling that must
               also cover transport, venues and personnel across {fmt("census.area")} square kilometres.
             </p>
@@ -88,7 +88,7 @@ export function DecisionPanel() {
           </p>
 
           <p className="text-sm text-ink font-semibold leading-relaxed mt-4">
-            <InlineMarks text={`The Wiper nomination is reported for ${inSentence(NOMINATION_WINDOW.whenText)}, by a party-run countywide selection (Tier 3, Section 5.2). Every dependency below sits on that clock.`} />
+            <InlineMarks text={`The New Democrats nomination is reported for ${inSentence(NOMINATION_WINDOW.whenText)}, by a party-run countywide selection (Tier 3, Section 5.2). Every dependency below sits on that clock.`} />
           </p>
         </div>
 

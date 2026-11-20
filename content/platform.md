@@ -1,8 +1,8 @@
 ```lead
-**Anyone with the link sees everything. Once the engagement starts, Dr. Mulu's team signs in to change it. Firefly keeps it running.**
+**Anyone with the link sees everything. Once the engagement starts, Mr Shahbal's team signs in to change it. Firefly keeps it running.**
 ```
 
-**Anyone with the link sees everything. Once the engagement starts, Dr. Mulu's team signs in to change it. Firefly keeps it running.** The data behind this story, the analysis, the strategies and the team's own working records live in one place, and the team updates them itself.
+**Anyone with the link sees everything. Once the engagement starts, Mr Shahbal's team signs in to change it. Firefly keeps it running.** The data behind this story, the analysis, the strategies and the team's own working records live in one place, and the team updates them itself.
 
 ```visual
 kind: contrast
@@ -14,7 +14,7 @@ left:
 right:
   title: "Sign in to edit"
   items:
-    - { label: "Dr. Mulu's team", text: "adds and changes records and data, from a phone, once team sign-in is switched on at the start of the engagement" }
+    - { label: "Mr Shahbal's team", text: "adds and changes records and data, from a phone, once team sign-in is switched on at the start of the engagement" }
     - { label: "Every change logged", text: "who, what and when, and any change can be put back exactly" }
 ```
 
@@ -32,7 +32,7 @@ items:
 kind: cards
 title: "The work, and the chapter where the team does it"
 items:
-  - { title: "Analyse", text: "the tools and charts in How Kitui voted, What voters need and How voters get news" }
+  - { title: "Analyse", text: "the tools and charts in How Mombasa voted, What voters need and How voters get news" }
   - { title: "Decide", text: "the message, segment and channel tools in The message, The voters and Channels and language" }
   - { title: "Direct the publishing team", text: "the weekly brief beside the weekly rhythm, and the content calendar beside a week of publishing" }
   - { title: "Run the channels", text: "the SMS, USSD and WhatsApp dispatch log, beside reaching the offline majority" }

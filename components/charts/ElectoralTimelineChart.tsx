@@ -18,7 +18,7 @@ export interface TimelinePoint {
  * §2.2 — the winning total across election cycles, as a trajectory.
  *
  * This was a bar chart with `year` on the x-axis. Bars compare magnitudes side by side; they
- * cannot show direction of travel, which is the entire point here. The bar Dr. Mulu has to clear
+ * cannot show direction of travel, which is the entire point here. The bar Mr Shahbal has to clear
  * ROSE between the two sourced cycles, and a slope says that in one gesture where two columns
  * only invite the reader to work it out.
  *

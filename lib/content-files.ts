@@ -10,7 +10,7 @@ import type { TabId } from "./heading-slug";
 export const CONTENT_FILES: Record<TabId, string> = {
   welcome: "welcome.md",
   brief: "brief.md",
-  kitui: "kitui.md",
+  mombasa: "mombasa.md",
   votes: "votes.md",
   needs: "needs.md",
   news: "news.md",

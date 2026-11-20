@@ -1,8 +1,8 @@
 ```lead
-Success is judged on measures his team can observe on Dr. Makali Mulu's own channels and on the SMS list it operates, entered once the engagement starts, and the one that matters most is how much of his reach lands where he is least known.
+Success is judged on measures his team can observe on Mr Shahbal's own channels and on the SMS list it operates, entered once the engagement starts, and the one that matters most is how much of his reach lands where the race is closest.
 ```
 
-Success is judged on measures his team can observe on Dr. Makali Mulu's own channels and on the SMS list it operates, entered on Firefly's platform once the engagement starts, and the one that matters most is how much of his reach lands where he is least known. This chapter opens Part V. It sets out how success is judged, the scorecards for each stage, the recognition indicators, why vanity metrics are left out, and the method of the presence audit that sets every baseline.
+Success is judged on measures his team can observe on Mr Shahbal's own channels and on the SMS list it operates, entered on Firefly's platform once the engagement starts, and the one that matters most is how much of his reach lands where the race is closest. This chapter opens Part V. It sets out how success is judged, the scorecards for each stage, the recognition indicators, why vanity metrics are left out, and the method of the presence audit that sets every baseline.
 
 ## 18.1 How success will be judged
 
@@ -20,7 +20,7 @@ id: fig-5-6-kpis
 
 #### Stage 1: the nomination window
 
-The first stage is measured against winning the Wiper Patriotic Front nomination.
+The first stage is measured against being validly nominated by The New Democrats.
 
 ```figure
 id: nomination-scorecard
@@ -58,17 +58,17 @@ items:
 ```
 
 <!-- keep -->
-**Followers are not the target. Being known in Mwingi is.**
+**Followers are not the target. Being present in Kisauni, Nyali and Changamwe is.**
 
 Section 18.4 sets out why vanity metrics are left out. These five recognition indicators, R-01 to R-05, replace them; they sit beside the two scorecards above, the four nomination indicators and the five general-election ones. Every
-one is measured where Dr. Mulu is least known, and every one is read from his own channels or from
+one is measured where Mr Shahbal is least known, and every one is read from his own channels or from
 the team's dispatch log on Firefly's platform.
 
 ```visual
 kind: cards
 preset: indicator
 items:
-  - title: "Followers located in Mwingi North, Central and West"
+  - title: "Followers located in Kisauni, Nyali and Changamwe"
     chips: ["R-01"]
     head: { label: "Target", text: "A stated monthly gain on the Week 1 baseline" }
     fields:
@@ -92,9 +92,9 @@ items:
     fields:
       - { label: "Method", text: "The team's dispatch log on Firefly's platform" }
       - { label: "Baseline", text: "0" }
-  - title: "Kikamba-first share of weekly output, and its engagement on reach"
+  - title: "Kiswahili-first share of weekly output, and its engagement on reach"
     chips: ["R-05"]
-    head: { label: "Target", text: "≥ 4 of 7 weekly posts Kikamba-first (Section 12.6)" }
+    head: { label: "Target", text: "≥ 5 of 7 weekly posts Kiswahili-first (Section 12.6)" }
     fields:
       - { label: "Method", text: "Post coding, weekly (Section 18.5)" }
       - { label: "Baseline", text: "Set in Week 1" }
@@ -106,7 +106,7 @@ Section 7.1. If reach share in the pool does not rise, the briefs are wrong and 
 review says so.
 
 **Excluded, and named so the exclusion is visible:** total followers, impressions, post likes, video
-views. They move without any voter moving. **R-03 replaces likes** because a share puts Dr. Mulu's
+views. They move without any voter moving. **R-03 replaces likes** because a share puts Mr Shahbal's
 name inside a network he does not own — which, in a ward where he is unknown, is the only thing a
 post can usefully do.
 
@@ -118,20 +118,20 @@ Vanity metrics are kept out of every dashboard, reporting meeting and vendor con
 kind: cards
 items:
   - title: "Most voters are offline"
-    text: "{{ict.offline}}% of Kitui's residents are offline (CA/KNBS 2023/24, Tier 1)."
+    text: "{{ict.offline}}% of Mombasa's residents are offline (CA/KNBS 2023/24, Tier 1)."
     body: "Chasing likes takes effort away from village barazas and market caravans."
-  - title: "Much of the interaction comes from outside Kitui"
-    text: "Political content from Eastern Kenya draws a large share of its social media interaction from non-resident users in Nairobi, Mombasa and abroad, who are not registered to vote in Kitui's 40 wards."
+  - title: "Much of the interaction comes from outside Mombasa"
+    text: "Political content from the Coast draws a large share of its social media interaction from users in Nairobi, other counties and abroad, who are not registered to vote in Mombasa's 30 wards."
     body: "**Evidence required:** an earlier draft of this section put that share at \"over 60%\", which no source in this plan supports. The figure is withdrawn rather than restated; the ward-level split is obtainable from the campaign's own platform analytics in Week 1 (Section 18.5) and should replace this sentence once measured. The argument does not depend on the precise number."
     tier: "not yet tiered"
   - title: "No demonstrated link to turnout"
-    text: "A viral video does not transport an elderly voter in Ikutha or Nguni to their polling stream on election morning."
+    text: "A viral video does not transport an elderly voter in Mwakirunge or Bofu to their polling stream on election morning."
     body: "Pledges collected in person, consented SMS contacts and trained polling-day agents produce counted votes."
 ```
 
 ## 18.5 How the presence audit works
 
-The first work of the engagement: ninety days of Dr. Mulu's own channels, measured, coded and read against the race. Every baseline in this chapter is set by what it finds.
+The first work of the engagement: ninety days of Mr Shahbal's own channels, measured, coded and read against the race. Every baseline in this chapter is set by what it finds.
 
 #### The measurement set
 
@@ -163,11 +163,11 @@ items:
     fields:
       - { label: "Why this one", text: "Establishes what the team's current capacity actually is, before any brief assumes more of it." }
   - label: "Paid"
-    body: "Meta Ad Library and Google Ads Transparency Centre, for Dr. Mulu"
+    body: "Meta Ad Library and Google Ads Transparency Centre, for Mr Shahbal"
     fields:
       - { label: "Why this one", text: "Public, needs no access from anyone, and is the only paid-advertising signal that exists." }
   - label: "Other platforms"
-    body: "X: **@MakaliMulu**, about {{channel.x.followers}} followers in a September 2026 snapshot (Tier 3, a dated baseline). TikTok, Instagram, YouTube and any WhatsApp Channel or Business number: recorded in the Week 1 audit where they exist."
+    body: "X: his public profile, followers {{channel.x.followers}}, read on the Week 1 export. TikTok, Instagram, YouTube and any WhatsApp Channel or Business number: recorded in the Week 1 audit where they exist."
     fields:
       - { label: "Why this one", text: "Not estimated, per Annex A." }
 ```
@@ -193,8 +193,8 @@ cheap and stable, and a ninety-day slice of it says nothing.
 What it has never been asked is the only question that matters in a countywide name-recognition contest: **how much of this reach lands where he is not yet known?**
 ```
 
-Every other analysis in this document is about Kitui — the register, the census, the results, the
-audit record. This one is about the only communications asset Dr. Mulu actually controls.
+Every other analysis in this document is about Mombasa — the register, the census, the results, the
+county's finances. This one is about the only communications asset Mr Shahbal actually controls.
 
 A verified Facebook presence, roughly {{channel.fb.followers}} followers and {{channel.fb.posts}} posts is not a standing start. It is
 an operating channel with a record, and that record can be read. What it has never been asked is the
@@ -251,7 +251,7 @@ The campaign tests the **recognition-deficit hypothesis** on records that alread
 id: research-and-tracker
 ```
 
-Before committing the campaign's broadcast and caravan effort to Northern and Southern Kitui, the campaign tests the **recognition-deficit hypothesis** (the proposition that Dr. Mulu's main electoral weakness outside Kitui Central is name recognition rather than unfavourable perception) on records that already exist: his own channel analytics, the IEBC's ward-level results, and what arrives unprompted on the line his team operates, logged on Firefly's platform. Nothing is commissioned to test it.
+Before committing the campaign's broadcast and ground effort to the close-contest belt, the campaign tests the **turnout-and-machinery hypothesis** (the proposition that Mr Shahbal's main electoral weakness is that no machine has turned his voters out, rather than unfavourable perception) on records that already exist: his own channel analytics, the IEBC's ward-level results, and what arrives unprompted on the line his team operates, logged on Firefly's platform. Nothing is commissioned to test it.
 
 ```figure
 id: research-modules

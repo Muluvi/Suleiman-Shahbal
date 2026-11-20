@@ -22,7 +22,7 @@ import { USSD_HEADER, USSD_MENU as USSD_SPEC, menuLine } from "../data/ussd-spec
  * The split is the site's ONE masked reveal: a clip-path wipe, because a wipe divides. Spending
  * it here rather than scattering masked reveals across the site is what keeps it meaningful.
  *
- * The handset below it runs the real Kikamba menu from §3.8.1 — mimesis, not effect: a feature
+ * The handset below it runs the real Kiswahili menu from §3.8.1 — mimesis, not effect: a feature
  * phone prints its menu line by line, so the mock does too. It is also the best proof-of-execution
  * artefact on the site, which is why the deliverable is demonstrated rather than described.
  *
@@ -44,8 +44,8 @@ const CHANNELS = {
     { icon: MessageSquare, label: "Targeted paid social" },
   ],
   offline: [
-    { icon: Radio, label: "Kikamba vernacular radio" },
-    { icon: MessageSquare, label: "Bulk SMS in Kikamba" },
+    { icon: Radio, label: "Kiswahili vernacular radio" },
+    { icon: MessageSquare, label: "Bulk SMS in Kiswahili" },
     { icon: Smartphone, label: "USSD — works on any handset" },
     { icon: Users, label: "Market barazas, ward champions" },
   ],
@@ -97,7 +97,7 @@ export function ReachSplit() {
       </div>
 
       <h3 className="font-serif text-xl sm:text-2xl font-semibold text-ink tracking-tight mb-1">
-        Most of Kitui cannot see a digital campaign
+        Most of Mombasa cannot see a digital campaign
       </h3>
       <p className="text-sm text-muted leading-relaxed max-w-[62ch] mb-5">
         {CONNECTED}% of residents use the internet (CA/KNBS 2023/24). A purely digital campaign
@@ -108,7 +108,7 @@ export function ReachSplit() {
       <div
         className="relative h-16 sm:h-20 rounded-2xl overflow-hidden border border-line flex"
         role="img"
-        aria-label={`${CONNECTED}% of Kitui is online; ${OFFLINE}% is not`}
+        aria-label={`${CONNECTED}% of Mombasa is online; ${OFFLINE}% is not`}
       >
         <motion.div
           className="relative bg-accent flex items-center justify-center shrink-0"

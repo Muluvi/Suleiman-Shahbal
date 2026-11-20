@@ -79,7 +79,7 @@ export function OfflineWaterline({ register, internet, phone, benchmark }: { reg
 
 /* ------------------------------------------------------------------ Message Assignment Matrix */
 
-const LANG_BY_CHANNEL = ["Kikamba", "English or Kiswahili only (SMS cannot carry Kikamba)", "Kikamba", "English, Sheng, Kiswahili", "Kikamba, Kiswahili"];
+const LANG_BY_CHANNEL = ["Kiswahili", "English or Kiswahili only (SMS cannot carry Kiswahili)", "Kiswahili", "English, Sheng, Kiswahili", "Kiswahili, Kiswahili"];
 
 export function MessageMatrix({ segments, channels }: { segments: string[][]; channels: string[][] }) {
   const [s, setS] = useState(0);
@@ -97,7 +97,7 @@ export function MessageMatrix({ segments, channels }: { segments: string[][]; ch
         <p className="plat-kicker">The assignment</p>
         <dl className="mt-2 space-y-3 text-[0.92rem]">
           <div><dt className="font-semibold text-ink">Segment</dt><dd className="text-muted">{seg[0]}</dd></div>
-          <div><dt className="font-semibold text-ink">Message and Kikamba framing</dt><dd className="text-ink">{seg[1]}</dd></div>
+          <div><dt className="font-semibold text-ink">Message and Kiswahili framing</dt><dd className="text-ink">{seg[1]}</dd></div>
           <div><dt className="font-semibold text-ink">Evidence behind it</dt><dd className="text-muted">{seg[2]}</dd></div>
           <div><dt className="font-semibold text-ink">Channel and reach</dt><dd className="text-muted">{ch[0]}</dd></div>
           <div><dt className="font-semibold text-ink">Format and tone on this channel</dt><dd className="text-ink">{ch[1]}</dd></div>

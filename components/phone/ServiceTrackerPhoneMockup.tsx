@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { PhoneFrame, type PhoneVariant, type PhoneLightingMode } from "./PhoneFrame";
 import { BODY_H, BODY_W } from "./device";
 import { SendHorizontal } from "lucide-react";
-import { KituiIcon } from "../icons/kitui";
+import { MombasaIcon } from "../icons/mombasa";
 
 type ServiceChannel = "whatsapp" | "ussd" | "sms";
 
@@ -26,7 +26,7 @@ export function ServiceTrackerPhoneMockup() {
           Public Service Delivery Tracker Handset
         </h3>
         <p className="t-body text-sm text-muted mt-1">
-          Simulating how a Kitui voter logs a public infrastructure breakdown (water boreholes, clinic
+          Simulating how a Mombasa voter logs a public infrastructure breakdown (water boreholes, clinic
           drug stockouts, road washouts) across smartphone WhatsApp, offline 2G USSD, and automated SMS.
         </p>
 
@@ -196,7 +196,7 @@ export function ServiceTrackerPhoneMockup() {
                         </div>
                         <div>
                           <div className="flex items-center gap-1 text-xs font-bold leading-tight text-white">
-                            <span>Kitui Citizen Tracker</span>
+                            <span>Mombasa Citizen Tracker</span>
                             <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center text-[0.5625rem] font-black">
                               ✓
                             </span>
@@ -212,7 +212,7 @@ export function ServiceTrackerPhoneMockup() {
                       {/* Bot Welcome */}
                       <div className="max-w-[85%] bg-[#1f2c34] rounded-xl rounded-tl-xs p-3 shadow-xs text-slate-200">
                         <p className="text-[0.6875rem] leading-relaxed">
-                          Welcome to the <span className="font-bold text-emerald-400">Kitui Service Delivery Tracker</span>.
+                          Welcome to the <span className="font-bold text-emerald-400">Mombasa Service Delivery Tracker</span>.
                           Please describe the infrastructure issue, ward name, and attach a photo if available.
                         </p>
                         <span className="text-[0.5625rem] text-slate-400 block text-right mt-1">11:42 AM</span>
@@ -222,7 +222,7 @@ export function ServiceTrackerPhoneMockup() {
                       <div className="max-w-[85%] ml-auto bg-[#005c4b] rounded-xl rounded-tr-xs p-3 shadow-xs text-white">
                         {/* Simulated Photo Thumbnail */}
                         <div className="w-full h-24 rounded-lg bg-slate-800/80 mb-1 flex flex-col items-center justify-center border border-white/10 text-slate-300">
-                          <KituiIcon name="borehole" size={24} aria-hidden="true" />
+                          <MombasaIcon name="borehole" size={24} aria-hidden="true" />
                           <span className="text-[0.59375rem] font-mono mt-1 text-slate-300">borehole_pump_mutomo.jpg</span>
                         </div>
                         <p className="text-[0.6875rem] leading-relaxed">
@@ -239,7 +239,7 @@ export function ServiceTrackerPhoneMockup() {
                           <span className="bg-emerald-500/20 px-2 py-0.2 rounded text-[0.53125rem]">LOGGED</span>
                         </div>
                         <p className="text-[0.65625rem] leading-relaxed text-slate-300">
-                          Issue registered & geolocated (-1.842°, 38.214°). Escalated to Kitui South Sub-County Water Desk.
+                          Issue registered & geolocated (-1.842°, 38.214°). Escalated to Changamwe Sub-County Water Desk.
                         </p>
                         <div className="mt-2 pt-2 border-t border-white/10 text-[0.59375rem] text-slate-400 flex items-center justify-between">
                           <span>SMS status code: TRACK 0482</span>
@@ -315,7 +315,7 @@ export function ServiceTrackerPhoneMockup() {
                           STATUS UPDATE: TICKET #KT-2027-0482
                         </div>
                         <p className="text-[0.6875rem] leading-relaxed">
-                          Mutomo Borehole: Replacement pump seals & technician dispatched from Kitui Town depot. Arrival
+                          Mutomo Borehole: Replacement pump seals & technician dispatched from Mombasa Town depot. Arrival
                           expected today 16:30 EAT. Ward Champion on site.
                         </p>
                         <span className="text-[0.5625rem] text-slate-400 block text-right mt-1">14:11</span>

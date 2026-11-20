@@ -76,7 +76,7 @@ export interface FigurePoint extends FigureValue {
 export interface FigureSeries {
   id: string;
   /**
-   * The finding, stated as a sentence. Not "Registered voters by ward" — "Twelve of forty wards
+   * The finding, stated as a sentence. Not "Registered voters by ward" — "Twelve of thirty wards
    * hold 37.8% of the register". A headline that names the measure instead of the finding makes
    * the reader do the work the figure exists to do for them.
    */

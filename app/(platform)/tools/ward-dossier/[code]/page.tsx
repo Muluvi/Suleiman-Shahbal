@@ -11,7 +11,7 @@ import { wardOgImage } from "@/lib/card/og";
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
   const ward = PUBLIC_WARDS.find((w) => w.code === code);
-  const title = ward ? `${ward.name} ward | Kitui 2027` : "Ward dossier | Kitui 2027";
+  const title = ward ? `${ward.name} ward | Mombasa 2027` : "Ward dossier | Mombasa 2027";
   // The pasted link shows the ward's profile card (visual upgrade, E5).
   const image = { url: wardOgImage(code), width: 1080, height: 1080, alt: title };
   return { title, robots: { index: false, follow: false }, openGraph: { title, images: [image] }, twitter: { card: "summary_large_image", images: [image.url] } };

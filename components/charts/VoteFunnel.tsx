@@ -50,7 +50,7 @@ const STAGES = [
     key: "registered",
     value: REGISTERED,
     label: "Registered voters",
-    note: "IEBC 2022 register, 40 wards. Tier 1.",
+    note: "IEBC 2022 register, 30 wards. Tier 1.",
     tone: "bg-line",
   },
   {
@@ -172,7 +172,7 @@ export function VoteFunnel() {
       {/* The accessible equivalent. */}
       <table className="w-full mt-4 t-small border-collapse">
         <caption className="sr-only">
-          Kitui County vote arithmetic: registered voters, expected ballots cast at the certified
+          Mombasa County vote arithmetic: registered voters, expected ballots cast at the certified
           2022 turnout of {TURNOUT_RATE}%, and the winning threshold, with the 2022 winning total as a
           benchmark.
         </caption>

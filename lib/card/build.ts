@@ -8,7 +8,6 @@
  *
  * `path` is the site view the card was made from: the QR code and the printed link go there.
  */
-import waterAndDrought from "../../data/analysis/water-and-drought.json";
 import { NOMINATION_KPIS } from "../../data/kpis";
 import { RADIO_STATIONS } from "../../data/media-ownership";
 import { figure } from "../data/read";
@@ -19,7 +18,7 @@ import { TOOL_CONSTITUENCIES, TOOL_STATIONS, TOOL_WARDS } from "../tools/dataset
 import { FACTS, NOMINATION_ITEMS } from "../tools/lists";
 import { RADIO_SHARE, startingSpots } from "../tools/radio-share";
 import { asOfText, provenanceOf, resolveFigure, sourceLine, type CardType, type ResolvedFigure } from "./spec";
-import type { PictogramName } from "../../components/icons/kitui";
+import type { PictogramName } from "../../components/icons/mombasa";
 
 /* ------------------------------------------------------------------------------- model */
 
@@ -69,7 +68,7 @@ const fifth = (values: number[]) => {
   return (v: number) => Math.min(4, Math.floor((sorted.filter((s) => s < v).length / values.length) * 5));
 };
 const QUINTS = ["#dde8fd", "#acc5f2", "#7297e2", "#3a63cd", "#18349b"];
-const SCORECARD = "County Government of Kitui, three-year scorecard: itemised projects placed on one ward";
+const SCORECARD = "County Government of Mombasa, three-year scorecard: itemised projects placed on one ward";
 const REGISTER_FIG = () => resolveFigure({ id: "register.2022", label: "registered voters, 2022" });
 const per1kOf = (w: (typeof TOOL_WARDS)[number]) => (w.voters ? (w.projectsKsh / w.voters) * 1000 : 0);
 
@@ -114,13 +113,13 @@ function bigNumber(p: Params): CardModel | null {
   const fact = FACTS.find(([, fid]) => fid === id);
   let f: ResolvedFigure;
   try { f = resolveFigure({ id, label: fact?.[0] ?? id }); } catch { return null; }
-  return { type: "big-number", kicker: "Kitui in one number", title: f.label, path: `/tools/fact-cards`, blocks: [{ kind: "hero", value: f.display, label: f.label, note: f.provenance }], figures: [f] };
+  return { type: "big-number", kicker: "Mombasa in one number", title: f.label, path: `/tools/fact-cards`, blocks: [{ kind: "hero", value: f.display, label: f.label, note: f.provenance }], figures: [f] };
 }
 
 const STAT_SETS: Record<string, { title: string; path: string; ids: [string, string][] }> = {
-  county: { title: "Kitui at a glance", path: "/kitui", ids: [["census.population", "people, 2019 census"], ["census.households", "households"], ["register.2022", "registered voters, 2022"], ["register.polling-stations", "polling stations"], ["poverty.2021", "in poverty, 2021"], ["ict.offline", "of residents offline"]] },
+  county: { title: "Mombasa at a glance", path: "/mombasa", ids: [["census.population", "people, 2019 census"], ["census.households", "households"], ["register.2022", "registered voters, 2022"], ["register.polling-stations", "polling stations"], ["poverty.2021", "in poverty, 2021"], ["ict.offline", "of residents offline"]] },
   case: { title: "The case on one screen", path: "/brief", ids: [["pool", "registered voters where he has never held office"], ["pool.share", "of the county's register"], ["benchmark", "votes to win (benchmark)"], ["turnout.2022", "turnout, 2022"]] },
-  news: { title: "How Kitui gets its news", path: "/news", ids: [["ict.internet", "use the internet"], ["ict.offline", "are offline"], ["ict.phone", "own a mobile phone"], ["radio.musyi", "of Lower Eastern listeners on Musyi FM"]] },
+  news: { title: "How Mombasa gets its news", path: "/news", ids: [["ict.internet", "use the internet"], ["ict.offline", "are offline"], ["ict.phone", "own a mobile phone"], ["ict.mombasa.youth", "of young people use the internet"]] },
   money: { title: "The county's money", path: "/tools/county-money", ids: [["budget.total", "budget envelope, FY2026/27"], ["budget.equitable", "equitable share"], ["budget.osr", "own-source revenue"], ["budget.pending-bills.2021", "pending bills, FY2020/21"]] },
   welcome: { title: "What's inside the platform", path: "/welcome", ids: [["register.2022", "registered voters in the data"], ["register.polling-stations", "polling stations, searchable"], ["scorecard.itemised", "county projects, itemised"], ["census.population", "people in the census data"]] },
 };
@@ -128,7 +127,7 @@ function statGrid(p: Params): CardModel | null {
   const set = STAT_SETS[p.set ?? "county"];
   if (!set) return null;
   const figs = set.ids.map(([id, label]) => resolveFigure({ id, label, mod: id.startsWith("budget.") ? "bn" : "", prefix: id.startsWith("budget.") ? "KSh " : "", suffix: id.startsWith("budget.") ? "bn" : undefined }));
-  return { type: "stat-grid", kicker: "Kitui 2027", title: set.title, path: set.path, blocks: [{ kind: "tiles", items: figs.map((f) => ({ value: f.display, label: f.label, note: f.provenance })) }], figures: figs };
+  return { type: "stat-grid", kicker: "Mombasa 2027", title: set.title, path: set.path, blocks: [{ kind: "tiles", items: figs.map((f) => ({ value: f.display, label: f.label, note: f.provenance })) }], figures: figs };
 }
 
 function ward(p: Params): CardModel | null {
@@ -172,7 +171,7 @@ function ranked(p: Params): CardModel | null {
   const avg = m === "per1k" ? (TOOL_WARDS.reduce((n, w) => n + w.projectsKsh, 0) / TOOL_WARDS.reduce((n, w) => n + w.voters, 0)) * 1000 : undefined;
   return {
     type: "ranked", kicker: "The ward league table", path: def.path, page: pages > 1 ? `${page}/${pages}` : undefined,
-    title: m === "voters" ? "The 40 wards, by registered voters" : `The 40 wards, by ${def.label}`,
+    title: m === "voters" ? "The 30 wards, by registered voters" : `The 30 wards, by ${def.label}`,
     blocks: [{ kind: "bars", rows: slice.map(({ w, v }) => ({ label: `${rows.findIndex((r) => r.w.id === w.id) + 1}  ${w.name}`, sub: w.constituencyName, value: v, display: def.display(v), mark: m === "per1k" && avg !== undefined && v < avg ? "below" : w.pool ? "pool" : undefined })), ref: avg !== undefined ? { value: avg, label: `county average ${def.display(avg)}` } : undefined, zeroNote: m === "voters" ? "Orange: wards where he has never held office. Bars start at zero." : "Orange: below the county average. Bars start at zero." }],
     figures: [REGISTER_FIG()],
     source: def.source,
@@ -187,8 +186,8 @@ function map(p: Params): CardModel | null {
     const pool = resolveFigure({ id: "pool", label: "registered voters in the pool" });
     const share = resolveFigure({ id: "pool.share", label: "of the register" });
     return {
-      type: "map", kicker: "Kitui Map Studio", path: "/tools/map-studio", title: layer === "pool" ? "Where he has never held office" : "Three regions, and a ward in none",
-      blocks: [{ kind: "map", fills, legend: layer === "pool" ? [{ color: C_EARTH, label: "never held office" }] : [{ color: "#1e49ce", label: "anchor" }, { color: "#b0451a", label: "Mwingi" }, { color: "#09672e", label: "arid belt" }, { color: "#dcd7cd", label: "in no zone" }], side: layer === "pool" ? [{ value: pool.display, label: "registered voters" }, { value: share.display, label: "of the county" }] : undefined }],
+      type: "map", kicker: "Mombasa Map Studio", path: "/tools/map-studio", title: layer === "pool" ? "Where he has never held office" : "Three regions, and a ward in none",
+      blocks: [{ kind: "map", fills, legend: layer === "pool" ? [{ color: C_EARTH, label: "never held office" }] : [{ color: "#1e49ce", label: "anchor" }, { color: "#b0451a", label: "the north mainland" }, { color: "#09672e", label: "arid belt" }, { color: "#dcd7cd", label: "in no zone" }], side: layer === "pool" ? [{ value: pool.display, label: "registered voters" }, { value: share.display, label: "of the county" }] : undefined }],
       figures: [REGISTER_FIG(), pool, share],
     };
   }
@@ -198,7 +197,7 @@ function map(p: Params): CardModel | null {
   const q = fifth(vals);
   const top = [...TOOL_WARDS].sort((a, b) => def.value(b) - def.value(a)).slice(0, 4);
   return {
-    type: "map", kicker: "Kitui Map Studio", path: "/tools/map-studio", title: `The 40 wards by ${def.label}`,
+    type: "map", kicker: "Mombasa Map Studio", path: "/tools/map-studio", title: `The 30 wards by ${def.label}`,
     blocks: [{ kind: "map", fills: Object.fromEntries(TOOL_WARDS.map((w) => [`ward.${w.id}`, QUINTS[q(def.value(w))]])), legend: [{ color: QUINTS[0], label: "fewest" }, { color: QUINTS[2], label: "middle fifth" }, { color: QUINTS[4], label: "most" }], side: top.map((w) => ({ value: def.display(def.value(w)), label: w.name })) }],
     figures: [REGISTER_FIG()],
     source: def.source,
@@ -221,23 +220,18 @@ function compare(p: Params): CardModel | null {
 }
 
 const PICTO_SETS: Record<string, { title: string; path: string; items: [string, string, PictogramName][] }> = {
-  water: { title: "Water: how many have it", path: "/needs#needs-sec-3-1", items: [["water.basic.kdhs", "with at least a basic water service", "jerrycan"], ["water.30min", "reach water in under 30 minutes", "jerrycan"], ["water.points.down.share", "of water points not working", "jerrycan"]] },
-  people: { title: "How households live", path: "/needs#needs-sec-1-3", items: [["poverty.2021", "in poverty", "person"], ["electricity.2019", "of households with electricity", "house"], ["ict.offline", "of residents offline", "person"]] },
+  water: { title: "Water: how much reaches the tap", path: "/needs#needs-sec-3-1", items: [["water.supply.share", "of the water Mombasa needs is supplied", "jerrycan"], ["water.delivered.share", "reaches residents after losses", "jerrycan"], ["water.nrw", "of water bought is lost", "jerrycan"]] },
+  people: { title: "How households live", path: "/needs#needs-sec-1-3", items: [["poverty.2021", "in poverty", "person"], ["electricity.mains.2019", "of households on mains electricity", "house"], ["ict.offline", "of residents offline", "person"]] },
   offline: { title: "The offline majority", path: "/news", items: [["ict.internet", "use the internet", "person"], ["ict.offline", "are offline", "person"], ["ict.phone", "own a mobile phone", "person"]] },
 };
 function pictogram(p: Params): CardModel | null {
   if (p.set === "prices") {
-    const g = resolveFigure({ id: "price.goat", label: "July 2025", prefix: "KSh " });
-    const ga = resolveFigure({ id: "price.goat.average", label: "five-year average", prefix: "KSh " });
-    const m = resolveFigure({ id: "price.maize", label: "July 2025", prefix: "KSh " });
-    const ma = resolveFigure({ id: "price.maize.average", label: "five-year average", prefix: "KSh " });
+    const vendor = resolveFigure({ id: "price.water.vendor", label: "from a vendor", prefix: "KSh " });
+    const county = resolveFigure({ id: "price.water.county", label: "at a county source", prefix: "KSh " });
     return {
-      type: "pictogram", kicker: "Prices, drawn to scale", path: "/needs#goat-maize-prices", title: "A medium goat sells for more than its five-year average",
-      blocks: [
-        { kind: "scale", glyph: "goat", title: "A medium goat", items: [{ value: ga.value ?? 0, display: ga.display, label: ga.label }, { value: g.value ?? 0, display: g.display, label: g.label }] },
-        { kind: "tiles", items: [{ value: m.display, label: "a kilo of maize, July 2025", note: `five-year average ${ma.display}` }] },
-      ],
-      figures: [g, ga, m, ma],
+      type: "pictogram", kicker: "Prices, drawn to scale", path: "/needs#needs-sec-3-1", title: "A jerrican of water costs six times more from a vendor",
+      blocks: [{ kind: "scale", glyph: "jerrycan", title: "One 20-litre jerrican", items: [{ value: county.value ?? 0, display: county.display, label: county.label }, { value: vendor.value ?? 0, display: vendor.display, label: vendor.label }] }],
+      figures: [vendor, county],
     };
   }
   const set = PICTO_SETS[p.set ?? "water"];
@@ -251,14 +245,14 @@ function pictogram(p: Params): CardModel | null {
 }
 
 function forecast(): CardModel {
-  const rows = (waterAndDrought as { values: { value: string; as_of: string; unit: string; tier: number }[] }).values.filter((v) => v.unit === "phase");
-  const water = resolveFigure({ id: "water.points.down.share", label: "of water points not working" });
-  const goat = resolveFigure({ id: "price.goat", label: "a medium goat", prefix: "KSh " });
+  const ids: [string, string][] = [["water.demand", "m³ a day Mombasa needs"], ["water.supply", "m³ a day it receives"], ["water.delivered", "m³ a day reaching residents"], ["water.nrw", "% of water lost before it is paid for"]];
+  const figs = ids.map(([id, label]) => resolveFigure({ id, label }));
+  const mwache = resolveFigure({ id: "water.mwache", label: "m³ a day Mwache Dam will add" });
   return {
-    type: "forecast", kicker: "Drought Watch", path: "/tools/drought-watch", title: `Kitui's drought phase: ${rows[rows.length - 1].value}`,
-    blocks: [{ kind: "forecast", days: rows.map((r) => ({ when: r.as_of, phase: r.value })), latest: rows[rows.length - 1].value, also: [`${water.display} ${water.label}`, `${goat.display}, ${goat.label}`] }],
-    figures: [water, goat],
-    source: `Source: NDMA Kitui drought early-warning bulletins, ${rows[0].as_of} to ${rows[rows.length - 1].as_of} (Tier 1 and 2); ${sourceLine([water, goat]).replace(/^Source: /, "")}`,
+    type: "forecast", kicker: "Water Watch", path: "/tools/water-watch", title: `Mombasa receives about ${figure("water.supply.share").value}% of the water it needs`,
+    blocks: [{ kind: "tiles", items: [...figs, mwache].map((f) => ({ value: f.display, label: f.label, note: f.provenance })) }],
+    figures: [...figs, mwache],
+    source: sourceLine([...figs, mwache]),
   };
 }
 
@@ -285,7 +279,7 @@ function report(p: Params): CardModel | null {
     { value: n0(c.stations), label: "polling stations" },
     { value: c.projects === null ? "Not itemised" : n0(c.projects), label: "county projects itemised" },
     { value: c.perVoter === null ? "Not itemised" : `KSh ${n0(c.perVoter)}`, label: "county project value per voter" },
-    { value: c.pool ? "Never" : c.held ? "Yes, as MP" : "No", label: "has he held office here?" },
+    { value: c.pool ? "Yes" : "No", label: "in the close-contest belt?" },
   ];
   return { type: "report", kicker: "Constituency report", path: "/tools/constituency-scorecard", title: c.name, blocks: [{ kind: "tiles", items: tiles }], figures: [v], source: `Source: IEBC 2022 register and polling-station list (Tier 1); ${SCORECARD}. No grades: the card reports, it does not score.` };
 }
@@ -319,7 +313,7 @@ function fact(p: Params): CardModel | null {
   const known = FACTS.find(([, fid]) => fid === id);
   let f: ResolvedFigure;
   try { f = resolveFigure({ id, label: known?.[0] ?? p.label ?? id }); } catch { return null; }
-  if (id === "pool") f = { ...f, label: "registered voters live where Dr. Mulu has never held office" };
+  if (id === "pool") f = { ...f, label: "registered voters live where Mr Shahbal has never held office" };
   const derived = !f.source || f.source.startsWith("Derived in");
   const fromRegister = /^(pool|pareto|con\.|ward\.|path\.|register|bloc|east-south|zone)/.test(id);
   const figs = derived && fromRegister ? [f, REGISTER_FIG()] : [f];
@@ -376,7 +370,7 @@ function roster(p: Params): CardModel {
     m.set(k, cur);
   }
   const top = [...m.values()].sort((a, b) => b.voters - a.voters).slice(0, 12);
-  return { type: "roster", kicker: "Voter Density Finder", path: "/tools/voter-density", title: `The busiest polling centres${con ? ` in ${con}` : " in Kitui"}`, blocks: [{ kind: "grid", columns: ["Centre", "Ward", "Voters"], rows: top.map((c) => [c.centre, c.ward, n0(c.voters)]) }], figures: [REGISTER_FIG()], source: "Source: IEBC 2022 register of voters per polling station (Tier 1). Centre totals summed by the site." };
+  return { type: "roster", kicker: "Voter Density Finder", path: "/tools/voter-density", title: `The busiest polling centres${con ? ` in ${con}` : " in Mombasa"}`, blocks: [{ kind: "grid", columns: ["Centre", "Ward", "Voters"], rows: top.map((c) => [c.centre, c.ward, n0(c.voters)]) }], figures: [REGISTER_FIG()], source: "Source: IEBC 2022 register of voters per polling station (Tier 1). Centre totals summed by the site." };
 }
 
 function qr(p: Params): CardModel | null {

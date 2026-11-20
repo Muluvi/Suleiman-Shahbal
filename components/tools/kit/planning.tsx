@@ -47,7 +47,7 @@ export function WardCompare({ wards, total }: { wards: ToolWard[]; total: number
 /* ------------------------------------------------------------------ Constituency Scorecard */
 
 export function ConstituencyScorecard({ cons, total }: { cons: ToolConstituency[]; total: number }) {
-  const zone = { anchor: "Anchor zone", mwingi: "Mwingi zone", arid: "Arid belt", none: "In no zone" } as const;
+  const zone = { anchor: "Anchor zone", mwingi: "the north mainland zone", arid: "Arid belt", none: "In no zone" } as const;
   // The carousel set: one image per constituency, largest first, each numbered on the image only.
   const order = [...cons].sort((a, b) => b.voters - a.voters);
   const [slide, setSlide] = useState(1);
@@ -65,7 +65,7 @@ export function ConstituencyScorecard({ cons, total }: { cons: ToolConstituency[
         {[...cons].sort((a, b) => b.voters - a.voters).map((c) => (
           <Card key={c.id}>
             <p className="font-serif text-xl text-ink">{c.name}</p>
-            <p className="mt-1 flex flex-wrap gap-1">{c.held && <Badge tone="accent">He represents it</Badge>}{c.pool && <Badge tone="gold">Pool: never held office</Badge>}<Badge>{zone[c.zone]}</Badge></p>
+            <p className="mt-1 flex flex-wrap gap-1">{c.held && <Badge tone="accent">He represents it</Badge>}{c.pool && <Badge tone="gold">Close-contest belt</Badge>}<Badge>{zone[c.zone]}</Badge></p>
             <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-[0.88rem]">
               <dt className="text-muted">Registered, 2022</dt><dd className="text-right font-mono text-ink">{n0(c.voters)}</dd>
               <dt className="text-muted">Share of county</dt><dd className="text-right font-mono text-ink">{pct((c.voters / total) * 100)}</dd>
@@ -91,7 +91,7 @@ export function ZoneEffort({ shares, phases }: { shares: { anchor: number; mwing
   const p = phases.find((x) => x.id === phase) ?? phases[0];
   const [e, setE] = useState({ anchor: p.anchor, mwingi: p.mwingi, arid: p.arid, rotating: p.rotating });
   const sum = e.anchor + e.mwingi + e.arid + e.rotating;
-  const zones: { id: "anchor" | "mwingi" | "arid"; label: string }[] = [{ id: "anchor", label: "Anchor: Kitui Central, Kitui West" }, { id: "mwingi", label: "Mwingi: North, West, Central" }, { id: "arid", label: "Arid belt: Kitui South, Kitui East" }];
+  const zones: { id: "anchor" | "mwingi" | "arid"; label: string }[] = [{ id: "anchor", label: "Anchor: Mvita, Jomvu" }, { id: "mwingi", label: "the north mainland: North, West, Central" }, { id: "arid", label: "Arid belt: Changamwe, Likoni" }];
   return (
     <div className="space-y-4">
       <div className="flex justify-end print:hidden"><SaveImage card={{ type: "map", params: { layer: "zones" } }} title="The three zones" /></div>
@@ -99,7 +99,7 @@ export function ZoneEffort({ shares, phases }: { shares: { anchor: number; mwing
         <Select label="Start from the plan's weighting for" value={phase} onChange={(v) => { setPhase(v); const q = phases.find((x) => x.id === v)!; setE({ anchor: q.anchor, mwingi: q.mwingi, arid: q.arid, rotating: q.rotating }); }} options={phases.map((x) => ({ value: x.id, label: x.label }))} />
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {zones.map((z) => <Slider key={z.id} label={z.label} value={e[z.id]} onChange={(v) => setE({ ...e, [z.id]: v })} min={0} max={70} suffix="%" />)}
-          <Slider label="Rotating test wards (Kitui Rural and others)" value={e.rotating} onChange={(v) => setE({ ...e, rotating: v })} min={0} max={50} suffix="%" />
+          <Slider label="Rotating test wards (Likoni and others)" value={e.rotating} onChange={(v) => setE({ ...e, rotating: v })} min={0} max={50} suffix="%" />
         </div>
         {sum !== 100 && <p className="mt-2 text-[0.85rem] text-gold">The four add up to {sum}%, not 100%.</p>}
       </Card>
@@ -110,7 +110,7 @@ export function ZoneEffort({ shares, phases }: { shares: { anchor: number; mwing
         { key: "g", label: "Effort ÷ register", num: true, render: (z) => (e[z.id] / shares[z.id]).toFixed(2) },
         { key: "b", label: "", render: (z) => <span className="block w-28"><Bar value={e[z.id]} max={Math.max(70, shares[z.id])} mark={shares[z.id]} tone={e[z.id] >= shares[z.id] ? "accent" : "gold"} /></span> },
       ]} />
-      <Note>Above 1.00, a zone gets more effort than its share of voters; below 1.00, less. Kitui Rural ({pct(shares.rural)} of the register) sits in no zone and is carried by the rotating share. The line in each bar is the zone&rsquo;s register share.</Note>
+      <Note>Above 1.00, a zone gets more effort than its share of voters; below 1.00, less. Likoni ({pct(shares.rural)} of the register) sits in no zone and is carried by the rotating share. The line in each bar is the zone&rsquo;s register share.</Note>
     </div>
   );
 }

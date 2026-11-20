@@ -17,7 +17,7 @@ export function WardCartogramBlockContent() {
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
         One tile per ward, clustered by constituency. No ward-boundary map exists in this repository, so this grid —
-        not a geographic map — is the cartogram. All 40 wards are itemised (Phase 2 of the provenance system replaced
+        not a geographic map — is the cartogram. All 30 wards are itemised (Phase 2 of the provenance system replaced
         the previous 13-of-40 partial register).
       </p>
 
@@ -27,10 +27,10 @@ export function WardCartogramBlockContent() {
         It used to appear three times inside one section — twice at §3.3.3 [CHECK REF], where this block and
         the path-to-200k block sit under the same heading, and again at §3.4.2 [CHECK REF], where
         InteractiveTable detected the 40-row register table and prepended another. Each mount
-        renders the forty wards twice (a real list plus an aria-hidden clone the seamless loop
+        renders the thirty wards twice (a real list plus an aria-hidden clone the seamless loop
         needs), so a reader was being served 240 ward cards to read 40 facts.
 
-        One mount now. The path-to-200k block keeps its own accessible table of all 40 wards,
+        One mount now. The path-to-200k block keeps its own accessible table of all 30 wards,
         which is the right thing in that context, and §3.4.2 [CHECK REF]'s markdown table already IS the
         register. The presentational clone below remains: a marquee that loops without a visible
         seam needs two copies of the strip, and that copy is inert and hidden from assistive

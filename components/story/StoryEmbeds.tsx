@@ -205,7 +205,7 @@ function PackChartView({ which }: { which: PackChart }) {
   if (!bars) return null;
   return which === "voters"
     ? <GrowBars title="Registered voters, by constituency" bars={bars} source="IEBC 2022 register" />
-    : <GrowBars title="County projects, by sector" caption="Itemised in the county's Three-Year Scorecard." bars={bars} source="County Government of Kitui scorecard" />;
+    : <GrowBars title="County projects, by sector" caption="Itemised in the county's Three-Year Scorecard." bars={bars} source="County Government of Mombasa scorecard" />;
 }
 
 /* ------------------------------------------------------------------ live records */

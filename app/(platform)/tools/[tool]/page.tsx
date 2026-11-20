@@ -13,7 +13,7 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ tool: string }> }) {
   const { tool } = await params;
-  const title = `${TOOLS[tool]?.title ?? "Tool"} | Kitui 2027`;
+  const title = `${TOOLS[tool]?.title ?? "Tool"} | Mombasa 2027`;
   // The pasted link shows this tool's own share card (visual upgrade, E5).
   const image = { url: toolOgImage(tool), width: 1080, height: 1080, alt: TOOLS[tool]?.lead ?? title };
   return { title, robots: { index: false, follow: false }, openGraph: { title, description: TOOLS[tool]?.lead, images: [image] }, twitter: { card: "summary_large_image", images: [image.url] } };

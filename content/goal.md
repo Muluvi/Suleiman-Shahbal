@@ -24,19 +24,19 @@ Each objective names its target, its owner, the finding it answers, its baseline
 id: fig-1-3-objectives
 ```
 
-### 8.2.1 Be known where he is not yet known
+### 8.2.1 Be present where the race is closest
 
 ```visual
 kind: cards
 preset: objective
 items:
-  - head: { label: "Target", text: "At least {{pool.share}}% of his reach landing in the pool, the pool's own share of the register, and a verified subscriber footprint across all 15 Mwingi wards and 6 Kitui South wards before the opening of the party nomination window." }
+  - head: { label: "Target", text: "At least {{pool.share}}% of his reach landing in the pool, the pool's own share of the register, and a verified subscriber footprint across all 17 wards of Kisauni, Nyali and Changamwe before party nominations close in June 2027." }
     chips: ["NW-01", "R-02"]
     text: "**Named Owner:** Director of Communications; the delivery ledger is the dispatch log on Firefly's platform."
     fields:
-      - { label: "Traceability", text: "Nomination viability: name recognition and visible activity in northern Mwingi and the southern wards, where Dr. Mulu has been known mainly as the member for Kitui Central." }
-      - { label: "Finding it answers", text: "{{pool.share}}% of the register, {{pool}} voters, lives in Mwingi and Kitui South, where he has never held office (Section 6.2)." }
-      - { label: "Baseline", text: "set in Week 1, from his own Insights export. The hypothesis is that his reach concentrates in Kitui Central (Section 7.1); Week 1 tests it." }
+      - { label: "Traceability", text: "Turnout: visible, ward-level activity in the three constituencies decided by fewer than 2,000 votes in 2022, where a party machine, not his, carried the vote." }
+      - { label: "Finding it answers", text: "{{pool.share}}% of the register, {{pool}} voters, lives in Kisauni, Nyali and Changamwe, the close-contest belt (Section 6.2)." }
+      - { label: "Baseline", text: "set in Week 1, from his own Insights export. The hypothesis is that his reach concentrates on the Island and among people who already know him (Section 7.1); Week 1 tests it." }
       - { label: "Served by", text: "Section 12.1 (where the effort goes) and Section 12.6 (what gets published)." }
       - { label: "Measured by", text: "NW-01 and R-02 (Section 18.1)." }
 ```
@@ -51,9 +51,9 @@ items:
     chips: ["R-03"]
     text: "**Named Owner:** Policy and Communications Research Lead."
     fields:
-      - { label: "Traceability", text: "Turns Dr. Mulu's 13-year parliamentary record (Section 6.1: {{record.bursary.recipients}} bursary recipients, KSh 47m allocated, Kitui Central certified the best-evaluated constituency in the Eastern region, FY2014/15) into verifiable, shareable case studies set to the priorities of the dryland pastoral and farming zones." }
+      - { label: "Traceability", text: "Turns Mr Shahbal's record (Section 6.1: Gulf African Bank, founded {{record.gab.founded}}; the KSh {{record.sez.ksh|bn}} billion Jomvu SEZ, {{record.sez.jobs}} jobs projected) into verifiable, visitable case studies set to the priorities of each zone: water, jobs and paid bills." }
       - { label: "Finding it answers", text: "his distinguishing proof is his record (Section 6.1)." }
-      - { label: "Baseline", text: "His record is documented for Kitui Central, the only constituency he has represented (Section 6.1). Where content about it currently reaches is measured in Week 1." }
+      - { label: "Baseline", text: "His record is documented in business and at EALA, not in county office (Section 6.1). Where content about it currently reaches is measured in Week 1." }
       - { label: "Served by", text: "Section 9.1 (the position) and the content type \"Where the money went\" (Section 10.1)." }
       - { label: "Measured by", text: "R-03, shares per 1,000 reached in the deficit wards (Section 18.1)." }
 ```
@@ -87,25 +87,25 @@ items:
     text: "**Named Owner:** Database and Ground Mobilization Coordinator."
     fields:
       - { label: "Traceability", text: "Every post the weekly brief commissions names the voter segment it is for (Section 11.2), the ward it is aimed at (Section 2.3) and the content type that gives it a reason (Section 10.1)." }
-      - { label: "Finding it answers", text: "his current output is a record of where he was, with no ward named outside Kitui Central and no ask (Section 12.6)." }
+      - { label: "Finding it answers", text: "his current output is a record of where he was and whom he met, with no ward named and no ask (Section 12.6)." }
       - { label: "Baseline", text: "set in Week 1, from the post coding." }
       - { label: "Served by", text: "Chapters 10 to 12." }
       - { label: "Measured by", text: "R-05 and the weekly post coding (Sections 18.5 and 18.1)." }
       - { label: "Campaign build target it supports", text: "**{{target.supporters}} registered, verified supporters** in the central database mapped across all {{register.polling-stations}} polling stations by 31 May 2027. The database is the campaign's own, outside Firefly's platform, which holds only its counts (Section 15.4.1); the recruitment is the campaign's." }
 ```
 
-### 8.2.5 Hold the home base
+### 8.2.5 Hold his 2013 voters
 
 ```visual
 kind: cards
 preset: objective
 items:
-  - head: { label: "Target", text: "Reach and engagement in Kitui Central held at or above the Week 1 baseline while output weight moves to Mwingi and the arid belt." }
-    text: "**Named Owner:** Kitui Central Constituency Campaign Committee."
+  - head: { label: "Target", text: "Reach and engagement among his existing supporters held at or above the Week 1 baseline while output weight moves to the close-contest belt and the 2022 abstainers." }
+    text: "**Named Owner:** The campaign's constituency coordinators, one for each of the six constituencies."
     fields:
-      - { label: "Traceability", text: "Avoids the home-belt trap (Path D, Section 2.5) by holding Dr. Mulu's base in Kitui Central while its own MP succession plays out." }
-      - { label: "Finding it answers", text: "Kitui Central will have its own MP succession contest through the same window (Section 6.3)." }
-      - { label: "Baseline", text: "{{con.mvita}} registered voters in Kitui Central. He was re-elected there in 2022 with {{result.2013.gov.shahbal}} votes (Tier 1)." }
+      - { label: "Traceability", text: "Avoids taking known supporters for granted while effort moves to new voters, and rebuilds the 2013 coalition that has never voted for him on a ticket of his own." }
+      - { label: "Finding it answers", text: "His vote fell from {{result.2013.gov.shahbal}} in 2013 to {{result.2017.gov.shahbal}} in 2017 (Section 6.2)." }
+      - { label: "Baseline", text: "{{result.2013.gov.shahbal}} votes in 2013 and {{result.2017.gov.shahbal}} in 2017 (Tier 1); where they were cast is read from the Forms 37B once in hand." }
       - { label: "Served by", text: "Section 12.1 (the anchor zone's weighting)." }
       - { label: "Measured by", text: "reach by constituency in the monthly performance report (Section 21.2)." }
 ```

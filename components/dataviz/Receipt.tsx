@@ -15,7 +15,7 @@ import { ExportableVisual } from "../visual/ExportableVisual";
  */
 const LINES = [
   { id: "budget.equitable", label: "Equitable share from the national government" },
-  { id: "budget.osr", label: "Own-source revenue collected in Kitui" },
+  { id: "budget.osr", label: "Own-source revenue collected in Mombasa" },
   { id: "budget.grants", label: "Grants" },
   { id: "budget.rounding", label: "Rounding in the published total" },
 ] as const;

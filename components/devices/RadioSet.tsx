@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 
 /**
- * A radio set (visual upgrade, B1): slide the tuning dial across the eight Kikamba stations the
+ * A radio set (visual upgrade, B1): slide the tuning dial across the eight Kiswahili stations the
  * Radio Planner holds. The panel shows each station's frequency, ownership, the plan's posture,
  * its regional listener share where one is measured, and the Radio Planner's starting plan.
  *
@@ -20,7 +20,7 @@ export type RadioStationView = {
   spots: number;
 };
 
-export function RadioSet({ stations, slogan, sloganKikamba }: { stations: RadioStationView[]; slogan: string; sloganKikamba: string }) {
+export function RadioSet({ stations, slogan, sloganKiswahili }: { stations: RadioStationView[]; slogan: string; sloganKiswahili: string }) {
   const [i, setI] = useState(() => Math.max(0, stations.findIndex((s) => s.spots > 0)));
   const id = useId();
   const s = stations[i];
@@ -53,7 +53,7 @@ export function RadioSet({ stations, slogan, sloganKikamba }: { stations: RadioS
       </div>
       <div className="rs__info" aria-live="polite">
         <p className="rs__name">
-          {s.name} <span className="rs__freq">{s.frequency ?? "Kitui frequency not published"}</span>
+          {s.name} <span className="rs__freq">{s.frequency ?? "Mombasa frequency not published"}</span>
         </p>
         <dl className="rs__facts">
           <div><dt>Ownership</dt><dd>{s.alignment}</dd></div>
@@ -61,7 +61,7 @@ export function RadioSet({ stations, slogan, sloganKikamba }: { stations: RadioS
           <div><dt>Listener share</dt><dd>{s.share ? `${s.share} of Lower Eastern listeners (Tier 2)` : "Not measured"} · {s.reachLabel}</dd></div>
           <div><dt>Starting plan</dt><dd>{s.spots ? `${s.spots} spots a week` : "No spots: not a placement target"}</dd></div>
         </dl>
-        <p className="rs__cap"><span className="rs__capk">Caption</span> {slogan} · <i>{sloganKikamba}</i></p>
+        <p className="rs__cap"><span className="rs__capk">Caption</span> {slogan} · <i>{sloganKiswahili}</i></p>
       </div>
     </div>
   );

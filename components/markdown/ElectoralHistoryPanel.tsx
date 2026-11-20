@@ -1,11 +1,12 @@
 import { ELECTORAL_HISTORY } from "../../data/electoral-history";
 import { DISPUTED_FIGURES } from "../../data/disputed-figures";
-import { COURT_OF_APPEAL_2018, IEBC_2022_RESULTS, MEDIA_2022_DECLARATION } from "../../data/sources";
+import { COURT_OF_APPEAL_2018, HIGH_COURT_2013, MEDIA_2022_DECLARATION } from "../../data/sources";
 import { TierBadge } from "./TierBadge";
 import { DisputedFigure } from "./DisputedFigure";
 import { ProvenanceLine } from "./ProvenanceLine";
 
-const musilaDispute = DISPUTED_FIGURES.find((d) => d.id === "musila-2022-governor-votes")!;
+const omarDispute = DISPUTED_FIGURES.find((d) => d.id === "omar-2022-governor-votes")!;
+const shahbalDispute = DISPUTED_FIGURES.find((d) => d.id === "shahbal-2013-governor-votes")!;
 
 /**
  * Electoral history across 2013 / 2017 / 2022 (§2.2). Server component — no chart
@@ -17,11 +18,11 @@ export function ElectoralHistoryPanel() {
     <div className="bg-card border border-line rounded-2xl p-4 sm:p-5 shadow-sm my-6 print-avoid-break">
       <div className="flex items-center gap-2 mb-1">
         <span className="w-1.5 h-6 bg-accent rounded-full shrink-0" />
-        <h4 className="font-serif text-sm font-bold text-ink">Kitui Governor, Senator and Woman Representative — Results by Cycle</h4>
+        <h4 className="font-serif text-sm font-bold text-ink">Mombasa Governor and Senator — Results by Cycle</h4>
       </div>
       <p className="t-small text-muted mb-4 leading-relaxed pl-4">
-        Three cycles, three different Governor-race winners. 2013 is shown as an explicit gap rather than filled in —
-        see the note below and the Data Gaps Register.
+        Three cycles: Joho won twice, Nassir once, and Mr Shahbal was runner-up in 2013 and 2017. Where two
+        published totals differ, both are shown below with the reason one is used.
       </p>
 
       <div className="space-y-4">
@@ -73,12 +74,13 @@ export function ElectoralHistoryPanel() {
         ))}
       </div>
 
-      <DisputedFigure entry={musilaDispute} />
+      <DisputedFigure entry={shahbalDispute} />
+      <DisputedFigure entry={omarDispute} />
 
       <ProvenanceLine
         provenance={[
           { source: COURT_OF_APPEAL_2018, granularity: "county" },
-          { source: IEBC_2022_RESULTS, granularity: "county" },
+          { source: HIGH_COURT_2013, granularity: "county" },
           { source: MEDIA_2022_DECLARATION, granularity: "county" },
         ]}
       />

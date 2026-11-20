@@ -462,8 +462,8 @@ export function ClientPage({ sections, documents, wordCounts, visibleWordCounts,
               <p className="pf-byline">
                 <WiperUmbrellaLogo />
                 <span>
-                  <strong>Hon. Dr. Benson Makali Mulu</strong>
-                  <span>Kitui 2027 — strategy and direction</span>
+                  <strong>Hon. Dr. Benson Suleiman Shahbal</strong>
+                  <span>Mombasa 2027 — strategy and direction</span>
                 </span>
               </p>
             }
@@ -621,7 +621,7 @@ export function ClientPage({ sections, documents, wordCounts, visibleWordCounts,
         <footer className="pf-shell pf-footer relative mt-10 pt-8">
           <span aria-hidden="true" className="fx-divider-gradient absolute inset-x-4 sm:inset-x-6 top-0" />
           <div className="confidentiality-marker mb-3">
-            <strong>Built for Hon. Dr. Benson Makali Mulu and his campaign team.</strong>
+            <strong>Built for Hon. Dr. Benson Suleiman Shahbal and his campaign team.</strong>
             <span className="opacity-85"> Open to view; the team signs in to edit.</span>
           </div>
           <div className="mb-5 flex flex-wrap gap-2 print:hidden">

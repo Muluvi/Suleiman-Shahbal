@@ -60,7 +60,7 @@ export function ChannelReachBlock() {
       <p className="mt-3 pt-2 border-t border-line/40 t-small text-muted leading-relaxed">
         <strong className="text-ink">These figures supersede the 13.6% used in the surrounding
         text.</strong> That rate is from the 2019 census. The 2023/24 Kenya Housing Survey puts
-        Kitui internet use at 26.2% and phone ownership at 44.1%, so the digital layer is roughly
+        Mombasa internet use at 26.2% and phone ownership at 44.1%, so the digital layer is roughly
         double what this section describes and the SMS-only layer is roughly half. Where the
         prose and this panel disagree, the panel carries the later measurement.
       </p>
@@ -87,7 +87,7 @@ export function IssueEvidenceBlock() {
         <strong className="text-ink">This ranks the evidence, not the electorate.</strong> It scores
         how strong the public record is for each issue — the tier of the source, whether the
         indicator is a number or a description, and whether it covers the whole county. Water leads
-        because Kitui is the worst county in Kenya on an official measure. The ranking says where
+        because Mombasa is the worst county in Kenya on an official measure. The ranking says where
         the official record is strongest, which is what a message can be built on; it does not
         claim to say what voters rank first.
       </p>

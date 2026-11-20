@@ -7,7 +7,7 @@ import { WeaveDefs } from "../premium/weave";
 import { LayerFromHash } from "./MapLayerLink";
 
 /**
- * The signature figure: 40 wards as equal tiles (brief §E.7). A server component.
+ * The signature figure: 30 wards as equal tiles (brief §E.7). A server component.
  *
  * ONE SET OF TILES, SIX LAYERS. Each tile carries every layer's fill as a custom property; a row of
  * radio inputs above the map picks which one paints, through `:has()` in app/register.css. That
@@ -54,7 +54,7 @@ export function TileMap({ id, layers, initial, showWardList = false }: { id: str
         </fieldset>
       )}
 
-      <svg className="rf-svg mx-auto max-w-[22rem]" viewBox={`-2 0 ${W + 4} ${H}`} role="img" aria-label={`Tile map of Kitui's 40 wards, schematic, not to scale. ${init.name}: ${init.description}`}>
+      <svg className="rf-svg mx-auto max-w-[22rem]" viewBox={`-2 0 ${W + 4} ${H}`} role="img" aria-label={`Tile map of Mombasa's 30 wards, schematic, not to scale. ${init.name}: ${init.description}`}>
         <defs>
           <WeaveDefs id={`${id}-weave`} color="#ffffff" opacity={0.32} size={7} />
           <pattern id={`${id}-hatch`} patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
@@ -122,7 +122,7 @@ export function TileMap({ id, layers, initial, showWardList = false }: { id: str
         );
       })}
 
-      <p className="tm-schematic">Schematic, not to scale. Every ward is one equal tile, because Kitui&rsquo;s wards differ in area by two orders of magnitude and a true map would let the empty north outweigh the dense centre. Tile position inside a constituency carries no meaning.</p>
+      <p className="tm-schematic">Schematic, not to scale. Every ward is one equal tile, because Mombasa&rsquo;s wards differ in area by two orders of magnitude and a true map would let the empty north outweigh the dense centre. Tile position inside a constituency carries no meaning.</p>
 
       {showWardList && (
         <details className="tm-wardlist">

@@ -25,7 +25,7 @@ import { Countdown } from "../premium/Countdown";
  *   - one scale per chart, from zero; ticks are d3's, drawn as 1px hairlines, fewer on a phone
  *   - labels sit above their bars and wrap, so nothing is truncated at 320px; values are direct,
  *     so there is no legend where one can be avoided
- *   - colour never carries meaning alone: Dr. Mulu is accent AND named; modelled marks carry the
+ *   - colour never carries meaning alone: Mr Shahbal is accent AND named; modelled marks carry the
  *     kiondo weave AND say "modelled"; a target is an open double-ruled bar; a needed mark is a
  *     dashed empty outline that says "Data needed". All four survive greyscale
  *   - every mark is reachable by keyboard and names itself; dense marks show a tooltip on hover,

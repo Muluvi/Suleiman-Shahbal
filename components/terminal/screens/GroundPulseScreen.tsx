@@ -16,7 +16,7 @@ export function GroundPulseScreen({ data }: { data: WardPulseData }) {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
           </span>
           <span className="font-mono text-emerald-400 font-semibold" style={{ fontSize: "0.6875em" }}>
-            DGP-40 • Ground Pulse Protocol
+            DGP-30 • Ground Pulse Protocol
           </span>
         </div>
         <div className="flex items-center gap-1 bg-slate-900 px-2 py-0.5 rounded border border-slate-800 font-mono text-slate-400" style={{ fontSize: "0.625em" }}>

@@ -76,7 +76,7 @@ export function wardRegisterProblems(register: WardRegister): Problem[] {
     });
   }
   const wardCount = register.constituencies.reduce((sum, c) => sum + c.wards.length, 0);
-  if (wardCount !== 40) out.push({ rule: `Expected 40 wards across 8 constituencies, found ${wardCount}.`, plain: "Kitui has 40 wards; none can be added or removed here." });
-  if (register.constituencies.length !== 8) out.push({ rule: `Expected 8 constituencies, found ${register.constituencies.length}.`, plain: "Kitui has 8 constituencies; none can be added or removed here." });
+  if (wardCount !== 40) out.push({ rule: `Expected 30 wards across 8 constituencies, found ${wardCount}.`, plain: "Mombasa has 30 wards; none can be added or removed here." });
+  if (register.constituencies.length !== 8) out.push({ rule: `Expected 8 constituencies, found ${register.constituencies.length}.`, plain: "Mombasa has 8 constituencies; none can be added or removed here." });
   return out;
 }

@@ -34,39 +34,48 @@ export interface Segment {
 const f = (id: string) => formatFigure(figure(id));
 
 export const SEGMENTS: Segment[] = withTeamEdits<Segment>("segments", "id", [
-  { id: "agrarian", name: "Rural agrarian & smallholder baseline", shortName: "Rural agrarian", size: "segment.rural.voters", share: { id: "census.rural.share", of: "county population" } },
   {
-    id: "pastoralist",
-    name: "Agro-pastoralist & arid-zone livestock keepers",
-    shortName: "Agro-pastoralist",
+    id: "agrarian",
+    name: "Port, transport & logistics workers",
+    shortName: "Port and transport",
     size: null,
     notSized: {
-      context: () => `${f("livestock.households")} livestock-farming households (2019 Census, Tier 1): households, not voters`,
-      closesWith: "Registered voters by livelihood; not published",
+      context: () => "Concentrated in Changamwe and Jomvu, along the port and the Nairobi road",
+      closesWith: "Registered voters by occupation; not published",
     },
   },
-  { id: "youth", name: "Youth cohort, ages 18–35", shortName: "Youth 18–35", size: "segment.youth.voters", share: { id: "segment.youth.share", of: "the 2022 register" } },
-  { id: "msme", name: "Urban & peri-urban informal commerce", shortName: "Urban commerce", size: "segment.urban.voters", share: { id: "census.urban.share", of: "county population" } },
+  {
+    id: "pastoralist",
+    name: "Women & household managers",
+    shortName: "Women",
+    size: null,
+    notSized: {
+      context: () => `${f("census.female")} women residents (2019 Census, Tier 1): residents, not voters`,
+      closesWith: "IEBC 2022 register by sex, Mombasa",
+    },
+  },
+  { id: "youth", name: "The young mainland voter, ages 18–34", shortName: "Youth 18–34", size: "segment.youth.voters", share: { id: "segment.youth.share", of: "the 2022 register" } },
+  {
+    id: "msme",
+    name: "Traders & small businesses",
+    shortName: "Traders",
+    size: null,
+    notSized: {
+      context: () => "Kongowea, Marikiti, Majengo, the CBD and every estate's trading strip",
+      closesWith: "County single business permit register by ward",
+    },
+  },
   {
     id: "professionals",
-    name: "Formal professionals, civil servants & educators",
+    name: "Professionals & the public service",
     shortName: "Professionals",
     size: null,
     notSized: {
-      context: () => `Health workers: ${f("health.density.core")} core staff per 10,000 people (Countdown 2030, Tier 2); headcounts not published`,
-      closesWith: "TSC establishment for Kitui; County Public Service Board staff return",
+      context: () => "Teachers, health workers, county and national civil servants, bank and port staff; headcounts not published",
+      closesWith: "TSC establishment for Mombasa; County Public Service Board staff return",
     },
   },
-  {
-    id: "diaspora",
-    name: "Out-of-county Kamba diaspora",
-    shortName: "Diaspora",
-    size: null,
-    notSized: {
-      context: () => `Net recent migration ${f("migration.net")} (2019 Census, Tier 1): context, not a voter count`,
-      closesWith: "IEBC register by polling station, set against the migration tables",
-    },
-  },
+  { id: "diaspora", name: "The 2022 abstainers", shortName: "2022 abstainers", size: "abstained.2022", share: { id: "abstained.2022.share", of: "the 2022 register" } },
 ]);
 
 export const segment = (id: Segment["id"]): Segment => {

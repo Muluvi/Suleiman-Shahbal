@@ -4,7 +4,7 @@
  * WHY THIS IS SEPARATE FROM register.ts. Everything here takes the register as an argument and
  * imports nothing. That is what lets lib/figures/figures.test.ts run it under plain
  * `node --test` against data/ward-register.json — the same file the application reads — with no
- * bundler, no module mocking and no second copy of the forty numbers this document rests on.
+ * bundler, no module mocking and no second copy of the thirty numbers this document rests on.
  *
  * register.ts binds these to the real register and adds the named constants. Keep the arithmetic
  * here; keep the bindings there. A number that cannot be checked from a terminal is a number this

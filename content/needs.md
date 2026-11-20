@@ -1,12 +1,12 @@
 ```lead
-Kitui's most urgent need is water: it has the lowest share of any county in Kenya with at least a basic drinking-water service, **{{water.basic.kdhs}}%** (Tier 1, KDHS 2022).
+Mombasa's most urgent need is water: the county needs about **{{water.demand}}** cubic metres a day and receives about **{{water.supply}}**, and only about **{{water.delivered}}** reaches a tap (Tier 2, the governor's own figures).
 ```
 
-Kitui's most urgent need is water: it has the lowest share of any county in Kenya with at least a basic drinking-water service, **{{water.basic.kdhs}}%** (Tier 1, KDHS 2022). Behind it come food and drought, health, roads, jobs for the young, the cost of living, how county money is spent, and the unresolved Mui Basin coalfield. Each concern below carries its evidence against the national figure where one is published, its source and year, and what it means for the campaign. The themes the campaign argues from this evidence are in Section 10.1.
+Mombasa's most urgent need is water: the county needs about **{{water.demand}}** cubic metres a day and receives about **{{water.supply}}**, and only about **{{water.delivered}}** reaches residents after leaks and theft (Tier 2, Governor Nassir as reported, 2025). Behind it come jobs and the port, health, housing and access, the cost of living, how county money is spent, and what the Jomvu Special Economic Zone could change. Each concern below carries its evidence against the national figure where one is published, its source and year, and what it means for the campaign. The themes the campaign argues from this evidence are in Section 10.1.
 
 ## 1.3 How households live
 
-More than half of Kitui lives in poverty, fewer than two households in five have safe drinking water, and fewer than one in five has electricity.
+Mombasa is richer and better connected than most of Kenya, and still a city where a third of residents were poor in 2021 and most households buy water by the jerrican.
 
 ```visual
 kind: stats
@@ -14,248 +14,150 @@ preset: people
 items:
   - value: "{{poverty.2021}}%"
     label: "in poverty, 2021"
-    tier: 1
-    body: "About **{{poverty.2021.people}}** people (Tier 1, KNBS Kenya Poverty Report, 2021). This is the official rate."
-  - value: "{{water.safe.2019}}%"
-    label: "of households with safe drinking water, 2019"
     tier: 2
-    body: "Piped water reaches **{{water.piped.2019}}%** of households (Tier 2, KNBS 2019 via Stats Kenya)."
-  - value: "{{electricity.2019}}%"
-    label: "of households with electricity, 2019"
+    body: "About **{{poverty.2021.people}}** people, against **{{poverty.2021.national}}%** nationally (Tier 2, KNBS Kenya Poverty Report 2021 via Stats Kenya). The 2022 rate was **{{poverty.2022}}%**."
+  - value: "{{water.supply.share}}%"
+    label: "of daily water demand supplied"
     tier: 2
-    body: "Up from **{{electricity.2009}}%** in 2009 (Tier 2, KNBS 2019 via Stats Kenya)."
-  - value: "{{ict.offline}}%"
-    label: "of residents offline"
+    body: "About {{water.supply}} m³ a day against a need of {{water.demand}} m³ (Tier 2, the governor's figures, 2025)."
+  - value: "{{electricity.mains.2019}}%"
+    label: "of households lit by mains electricity, 2019"
     tier: 1
-    body: "**{{ict.internet}}%** use the internet and **{{ict.phone}}%** own a mobile phone (Tier 1, CA/KNBS 2023/24)."
+    body: "Against **{{electricity.national}}%** nationally (Tier 1, KNBS 2019 Census Volume IV)."
+  - value: "{{ict.internet}}%"
+    label: "of residents online"
+    tier: 1
+    body: "**{{ict.internet}}%** use the internet, the fourth-highest county in Kenya (Tier 1, CA/KNBS 2023/24), so **{{ict.offline}}%** are not online."
 ```
 
-**Poverty.** The KNBS Kenya Poverty Report puts **{{poverty.2021}}%** of Kitui residents, about {{poverty.2021.people}} people, in poverty in 2021 (Tier 1). NDMA's 2025 long-rains assessment cites {{poverty.ndma.2019}}% "below the poverty line (KNBS 2019)" and a county poverty rate of {{poverty.ndma.county}}%, on bases it does not reconcile with this one (Tier 2), so neither is used in its place. Stats Kenya reports {{poverty.2022.statskenya}}% for 2022 (Tier 3); it is not used until checked against the KNBS 2022 poverty report.
+**Poverty.** The KNBS poverty estimate puts **{{poverty.2021}}%** of Mombasa residents, about {{poverty.2021.people}} people, in poverty in 2021, against {{poverty.2021.national}}% nationally; food poverty was {{poverty.food.2021}}% and hardcore poverty {{poverty.hardcore.2021}}% (Tier 2, KNBS via Stats Kenya). The rate fell to {{poverty.2022}}% in 2022 (Tier 2). The KNBS report's own county annex is the Tier 1 record to hold.
 
-**Water.** **{{water.safe.2019}}%** of households had safe drinking water in 2019, and **{{water.piped.2019}}%** piped water (Tier 2, KNBS 2019 via Stats Kenya). This is the census definition of a safe source; Section 3.1 sets out the other measures, which count different things. About **{{water.surface}}** residents rely on untreated surface water as their main domestic source (Tier 1).
+**Water.** The city buys most of its water. Vendors sell a 20-litre jerrican at **KSh {{price.water.vendor}}–40**; the county sells the same water at source for **KSh {{price.water.county}}** (Tier 2, the governor as reported, 2025). Section 3.1 sets out the deficit.
 
-**Electricity.** **{{electricity.2019}}%** of households had electricity in 2019, up from **{{electricity.2009}}%** in 2009 (Tier 2, KNBS 2019 via Stats Kenya). Measured by main lighting source, **{{electricity.mains.2019}}%** of Kitui households were lit by mains electricity against **{{electricity.national}}%** nationally (Tier 1, KNBS 2019 Census Volume IV).
+**Electricity.** **{{electricity.mains.2019}}%** of Mombasa's conventional households were lit by mains electricity in 2019, against {{electricity.national}}% nationally (Tier 1, KNBS 2019 Census Volume IV).
 
-**Phones and internet.** **{{ict.internet}}%** of residents use the internet and **{{ict.phone}}%** own a mobile phone (Tier 1, CA/KNBS 2023/24), so **{{ict.offline}}%** are offline. Chapter 4 sets out what each channel can reach.
+**Phones and internet.** **{{ict.internet}}%** of residents use the internet (Tier 1, CA/KNBS 2023/24) and **{{ict.phone}}%** owned a mobile phone in 2019 (Tier 1, KNBS 2019 Census), so **{{ict.offline}}%** are not online. Chapter 4 sets out what each channel can reach.
 
-**What it means for the campaign.** Most voters are poor, offline and without piped water, so the campaign is fought on services and reaches most voters off the internet.
+**What it means for the campaign.** Voters here are urban and half online, but the daily experience is the jerrican, the vendor and the bill. The campaign is fought on services, and digital reaches more voters than in any rural county.
 
 ## 3.1 Water
 
-**Kitui is last in Kenya.** **{{water.basic.kdhs}}%** of residents have at least a basic drinking-water service, the lowest share of any county; Nairobi, the highest, is at **{{water.basic.nairobi}}%** (Tier 1, KNBS, Kenya Demographic and Health Survey 2022). On the census measure, **{{water.safe.2019}}%** of households had safe drinking water in 2019 and **{{water.piped.2019}}%** piped water (Tier 2, KNBS 2019 via Stats Kenya). The two measures count different things and are never compared directly.
+```lead
+Mombasa needs about **{{water.demand}} m³** of water a day. It receives about **{{water.supply}} m³**, and **{{water.nrw}}%** of what it buys is lost before it is paid for (Tier 2).
+```
 
 ```visual
 kind: stats
-preset: jerrycan
 items:
-  - value: "{{water.basic.kdhs}}%"
-    label: "with at least a basic water service, 2022"
-    tier: 1
-    body: "The lowest of any county. Nairobi: {{water.basic.nairobi}}% (Tier 1, KDHS 2022)."
-  - value: "{{water.30min}}%"
-    label: "reach drinking water in under 30 minutes"
-    tier: 1
-    body: "Kenya: {{water.30min.kenya}}%. {{water.over30}}% take longer (Tier 1, County Gender Data Sheet, October 2025)."
-  - value: "{{water.points.down.share}}%"
-    label: "of water points not working, July 2025"
-    tier: 1
-    body: "{{water.points.working}} of {{water.points.total}} sources working (Tier 1, NDMA, July 2025)."
-  - value: "{{water.trek.2026-02}} km"
-    label: "average walk to water, February 2026"
-    tier: 1
-    body: "The longest of Kenya's semi-arid counties (Tier 1, NDMA National Drought Early Warning Bulletin)."
+  - value: "{{water.demand}} m³"
+    label: "needed each day"
+    tier: 2
+    body: "The governor's figure for daily demand (Tier 2, 2025). Mombasa produces almost no water of its own: it buys from Baricho in Kilifi, Marere in Kwale and Mzima in Taita Taveta."
+  - value: "{{water.supply}} m³"
+    label: "received each day"
+    tier: 2
+    body: "**{{water.supply.share}}%** of demand, of which only about **{{water.delivered}} m³** reaches residents (Tier 2)."
+  - value: "{{water.nrw}}%"
+    label: "non-revenue water"
+    tier: 2
+    body: "Lost to leaks and illegal connections: about KSh 100 million a month (Tier 2, KNA, October 2026). The county's own target is 30% within two years."
+  - value: "{{water.mowasco.met}}%"
+    label: "of demand met by Mombasa Water, FY2025/26"
+    tier: 2
+    body: "10 million m³ supplied against 85.9 million m³ demanded; the utility carries **KSh {{water.mowasco.debt|bn}} billion** in historical debts (Tier 2, Nation, reporting the regulator's review)."
 ```
 
-*   About **{{water.surface}}** people rely on untreated surface water as their main domestic source (Tier 1).
-*   In July 2025, {{water.points.working}} of {{water.points.total}} water sources were working, so **{{water.points.down.share}}% were not**. In Kitui Central only {{water.points.working.kitui-central}}% were working, the lowest of the eight (Tier 1, NDMA). That figure is in Dr. Makali Mulu's own constituency: water points are county assets, not NG-CDF ones, but the answer is prepared before the number is used.
-*   **{{water.schools.unsafe}} school units have no safe water within 100 m** (Tier 1, NDMA). The figure counts units by school level, several of which may share a compound; it is used with that wording or not at all.
-*   NDMA classed the county **Alert** from December 2025 through February 2026, and **Normal but worsening** in August 2026 (Tier 1).
+**Two measures, one picture.** The governor's daily figures and the regulator's annual figures count different things: daily supply into the system, and water billed to customers over a year. They agree on the shape: Mombasa gets about a fifth of the water it needs, and loses about half of that.
 
-**What it means for the campaign.** Water is the one issue on which Kitui is measurably last in the country, on a Tier 1 source updated every month, so a claim about it can be re-checked every month rather than argued.
+**What it means for the campaign.** Water is the issue every ward shares and the one the county can be measured on. A promise here must be dated and checkable: the price at the kiosk, the share of water lost, and the hours a ward has water.
 
-## 3.2 Food, farming and drought
+## 3.2 The deficit, the dam and the pipeline
 
 ```lead
-Kitui's food security remains classified under **IPC Phase 2 ("Stressed")** as of September 2025 (Tier 1).
+Mwache Dam is to add **{{water.mwache}} m³** a day for Mombasa and Kwale. It was **{{water.mwache.complete}}%** complete in June 2026 (Tier 1, the Water CS to the Senate).
 ```
 
-**The drought and the crisis zone.** Kitui's food security remains classified under **IPC Phase 2 ("Stressed")** as of September 2025 (Tier 1). NDMA's July 2025 long-rains assessment found the trend worsening, and projected the marginal mixed-farming zone, {{livelihood.marginal}}% of residents, to fall to IPC 3 ("Crisis") in October–December 2025 (Tier 1). NDMA's January 2026 bulletin put the county at **Alert** (Tier 1), and the **March 2026 national flooding** then disrupted roads and infrastructure across several sub-counties (Tier 2).
+The Coast's four counties need about **{{water.coast.demand}} m³** of water a day and receive about **{{water.coast.supply}} m³**, a deficit of **{{water.coast.deficit}} m³** (Tier 1, Water CS Eric Mugaa to the Senate Committee on Lands, Environment and Natural Resources, 18 June 2026). Two national projects are meant to close Mombasa's share of it:
 
 ```visual
 kind: timeline
-title: "Drought and early warning, 2025–2026"
 items:
-  - when: "July 2025"
-    label: "NDMA long-rains assessment: IPC 2, worsening; the marginal mixed-farming zone ({{livelihood.marginal}}% of residents) projected to IPC 3 (\"Crisis\") for October–December 2025"
-    tier: 1
-  - when: "September 2025"
-    label: "IPC Phase 2 (\"Stressed\")"
-    tier: 1
-  - when: "January 2026"
-    label: "NDMA drought status: Alert Phase"
-    tier: 1
-  - when: "March 2026"
-    label: "National flooding"
-    tier: 2
-body: "Drought pressure ran through 2025 (Tier 1). The county was at Alert in NDMA's January 2026 bulletin and at IPC Phase 2 in September 2025 (Tier 1), and the March 2026 national flooding followed (Tier 2)."
+  - { date: "June 2026", label: "Mwache Dam {{water.mwache.complete}}% complete", text: "Civil works due to finish by September 2026, impoundment from October 2026 (Tier 1)." }
+  - { date: "When full", label: "+{{water.mwache}} m³ a day", text: "Shared between Mombasa and Kwale: almost five times Mombasa's current supply (Tier 1)." }
+  - { date: "Planned", label: "Mzima II pipeline", text: "A 220 km pipeline from Mzima Springs to Mazeras, {{water.mzima2}} m³ a day for the Coast (Tier 2, Nation, 2026)." }
 ```
 
-**How Kitui makes a living (NDMA, July 2025, Tier 1).** {{livelihood.mixed}}% of residents live in the mixed farming zone, {{livelihood.marginal}}% in marginal mixed farming and {{livelihood.employment}}% in formal and unskilled employment. NDMA's wealth groups are very poor {{wealth.verypoor}}%, poor {{wealth.poor}}%, middle {{wealth.middle}}% and better-off {{wealth.better}}%: the Tier 1 basis for the rural agrarian and agro-pastoralist segments in Section 11.2.
-
-```visual
-kind: stats
-items:
-  - value: "{{livestock.cattle}}"
-    label: "cattle"
-    tier: 1
-    body: "With about {{livestock.goats}} goats, {{livestock.poultry}} poultry and {{livestock.donkeys}} donkeys (livestock data validation 2023, cited by NDMA in July 2025; Tier 1)."
-  - value: "over 90%"
-    label: "of households keep poultry"
-    tier: 1
-    body: "Poultry is kept by more than nine households in ten (Tier 1), and carries no county policy of its own."
-```
-
-*   **Green grams.** They give {{greengrams.cash.marginal}}% of cash income in marginal mixed farming and {{greengrams.cash.mixed}}% in mixed farming. The 2025 long rains produced {{greengrams.lr2025}} bags, {{greengrams.lr2025.vs-average}}% above the five-year average, while maize was {{maize.lr2025.vs-average}}% below (Tier 1, NDMA). This does not confirm the untiered annual output in Message Pillar 2 (Section 10.1): the long rains supply only part of the year's crop.
-*   **Fodder.** The county holds {{fodder.held}} bales against {{fodder.needed}} needed, and has no commercial fodder business (Tier 1, NDMA).
-*   **Aflatoxin.** KEPHIS found {{aflatoxin.maize}}% of maize and {{aflatoxin.groundnut}}% of groundnut samples above the limit in 2024 (Tier 1, via NDMA).
-*   **Livestock disease.** Goats suffered CCPP (morbidity {{goats.ccpp.morbidity}}%, mortality {{goats.ccpp.mortality}}%) and PPR (morbidity {{goats.ppr.morbidity}}%, mortality {{goats.ppr.mortality}}%) (Tier 1, NDMA).
-*   **Food reserves.** The County Executive Committee Member (CECM) for Agriculture has said only **{{food.reserve-households}} households** hold food reserves (Tier 2). That figure sits oddly beside the 2019 census count of {{census.households}} households (Tier 1), and is quoted with that caveat.
-
-**Where the need is worst.** NDMA ranks the eight sub-counties by food-insecurity severity (July 2025, Tier 1):
-
-| Rank | Sub-county | In the pool? | Hotspot wards NDMA names |
-|---|---|---|---|
-| 1 | Mwingi North | Yes | Ngomeni, Kyuso, Tseikuru, Tharaka |
-| 2 | Kitui South | Yes | Athi, Ikutha, Kanziko/Simisi, Mutha |
-| 3 | Kitui East | No (no party flow, Section 6.3) | Zombe/Mwitika, Voo/Kyamatu, Endau/Malalani |
-| 4 | Mwingi Central | Yes | Nguni, Nuu |
-| 5 | Kitui West | No | Mutonguni, Kauwi |
-| 6 | Kitui Rural | No | Kanyangi |
-| 7 | Mwingi West | Yes | Kyome/Thaana, Nguutani, Kiomo/Kyethani |
-| 8 | Kitui Central | No (home base) | Mulango, Kyangwithya West |
-
-NDMA names hotspot wards in every sub-county, the home base included, so the ranking is the evidence, not hotspot status. "The pool" is the four constituencies where Dr. Mulu has never held office (Section 6.2).
-
-**Security and resource conflict.** NDMA reports {{border.killed}} people killed on the Kitui–Tana River border at Endau/Malalani, herders migrating in, clashes between herder communities in Ngomeni and Tseikuru, and wildlife taking stock and crops near Tsavo East (July 2025, Tier 1). The county's scorecard claims {{scorecard.police.stations}} border police stations, {{scorecard.police.complete}} of them complete. This is the Tier 1 evidence for the insecurity the agro-pastoralist segment names as its core anxiety (Section 11.2). It is framed as resource and border security, never in community or ethnic terms (Charter clause 6, Section 19.3).
-
-**What it means for the campaign.** The pool is where food insecurity is worst, so a candidate who verifies delivery has most to show in the wards he most needs to win.
+**What it means for the campaign.** The water arrives in the next term, whoever governs: the dam and the pipeline are national projects. What the county controls is the last mile: reticulation, kiosks, the vendors' price, and the {{water.nrw}}% that leaks away. A governor elected in 2027 will be judged on whether the new water reaches the estates, not on whether the dam is finished. That is a delivery question, and the campaign answers it as one.
 
 ## 3.3 Health
 
-**Kitui is below Kenya on access and births in a facility, and above it on child survival.** {{health.access.problem}}% of women report a problem getting health care (Kenya {{health.access.problem.kenya}}%), and {{health.facility-births}}% of births are in a facility (Kenya {{health.facility-births.kenya}}%) (Tier 1, KDHS 2022).
+Mombasa runs Coast General Teaching and Referral Hospital, the referral hospital for the whole coast, and a network of sub-county hospitals. The FY2025/26 budget estimates gave health **KSh {{budget.health.2025-26|bn}} billion** of {{budget.estimates.2025-26|bn}} billion, the largest single share, including a Level 4 hospital at Kongowea and the refurbishment of Likoni Sub-County Hospital (Tier 2, Eastleigh Voice). County health outcome indicators (stunting, facility births, access to care) are to be read from the KDHS 2022 Mombasa factsheet; until then they are named data gaps: stunting **{{health.stunting}}**.
 
-```visual
-kind: bars
-title: "Kitui against Kenya: access to care and births in a facility, KDHS 2022"
-source: "KDHS 2022 (Tier 1)"
-items:
-  - label: "Women reporting a problem getting health care, Kitui"
-    value: "{{health.access.problem}}%"
-    tier: 1
-  - label: "Women reporting a problem getting health care, Kenya"
-    value: "{{health.access.problem.kenya}}%"
-    tier: 1
-  - label: "Births in a facility, Kitui"
-    value: "{{health.facility-births}}%"
-    tier: 1
-  - label: "Births in a facility, Kenya"
-    value: "{{health.facility-births.kenya}}%"
-    tier: 1
-```
+**What it means for the campaign.** Health is where the county spends most, so it is where a delivery candidate is judged on what the money buys: drugs on the shelf, staff on duty, and the referral hospital's queue.
 
-*   **Insurance and stunting.** {{health.insurance}}% of residents have any health insurance, and {{health.stunting}}% of children under five are stunted (both Tier 1, KDHS 2022; Section 10.3 carries the older county baseline).
-*   **Child survival.** Infant mortality is {{health.imr}} per thousand births and under-five mortality {{health.u5mr}}, both better than Kenya's {{health.imr.kenya}} and {{health.u5mr.kenya}} (Tier 1, KDHS 2022).
-*   **Outbreaks.** In January–June 2025 Ngomeni had a confirmed measles outbreak ({{health.measles.ngomeni}} cases), and typhoid cases rose from {{health.typhoid.2024}} to {{health.typhoid.2025}}, which NDMA attributes to contaminated water and poor sanitation (Tier 1).
-*   **Nutrition.** Only {{health.diet.diversity}}% of children aged 6–23 months meet minimum dietary diversity (Tier 1, SMART 2023).
-*   **Stalled projects.** Controller of Budget reports note stalled county health projects; the list of facilities is a **named data gap** (Tier 1 gap).
+## 3.4 Roads, the ferry and access
 
-**What it means for the campaign.** Health is a service-delivery story, and water drives part of it: the typhoid rise is the water problem appearing as illness.
+Mombasa's geography is its traffic: one bridge to the north, one causeway to the west, and the Likoni ferry to the south, used by hundreds of thousands of people a day. Roads, drainage and the flooding of low-lying estates in the long rains are county issues; the ferry is national. A sourced inventory of county roads and drainage is not yet in hand; the record that would settle it is the county's Integrated Development Plan 2023–2027.
 
-## 3.4 Roads and access
+**What it means for the campaign.** Access is felt daily on the mainland. Ward-level road and drainage commitments are written only once the county's own project register is in hand.
 
-**Distance is the condition of life in most of Kitui.** The county covers {{census.area}} km² at {{census.density}} people per km² (Tier 1), and in Ikutha the density is {{sub.ikutha.density}} (Tier 1). The March 2026 national flooding disrupted rural transport across several sub-counties (Tier 2). The county's scorecard claims {{scorecard.roads.graded}} km of roads graded (Tier 1 as a record of what the county claims, not evidence that the claims are true; Section 15.1.1 sets out the question its own itemised row raises).
+## 3.5 Jobs, the port and the young
 
-No verified figure is available yet for the county's road network or its condition against the national average; the record that would settle it is the county roads inventory in the CIDP 2023–2027 and KeRRA and KURA classified-road data.
+Six adults in ten in Mombasa are aged 18 to 34 (**{{census.adults.18-34.share}}%**, Tier 1, KNBS 2019 Census), and **{{ict.mombasa.youth}}%** of its young people use the internet (Tier 1, CA/KNBS 2023/24). The county economy is services-led, with services at **{{gva.services}}%** of its output (Tier 1, KNBS Gross County Product). A county youth unemployment rate is a named data gap: {{unemployment.youth.county}}.
 
-**What it means for the campaign.** Long distances make ground contact slow and expensive, which is why the SMS, USSD and radio layer in Chapter 4 carries the reach.
-
-## 3.5 Jobs and the young
-
-**Kitui is young, and its young people are short of work and of skills.** The median age is **{{census.median-age}}** (Tier 1, calculated from KNBS 2019 Census Volume III), and about **{{segment.youth.voters}}** registered voters are aged 18 to 35 (modelled: the 2019 census age distribution applied to the 2022 register). {{women.nopaidwork}}% of women aged 15–49 had no paid work in the past year, against {{women.nopaidwork.kenya}}% nationally and {{men.nopaidwork}}% of Kitui's men (Tier 1, County Gender Data Sheet, October 2025).
-
-*   **No verified youth unemployment figure** is available yet for the county; the record that would settle it is the KNBS Quarterly Labour Force Survey county tables or the 2019 Census Volume IV labour table.
-*   **Education.** {{edu.none.women}}% of females and {{edu.none.men}}% of males aged six and over have no education (Tier 1, KDHS 2022; this replaces an untiered 13.0%). The share who completed secondary school, given in an earlier draft as 17.4%, is **not yet tiered**.
-*   **Attendance.** Girls attend secondary school more than boys: net attendance {{edu.secondary.girls}}% against {{edu.secondary.boys}}% (Tier 1).
-*   **School meals.** They reach a minority of schools, much of the provision is parent-funded, and NDMA links the gap to absenteeism, dropout and transfers out of the county. Its report gives two counts that do not agree: {{schools.meals}} of {{schools.meals.of}} schools with a programme on one page, and a larger count of school units on another (Tier 1). {{schools.damaged}} schools were damaged in March–April 2025, affecting about {{schools.damaged.learners}} learners (Tier 1, NDMA).
-*   **Digital access.** Smartphones are {{ict.smartphone-share}}% of active SIMs nationally (Tier 2, CA), a national rate that overstates Kitui (Section 4.1).
-
-**What it means for the campaign.** The young are the largest group arriving at each election, and they are reached on their phones, so jobs and skills are the issue that travels on social media.
+**What it means for the campaign.** The port employs, but the jobs young people talk about are the ones that left with the cargo after the SGR began to move it inland. A jobs promise in Mombasa has to name the employer, and Section 3.8 does.
 
 ## 3.6 The cost of living
 
-**Food takes most of what a Kitui household spends.** Food is **{{food.share}}%** of household spending, one of the highest shares in the country (Tier 2, KNBS Kenya Poverty Report, via national reporting), and **{{poverty.2021}}%** of residents, about {{poverty.2021.people}} people, lived in poverty in 2021 (Tier 1), placing Kitui among the ten counties with the most poor people.
+The cost of living in Mombasa is set by what households buy: water by the jerrican, food in the markets (Mombasa grows almost none of its own), rent and transport.
 
 ```visual
 kind: stats
-preset: share
 items:
-  - value: "{{food.share}}%"
-    label: "of household spending goes on food"
+  - value: "KSh {{price.water.vendor}}–40"
+    label: "a 20-litre jerrican from a vendor"
     tier: 2
-    body: "One of the highest shares in the country (Tier 2, KNBS Kenya Poverty Report, via national reporting)."
-  - value: "{{poverty.2021}}%"
-    label: "of residents in poverty, 2021"
-    tier: 1
-    body: "About {{poverty.2021.people}} people (Tier 1)."
-  - value: "KSh {{price.maize}}"
-    label: "a kg of maize, July 2025"
-    tier: 1
-    body: "Against a five-year average of {{price.maize.average}} (Tier 1, NDMA)."
-  - value: "{{fuel.clean.2022}}%"
-    label: "of households cook with clean fuels"
-    tier: 1
-    body: "Kenya {{fuel.clean.2022.kenya}}% (Tier 1, County Gender Data Sheet, 2022)."
+    body: "Against **KSh {{price.water.county}}** at county sources: six to eight times the price, in the governor's own words (Tier 2, 2025)."
+  - value: "{{poverty.food.2021}}%"
+    label: "in food poverty, 2021"
+    tier: 2
+    body: "Against 30.5% nationally (Tier 2, KNBS via Stats Kenya)."
 ```
 
-*   **Maize** sold at KSh {{price.maize}} a kg against a five-year average of {{price.maize.average}} (Tier 1, NDMA, July 2025).
-*   **A medium goat** sold at KSh {{price.goat}} against a five-year average of {{price.goat.average}}, and most households were buying food rather than storing it (Tier 1, NDMA).
-*   **Cooking fuel.** Only {{fuel.clean.2022}}% of households cook with clean fuels (Kenya {{fuel.clean.2022.kenya}}%) (Tier 1, County Gender Data Sheet, 2022); the 2019 census put unclean fuels at {{fuel.unclean}}% and firewood at {{fuel.firewood}}% (Tier 1).
-*   No verified county price index is available yet; the record that would settle it is the KNBS county consumer price index series.
-
-**What it means for the campaign.** A household spending seven shillings in ten on food has no margin to invest, which is the whole argument for "From Poverty to Wealth Creation" stated as a number.
+**What it means for the campaign.** The jerrican is the one price the county can move. Section 9 sets a public price ceiling at county points as a proposal to size.
 
 ## 1.5 The county's budget and plan
 
 ```lead
-The county's Fiscal Strategy Paper for FY2026/27 sets a resource envelope of **KSh {{budget.total|bn}} billion**; the total is cited through secondary reporting of the Paper (Tier 3) until the Paper is cited directly.
+Mombasa's approved supplementary budget for FY2025/26 was **KSh {{budget.total|bn}} billion**, of which **KSh {{budget.development|bn}} billion** was for development (Tier 3, as reported from the Controller of Budget's review).
 ```
 
-**The budget envelope.** The county's Fiscal Strategy Paper for FY2026/27 sets a resource envelope of **KSh {{budget.total|bn}} billion**; the total is cited through secondary reporting of the Paper (Tier 3) until the Paper is cited directly. The figures here are the Fiscal Strategy Paper's (the CFSP), not the Annual Development Plan's (the ADP), which is a different document. An earlier draft gave an ADP envelope of KSh 14.27 billion; it is not confirmed and is not used.
+**The budget.** Mombasa's approved supplementary budget for FY2025/26 was **KSh {{budget.total|bn}} billion**, **{{budget.development.share}}%** of it for development (Tier 3, the Controller of Budget's review as reported by Business Radar; verify against the CBIRR itself).
 
-*   **Equitable share:** KSh {{budget.equitable|bn}} billion ({{budget.equitable.share}}% of the envelope) (Tier 1).
-*   **Own-source revenue:** KSh {{budget.osr|bn}} billion in the Fiscal Strategy Paper ({{budget.osr.share}}%, Tier 3), raised to **KSh {{budget.osr.revised|bn}} billion** by the County Assembly (Tier 3). The approved FY2026/27 budget settles which applies; until it is in hand, both are shown, and both are marked verify.
-*   **Conditional grants:** KSh {{budget.grants|bn}} billion ({{budget.grants.share}}%) (Tier 1).
+*   **Equitable share:** KSh {{budget.equitable|bn}} billion ({{budget.equitable.share}}% of the budget) (Tier 3). For FY2026/27 it rises to **KSh {{budget.equitable.2026-27|bn}} billion** (Tier 3).
+*   **Own-source revenue:** KSh {{budget.osr|bn}} billion ({{budget.osr.share}}%), including KSh 2.41 billion from county hospitals (Tier 3). Mombasa raises more of its own money than almost any county.
+*   **Grants, loans and balances brought forward:** KSh {{budget.grants|bn}} billion ({{budget.grants.share}}%), the remainder (calculated).
 
 ```figure
 id: fig-2-5-budget
 ```
 
-The three parts sum to KSh 13.80 billion (calculated) against a published total of {{budget.total|bn}}. The KSh 0.01 billion difference is rounding in the source, and is shown as its own segment rather than absorbed.
+**Paying salaries on credit.** In June 2026 the county executive took an overdraft of **KSh {{budget.overdraft.2026-06|m}} million** from KCB to pay June salaries (Tier 3, as reported from the Controller of Budget). The FY2026/27 Programme Based Budget is not yet in hand; when it is, its figures replace these.
 
-**The budget itself was not approved on time.** The FY2026/27 county budget was still unapproved after 30 June 2026 (Tier 2, The Star, 6 July 2026). Once the approved budget is in hand, its figures replace the Fiscal Strategy Paper's here.
+**The development plan.** The county's priorities for the term are set in the Mombasa County Integrated Development Plan 2023–2027 and the Annual Development Plans. An itemised project register by ward is a named data gap.
 
-**The development plan.** The county's priorities for the term are set in the Kitui County Integrated Development Plan 2023–2027, held in the KIPPRA repository. No verified figure is available yet for its number of priority sectors: an earlier draft said 16, led by agriculture, water, health, education and roads, and the record that would settle it is the plan itself.
+**What it means for the campaign.** A budget of KSh {{budget.total|bn}} billion is the scale of the job. The campaign translates it into ward-level targets, so that a builder's case is made in water, wards and paid bills, not in billions.
 
-**The audit record.** The Auditor-General's findings and the Controller of Budget's absorption rate follow directly below, with the county government's own scorecard.
-
-**What it means for the campaign.** A KSh {{budget.total|bn}} billion envelope is the scale of the job: the campaign translates it into ward-level policy targets, so that an economist's case is made in shillings per ward.
-
-## 3.8 Mui Basin coal and displaced communities
+## 3.8 The port economy and the Jomvu SEZ
 
 ```lead
-The extensive coal deposits in the Mui Basin, straddling Kitui East and Kitui South, have remained undeveloped for over a decade due to unresolved legal challenges under **Petition 12 of 2014** (Tier 1).
+In September 2026 Mr Shahbal's GulfCap Group signed a **KSh {{record.sez.ksh|bn}} billion** agreement with DP World and the county to build a **{{record.sez.acres}}-acre** Special Economic Zone in Jomvu, projecting **{{record.sez.jobs}}** direct jobs (Tier 2, as reported).
 ```
 
-The extensive coal deposits in the Mui Basin, straddling Kitui East and Kitui South, have remained undeveloped for over a decade due to unresolved legal challenges under **Petition 12 of 2014** (Tier 1). The standstill leaves communities across the affected wards uncertain whether they will be displaced (Tier 1). The number of concessions and the number of people who could be displaced are **named data gaps** (Tier 1 gaps).
+**What was signed.** DP World, GulfCap Group and the County Government of Mombasa signed an agreement to develop a {{record.sez.acres}}-acre Special Economic Zone in Jomvu, witnessed by the President at State House on 8 September 2026 (Tier 2, Nation, Standard, Citizen Digital). The promoters project **{{record.sez.jobs}}** direct jobs and report **{{record.sez.firms}}** companies confirmed before construction (Tier 2). These are projections, not counts.
 
-**What it means for the campaign.** Mineral wealth managed for local benefit is a promise to make in Kitui East and Kitui South, and only with the court record and the displacement figures in hand.
+**The public zone next door.** Dongo Kundu, a public SEZ of about 3,000 acres in Likoni run by the Kenya Ports Authority, remains the state's flagship on the south mainland (Tier 2).
+
+**The tension, stated plainly.** The deal is the strongest proof of what he can build, and the most exposed point in his campaign: the President advised him at the signing to stay out of politics, and the Jomvu MP said the county's support for the SEZ sat badly with his challenge to the governor (Tier 2, Nation). The campaign does not hide the deal; it puts the jobs on a public tracker (Section 5.4) and keeps the business and the campaign visibly apart (Section 19).
+
+**What it means for the campaign.** Mombasa's jobs argument is about whether the port's value stays in the county. The SEZ lets him make that argument with a site, a partner and a number, if the number is reported honestly as a projection until the jobs exist.

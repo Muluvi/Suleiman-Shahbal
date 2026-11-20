@@ -13,7 +13,7 @@ import { CountUp } from "../../premium/CountUp";
  * TikTok screen twice, and neither format is named in the proposal.
  *
  * The card carries §8.3.1 Pillar B — the guaranteed Ksh 85/kg ndengu floor price — with the
- * pillar's own Kikamba name.
+ * pillar's own Kiswahili name.
  *
  * Living detail: the carousel dots advancing.
  */

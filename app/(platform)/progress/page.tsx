@@ -7,7 +7,7 @@ import { PageHead } from "@/components/platform/PageHead";
 import { DataTable } from "@/components/platform/DataTable";
 import { recordRows } from "@/components/platform/rows";
 
-export const metadata = { title: "Implementation | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Implementation | Mombasa 2027", robots: { index: false, follow: false } };
 
 const STATUS = ["Planned", "In progress", "Live", "Paused", "Done"] as const;
 const TONE: Record<string, string> = { Planned: "var(--line)", "In progress": "oklch(0.72 0.13 75)", Live: "var(--accent-solid)", Paused: "var(--danger)", Done: "oklch(0.55 0.13 150)" };
@@ -24,7 +24,7 @@ export default async function Implementation() {
   const { columns, rows } = recordRows(c, records);
   return (
     <>
-      <PageHead kicker="Implementation" title="How each strategy is being carried out" lead="Owner, channel and status for every action, as Dr. Mulu's team enters them. Updated the moment the team saves.">
+      <PageHead kicker="Implementation" title="How each strategy is being carried out" lead="Owner, channel and status for every action, as Mr Shahbal's team enters them. Updated the moment the team saves.">
         {session && <Link href="/workspace/implementation" className="plat-btn plat-btn-solid mt-4">Update implementation</Link>}
       </PageHead>
 

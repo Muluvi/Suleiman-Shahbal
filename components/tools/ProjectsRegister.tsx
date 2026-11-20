@@ -122,7 +122,7 @@ export function ProjectsRegister() {
       <div className="mx-auto max-w-5xl px-4 pb-20 pt-6 sm:px-6 lg:px-8">
         <header className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
           <Link href="/tools" className="inline-flex items-center gap-2 font-serif text-lg text-white">
-            <ArrowLeft size={16} aria-hidden="true" /> Kitui 2027 <span className="font-sans text-xs text-slate-400">/ toolkit</span>
+            <ArrowLeft size={16} aria-hidden="true" /> Mombasa 2027 <span className="font-sans text-xs text-slate-400">/ toolkit</span>
           </Link>
         </header>
 
@@ -194,7 +194,7 @@ export function ProjectsRegister() {
           <p className="flex items-start gap-2">
             <ShieldCheck size={14} className="mt-0.5 shrink-0 text-cyan-300" aria-hidden="true" />
             <span>
-              Source: County Government of Kitui, <em>Delivering the Kitui Promise: Three-Year Scorecard</em> (Aug 2022 – Aug 2025), the itemised tables. Tier 1 as a record of the county&rsquo;s claims. Costs as printed; totals are Firefly arithmetic on them.
+              Source: County Government of Mombasa, <em>Delivering the Mombasa Promise: Three-Year Scorecard</em> (Aug 2022 – Aug 2025), the itemised tables. Tier 1 as a record of the county&rsquo;s claims. Costs as printed; totals are Firefly arithmetic on them.
             </span>
           </p>
           <p>

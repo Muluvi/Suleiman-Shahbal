@@ -13,7 +13,7 @@ Voter data is handled in a manner intended to comply with Kenya's Data Protectio
 Voter data is handled in a manner intended to comply with Kenya's Data
 Protection Act 2019, the Communications Authority framework governing political
 messaging, and IEBC regulations. This protects the campaign from legal risk and
-reinforces Dr. Makali Mulu's brand as a trustworthy, accountable leader.
+reinforces Mr Shahbal's brand as a trustworthy, accountable leader.
 
 <!-- keep -->
 **Important framing: this section describes the campaign's intended standard
@@ -33,7 +33,7 @@ notification and liability all follow controllership rather than convenience:
 | Supporter CRM and voter model | Your team, on the campaign's own systems | The campaign as controller. No supporter record goes on Firefly's platform, which holds counts only; for those, Firefly is processor under a written processing agreement. |
 
 ```visual
-{"kind":"cards","preset":"rule","items":[{"title":"NG-CDF and bursary beneficiary lists are off-limits for campaign contact.","body":"ODPC's 2025 public sector guidance note bars the reuse of personal data collected through public programmes for **political mobilisation** without explicit, separate consent (Tier 1, ODPC). The campaign holds exactly such a dataset — the bursary record covering the 12,573 students in Section 6.1 — and it is the most tempting list in the county.\n\n**It is not used.** Not for SMS, not for WhatsApp, not for matching, not for lookalike targeting. The **project record** remains fully usable as a proof point, because a completed classroom is not personal data; the **people** in that record are not a contact list. Section 22.2 lists access to the project record for exactly that reason, and it should not be read as access to the beneficiaries."},{"title":"The electoral guidance note applies on top of the general Act.","body":"ODPC's *Guidance Note on Processing Personal Data for Electoral Purposes* governs anyone handling voter or party-member data, and the Data Protection Commissioner restated the consent standard publicly in **August 2026**, specifically noting that parties are expanding supporter databases (Tier 1 / Tier 2). The Section 19.2 reviewer should be pointed at both documents by name."},{"title":"Inherited lists are not used until their consent is evidenced.","body":"Any SMS or WhatsApp contacts already held by the existing team arrive with unknown opt-in provenance. The rule this engagement operates under, stated before anyone asks: **a contact whose consent cannot be evidenced is not messaged**, and no inherited list is merged into the consented list in Section 15.3.3 until its origin is documented. This is the same standard Section 19.2 applies to purchased databases, and it applies to friendly sources for the same reason."},{"title":"The presence audit processes personal data too.","body":"The Section 14.1 audit touches data subjects through commenter counts and demographic breakdowns. It is low-risk and aggregate — counts and shares, no named lists, no profile exports — but it sits inside the Section 19.2 scope memorandum rather than outside it, on the same terms as every other processing activity here."}]}
+{"kind":"cards","preset":"rule","items":[{"title":"County bursary and public-programme beneficiary lists are off-limits for campaign contact.","body":"ODPC's 2025 public sector guidance note bars the reuse of personal data collected through public programmes for **political mobilisation** without explicit, separate consent (Tier 1, ODPC). County bursary lists, health-programme registers and any other public-programme beneficiary list that reaches the campaign are the most tempting lists in the county.\n\n**They are not used.** Not for SMS, not for WhatsApp, not for matching, not for lookalike targeting. A **project record** remains usable as a proof point, because a completed classroom or water kiosk is not personal data; the **people** in a programme are not a contact list."},{"title":"The electoral guidance note applies on top of the general Act.","body":"ODPC's *Guidance Note on Processing Personal Data for Electoral Purposes* governs anyone handling voter or party-member data, and the Data Protection Commissioner restated the consent standard publicly in **August 2026**, specifically noting that parties are expanding supporter databases (Tier 1 / Tier 2). The Section 19.2 reviewer should be pointed at both documents by name."},{"title":"Inherited lists are not used until their consent is evidenced.","body":"Any SMS or WhatsApp contacts already held by the existing team arrive with unknown opt-in provenance. The rule this engagement operates under, stated before anyone asks: **a contact whose consent cannot be evidenced is not messaged**, and no inherited list is merged into the consented list in Section 15.3.3 until its origin is documented. This is the same standard Section 19.2 applies to purchased databases, and it applies to friendly sources for the same reason."},{"title":"The presence audit processes personal data too.","body":"The Section 14.1 audit touches data subjects through commenter counts and demographic breakdowns. It is low-risk and aggregate — counts and shares, no named lists, no profile exports — but it sits inside the Section 19.2 scope memorandum rather than outside it, on the same terms as every other processing activity here."}]}
 ```
 
 ## 19.2 The Data Protection Act and the regulator
@@ -86,7 +86,7 @@ language, at a permanent URL.*
 
 **Why publish it.** Because a commitment nobody can read is a policy, and a
 commitment published with a verification route is a differentiator. This is the
-"Economist Governor" proposition applied to the campaign's own conduct: it is
+"Builder Governor" proposition applied to the campaign's own conduct: it is
 the campaign holding itself to the standard it asks of the county government.
 It also has practical value — if anyone alleges bot activity or spam, a
 published charter plus a retained audit trail is an answer, not a denial.
@@ -130,9 +130,9 @@ published charter plus a retained audit trail is an answer, not a denial.
 > We segment voters by the issues that affect their lives — water, jobs,
 > markets, health, education — and by where they live. **We do not target,
 > segment or profile any voter on the basis of ethnicity, clan or religion, and
-> we will not run messaging designed to set any community in Kitui against
-> another.** We communicate in Kikamba, Kiswahili and English because that is
-> how Kitui speaks, not to divide it.
+> we will not run messaging designed to set any community in Mombasa against
+> another, coast against up-country or faith against faith.** We communicate in
+> Kiswahili and English because that is how Mombasa speaks, not to divide it.
 >
 > **7. No psychological profiling.**
 > We do not build personality or psychographic profiles of voters. We use
@@ -153,7 +153,7 @@ published charter plus a retained audit trail is an answer, not a denial.
 > to delete it, at any time, at fireflymanagement.ke@gmail.com. We will respond
 > within **14 days**.
 >
-> *Published in Kikamba, Kiswahili and English.*
+> *Published in Kiswahili and English.*
 
 **Operational backing.** Each clause maps to a control: the consent audit trail
 (clause 4), the per-send audit trail (clause 3), the deletion schedule executed

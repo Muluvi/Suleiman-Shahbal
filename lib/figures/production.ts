@@ -14,8 +14,8 @@
  *
  * THE FORMAT TABLE IS WHERE C-21 SHOWS ITS TEETH AGAIN, and this time the document gets it right:
  * §4.5.2's SMS row says "Kiswahili or English only (CA rule)" and specifies GSM-7 encoding with no
- * accented unicode — which is the same constraint from the other end, since Kikamba orthography
- * needs ĩ and ũ. Two independent reasons the bulk SMS rail cannot carry Kikamba, stated here and
+ * accented unicode — which is the same constraint from the other end, since Kiswahili orthography
+ * needs ĩ and ũ. Two independent reasons the bulk SMS rail cannot carry Kiswahili, stated here and
  * contradicted in §3.6.1.
  */
 import { CONTENT_TYPES } from "../../data/message-architecture.ts";
@@ -33,7 +33,7 @@ export const PRODUCTION_TIERS = [
   {
     label: "Offline broadcast engine",
     items: [
-      "Kikamba radio audio",
+      "Kiswahili radio audio",
       "160-character 2G bulk SMS",
       "USSD interactive menus",
       "Baraza leaflets and books",
@@ -64,9 +64,9 @@ export const PRODUCTION_SERIES: FigureSeries = {
 
 export const FORMAT_SPECS: string[][] = [
   [
-    "1. Kikamba vernacular radio spots (Musyi / Mbaitu)",
+    "1. Kiswahili vernacular radio spots (Musyi / Mbaitu)",
     "45-second pre-recorded audio spots · 15-second sponsor time-check bumpers · 60-second studio live-read endorsements",
-    "Pure Kikamba (Kitui and Mwingi dialects). Real farmer and elder voice testimonials; zero abrasive partisan attacks.",
+    "Pure Kiswahili (Mombasa and the north mainland dialects). Real farmer and elder voice testimonials; zero abrasive partisan attacks.",
   ],
   [
     "2. Direct 2G bulk SMS & USSD portal",
@@ -76,29 +76,29 @@ export const FORMAT_SPECS: string[][] = [
   [
     "3. Open-air baraza & market print",
     "A5 full-colour 4-page glossy fold-outs · A1 weatherproof PVC caravan banners · pocket-sized 12-page manifesto summary",
-    "Bilingual Kikamba/Swahili; high visual density with real GPS project photos, auditor stamps and ward maps.",
+    "Bilingual Kiswahili/Swahili; high visual density with real GPS project photos, auditor stamps and ward maps.",
   ],
   [
     "4. Market caravans & PA sound rigs",
     "High-energy 90-second studio jingles · pre-recorded 3-minute candidate address · megaphone audio clips for boda marshals",
-    'Catchy traditional Kamba rhythm and benga beat; easily memorised chorus reinforcing "Dr. Makali Mulu 2027".',
+    'Catchy traditional Coast rhythm and benga beat; easily memorised chorus reinforcing "Suleiman Shahbal 2027".',
   ],
   [
     "5. Digital & social media (youth / diaspora)",
     "1080x1920 vertical video (Reels/TikTok) · 1080x1080 square carousel cards · 1920x1080 horizontal YouTube features",
-    "Fast-paced with a first-three-seconds hook; hard-coded captions; dynamic motion graphics; English/Sheng with Kikamba hooks.",
+    "Fast-paced with a first-three-seconds hook; hard-coded captions; dynamic motion graphics; English/Sheng with Kiswahili hooks.",
   ],
 ];
 
 export const FORMAT_SERIES: FigureSeries = {
   id: "format-specs",
-  headline: "Five channels, and only one of them may carry Kikamba text",
+  headline: "Five channels, and only one of them may carry Kiswahili text",
   measure: "§15.1.2's production format specifications — channel, technical specification, language and creative treatment",
   points: [],
   note:
     "The SMS row states the constraint twice over: “Kiswahili or English only (CA rule)”, and " +
-    "GSM-7 encoding with no accented unicode — which rules out the ĩ and ũ Kikamba orthography " +
-    "needs. Kikamba travels by radio, voice notes and USSD instead (§12.4).",
+    "GSM-7 encoding with no accented unicode — which rules out the ĩ and ũ Kiswahili orthography " +
+    "needs. Kiswahili travels by radio, voice notes and USSD instead (§12.4).",
 };
 
 /* ------------------------------------------------------------------ §4.5.2 the USSD menu */
@@ -119,7 +119,7 @@ export const WEEKLY_CYCLE: string[][] = [
   ],
   [
     "Tuesday",
-    "Studio recording for Kikamba audio spots and jingles · graphics design for social carousels and print flyers",
+    "Studio recording for Kiswahili audio spots and jingles · graphics design for social carousels and print flyers",
     "Master audio WAVs and 2G voice clips · social static cards and baraza sheets",
   ],
   [
@@ -173,7 +173,7 @@ export const APPROVAL_STEPS = [
   {
     title: "Communications & message integrity review",
     steps: [
-      "The Communications Lead verifies narrative alignment, Kikamba dialect accuracy and visual brand guidelines.",
+      "The Communications Lead verifies narrative alignment, Kiswahili dialect accuracy and visual brand guidelines.",
     ],
   },
   {
@@ -211,7 +211,7 @@ export const ASSET_LIBRARY = {
       label: "01_BRAND_GUIDELINES_&_FONTS/",
       children: [
         "Typography/ (Plus_Jakarta_Sans, Playfair_Display, Inter)",
-        "Color_Palettes/ (Kitui_Blue, Earth_Gold, Clean_White)",
+        "Color_Palettes/ (Mombasa_Blue, Earth_Gold, Clean_White)",
         "Official_Candidate_Logos_&_Emblems/",
       ],
     },
@@ -242,7 +242,7 @@ export const ASSET_LIBRARY = {
       label: "05_PRINT_COLLATERAL_VAULT/",
       children: [
         "A5_Baraza_4Page_Foldouts_PrintReady_PDF/",
-        "12Page_Manifesto_Executive_Summary_Kikamba_Swahili/",
+        "12Page_Manifesto_Executive_Summary_Kiswahili_Swahili/",
         "PVC_Caravan_Banners_&_Boda_Shed_Signage/",
       ],
     },

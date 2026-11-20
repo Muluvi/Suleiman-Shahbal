@@ -10,7 +10,7 @@ import { ANALYSIS_FIELDS, EDITABLE_LISTS, FIGURE_FIELDS, analysisFiles, listFiel
 import { PageHead } from "@/components/platform/PageHead";
 import { PackEditor, type PackEditorData } from "@/components/platform/PackEditor";
 
-export const metadata = { title: "Edit data | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Edit data | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default async function EditData() {
   // Sign-in is switched off: the site is open to view, and the team pages are not served.

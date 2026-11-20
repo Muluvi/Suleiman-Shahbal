@@ -86,7 +86,7 @@ const CARD = `<!doctype html>
     --ink: oklch(0.965 0.008 250);
     --muted: oklch(0.78 0.025 255);
     --line: oklch(0.31 0.03 262);
-    --accent: oklch(0.74 0.14 262);   /* Wiper royal blue, as text */
+    --accent: oklch(0.74 0.14 262);   /* The New Democrats royal blue, as text */
     --gold: oklch(0.74 0.13 45);      /* laterite, as text */
     --gold-solid: oklch(0.53 0.15 40);
   }
@@ -121,7 +121,7 @@ const CARD = `<!doctype html>
   <div class="glow"></div>
   <div class="body">
     <div class="mark">
-      <!-- The Wiper umbrella, the same path the site header draws. -->
+      <!-- The The New Democrats umbrella, the same path the site header draws. -->
       <svg width="56" height="56" viewBox="0 0 120 120" fill="none">
         <path d="M60 20 C30 20 16 42 12 58 C24 53 42 53 60 58 Z" fill="#00209f"/>
         <path d="M60 20 C90 20 104 42 108 58 C96 53 78 53 60 58 Z" fill="#e31d2b"/>
@@ -130,16 +130,16 @@ const CARD = `<!doctype html>
         <path d="M60 58 V92 C60 99 51 99 51 92" stroke="#6f8cff" stroke-width="6" stroke-linecap="round" fill="none"/>
       </svg>
       <div>
-        <div class="who">Hon. Dr. Benson Makali Mulu</div>
-        <div class="where">Kitui County &mdash; 2027</div>
+        <div class="who">Hon. Dr. Benson Suleiman Shahbal</div>
+        <div class="where">Mombasa County &mdash; 2027</div>
       </div>
     </div>
 
-    <h1>Kitui 2027<span class="sub">The campaign&rsquo;s data, analysis and plan</span></h1>
+    <h1>Mombasa 2027<span class="sub">The campaign&rsquo;s data, analysis and plan</span></h1>
 
     <div class="foot">
       <div class="prepared">
-        Built for Dr. Mulu and his team
+        Built for Mr Shahbal and his team
         <span>Firefly Management &middot; September 2026, revised November 2026</span>
       </div>
       <div class="conf"><span class="seal"></span>Open to view</div>

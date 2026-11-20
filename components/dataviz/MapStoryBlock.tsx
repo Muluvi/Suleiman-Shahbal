@@ -7,7 +7,7 @@ import { MapStory, type StoryStep, type StoryWard } from "./MapStory";
 /**
  * The map story's frame (visual upgrade, C15): the real ward boundaries (lib/premium/county.ts),
  * Map Studio's own ward data (lib/tools/dataset.ts), and captions whose numbers are registry
- * figures. Each layer is shaded by fifths of the 40 wards, the way Map Studio shades it.
+ * figures. Each layer is shaded by fifths of the 30 wards, the way Map Studio shades it.
  */
 const fifthOf = (values: number[]) => {
   const sorted = [...values].sort((a, b) => a - b);
@@ -44,17 +44,17 @@ export function MapStoryBlock() {
     { layer: "voters", title: "Where the voters are", text: `${register.display} registered voters, and the twelve largest wards hold ${top12.display} of them. The darker the ward, the more voters.` },
     { layer: "stations", title: "Where they vote", text: `${stations.display} polling stations. They follow the people: the crowded wards carry the most.` },
     { layer: "projects", title: "Where the county has built", text: `${projects.toLocaleString("en-KE")} itemised county projects placed on a single ward. Some wards with many voters have few.` },
-    { layer: "zones", title: "Three regions", text: "The anchor around Kitui town, the Mwingi block to the north, and the arid belt to the east and south. Kitui Rural sits in none." },
-    { layer: "pool", title: "Where he has never held office", text: `Mwingi North, West, Central and Kitui South: ${pool.display} registered voters, ${poolShare.display} of the county.` },
+    { layer: "zones", title: "Three regions", text: "The anchor around Mombasa town, the north mainlandk to the north, and the arid belt to the east and south. Likoni sits in none." },
+    { layer: "pool", title: "Where he has never held office", text: `Kisauni, West, Central and Changamwe: ${pool.display} registered voters, ${poolShare.display} of the county.` },
   ];
 
   return (
     <ExportableVisual
       id="map-story"
-      title="Kitui in five maps: voters, polling stations, county projects, regions, and the pool"
+      title="Mombasa in five maps: voters, polling stations, county projects, regions, and the pool"
       note="Scroll: the map changes as each caption passes."
       figures={[register, top12, stations, pool, poolShare]}
-      source="Source: IEBC 2022 register and polling-station list (Tier 1); County Government of Kitui three-year scorecard, itemised projects placed on one ward; ward boundaries: Omare and Omare (2017), digitised from the IEBC ward delimitation, CC BY 4.0. Fifths and shares calculated by the site."
+      source="Source: IEBC 2022 register and polling-station list (Tier 1); County Government of Mombasa three-year scorecard, itemised projects placed on one ward; ward boundaries: Omare and Omare (2017), digitised from the IEBC ward delimitation, CC BY 4.0. Fifths and shares calculated by the site."
       card={{ type: "map", params: { layer: "voters" } }}
     >
       <MapStory wards={wards} steps={steps} poolCam={poolCam} />

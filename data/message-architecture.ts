@@ -22,19 +22,19 @@ export interface Pillar {
 
 export const PILLARS: Pillar[] = withTeamEdits<Pillar>("pillars", "title", [
   {
-    title: "Fiscal integrity and transparent public finance",
-    argued: "How the county's budget should be allocated and audited, ward by ward; publish what was promised, then publish whether it happened.",
-    carries: ["Fiscal accountability and devolution", "Verification and follow-through"],
+    title: "Water at the tap",
+    argued: "Mwache Dam arrives in the next term whoever governs; the pillar is the last mile into the estates, a public price ceiling at county kiosks, and the share of water lost published every quarter.",
+    carries: ["Water and the household purse", "Verification and follow-through"],
   },
   {
-    title: "Household economic empowerment and agricultural value",
-    argued: "Dense policy, such as water and the revival of farming, made relatable in the vernacular.",
-    carries: ["Policy, translated into what it changes"],
+    title: "Jobs that stay in Mombasa",
+    argued: "More of the port's value kept in the county; the Jomvu SEZ shown as proof he can attract it, its jobs reported as a projection until they exist.",
+    carries: ["Jobs, the port and the young"],
   },
   {
-    title: "Fair devolution, water for all and health care",
-    argued: "His record, including NG-CDF projects, shown as charts, ward maps and before-and-after comparisons.",
-    carries: ["Data-driven civic engagement"],
+    title: "A county that pays its bills",
+    argued: "How the county's budget is spent, with a published pending-bills schedule paid oldest first and a ward development share every ward can check.",
+    carries: ["Fiscal accountability and devolution"],
   },
 ]);
 
@@ -48,9 +48,9 @@ export interface ContentType {
 }
 
 export const CONTENT_TYPES: ContentType[] = withTeamEdits<ContentType>("content-types", "code", [
-  { code: "P1", short: "Where the money went", name: "Where the money went" },
-  { code: "P2", short: "One household", name: "From poverty to wealth creation, one household" },
-  { code: "P3", short: "The economist explains", name: "The economist explains" },
+  { code: "P1", short: "Where the water and the money went", name: "Where the water and the money went" },
+  { code: "P2", short: "He built it, go and see", name: "He built it, go and see" },
+  { code: "P3", short: "The builder explains", name: "The builder explains" },
   { code: "P4", short: "He came, and said", name: "He came, and this is what he said he would do" },
 ]);
 

@@ -9,7 +9,7 @@
  * On the live site that produced, among others:
  *
  *   - "Combined 68.7%"  — another candidate's poll shares from two different rounds, added.
- *   - "Combined 68.5%"  — Dr. Mulu's three poll shares, added.
+ *   - "Combined 68.5%"  — Mr Shahbal's three poll shares, added.
  *   - "Avg WS 7 / Max Peak 14 / Combined 106" — the workstream NUMBERS, averaged and totalled.
  *   - "Combined 447,940 / 511,590 / 832,002" — zone tables whose own Total row was counted again.
  *
@@ -51,7 +51,7 @@ export interface TableChartSpec {
    * the case for every table in this document at the time of writing.
    *
    * `label` is mandatory alongside it and must say what the aggregation means in the table's own
-   * terms ("Total registered voters across all 40 wards"), never a bare "Combined". The strip that
+   * terms ("Total registered voters across all 30 wards"), never a bare "Combined". The strip that
    * this replaced failed precisely because "Combined" is a word that fits any column.
    */
   aggregate?: { of: Aggregation; label: string };

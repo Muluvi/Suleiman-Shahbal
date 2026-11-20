@@ -77,7 +77,7 @@ export function YouTubeScreen() {
             {YOUTUBE.thumbnailKicker.value}
           </span>
           <p className="mt-2 font-black pr-16" style={{ fontSize: "1.125em", lineHeight: 1.12, color: "#fff", letterSpacing: "-0.02em" }}>
-            {IDENTITY.sloganKikamba}
+            {IDENTITY.sloganKiswahili}
           </p>
         </div>
 

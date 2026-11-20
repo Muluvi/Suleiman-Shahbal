@@ -6,9 +6,8 @@ import openItems from "../generated/open-items.json" with { type: "json" };
 import { WARD_TILES } from "../../geo/wards.ts";
 import type { Bar, FigureSpec } from "../types.ts";
 import { tileColumns, tileRows } from "./s0-cover.ts";
-import { bar, F, fmt, num, src, stateOf } from "./_util.ts";
+import { bar, F, fmt, num, src } from "./_util.ts";
 import { WARD_ROWS } from "../../data/figures.ts";
-import register from "../../../data/ward-register.json" with { type: "json" };
 
 const BENCH = { value: num("benchmark"), label: `${fmt("benchmark")}, the working benchmark` };
 const TURNOUT = `${fmt("turnout.constant")}%`;
@@ -16,10 +15,10 @@ const TURNOUT = `${fmt("turnout.constant")}%`;
 /* ------------------------------------------------------------------ fig-3-1-funnel */
 
 const funnel = (reg: "2022" | "2026") => [
-  { label: `Registered voters, ${reg === "2022" ? "2022" : "July 2026"}`, value: num(`register.${reg}`), state: F(`register.${reg}`).state },
+  { label: `Registered voters, ${reg === "2022" ? "2022" : "register in use"}`, value: num(`register.${reg}`), state: F(`register.${reg}`).state },
   reg === "2022"
-    ? { label: `Ballots cast, 2022 (${TURNOUT} turnout)`, value: num("ballots.2022"), state: F("ballots.2022").state, note: `${fmt("ballots.2022")} certified valid votes for governor (IEBC Form 37C), ${TURNOUT} of the register.` }
-    : { label: `Ballots cast at the ${TURNOUT} turnout rate`, value: num("ballots.2026"), state: "modelled" as const, note: `${fmt("register.2026")} × ${TURNOUT} = ${fmt("ballots.2026")}. The rate is the certified 2022 turnout, carried forward.` },
+    ? { label: `Ballots cast, 2022 (${TURNOUT} turnout)`, value: num("ballots.2022"), state: F("ballots.2022").state, note: `${fmt("ballots.2022")} valid votes for governor as declared, ${TURNOUT} of the register.` }
+    : { label: `Ballots cast at the ${TURNOUT} turnout rate`, value: num("ballots.2026"), state: "modelled" as const, note: `${fmt("register.2026")} × ${TURNOUT} = ${fmt("ballots.2026")}. The rate is the 2022 governor election turnout, carried forward.` },
   { label: "Votes to win: the benchmark", value: num("benchmark"), state: "target" as const, note: `${fmt("benchmark")} is ${fmt(reg === "2022" ? "benchmark.share-of-ballots" : "benchmark.share-of-ballots.2026")}% of those ballots. A constant here, not re-derived from the register.` },
 ];
 
@@ -28,14 +27,14 @@ export const FIG_3_1: FigureSpec = {
   section: "2.1",
   title: `To win, he needs about ${fmt("benchmark.share-of-ballots")}% of the ballots cast, on the 2022 register`,
   question: "What is the winning number?",
-  takeaway: `${fmt("benchmark")} votes is the 2022 winner's total rounded; the same share of the larger July 2026 register is ≈${fmt("benchmark.2026-equivalent.rounded")}.`,
-  sources: [src("register.2022"), src("register.2026"), src("turnout.2022", `Turnout of ${TURNOUT}: IEBC Form 37C, Kitui governor 2022, carried forward to 2027`), { name: "Benchmark: the 2022 governor's winning total, rounded", tier: null, state: "target" }],
-  chart: { type: "funnel", stages: funnel("2022"), toggle: { label: "July 2026 register", stages: funnel("2026") } },
+  takeaway: `${fmt("benchmark")} votes is the 2022 winner's total rounded: a floor, set on the lowest turnout on record. The 2017 winner needed ${fmt("benchmark.high")}.`,
+  sources: [src("register.2022"), src("register.2026"), src("turnout.2022", `Turnout of ${TURNOUT}: the 2022 Mombasa governor election, as declared, carried forward to 2027`), { name: "Benchmark: the 2022 governor's winning total, rounded", tier: null, state: "target" }],
+  chart: { type: "funnel", stages: funnel("2022"), toggle: { label: "Register in use (2022 until 2026 is published)", stages: funnel("2026") } },
   notes: [`The turnout rate and the benchmark are held fixed: the toggle changes only the register. The rate is measured for 2022; applying it to 2027 is an assumption.`],
-  columns: [{ key: "step", label: "Step" }, { key: "y2022", label: "2022 register", numeric: true }, { key: "y2026", label: "July 2026 register", numeric: true }],
+  columns: [{ key: "step", label: "Step" }, { key: "y2022", label: "2022 register", numeric: true }, { key: "y2026", label: "Register in use", numeric: true }],
   rows: [
     { cells: { step: "Registered voters", y2022: num("register.2022"), y2026: num("register.2026") } },
-    { cells: { step: `Ballots (2022 certified; July 2026 at ${TURNOUT})`, y2022: num("ballots.2022"), y2026: num("ballots.2026") }, state: "modelled" },
+    { cells: { step: `Ballots (2022 declared; in use at ${TURNOUT})`, y2022: num("ballots.2022"), y2026: num("ballots.2026") }, state: "modelled" },
     { cells: { step: "Benchmark", y2022: num("benchmark"), y2026: num("benchmark") }, state: "target" },
     { cells: { step: "Benchmark as % of ballots", y2022: Number(fmt("benchmark.share-of-ballots")), y2026: Number(fmt("benchmark.share-of-ballots.2026")) }, state: "modelled" },
   ],
@@ -43,7 +42,7 @@ export const FIG_3_1: FigureSpec = {
 
 /* ------------------------------------------------------------------ fig-3-2-register-map */
 
-const BIG4 = new Set(["kitui-central", "kitui-south", "mwingi-central", "mwingi-north"]);
+const BIG4 = new Set(["kisauni", "nyali", "mvita", "likoni"]);
 const RANKED = [...WARD_TILES].sort((a, b) => b.voters - a.voters);
 const TOTAL = num("register.2022");
 
@@ -52,17 +51,17 @@ export const FIG_3_2: FigureSpec = {
   section: "2.3",
   title: `The twelve largest wards hold ${fmt("pareto.top12.share")}% of the register, and half the wards hold ${fmt("pareto.top20.share")}%`,
   question: "Where are the votes?",
-  takeaway: `Registration is concentrated: the ten smallest wards together hold only ${fmt("pareto.bottom10.share")}% of voters, across some of the county's widest ground.`,
+  takeaway: `Registration is concentrated in the mainland estates: the ten smallest wards together hold ${fmt("pareto.bottom10.share")}% of voters.`,
   sources: [src("register.2022"), { name: "Shares and running totals, derived", tier: "T1", state: "modelled" }],
   chart: {
     type: "composite",
     parts: [
       // The one layered ward map (consolidation pass, Step 4D): register size, the twelve largest
-      // wards, the three zones, where he has held office, party flow and in-reach share, switched by
+      // wards, the three zones, the close-contest belt, the 2022 margins and in-reach share, switched by
       // layer. The figures that each drew one of these maps now link to the layer here.
       { heading: "The ward map: choose a layer", chart: { type: "tilemap", layers: ["register", "largest", "zones", "footprint", "party-flow", "reach-targets"], initial: "register", showWardList: true } },
       {
-        heading: "The forty wards ranked, as shares of the register",
+        heading: "The thirty wards ranked, as shares of the register",
         chart: {
           type: "pareto",
           items: RANKED.map((w, i) => ({ label: w.name, share: (w.voters / TOTAL) * 100, top: i < 12, mark: BIG4.has(w.constituency) })),
@@ -98,33 +97,33 @@ const cons = (...ids: [string, string][]): Bar[] => ids.map(([id, name]) => bar(
 /** Section 2.4's own route details, carried by the figure so the prose can sit behind it (brief §12 [CHECK REF]). */
 const PATHS: { key: string; title: string; tag?: string; wards: number; reg: Bar[]; at80?: boolean; note: string }[] = [
   {
-    key: "a", title: "Path A: the Mwingi bloc", wards: 15, at80: true,
-    reg: cons(["mwingi-central", "Mwingi Central"], ["mwingi-north", "Mwingi North"], ["mwingi-west", "Mwingi West"]),
-    note: `Even 80% of its ballots leaves him ${fmt("path.a.at80.short")} short. The largest single reservoir of votes in the county: no win without a decisive margin here, and no win on it alone. It is the necessary foundation, paired with Kitui South and the home belt.`,
+    key: "a", title: "Path A: the north mainland", wards: 12, at80: true,
+    reg: cons(["kisauni", "Kisauni"], ["nyali", "Nyali"]),
+    note: `Even 80% of its ballots leaves him ${fmt("path.a.at80.short")} short. The largest block in the county, decided by about a thousand votes in each constituency in 2022: no win without it, and no win on it alone.`,
   },
   {
-    key: "b", title: "Path B: Central, South and West", wards: 15,
-    reg: cons(["kitui-central", "Kitui Central"], ["kitui-south", "Kitui South"], ["kitui-west", "Kitui West"]),
-    note: `The home base, the largest southern constituency and the peri-urban west form a contiguous southern and central coalition with more registered voters than the benchmark, yet its ballots fall ${fmt("path.b.margin", "abs")} short even if every one were his. The largest route, and it still needs Mwingi.`,
+    key: "b", title: "Path B: the Island and the south", wards: 10,
+    reg: cons(["mvita", "Mvita"], ["likoni", "Likoni"]),
+    note: `The incumbent's strongest ground in 2022. Contested to hold his lead down, not to carry it; its ballots fall ${fmt("path.b.margin", "abs")} short even if every one were his.`,
   },
   {
     key: "c", title: "Path C: the twelve largest wards", wards: 12,
     reg: WARD_ROWS.slice(0, 12).map((w) => bar(w.id, w.name)),
-    note: "The campaign does not need to contest all 40 wards with equal intensity: these twelve are where the margin is cheapest to build.",
+    note: "The campaign does not need to contest all 30 wards with equal intensity: these twelve are where the margin is cheapest to build.",
   },
   {
-    key: "d", title: "Path D: the home belt", tag: "the trap", wards: 13, at80: true,
-    reg: cons(["kitui-central", "Kitui Central"], ["kitui-west", "Kitui West"], ["kitui-rural", "Kitui Rural"]),
-    note: `Even 80% of all its ballots leaves him ${fmt("path.d.at80.short")} short. A home-constituency strategy is mathematically impossible: expansion into Mwingi and Kitui South is an arithmetic necessity, not a choice.`,
+    key: "d", title: "Path D: the close-contest belt", tag: "turnout decides it", wards: 17, at80: true,
+    reg: cons(["kisauni", "Kisauni"], ["nyali", "Nyali"], ["changamwe", "Changamwe"]),
+    note: `At the 2022 turnout, even 80% of its ballots leaves him ${fmt("path.d.at80.short")} short. At a general-election turnout the same belt carries the number: turnout, not geography, is the lever.`,
   },
 ];
 
 export const FIG_3_3: FigureSpec = {
   id: "fig-3-3-paths",
   section: "2.4",
-  title: `No route clears ${fmt("benchmark")} on its own ballots, and the home belt falls furthest short`,
-  question: "Which route to the number is real, and which is a trap?",
-  takeaway: `Even every ballot in the home belt leaves him ${fmt("path.d.margin", "abs")} short: a route is where the margin is built, and Mwingi is part of any route that works.`,
+  title: `No route clears ${fmt("benchmark")} on its own ballots at the 2022 turnout`,
+  question: "Which route builds the margin, and what does turnout change?",
+  takeaway: `At the 2022 turnout no route carries the number alone; the close-contest belt is where the margin is built, and turnout decides whether it is enough.`,
   sources: [src("register.2022"), { name: `Ballots at the ${TURNOUT} turnout constant, derived`, tier: "T1", state: "modelled" }],
   chart: {
     type: "paths",
@@ -142,7 +141,7 @@ export const FIG_3_3: FigureSpec = {
       ],
     })),
   },
-  notes: ["Path D is the trap: a home-constituency strategy cannot reach the number, whatever its margin."],
+  notes: ["Every route is measured at the 2022 governor election turnout, the lowest on record; a general-election turnout raises every ballot bar."],
   columns: [
     { key: "path", label: "Route" },
     { key: "wards", label: "Wards", numeric: true },
@@ -154,7 +153,7 @@ export const FIG_3_3: FigureSpec = {
   ],
   rows: PATHS.map((p) => ({
     cells: {
-      path: `${p.title}${p.tag ? " (the trap)" : ""}`,
+      path: `${p.title}${p.tag ? ` (${p.tag})` : ""}`,
       wards: p.wards,
       registered: num(`path.${p.key}.registered`),
       share: num(`path.${p.key}.share`),
@@ -170,24 +169,24 @@ export const FIG_3_3: FigureSpec = {
 
 export const FIG_3_4: FigureSpec = {
   id: "fig-3-4-footprint",
-  section: "2.7.1",
-  title: `${fmt("pool.share")}% of the register lives in the four constituencies where he has never held office`,
-  question: "Where has he held office, and what does that leave untouched?",
-  takeaway: `The ${fmt("pool")}-voter pool is structural, derived from where he has held office, not from any measure of opinion; ${fmt("pareto.top12.in-pool")} of the twelve largest wards are in it.`,
-  sources: [src("register.2022"), { name: "Parliament of Kenya record", tier: "T1" }, { name: "The pool: Mwingi North, West, Central and Kitui South, summed", tier: "T1", state: "modelled" }],
+  section: "6.2",
+  title: `${fmt("pool.share")}% of the register lives in the three constituencies decided by fewer than 2,000 votes in 2022`,
+  question: "Where was the last race closest?",
+  takeaway: `The ${fmt("pool")}-voter pool is structural, derived from the 2022 margins and the register, not from any measure of opinion; ${fmt("pareto.top12.in-pool")} of the twelve largest wards are in it.`,
+  sources: [src("register.2022"), src("result.2022.gov.kisauni.margin"), { name: "The pool: Kisauni, Nyali and Changamwe, summed", tier: "T1", state: "modelled" }],
   chart: {
     type: "composite",
     parts: [
-      { heading: "Where he has held office", chart: { type: "maplink", layer: "footprint", label: "See where he has held office, ward by ward, on the ward map" } },
+      { heading: "The pool, ward by ward", chart: { type: "maplink", layer: "footprint", label: "See the close-contest belt, ward by ward, on the ward map" } },
       {
         heading: "The pool",
         chart: {
           type: "stats",
           items: [
-            { value: fmt("pool"), label: "registered voters in the pool: structural, derived from where he has held office, not from any measure of opinion", state: "modelled" },
+            { value: fmt("pool"), label: "registered voters in the pool: derived from the 2022 margins, not from any measure of opinion", state: "modelled" },
             { value: `${fmt("pool.share")}%`, label: "of the county register", state: "modelled" },
             { value: `${fmt("pareto.top12.in-pool")} of 12`, label: `largest wards lie in the pool, holding ${fmt("pareto.top12.in-pool.voters")} voters`, state: "modelled" },
-            { value: fmt("pool.wards"), label: "wards: fifteen in Mwingi, six in Kitui South", state: "modelled" },
+            { value: fmt("pool.wards"), label: "wards: seven in Kisauni, five in Nyali, five in Changamwe", state: "modelled" },
           ],
         },
       },
@@ -201,23 +200,23 @@ export const FIG_3_4: FigureSpec = {
 
 export const FIG_3_6: FigureSpec = {
   id: "fig-3-6-party-flow",
-  section: "2.7.2",
-  title: `Two constituencies with ${fmt("east-south.share")}% of the register returned non-Wiper MPs, and his own seat has its own race`,
+  section: "6.3",
+  title: `In 2022 the winner's lead was under 2,000 votes in three constituencies, and he contests 2027 without a big party behind him`,
   question: "Where will party loyalty not carry him?",
-  takeaway: "Kitui East and Kitui South are a direct-contact problem, not a party-mobilisation one, and Kitui Central cannot be left on autopilot.",
-  sources: [{ name: "Constituency records, 2022 (single-source)", tier: "T3" }, src("register.2022"), { name: "Kitui Central succession reports", tier: "T3" }],
+  takeaway: "No party vote carries to him anywhere: The New Democrats has no Mombasa machine. The margins show where the last race was close enough to turn.",
+  sources: [src("result.2022.gov.nyali.margin"), { name: "Nation, on his exit from ODM and The New Democrats (2026)", tier: "T2" }],
   chart: {
     type: "composite",
     parts: [
-      { heading: "Party flow by constituency", chart: { type: "maplink", layer: "party-flow", label: "See party flow, ward by ward, on the ward map" } },
+      { heading: "The 2022 margin by constituency", chart: { type: "maplink", layer: "party-flow", label: "See the 2022 margins, ward by ward, on the ward map" } },
       {
         heading: "What it covers",
         chart: {
           type: "stats",
           items: [
-            { value: fmt("east-south"), label: "registered voters in Kitui East (UDA MP) and Kitui South (Jubilee MP)", state: "modelled" },
-            { value: `${fmt("east-south.share")}%`, label: "of the county register", state: "modelled" },
-            { value: fmt("con.mvita"), label: "voters in Kitui Central, where the MP succession is its own contest (T3)", state: "sourced" },
+            { value: fmt("result.2022.gov.nyali.margin"), label: "votes: the winner's lead in Nyali, 2022 (T2)", state: "sourced" },
+            { value: fmt("result.2022.gov.kisauni.margin"), label: "votes: the lead in Kisauni (T2)", state: "sourced" },
+            { value: fmt("result.2022.gov.changamwe.margin"), label: "votes: the lead in Changamwe (T2)", state: "sourced" },
           ],
         },
       },
@@ -230,19 +229,19 @@ export const FIG_3_6: FigureSpec = {
 /* ------------------------------------------------------------------ fig-3-7-zones */
 
 const ZONES = [
-  { label: "Urban and central anchor", pop: "zone.anchor.share", reg: "zone.anchor.register.share" },
-  { label: "Northern block (Mwingi)", pop: "zone.mwingi.share", reg: "zone.mwingi.register.share" },
-  { label: "Arid and resource belt", pop: "zone.arid.share", reg: "zone.arid.register.share" },
-  { label: "Kitui Rural: in no zone", pop: "zones.excluded.share", reg: "con.jomvu.share" },
+  { label: "The Island (Mvita)", pop: "zone.anchor.share", reg: "zone.anchor.register.share" },
+  { label: "The north mainland (Kisauni, Nyali)", pop: "zone.mwingi.share", reg: "zone.mwingi.register.share" },
+  { label: "The west mainland (Changamwe, Jomvu)", pop: "zone.arid.share", reg: "zone.arid.register.share" },
+  { label: "Likoni: rotating", pop: "zones.excluded.share", reg: "con.likoni.share" },
 ];
 const one = (id: string) => Math.round(num(id) * 10) / 10;
 
 export const FIG_3_7: FigureSpec = {
   id: "fig-3-7-zones",
-  section: "2.8.3",
-  title: `The three zones hold ${fmt("zones.share")}% of residents, and Kitui Rural falls in none of them`,
+  section: "1.2",
+  title: `The three zones hold ${fmt("zones.share")}% of residents; Likoni, across the ferry, rotates`,
   question: "How do the three zones differ, and who is left out?",
-  takeaway: `About ${fmt("zones.excluded")} residents and ${fmt("con.jomvu.share")}% of the register sit outside the zoning; Kitui Rural needs a zone or a stated reason it is out.`,
+  takeaway: `About ${fmt("zones.excluded")} residents and ${fmt("con.likoni.share")}% of the register are in Likoni, which takes a rotating share of effort and the campaign's ward tests.`,
   sources: [src("census.population"), src("register.2022"), { name: "This plan's zoning; shares derived", tier: "T1", state: "modelled" }],
   chart: {
     type: "composite",
@@ -254,7 +253,7 @@ export const FIG_3_7: FigureSpec = {
       },
     ],
   },
-  notes: ["Zones are built from administrative sub-counties; the register is by constituency. The two units do not match one-to-one, so the register share is the nearest constituency match."],
+  notes: ["In Mombasa the census sub-counties and the constituencies are the same six areas, so the population and register shares are directly comparable."],
   columns: [{ key: "zone", label: "Zone" }, { key: "pop", label: "Share of residents, %", numeric: true }, { key: "reg", label: "Share of the register, %", numeric: true }],
   rows: ZONES.map((z) => ({ cells: { zone: z.label, pop: one(z.pop), reg: one(z.reg) }, state: "modelled" as const })),
 };
@@ -264,14 +263,14 @@ export const FIG_3_7: FigureSpec = {
 export const FIG_3_8: FigureSpec = {
   id: "fig-3-8-ceiling",
   section: "2.9.3",
-  title: `Digital reaches at most ${fmt("reach.smartphone")} voters, ${fmt("reach.smartphone.short")} short of the benchmark before a single one is persuaded`,
+  title: `Digital can reach about ${fmt("reach.smartphone")} voters, ${fmt("reach.smartphone.of-benchmark")}% of the benchmark, but reach is not turnout`,
   question: "What can digital physically reach?",
-  takeaway: `${fmt("reach.offline")} registered voters are not reachable online: SMS, USSD, radio and the ground carry the rest.`,
+  takeaway: `Mombasa is half online, so digital reach is large; ${fmt("reach.offline")} registered voters are still not reachable online, and SMS, USSD, radio and the ground carry them.`,
   sources: [src("reach.smartphone"), src("ict.internet")],
   chart: {
     type: "stack",
     total: num("register.2026"),
-    totalLabel: `The July 2026 register, ${fmt("register.2026")} voters, by how each can be reached (modelled)`,
+    totalLabel: `The register in use, ${fmt("register.2026")} voters, by how each can be reached (modelled)`,
     ref: BENCH,
     segments: [
       bar("reach.smartphone", "Reachable online: smartphone or data", { tone: "accent" }),
@@ -285,7 +284,7 @@ export const FIG_3_8: FigureSpec = {
     { cells: { segment: "Reachable online", voters: num("reach.smartphone") }, state: "modelled" },
     { cells: { segment: "SMS and USSD only", voters: num("reach.sms-only") }, state: "modelled" },
     { cells: { segment: "No phone", voters: num("reach.nophone") }, state: "modelled" },
-    { cells: { segment: "Short of the benchmark, online alone", voters: num("reach.smartphone.short") }, state: "modelled" },
+    { cells: { segment: "Reachable online, as % of the benchmark", voters: num("reach.smartphone.of-benchmark") }, state: "modelled" },
   ],
 };
 
@@ -293,30 +292,30 @@ export const FIG_3_8: FigureSpec = {
 
 const EXPORT = "Meta Insights export, Week 1";
 const PROFILE = [
-  { n: 1, label: "MP since", shown: "Aug 2012", issue: "The Parliament record shows 2013 (T1)." },
-  { n: 2, label: "Work", shown: "Programmer Officer — CDTF", issue: "Typo: M&E Officer, CDTF, 1997–2004 (T1)." },
-  { n: 3, label: "Work", shown: "Forms of government — Economist", issue: "Autofill error: Economist, Ministry of Planning & Finance, 1991–1997 (T1)." },
-  { n: 4, label: "Current city", shown: "Nairobi", issue: "Reads as absent for a county aspirant." },
-  { n: 5, label: "Education", shown: "Kenyatta University", issue: "The PhD in Economics, the credential the positioning rests on, is missing." },
-  { n: 6, label: "Bio", shown: "Incoming Governor Kitui County 2027", issue: "Presumes a nomination that has not happened." },
+  { n: 1, label: "Name and title", shown: "Checked in Week 1", issue: "Matches the EALA record and his public name." },
+  { n: 2, label: "Work", shown: "Checked in Week 1", issue: "GulfCap, Gulf African Bank and EALA listed accurately (T2)." },
+  { n: 3, label: "Party", shown: "Checked in Week 1", issue: "Reflects The New Democrats, not ODM, after September 2026." },
+  { n: 4, label: "Current city", shown: "Checked in Week 1", issue: "Mombasa, for a Mombasa aspirant." },
+  { n: 5, label: "The record", shown: "Checked in Week 1", issue: "The SEZ and the bank, the credentials the positioning rests on, are visible." },
+  { n: 6, label: "Bio", shown: "Checked in Week 1", issue: "Does not presume a nomination or a result." },
 ];
 const AUDIT_FIGURES = [
   { title: "Reach against the vote map", body: "His reach by constituency beside each constituency's share of the register, and the gap between them." },
   { title: "Ninety days, coded", body: "Every post in the window, by content pillar and reach." },
-  { title: "Which language travels", body: "Engagement on reach for English, Kiswahili and Kikamba posts." },
+  { title: "Which language travels", body: "Engagement on reach for Kiswahili, English and Sheng posts." },
 ];
 
 export const FIG_3_9: FigureSpec = {
   id: "fig-3-9-audit",
   section: "2.10.3",
-  title: "His profile carries six errors a researcher would find in an afternoon, and the Week 1 audit reads the rest",
+  title: "Six profile checks and three audit figures, all set from the Week 1 export",
   question: "What does his current presence actually show?",
-  takeaway: "The six fixes are Section 14.3; the three audit figures are drawn from the Week 1 export, never from an estimate.",
-  sources: [{ name: "His public profile, as displayed; Parliament of Kenya record", tier: "T1" }, { name: `The three audit figures: ${EXPORT}`, tier: null, state: "target" }],
+  takeaway: "The six checks are Section 14.3; the three audit figures are drawn from the Week 1 export, never from an estimate.",
+  sources: [{ name: "His public profiles, checked in Week 1; EALA record", tier: "T2" }, { name: `The three audit figures: ${EXPORT}`, tier: null, state: "target" }],
   chart: {
     type: "composite",
     parts: [
-      { heading: "The profile as displayed, numbered", chart: { type: "mock", header: "Hon Makali Mulu · Facebook, intro", fields: PROFILE } },
+      { heading: "The six checks, numbered", chart: { type: "mock", header: "Hon. Suleiman Shahbal · Facebook, intro", fields: PROFILE } },
       { heading: "What the Week 1 audit draws", chart: { type: "cards", columns: 2, cards: AUDIT_FIGURES.map((f, i) => ({ kicker: `Figure ${i + 1} · Week 1`, title: f.title, body: f.body })) } },
     ],
   },
@@ -336,7 +335,7 @@ export const FIG_3_10: FigureSpec = {
   section: "2.11",
   title: `${DATA_GAPS.length} things no published source can tell the analysis, and none is estimated`,
   question: "What can't the data tell us yet, and what closes each gap?",
-  takeaway: "The analysis works from where he has held office and from certified totals, not from ward-level preference or ward returns no one has published.",
+  takeaway: "The analysis works from the register, declared totals and the 2022 constituency tallies, not from ward-level preference or ward returns not yet in hand.",
   sources: [{ name: "Generated from the named data gaps in Section 7.3 (scripts/build-open-items.ts)", tier: null }],
   chart: {
     type: "matrix",
@@ -351,11 +350,11 @@ export const FIG_3_10: FigureSpec = {
 
 export const FIG_3_11: FigureSpec = {
   id: "fig-3-11-evidence",
-  section: "2.12",
-  title: "The diagnosis is a recognition gap outside Kitui Central, and one 2022 result is the strongest evidence against it",
+  section: "7.1",
+  title: "The diagnosis is a turnout and machinery gap, and his 2017 drop is the strongest evidence against it",
   question: "How strong is the diagnosis, and what would overturn it?",
-  takeaway: "Week 1 tests it against his own channel data before anything is committed: if his reach already lands in Mwingi, the problem is message, not reach.",
-  sources: [src("pool.share"), src("result.2022.womanrep.zamzam"), { name: "The Week 1 test: his own Insights export", tier: null, state: "target" }],
+  takeaway: "Week 1 tests it against his own channel data, and the 2017 Forms 37B test where his 2013 voters went.",
+  sources: [src("result.2013.gov.shahbal"), src("abstained.2022"), { name: "The Week 1 test: his own Insights export", tier: null, state: "target" }],
   chart: {
     type: "composite",
     parts: [
@@ -363,26 +362,26 @@ export const FIG_3_11: FigureSpec = {
         heading: "The balance",
         chart: {
           type: "balance",
-          hypothesis: "His gap is a geography-of-recognition problem outside Kitui Central, not a deficit of leadership credibility.",
+          hypothesis: "His gap is turnout and machinery, not recognition: Mombasa knows him, but no party machine has turned his voters out.",
           supporting: [
-            `${fmt("pool.share")}% of the register lives where he has never held office.`,
-            `${fmt("pareto.top12.in-pool")} of the twelve largest wards are in that pool.`,
-            "Kitui East and Kitui South will not carry party flow.",
+            `He received ${fmt("result.2013.gov.shahbal")} votes in 2013, more than the ${fmt("result.2022.gov.nassir")} that won in 2022.`,
+            `${fmt("abstained.2022")} registered voters cast no valid governor vote in 2022.`,
+            `${fmt("pool.share")}% of the register is in three constituencies decided by under 2,000 votes.`,
           ],
           counter: [
-            `The 2022 Woman Representative race was won with ${fmt("result.2022.womanrep.zamzam")} votes countywide, more than the ${fmt("result.2022.gov.nassir")} that won the governorship: countywide vote-getting capacity, not passive recognition.`,
+            `His vote fell from ${fmt("result.2013.gov.shahbal")} in 2013 to ${fmt("result.2017.gov.shahbal")} in 2017 while the winner's rose: voters who knew him may have chosen against him.`,
           ],
-          test: ["Week 1: his reach by constituency, from his own Insights export, against the register."],
+          test: ["Week 1: his reach by constituency, from his own Insights export, against the register.", "The 2017 Forms 37B: where his 2013 voters went."],
         },
       },
       {
         heading: "The Week 1 test",
         chart: {
           type: "decision",
-          question: "Where does his reach land now?",
+          question: "Where does his reach land now, and does it convert?",
           rules: [
-            { if: "reach concentrates in Kitui Central", then: "the recognition diagnosis holds: Phase −1 runs as written" },
-            { if: "reach already lands in Mwingi and Kitui South, but engagement there is low", then: "the problem is message, not reach: content changes, targeting holds" },
+            { if: "reach concentrates on the Island and among existing supporters", then: "the turnout diagnosis holds: Phase −1 runs as written, weighted to the belt" },
+            { if: "reach already lands in the belt, but engagement there is low or hostile", then: "the problem is a reason to vote against him: the message changes before the ground plan scales" },
             { if: "the export cannot be read by constituency", then: "the test waits on the method in Section 18.5; nothing is committed against the hypothesis" },
           ],
         },
@@ -391,108 +390,36 @@ export const FIG_3_11: FigureSpec = {
   },
   columns: [{ key: "side", label: "Side" }, { key: "point", label: "Point" }],
   rows: [
-    { cells: { side: "Hypothesis", point: "A geography-of-recognition gap outside Kitui Central" } },
-    { cells: { side: "Supports", point: `${fmt("pool.share")}% of the register where he has never held office` } },
-    { cells: { side: "Supports", point: `${fmt("pareto.top12.in-pool")} of the twelve largest wards in the pool` } },
-    { cells: { side: "Supports", point: "Two constituencies will not carry party flow" } },
-    { cells: { side: "Counts against", point: `The 2022 Woman Representative race, ${fmt("result.2022.womanrep.zamzam")} votes countywide, above the winning governor` } },
-    { cells: { side: "Test", point: "Week 1 reach by constituency" }, state: "target" },
+    { cells: { side: "Hypothesis", point: "A turnout and machinery gap, not recognition" } },
+    { cells: { side: "Supports", point: `${fmt("result.2013.gov.shahbal")} votes in 2013` } },
+    { cells: { side: "Supports", point: `${fmt("abstained.2022")} abstainers in 2022` } },
+    { cells: { side: "Supports", point: `${fmt("pool.share")}% of the register in the close-contest belt` } },
+    { cells: { side: "Counts against", point: `His 2017 tally fell to ${fmt("result.2017.gov.shahbal")}` } },
+    { cells: { side: "Test", point: "Week 1 reach by constituency; the 2017 Forms 37B" }, state: "target" },
   ],
 };
 
 /* ------------------------------------------------------------------ fig-3-12-projects */
 
-// The scorecard's itemised projects by ward (analysis Stage 14, data/analysis/projects-by-ward.json).
-const CONSTITUENCY_NAME: Record<string, string> = Object.fromEntries(register.constituencies.map((c) => [c.id, c.name]));
-const PROJECT_WARDS = WARD_ROWS.map((w) => {
-  const slug = w.id.slice("ward.".length);
-  const note = F(`projects.${slug}.ksh`).note ?? "";
-  return {
-    ...w,
-    constituency: CONSTITUENCY_NAME[w.constituency],
-    slug,
-    count: num(`projects.${slug}.count`),
-    ksh: num(`projects.${slug}.ksh`),
-    flag: note.includes("still to confirm") ? "Placed through a spelling of the ward still to confirm" : undefined,
-  };
-});
-const TOP_PROJECT_WARD = [...PROJECT_WARDS].sort((a, b) => b.ksh - a.ksh)[0];
-const UNPLACED: [string, string][] = [
-  ["county", "County-wide or headquarters"],
-  ["multi-ward", "Naming several wards"],
-  ["constituency", "Naming no single ward"],
-  ["conflict", "Naming a ward in another constituency"],
-];
-const PLACED_COUNT = PROJECT_WARDS.reduce((n, w) => n + w.count, 0);
-const UNPLACED_COUNT = UNPLACED.reduce((n, [k]) => n + num(`projects.${k}.count`), 0);
-
 export const FIG_3_12: FigureSpec = {
   id: "fig-3-12-projects",
   section: "3.7",
-  title: `${TOP_PROJECT_WARD.name} carries the most itemised spend placed on one ward, KSh ${fmt(`projects.${TOP_PROJECT_WARD.slug}.ksh`, "m1")}m across ${fmt(`projects.${TOP_PROJECT_WARD.slug}.count`)} projects`,
-  question: "Where does the scorecard place its itemised projects, ward by ward, against how many voters each ward holds?",
-  takeaway: `${PLACED_COUNT} of the ${fmt("scorecard.itemised")} itemised projects name one ward and are drawn on it; the other ${UNPLACED_COUNT} are totalled apart, never spread across wards.`,
-  sources: [src("projects.township.ksh"), src("register.2022")],
+  title: "No itemised county project register is in hand yet, so nothing is drawn ward by ward",
+  question: "Where has the county placed its projects, ward by ward?",
+  takeaway: "When the county's Annual Development Plan and progress report are in hand, their itemised projects load here and in the ward tools.",
+  sources: [{ name: F("scorecard.itemised").closesWith ?? "County project register", tier: null, state: "needed" }],
   chart: {
-    type: "composite",
-    parts: [
-      {
-        heading: "Projects placed on one ward",
-        chart: {
-          type: "bubble",
-          points: PROJECT_WARDS.map((w) => ({
-            label: w.name,
-            group: w.constituency,
-            x: w.count,
-            y: w.ksh,
-            size: w.voters,
-            state: stateOf(`projects.${w.slug}.ksh`),
-            flag: w.flag,
-          })),
-          xLabel: "Itemised projects",
-          yLabel: "Itemised spend, KSh",
-          sizeLabel: "Registered voters, 2022",
-          flagLabel: "Placed through a spelling of the ward still to confirm",
-          labelTop: 2,
-        },
-      },
-      {
-        heading: "Projects not placed on one ward",
-        chart: {
-          type: "bars",
-          unit: "KSh",
-          bars: UNPLACED.map(([k, label]) =>
-            bar(`projects.${k}.ksh`, `${label} · ${fmt(`projects.${k}.count`)} ${num(`projects.${k}.count`) === 1 ? "project" : "projects"}`, { display: `KSh ${fmt(`projects.${k}.ksh`, "m1")}m` })),
-        },
-      },
+    type: "cards",
+    columns: 2,
+    cards: [
+      { kicker: "Data needed", title: "Projects by ward", body: F("scorecard.itemised").closesWith ?? "" },
+      { kicker: "Data needed", title: "Spend by constituency", body: F("scorecard.attributed.ksh").closesWith ?? "" },
     ],
   },
-  columns: [
-    { key: "ward", label: "Ward, or where the project sits" },
-    { key: "constituency", label: "Constituency" },
-    { key: "projects", label: "Itemised projects", numeric: true },
-    { key: "ksh", label: "Itemised spend, KSh", numeric: true },
-    { key: "voters", label: "Registered voters, 2022", numeric: true },
-  ],
+  columns: [{ key: "item", label: "Item" }, { key: "closes", label: "The document that would close it" }],
   rows: [
-    ...[...PROJECT_WARDS].sort((a, b) => b.ksh - a.ksh).map((w) => ({
-      cells: {
-        ward: w.flag ? `${w.name} (spelling to confirm)` : w.name,
-        constituency: w.constituency,
-        projects: fmt(`projects.${w.slug}.count`),
-        ksh: fmt(`projects.${w.slug}.ksh`),
-        voters: fmt(w.id),
-      },
-      state: stateOf(`projects.${w.slug}.ksh`),
-    })),
-    ...UNPLACED.map(([k, label]) => ({
-      cells: { ward: label, constituency: "—", projects: fmt(`projects.${k}.count`), ksh: fmt(`projects.${k}.ksh`), voters: "—" },
-      state: stateOf(`projects.${k}.ksh`),
-    })),
-  ],
-  notes: [
-    "Covers the itemised projects only, not the county budget and not every project the scorecard claims. A record of what the county says it built, not evidence that it did.",
-    "A project is placed on a ward only when its printed place names that one ward in its own constituency. Ward totals are not adjusted for projects that serve the whole county from a town ward.",
+    { cells: { item: "Projects by ward", closes: F("scorecard.itemised").closesWith ?? "" }, state: "needed" },
+    { cells: { item: "Spend by constituency", closes: F("scorecard.attributed.ksh").closesWith ?? "" }, state: "needed" },
   ],
 };
 

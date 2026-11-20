@@ -1,14 +1,14 @@
 import { PageHead } from "@/components/platform/PageHead";
 import { PUBLIC_RETRIEVED, PUBLIC_SOURCES } from "@/lib/public-data";
 
-export const metadata = { title: "Sources and data gaps | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Sources and data gaps | Mombasa 2027", robots: { index: false, follow: false } };
 
 const GAPS = [
-  ["Ward and station-level election results", "Not held. Request from the IEBC Kitui office or use the campaign's 2022 agent copies."],
-  ["2013 and 2017 Kitui results by office", "Not collected from a primary source."],
+  ["Ward and station-level election results", "Not held. Request from the IEBC Mombasa office or use the campaign's 2022 agent copies."],
+  ["2013 and 2017 Mombasa results by office", "Not collected from a primary source."],
   ["Agents allowed per polling station", "Unconfirmed. Check the current Elections (General) Regulations."],
   ["Governor nomination paperwork and qualifications", "Unconfirmed. Check current regulations and IEBC guidance."],
-  ["Wiper's 2027 nomination rules", "Not found publicly. Obtain from the party or the Registrar of Political Parties."],
+  ["The New Democrats' 2027 nomination rules", "Not found publicly. Obtain from the party or the Registrar of Political Parties."],
   ["Ward-level register after 2022", "Not published. All ward voter figures are from 2022."],
   ["Political SMS guidelines", "The 2017 text is the latest found. Confirm it is current with the Communications Authority."],
 ];

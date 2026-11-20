@@ -1,20 +1,20 @@
 ```lead
-Dr. Makali Mulu's record is strong and documented, but it is known mainly in Kitui Central. **{{pool.share}}%** of the register lives in the four constituencies where he has never held office.
+Mr Shahbal's record is a businessman's: a bank founded, a group built, and a Special Economic Zone signed. Mombasa knows his name from two governor's races; what it has not seen is that record laid out, checked, and tied to what he would do with the county.
 ```
 
-Dr. Makali Mulu's record is strong and documented, but it is known mainly in Kitui Central. **{{pool.share}}%** of the register lives in the four constituencies where he has never held office. This chapter sets out the record, where he is known and where he is not, where party loyalty will not carry him, and what his channels show today.
+Mr Shahbal's record is a businessman's: a bank founded, a group built, and a Special Economic Zone signed. Mombasa knows his name from two governor's races, in 2013 and 2017, and from 2022, when he stood down for the eventual winner. What it has not seen is that record laid out, checked, and tied to what he would do with the county. This chapter sets out the record, where his votes have come from and where they have not, where party loyalty will not carry him, and what his channels show today.
 
 ## 6.1 The public record
 
 ```lead
-Hon. Dr. Benson Makali Mulu, PhD (Economics), CBS, has represented Kitui Central in the National Assembly since 2013 (Tier 1). He is a member of the Budget and Appropriations Committee (Tier 1), the committee that scrutinises the national estimates.
+Hon. Suleiman Shahbal is a Member of the East African Legislative Assembly, where he chairs the Communication, Trade and Investment Committee, and the founder and chairman of the GulfCap Group (Tier 1 and Tier 2).
 ```
 
-Hon. Dr. Benson Makali Mulu, PhD (Economics), CBS, has represented Kitui Central in the National Assembly since 2013 (Tier 1). He is a member of the Budget and Appropriations Committee (Tier 1), the committee that scrutinises the national estimates. Whether he has held a leadership position on it is confirmed from the National Assembly's committee membership records and Hansard; until it is, this plan describes him as a member.
+Hon. Suleiman Shahbal, born in Mombasa in 1960, is a Member of the East African Legislative Assembly (EALA), where he chairs the **Communication, Trade and Investment Committee** (Tier 2, Citizen Digital, February 2023; the EALA committee record is the Tier 1 document to cite). He is the founder and chairman of the **GulfCap Group**, with interests in finance, real estate, energy and hospitality, and founded **Gulf African Bank in {{record.gab.founded}}**, Kenya's first Islamic bank (Tier 2). In 2018 he was appointed to a national government role; the gazette notice is to be cited before it is used.
 
-He is a specialist in project management, strategic planning and **monitoring and evaluation (M&E)**: a certified consultant in project management and M&E, a member of the Evaluation Society of Kenya, and an **M&E Champion designated by the Ministry of Finance**, after service with the United Nations in financial advisory and project management roles (Tier 1). Under his stewardship, Kitui Central was evaluated the **best constituency in the Eastern region for FY2014/15**, first of 71 constituencies in its peer group (Tier 1). This plan has attributed the evaluation to Ministry of Finance performance audits; the evaluation report itself, and the body that issued it, are to be cited before the line is published.
+He has stood for governor of Mombasa twice: in **2013** on the Wiper ticket ({{result.2013.gov.shahbal}} votes, second) and in **2017** on the Jubilee ticket ({{result.2017.gov.shahbal}} votes, second) (Tier 1, as recited by the election courts). In 2022 he sought the ODM ticket and stood down in favour of Abdulswamad Nassir. In September 2026 he left ODM and announced that he would contest in 2027 on a new vehicle, **The New Democrats** (Tier 2, Nation; Section 6.3).
 
-The record below is what the public-finance message rests on. Each line names the document behind it, and the campaign uses each in one way.
+The record below is what the delivery message rests on. Each line names the document behind it, and the campaign uses each in one way.
 
 ```figure
 id: fig-2-8-record
@@ -22,14 +22,15 @@ id: fig-2-8-record
 
 | Asset | The evidence | How we would use it |
 |---|---|---|
-| Economics and the national budget | PhD (Economics) (Tier 1); Budget and Appropriations Committee membership (Tier 1; any leadership role to be confirmed from the National Assembly's committee records) | A weekly "Dr. Mulu on Public Finance" explainer series |
-| **Monitoring and evaluation** | Certified consultant in project management and M&E (Tier 1); member, Evaluation Society of Kenya (ESK) (Tier 1); **designated M&E Champion by the Ministry of Finance** (Tier 1; the issuing letter or notice is to be cited) | The public service-delivery tracker (Section 15.1.1) |
-| International standing | United Nations project management and financial advisory roles (Tier 1) | Credibility with professional and diaspora networks |
-| Delivery in Kitui Central | KSh {{record.bursary.ksh|m}} million in educational bursaries to {{record.bursary.recipients}} students (Tier 1); **Kitui Central certified as the best-evaluated constituency in the Eastern region, FY2014/15**, first of 71 in its national peer group (Tier 1; the evaluating body's report is to be cited) | Ward-level proof points |
-| Length of service | 17 years in political leadership, 13 as Member of Parliament for Kitui Central (Tier 1); Commander of the Order of the Burning Spear (CBS) (Tier 1; the Kenya Gazette notice of the award is to be cited) | Steady, low-risk leadership, set against less-experienced candidates |
-| Existing web presence | The Kitui Central NG-CDF portal, established and active (Tier 1) | Integrated rather than duplicated |
+| **The Jomvu SEZ** | A KSh {{record.sez.ksh|bn}} billion agreement between GulfCap, DP World and the county for a {{record.sez.acres}}-acre zone in Jomvu, signed at State House on 8 September 2026; {{record.sez.jobs}} direct jobs projected (Tier 2) | A public jobs tracker: the projection beside the jobs actually created, updated every quarter (Section 15.1.1) |
+| **A bank built from nothing** | Founded Gulf African Bank in {{record.gab.founded}}, Kenya's first Islamic bank (Tier 2) | Proof he can build an institution that lasts, and a link to the Muslim community on substance rather than identity |
+| Regional standing | EALA member; chair, Communication, Trade and Investment Committee (Tier 2; the EALA record is to be cited) | Trade and investment credibility with traders, the port and the diaspora |
+| Persistence in Mombasa politics | Second in 2013 with {{result.2013.gov.shahbal}} votes and in 2017 with {{result.2017.gov.shahbal}} (Tier 1); stood down in 2022 (Tier 2) | A candidate who has kept coming back to Mombasa, set against the charge that he is only a businessman |
+| Recognition | Pwani Golden Awards, Entrepreneur of the Year 2024; KNCCI Distinguished Honorary Award 2023 (Tier 3, as listed publicly; to be confirmed) | Secondary only |
 
-**The NG-CDF record, and its limits.** The constituency's NG-CDF site publishes project records, proposals, allocations and Project Implementation Status reports across its five wards: Mulango, Kyangwithya East, Kyangwithya West, Township and Miambani. The FY2026/27 allocation is **KSh {{ngcdf.allocation.2026}}** (Tier 1). A project is described as completed only where its implementation-status report says so.
+**The record, and its limits.** Business success is not county delivery, and his opponents will say so. The record is used to make one claim only: that he has built things that are still standing and can be visited. Every line above is checked against its Tier 1 document before it goes into broadcast copy.
+
+**The conflict-of-interest question, answered in advance.** A candidate whose company is building an SEZ with the county he wants to govern will be asked how the two stay apart. The campaign answers before it is asked (Section 19): what he would recuse himself from, and how the SEZ's progress would be reported independently of the county.
 
 ## 6.4 His channels
 
@@ -37,5 +38,4 @@ id: fig-2-8-record
 id: fig-2-9-channels
 ```
 
-**The NG-CDF site is the most under-used asset in this list.** It is a public, constituency-run record of completed projects, and the first content type, "Where the money went" (Section 10.1), exists to put that record in front of voters who have never heard of him. The boundary in Section 19.2 applies: the **project record** is usable; the **beneficiary personal data** behind it is not.
-
+**His own channels have not yet been audited.** Facebook followers {{channel.fb.followers}}, posts {{channel.fb.posts}}, X followers {{channel.x.followers}}: each is read on the Week 1 export, never estimated. The audit in Section 6.5 sets the baseline.

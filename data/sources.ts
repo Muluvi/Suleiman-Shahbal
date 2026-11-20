@@ -19,7 +19,7 @@ export const IEBC_WARD_REGISTER: Source = {
 };
 
 export const IEBC_2022_RESULTS: Source = {
-  name: "IEBC 2022 General Election declared results (Mombasa governor poll of 29 August 2022)",
+  name: "IEBC 2022 General Election declared results (Mombasa governor election of 29 August 2022)",
   url: "https://www.iebc.or.ke",
   publicationDate: "2022-08",
   tier: 1,

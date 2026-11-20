@@ -27,7 +27,6 @@ import {
   CONTROLLER_OF_BUDGET,
   COURT_OF_APPEAL_2018,
   FISCAL_STRATEGY_PAPER_FY2026_27,
-  GAZETTE_12251,
   HIGH_COURT_2013,
   IEBC_PRESIDENTIAL_34C_2022,
   IEBC_REGISTER_2026_REPORTED,
@@ -152,7 +151,7 @@ sourced("result.2022.gov.omar", 98_105, "votes", "T2", MEDIA_2022, {
   alt: { value: 98_108, source: "The Standard, KNA and NTV, 30 August 2022", tier: "T2", note: "A second published total. Form 37C settles which is certified." },
 });
 sourced("result.2022.gov.omar.media", 98_108, "votes", "T2", "The Standard, KNA and NTV, 30 August 2022", { note: "The second published total; The Star and Capital FM print 98,105." });
-sourced("result.2022.gov.valid", 221_148, "votes", "T2", "Returning officer Swalha Yusuf, as reported by The Standard, 30 August 2022", { note: "Valid votes cast in the governor poll of 29 August 2022." });
+sourced("result.2022.gov.valid", 221_148, "votes", "T2", "Returning officer Swalha Yusuf, as reported by The Standard, 30 August 2022", { note: "Valid votes cast in the governor election of 29 August 2022." });
 sourced("result.2022.gov.awiti", 875, "votes", "T2", "The Star, 30 August 2022", { note: "Hezron Awiti, VDP: third of seven candidates." });
 sourced("result.2022.gov.kingi", 712, "votes", "T2", "The Star, 30 August 2022", { note: "William Kingi, PAA." });
 sourced("result.2022.gov.candidates", 7, "count", "T2", "The Standard, 30 August 2022");
@@ -161,6 +160,7 @@ modelled("result.2022.gov.nassir.share", pct(v("result.2022.gov.nassir"), v("res
 modelled("result.2022.gov.margin", v("result.2022.gov.nassir") - v("result.2022.gov.omar"), "votes", "119,083 less 98,105.", { tier: "T2" });
 modelled("turnout.2022", pct(v("result.2022.gov.valid"), v("register.2022")), "percent", "Valid governor votes as a share of the 2022 register: 221,148 / 641,913. The returning officer gave 34%.", { tier: "T2" });
 modelled("abstained.2022", v("register.2022") - v("result.2022.gov.valid"), "voters", "Registered voters who cast no valid governor vote on 29 August 2022: 641,913 less 221,148.", { tier: "T2" });
+modelled("abstained.2022.share", pct(v("register.2022") - v("result.2022.gov.valid"), v("register.2022")), "percent", "Abstainers / the 2022 register.");
 
 // The governor's race by constituency, 2022 (Section 2.4). Five constituencies as reported; Likoni
 // is the county total less the five, so it is modelled.
@@ -201,6 +201,7 @@ sourced("result.2013.gov.shahbal", 94_905, "votes", "T1", HC_2013, {
   note: "Suleiman Shahbal, Wiper: his highest tally to date.",
   alt: { value: 94_918, source: "Court-ordered scrutiny, as reported (Star, 28 September 2013)", tier: "T2", note: "The scrutiny added 13 votes; the declared figure stands." },
 });
+modelled("result.shahbal.drop", v("result.2013.gov.shahbal") - v("result.2017.gov.shahbal"), "votes", "94,905 (2013) less 69,515 (2017).");
 modelled("result.2013.gov.gap", v("result.2013.gov.joho") - v("result.2013.gov.shahbal"), "votes", "132,583 less 94,905: the closest he has come.");
 modelled("result.2013.gov.shahbal.share-of-two", pct(v("result.2013.gov.shahbal"), v("result.2013.gov.joho") + v("result.2013.gov.shahbal")), "percent", "Shahbal / (Joho + Shahbal), 2013: his share of the two-way vote.");
 
@@ -217,7 +218,7 @@ modelled("benchmark.share-2022", pct(v("result.2022.gov.nassir"), v("register.20
 modelled("benchmark.2026-equivalent", Math.round((v("result.2022.gov.nassir") / v("register.2022")) * v("register.2026")), "votes", "The 2022 winner's share of the register applied to the register in use. A ratio carried forward, not a forecast.");
 modelled("benchmark.2026-equivalent.rounded", Math.round(v("benchmark.2026-equivalent") / 5000) * 5000, "votes", "The equivalent, rounded to the nearest 5,000 for prose.");
 modelled("benchmark.2026-equivalent.share", pct(v("result.2022.gov.nassir"), v("register.2022")), "percent", "The share carried forward: 119,083 / 641,913.");
-target("turnout.constant", Math.round(v("turnout.2022") * 10) / 10, "percent", "The turnout rate used in every calculation: the 2022 governor poll's rate carried forward to 2027. An assumption, and a low one: that poll was held three weeks after the general election, after two postponements. The scenario model brackets it at 34–55%.", { decimals: 1 });
+target("turnout.constant", Math.round(v("turnout.2022") * 10) / 10, "percent", "The turnout rate used in every calculation: the 2022 governor election's rate carried forward to 2027. An assumption, and a low one: that election was held three weeks after the general election, after two postponements. The scenario model brackets it at 34–55%.", { decimals: 1 });
 const TURNOUT = v("turnout.constant") / 100;
 modelled("turnout.rate", TURNOUT, "percent", "The turnout rate as a multiplier, for the working shown in Section 2.5.", { decimals: 3 });
 sourced("ballots.2022", v("result.2022.gov.valid"), "votes", "T2", MEDIA_2022, { note: "Valid votes for governor, 2022: the turnout universe the benchmark is measured against." });
@@ -356,6 +357,7 @@ sourced("ict.smartphones.national", 50.2e6, "count", "T2", CA_Q3, { decimals: 1,
 sourced("ict.broadband.national", 62.6e6, "count", "T1", CA_Q3, { decimals: 1, note: "Mobile broadband subscriptions, national." });
 sourced("ict.momo.national", 53.4e6, "count", "T1", CA_Q3, { decimals: 1, note: "Mobile money subscriptions, national." });
 sourced("ict.agents", 602_470, "count", "T1", CA_Q3, { asOf: "2026-03" });
+sourced("ict.agents.2025", 480_216, "count", "T1", "Communications Authority, sector statistics", { asOf: "2025-09" });
 const ICT_NATIONAL = `${CA_2024} (national tables)`;
 for (const [id, value] of [
   ["ict.kenya.internet", 35.0], ["ict.kenya.internet.rural", 25.0], ["ict.kenya.internet.urban", 56.6],
@@ -411,7 +413,7 @@ const WATER_CS = "Water CS Eric Mugaa to the Senate Committee on Lands, Environm
 sourced("water.demand", 200_000, "count", "T2", WATER_GOV, { note: "Cubic metres a day Mombasa needs." });
 sourced("water.supply", 40_000, "count", "T2", WATER_GOV, { note: "Cubic metres a day Mombasa receives, from Baricho, Marere and Mzima." });
 sourced("water.delivered", 20_000, "count", "T2", WATER_GOV, { note: "Cubic metres a day that reach residents after leaks and theft." });
-sourced("water.nrw", 60, "percent", "T2", "Kenya News Agency, October 2026", { decimals: 0, note: "Non-revenue water: lost to leaks and illegal connections, about KSh 100m a month." });
+sourced("water.nrw", 60, "percent", "T2", "Kenya News Agency, October 2026", { decimals: 0, note: "Non-revenue water: lost to leaks and illegal connections, about KSh 100m of lost county water revenue every month (the county's estimate)." });
 modelled("water.supply.share", pct(40_000, 200_000), "percent", "Supply / demand.", { tier: "T2" });
 modelled("water.delivered.share", pct(20_000, 200_000), "percent", "Water reaching residents / demand.", { tier: "T2" });
 sourced("water.mowasco.met", 11.6, "percent", "T2", "Nation, reporting the water regulator's FY2025/26 performance review (2026)", { note: "Share of residents' demand Mombasa Water met in the year to June 2026: 10m m³ against 85.9m m³." });
@@ -551,6 +553,10 @@ for (const [id, unit, closes] of [
   ["radio.kaya", "percent", "KARF or GeoPoll audience report, Coast region: Radio Kaya share"],
   ["boda.riders", "people", "NTSA or county register of boda-boda and tuk-tuk operators, Mombasa"],
   ["kpis.nomination", "count", "The New Democrats' nomination rules, once certified"],
+  ["edu.none.women", "percent", "KDHS 2022 Mombasa factsheet: women aged 6+ with no education"],
+  ["edu.none.men", "percent", "KDHS 2022 Mombasa factsheet: men aged 6+ with no education"],
+  ["disability.men", "percent", "KDHS 2022 Mombasa factsheet: men 15+ with a disability"],
+  ["disability.women", "percent", "KDHS 2022 Mombasa factsheet: women 15+ with a disability"],
 ] as [string, Unit, string][]) needed(id, unit, closes);
 
 // The scorecard projects by ward (analysis Stage 14) carry no Mombasa rows until a county project

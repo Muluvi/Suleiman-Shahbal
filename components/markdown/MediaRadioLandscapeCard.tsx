@@ -22,17 +22,17 @@ const RADIO_STATIONS: RadioStation[] = [
     frequency: "102.2 FM",
     ownership: "Royal Media Services (SK Macharia)",
     politicalAllegiance: "Commercially Independent",
-    campaignPosture: "Top Priority — Main commercial vehicle across Kitui & Eastern Kenya. Host weekly 06:30–08:00 morning breakfast interviews.",
+    campaignPosture: "Top Priority — Main commercial vehicle across Mombasa & Eastern Kenya. Host weekly 06:30–08:00 morning breakfast interviews.",
     isPriority: true,
     reachEstimate: "Dominant countywide listenership (~42%)",
     recommendedSlot: "Morning Drive & Evening Baraza"
   },
   {
     name: "County FM",
-    frequency: "90.3 Kitui / 91.8 Mwingi",
-    ownership: "Kitui Independent Media Group",
+    frequency: "90.3 Mombasa / 91.8 the north mainland",
+    ownership: "Mombasa Independent Media Group",
     politicalAllegiance: "Commercially Independent",
-    campaignPosture: "Top Priority — Hyperlocal grassroots penetration, especially in Mwingi region and rural markets.",
+    campaignPosture: "Top Priority — Hyperlocal grassroots penetration, especially in the north mainland region and rural markets.",
     isPriority: true,
     reachEstimate: "High grassroots credibility (~24%)",
     recommendedSlot: "Mid-day Farming & Livestock Show"
@@ -40,7 +40,7 @@ const RADIO_STATIONS: RadioStation[] = [
   {
     name: "Wikwatyo FM",
     frequency: "105.3 FM",
-    ownership: "Seventh-Day Adventist Church (Kitui)",
+    ownership: "Seventh-Day Adventist Church (Mombasa)",
     politicalAllegiance: "Church / Faith-Based",
     campaignPosture: "Priority — Moral authority, integrity, and faith-based community service programming.",
     isPriority: true,
@@ -50,11 +50,11 @@ const RADIO_STATIONS: RadioStation[] = [
   {
     name: "Athiani FM",
     frequency: "97.7 FM",
-    ownership: "Associated with Kalonzo Musyoka (Wiper Leader)",
+    ownership: "Associated with Kalonzo Musyoka (The New Democrats Leader)",
     politicalAllegiance: "Party Gatekeeper (Kalonzo)",
     campaignPosture: "Party-Aligned — Monitor closely during nomination window; coverage reflects party leadership sentiment rather than pure merit.",
     isPriority: false,
-    reachEstimate: "Influential Wiper loyalist base (~20%)",
+    reachEstimate: "Influential The New Democrats loyalist base (~20%)",
     recommendedSlot: "Party Delegate Policy Features"
   },
   {
@@ -64,7 +64,7 @@ const RADIO_STATIONS: RadioStation[] = [
     politicalAllegiance: "Politically Affiliated",
     campaignPosture: "Monitoring Only — Do not buy prime inventory; do not rely on placement.",
     isPriority: false,
-    reachEstimate: "Strong in Central & Southern Kitui",
+    reachEstimate: "Strong in Central & Southern Mombasa",
     recommendedSlot: "Audio Monitoring Only"
   },
   {
@@ -113,7 +113,7 @@ export function MediaRadioLandscapeCard() {
               </span>
             </div>
             <h4 className="font-serif text-base sm:text-lg font-bold text-ink mt-0.5">
-              Kamba-Language Broadcast Ownership & Risk Map
+              Coast-Language Broadcast Ownership & Risk Map
             </h4>
           </div>
         </div>
@@ -151,7 +151,7 @@ export function MediaRadioLandscapeCard() {
       <div className="p-4 bg-amber-500/10 border-b border-amber-500/20 t-label text-amber-900 dark:text-amber-300 flex items-start gap-2">
         <ShieldAlert size={16} className="shrink-0 mt-0.5" />
         <div>
-          <strong className="font-bold">Ownership Risk Reality:</strong> Two major Kikamba radio networks have politically affiliated ownership or ties to party leadership. Prime broadcast strategy concentrates on <strong>Musyi FM, County FM, and Wikwatyo FM</strong>.
+          <strong className="font-bold">Ownership Risk Reality:</strong> Two major Kiswahili radio networks have politically affiliated ownership or ties to party leadership. Prime broadcast strategy concentrates on <strong>Musyi FM, County FM, and Wikwatyo FM</strong>.
         </div>
       </div>
 
@@ -257,7 +257,7 @@ export function MediaRadioLandscapeCard() {
                   <span>Sample On-Air Talking Point ({station.name}):</span>
                 </div>
                 <p className="italic text-ink">
-                  &ldquo;Mbee! Mbee! Kĩla kĩndũ kĩ na thayũ, ĩtina nĩ kũmenya. Dr. Makali Mulu is the tested economist who will allocate Kitui&apos;s KSh 13.79 billion transparently to each of our 40 wards.&rdquo;
+                  &ldquo;Mbee! Mbee! Kĩla kĩndũ kĩ na thayũ, ĩtina nĩ kũmenya. Suleiman Shahbal is the tested economist who will allocate Mombasa&apos;s KSh 13.79 billion transparently to each of our 30 wards.&rdquo;
                 </p>
               </div>
               </div>
@@ -271,7 +271,7 @@ export function MediaRadioLandscapeCard() {
       <div className="p-3 bg-paper/60 border-t border-line t-small text-muted flex items-center justify-between px-4 font-semibold">
         <span className="flex items-center gap-1">
           <Info size={12} className="text-accent" />
-          <span>Vernacular Airwave Primacy: 86% of Kitui relies on radio as their primary daily source of political truth.</span>
+          <span>Vernacular Airwave Primacy: 86% of Mombasa relies on radio as their primary daily source of political truth.</span>
         </span>
       </div>
     </div>

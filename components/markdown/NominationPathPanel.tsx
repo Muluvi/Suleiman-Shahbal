@@ -11,7 +11,7 @@ export function NominationPathPanel() {
     <div className="not-prose my-6 rounded-2xl border-2 border-dashed border-danger/40 bg-paper p-4 sm:p-5 print-avoid-break">
       <div className="flex items-center gap-2 mb-2">
         <TierBadge tier={3} />
-        <span className="t-micro font-black text-danger">Unconfirmed by Wiper</span>
+        <span className="t-micro font-black text-danger">Unconfirmed by The New Democrats</span>
       </div>
       <h4 className="font-serif text-sm font-bold text-ink mb-2">{NOMINATION_METHOD_CLAIM.label}</h4>
       <p className="font-serif text-base font-black text-ink mb-2">{NOMINATION_METHOD_CLAIM.value}</p>

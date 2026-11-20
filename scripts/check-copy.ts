@@ -59,6 +59,11 @@ const MONEY_OK = [
   /National Budget Seat/gi, // his committee seat
   /household spending|a household spending|county spending|funeral costs|throwaway prices|floor-price|borehole location, cost|prove it was spent/gi, // household and county money as issues, not the engagement's
   /Budget Discipline for Water/g, // a message about the county's budget, in the Section 10.4 grid
+  // Mombasa edition: the county's money and household costs as campaign issues, not the engagement's.
+  /(water|kiosk|kiosks'|vendors?'?|jerrican|county's|market|permit) (prices?|fees?|costs?)|prices? (ceiling|at county|of water)|calling prices|a jerrican costs|water price|school costs|transport costs|cost of doing business|cost of living/gi,
+  /(FY\d{4}\/\d\d|# billion|development|county|the|annual) budget|budget (in Section|of KSh|was|less)|county spent|spent KSh/gi,
+  /fees without services|charges her|what it costs|price at source|price in the|vendors' price|the price/gi,
+  /sized against the FY\d{4}\/\d\d budget/gi,
 ];
 
 const REMOTE = /\bremote(ly)?\s+(team|work|working|engagement|delivery|management|operation|agency|basis|support)\b/gi;

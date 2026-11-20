@@ -12,7 +12,7 @@ import { HeatTable, type HeatRow } from "./HeatTable";
  * projects whose place resolves to one ward, per 1,000 registered voters. It covers the 401
  * itemised projects only, not the county budget, and the source line says so wherever it is shown.
  */
-const SCORECARD = "County Government of Kitui, Delivering the Kitui Promise: three-year scorecard, itemised projects placed on one ward (401 of the projects it lists)";
+const SCORECARD = "County Government of Mombasa, Delivering the Mombasa Promise: three-year scorecard, itemised projects placed on one ward (401 of the projects it lists)";
 
 export function equityRows() {
   return TOOL_WARDS.map((w) => ({ ...w, per1k: w.voters ? (w.projectsKsh / w.voters) * 1000 : 0 }));
@@ -30,7 +30,7 @@ export function EquityLollipop() {
   return (
     <ExportableVisual
       id="equity-lollipop"
-      title={`${below} of the 40 wards sit below the county average for project spend per 1,000 voters`}
+      title={`${below} of the 30 wards sit below the county average for project spend per 1,000 voters`}
       note={`The printed value of county projects for every 1,000 registered voters. The line is the county average, ${ksm(avg)}. Every stem starts at zero.`}
       figures={[register]}
       source={`Source: ${SCORECARD}; registered voters from the IEBC 2022 register (Tier 1). Spend per 1,000 voters calculated by the site.`}
@@ -56,7 +56,7 @@ export function EquityLollipop() {
   );
 }
 
-/** C23: the 40 wards against six measures at once, each column shaded by its own fifths. */
+/** C23: the 30 wards against six measures at once, each column shaded by its own fifths. */
 export function EquityHeatTable() {
   const rows: HeatRow[] = equityRows().map((r) => ({
     id: r.id,
@@ -75,7 +75,7 @@ export function EquityHeatTable() {
   return (
     <ExportableVisual
       id="ward-heat-table"
-      title="The 40 wards on one screen: where voters crowd, and where county projects are thin"
+      title="The 30 wards on one screen: where voters crowd, and where county projects are thin"
       note="Each column is shaded by its own fifths, lightest to darkest. Tap a column to sort by it."
       source={`Source: IEBC 2022 register and polling-station list (Tier 1); KNBS 2019 census population and ward area from the IEBC public pack; ${SCORECARD}. Ratios calculated by the site.`}
       card={{ type: "map", params: { layer: "per1k" } }}

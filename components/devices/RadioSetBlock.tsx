@@ -17,13 +17,13 @@ export function RadioSetBlock() {
     <ExportableVisual
       id="radio-set"
       illustrative
-      title={`Tune across the ${stations.length} Kikamba stations: who owns each, and where the plan places spots`}
+      title={`Tune across the ${stations.length} Kiswahili stations: who owns each, and where the plan places spots`}
       note="Slide the dial. The starting plan is the Radio Planner's: ten spots a week on each priority station, none on monitoring targets."
       figures={shares}
       source={`Source: station ownership from public records (Tier 2) and the plan's media audit; listener shares from the CA/KARF audience report for Lower Eastern (Tier 2); frequencies from aggregator listings (Tier 3).`}
       card={{ type: "week", params: { set: "radio" } }}
     >
-      <RadioSet stations={stations} slogan={IDENTITY.slogan} sloganKikamba={IDENTITY.sloganKikamba} />
+      <RadioSet stations={stations} slogan={IDENTITY.slogan} sloganKiswahili={IDENTITY.sloganKiswahili} />
     </ExportableVisual>
   );
 }

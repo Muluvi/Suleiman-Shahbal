@@ -7,10 +7,10 @@
  * 76/16/8 shares, same audiences, same channels — so the banner is a summary of the thing eleven
  * lines below it. Rule 1a retires both once a figure carries the fuller one's facts.
  *
- * C-21, SETTLED (November 2026). §12.4 once listed "2G Bulk SMS & USSD" among Kikamba's channels,
+ * C-21, SETTLED (November 2026). §12.4 once listed "2G Bulk SMS & USSD" among Kiswahili's channels,
  * against §15.3.3, which states at Tier 1 (Communications Authority) that bulk political SMS is
  * restricted to English or Kiswahili and that an operator may refuse a non-compliant message
- * outright. The law decides it: Kikamba's channel list drops bulk SMS, and the SMS rail stays
+ * outright. The law decides it: Kiswahili's channel list drops bulk SMS, and the SMS rail stays
  * 80% Kiswahili, 20% English. The decision and its reason are logged in docs/DISPUTES-RESOLVED.md.
  */
 import type { FigurePoint, FigureSeries } from "./types";
@@ -38,16 +38,16 @@ export type LanguageRow = {
 
 export const LANGUAGES: LanguageRow[] = [
   {
-    name: "Kikamba",
+    name: "Kiswahili",
     share: 76,
     audiences: [
       "Rural smallholder farmers (32.8%)",
       "Women chamas and rural mothers (52.1%)",
       "Village elders and clan leaders",
-      "Agro-pastoralists (Mwingi and South)",
+      "Agro-pastoralists (the north mainland and South)",
     ],
-    // C2 / C-21, settled (November 2026): bulk political SMS cannot carry Kikamba (Communications
-    // Authority rule, Tier 1; GSM-7 cannot encode ĩ or ũ), so Kikamba's list keeps USSD and drops
+    // C2 / C-21, settled (November 2026): bulk political SMS cannot carry Kiswahili (Communications
+    // Authority rule, Tier 1; GSM-7 cannot encode ĩ or ũ), so Kiswahili's list keeps USSD and drops
     // bulk SMS, as §12.4's own "one channel consequence" and §15.3.3 state.
     channels: ["Vernacular radio (Musyi, Wikwatyo)", "USSD menus and WhatsApp voice notes", "Baraza PA addresses", "Megaphone audio clips"],
     objective: "Establish emotional affinity, cultural authenticity and unshakeable community stewardship trust.",
@@ -118,7 +118,7 @@ export type DeploymentRow = {
 export const LANGUAGE_DEPLOYMENT: DeploymentRow[] = [
   {
     medium: "Vernacular radio spots",
-    primary: { language: "Kikamba", share: 100 },
+    primary: { language: "Kiswahili", share: 100 },
     secondary: [],
     note: "None — zero English or Swahili intrusion on spots.",
   },
@@ -126,23 +126,23 @@ export const LANGUAGE_DEPLOYMENT: DeploymentRow[] = [
     medium: "Direct 2G bulk SMS",
     primary: { language: "Kiswahili", share: 80 },
     secondary: [{ language: "English", share: 20 }],
-    note: "Kiswahili rural, English for urban centres and youth boda. Kikamba is allocated none of this rail, as the Communications Authority's bulk SMS rule requires.",
+    note: "Kiswahili rural, English for urban centres and youth boda. Kiswahili is allocated none of this rail, as the Communications Authority's bulk SMS rule requires.",
   },
   {
     medium: "USSD menu system",
-    primary: { language: "Kikamba", share: 50 },
+    primary: { language: "Kiswahili", share: 50 },
     secondary: [{ language: "Kiswahili", share: 50 }],
-    note: "Toggle via option 0 on the USSD menu. USSD is not restricted: the channel rules name USSD menu text as a place Kikamba belongs.",
+    note: "Toggle via option 0 on the USSD menu. USSD is not restricted: the channel rules name USSD menu text as a place Kiswahili belongs.",
   },
   {
     medium: "Baraza print collateral",
-    primary: { language: "Kikamba", share: 70 },
+    primary: { language: "Kiswahili", share: 70 },
     secondary: [{ language: "Kiswahili and English", share: 30 }],
     note: "Executive summaries in the secondary languages.",
   },
   {
     medium: "Sound PA truck jingles",
-    primary: { language: "Kikamba", share: 85 },
+    primary: { language: "Kiswahili", share: 85 },
     secondary: [{ language: "Swahili / Sheng", share: 15 }],
     note: "The Swahili share is for urban market stops.",
   },
@@ -151,14 +151,14 @@ export const LANGUAGE_DEPLOYMENT: DeploymentRow[] = [
     primary: { language: "Swahili / Sheng", share: 50 },
     secondary: [
       { language: "English", share: 35 },
-      { language: "Kikamba punchlines", share: 15 },
+      { language: "Kiswahili punchlines", share: 15 },
     ],
   },
   {
     medium: "Formal policy manifesto",
     primary: { language: "English", share: 100 },
     secondary: [],
-    note: "Abridged 12-page summaries in Kikamba and Swahili.",
+    note: "Abridged 12-page summaries in Kiswahili and Swahili.",
   },
 ];
 

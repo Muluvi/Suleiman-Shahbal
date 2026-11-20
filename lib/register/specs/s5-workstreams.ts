@@ -62,12 +62,12 @@ export const FIG_USSD_MENU: FigureSpec = {
   question: "What does the USSD menu offer?",
   takeaway: "Dial the shortcode, read the plan, register, report an issue, volunteer or opt in, with no internet and close to no cost.",
   sources: [PROPOSAL],
-  chart: { type: "mock", header: "KITUI NA MULU · the campaign shortcode", fields: MENU },
+  chart: { type: "mock", header: "MOMBASA NA SHAHBAL · the campaign shortcode", fields: MENU },
   notes: [
-    "Menu labels in Kikamba are pending the Kikamba reviewer's sign-off.",
+    "Menu labels in Kiswahili are pending the Kiswahili reviewer's sign-off.",
     "The Section 19.3 charter requires a data opt-out the voter can reach from the menu; its position is set when the shortcode is provisioned.",
   ],
-  columns: [{ key: "n", label: "Option", numeric: true }, { key: "kikamba", label: "Kikamba" }, { key: "english", label: "English" }, { key: "does", label: "What it does" }],
+  columns: [{ key: "n", label: "Option", numeric: true }, { key: "kikamba", label: "Kiswahili" }, { key: "english", label: "English" }, { key: "does", label: "What it does" }],
   rows: MENU.map((m) => ({ cells: { n: m.n, kikamba: m.label, english: m.shown, does: m.issue } })),
 };
 
@@ -78,7 +78,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "1. SMS / USSD gateway",
     "Africa's Talking API Suite, or Safaricom Direct Enterprise SDP Gateway",
-    "The offline engine: opt-in bulk 2G SMS to registered voters across 40 wards, the zero-rated USSD menu (*[shortcode]#), and inbound field reports from the campaign-owned ward network",
+    "The offline engine: opt-in bulk 2G SMS to registered voters across 30 wards, the zero-rated USSD menu (*[shortcode]#), and inbound field reports from the campaign-owned ward network",
     "Phone numbers (MSISDN), ward tags, USSD menu responses, delivery-receipt timestamps, opt-out logs",
     "HIGH: direct personal data (Section 5.2.3.4 [CHECK REF]). Opt-in confirmation logs, STOP processed within 15 seconds, signed data processing agreements with the aggregator",
     "Vendor: Africa's Talking or Safaricom SDP Enterprise",
@@ -94,7 +94,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "3. Publishing and listening suite",
     "Buffer / Hootsuite Enterprise to publish; Brand24 / Talkwalker to listen",
-    "Scheduling across Facebook, X, Instagram, TikTok and YouTube; 24/7 monitoring of Kamba and national political keywords (\"Dr. Makali Mulu\", \"Kitui Governor 2027\", \"Kitui Central CDF\", \"Wiper Primaries\", \"Kalonzo Musyoka\"), flagging local issues in real time",
+    "Scheduling across Facebook, X, Instagram, TikTok and YouTube; 24/7 monitoring of Coast and national political keywords (\"Suleiman Shahbal\", \"Mombasa Governor 2027\", \"Mvita CDF\", \"The New Democrats Primaries\", \"Kalonzo Musyoka\"), flagging local issues in real time",
     "Public posts, comments, engagement metrics, sentiment scores, influencer handles, public reach",
     "LOW TO MODERATE: public posts and aggregated sentiment only; compliant with Section 15.3.4 provided no profile is scraped or merged into voter records without consent",
     "The software subscription",
@@ -102,7 +102,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "4. Analytics dashboard",
     "Metabase Open Source, self-hosted on private cloud, or Apache Superset",
-    `Real-time dashboards for the Campaign Manager and Dr. Mulu: progress to the ${fmt("benchmark")} threshold across all 40 wards, SMS delivery rates, daily field reports, effort per ward`,
+    `Real-time dashboards for the Campaign Manager and Mr Shahbal: progress to the ${fmt("benchmark")} threshold across all 30 wards, SMS delivery rates, daily field reports, effort per ward`,
     "Aggregated, anonymised statistics: voter counts, ward completion percentages, reach cross-tabulations; no raw unencrypted personal data shown",
     "MINIMAL: aggregated, anonymised views only, restricted to authorised war-room IP addresses via VPN and MFA",
     "The hosting environment",
@@ -110,7 +110,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "5. Public service-delivery tracker",
     "Next.js web platform with an interactive GIS ward map, on Vercel / Cloudflare edge hosting",
-    "The public evidence engine: 13 years of Kitui Central NG-CDF project records (schools, boreholes, dispensaries, bursary audits) and a \"Kitui Economic Blueprint\" where citizens track proposed ward investments for the 2027–2032 term",
+    "The public evidence engine: 13 years of Mvita NG-CDF project records (schools, boreholes, dispensaries, bursary audits) and a \"Mombasa Economic Blueprint\" where citizens track proposed ward investments for the 2027–2032 term",
     "Public infrastructure records, project GPS coordinates, photos and video, completion certificates, public feedback forms",
     "LOW: public government and policy data; feedback forms collect consented contact details under an explicit privacy policy",
     "Design mockups and public domain registration",

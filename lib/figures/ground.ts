@@ -34,7 +34,7 @@ export const FIELD_LOOP_TIERS = [
     label: "Outbound amplification pipeline",
     items: [
       "Targeted Meta & TikTok video",
-      "Kikamba radio ads and jingles",
+      "Kiswahili radio ads and jingles",
       "Localised direct 2G SMS",
       "WhatsApp audio bulletins",
     ],
@@ -128,7 +128,7 @@ export const OPERATING_RHYTHM: string[][] = [
     "Weekly · Monday 09:00–11:30",
     "Strategic command war room",
     "Review the week's KPI dashboard, approve the weekly radio and digital ad spend, set the tour route",
-    "Campaign Manager / Dr. Makali Mulu",
+    "Campaign Manager / Suleiman Shahbal",
     "Candidate, all departmental directors",
   ],
   [

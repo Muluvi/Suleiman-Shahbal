@@ -61,17 +61,15 @@ export function CountyMoney({ f, population }: { f: Record<string, FigureView>; 
 
 /* ------------------------------------------------------------------ Drought and Livelihood Watch */
 
-export function DroughtWatch({ phases, f, sections }: { phases: { label: string; value: string | number; as_of: string }[]; f: Record<string, FigureView>; sections: { title: string; items: { id: string; label: string; unit?: string }[] }[] }) {
-  const latest = phases[phases.length - 1];
-  const fmtV = (id: string, unit?: string) => `${f[id].display}${f[id].unit === "percent" ? "%" : ""}${unit ? ` ${unit}` : ""}`;
+export function WaterWatch({ f, sections }: { f: Record<string, FigureView>; sections: { title: string; items: { id: string; label: string; unit?: string }[] }[] }) {
+  const fmtV = (id: string, unit?: string) => `${unit === "KSh" ? "KSh " : ""}${f[id].display}${f[id].unit === "percent" ? "%" : ""}${unit && unit !== "KSh" ? ` ${unit}` : ""}`;
   return (
     <div className="space-y-4">
-      <div className="flex justify-end print:hidden"><SaveImage card={{ type: "forecast" }} title="Drought Watch" /></div>
+      <div className="flex justify-end print:hidden"><SaveImage card={{ type: "forecast" }} title="Water Watch" /></div>
       <Card>
-        <p className="plat-kicker">NDMA drought phase</p>
-        <p className="mt-1 font-serif text-[1.8rem] text-ink">{String(latest.value)} <span className="text-[1rem] text-muted">· {latest.as_of}</span></p>
-        <div className="mt-3 flex flex-wrap gap-2">{phases.map((p) => <span key={p.label} className={`rounded-full px-3 py-1 text-[0.8rem] ${p.value === "Normal" ? "bg-paper text-muted ring-1 ring-line" : "bg-gold-solid text-on-gold"}`}>{p.as_of}: {String(p.value)}</span>)}</div>
-        <Note>The phase is the NDMA&rsquo;s monthly early-warning call for the county. Check the latest bulletin before quoting a month not shown here.</Note>
+        <p className="plat-kicker">Water reaching residents</p>
+        <p className="mt-1 font-serif text-[1.8rem] text-ink">{f["water.delivered"].display} <span className="text-[1rem] text-muted">of {f["water.demand"].display} m³ needed a day</span></p>
+        <Note>The governor&rsquo;s own figures (Tier 2). Mwache Dam adds supply in the next term; whether it reaches the estates is the last-mile question.</Note>
       </Card>
       {sections.map((s) => (
         <Card key={s.title}>

@@ -63,7 +63,7 @@ export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "cod
     code: "NW-01",
     title: "Reach share in the deficit pool",
     definition:
-      "Share of his total reach landing in Mwingi North, West, Central and Kitui South, the four constituencies where he has never held office.",
+      "Share of his total reach landing in Kisauni, West, Central and Changamwe, the four constituencies where he has never held office.",
     baseline: { kind: "unmeasured", note: "Not yet measured (Week 1 export)" },
     target: "≥ 51.7%, the pool's share of the register",
     targetValue: 51.7,
@@ -74,9 +74,9 @@ export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "cod
   },
   {
     code: "NW-02",
-    title: "Followers located in Mwingi",
+    title: "Followers located in the north mainland",
     definition:
-      "Share of his followers whose location is in Mwingi North, Central or West, the proxy for being known where he is not yet known.",
+      "Share of his followers whose location is in Kisauni, Central or West, the proxy for being known where he is not yet known.",
     baseline: { kind: "unmeasured", note: "Not yet measured (Week 1 export)" },
     target: "A stated monthly gain on the Week 1 baseline",
     targetValue: null,
@@ -102,7 +102,7 @@ export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "cod
     code: "NW-04",
     title: "Branch Exec Endorsement Rate",
     definition:
-      "Verified, signed support pledges from Sub-County Wiper Executive Branch Committees.",
+      "Verified, signed support pledges from Sub-County The New Democrats Executive Branch Committees.",
     baseline: { kind: "awaiting", note: "Confirm w/ party (Week 1)" },
     target: "8 / 8 Sub-County Branches",
     targetValue: 8,
@@ -130,7 +130,7 @@ export const GENERAL_ELECTION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.general-ele
   {
     code: "GE-02",
     title: "Ward Captain Deployment Index (campaign-owned)",
-    definition: "Active, vetted Ward Captains operating across all 40 Wards (10 per ward).",
+    definition: "Active, vetted Ward Captains operating across all 30 Wards (10 per ward).",
     baseline: { kind: "measured", value: 0, display: "0 active Captains", note: "Section 3.3.1, Commitment 5" },
     target: `${fmt("target.captains")} Captains (10 / Ward, 100% Coverage)`,
     targetValue: val("target.captains"),
@@ -143,7 +143,7 @@ export const GENERAL_ELECTION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.general-ele
     code: "GE-03",
     title: "Polling Station Agent Coverage",
     definition:
-      "Accredited, trained party polling station agents deployed across 100% of Kitui polling stations.",
+      "Accredited, trained party polling station agents deployed across 100% of Mombasa polling stations.",
     baseline: { kind: "measured", value: 0, display: "0 Station Agents", note: "None deployed" },
     target: `${fmt("register.polling-stations")} Stations (100% of stations)`,
     targetValue: val("register.polling-stations"),
@@ -184,13 +184,13 @@ export const GENERAL_ELECTION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.general-ele
  * The recognition indicators (Measuring success, "Recognition where he is least known"): R-01 to
  * R-05. They sit beside the two scorecards, not inside them: the nomination scorecard holds four
  * (NOMINATION_KPIS), the general-election scorecard five (GENERAL_ELECTION_KPIS), and these five
- * measure recognition where Dr. Mulu is least known. Any sentence that counts them reads this list
+ * measure recognition where Mr Shahbal is least known. Any sentence that counts them reads this list
  * (consolidation pass, Step 1: docs/consolidation-2026-11/DECISIONS.md D1.5).
  */
 export const RECOGNITION_INDICATORS = [
-  { code: "R-01", title: "Followers located in Mwingi North, Central and West" },
+  { code: "R-01", title: "Followers located in Kisauni, Central and West" },
   { code: "R-02", title: "Share of total reach landing in the pool" },
   { code: "R-03", title: "Shares per 1,000 reached, deficit wards only" },
   { code: "R-04", title: "Consented contacts in the 21 wards of the pool, and their share of the list" },
-  { code: "R-05", title: "Kikamba-first share of weekly output, and its engagement on reach" },
+  { code: "R-05", title: "Kiswahili-first share of weekly output, and its engagement on reach" },
 ] as const;

@@ -15,11 +15,9 @@ import { HighlightedText } from "./markdown/HighlightedText";
 import { hasHighlight } from "../lib/highlight-patterns";
 import { Figure } from "./figures/FigureBoundary";
 import { PullQuote } from "./markdown/PullQuote";
-import { DisputedFigure } from "./markdown/DisputedFigure";
 import { SectionPortrait } from "./markdown/SectionPortrait";
 import { commitmentFieldKey, isCommitmentFieldList, type CommitmentField } from "../lib/commitment-fields";
 import { PanelFold } from "./markdown/PanelFold";
-import { DISPUTED_FIGURES } from "../data/disputed-figures";
 import { displayTitle, headingSlug, sectionId, type TabId } from "../lib/heading-slug";
 import { crossRefFor, segmentContent } from "../lib/collapse-groups";
 
@@ -58,8 +56,8 @@ const PhaseRail = dynamic(() => import("./PhaseRail").then((m) => m.PhaseRail));
 const ClaimCards = dynamic(() => import("./markdown/ClaimCards").then((m) => m.ClaimCards));
 const ElectoralHistoryPanel = dynamic(() => import("./markdown/ElectoralHistoryPanel").then((m) => m.ElectoralHistoryPanel));
 const FiscalAuditPanel = dynamic(() => import("./markdown/FiscalAuditPanel").then((m) => m.FiscalAuditPanel));
-const DroughtFoodSecurityPanel = dynamic(() => import("./markdown/DroughtFoodSecurityPanel").then((m) => m.DroughtFoodSecurityPanel));
-const MuiBasinPanel = dynamic(() => import("./markdown/MuiBasinPanel").then((m) => m.MuiBasinPanel));
+const WaterSupplyPanel = dynamic(() => import("./markdown/WaterSupplyPanel").then((m) => m.WaterSupplyPanel));
+const SezPanel = dynamic(() => import("./markdown/SezPanel").then((m) => m.SezPanel));
 const EconomistGovernorThesis = dynamic(() => import("./markdown/EconomistGovernorThesis").then((m) => m.EconomistGovernorThesis));
 const DecisionPanel = dynamic(() => import("./DecisionPanel").then((m) => m.DecisionPanel));
 const CommitmentFields = dynamic(() => import("./markdown/CommitmentFields").then((m) => m.CommitmentFields));
@@ -100,14 +98,12 @@ import { rehypeInlineMarks } from "../lib/rehype-inline-marks";
 import { rehypeGlossary } from "../lib/rehype-glossary";
 import { GlossTerm } from "./story/GlossTerm";
 
-const kituiCentralPopulationDispute = DISPUTED_FIGURES.find((d) => d.id === "kitui-central-2019-population")!;
 
 // §6.3's three operating conditions — matched by the start of each bolded lead
 // sentence so the list item gets pull-quote emphasis without touching the wording.
 const GOVERNING_REALITY_TRIGGERS = [
-  "Roughly 86% of Kitui residents are outside the internet-using population",
   "The regulatory ground shifted on 7 August 2026",
-  "Kamba-language radio",
+  "Kiswahili radio",
 ];
 import { PHASES } from "../lib/phases";
 import { PHASE_ID_BY_NAME, rehypePlainLabels } from "../lib/plain-labels";
@@ -146,7 +142,7 @@ function flattenText(children: React.ReactNode): string {
 }
 
 // Deep text extraction that also understands HighlightedText (props.text, not props.children) —
-// needed to read table headers, since a bolded header cell (e.g. "**Mulu**") is now rendered
+// needed to read table headers, since a bolded header cell (e.g. "**Shahbal**") is now rendered
 // through the strong -> HighlightedText path.
 function getDeepText(node: React.ReactNode): string {
   if (node === null || node === undefined) return "";
@@ -267,9 +263,8 @@ function mountInsert(id: string | null, node: React.ReactNode) {
 // its new chapter (docs/restructure-2026-11/reorganisation-map.md). Where two old homes now share
 // one heading, their components share the mount, in reading order.
 const HEADING_INSERTS: Record<string, React.ReactNode> = {
-  // ---- Part I: Kitui today ----------------------------------------------------------------
-  "kitui-sec-1-1": <DisputedFigure entry={kituiCentralPopulationDispute} />,
-  "kitui-sec-1-2": <GeographicZoneMatrix />,
+  // ---- Part I: Mombasa today ----------------------------------------------------------------
+  "mombasa-sec-1-2": <GeographicZoneMatrix />,
   "needs-sec-1-3": <OfflineWaterline />,
   "needs-sec-1-5": <ResourceEnvelopeBlock />,
   // Chapter 2 builds the number in order: the register, the results, where the votes are, the
@@ -297,7 +292,7 @@ const HEADING_INSERTS: Record<string, React.ReactNode> = {
   ),
   // The issue evidence opens the chapter on what voters need.
   "needs-sec-3-1": <IssueEvidenceBlock />,
-  "needs-sec-3-2": <DroughtFoodSecurityPanel />,
+  "needs-sec-3-2": <WaterSupplyPanel />,
   "spend-sec-3-7": (
     <>
       <FiscalAuditPanel />
@@ -305,9 +300,9 @@ const HEADING_INSERTS: Record<string, React.ReactNode> = {
       <Figure id="fig-3-12-projects" />
     </>
   ),
-  "needs-sec-3-8": <MuiBasinPanel />,
+  "needs-sec-3-8": <SezPanel />,
   // The showcase makes the argument; the reach block puts the modelled numbers under it, including
-  // the one the showcase cannot show — that the largest addressable layer cannot carry Kikamba.
+  // the one the showcase cannot show — that the largest addressable layer cannot carry Kiswahili.
   "news-sec-4-1": <ChannelReachBlock />,
   "news-sec-4-2": <MediaOwnershipBlock />,
   // One handset, the campaign on all seven channels, ending on the USSD dialog that reaches more
@@ -317,7 +312,7 @@ const HEADING_INSERTS: Record<string, React.ReactNode> = {
   // ---- Part II: his standing ----------------------------------------------------------------
   "record-sec-6-1": (
     <SectionPortrait id="gesture-explaining" kicker="Candidate profile">
-      Member for Kitui Central since 2013, and a member of the National Assembly&rsquo;s Budget and
+      Member for Mvita since 2013, and a member of the National Assembly&rsquo;s Budget and
       Appropriations Committee.
     </SectionPortrait>
   ),
@@ -586,7 +581,7 @@ function buildComponents(tabId: TabId): Components {
             blockquote: ({ children, node }) => {
               // The central narrative line (§5.2.4.1) gets the full pull-quote treatment;
               // every other blockquote (the ethics charter, etc.) keeps the standard styling.
-              if (getDeepText(children).includes("Kitui has resources")) {
+              if (getDeepText(children).includes("Mombasa has resources")) {
                 return <PullQuote>{children}</PullQuote>;
               }
               const text = normalizeWhitespace(getDeepText(children)).trim();

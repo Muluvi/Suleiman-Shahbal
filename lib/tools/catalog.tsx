@@ -3,7 +3,7 @@ import { CoalitionPath, MapStudio, ParetoWards, PriorityScorer, RegisterGrowth, 
 import { ChannelMix, IssueMatcher, MessageMatrix, OfflineWaterline, WardEquity } from "@/components/tools/kit/reach";
 import { ContentCalendar, FactCards, MessageStudio, RadioPlanner } from "@/components/tools/kit/content";
 import { Allocation, ConstituencyScorecard, VoterDensity, WardCompare, ZoneEffort } from "@/components/tools/kit/planning";
-import { CountyMoney, DroughtWatch, SwingViewer } from "@/components/tools/kit/context";
+import { CountyMoney, WaterWatch, SwingViewer } from "@/components/tools/kit/context";
 import { AssumptionsPanel, Compliance, KpiLadder, LinkBuilder, StationExplorer, UssdBuilder } from "@/components/tools/kit/utilities";
 import { CENSUS_COUNTY, CENSUS_SUBCOUNTIES, ISSUES, ISSUE_NOTES, TOOL_CONSTITUENCIES, TOOL_STATIONS, TOOL_WARDS, fig, figs } from "@/lib/tools/dataset";
 import { FIGURES } from "@/lib/data/figures";
@@ -14,7 +14,6 @@ import { RADIO_STATIONS } from "@/data/media-ownership";
 import { GENERAL_ELECTION_KPIS, NOMINATION_KPIS } from "@/data/kpis";
 import { SMS_LIMIT, USSD_HEADER, USSD_MENU } from "@/data/ussd-specimen";
 import { ELECTORAL_HISTORY } from "@/data/electoral-history";
-import waterAndDrought from "@/data/analysis/water-and-drought.json";
 import { ScenarioSimulator } from "@/components/tools/public/ScenarioSimulator";
 import { RaceCalendar } from "@/components/tools/public/RaceCalendar";
 import { PollingAgentPlanner } from "@/components/tools/public/PollingAgentPlanner";
@@ -34,7 +33,7 @@ const v = (id: string) => fig(id).value ?? 0;
 const WINNER_SHARE = (v("result.2022.gov.nassir") / v("result.2022.gov.valid")) * 100;
 const REGISTER: Src = PUBLIC_SOURCES.wards;
 const STATIONS: Src = PUBLIC_SOURCES.stations;
-const SCORECARD: Src = { label: "County Government of Kitui, Delivering the Kitui Promise: Three-Year Scorecard (itemised projects)" };
+const SCORECARD: Src = { label: "County Government of Mombasa, Delivering the Mombasa Promise: Three-Year Scorecard (itemised projects)" };
 const CENSUS: Src = { label: "KNBS, 2019 Kenya Population and Housing Census (by sub-county)" };
 const ICT: Src = { label: "Communications Authority / KNBS, ICT Analytical Report, 2023/24 Kenya Housing Survey" };
 const PROPOSAL: Src = { label: "This plan: its benchmark, targets and plans" };
@@ -52,14 +51,14 @@ export const TOOLS: Record<string, Tool> = {
     sources: [REGISTER, PROPOSAL],
   },
   "priority-scorer": {
-    title: "Ward Priority Scorer", lead: "Rank the 40 wards by the things that matter to the plan, with weights you set.",
+    title: "Ward Priority Scorer", lead: "Rank the 30 wards by the things that matter to the plan, with weights you set.",
     render: () => <PriorityScorer wards={TOOL_WARDS} />,
     does: "Each measure is scaled from 0 (lowest ward) to 1 (highest) and mixed by your weights. Under-served is the inverse of county projects per 1,000 registered voters.",
     doesNot: ["It uses no opinion data and no ward-level results, which are not in hand.", "County projects count only the 401 itemised in the scorecard, placed on wards where the printed place allows."],
     sources: [REGISTER, STATIONS, SCORECARD],
   },
   "map-studio": {
-    title: "Kitui Map Studio", lead: "Switch the ward map between the register, polling stations, population, county projects and the zones.",
+    title: "Mombasa Map Studio", lead: "Switch the ward map between the register, polling stations, population, county projects and the zones.",
     render: () => <MapStudio wards={TOOL_WARDS} />,
     does: "Each ward is one tile inside its constituency block. A layer shades the wards in fifths, from lightest to darkest, and every tile prints its own value. Tap a ward for its numbers.",
     doesNot: ["It is schematic: tile position inside a constituency carries no geographic meaning.", "Population is the IEBC's 2026 boundary gazette figure for each ward."],
@@ -83,7 +82,7 @@ export const TOOLS: Record<string, Tool> = {
     title: "Youth and New Voter Calculator", lead: "Youth and first-time voters under the turnout and share you set.",
     render: () => <YouthVoters register2022={v("register.2022")} youth={v("segment.youth.voters")} firstTime={v("register.2026.growth")} benchmark={v("benchmark")} />,
     does: "Youth voters are the 2019 census age distribution applied to the 2022 register (modelled). New voters are the reported growth since 2022. Votes are count × turnout × share, each set by you.",
-    doesNot: ["The IEBC does not publish the register by age, so the youth count is modelled.", "No source measures turnout or support by age in Kitui."],
+    doesNot: ["The IEBC does not publish the register by age, so the youth count is modelled.", "No source measures turnout or support by age in Mombasa."],
     sources: [CENSUS, REGISTER],
   },
   "channel-mix": {
@@ -124,7 +123,7 @@ export const TOOLS: Record<string, Tool> = {
   calendar: {
     title: "Weekly Content Calendar", lead: "The pillars laid out as a week of posts, with the brief's language and ward rules.",
     render: () => <ContentCalendar pillars={PILLARS.map((p) => p.title)} types={CONTENT_TYPES.map((c) => ({ code: c.code, short: c.short }))} wards={TOOL_WARDS} />,
-    does: "Posts are split across the three pillars by your weights (largest remainder), the four content types rotate, the first posts are Kikamba-first, and two originate in pool wards, largest first.",
+    does: "Posts are split across the three pillars by your weights (largest remainder), the four content types rotate, the first posts are Kiswahili-first, and two originate in pool wards, largest first.",
     doesNot: ["It plans; it does not publish. The calendar the team works from is in the Workspace."],
     sources: [{ label: "This plan, The message: pillars, content types and the weekly brief's rules" }],
   },
@@ -132,7 +131,7 @@ export const TOOLS: Record<string, Tool> = {
     title: "Message Studio", lead: "Write a message once and see it on SMS, USSD, WhatsApp and radio.",
     render: () => <MessageStudio smsLimit={SMS_LIMIT} />,
     does: "Counts characters and words, splits SMS into parts, and times a radio read at 150 words a minute.",
-    doesNot: ["It sends nothing.", "It does not translate: Kikamba text goes to the Kikamba reviewer."],
+    doesNot: ["It sends nothing.", "It does not translate: Kiswahili text goes to the Kiswahili reviewer."],
     sources: [PUBLIC_SOURCES.sms],
   },
   "fact-cards": {
@@ -143,10 +142,10 @@ export const TOOLS: Record<string, Tool> = {
     sources: [{ label: "The site's figure registry (Evidence and sources)" }],
   },
   radio: {
-    title: "Radio Planner", lead: "The eight Kikamba stations, their ownership, and a weekly spot plan.",
+    title: "Radio Planner", lead: "The eight Kiswahili stations, their ownership, and a weekly spot plan.",
     render: () => <RadioPlanner stations={RADIO_STATIONS.map((s) => ({ name: s.name, frequency: s.frequency, alignment: s.alignment, posture: s.posture, reachLabel: s.reachLabel, share: RADIO_SHARE[s.name] ? fig(RADIO_SHARE[s.name]) : null }))} />,
     does: "Sums spots and airtime by station. The index multiplies spots by each station's share of listeners across Lower Eastern, to compare plans.",
-    doesNot: ["Listener shares are regional (Kitui, Machakos, Makueni) and from an earlier measurement; they rank stations, they do not size Kitui's audience.", "Ownership is publicly reported, not certified."],
+    doesNot: ["Listener shares are regional (Mombasa, Machakos, Makueni) and from an earlier measurement; they rank stations, they do not size Mombasa's audience.", "Ownership is publicly reported, not certified."],
     sources: [{ label: "CA/KARF audience report, Lower Eastern" }, { label: "Local media ownership reporting" }],
   },
   "ward-compare": {
@@ -164,10 +163,10 @@ export const TOOLS: Record<string, Tool> = {
     sources: [REGISTER, STATIONS, SCORECARD],
   },
   "zone-effort": {
-    title: "Zone Effort Planner", lead: "Split communications effort across the anchor, Mwingi and the arid belt, against where the voters are.",
+    title: "Zone Effort Planner", lead: "Split communications effort across the anchor, the north mainland and the arid belt, against where the voters are.",
     render: () => <ZoneEffort shares={{ anchor: zoneShare("anchor"), mwingi: zoneShare("mwingi"), arid: zoneShare("arid"), rural: zoneShare("none") }} phases={[{ id: "p-1", label: "The nomination sprint" }, { id: "p12", label: "Awareness and persuasion" }, { id: "p3", label: "Mobilisation and turnout" }].map((p) => ({ ...p, anchor: v(`effort.${p.id}.anchor`), mwingi: v(`effort.${p.id}.mwingi`), arid: v(`effort.${p.id}.arid`), rotating: v(`effort.${p.id}.rotating`) }))} />,
     does: "Compares each zone's share of effort with its share of the 2022 register. The starting weights are the plan's own, by phase.",
-    doesNot: ["Effort is a share of the team's work, not money.", "Kitui Rural is in no zone; the plan carries it in the rotating share."],
+    doesNot: ["Effort is a share of the team's work, not money.", "Likoni is in no zone; the plan carries it in the rotating share."],
     sources: [REGISTER, PROPOSAL],
   },
   "voter-density": {
@@ -178,7 +177,7 @@ export const TOOLS: Record<string, Tool> = {
     sources: [STATIONS, PUBLIC_SOURCES.limits],
   },
   allocation: {
-    title: "Ward Allocation Simulator", lead: "An equal split against a needs-weighted split between the 40 wards.",
+    title: "Ward Allocation Simulator", lead: "An equal split against a needs-weighted split between the 30 wards.",
     render: () => <Allocation wards={TOOL_WARDS} defaultTotal={v("policy.ward-fund.total")} />,
     does: "The equal split divides the total by 40. The needs-weighted split mixes each ward's share of population, of area and of the gap in county projects per voter, by your weights.",
     doesNot: ["It tests formulas; the published formula is the campaign's to set.", "Ward poverty rates are not published, so poverty is not in the formula."],
@@ -189,22 +188,22 @@ export const TOOLS: Record<string, Tool> = {
     render: () => <CountyMoney f={figs(["budget.total", "budget.equitable", "budget.osr", "budget.grants", "budget.absorption.q1", "audit.cash", "audit.uncollected", "audit.ifmis", "audit.transfers", "audit.pending.contested", "budget.pending-bills.2021"])} population={v("census.population")} />,
     does: "Shows each figure with its source, year and tier, and the share of the envelope each income stream makes.",
     doesNot: ["The envelope is cited through secondary reporting of the Fiscal Strategy Paper (Tier 3).", "The two pending-bills figures are different years and scopes: never add them."],
-    sources: [{ label: "Kitui County Fiscal Strategy Paper FY2026/27" }, { label: "Office of the Auditor-General, Kitui County FY2023/24" }, { label: "Controller of Budget, County Budget Implementation Review Reports" }],
+    sources: [{ label: "Mombasa County Fiscal Strategy Paper FY2026/27" }, { label: "Office of the Auditor-General, Mombasa County FY2023/24" }, { label: "Controller of Budget, County Budget Implementation Review Reports" }],
   },
-  "drought-watch": {
-    title: "Drought and Livelihood Watch", lead: "Drought, water, food, prices and livestock in one place.",
-    render: () => <DroughtWatch phases={(waterAndDrought as { values: { label: string; value: string | number; as_of: string; unit: string }[] }).values.filter((x) => x.unit === "phase")} f={figs(["water.basic.kdhs", "water.surface", "water.points.down.share", "water.points.total", "price.goat", "price.maize", "livestock.goats", "livestock.cattle", "livestock.households", "food.reserve-households", "poverty.2021", "livelihood.mixed", "livelihood.marginal", "health.stunting"])} sections={[
-      { title: "Water", items: [{ id: "water.basic.kdhs", label: "At least a basic drinking-water service" }, { id: "water.surface", label: "Relying on untreated surface water", unit: "people" }, { id: "water.points.down.share", label: "Water points not working" }, { id: "water.points.total", label: "Water points assessed" }] },
-      { title: "Prices and livestock", items: [{ id: "price.goat", label: "Average goat price", unit: "KSh" }, { id: "price.maize", label: "Average maize price", unit: "KSh per kg" }, { id: "livestock.goats", label: "Goats" }, { id: "livestock.cattle", label: "Cattle" }, { id: "livestock.households", label: "Livestock-keeping households" }] },
-      { title: "Food and livelihoods", items: [{ id: "food.reserve-households", label: "Households in the county food reserve programme" }, { id: "poverty.2021", label: "Residents in poverty" }, { id: "livelihood.mixed", label: "Residents in the mixed-farming zone" }, { id: "livelihood.marginal", label: "Residents in the marginal mixed-farming zone" }, { id: "health.stunting", label: "Children stunted" }] },
+  "water-watch": {
+    title: "Water Watch", lead: "Water demand, supply, losses, prices and the new sources, in one place.",
+    render: () => <WaterWatch f={figs(["water.demand", "water.supply", "water.delivered", "water.supply.share", "water.nrw", "water.mowasco.met", "water.mwache", "water.mwache.complete", "water.mzima2", "price.water.vendor", "price.water.county", "poverty.2021"])} sections={[
+      { title: "Supply against demand", items: [{ id: "water.demand", label: "Needed each day", unit: "m³" }, { id: "water.supply", label: "Received each day", unit: "m³" }, { id: "water.delivered", label: "Reaching residents each day", unit: "m³" }, { id: "water.nrw", label: "Lost before it is paid for" }, { id: "water.mowasco.met", label: "Share of the water regulator's standards MOWASCO met" }] },
+      { title: "New sources", items: [{ id: "water.mwache", label: "Mwache Dam, added each day", unit: "m³" }, { id: "water.mwache.complete", label: "Mwache Dam, complete" }, { id: "water.mzima2", label: "Mzima II pipeline, added each day", unit: "m³" }] },
+      { title: "What a household pays", items: [{ id: "price.water.vendor", label: "A 20-litre jerrican from a vendor", unit: "KSh" }, { id: "price.water.county", label: "A 20-litre jerrican at a county source", unit: "KSh" }, { id: "poverty.2021", label: "Residents in poverty" }] },
     ]} />,
-    does: "Collects the site's drought, water, food and livestock figures, each with its source, date and tier.",
-    doesNot: ["It is not live: it shows the latest figures the site holds, with their dates. Check the NDMA's current bulletin before quoting a month."],
-    sources: [{ label: "NDMA drought early-warning bulletins" }, { label: "NDMA and Kitui County Steering Group, 2025 Long Rains Assessment" }, { label: "KNBS, KDHS 2022 and 2019 Census" }],
+    does: "Collects the site's water figures, each with its source, date and tier.",
+    doesNot: ["It is not live: it shows the latest figures the site holds, with their dates.", "Ward-level hours of supply are not published; the tracker asks residents to report them."],
+    sources: [{ label: "Governor of Mombasa, on water demand and supply (2025)" }, { label: "Cabinet Secretary for Water, statement to the Senate (June 2026)" }, { label: "Water regulator (WASREB) performance report, as reported" }],
   },
   "swing-viewer": {
     title: "2017 to 2022 Swing Viewer", lead: "How the governor vote moved between 2017 and 2022, countywide.",
-    render: () => <SwingViewer races={ELECTORAL_HISTORY.filter((r) => r.office === "Kitui Governor" && r.results).map((r) => ({ year: r.year, results: r.results!.map((x) => ({ candidate: x.candidate, votes: x.votes })) }))} turnout2022={v("turnout.2022")} valid2022={v("result.2022.gov.valid")} />,
+    render: () => <SwingViewer races={ELECTORAL_HISTORY.filter((r) => r.office === "Mombasa Governor" && r.results).map((r) => ({ year: r.year, results: r.results!.map((x) => ({ candidate: x.candidate, votes: x.votes })) }))} turnout2022={v("turnout.2022")} valid2022={v("result.2022.gov.valid")} />,
     does: "Sets each candidate's countywide votes in 2017 against 2022, as the site's electoral history records them.",
     doesNot: ["2017 ward and constituency tallies are not in hand, so the swing is countywide only.", "Shares are of the listed candidates' votes, not of all valid votes."],
     sources: [{ label: "Court of Appeal, Malombe v Ngilu [2018] KECA 460 (2017 result)" }, { label: "IEBC certified result, Form 37C (2022)" }],
@@ -213,7 +212,7 @@ export const TOOLS: Record<string, Tool> = {
     title: "USSD Flow Builder", lead: "Prototype the USSD menu and download it for the shortcode provider.",
     render: () => <UssdBuilder header={USSD_HEADER} menu={USSD_MENU.map((o) => ({ key: o.key, kikamba: o.kikamba ?? "", english: o.english, does: o.does }))} />,
     does: "Starts from the site's USSD menu, lets you edit it, previews it on a handset screen with a 182-character count, and exports it as JSON.",
-    doesNot: ["It does not connect to a shortcode or a network.", "Kikamba wording still needs the Kikamba reviewer."],
+    doesNot: ["It does not connect to a shortcode or a network.", "Kiswahili wording still needs the Kiswahili reviewer."],
     sources: [{ label: "This plan, the USSD menu specimen" }],
   },
   compliance: {
@@ -231,7 +230,7 @@ export const TOOLS: Record<string, Tool> = {
     sources: [{ label: "This plan, Measuring success: the scorecards" }],
   },
   "polling-stations": {
-    title: "Polling Station Explorer", lead: "Search every 2022 polling station in Kitui.",
+    title: "Polling Station Explorer", lead: "Search every 2022 polling station in Mombasa.",
     render: () => <StationExplorer stations={TOOL_STATIONS} />,
     does: "Searches the IEBC's 2022 station list by station, centre, ward or code, and downloads what you find.",
     doesNot: ["It is the 2022 list: re-check when the IEBC publishes the 2027 list."],
@@ -256,11 +255,11 @@ export const TOOLS: Record<string, Tool> = {
 /* ------------------------------------------------------------------ the first seven tools */
 
 export const DATA_GAPS: [string, string][] = [
-  ["Ward and station-level election results", "Not held. Request from the IEBC Kitui office or use the campaign's 2022 agent copies."],
-  ["2013 and 2017 Kitui results by office", "Not collected from a primary source."],
+  ["Ward and station-level election results", "Not held. Request from the IEBC Mombasa office or use the campaign's 2022 agent copies."],
+  ["2013 and 2017 Mombasa results by office", "Not collected from a primary source."],
   ["Agents allowed per polling station", "Unconfirmed. Check the current Elections (General) Regulations."],
   ["Governor nomination paperwork and qualifications", "Unconfirmed. Check current regulations and IEBC guidance."],
-  ["Wiper's 2027 nomination rules", "Not found publicly. Obtain from the party or the Registrar of Political Parties."],
+  ["The New Democrats' 2027 nomination rules", "Not found publicly. Obtain from the party or the Registrar of Political Parties."],
   ["Ward-level register after 2022", "Not published. All ward voter figures are from 2022."],
   ["Political SMS guidelines", "The 2017 text is the latest found. Confirm it is current with the Communications Authority."],
 ];
@@ -295,7 +294,7 @@ export const FIRST_TOOLS: Record<string, Tool> = {
       <NominationPath items={NOMINATION_ITEMS} />
     </>,
     does: "The list combines the campaign's two open confirmation requirements with the dated Gazette steps. Ticks are saved only on this device.",
-    doesNot: ["It is not the full IEBC nomination requirements. Check the current Elections (General) Regulations and IEBC guidance for paperwork and qualifications.", "It does not confirm Wiper's nomination rules.", "It stores no names or documents."],
+    doesNot: ["It is not the full IEBC nomination requirements. Check the current Elections (General) Regulations and IEBC guidance for paperwork and qualifications.", "It does not confirm The New Democrats' nomination rules.", "It stores no names or documents."],
     sources: [PUBLIC_SOURCES.calendar, { label: "Campaign nomination-path record" }],
   },
   "ward-dossier": {
@@ -321,7 +320,7 @@ export const FIRST_TOOLS: Record<string, Tool> = {
     render: () => <ProjectsRegister />,
     does: "Lists every project the county's Three-Year Scorecard itemises, with its place, sector, status and cost as printed.",
     doesNot: ["It does not verify a project on the ground; the team's site visits do.", "Printed status is the county's own claim."],
-    sources: [{ label: "County Government of Kitui, Delivering the Kitui Promise: Three-Year Scorecard" }],
+    sources: [{ label: "County Government of Mombasa, Delivering the Mombasa Promise: Three-Year Scorecard" }],
   },
 };
 

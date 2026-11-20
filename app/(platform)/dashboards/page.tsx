@@ -8,7 +8,7 @@ import { teamCharts } from "@/lib/live/charts";
 import { PageHead } from "@/components/platform/PageHead";
 import { Bars } from "@/components/platform/Bars";
 
-export const metadata = { title: "Dashboards | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Dashboards | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default async function Dashboards() {
   const store = readStore();
@@ -40,7 +40,7 @@ export default async function Dashboards() {
       <h2 className={`mb-3 ${filled.length > 0 ? "mt-10" : "mt-2"} text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-muted`}>The data pack</h2>
       <div className="grid gap-4 md:grid-cols-2">
         <Bars title="Registered voters, by constituency" bars={CONSTITUENCIES.map((c) => ({ label: c.name, value: c.voters })).sort((a, b) => b.value - a.value)} source="IEBC 2022 register" />
-        <Bars title="County projects, by sector" caption="Itemised in the county's Three-Year Scorecard." bars={[...sectors].map(([label, value]) => ({ label, value })).sort((a, b) => b.value - a.value)} source="County Government of Kitui scorecard" />
+        <Bars title="County projects, by sector" caption="Itemised in the county's Three-Year Scorecard." bars={[...sectors].map(([label, value]) => ({ label, value })).sort((a, b) => b.value - a.value)} source="County Government of Mombasa scorecard" />
       </div>
       {/* Charts with nothing in them yet, as one list. Eight empty cards used to open this page,
           ahead of every chart that had data; the list now follows the first two that do (streamline pass, November 2026). */}

@@ -33,14 +33,14 @@ export interface OpenItem {
 const HOLDERS: [RegExp, string][] = [
   [/IEBC/, "IEBC"],
   [/Meta|Insights|Week 1|post coding|export/i, "His team: the Week 1 export"],
-  [/Wiper|party|NEC/i, "Wiper Patriotic Front secretariat"],
+  [/The New Democrats|party|NEC/i, "The New Democrats Patriotic Front secretariat"],
   [/Communications Authority|CA\/KNBS/, "Communications Authority"],
   [/KNBS/, "KNBS"],
   [/TSC|Public Service Board|Ministry of Health/, "Public-sector employers"],
   [/GeoPoll|KARF|listenership/i, "Audience-research publishers"],
   [/Central Bank|Safaricom/, "Central Bank of Kenya or Safaricom"],
   [/NTSA|transport/i, "NTSA or the county transport department"],
-  [/NG-CDF/, "NG-CDF Kitui Central"],
+  [/NG-CDF/, "NG-CDF Mvita"],
   [/county|diocesan|denominational/i, "County government or church offices"],
   [/public/i, "Public pages, Week 1 audit"],
 ];
@@ -78,7 +78,7 @@ function add(kind: OpenItem["kind"], gap: string, closes: string, where: string,
     if (!it.where.includes(where)) it.where.push(where);
     return;
   }
-  items.set(key, { kind, gap, closes, holder: kind === "data" ? (closes === "Not published" ? (/20(13|17)/.test(gap) ? "IEBC" : "No source publishes it") : holderOf(closes)) : closes === "Kikamba reviewer" ? "Kikamba reviewer" : "The campaign", status: "Open", where: [where] });
+  items.set(key, { kind, gap, closes, holder: kind === "data" ? (closes === "Not published" ? (/20(13|17)/.test(gap) ? "IEBC" : "No source publishes it") : holderOf(closes)) : closes === "Kiswahili reviewer" ? "Kiswahili reviewer" : "The campaign", status: "Open", where: [where] });
 }
 
 // 1. content markers. Read per file as one string, so a marker that wraps across lines is caught.
@@ -104,7 +104,7 @@ for (const file of fs.readdirSync(CONTENT).filter((f) => f.endsWith(".md")).sort
       const around = sentenceAround(line, at - lineStart);
       const detail = body || (around === "Not stated" && head ? head.title : around);
       const what = m[1] === "Insert" ? `To insert: ${detail}` : `${m[1].charAt(0)}${m[1].slice(1).toLowerCase()}: ${detail}`;
-      add("placeholder", what.length > 160 ? what.slice(0, 157).replace(/\s\S*$/, "") + "…" : what, m[1] === "KIKAMBA REVIEW NEEDED" ? "Kikamba reviewer" : m[1] === "Insert" ? "At contracting" : "Campaign decision", where, true);
+      add("placeholder", what.length > 160 ? what.slice(0, 157).replace(/\s\S*$/, "") + "…" : what, m[1] === "KIKAMBA REVIEW NEEDED" ? "Kiswahili reviewer" : m[1] === "Insert" ? "At contracting" : "Campaign decision", where, true);
       continue;
     }
     if (m[1] === "CONFIRM/EDIT") {

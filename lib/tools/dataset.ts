@@ -26,8 +26,8 @@ export function fig(id: string): FigureView {
 }
 export const figs = (ids: string[]) => Object.fromEntries(ids.map((id) => [id, fig(id)])) as Record<string, FigureView>;
 
-/** The four constituencies where he has never held office (the registry's "pool"). */
-export const POOL = new Set(["mwingi-north", "mwingi-west", "mwingi-central", "kitui-south"]);
+/** The three constituencies of the close-contest belt (the registry's "pool"). */
+export const POOL = new Set(["kisauni", "nyali", "changamwe"]);
 
 export type ToolWard = {
   id: string; code: string; name: string; constituency: string; constituencyName: string; zone: ZoneId; pool: boolean;
@@ -56,7 +56,7 @@ export const TOOL_CONSTITUENCIES: ToolConstituency[] = PUBLIC_CONSTITUENCIES.map
   const id = slugOf(c.name);
   const zone = TOOL_WARDS.find((w) => w.constituency === id)?.zone ?? "none";
   return {
-    id, name: c.name, zone, pool: POOL.has(id), held: id === "kitui-central", voters: c.voters, wards: c.wards, stations: c.stations, centres: c.centres,
+    id, name: c.name, zone, pool: POOL.has(id), held: false, voters: c.voters, wards: c.wards, stations: c.stations, centres: c.centres,
     projects: has(`scorecard.${id}.projects`) ? FIGURES[`scorecard.${id}.projects`].value : null,
     projectsKsh: has(`scorecard.${id}.ksh`) ? FIGURES[`scorecard.${id}.ksh`].value : null,
     perVoter: has(`scorecard.${id}.per-voter`) ? FIGURES[`scorecard.${id}.per-voter`].value : null,
@@ -89,4 +89,4 @@ export type IssueRow = { issue: string; score: number; tier: number; note: strin
 export const ISSUES: IssueRow[] = (issueEvidence as { values: { label: string; value: number; tier: number; note: string }[] }).values.map((v) => ({ issue: v.label, score: v.value, tier: v.tier, note: v.note }));
 export const ISSUE_NOTES: string[] = (issueEvidence as { notes: string[] }).notes;
 
-export const ZONE_LABEL: Record<ZoneId, string> = { anchor: "Anchor (Kitui Central, Kitui West)", mwingi: "Mwingi (North, West, Central)", arid: "Arid belt (Kitui South, Kitui East)", none: "Kitui Rural (in no zone)" };
+export const ZONE_LABEL: Record<ZoneId, string> = { anchor: "Anchor (Mvita, Jomvu)", mwingi: "the north mainland (North, West, Central)", arid: "Arid belt (Changamwe, Likoni)", none: "Likoni (in no zone)" };

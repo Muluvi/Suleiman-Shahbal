@@ -3,7 +3,7 @@ import { teamDatasets } from "@/lib/platform/team-datasets";
 import { PageHead } from "@/components/platform/PageHead";
 import { Explorer } from "@/components/platform/Explorer";
 
-export const metadata = { title: "Explore the data | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Explore the data | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default async function Explore({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
   const sp = await searchParams;

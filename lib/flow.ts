@@ -25,7 +25,7 @@ export interface FlowAct {
  * (not heading ids). The blurbs are Firefly's approved wording (FLOW-PLAN.md section 10, Q6).
  */
 export const FLOW_ACTS: FlowAct[] = [
-  { id: "data", label: "Data", blurb: "What is true about Kitui, its voters and Dr. Mulu?", opensOn: "kitui" },
+  { id: "data", label: "Data", blurb: "What is true about Mombasa, its voters and Mr Shahbal?", opensOn: "mombasa" },
   { id: "analysis", label: "Analysis", blurb: "What does the data mean for the race?", opensOn: "winning" },
   { id: "objectives", label: "Objectives", blurb: "What must the campaign achieve?", opensOn: "goal" },
   { id: "strategies", label: "Strategies", blurb: "How will it achieve it?", opensOn: "position" },

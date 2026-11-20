@@ -1,8 +1,8 @@
 ```lead
-**Firefly recommends Level 2, Standard.** It is the level at which all 40 wards carry both reach reporting and an active SMS and USSD layer, and reaching the arid belt is the whole argument.
+**Firefly recommends Level 2, Standard.** It is the level at which all 30 wards carry both reach reporting and an active SMS and USSD layer, and reaching the close-contest belt and the 2022 abstainers is the whole argument.
 ```
 
-**Firefly recommends Level 2, Standard.** It is the level at which all 40 wards carry both reach reporting and an active SMS and USSD layer, and reaching the arid belt is the whole argument. This chapter sets out what Dr. Makali Mulu receives at each of the three scope levels, and how often, and then the full schedule of deliverables.
+**Firefly recommends Level 2, Standard.** It is the level at which all 30 wards carry both reach reporting and an active SMS and USSD layer, and reaching the close-contest belt and the 2022 abstainers is the whole argument. This chapter sets out what Mr Shahbal receives at each of the three scope levels, and how often, and then the full schedule of deliverables.
 
 ## 21.1 The three scope levels, compared
 
@@ -43,11 +43,11 @@ cannot afford to be blind**
 
 * **Strategy core (campaign roles):** the full three-person core, plus surge roles activated by phase or KPI
 * **Presence audit:** refreshed monthly, against the same ninety-day rolling window
-* **Reach reporting:** **all 40 wards**
+* **Reach reporting:** **all 30 wards**
 * **Weekly brief:** yes, plus the mid-week reach check
 * **Creative testing:** weekly cycle
 * **Team upskilling:** the standard, plus paired brief-writing to Month 3 (Section 17.5)
-* **Offline layer:** **SMS and USSD active across all 40 wards**; shared code, all networks
+* **Offline layer:** **SMS and USSD active across all 30 wards**; shared code, all networks
 * **Trade-offs:** no premium social listening licences
 
 #### Level 3: Premium
@@ -56,7 +56,7 @@ cannot afford to be blind**
 
 * **Strategy core (campaign roles):** three-person core + full surge bench against agreed triggers
 * **Presence audit:** refreshed fortnightly
-* **Reach reporting:** all 40 wards + diaspora geographies
+* **Reach reporting:** all 30 wards + diaspora geographies
 * **Creative testing:** weekly
 * **Team upskilling:** the standard, plus embedded coaching through the cycle
 * **Offline layer:** everything in Standard, plus a dedicated USSD short code and expanded
@@ -74,8 +74,8 @@ id: fig-5-5-cadence
 **Recommendation: Level 2 (Standard).** Level 1 instruments only the twelve decisive wards, which
 leaves the recognition deficit measured at county level — the one place this campaign cannot afford
 to be blind. Level 3 is defensible, but it refreshes the read faster than a nomination sprint can
-act on it. Standard is the level at which all 40 wards carry both reach reporting and an active SMS
-and USSD layer, and reaching the arid belt is the whole argument.
+act on it. Standard is the level at which all 30 wards carry both reach reporting and an active SMS
+and USSD layer, and reaching the close-contest belt and the 2022 abstainers is the whole argument.
 
 ## 21.2 The deliverables schedule
 
@@ -95,16 +95,16 @@ now directed by the team itself. Firefly's own deliverable is the platform: host
 | Deliverable | Cadence | Produced by | Form | Where it is set |
 |---|---|---|---|---|
 | Flagship video | 2–3 per week | Your team | Subtitled video, platform-native cuts | 15.1.2 |
-| Daily multilingual social | Daily | Your team | Post, graphic or short video in English, Kiswahili and Kikamba | 15.1.2 |
-| Kikamba voice note | Weekly | Your team, Kikamba reviewer signs off | Audio for WhatsApp and community networks | 15.1.2 |
+| Daily multilingual social | Daily | Your team | Post, graphic or short video in Kiswahili and English | 15.1.2 |
+| Kiswahili voice note | Weekly | Your team, Kiswahili reviewer signs off | Audio for WhatsApp and community networks | 15.1.2 |
 | Facebook Live | Weekly | Your team | Live broadcast with moderated comments | 15.1.2 |
-| Kitui Economic Brief | Monthly | Your team | Plain-language explainer, print and digital | 15.1.2 |
-| "Dr. Mulu Explains" | Weekly | Your team | Explainer video or audio on county finance | 15 |
+| Mombasa Delivery Brief | Monthly | Your team | Plain-language explainer, print and digital | 15.1.2 |
+| "Shahbal Explains" | Weekly | Your team | Explainer video or audio on water, jobs and county finance | 15 |
 | **The weekly brief** | **Weekly, Thursday** | **Your team (strategy core)** | One page: pillar weights, must-post items, ward priority, language rule | 13.4 |
 | Content calendar | Weekly, Friday | Your team; the strategy core approves | Approved calendar for the week ahead | 15.1.2 |
-| SMS touch to the consented list | Fortnightly, rising to a GOTV surge | **Your team** | 160-character Kiswahili or English SMS — Kikamba is not permitted on the bulk SMS rail (§15.3.3) | 15.3.3 |
+| SMS touch to the consented list | Fortnightly, rising to a GOTV surge | **Your team** | 160-character Kiswahili or English SMS — no other language is permitted on the bulk SMS rail (§15.3.3) | 15.3.3 |
 | USSD menu availability | Continuous once provisioned | **Your team** | Zero-rated interactive menu across all networks | 15.3.3 |
-| Ward coordinator field report | Daily | Campaign ground team | Structured report from all 40 wards into the CRM | 15.3.1 |
+| Ward coordinator field report | Daily | Campaign ground team | Structured report from all 30 wards into the CRM | 15.3.1 |
 | Creative test cycle | Weekly | **Your team** designs, reads and produces variants | A/B test results and the decisions taken from them | 15.1.3 |
 | **Presence audit refresh** | **Monthly** | **Your team** | Ninety-day rolling read: reach by ward, language and format | 14.1 |
 | Performance report | Monthly | **Your team** | Reach in the pool, engagement, sentiment, conversion | 13.4 |
@@ -157,7 +157,7 @@ Nine dependencies. Three of them gate everything else:
 
 The remaining six: about **three hours** of candidate time per week; daily ground-team photo
 and video uploads; current ward-level registration data from the IEBC published file; access to
-the existing NG-CDF project record; sign-off on the engagement level; and the Wiper Patriotic Front's 2027 nomination
+his business and EALA record (Section 6.1); sign-off on the engagement level; and the The New Democrats' 2027 nomination
 rules or NEC resolution as soon as the party issues them.
 ```
 

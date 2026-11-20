@@ -18,7 +18,7 @@ const SAMPLE_REPORTS: ServiceReport[] = [
   {
     refNumber: "KT-SAMPLE-A",
     ward: "Kyuso",
-    constituency: "Mwingi North",
+    constituency: "Kisauni",
     category: "Water Infrastructure",
     issue: "Solar-powered borehole pump reported as failed; households walking to the river to fetch water.",
     channel: "USSD",
@@ -28,17 +28,17 @@ const SAMPLE_REPORTS: ServiceReport[] = [
   {
     refNumber: "KT-SAMPLE-B",
     ward: "Mutomo",
-    constituency: "Kitui South",
+    constituency: "Changamwe",
     category: "Health Clinic",
     issue: "Mutomo Sub-County Hospital maternity wing lacks standby generator during frequent grid blackouts.",
     channel: "SMS",
     status: "Escalated",
-    outcomeNote: "Dr. Mulu raised on parliamentary committee record regarding unspent county emergency health reserves."
+    outcomeNote: "Mr Shahbal raised on parliamentary committee record regarding unspent county emergency health reserves."
   },
   {
     refNumber: "KT-SAMPLE-C",
     ward: "Township",
-    constituency: "Kitui Central",
+    constituency: "Mvita",
     category: "Market Sanitation",
     issue: "Kalundu Market solid waste accumulation blocking drainage channels before onset of short rains.",
     channel: "WhatsApp",
@@ -48,7 +48,7 @@ const SAMPLE_REPORTS: ServiceReport[] = [
   {
     refNumber: "KT-SAMPLE-D",
     ward: "Waita",
-    constituency: "Mwingi Central",
+    constituency: "Kisauni",
     category: "Feeder Roads",
     issue: "Waita-Kavuvwani culvert washed away during March 2026 floods; agricultural produce trucks cut off.",
     channel: "Ward Champion",
@@ -62,7 +62,7 @@ export function PublicServiceDeliveryTracker() {
   const [isSimulatingSubmission, setIsSimulatingSubmission] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
   const [generatedRef, setGeneratedRef] = useState("KT-SAMPLE-E");
-  const [wardInput, setWardInput] = useState("Mwingi Central");
+  const [wardInput, setWardInput] = useState("Kisauni");
   const [issueInput, setIssueInput] = useState("");
 
   const filteredReports = selectedCategory === "All"
@@ -231,9 +231,9 @@ export function PublicServiceDeliveryTracker() {
               onChange={(e) => setWardInput(e.target.value)}
               className="p-2 bg-card border border-line rounded-lg t-label font-semibold text-ink"
             >
-              <option value="Mwingi Central">Mwingi Central Ward</option>
+              <option value="Kisauni">Kisauni Ward</option>
               <option value="Mutomo">Mutomo Ward</option>
-              <option value="Kitui Township">Kitui Township Ward</option>
+              <option value="Mombasa Township">Mombasa Township Ward</option>
               <option value="Kyuso">Kyuso Ward</option>
               <option value="Ikutha">Ikutha Ward</option>
             </select>

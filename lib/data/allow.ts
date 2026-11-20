@@ -8,7 +8,11 @@ export const ALLOW: RegExp[] = [
   /AES-256/, // an encryption standard
   /\b160[- ]characters?\b/, // the SMS message length limit
   /Article 180\(7\)/, // a constitutional citation
-  /KECA 460/, // a law-report citation
+  /KECA 460|KEHC 2189|KEHC 8291/, // law-report citations
+  /Gazette Notice 1\d{4}|GN 1\d{4}|Notice 13501|\(GN 13501\)/, // gazette notice numbers
+  /fewer than 2,000 votes|under 1,000 each|about a thousand votes/, // thresholds describing a margin, not data
+  /the 1,041 stations/, // restated with its token in Section 2.1
+  /about 3,000 acres/, // the public Dongo Kundu zone, a description not a campaign figure
   /per 1,000\b|1,000 reached/, // the unit of a rate, not a count
   /\| 10\d\.\d( \(|\s*\|)/, // an FM frequency in the station table (100.4, 102.2, 103.3, 105.3)
   /\b100(\.0+)?%/, // a completeness target: all of something

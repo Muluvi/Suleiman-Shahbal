@@ -4,7 +4,7 @@ import { ToolLimits } from "@/components/tools/public/ToolLimits";
 import { NOMINATION_CONFIRMATION_REQUIREMENTS, NOMINATION_METHOD_CLAIM } from "@/data/nomination-path";
 import { PUBLIC_SOURCES, RACE_CALENDAR } from "@/lib/public-data";
 
-export const metadata = { title: "Governor nomination path | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Governor nomination path | Mombasa 2027", robots: { index: false, follow: false } };
 
 const WANTED = /Governor|financing account|authorised persons for campaign|expenditure report|Public officers/i;
 
@@ -15,6 +15,6 @@ export default function Page() {
     <PageHead kicker="Planning tool" title="Governor nomination path" lead="What must be confirmed and filed on the road to the nomination." />
     <p className="plat-card mb-4 p-4 text-[0.9rem] text-muted"><strong className="text-ink">Unconfirmed:</strong> {NOMINATION_METHOD_CLAIM.value}. {NOMINATION_METHOD_CLAIM.provenance.note}</p>
     <NominationPath items={[...party, ...dated]} />
-    <ToolLimits does="The list combines the campaign's two open confirmation requirements with the dated Gazette steps. Ticks are saved only on this device." doesNot={["It is not the full IEBC nomination requirements. Check the current Elections (General) Regulations and IEBC guidance for paperwork and qualifications.", "It does not confirm Wiper's nomination rules.", "It stores no names or documents."]} sources={[PUBLIC_SOURCES.calendar, { label: "Campaign nomination-path record" }]} />
+    <ToolLimits does="The list combines the campaign's two open confirmation requirements with the dated Gazette steps. Ticks are saved only on this device." doesNot={["It is not the full IEBC nomination requirements. Check the current Elections (General) Regulations and IEBC guidance for paperwork and qualifications.", "It does not confirm The New Democrats' nomination rules.", "It stores no names or documents."]} sources={[PUBLIC_SOURCES.calendar, { label: "Campaign nomination-path record" }]} />
   </>;
 }

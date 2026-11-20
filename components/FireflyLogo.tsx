@@ -11,7 +11,7 @@ import Image from "next/image";
  * which are dark in the light theme and light in the dark theme, so the swap runs the other way.
  *
  * Used only where the site credits Firefly as builder and operator; the campaign's own identity
- * stays Dr. Mulu's.
+ * stays Mr Shahbal's.
  */
 const W = 640;
 const H = 818;

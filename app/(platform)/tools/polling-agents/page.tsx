@@ -3,7 +3,7 @@ import { PollingAgentPlanner } from "@/components/tools/public/PollingAgentPlann
 import { ToolLimits } from "@/components/tools/public/ToolLimits";
 import { PUBLIC_SOURCES, PUBLIC_WARDS } from "@/lib/public-data";
 
-export const metadata = { title: "Polling agent planner | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Polling agent planner | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ agents?: string; reserve?: string; span?: string }> }) {
   const initial = await searchParams;

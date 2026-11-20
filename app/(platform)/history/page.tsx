@@ -5,7 +5,7 @@ import { packMode } from "@/lib/platform/config";
 import { PageHead } from "@/components/platform/PageHead";
 import { HistoryList, type HistoryRow } from "@/components/platform/HistoryList";
 
-export const metadata = { title: "Changes | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Changes | Mombasa 2027", robots: { index: false, follow: false } };
 
 const DATASET_LABEL: Record<string, string> = {
   figure: "Figures", "figure-add": "Figures", "figure-remove-added": "Figures", ward: "Register", "register-totals": "Register",

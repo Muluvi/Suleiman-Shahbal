@@ -1,149 +1,141 @@
 ```lead
-Kitui has **532,758** registered voters on the 2022 register, and Governor Malombe won in 2022 with **198,004** votes. The number to win is about **200,000**, and no single region holds it.
+Mombasa has **641,913** registered voters on the 2022 register, and Governor Nassir won in 2022 with **119,083** votes, on a turnout of about a third. The number to win is about **120,000**, and no single zone holds it.
 ```
 
-Kitui has **532,758** registered voters on the 2022 register, and Governor Malombe won in 2022 with **198,004** votes (Tier 1, IEBC). The number to win is about **200,000** (target), and no single region holds it. This chapter sets out the electorate, how it has voted, where the votes are, and the arithmetic of winning.
+Mombasa has **641,913** registered voters on the 2022 register, and Governor Nassir won in 2022 with **119,083** votes (Tier 2, IEBC declaration as reported). The number to win is about **120,000** (target), and no single zone holds it. This chapter sets out the electorate, how it has voted, where the votes are, and the arithmetic of winning.
 
 ## 2.1 The electorate and polling stations
 
 ```visual
-{"kind":"stats","items":[{"value":"532,758","label":"registered voters, 2022","tier":1,"body":"**532,758** voters registered in wards, plus **75** registered in prisons: **532,833** in all (Tier 1, IEBC)."},{"value":"40","label":"wards across 8 constituencies","tier":1,"body":"40 county assembly wards in eight constituencies (Tier 1, IEBC)."},{"value":"1,578","label":"polling stations","tier":1,"body":"1,578 polling stations (Tier 1, IEBC 2022 polling station register)."},{"value":"605,703","label":"registered, July 2026","tier":3,"body":"**605,703** registered voters in July 2026 (Tier 3, reported by Venas News; unconfirmed until IEBC's own July 2026 figure is in hand). Of the **72,945** added since 2022 (Tier 3, unconfirmed), **61,839** registered in ECVR Phase 1 (Tier 1, IEBC), the 30-day drive that closed on 28 April 2026, and **11,106** through continuous registration outside it (modelled: the growth less the drive). A second ECVR phase ran from 25 June to 25 July 2026 (IEBC gazette notice, 24 June 2026); whether the July figure includes it is not stated, so the remainder may carry some of it. The 2026 register is not yet published by ward."},{"value":"61.7%","label":"turnout, 2022","tier":1,"body":"**61.7%** certified: 328,760 valid votes for governor, of 532,758 registered (Tier 1, IEBC Form 37C). Chapter 2 carries this rate forward to 2027 as a stated assumption."}]}
+{"kind":"stats","items":[{"value":"641,913","label":"registered voters, 2022","tier":1,"body":"**641,913** voters registered across the county's 30 wards (Tier 1, IEBC). The ward sum and the county total agree exactly."},{"value":"30","label":"wards across 6 constituencies","tier":1,"body":"30 county assembly wards in six constituencies (Tier 1, IEBC)."},{"value":"1,041","label":"polling stations","tier":1,"body":"1,041 polling stations at 228 registration centres (Tier 1, IEBC 2022 polling station register)."},{"value":"34.5%","label":"turnout, 2022 governor election","tier":2,"body":"**34.5%**: 221,148 valid votes for governor, of 641,913 registered (Tier 2, calculated from the declared result; the returning officer gave 34%). Chapter 2 carries this rate forward to 2027 as a stated, and cautious, assumption."}]}
 ```
 
 ```figure
 id: fig-2-1-register
 ```
 
-**Which turnout.** Two turnout figures are in circulation, on different bases, and this plan says which it uses. **61.7%** is governor valid votes (328,760) divided by the register (Tier 1, IEBC Form 37C). The presidential turnout in Kitui was about **62%**, and it includes 3,306 rejected ballots (Tier 2, Equal Politics aggregation of IEBC results). Every calculation in this plan uses 61.7%.
+**No 2026 figure yet.** The IEBC has run two enhanced registration drives in 2026, but the Mombasa row of the county annex is not in hand. Until it is, the 2022 register is the base for every calculation, and every ballot figure built on it is a floor: the register has only grown.
 
-The full 40-ward register, by constituency, is in Annex B.
+**Why turnout was so low.** Mombasa's governor election did not happen on 9 August 2022. The IEBC suspended it the day before over a ballot-paper mix-up, rescheduled it, and held it on 29 August, three weeks after the presidential result was known (Tier 2, KNA and The Standard). Turnout fell to **34.5%**. In 2017, on the general-election day, Joho alone received 221,177 votes (Tier 1). The 2027 governor's race will be held on the same day as the presidential race, so 2022's turnout is a floor, not a forecast.
+
+The full 30-ward register, by constituency, is in Annex B.
 
 ## 2.2 Results from 2013 to 2022
 
 ```lead
-Julius Malombe won 2022 with **198,004 votes** on a certified turnout of **61.7%** (Tier 1, IEBC Form 37C); Charity Ngilu won 2017 with **169,990 votes** (Tier 1).
+Abdulswamad Nassir won 2022 with **119,083 votes** against Hassan Omar's **98,105**. Mr Shahbal received **94,905** in 2013 and **69,515** in 2017, both times second to Hassan Joho.
 ```
 
-*   **Governor, 2013:** a **named data gap** (Tier 1 gap). No certified result is in hand, and the plan does not use recollection in its place. The record that closes it is the IEBC's 2013 declaration and its Kenya Gazette notice.
-*   **Governor, 2017:** Charity Ngilu (NARC) won with **169,990 votes** (Tier 1), in an election the Court of Appeal confirmed (*Malombe v Ngilu* [2018] KECA 460) (Tier 1). David Musila was the certified runner-up with **114,827 votes** (Tier 1), and the incumbent, Julius Malombe, came third with **74,681 votes** (Tier 1).
-*   **Governor, 2022:** Julius Malombe (Wiper Democratic Movement, renamed the Wiper Patriotic Front in 2025) won with **198,004 votes** on a certified turnout of **61.7%**, 328,760 valid votes of 532,758 registered (Tier 1, IEBC Form 37C). David Musila (Jubilee) was runner-up with **117,606 votes** (Tier 1); The Star's early total of 114,606 is a media variant, and the certified share (35.77%, calculated) matches 117,606. Jonathan Mueke (UDA) came third with **10,639 votes** (Tier 2).
-*   **President, 2022 (Kitui):** Raila Odinga won **235,400** votes (**70.82%**) and William Ruto **89,419** (**26.90%**); George Wajackoyah won 2,838 and David Mwaure 1,446, with 3,306 ballots rejected (Tier 2, Equal Politics aggregation of IEBC results). The Tier 1 record is IEBC Forms 34B and 34C, not yet in hand.
-*   **Kitui Central MP, 2022:** Dr. Makali Mulu was re-elected on the Wiper ticket with **30,954 votes** (Tier 1, IEBC declaration as gazetted); Boniface Musambi was second with 9,866. Early media totals differ from the gazetted figure and are not used. The figure reached this plan through a press reproduction of the declaration; the Kenya Gazette notice itself is the record to hold.
-*   **Senator and Woman Representative, 2022:** Senator Enoch Wambua (Wiper) won with **191,317 votes** (Tier 2), and Woman Representative Irene Kasalu (Wiper) with **201,899 votes** (Tier 2). Both totals are media reports. The certified declarations (IEBC Form 38C for the Senate, Form 39C for the Woman Representative) are the Tier 1 record and are not yet in hand; until they are, both figures stay Tier 2.
-*   **Ward and polling-station results:** the constituency and polling-station forms for the 2017 and 2022 governor races (IEBC Forms 37B and 37A) are public records, not yet in hand. Section 6.2 needs them to test where each candidate's vote came from, ward by ward.
+*   **Governor, 2013:** Hassan Joho (ODM) won with **132,583 votes**; Suleiman Shahbal (Wiper) was runner-up with **94,905 votes** (Tier 1, as recited in *Shahbal v IEBC* [2013] KEHC 2189). The court-ordered scrutiny moved the totals by a few dozen votes and the petition was dismissed. The gap, 37,678 votes, is the closest any challenger has come to winning the seat.
+*   **Governor, 2017:** Hassan Joho (ODM) was re-elected with **221,177 votes**; Suleiman Shahbal (Jubilee) was second with **69,515** and Hassan Omar (Wiper) third with **43,787** (Tier 1, as recited in *Hassan Omar Hassan v IEBC* [2018] KEHC 8291). The election court upheld the result.
+*   **Governor, 2022:** Abdulswamad Nassir (ODM) won with **119,083 votes** of 221,148 valid votes; Hassan Omar (UDA) was runner-up with **98,105** (Tier 2). A second published total of 98,108 is a media variant; Form 37C settles it. The other five candidates received under 1,000 each, led by Hezron Awiti (VDP) with 875. Mr Shahbal sought the ODM ticket and stepped down in Nassir's favour.
+*   **President, 2022 (Mombasa):** Raila Odinga took **58.07%** and William Ruto **41.00%**; George Wajackoyah 0.76% and David Mwaure 0.17% (Tier 1, IEBC Form 34C county summary). Vote totals are to be read from the same form.
+*   **Senator, 2022:** Mohamed Faki (ODM) won with **113,694 votes** (Tier 2, IEBC declaration as gazetted, via Mzalendo). The Woman Representative total is a named data gap.
+*   **Ward and polling-station results:** the constituency and polling-station forms for the 2013, 2017 and 2022 governor races (IEBC Forms 37B and 37A) are public records, not yet in hand. Section 6.2 needs them to test where his own vote came from, ward by ward.
 
 ```figure
 id: fig-2-2-results
 ```
 
-**What it means for the campaign.** Kitui voted for the opposition presidential ticket by more than two to one in 2022, and for Wiper candidates in every countywide race.
+**What it means for the campaign.** Mombasa has elected the ODM candidate for governor three times, and voted for the ODM presidential ticket in 2022 by 58.07% to 41.00%. But the winning tally fell from 221,177 in 2017 to 119,083 in 2022, and in 2022 the runner-up came within 20,978 votes. The ODM vote is large, and it is no longer sure to turn out.
 
 ## 2.3 The twelve largest wards
 
-The register is concentrated. Spread evenly, the 40 wards would hold 13,319 voters each (calculated); in fact voters cluster in urban corridors, farming belts and sub-county headquarters.
+The register is concentrated. Spread evenly, the 30 wards would hold 21,397 voters each (calculated); in fact voters cluster in the dense mainland estates of Likoni, Jomvu and Kisauni.
 
 ```figure
 id: fig-3-2-register-map
 ```
 
 ```visual
-{"kind":"stats","preset":"battery","title":"Where the votes concentrate","items":[{"value":"37.78%","label":"of the register in the 12 largest wards","tier":1,"body":"**Twelve wards, 30% of the total, hold 201,267 registered voters** (37.78% of the county, calculated from IEBC's 2022 register). That is as many registered voters as the 2022 winning tally, but registration is not turnout: at the 61.7% turnout rate they cast about **124,182 ballots** (calculated)."},{"value":"59.13%","label":"in the largest 20","tier":1,"body":"**The largest 20 wards**, half the total, hold **315,006 registered voters** (**59.13%** of the county, calculated)."},{"value":"18.10%","label":"in the smallest 10","tier":1,"body":"**The ten smallest wards** (from Mui down to Tharaka), a quarter of the total, hold **96,415 registered voters** (**18.10%** of the register, calculated) across large areas that are slow and costly to cover on the ground."}]}
+{"kind":"stats","preset":"battery","title":"Where the votes concentrate","items":[{"value":"50.08%","label":"of the register in the 12 largest wards","tier":1,"body":"**Twelve wards, 40% of the total, hold 321,482 registered voters** (50.08% of the county, calculated from IEBC's 2022 register). At the 34.5% turnout rate they cast about **110,911 ballots** (calculated)."},{"value":"76.24%","label":"in the largest 20","tier":1,"body":"**The largest 20 wards**, two-thirds of the total, hold **489,371 registered voters** (**76.24%** of the county, calculated)."},{"value":"23.76%","label":"in the smallest 10","tier":1,"body":"**The ten smallest wards** (from Mwakirunge, the smallest, upward), a third of the total, hold **152,542 registered voters** (**23.76%** of the register, calculated)."}]}
 ```
 
 ```lead
-This annex holds the 40-ward register: background the argument rests on rather than part of the argument.
+This annex holds the 30-ward register: background the argument rests on rather than part of the argument.
 ```
 
-This annex holds the 40-ward register: background the argument rests on rather than part of the argument. The audit record is now in Section 3.7, drought and food security in Section 3.2, and the Mui Basin in Section 3.8.
+This annex holds the 30-ward register: background the argument rests on rather than part of the argument. The county's finances are in Section 3.7, water in Section 3.2, and the port economy and the SEZ in Section 3.8.
 
 The register of every ward, with its voters and polling stations, is at the end of Evidence and sources.
 
 ## 2.4 The constituencies that decide it
 
 ```lead
-Mwingi North, Mwingi West and Mwingi Central together command 200,198 registered voters (Tier 1), roughly 123,522 ballots at the certified turnout. Mwingi is therefore **necessary and not sufficient**: no path to 200,000 runs around it, and none ends there.
+Kisauni, Nyali and Changamwe were each decided by fewer than 2,000 votes in 2022. Together they hold 353,090 registered voters, 55.0% of the county: **necessary and not sufficient**. No path to 120,000 runs around them, and none ends there.
 ```
 
-A constituency's weight comes from its voters, the density of its wards, and its role in past party nominations:
+A constituency's weight comes from its voters, the density of its wards, and how close it was last time:
 
 ```figure
 id: constituency-power
 ```
 
-#### The Mwingi bloc: necessary, not sufficient
+```visual
+{"kind":"bars","title":"The 2022 governor's race by constituency: Nassir's lead over Omar, in votes","source":"The Standard and KNA, 30 August 2022 (Tier 2); Likoni calculated","items":[{"label":"Nyali: 22,387 to 21,580","value":"807","tier":2},{"label":"Kisauni: 21,796 to 20,750","value":"1,046","tier":2},{"label":"Changamwe: 17,740 to 15,898","value":"1,842","tier":2},{"label":"Jomvu: 15,629 to 11,038","value":"4,591","tier":2},{"label":"Mvita: 24,106 to 19,086","value":"5,020","tier":2},{"label":"Likoni (calculated): 17,425 to 9,753","value":"7,672","tier":2}]}
+```
 
-**Mwingi North, Mwingi West and Mwingi Central together command 200,198 registered voters (Tier 1).** That is more *registered voters* than the 2022 winning tally (198,004 votes, Tier 1), but registration is not turnout. At the certified 61.7% turnout the bloc casts roughly **123,522 ballots**, so even every vote there leaves the campaign about 76,478 short of 200,000 (calculated). Mwingi is therefore **necessary and not sufficient**: no path to 200,000 runs around it, and none ends there. So SMS, USSD and digital outreach go into Mwingi first, to establish Dr. Mulu as the leading alternative there.
+*Five constituency tallies as reported by The Standard and KNA (Tier 2); Likoni is the county total less the five, so it is calculated.*
+
+#### The close-contest belt: necessary, not sufficient
+
+**Kisauni, Nyali and Changamwe together command 353,090 registered voters (Tier 1).** In 2022 the leader's margin was 807 in Nyali, 1,046 in Kisauni and 1,842 in Changamwe (Tier 2). At the 34.5% turnout the belt casts roughly **121,816 ballots**, so even every vote there leaves the campaign about 1,816 short of 120,000 (calculated). So SMS, USSD and digital outreach go into the belt first, to establish Mr Shahbal as the leading alternative there.
 
 #### The four constituencies that decide it
 
-1.  **The Big Four (55.60% of the county):** Kitui Central, Kitui South, Mwingi Central and Mwingi North hold **296,196 registered voters** across 22 wards (calculated from IEBC's 2022 register, Tier 1). The candidate who leads in these four, or holds level in them, is in reach of the governorship.
-2.  **Mwingi North (68,829 voters, Tier 1):** fourth by voters, but it holds the county's largest ward (**Kyuso, 19,921 voters**), the political home of the Wiper Patriotic Front leader, Hon. Kalonzo Musyoka (**Tseikuru, 16,471 voters**), and **Mumoni (15,877 voters)**, all Tier 1 (IEBC). It is both a large electorate and the party's heartland.
-3.  **Kitui South (75,372 voters):** the second-largest constituency, anchored by the dense wards of Athi (15,843) and Ikanga/Kyatune (15,384).
+1.  **The Big Four (73.73% of the county):** Kisauni, Nyali, Mvita and Likoni hold **473,267 registered voters** across 22 wards (calculated from IEBC's 2022 register, Tier 1). The candidate who leads in these four, or holds level in them, is in reach of the governorship.
+2.  **Kisauni (135,276 voters, Tier 1):** the largest constituency, with seven wards from Mwakirunge (6,423), the smallest in the county, to Junda (25,602) and Shanzu (25,510). It was decided by 1,046 votes in 2022.
+3.  **Likoni (94,764 voters, Tier 1):** holds the county's largest ward, **Timbwani (33,929)**, and the constituency where Nassir's lead was largest (7,672, calculated).
+4.  **Mvita (118,974 voters, Tier 1):** the governor's former constituency and the county's commercial heart, holding **Majengo (31,772)**, the third-largest ward.
 
-## B.1 The 40-ward register
+## B.1 The 30-ward register
 
 Registered voters per county assembly ward, 2022 (IEBC, Tier 1). The 2026 register is not yet published by ward.
 
-#### 1. Mwingi North Constituency (68,829 total registered voters, Tier 1)
+#### 1. Changamwe Constituency (93,561 total registered voters, Tier 1)
 
-*   **Kyuso Ward:** 19,921 voters
-*   **Tseikuru Ward:** 16,471 voters
-*   **Mumoni Ward:** 15,877 voters
-*   **Ngomeni Ward:** 9,131 voters
-*   **Tharaka Ward:** 7,429 voters
+*   **Chaani Ward:** 22,873 voters
+*   **Airport Ward:** 18,557 voters
+*   **Changamwe Ward:** 18,182 voters
+*   **Port Reitz Ward:** 17,817 voters
+*   **Kipevu Ward:** 16,132 voters
 
-#### 2. Mwingi West Constituency (57,138 total registered voters, Tier 1)
+#### 2. Jomvu Constituency (75,085 total registered voters, Tier 1)
 
-*   **Nguutani Ward:** 15,121 voters
-*   **Kyome/Thaana Ward:** 14,979 voters
-*   **Migwani Ward:** 14,678 voters
-*   **Kiomo/Kyethani Ward:** 12,360 voters
+*   **Mikindani Ward:** 32,794 voters
+*   **Jomvu Kuu Ward:** 24,243 voters
+*   **Miritini Ward:** 18,048 voters
 
-#### 3. Mwingi Central Constituency (74,231 total registered voters, Tier 1)
+#### 3. Kisauni Constituency (135,276 total registered voters, Tier 1)
 
-*   **Central Ward:** 14,525 voters
-*   **Nguni Ward:** 13,165 voters
-*   **Nuu Ward:** 12,729 voters
-*   **Kivou Ward:** 12,301 voters
-*   **Mui Ward:** 11,039 voters
-*   **Waita Ward:** 10,472 voters
+*   **Junda Ward:** 25,602 voters
+*   **Shanzu Ward:** 25,510 voters
+*   **Mjambere Ward:** 22,692 voters
+*   **Bamburi Ward:** 20,470 voters
+*   **Mtopanga Ward:** 19,474 voters
+*   **Magogoni Ward:** 15,105 voters
+*   **Mwakirunge Ward:** 6,423 voters
 
-#### 4. Kitui West Constituency (59,047 total registered voters, Tier 1)
+#### 4. Nyali Constituency (124,253 total registered voters, Tier 1)
 
-*   **Mutonguni Ward:** 17,979 voters
-*   **Kauwi Ward:** 15,767 voters
-*   **Matinyani Ward:** 14,279 voters
-*   **Kwa Mutonga/Kithumula Ward:** 11,022 voters
+*   **Kongowea Ward:** 28,846 voters
+*   **Frere Town Ward:** 24,849 voters
+*   **Mkomani Ward:** 24,154 voters
+*   **Ziwa la Ng'ombe Ward:** 23,296 voters
+*   **Kadzandani Ward:** 23,108 voters
 
-#### 5. Kitui Rural Constituency (55,000 total registered voters, Tier 1)
+#### 5. Likoni Constituency (94,764 total registered voters, Tier 1)
 
-*   **Kwa Vonza/Yatta Ward:** 18,020 voters
-*   **Kisasi Ward:** 13,840 voters
-*   **Mbitini Ward:** 12,048 voters
-*   **Kanyangi Ward:** 11,092 voters
+*   **Timbwani Ward:** 33,929 voters
+*   **Bofu Ward:** 18,188 voters
+*   **Shika Adabu Ward:** 15,437 voters
+*   **Mtongwe Ward:** 13,937 voters
+*   **Likoni Ward:** 13,273 voters
 
-#### 6. Kitui Central Constituency (77,764 total registered voters, Tier 1)
+#### 6. Mvita Constituency (118,974 total registered voters, Tier 1)
 
-*   **Township Ward:** 19,538 voters
-*   **Kyangwithya West Ward:** 15,931 voters
-*   **Kyangwithya East Ward:** 15,401 voters
-*   **Mulango Ward:** 15,135 voters
-*   **Miambani Ward:** 11,759 voters
-
-#### 7. Kitui East Constituency (65,377 total registered voters, Tier 1)
-
-*   **Zombe/Mwitika Ward:** 13,152 voters
-*   **Chuluni Ward:** 12,622 voters
-*   **Nzambani Ward:** 11,723 voters
-*   **Voo/Kyamatu Ward:** 10,003 voters
-*   **Mutito/Kaliku Ward:** 9,980 voters
-*   **Endau/Malalani Ward:** 7,897 voters
-
-#### 8. Kitui South Constituency (75,372 total registered voters, Tier 1)
-
-*   **Athi Ward:** 15,843 voters
-*   **Ikanga/Kyatune Ward:** 15,384 voters
-*   **Mutomo Ward:** 12,637 voters
-*   **Ikutha Ward:** 12,066 voters
-*   **Mutha Ward:** 11,039 voters
-*   **Kanziko Ward:** 8,403 voters
+*   **Majengo Ward:** 31,772 voters
+*   **Tononoka Ward:** 23,379 voters
+*   **Tudor Ward:** 22,926 voters
+*   **Mji wa Kale/Makadara Ward:** 22,341 voters
+*   **Shimanzi/Ganjoni Ward:** 18,556 voters

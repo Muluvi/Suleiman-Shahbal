@@ -5,7 +5,7 @@ import { PILLARS } from "../../data/message-architecture";
 import { USSD_MENU, USSD_SHORTCODE_PLACEHOLDER } from "../../data/ussd-specimen";
 import { resolveFigure, type ResolvedFigure } from "../../lib/card/spec";
 import { IDENTITY, YOUTUBE } from "../../lib/phone-showcase";
-import { KituiIcon } from "../icons/kitui";
+import { MombasaIcon } from "../icons/mombasa";
 import { ExportableVisual } from "../visual/ExportableVisual";
 import { TvSet, Watch } from "./Frames";
 
@@ -79,7 +79,7 @@ export function TvNews() {
       note="A generic channel. His name and office in the lower third; the ticker carries only the site's own figures."
       figures={figs}
     >
-      <TvSet label="Illustrative television screen: a studio interview with Dr. Makali Mulu">
+      <TvSet label="Illustrative television screen: a studio interview with Suleiman Shahbal">
         <div className="tv">
           <span className="tv__bug">COUNTY CHANNEL</span>
           <div className="tv__studio" aria-hidden="true">
@@ -134,17 +134,17 @@ export function KpiWatches() {
 
 /* ------------------------------------------------------------------------------- billboard */
 
-/** The slogan on a roadside billboard in an illustrated Kitui street (B6). */
+/** The slogan on a roadside billboard in an illustrated Mombasa street (B6). */
 export function Billboard() {
   return (
     <ExportableVisual
       id="billboard"
       illustrative
       title="Out on the road: the slogan where people wait, walk and ride"
-      note="An illustrated street. The words are the campaign's slogan, in English and Kikamba, and the USSD menu's dial line."
+      note="An illustrated street. The words are the campaign's slogan, in English and Kiswahili, and the USSD menu's dial line."
       source="Source: the slogan as the plan's radio script prints it; the shortcode is not yet allocated."
     >
-      <svg viewBox="0 0 640 360" className="bb" role="img" aria-label={`Illustrated Kitui street with a billboard: ${IDENTITY.slogan}. ${IDENTITY.sloganKikamba}.`}>
+      <svg viewBox="0 0 640 360" className="bb" role="img" aria-label={`Illustrated Mombasa street with a billboard: ${IDENTITY.slogan}. ${IDENTITY.sloganKiswahili}.`}>
         <rect width="640" height="360" className="bb__sky" />
         <circle cx="560" cy="64" r="26" className="bb__sun" />
         <path d="M0 250 Q160 225 320 240 T640 232 V360 H0 Z" className="bb__hill" />
@@ -161,13 +161,13 @@ export function Billboard() {
         <rect x="56" y="34" width="528" height="208" rx="6" className="bb__board" />
         <rect x="66" y="44" width="508" height="188" rx="3" className="bb__face" />
         <text x="320" y="98" textAnchor="middle" className="bb__t1">{IDENTITY.slogan}</text>
-        <text x="320" y="138" textAnchor="middle" className="bb__t2">{IDENTITY.sloganKikamba}</text>
-        <text x="320" y="182" textAnchor="middle" className="bb__t3">{IDENTITY.displayName} · Kitui 2027</text>
+        <text x="320" y="138" textAnchor="middle" className="bb__t2">{IDENTITY.sloganKiswahili}</text>
+        <text x="320" y="182" textAnchor="middle" className="bb__t3">{IDENTITY.displayName} · Mombasa 2027</text>
         <text x="320" y="212" textAnchor="middle" className="bb__t4">Dial {USSD_SHORTCODE_PLACEHOLDER} on any phone</text>
         {/* Road and a matatu */}
         <path d="M0 300 H640 V360 H0 Z" className="bb__road" />
         <path d="M20 330 H80 M140 330 H200 M260 330 H320 M380 330 H440 M500 330 H560" className="bb__lane" />
-        <g transform="translate(440 268) scale(2.4)" className="bb__matatu"><KituiIcon name="matatu" size={24} /></g>
+        <g transform="translate(440 268) scale(2.4)" className="bb__matatu"><MombasaIcon name="matatu" size={24} /></g>
       </svg>
     </ExportableVisual>
   );
@@ -191,7 +191,7 @@ export function PrintPieces() {
           <header className="pr__lhead">
             <span className="pr__name">{IDENTITY.displayName}</span>
             <span className="pr__slogan">{IDENTITY.slogan}</span>
-            <span className="pr__kik">{IDENTITY.sloganKikamba}</span>
+            <span className="pr__kik">{IDENTITY.sloganKiswahili}</span>
           </header>
           <ol className="pr__pillars">
             {PILLARS.map((p) => <li key={p.title}>{p.title}</li>)}

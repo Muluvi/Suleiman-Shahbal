@@ -2,7 +2,7 @@ import { library } from "@/lib/platform/library";
 import { PageHead } from "@/components/platform/PageHead";
 import { Library } from "@/components/platform/Library";
 
-export const metadata = { title: "Strategies and solutions | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Strategies and solutions | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default function Strategies() {
   const items = library();

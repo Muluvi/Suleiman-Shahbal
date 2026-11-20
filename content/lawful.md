@@ -13,7 +13,7 @@ Voter data is handled in a manner intended to comply with Kenya's Data Protectio
 Voter data is handled in a manner intended to comply with Kenya's Data
 Protection Act 2019, the Communications Authority framework governing political
 messaging, and IEBC regulations. This protects the campaign from legal risk and
-reinforces Dr. Makali Mulu's brand as a trustworthy, accountable leader.
+reinforces Mr Shahbal's brand as a trustworthy, accountable leader.
 
 <!-- keep -->
 **Important framing: this section describes the campaign's intended standard
@@ -36,8 +36,8 @@ notification and liability all follow controllership rather than convenience:
 kind: cards
 preset: rule
 items:
-  - title: "NG-CDF and bursary beneficiary lists are off-limits for campaign contact."
-    body: "ODPC's 2025 public sector guidance note bars the reuse of personal data collected through public programmes for **political mobilisation** without explicit, separate consent (Tier 1, ODPC). The campaign holds exactly such a dataset — the bursary record covering the {{record.bursary.recipients}} students in Section 6.1 — and it is the most tempting list in the county.\n\n**It is not used.** Not for SMS, not for WhatsApp, not for matching, not for lookalike targeting. The **project record** remains fully usable as a proof point, because a completed classroom is not personal data; the **people** in that record are not a contact list. Section 22.2 lists access to the project record for exactly that reason, and it should not be read as access to the beneficiaries."
+  - title: "County bursary and public-programme beneficiary lists are off-limits for campaign contact."
+    body: "ODPC's 2025 public sector guidance note bars the reuse of personal data collected through public programmes for **political mobilisation** without explicit, separate consent (Tier 1, ODPC). County bursary lists, health-programme registers and any other public-programme beneficiary list that reaches the campaign are the most tempting lists in the county.\n\n**They are not used.** Not for SMS, not for WhatsApp, not for matching, not for lookalike targeting. A **project record** remains usable as a proof point, because a completed classroom or water kiosk is not personal data; the **people** in a programme are not a contact list."
   - title: "The electoral guidance note applies on top of the general Act."
     body: "ODPC's *Guidance Note on Processing Personal Data for Electoral Purposes* governs anyone handling voter or party-member data, and the Data Protection Commissioner restated the consent standard publicly in **August 2026**, specifically noting that parties are expanding supporter databases (Tier 1 / Tier 2). The Section 19.2 reviewer should be pointed at both documents by name."
   - title: "Inherited lists are not used until their consent is evidenced."
@@ -151,7 +151,7 @@ language, at a permanent URL.*
 
 **Why publish it.** Because a commitment nobody can read is a policy, and a
 commitment published with a verification route is a differentiator. This is the
-"Economist Governor" proposition applied to the campaign's own conduct: it is
+"Builder Governor" proposition applied to the campaign's own conduct: it is
 the campaign holding itself to the standard it asks of the county government.
 It also has practical value — if anyone alleges bot activity or spam, a
 published charter plus a retained audit trail is an answer, not a denial.
@@ -195,9 +195,9 @@ published charter plus a retained audit trail is an answer, not a denial.
 > We segment voters by the issues that affect their lives — water, jobs,
 > markets, health, education — and by where they live. **We do not target,
 > segment or profile any voter on the basis of ethnicity, clan or religion, and
-> we will not run messaging designed to set any community in Kitui against
-> another.** We communicate in Kikamba, Kiswahili and English because that is
-> how Kitui speaks, not to divide it.
+> we will not run messaging designed to set any community in Mombasa against
+> another, coast against up-country or faith against faith.** We communicate in
+> Kiswahili and English because that is how Mombasa speaks, not to divide it.
 >
 > **7. No psychological profiling.**
 > We do not build personality or psychographic profiles of voters. We use
@@ -218,7 +218,7 @@ published charter plus a retained audit trail is an answer, not a denial.
 > to delete it, at any time, at fireflymanagement.ke@gmail.com. We will respond
 > within **14 days**.
 >
-> *Published in Kikamba, Kiswahili and English.*
+> *Published in Kiswahili and English.*
 
 **Operational backing.** Each clause maps to a control: the consent audit trail
 (clause 4), the per-send audit trail (clause 3), the deletion schedule executed

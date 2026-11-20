@@ -15,7 +15,7 @@ import { CountyStatic } from "./CountyStatic";
  *   1  the winning number        the county as ground, each ward as tall as its register
  *   2  where the votes are       the twelve largest wards rise out of the rest
  *   3  the four routes           each route's wards light in turn; Path D is named the trap
- *   4  where he has held office  Kitui Central in blue, the pool in laterite, and the scene
+ *   4  where he has held office  Mvita in blue, the pool in laterite, and the scene
  *                                ends on the equal-tile map the reader meets again below
  *
  * Each step card IS its figure: title, question, chart, takeaway, source with its tier pill, the
@@ -49,7 +49,7 @@ const N = STEPS.length;
 const clamp = (x: number) => Math.min(1, Math.max(0, x));
 
 /**
- * The wards a step lights, or null for the role colouring (Kitui Central held, the pool woven).
+ * The wards a step lights, or null for the role colouring (Mvita held, the pool woven).
  * Step 1 is the whole county, step 2 the twelve largest wards, step 3 each route in turn, step 4
  * the roles. The step card beside the map says in words what is lit, so no step is read from
  * colour alone.
@@ -119,7 +119,7 @@ export function Story() {
           <CountyStatic
             id="pf-story-static"
             className="pf-story__static"
-            label="Kitui's 40 wards: Kitui Central, where he has held office, and the pool in Mwingi and Kitui South, where he has not"
+            label="Mombasa's 30 wards: Mvita, where he has held office, and the pool in the north mainland and Changamwe, where he has not"
             {...(pinned ? litFor(step, pathIndex) : {})}
           />
         </div>

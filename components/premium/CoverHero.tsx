@@ -13,7 +13,7 @@ import { provenanceOf } from "./ProvPill";
 /**
  * The cover hero (brief §10 Cover, G-2).
  *
- * One screen: the title, the portrait, and the county drawn ward by ward, with Kitui Central in
+ * One screen: the title, the portrait, and the county drawn ward by ward, with Mvita in
  * blue and the pool in laterite; then the four figures at their true values. It adds no claim.
  *
  * It was a pinned, three-screen WebGL scene (the county in relief, morphing into the tile map).
@@ -40,7 +40,7 @@ export function CoverHero({ byline, children }: { byline?: ReactNode; children?:
         <div className="pf-hero__stage">
           <div className="pf-hero__glow" aria-hidden="true" />
           <div className="pf-hero__county">
-            <CountyStatic id="pf-hero-static" className="pf-hero__static" draw label={`Kitui's 40 wards. ${LAYERS.footprint.description}`} />
+            <CountyStatic id="pf-hero-static" className="pf-hero__static" draw label={`Mombasa's 30 wards. ${LAYERS.footprint.description}`} />
           </div>
 
           <div className="pf-hero__portrait">
@@ -51,14 +51,14 @@ export function CoverHero({ byline, children }: { byline?: ReactNode; children?:
             {byline}
             <p className="pf-seal">
               <span className="pf-seal__mark" aria-hidden="true" />
-              <strong>Built for Dr. Mulu and his team.</strong> Open to view; the team signs in to edit.
+              <strong>Built for Mr Shahbal and his team.</strong> Open to view; the team signs in to edit.
             </p>
             <h1 id="pf-hero-title" className="pf-hero__title">
-              <span className="pf-line"><span>Kitui 2027:</span></span>
+              <span className="pf-line"><span>Mombasa 2027:</span></span>
               <span className="pf-line"><span>The campaign&rsquo;s data, analysis and plan, in one place</span></span>
             </h1>
             <p className="pf-hero__sub">
-              Built by Firefly Management for Hon. Dr. Benson Makali Mulu, MP for Kitui Central and gubernatorial aspirant, Kitui County, and for his team.
+              Built by Firefly Management for Hon. Dr. Benson Suleiman Shahbal, MP for Mvita and gubernatorial aspirant, Mombasa County, and for his team.
             </p>
             {children && <div className="pf-hero__controls">{children}</div>}
           </div>

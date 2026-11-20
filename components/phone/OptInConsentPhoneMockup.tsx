@@ -22,7 +22,7 @@ export function OptInConsentPhoneMockup() {
         </h3>
         <p className="t-body text-sm text-muted mt-1">
           Simulating the campaign&apos;s strict consent architecture. Unlike standard campaigns that purchase
-          unconsented voter rolls and spam citizens, Dr. Mulu&apos;s system enforces single-touch opt-out
+          unconsented voter rolls and spam citizens, Mr Shahbal&apos;s system enforces single-touch opt-out
           with instant, irreversible list deletion.
         </p>
 
@@ -98,7 +98,7 @@ export function OptInConsentPhoneMockup() {
               /* 2G Feature Phone SMS View */
               <div className="space-y-2 text-left">
                 <div className="font-bold text-[0.6875rem] border-b border-[#12210b]/30 pb-0.5">
-                  SMS: MAKALI-2027
+                  SMS: SHAHBAL-2027
                 </div>
                 <div className="text-[0.59375rem] leading-tight">
                   Habari John. Dr. Makali policy update: Kyuso pipeline inspection completed. Reply STOP to unsubscribe.
@@ -128,7 +128,7 @@ export function OptInConsentPhoneMockup() {
                     </div>
                     <div>
                       <div className="text-xs font-bold text-white flex items-center gap-1">
-                        <span>MAKALI-2027</span>
+                        <span>SHAHBAL-2027</span>
                         <span className="text-[0.625rem] text-emerald-400">✓</span>
                       </div>
                       <div className="text-[0.59375rem] text-slate-400">Verified Political Sender ID</div>
@@ -145,7 +145,7 @@ export function OptInConsentPhoneMockup() {
                       KYUSO WARD POLICY UPDATE
                     </div>
                     <p className="text-[0.6875rem] leading-relaxed text-slate-300">
-                      Habari John. Dr. Makali Mulu campaign updates: Solar pump installation at Kyuso Market
+                      Habari John. Suleiman Shahbal campaign updates: Solar pump installation at Kyuso Market
                       has commenced. Full policy briefing at makalimulu.ke/water.
                     </p>
                     <p className="text-[0.625rem] text-slate-400 mt-2 italic border-t border-slate-800/80 pt-2">
@@ -168,7 +168,7 @@ export function OptInConsentPhoneMockup() {
                           <span>✓ NUMBER PURGED FROM CAMPAIGN LIST</span>
                         </div>
                         <p className="text-[0.6875rem] leading-relaxed text-slate-300">
-                          Confirmed: Your number has been permanently deleted from all Kitui Forward databases.
+                          Confirmed: Your number has been permanently deleted from all Mombasa Forward databases.
                           No further messages will be sent.
                         </p>
                         <div className="mt-2 pt-2 border-t border-slate-800 text-[0.5625rem] font-mono text-slate-400 flex items-center justify-between">

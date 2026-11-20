@@ -1,49 +1,34 @@
 ## 3.7 How county money is spent
 
 ```lead
-According to the Office of the Auditor-General's FY2023/24 audit report, four critical financial queries must be addressed by the county administration (Tier 1).
+Mombasa carried **KSh {{budget.pending-bills.2021|bn}} billion** in pending bills in 2024, the third-highest of any county, and **{{budget.pending-bills.aged}}%** of what it owes is more than three years old (Tier 2, the Controller of Budget as reported).
 ```
 
-**The audit record.** According to the Office of the Auditor-General's FY2023/24 audit report, four critical financial queries must be addressed by the county administration (Tier 1):
+**Pending bills.** The Controller of Budget reported Mombasa's pending bills at **KSh {{budget.pending-bills.2021|bn}} billion** in 2024, KSh 2.7 billion recurrent and KSh 1.7 billion development, the third-highest of the 47 counties (Tier 2, as reported). At 30 June 2026 the figure was about **KSh {{budget.pending-bills.2026|bn}} billion**, almost all owed by the executive, and the Controller found that neither arm kept to its payment plan (Tier 3). **{{budget.pending-bills.aged}}%** of the county's outstanding bills are more than three years old, the highest proportion in Kenya (Tier 2, Nation, reporting the Controller).
 
 ```visual
-kind: bars
-source: "Office of the Auditor-General, Kitui County FY2023/24 audit report (Tier 1)"
+kind: stats
 items:
-  - label: "unconfirmed cash balances"
-    value: "KSh {{audit.cash}}"
-    tier: 1
-  - label: "uncollected county rates, rents and local revenues"
-    value: "KSh {{audit.uncollected}}"
-    tier: 1
-  - label: "unexplained variances between the county's financial statements and the Integrated Financial Management Information System (IFMIS)"
-    value: "KSh {{audit.ifmis}}"
-    tier: 1
-  - label: "unexplained inter-account transfers"
-    value: "KSh {{audit.transfers}}"
-    tier: 1
+  - value: "KSh {{budget.pending-bills.2021|bn}}bn"
+    label: "pending bills, 2024"
+    tier: 2
+    body: "Third-highest of the 47 counties (Tier 2, Controller of Budget as reported)."
+  - value: "{{budget.pending-bills.aged}}%"
+    label: "older than three years"
+    tier: 2
+    body: "The highest proportion of aged pending bills in Kenya (Tier 2, Nation)."
+  - value: "KSh {{budget.overdraft.2026-06|m}}m"
+    label: "overdraft for June 2026 salaries"
+    tier: 3
+    body: "Borrowed from KCB to pay staff (Tier 3, as reported)."
 ```
 
-*   **Pending bills.** The Controller of Budget records outstanding pending bills of about **KSh {{budget.pending-bills.2021|bn}} billion as of FY2020/21** (Tier 1).
-*   **Development absorption.** The Controller of Budget's County Budget Implementation Review Report records **{{budget.absorption.q1}}%** in the first quarter of FY2025/26 (Tier 1). Media reports of a 5% rate are not used.
-*   **The envelope and the county's own frame.** The county runs a KSh {{budget.total|bn}} billion envelope (Tier 3, Section 1.5). Its development theme for the year is **KESTA — Accelerating Kitui Economic and Social Transformation Agenda**, with a stated priority on raising household income (Tier 1). The county government names the same goal Dr. Mulu does, so the argument is about *execution*, not direction.
+**The audit record.** The Auditor-General gave the County Executive a qualified opinion for FY2024/25 and the County Assembly an unmodified one (Tier 3, as reported). The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances {{audit.cash}}, revenue arrears {{audit.uncollected}}, payments outside IFMIS {{audit.ifmis}}.
 
-#### The county's scorecard: where the itemised money went
+**How money is split between wards.** The County Assembly passed a County Equitable Share Bill that would have shared 30% of the roughly **KSh {{budget.ward-dev|bn}} billion** annual development budget equally across the 30 wards; Speaker Aharub Khatri criticised the governor for rejecting it, and an audit found stalled projects and growing pending bills (Tier 2, The Standard). A ward-by-ward record of county spending is not yet in hand.
 
-The county's *Delivering the Kitui Promise* scorecard (August 2022 – August 2025) itemises {{scorecard.itemised}} of the {{scorecard.claimed}} projects it claims, KSh {{scorecard.itemised.ksh|bn}} billion in all (Tier 1). Summed from its own tables:
+#### The county's project record: what is in hand
 
-| Constituency | Projects | KSh, itemised (Tier 1) | KSh per registered voter (2022, calculated) |
-|---|---:|---:|---:|
-| Kitui Central | {{scorecard.kitui-central.projects}} | {{scorecard.kitui-central.ksh|m1}}m | {{scorecard.kitui-central.per-voter}} |
-| Mwingi North | {{scorecard.mwingi-north.projects}} | {{scorecard.mwingi-north.ksh|m1}}m | {{scorecard.mwingi-north.per-voter}} |
-| Kitui South | {{scorecard.kitui-south.projects}} | {{scorecard.kitui-south.ksh|m1}}m | {{scorecard.kitui-south.per-voter}} |
-| Mwingi Central | {{scorecard.mwingi-central.projects}} | {{scorecard.mwingi-central.ksh|m1}}m | {{scorecard.mwingi-central.per-voter}} |
-| Kitui East | {{scorecard.kitui-east.projects}} | {{scorecard.kitui-east.ksh|m1}}m | {{scorecard.kitui-east.per-voter}} |
-| Kitui Rural | {{scorecard.kitui-rural.projects}} | {{scorecard.kitui-rural.ksh|m1}}m | {{scorecard.kitui-rural.per-voter}} |
-| Kitui West | {{scorecard.kitui-west.projects}} | {{scorecard.kitui-west.ksh|m1}}m | {{scorecard.kitui-west.per-voter}} |
-| Mwingi West | {{scorecard.mwingi-west.projects}} | {{scorecard.mwingi-west.ksh|m1}}m | {{scorecard.mwingi-west.per-voter}} |
-| Countywide or headquarters | — | {{scorecard.countywide.ksh|m1}}m | — |
+The platform is built to read a county's own record of itemised projects, ward by ward. For Mombasa no itemised register is in hand yet: projects claimed {{scorecard.claimed}}, projects itemised {{scorecard.itemised}}. The record that would close it is the county's Annual Development Plan and annual progress report, itemised with cost, ward and status. When it is in hand, it drops straight into the ward tools and the delivery tracker (Section 15.3).
 
-**How to read it, and how not to.** It covers only the {{scorecard.itemised}} itemised projects, not the county budget and not all {{scorecard.claimed}} projects (Tier 1 as a record of what the county claims, not evidence that the claims are true). Kitui Central's figure includes the county referral hospital and town works that serve the whole county: its health spending alone is KSh {{scorecard.kitui-central.health.ksh|m1}}m of the KSh {{scorecard.health.attributed.ksh|m1}}m attributed to constituencies (Tier 1, county scorecard). The pool's four constituencies receive {{scorecard.pool.share}}% of constituency-attributed spending against {{pool.share}}% of the register, so the plan does not claim the pool was neglected. The specific gap is Mwingi West, with less than a third of Kitui Central's spending per voter and KSh {{scorecard.mwingi-west.water.ksh|m1}}m for water (Tier 1). The full list is [kitui-scorecard-projects.csv](/data/kitui-scorecard-projects.csv), and the tracker's questions are in Section 15.1.1.
-
-**What it means for the campaign.** The audit record is the evidence for Dr. Mulu's position (Chapter 9): the county's problem is not a lack of money but how it is managed, which is the discipline he has practised.
+**What it means for the campaign.** A county that borrows to pay salaries and owes suppliers for more than three years is the opening for a candidate whose case is that he pays his bills and finishes what he starts. The commitment has to be concrete: a published pending-bills schedule, paid in order, oldest first.

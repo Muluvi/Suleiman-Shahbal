@@ -15,7 +15,7 @@ const TOOL_CARDS: Record<string, CardRef> = {
   "register-growth": { type: "stat-grid", params: { set: "county" } },
   "map-studio": { type: "map", params: { layer: "voters" } },
   "zone-effort": { type: "map", params: { layer: "zones" } },
-  "drought-watch": { type: "forecast" },
+  "water-watch": { type: "forecast" },
   "county-money": { type: "receipt" },
   "ward-equity": { type: "ranked", params: { measure: "per1k" } },
   "channel-mix": { type: "pictogram", params: { set: "offline" } },

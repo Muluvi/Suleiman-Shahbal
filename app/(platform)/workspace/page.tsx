@@ -5,7 +5,7 @@ import { getSession, readStore } from "@/lib/platform/auth";
 import { teamLoginEnabled } from "@/lib/platform/config";
 import { PageHead } from "@/components/platform/PageHead";
 
-export const metadata = { title: "Workspace | Kitui 2027", robots: { index: false, follow: false } };
+export const metadata = { title: "Workspace | Mombasa 2027", robots: { index: false, follow: false } };
 
 export default async function Workspace() {
   const store = readStore();

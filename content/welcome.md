@@ -1,8 +1,8 @@
 ```lead
-**Firefly Management built this platform for Dr. Makali Mulu and his team.** One place to see Kitui's data, understand the race, test the options, decide the strategy and run the work, from a phone.
+**Firefly Management built this platform for Hon. Suleiman Shahbal and his team.** One place to see Mombasa's data, understand the race, test the options, decide the strategy and run the work, from a phone.
 ```
 
-**Firefly Management built this platform for Dr. Makali Mulu and his team.** One place to see Kitui's data, understand the race, test the options, decide the strategy and run the work, from a phone. Anyone with the link sees everything; the team signs in to edit, and Firefly keeps the platform running.
+**Firefly Management built this platform for Hon. Suleiman Shahbal and his team.** One place to see Mombasa's data, understand the race, test the options, decide the strategy and run the work, from a phone. Anyone with the link sees everything; the team signs in to edit, and Firefly keeps the platform running.
 
 ```visual
 kind: cards
@@ -27,8 +27,8 @@ kind: stepper
 title: "Your first ten minutes"
 items:
   - { label: "Read the case on one screen", text: "the gap, why it can close, and what is offered, after the platform in one view" }
-  - { label: "Open your ward", text: "voters, polling stations and projects in the Ward Dossier, under How Kitui voted" }
-  - { label: "Test the numbers", text: "move the turnout in the Winning-Number Simulator, under How Kitui voted" }
+  - { label: "Open your ward", text: "voters, polling stations and projects in the Ward Dossier, under How Mombasa voted" }
+  - { label: "Test the numbers", text: "move the turnout in the Winning-Number Simulator, under How Mombasa voted" }
   - { label: "Check this week's work", text: "the content calendar and implementation records, live inside their chapters" }
   - { label: "Take it with you", text: "any view is a link, and any table downloads as a CSV" }
 ```

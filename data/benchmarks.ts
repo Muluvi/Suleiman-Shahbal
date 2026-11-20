@@ -29,7 +29,7 @@ export interface Benchmark {
 export const PLOTTED_BENCHMARKS: Benchmark[] = withTeamEdits<Benchmark>("benchmarks", "metric", [
   {
     metric: "Share of voice",
-    definition: "% of Kitui gubernatorial mentions about Dr. Mulu",
+    definition: "% of Mombasa gubernatorial mentions about Mr Shahbal",
     benchmarkFrom: 30, benchmarkTo: 40, target: 50,
     benchmarkLabel: "30–40% for leader", targetLabel: "≥ 50%",
   },

@@ -14,9 +14,9 @@ import { fmt, val } from "../../lib/data/read";
  *
  * Every figure is DERIVED from data/ward-register.json. Nothing is typed in, which matters
  * here more than anywhere else on the site: this component is the proposal's central
- * arithmetic claim, and an earlier version had every constituency figure wrong (Mwingi North
- * 68,932 against a true 68,829; Kitui Central 78,512 against 77,764) while also substituting
- * Kitui East for Kitui West in Path D. The totals were right and the breakdowns were invented
+ * arithmetic claim, and an earlier version had every constituency figure wrong (Kisauni
+ * 68,932 against a true 68,829; Mvita 78,512 against 77,764) while also substituting
+ * Likoni for Jomvu in Path D. The totals were right and the breakdowns were invented
  * underneath them — which is exactly the failure mode "showing the working" exists to prevent.
  */
 
@@ -45,14 +45,14 @@ interface CoalitionPath {
 const PATH_DEFS: CoalitionPath[] = [
   {
     id: "pathA",
-    name: "Path A: The Northern Mwingi Triad",
+    name: "Path A: The Northern the north mainland Triad",
     code: "MWINGI CENTRAL + MWINGI NORTH + MWINGI WEST",
     tagline: "Total northern bloc consolidation",
     composition: { kind: "constituencies", ids: ["mwingi-central", "mwingi-north", "mwingi-west"] },
     strategicVerdict:
       "The northern three constituencies possess enough registered voters to meet the entire historical victory threshold on their own.",
     tacticalRequirement:
-      "Consolidating a decisive margin in Mwingi is a mathematically sufficient foundation for victory — and Mwingi is where the recognition deficit is deepest.",
+      "Consolidating a decisive margin in the north mainland is a mathematically sufficient foundation for victory — and the north mainland is where the recognition deficit is deepest.",
   },
   {
     id: "pathB",
@@ -63,7 +63,7 @@ const PATH_DEFS: CoalitionPath[] = [
     strategicVerdict:
       "Combining the home base with the county's largest southern constituency and the peri-urban west forms a contiguous coalition that clears the threshold with the widest margin of any path.",
     tacticalRequirement:
-      "Requires breaking into Kitui South, which §6.2 identifies as critical-deficit territory.",
+      "Requires breaking into Changamwe, which §6.2 identifies as critical-deficit territory.",
   },
   {
     id: "pathC",
@@ -72,7 +72,7 @@ const PATH_DEFS: CoalitionPath[] = [
     tagline: "High-density ward concentration",
     composition: { kind: "topWards", count: 12 },
     strategicVerdict:
-      "The campaign does not need to contest all 40 wards with equal resource intensity.",
+      "The campaign does not need to contest all 30 wards with equal resource intensity.",
     tacticalRequirement:
       "High-intensity micro-targeting across just these 12 high-yield wards directly engages the whole threshold.",
   },
@@ -85,7 +85,7 @@ const PATH_DEFS: CoalitionPath[] = [
     strategicVerdict:
       `A home-constituency strategy is mathematically impossible. At the certified 2022 turnout of ${FIGURES["turnout.constant"].value}% these registered voters produce only ${(FIGURES["path.d.ballots"].value as number).toLocaleString("en-KE")} ballots cast; even at an unprecedented 80% share across the entire home belt, the result falls far short.`,
     tacticalRequirement:
-      "Aggressive outward expansion into Mwingi and Kitui South is an absolute, non-negotiable arithmetic necessity.",
+      "Aggressive outward expansion into the north mainland and Changamwe is an absolute, non-negotiable arithmetic necessity.",
   },
 ];
 
@@ -251,7 +251,7 @@ export function PathTo200kCalculator() {
           </div>
           <div className="flex justify-between t-label font-mono text-muted mt-1">
             <span>0</span>
-            <span className="text-accent font-bold tabular-nums">{COUNTY_TOTAL_WARDS.toLocaleString()} Kitui registered pool</span>
+            <span className="text-accent font-bold tabular-nums">{COUNTY_TOTAL_WARDS.toLocaleString()} Mombasa registered pool</span>
             <span className="tabular-nums">{TARGET_THRESHOLD.toLocaleString()} target</span>
           </div>
         </div>

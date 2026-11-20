@@ -17,7 +17,7 @@ import { useReducedMotionSafe } from "../hooks/use-reduced-motion-safe";
  * control elsewhere on the page. Storage is wrapped, so a blocked localStorage changes nothing.
  */
 
-const EVENT = "kitui:toast";
+const EVENT = "mombasa:toast";
 const LAST = "kitui2027:last-section";
 
 /** Show a short confirmation. Safe to call from any client component. */
@@ -53,7 +53,7 @@ export function Toaster({
 }: {
   /** The section in view. */
   current: string;
-  /** "§2 How Kitui voted", for a section id. */
+  /** "§2 How Mombasa voted", for a section id. */
   labelOf: (id: string) => string | null;
   goTo: (id: string) => void;
   /** Only the flow offers to resume; a single-section page is already where its link pointed. */

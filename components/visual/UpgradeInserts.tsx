@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { LazyMount } from "../LazyMount";
 import { WardLeague } from "../dataviz/WardLeague";
 import { WardSkyline } from "../dataviz/WardSkyline";
-import { DroughtForecast, LivelihoodPrices } from "../dataviz/Livelihoods";
+import { WaterGap, WaterPrices } from "../dataviz/Livelihoods";
 import { CountyReceipt } from "../dataviz/Receipt";
 import { WinningDialBlock } from "../dataviz/WinningDialBlock";
 import { EquityHeatTable, EquityLollipop } from "../dataviz/Equity";
@@ -36,12 +36,12 @@ function Near({ h, children }: { h: number; children: ReactNode }) {
 }
 
 export const UPGRADE_INSERTS: Record<string, ReactNode> = {
-  // Kitui and its people
-  "kitui-sec-1-2": <Near h={1180}><MapStoryBlock /></Near>,
+  // Mombasa and its people
+  "mombasa-sec-1-2": <Near h={1180}><MapStoryBlock /></Near>,
   "needs-sec-1-3": <ChapterTicker chapter="needs" />,
   "needs-sec-1-5": <CountyReceipt />,
-  "needs-sec-3-2": <DroughtForecast />,
-  "needs-sec-3-6": <LivelihoodPrices />,
+  "needs-sec-3-2": <WaterGap />,
+  "needs-sec-3-6": <WaterPrices />,
   "news-sec-4-2": <RadioSetBlock />,
   "news-sec-4-4": (
     <>

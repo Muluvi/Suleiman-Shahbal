@@ -8,8 +8,8 @@ import { WeaveDefs } from "./weave";
  * (visual-first pass, October 2026): WebGL is on the brief's reject list, and the scene cost
  * ≈ 300 kB of script on the first screen of a phone on slow 4G.
  *
- *   held    Kitui Central, where he has held office: accent blue
- *   pool    Mwingi North, West, Central and Kitui South: laterite, woven
+ *   held    Mvita, where he has held office: accent blue
+ *   pool    Kisauni, West, Central and Changamwe: laterite, woven
  *   other   neutral
  *
  * `state="tiles"` draws the same wards at their tile-map positions: the end state of the morph.

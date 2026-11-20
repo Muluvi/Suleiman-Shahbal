@@ -17,7 +17,7 @@ export const FIG_1_1: FigureSpec = {
   section: "1.2",
   title: "There are about eleven months to the election, and the nomination window comes first, within weeks",
   question: "How long is there?",
-  takeaway: `The Wiper ticket is settled in a window reported for ${inSentence(NOMINATION_WINDOW.whenText)}; everything the engagement does before then is aimed at it.`,
+  takeaway: `The New Democrats ticket is settled in a window reported for ${inSentence(NOMINATION_WINDOW.whenText)}; everything the engagement does before then is aimed at it.`,
   sources: [{ name: NOMINATION_WINDOW.source, tier: NOMINATION_WINDOW.tier }, { name: "General election date: Constitution of Kenya, Article 101", tier: "T1" }],
   chart: {
     type: "timeline",
@@ -27,7 +27,7 @@ export const FIG_1_1: FigureSpec = {
     today: TODAY,
     events: [
       { date: TODAY, label: "This plan", state: "sourced", whenText: "September 2026" },
-      { ...NOMINATION, label: "Wiper nomination window", state: "sourced", reported: true, note: "Reported, not confirmed by the party." },
+      { ...NOMINATION, label: "The New Democrats nomination window", state: "sourced", reported: true, note: "Reported, not confirmed by the party." },
       { date: ELECTION, label: "General election", state: "sourced", note: "The second Tuesday of August, fixed by the Constitution." },
     ],
   },
@@ -38,7 +38,7 @@ export const FIG_1_1: FigureSpec = {
   ],
   rows: [
     { cells: { event: "This plan", when: "September 2026", tier: "—" } },
-    { cells: { event: "Wiper nomination window (reported)", when: NOMINATION.whenText, tier: NOMINATION_WINDOW.tier } },
+    { cells: { event: "The New Democrats nomination window (reported)", when: NOMINATION.whenText, tier: NOMINATION_WINDOW.tier } },
     { cells: { event: "General election", when: "10 August 2027", tier: "T1" } },
   ],
 };
@@ -67,8 +67,8 @@ const OBJECTIVES = [
     finding: "2.3", measure: "18.1", measureLabel: "R-05", serves: "3.7",
   },
   {
-    n: "5", title: "Hold the home base while Kitui Central runs its own race",
-    target: "Reach and engagement in Kitui Central at or above the Week 1 baseline",
+    n: "5", title: "Hold the home base while Mvita runs its own race",
+    target: "Reach and engagement in Mvita at or above the Week 1 baseline",
     finding: "2.7.2", measure: "1.5.3", measureLabel: "Monthly report", serves: "3.3.1",
   },
 ];

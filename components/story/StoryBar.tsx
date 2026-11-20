@@ -36,7 +36,7 @@ export function StoryBar({ onJump }: { onJump: (sectionId: string) => void }) {
       <header className="sx-bar-top print:hidden" data-hidden={visible || sheet ? "false" : "true"}>
         <div className="sx-brand">
           <a href="#section-welcome" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-            <b>Kitui 2027</b>
+            <b>Mombasa 2027</b>
           </a>
           {live?.lastChange ? (
             <button type="button" className="sx-brand__live" data-tour="live" onClick={() => onJump(FEED_HOME)}>

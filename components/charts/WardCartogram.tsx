@@ -63,7 +63,7 @@ export default function WardCartogram() {
           <span className="w-3 h-3 rounded-sm border border-line/40" style={{ background: tileBackground(1) }} />
           Lower
         </span>
-        <span>All 40 wards itemised — IEBC, 2022 register</span>
+        <span>All 30 wards itemised — IEBC, 2022 register</span>
       </div>
 
       <div className="bg-paper border border-line rounded-xl p-4 min-h-[4rem]">
