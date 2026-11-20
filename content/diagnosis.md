@@ -30,7 +30,7 @@ Where data is missing, this plan names the gap rather than filling it:
 
 1.  **Ward-level voter preference:** **not measured, and not sought.** This plan forms strategy from existing records and its own analysis only. The nearest official record is how each ward actually voted: the IEBC's ward and polling-station forms for 2013, 2017 and 2022 (Section 2.2), which the analysis uses as soon as they are in hand.
 2.  **Where his 2013 and 2017 votes were cast:** a **named data gap (Tier 1 gap).** The countywide totals are established ({{result.2013.gov.shahbal}} and {{result.2017.gov.shahbal}}, Tier 1); the constituency and ward returns (Forms 37B and 37A) are to be retrieved from the IEBC.
-3.  **The 2026 register:** a **named data gap.** The Mombasa row of the IEBC's 2026 ECVR annex is not in hand, so every figure uses the 2022 register.
+3.  **The 2026 register:** **indicative only.** IEBC reported {{register.2026.growth}} new Mombasa voters in 2025–26, giving about {{register.2026}} before deletions; the certified register is not yet published, so ward figures use 2022.
 4.  **Segment sizes:** port workers, traders, and the up-country communities are not published as voter counts by any official source. Chapter 11 gives the census context for each; none is estimated.
 
 ```figure
