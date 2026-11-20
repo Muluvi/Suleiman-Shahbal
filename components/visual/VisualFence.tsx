@@ -311,7 +311,7 @@ function ShareBars({ items, md }: { items: Item[]; md: Md }) {
 /** Mombasa icons for card sets whose titles name a channel or a theme (visual upgrade, D1). */
 const CARD_ICONS: [RegExp, MombasaIconName][] = [
   [/radio/i, "radio"], [/sms|ussd/i, "feature-phone"], [/money|agent/i, "coin"], [/market|caravan/i, "market"], [/church|clergy/i, "church"],
-  [/water/i, "jerrycan"], [/economic|agri|farm/i, "maize"], [/fiscal|money|finance/i, "coin"], [/youth|digital/i, "phone"], [/health/i, "clinic"], [/educat|school/i, "school"],
+  [/water/i, "jerrycan"], [/economic|port|jobs/i, "coin"], [/fiscal|money|finance/i, "coin"], [/youth|digital/i, "phone"], [/health/i, "clinic"], [/educat|school/i, "school"],
   [/boda|matatu|transit|route/i, "matatu"], [/baraza|gathering/i, "person"],
 ];
 function cardIcon(preset: string | undefined, it: Item): MombasaIconName | null {

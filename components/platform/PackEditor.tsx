@@ -122,7 +122,7 @@ function FigureEditor({ figures }: { figures: FigureRow[] }) {
           <p className="font-serif text-lg">{adding ? "New figure" : <span className="font-mono text-[0.95rem]">{draft.id}</span>}</p>
           {adding && (
             <>
-              <Field label="Id" hint="Lowercase words joined by dots, such as reach.mwingi-north.2027. It is how the story cites the figure.">
+              <Field label="Id" hint="Lowercase words joined by dots, such as reach.kisauni.2027. It is how the story cites the figure.">
                 <input className="plat-input font-mono" value={draft.id} onChange={(e) => set("id", e.target.value)} />
               </Field>
               <Field label="Unit">

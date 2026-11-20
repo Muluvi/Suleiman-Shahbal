@@ -4,8 +4,8 @@
  * Boundaries: Omare, B.D.A. and Omare, G.J.M. (2017), "Kenya County Assembly Boundaries",
  * digitised at 1:50,000 from the IEBC's proposed ward delimitation of 9 January 2012, CC BY 4.0
  * (github.com/benaboki/Kenya-County-Assembly-Boundaries, commit 7ee2ae5). Simplified with
- * mapshaper (22%, weighted, shapes kept) into public/geo/kitui-wards.topo.json. Provenance and
- * the spelling alias is recorded in docs/visual-premium/GEOGRAPHY.md.
+ * Douglas–Peucker (tolerance 0.0004°) and quantised into public/geo/mombasa-wards.topo.json.
+ * Ward names were matched to the 2022 register.
  *
  * Every number drawn from this module is a ward's 2022 registered voters, read from the same
  * WARD_TILES the tile map uses (data/ward-register.json, verified by verify-ward-register). The
@@ -16,16 +16,17 @@ import { feature } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import type { Feature, MultiPolygon, Polygon, Position } from "geojson";
 
-import topo from "../../public/geo/kitui-wards.topo.json" with { type: "json" };
+import topo from "../../public/geo/mombasa-wards.topo.json" with { type: "json" };
 import { WARD_TILES, GRID, type WardTile } from "../geo/wards.ts";
 
 export type WardRole = "held" | "pool" | "other";
 
-/** Constituencies where he has never held office and which together make "the pool". */
-const POOL = new Set(["mwingi-north", "mwingi-west", "mwingi-central", "kitui-south"]);
+/** The close-contest belt: the constituencies decided by fewer than 2,000 votes in 2022, "the pool". */
+const POOL = new Set(["kisauni", "nyali", "changamwe"]);
 
+/** "held" marks the Island (Mvita), the incumbent's strongest ground in 2022; the name is kept for the scene's colour code. */
 export function roleOf(t: Pick<WardTile, "constituency">): WardRole {
-  if (t.constituency === "kitui-central") return "held";
+  if (t.constituency === "mvita") return "held";
   return POOL.has(t.constituency) ? "pool" : "other";
 }
 

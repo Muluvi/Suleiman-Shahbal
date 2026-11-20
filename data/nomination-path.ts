@@ -1,23 +1,22 @@
-// Phase 5a — the nomination path. This is the single most consequential Tier 3 claim in the
-// document: the entire Phase −1 strategy is built on the premise that The New Democrats Mombasa
-// gubernatorial ticket will be settled by a party-run countywide selection rather than a
-// competitive primary, and
-// that premise is single-sourced to local digital media, not confirmed by The New Democrats itself.
+// Phase 5a — the nomination path. The Phase −1 strategy assumes The New Democrats will nominate
+// Mr Shahbal for governor without a contested primary. The party is his 2027 vehicle (its interim
+// leader since September 2026 is his son, Samir Shahbal), so the assumption is reasonable, but it
+// is reported, not confirmed by a party resolution, and is carried as such.
 import type { SourcedFigure } from "./types";
 import { LOCAL_DIGITAL_NOMINATION_REPORT } from "./sources";
 
 export const NOMINATION_METHOD_CLAIM: SourcedFigure<string> = {
-  label: "The New Democrats Mombasa gubernatorial nomination method",
-  value: "Reported as a party-run countywide selection, not a competitive primary",
+  label: "The New Democrats' Mombasa gubernatorial nomination method",
+  value: "Expected to nominate him without a contested primary",
   unit: "method",
   provenance: {
     source: LOCAL_DIGITAL_NOMINATION_REPORT,
     granularity: "county",
-    note: "Not confirmed by The New Democrats. The Phase −1 strategy assumes this reporting is accurate — if it is wrong, the phasing in Section 4.3 needs to be revisited before it is acted on.",
+    note: "Reported, not confirmed by a party resolution. The Phase −1 strategy assumes it; if the party runs a contested primary, the phasing in Section 4.3 is revisited before it is acted on.",
   },
 };
 
 export const NOMINATION_CONFIRMATION_REQUIREMENTS: string[] = [
-  "A The New Democrats National Executive Council (NEC) resolution formally adopting the selection method for the Mombasa gubernatorial nomination.",
+  "A resolution of The New Democrats' National Executive Council adopting the nomination method for the Mombasa governor's race.",
   "The party's nomination rules and timetable for 2027, as filed with the IEBC and the Office of the Registrar of Political Parties.",
 ];

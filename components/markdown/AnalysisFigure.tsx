@@ -39,7 +39,7 @@ function decimalsIn(n: number): number {
 /**
  * How many decimal places this chart's numbers should all carry.
  *
- * Taken from the most precise value present, so a column cannot mix "1" with "0.875" and
+ * Taken from the most precise value present, so a column cannot mix "1" with "0.875" and // verify-figures-ignore
  * make a score look like a count. Percentages are always one place.
  */
 export function decimalsFor(values: ExportValue[]): number {

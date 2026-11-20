@@ -43,15 +43,15 @@ export function MapStoryBlock() {
   const steps: StoryStep[] = [
     { layer: "voters", title: "Where the voters are", text: `${register.display} registered voters, and the twelve largest wards hold ${top12.display} of them. The darker the ward, the more voters.` },
     { layer: "stations", title: "Where they vote", text: `${stations.display} polling stations. They follow the people: the crowded wards carry the most.` },
-    { layer: "projects", title: "Where the county has built", text: `${projects.toLocaleString("en-KE")} itemised county projects placed on a single ward. Some wards with many voters have few.` },
-    { layer: "zones", title: "Three regions", text: "The anchor around Mombasa town, the north mainlandk to the north, and the arid belt to the east and south. Likoni sits in none." },
-    { layer: "pool", title: "Where he has never held office", text: `Kisauni, West, Central and Changamwe: ${pool.display} registered voters, ${poolShare.display} of the county.` },
+    { layer: "projects", title: "Where the county has built", text: projects ? `${projects.toLocaleString("en-KE")} itemised county projects placed on a single ward. Some wards with many voters have few.` : "No itemised county project register is in hand yet, so no ward is shaded: the map fills when the county's development plan is." },
+    { layer: "zones", title: "Three regions", text: "The Island, the north mainland across Nyali Bridge, and the west mainland along the port and the Nairobi road. Likoni, across the ferry, sits in none." },
+    { layer: "pool", title: "Where the last race was closest", text: `Kisauni, Nyali and Changamwe, each decided by under 2,000 votes in 2022: ${pool.display} registered voters, ${poolShare.display} of the county.` },
   ];
 
   return (
     <ExportableVisual
       id="map-story"
-      title="Mombasa in five maps: voters, polling stations, county projects, regions, and the pool"
+      title="Mombasa in five maps: voters, polling stations, county projects, regions, and the close-contest belt"
       note="Scroll: the map changes as each caption passes."
       figures={[register, top12, stations, pool, poolShare]}
       source="Source: IEBC 2022 register and polling-station list (Tier 1); County Government of Mombasa three-year scorecard, itemised projects placed on one ward; ward boundaries: Omare and Omare (2017), digitised from the IEBC ward delimitation, CC BY 4.0. Fifths and shares calculated by the site."

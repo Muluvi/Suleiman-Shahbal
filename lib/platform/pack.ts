@@ -150,7 +150,7 @@ function applyTo(target: Target, text: string): Applied {
     }
     case "figure-add": {
       const f = target.figure;
-      if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(f.id)) throw new Refused(["A figure id is lowercase words joined by dots, such as reach.mwingi-north.2027."]);
+      if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(f.id)) throw new Refused(["A figure id is lowercase words joined by dots, such as reach.kisauni.2027."]);
       if (FIGURES[f.id]) throw new Refused([`A figure with the id "${f.id}" already exists. Edit it instead.`]);
       const problems = figureProblems(f.id, f).map((p) => p.plain);
       if (problems.length) throw new Refused(problems);

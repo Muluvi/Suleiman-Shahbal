@@ -2,20 +2,21 @@
 
 import { LazyMount } from "../LazyMount";
 import { ProvenanceLine } from "./ProvenanceLine";
-import { COURT_OF_APPEAL_2018, IEBC_2022_RESULTS } from "../../data/sources";
+import { COURT_OF_APPEAL_2018, HIGH_COURT_2013, MEDIA_2022_DECLARATION } from "../../data/sources";
 import type { Provenance } from "../../data/types";
 import ElectoralTimelineChart, { type TimelinePoint } from "../charts/ElectoralTimelineChart";
 import { val } from "../../lib/data/read";
 
 const DATA: TimelinePoint[] = [
-  { year: "2013", winner: null, votes: null, color: "transparent" },
-  { year: "2017", winner: "Ngilu", votes: val("result.2017.gov.joho"), color: "#e31d2b" },
-  { year: "2022", winner: "Malombe", votes: val("result.2022.gov.nassir"), color: "#0056a8" },
+  { year: "2013", winner: "Joho", votes: val("result.2013.gov.joho"), color: "#e31d2b" },
+  { year: "2017", winner: "Joho", votes: val("result.2017.gov.joho"), color: "#e31d2b" },
+  { year: "2022", winner: "Nassir", votes: val("result.2022.gov.nassir"), color: "#0056a8" },
 ];
 
 const PROVENANCE: Provenance[] = [
+  { source: HIGH_COURT_2013, granularity: "county" },
   { source: COURT_OF_APPEAL_2018, granularity: "county" },
-  { source: IEBC_2022_RESULTS, granularity: "county" },
+  { source: MEDIA_2022_DECLARATION, granularity: "county" },
 ];
 
 export function ElectoralTimelineBlockContent() {
@@ -26,8 +27,8 @@ export function ElectoralTimelineBlockContent() {
         <h4 className="font-serif text-sm font-bold text-ink">Governor-Race Winner by Cycle</h4>
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
-        Two different winners across the two cycles with sourced results. 2013 is drawn as an empty gap, not a zero —
-        no sourced winner or vote total was supplied for that cycle.
+        Three cycles, two winners, both ODM. The winning total rose from 2013 to 2017 and fell by almost half in
+        2022, when turnout fell to about a third of the register.
       </p>
 
       <div className="w-full t-micro mb-4">

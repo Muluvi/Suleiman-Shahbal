@@ -101,7 +101,7 @@ export function OptInConsentPhoneMockup() {
                   SMS: SHAHBAL-2027
                 </div>
                 <div className="text-[0.59375rem] leading-tight">
-                  Habari John. Dr. Makali policy update: Kyuso pipeline inspection completed. Reply STOP to unsubscribe.
+                  Habari Amina. Shahbal policy update: Junda water hours published for this week. Reply STOP to unsubscribe.
                 </div>
                 {optedOut ? (
                   <div className="p-2 bg-[#12210b]/10 border border-[#12210b]/30 rounded text-[0.5625rem] mt-2">
@@ -142,10 +142,10 @@ export function OptInConsentPhoneMockup() {
                   {/* Campaign Broadcast Message */}
                   <div className="max-w-[88%] bg-slate-900 border border-slate-800 rounded-2xl rounded-tl-xs p-3 text-slate-200 shadow-xs">
                     <div className="text-[0.59375rem] font-mono text-emerald-400 font-bold mb-1">
-                      KYUSO WARD POLICY UPDATE
+                      JUNDA WARD POLICY UPDATE
                     </div>
                     <p className="text-[0.6875rem] leading-relaxed text-slate-300">
-                      Habari John. Suleiman Shahbal campaign updates: Solar pump installation at Kyuso Market
+                      Habari Amina. Suleiman Shahbal campaign updates: county water kiosk hours at Junda
                       has commenced. Full policy briefing at makalimulu.ke/water.
                     </p>
                     <p className="text-[0.625rem] text-slate-400 mt-2 italic border-t border-slate-800/80 pt-2">

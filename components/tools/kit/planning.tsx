@@ -47,7 +47,7 @@ export function WardCompare({ wards, total }: { wards: ToolWard[]; total: number
 /* ------------------------------------------------------------------ Constituency Scorecard */
 
 export function ConstituencyScorecard({ cons, total }: { cons: ToolConstituency[]; total: number }) {
-  const zone = { anchor: "Anchor zone", mwingi: "the north mainland zone", arid: "Arid belt", none: "In no zone" } as const;
+  const zone = { anchor: "The Island", mwingi: "North mainland", arid: "West mainland", none: "Likoni (rotating)" } as const;
   // The carousel set: one image per constituency, largest first, each numbered on the image only.
   const order = [...cons].sort((a, b) => b.voters - a.voters);
   const [slide, setSlide] = useState(1);
@@ -91,7 +91,7 @@ export function ZoneEffort({ shares, phases }: { shares: { anchor: number; mwing
   const p = phases.find((x) => x.id === phase) ?? phases[0];
   const [e, setE] = useState({ anchor: p.anchor, mwingi: p.mwingi, arid: p.arid, rotating: p.rotating });
   const sum = e.anchor + e.mwingi + e.arid + e.rotating;
-  const zones: { id: "anchor" | "mwingi" | "arid"; label: string }[] = [{ id: "anchor", label: "Anchor: Mvita, Jomvu" }, { id: "mwingi", label: "the north mainland: North, West, Central" }, { id: "arid", label: "Arid belt: Changamwe, Likoni" }];
+  const zones: { id: "anchor" | "mwingi" | "arid"; label: string }[] = [{ id: "anchor", label: "The Island: Mvita" }, { id: "mwingi", label: "North mainland: Kisauni, Nyali" }, { id: "arid", label: "West mainland: Changamwe, Jomvu" }];
   return (
     <div className="space-y-4">
       <div className="flex justify-end print:hidden"><SaveImage card={{ type: "map", params: { layer: "zones" } }} title="The three zones" /></div>

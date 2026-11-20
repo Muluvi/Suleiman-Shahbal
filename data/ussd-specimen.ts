@@ -6,26 +6,26 @@ import { val } from "../lib/data/read.ts";
 //
 // 1. THE MENU IS QUOTED, NOT WRITTEN. Every line below appears in §5.2.3.3 exactly as it is
 //    printed there, Kiswahili and English together, in that order. The document wrote a bilingual
-//    menu; the widget shows a bilingual menu.
+//    menu; the widget shows a bilingual menu. Native-speaker review signs it off before launch.
 //
 // 2. THE SHORTCODE IS A PLACEHOLDER AND STAYS ONE. §5.2.3.3 prints `*[Insert shortcode]#`, and
 //    Appendix A logs the vendor allocation as an open item owned by the campaign. Inventing a
 //    number here would be the exact failure the provenance system exists to prevent, so the
 //    widget renders the placeholder with the badge it deserves.
 //
-// The SMS side follows §4.4.10's four-stage approval chain rather than shipping vernacular copy
+// The SMS side follows §4.4.10's four-stage approval chain rather than shipping Kiswahili copy
 // as though it were finished. English is Stage 1 — a master source that can be checked against
-// the document. Kiswahili sit at Stage 2, and the chain names exactly who has to
-// clear them: a Lead Kiswahili Writer drafts, an independent reviewer reverse-translates, and a
-// native Coast elder or senior vernacular broadcaster holds mandatory sign-off. None of those
-// people has been appointed — §8.5 puts that in Phase −1 — so no Kiswahili prose is presented here
-// as final, and none is invented to fill the gap.
+// the document. Kiswahili sits at Stage 2, and the chain names exactly who has to clear it: a
+// Lead Kiswahili Writer drafts, an independent reviewer reverse-translates, and a native Mombasa
+// Kiswahili speaker or senior Coast broadcaster holds mandatory sign-off. None of those people
+// has been appointed — §8.5 puts that in Phase −1 — so no Kiswahili SMS is presented here as
+// final, and none is invented to fill the gap. Sheng is never sent by SMS.
 
-export type SpecimenLanguage = "kikamba" | "kiswahili" | "english";
+export type SpecimenLanguage = "kiswahili" | "sheng" | "english";
 
 export const SPECIMEN_LANGUAGES: { id: SpecimenLanguage; label: string; note: string }[] = [
-  { id: "kikamba", label: "Kiswahili", note: "Default. The county's first language." },
-  { id: "kiswahili", label: "Kiswahili", note: "National language." },
+  { id: "kiswahili", label: "Kiswahili", note: "Default. The county's first language." },
+  { id: "sheng", label: "Sheng", note: "Voice notes and short video only; never SMS." },
   { id: "english", label: "English", note: "Master source for drafting." },
 ];
 
@@ -35,7 +35,7 @@ export const USSD_HEADER = "MOMBASA NA SHAHBAL";
 export interface UssdOption {
   key: string;
   /** As printed: Kiswahili first, English after the slash, where the document gives both. */
-  kikamba: string | null;
+  kiswahili: string | null;
   english: string;
   /** What choosing it does, in one line. */
   does: string;
@@ -52,23 +52,23 @@ export interface UssdOption {
  * the shortcode is provisioned.
  */
 export const USSD_MENU: UssdOption[] = [
-  { key: "1", kikamba: "Sisemo sya Shahbal", english: "Shahbal's plan for my ward", does: "His plan, ward by ward." },
-  { key: "2", kikamba: "Andikithya kuvota", english: "Voter registration info", does: "Where and how to register." },
-  { key: "3", kikamba: "Ripoti wia", english: "Report a local issue", does: "Opens a report in the service-delivery tracker: the option that matters most.", crossReference: "Section 4.5" },
-  { key: "4", kikamba: "Kuthukuma", english: "Volunteer", does: "Joins the volunteer list." },
-  { key: "5", kikamba: "Kwithukiisya", english: "Get updates (opt-in)", does: "Consent to the SMS list." },
-  { key: "6", kikamba: null, english: "Kiswahili / English", does: "Switches the menu language." },
+  { key: "1", kiswahili: "Mpango wa Shahbal", english: "Shahbal's plan for my ward", does: "His plan, ward by ward." },
+  { key: "2", kiswahili: "Kujiandikisha kupiga kura", english: "Voter registration info", does: "Where and how to register." },
+  { key: "3", kiswahili: "Ripoti tatizo", english: "Report a local issue", does: "Opens a report in the service-delivery tracker: the option that matters most.", crossReference: "Section 4.5" },
+  { key: "4", kiswahili: "Jitolee", english: "Volunteer", does: "Joins the volunteer list." },
+  { key: "5", kiswahili: "Pata habari", english: "Get updates (opt-in)", does: "Consent to the SMS list." },
+  { key: "6", kiswahili: null, english: "Kiswahili / English", does: "Switches the menu language." },
 ];
 
 /** Option 1's plan items: the policy proposals the menu reads out (proposals for the campaign to decide). */
 export const PLAN_ITEMS = [
-  "Ward funds by a published, needs-weighted formula",
-  "Ksh 85/kg ndengu floor price & cold hubs",
-  "Free boda boda licenses & TVET bursaries",
+  "Water at the tap: hours and price published",
+  "Jobs that stay in Mombasa: the port and the SEZ",
+  "A county that pays its bills, oldest first",
 ];
 
-/** A menu line as the handset prints it: "1. Sisemo sya Shahbal / Shahbal's plan for my ward". */
-export const menuLine = (o: UssdOption): string => `${o.key}. ${o.kikamba ? `${o.kikamba} / ` : ""}${o.english}`;
+/** A menu line as the handset prints it: "1. Mpango wa Shahbal / Shahbal's plan for my ward". */
+export const menuLine = (o: UssdOption): string => `${o.key}. ${o.kiswahili ? `${o.kiswahili} / ` : ""}${o.english}`;
 
 /** §5.2.3.3 prints the shortcode as an unresolved placeholder. It stays one. */
 export const USSD_SHORTCODE_PLACEHOLDER = "the campaign shortcode";
@@ -90,7 +90,7 @@ export type ApprovalStage = 1 | 2 | 3 | 4;
 
 export const APPROVAL_CHAIN: { stage: ApprovalStage; title: string; who: string }[] = [
   { stage: 1, title: "English master source drafting", who: "Policy Team, verified by Legal & Economic Lead" },
-  { stage: 2, title: "Parallel adaptation (not literal translation)", who: "Lead Kiswahili Writer · Swahili/Sheng Specialist" },
+  { stage: 2, title: "Parallel adaptation (not literal translation)", who: "Lead Kiswahili Writer · Sheng Specialist" },
   { stage: 3, title: "Reverse-translation integrity audit", who: "Independent reviewer" },
   { stage: 4, title: "Kiswahili cultural sign-off & executive clearance", who: "Lead Cultural & Vernacular Communications Advisor" },
 ];
@@ -107,11 +107,10 @@ export interface SmsSpecimen {
    */
   english: string;
   /**
-   * Vernacular versions are null on purpose. §4.4.10 requires a named drafter, an independent
+   * The Kiswahili version is null on purpose. §4.4.10 requires a named drafter, an independent
    * reverse-translation audit and a native-speaker sign-off before Kiswahili copy is released,
    * and §8.5 places those appointments in Phase −1. Nothing here fills that in.
    */
-  kikamba: null;
   kiswahili: null;
 }
 
@@ -128,7 +127,7 @@ export const SMS_SPECIMENS: SmsSpecimen[] = [
     structure: "One issue, one commitment, one verification promise",
     frequency: "Weekly",
     english:
-      "Mr Shahbal: a clean audit record, and every county shilling published where you can check it. Read the record, not the promise. Reply STOP to opt out.",
+      "Mr Shahbal: water hours and the jerrican price for every ward, published each quarter. Check them, then hold him to them. Reply STOP to opt out.",
   } as SmsSpecimen,
   {
     type: "GOTV sequence",

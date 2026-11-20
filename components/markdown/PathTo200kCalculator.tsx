@@ -6,24 +6,23 @@ import { deliberate } from "../../lib/motion";
 import { Calculator, CheckCircle2, AlertTriangle, TrendingUp, Layers, ShieldAlert, Percent } from "lucide-react";
 
 import { ALL_WARDS, CONSTITUENCIES, COUNTY_TOTAL_WARDS } from "../../data/ward-register";
-import { FIGURES } from "../../lib/data/figures";
 import { fmt, val } from "../../lib/data/read";
 
 /**
- * §3.4.3 — the four structural paths to ~200,000, showing the working.
+ * §6.1 — the four structural routes to the benchmark, showing the working.
  *
- * Every figure is DERIVED from data/ward-register.json. Nothing is typed in, which matters
- * here more than anywhere else on the site: this component is the proposal's central
- * arithmetic claim, and an earlier version had every constituency figure wrong (Kisauni
- * 68,932 against a true 68,829; Mvita 78,512 against 77,764) while also substituting
- * Likoni for Jomvu in Path D. The totals were right and the breakdowns were invented
- * underneath them — which is exactly the failure mode "showing the working" exists to prevent.
+ * Every figure is DERIVED from data/ward-register.json and the turnout constant. Nothing is typed
+ * in. Each route is measured in BALLOTS — its register times the 2022 governor election turnout,
+ * carried forward — because the register is not the vote: Mombasa turned out about a third of its
+ * register in 2022, so a route's register can be three times the benchmark and still fall short.
  */
 
-/** 2022 winning total (Malombe), §5.2.4.1. The benchmark every path is measured against. */
+/** 2022 winning total (Nassir). The benchmark every path is measured against. */
 const WINNING_TOTAL_2022 = val("result.2022.gov.nassir");
-/** The round benchmark §3.4.3 states the paths against. */
+/** The round benchmark the routes are stated against. */
 const TARGET_THRESHOLD = val("benchmark");
+/** The turnout rate every route's ballots are computed at. */
+const TURNOUT = val("turnout.constant") / 100;
 
 const byId = (id: string) => {
   const c = CONSTITUENCIES.find((x) => x.id === id);
@@ -45,47 +44,47 @@ interface CoalitionPath {
 const PATH_DEFS: CoalitionPath[] = [
   {
     id: "pathA",
-    name: "Path A: The Northern the north mainland Triad",
-    code: "MWINGI CENTRAL + MWINGI NORTH + MWINGI WEST",
-    tagline: "Total northern bloc consolidation",
-    composition: { kind: "constituencies", ids: ["mwingi-central", "mwingi-north", "mwingi-west"] },
+    name: "Path A: The North Mainland",
+    code: "KISAUNI + NYALI",
+    tagline: "The largest block in the county",
+    composition: { kind: "constituencies", ids: ["kisauni", "nyali"] },
     strategicVerdict:
-      "The northern three constituencies possess enough registered voters to meet the entire historical victory threshold on their own.",
+      `The largest block in the county, decided by about a thousand votes in each constituency in 2022. Even 80% of its ballots leaves him ${fmt("path.a.at80.short")} short.`,
     tacticalRequirement:
-      "Consolidating a decisive margin in the north mainland is a mathematically sufficient foundation for victory — and the north mainland is where the recognition deficit is deepest.",
+      "No win without it, and no win on it alone: the north mainland is the core of every route that works.",
   },
   {
     id: "pathB",
-    name: "Path B: The Central-South-West Axis",
-    code: "KITUI CENTRAL + KITUI SOUTH + KITUI WEST",
-    tagline: "The southern and urban bastion",
-    composition: { kind: "constituencies", ids: ["kitui-central", "kitui-south", "kitui-west"] },
+    name: "Path B: The Island and the South",
+    code: "MVITA + LIKONI",
+    tagline: "The incumbent's strongest ground",
+    composition: { kind: "constituencies", ids: ["mvita", "likoni"] },
     strategicVerdict:
-      "Combining the home base with the county's largest southern constituency and the peri-urban west forms a contiguous coalition that clears the threshold with the widest margin of any path.",
+      "The incumbent's widest 2022 leads. Its ballots fall short of the benchmark even if every one were his.",
     tacticalRequirement:
-      "Requires breaking into Changamwe, which §6.2 identifies as critical-deficit territory.",
+      "Contested to hold the incumbent's lead down, not to carry it: traders, the public service and Likoni's ferry commuters.",
   },
   {
     id: "pathC",
-    name: "Path C: The 12 Megawards",
-    code: "TOP 12 WARDS ACROSS 6 CONSTITUENCIES",
+    name: "Path C: The 12 Largest Wards",
+    code: "TOP 12 WARDS COUNTYWIDE",
     tagline: "High-density ward concentration",
     composition: { kind: "topWards", count: 12 },
     strategicVerdict:
       "The campaign does not need to contest all 30 wards with equal resource intensity.",
     tacticalRequirement:
-      "High-intensity micro-targeting across just these 12 high-yield wards directly engages the whole threshold.",
+      "Ward captains, stage champions and the turnout operation concentrate in these twelve, where the margin is cheapest to build.",
   },
   {
     id: "pathD",
-    name: "Path D: The Home-Belt Ceiling",
-    code: "KITUI CENTRAL + KITUI WEST + KITUI RURAL",
-    tagline: "Central geography only — the isolation trap",
-    composition: { kind: "constituencies", ids: ["kitui-central", "kitui-west", "kitui-rural"] },
+    name: "Path D: The Close-Contest Belt",
+    code: "KISAUNI + NYALI + CHANGAMWE",
+    tagline: "Turnout decides it",
+    composition: { kind: "constituencies", ids: ["kisauni", "nyali", "changamwe"] },
     strategicVerdict:
-      `A home-constituency strategy is mathematically impossible. At the certified 2022 turnout of ${FIGURES["turnout.constant"].value}% these registered voters produce only ${(FIGURES["path.d.ballots"].value as number).toLocaleString("en-KE")} ballots cast; even at an unprecedented 80% share across the entire home belt, the result falls far short.`,
+      `At the 2022 turnout of ${fmt("turnout.constant")}%, these registered voters produce about ${fmt("path.d.ballots")} ballots; even 80% of them leaves him ${fmt("path.d.at80.short")} short.`,
     tacticalRequirement:
-      "Aggressive outward expansion into the north mainland and Changamwe is an absolute, non-negotiable arithmetic necessity.",
+      "At a general-election turnout the same belt carries the number: turnout, not geography, is the lever.",
   },
 ];
 
@@ -114,23 +113,25 @@ const COALITION_PATHS = PATH_DEFS.map((def) => {
       .sort((a, b) => b.voters - a.voters);
   }
 
+  const ballots = Math.round(voterPool * TURNOUT);
   return {
     ...def,
     voterPool,
+    ballots,
     wardCount,
     constituencies: parts,
     shareOfCounty: (voterPool / COUNTY_TOTAL_WARDS) * 100,
-    marginOver2022: voterPool - WINNING_TOTAL_2022,
-    marginOverBenchmark: voterPool - TARGET_THRESHOLD,
-    isViable: voterPool >= TARGET_THRESHOLD,
+    marginOver2022: ballots - WINNING_TOTAL_2022,
+    marginOverBenchmark: ballots - TARGET_THRESHOLD,
+    isViable: ballots >= TARGET_THRESHOLD,
   };
 });
 
 export function PathTo200kCalculator() {
-  const [selectedPathId, setSelectedPathId] = useState<string>("pathB");
+  const [selectedPathId, setSelectedPathId] = useState<string>("pathD");
   const selectedPath = COALITION_PATHS.find(p => p.id === selectedPathId) || COALITION_PATHS[0];
   const targetThreshold = TARGET_THRESHOLD;
-  const progressPercent = Math.min(100, (selectedPath.voterPool / targetThreshold) * 100);
+  const progressPercent = Math.min(100, (selectedPath.ballots / targetThreshold) * 100);
 
   return (
     <div className="my-6 sm:my-8 bg-card border border-line rounded-2xl shadow-sm overflow-hidden not-prose">
@@ -205,7 +206,7 @@ export function PathTo200kCalculator() {
                 {path.tagline}
               </div>
               <div className="t-small font-mono font-semibold text-muted mt-0.5">
-                {path.voterPool.toLocaleString()} voters
+                {path.ballots.toLocaleString()} ballots
               </div>
             </button>
           );
@@ -215,7 +216,7 @@ export function PathTo200kCalculator() {
       {/* Main Path Analytics Area */}
       <div className="p-4 sm:p-6 space-y-5">
         <p role="status" aria-live="polite" aria-atomic="true" className="sr-only">
-          {`${selectedPath.name}. ${selectedPath.voterPool.toLocaleString()} registered voters across ${selectedPath.wardCount} wards, ${selectedPath.shareOfCounty.toFixed(2)} percent of the county register. ${
+          {`${selectedPath.name}. ${selectedPath.voterPool.toLocaleString()} registered voters across ${selectedPath.wardCount} wards, ${selectedPath.shareOfCounty.toFixed(2)} percent of the county register: about ${selectedPath.ballots.toLocaleString()} ballots at the 2022 turnout. ${
             selectedPath.isViable
               ? `Clears the ${fmt("benchmark")} benchmark by ${selectedPath.marginOverBenchmark.toLocaleString()}.`
               : `Short of the ${fmt("benchmark")} benchmark by ${Math.abs(selectedPath.marginOverBenchmark).toLocaleString()}.`
@@ -226,7 +227,7 @@ export function PathTo200kCalculator() {
           <div className="flex items-center justify-between t-label mb-1 font-bold">
             <span className="text-ink">{selectedPath.name}</span>
             <span className="font-mono text-accent">
-              {selectedPath.voterPool.toLocaleString()} / {TARGET_THRESHOLD.toLocaleString()} ({selectedPath.shareOfCounty.toFixed(2)}% of register, {selectedPath.wardCount} wards)
+              {selectedPath.ballots.toLocaleString()} ballots / {TARGET_THRESHOLD.toLocaleString()} ({selectedPath.voterPool.toLocaleString()} registered, {selectedPath.wardCount} wards)
             </span>
           </div>
           <div className="h-3.5 bg-paper border border-line rounded-full overflow-hidden p-0.5 relative">
@@ -242,7 +243,7 @@ export function PathTo200kCalculator() {
                   : "bg-gradient-to-r from-accent to-rose-500"
               }`}
             />
-            {/* 200k Marker */}
+            {/* 2022 winning total marker */}
             <div
               className="absolute top-0 bottom-0 w-0.5 bg-ink/70 z-10"
               style={{ left: `${(WINNING_TOTAL_2022 / TARGET_THRESHOLD) * 100}%` }}
@@ -251,7 +252,7 @@ export function PathTo200kCalculator() {
           </div>
           <div className="flex justify-between t-label font-mono text-muted mt-1">
             <span>0</span>
-            <span className="text-accent font-bold tabular-nums">{COUNTY_TOTAL_WARDS.toLocaleString()} Mombasa registered pool</span>
+            <span className="text-accent font-bold tabular-nums">Ballots at {fmt("turnout.constant")}% turnout</span>
             <span className="tabular-nums">{TARGET_THRESHOLD.toLocaleString()} target</span>
           </div>
         </div>
@@ -303,7 +304,7 @@ export function PathTo200kCalculator() {
       <div className="p-3 bg-paper/60 border-t border-line t-small text-muted flex items-center justify-between px-4 font-semibold">
         <span className="flex items-center gap-1">
           <Percent size={12} className="text-accent" />
-          <span>The benchmark: the 2022 winning tally, {fmt("result.2022.gov.nassir")} (IEBC Form 37C), rounded to {fmt("benchmark")}. There is no fixed threshold: the most votes wins.</span>
+          <span>The benchmark: the 2022 winning tally, {fmt("result.2022.gov.nassir")} (as declared, Tier 2), rounded to {fmt("benchmark")}. There is no fixed threshold: the most votes wins.</span>
         </span>
       </div>
     </div>

@@ -16,29 +16,28 @@ import { ExportableVisual } from "../visual/ExportableVisual";
 const LINES = [
   { id: "budget.equitable", label: "Equitable share from the national government" },
   { id: "budget.osr", label: "Own-source revenue collected in Mombasa" },
-  { id: "budget.grants", label: "Grants" },
-  { id: "budget.rounding", label: "Rounding in the published total" },
+  { id: "budget.grants", label: "Grants, loans and balances brought forward" },
 ] as const;
 
 export function CountyReceipt() {
   const pop = figure("census.population").value ?? 1;
   const per = (id: string) => (figure(id).value ?? 0) / pop;
   const shs = (n: number) => `${n < 0 ? "−" : ""}KSh ${group(Math.abs(n))}`;
-  const total = resolveFigure({ id: "budget.total", label: "Budget envelope, FY2026/27", mod: "bn", prefix: "KSh ", suffix: "bn" });
+  const total = resolveFigure({ id: "budget.total", label: "Budget, FY2025/26", mod: "bn", prefix: "KSh ", suffix: "bn" });
   const popFig = resolveFigure({ id: "census.population", label: "residents, 2019 census" });
   const parts = LINES.map((l) => resolveFigure({ id: l.id, label: l.label }));
   return (
     <ExportableVisual
       id="county-receipt"
       title={`The county's budget comes to ${shs(per("budget.total"))} for every resident`}
-      note={`The FY2026/27 envelope of ${total.display}, divided by ${popFig.display} residents.`}
+      note={`The FY2025/26 budget of ${total.display}, divided by ${popFig.display} residents.`}
       figures={[total, ...parts, popFig]}
       card={{ type: "receipt" }}
     >
       <div className="rc" role="table" aria-label="County budget per resident, itemised">
         <p className="rc__head" aria-hidden="true">
-          <span>KITUI COUNTY</span>
-          <span>Budget, FY2026/27</span>
+          <span>MOMBASA COUNTY</span>
+          <span>Budget, FY2025/26</span>
           <span>per resident</span>
         </p>
         <div role="rowgroup">

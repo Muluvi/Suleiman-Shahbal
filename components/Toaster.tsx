@@ -18,7 +18,7 @@ import { useReducedMotionSafe } from "../hooks/use-reduced-motion-safe";
  */
 
 const EVENT = "mombasa:toast";
-const LAST = "kitui2027:last-section";
+const LAST = "mombasa2027:last-section";
 
 /** Show a short confirmation. Safe to call from any client component. */
 export function announce(message: string) {

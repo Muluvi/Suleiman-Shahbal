@@ -31,8 +31,8 @@ const TOPIC_WORD: Record<string, string> = {
   ward: "Wards", con: "Constituencies", register: "Register", result: "Election results", census: "Census",
   budget: "County budget", audit: "Audit", target: "Targets", reach: "Reach", segment: "Segments",
   ict: "Connectivity", zone: "Zones", path: "Routes to the benchmark", benchmark: "Benchmark", channel: "Channels",
-  effort: "Effort", livestock: "Livestock", water: "Water", food: "Food security", health: "Health",
-  record: "His record", scorecard: "County scorecard", policy: "Policy proposals", ngcdf: "NG-CDF",
+  effort: "Effort", water: "Water", price: "Prices", poverty: "Poverty", health: "Health", sub: "Sub-counties",
+  record: "His record", scorecard: "County scorecard", policy: "Policy proposals", turnout: "Turnout",
 };
 const topicOf = (id: string) => id.split(".")[0];
 const topicWord = (t: string) => TOPIC_WORD[t] ?? t.charAt(0).toUpperCase() + t.slice(1).replace(/-/g, " ");

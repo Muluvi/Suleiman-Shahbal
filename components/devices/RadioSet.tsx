@@ -58,7 +58,7 @@ export function RadioSet({ stations, slogan, sloganKiswahili }: { stations: Radi
         <dl className="rs__facts">
           <div><dt>Ownership</dt><dd>{s.alignment}</dd></div>
           <div><dt>The plan says</dt><dd>{s.posture}</dd></div>
-          <div><dt>Listener share</dt><dd>{s.share ? `${s.share} of Lower Eastern listeners (Tier 2)` : "Not measured"} · {s.reachLabel}</dd></div>
+          <div><dt>Listener share</dt><dd>{s.share ? `${s.share} of Coast listeners (Tier 2)` : "Not measured"} · {s.reachLabel}</dd></div>
           <div><dt>Starting plan</dt><dd>{s.spots ? `${s.spots} spots a week` : "No spots: not a placement target"}</dd></div>
         </dl>
         <p className="rs__cap"><span className="rs__capk">Caption</span> {slogan} · <i>{sloganKiswahili}</i></p>

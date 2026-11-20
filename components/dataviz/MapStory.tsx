@@ -9,7 +9,7 @@ import { useReducedMotionSafe } from "../../hooks/use-reduced-motion-safe";
  *
  * The county's real ward boundaries stay pinned while short captions scroll past; each caption
  * swaps the layer (voters, polling stations, county projects, the zones) and the last one closes in
- * on the pool, where he has never held office. Layers crossfade and the camera moves by transform
+ * on the close-contest belt, where the 2022 race was decided by under 2,000 votes. Layers crossfade and the camera moves by transform
  * only. Under reduced motion nothing is pinned or scrubbed: every step is drawn as its own small map
  * beside its caption, which is the story's true final state.
  */
@@ -37,13 +37,13 @@ function Legend({ layer }: { layer: StoryStep["layer"] }) {
   if (layer === "zones")
     return (
       <p className="ms__legend">
-        <span className="ms-key ms-z--anchor" /> anchor <span className="ms-key ms-z--mwingi" /> the north mainland <span className="ms-key ms-z--arid" /> arid belt <span className="ms-key ms-z--none" /> in no zone
+        <span className="ms-key ms-z--anchor" /> the Island <span className="ms-key ms-z--mwingi" /> north mainland <span className="ms-key ms-z--arid" /> west mainland <span className="ms-key ms-z--none" /> Likoni (rotating)
       </p>
     );
   if (layer === "pool")
     return (
       <p className="ms__legend">
-        <span className="ms-key ms-pool" /> never held office
+        <span className="ms-key ms-pool" /> close-contest belt
       </p>
     );
   return (

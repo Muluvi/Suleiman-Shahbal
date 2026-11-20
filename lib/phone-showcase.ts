@@ -52,20 +52,21 @@ export const CHANNEL_LABELS: Record<ChannelId, string> = {
 
 /**
  * Derived from the candidate's name and office as the proposal states them
- * ("Hon. Dr. Benson Suleiman Shahbal, PhD (Economics), CBS, Member of Parliament, Mvita").
- * Identity, not a claim — no account is asserted to exist.
+ * ("Hon. Suleiman Shahbal, former Member of the East African Legislative Assembly").
+ * Identity, not a claim — no account is asserted to exist; the handle is the one the Week 1
+ * channel audit confirms, and stays a placeholder until then.
  */
 export const IDENTITY = {
   displayName: "Suleiman Shahbal",
-  fullName: "Hon. Dr. Benson Suleiman Shahbal",
-  office: "MP, Mvita",
-  handle: "@MakaliMulu",
+  fullName: "Hon. Suleiman Shahbal",
+  office: "Former Member, EALA",
+  handle: "@ShahbalForMombasa",
   pageName: "Suleiman Shahbal — Mombasa 2027",
   channelName: "Suleiman Shahbal",
-  initials: "MM",
-  /** §5.2.1.2 radio script, the campaign's only slogan line. */
-  slogan: "The Proven Economist, The Trusted Leader",
-  sloganKiswahili: "Muvisi Mũlũngalu, Mwĩkĩi wa Wathi",
+  initials: "SS",
+  /** §11 radio script, the campaign's only slogan line. */
+  slogan: "The builder. He finishes what he starts.",
+  sloganKiswahili: "Mjenzi. Anayemaliza anachoanza.",
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -135,8 +136,8 @@ export interface WhatsAppMessage {
 }
 
 export const WHATSAPP = {
-  contactName: "Mbitini Ward Captains",
-  contactStatus: "40 Ward Captains",
+  contactName: "Junda Ward Captains",
+  contactStatus: "10 Ward Captains",
   dateDivider: "TODAY",
   /**
    * §8.8.2's four-hour loop describes exactly this dispatch: a localized pledge, then a 45-second
@@ -147,9 +148,9 @@ export const WHATSAPP = {
     {
       from: "campaign",
       kind: "text",
-      text: "Likoni / Mbitini: Mr Shahbal will fund wards by need, on one published formula. Solar water to Mbitini Market first. Reply 1 to join, STOP to opt out.",
+      text: "Kisauni / Junda: Mr Shahbal will publish every ward's water hours and the jerrican price, every quarter. Reply 1 to join, STOP to opt out.",
       time: "07:12",
-      source: "Direct 2G Bulk SMS copy sample, verbatim",
+      source: "Pillar 1, Water at the tap (Section 10.1), cut to SMS length",
     },
     {
       from: "resident",
@@ -172,19 +173,19 @@ export const WHATSAPP = {
 export const FACEBOOK = {
   audience: "Public",
   timestamp: "2h",
-  /** §7.1.1 Pillar 3, narrative statement, cut to post length. */
+  /** Section 10.1 Pillar 3, cut to post length. */
   body: {
     value:
-      "Development in Mombasa must no longer depend on which ward voted for the Governor. Mr Shahbal guarantees an institutionalized Ward Development Equalization Fund of Ksh 100 Million per ward, every year.",
-    source: "§7.1.1 [CHECK REF] Pillar 3 — Devolution Equity, narrative statement",
+      "The County Assembly voted to share 30% of the development budget equally across the 30 wards. The governor rejected it. Mr Shahbal backs a ward development share every ward can check.",
+    source: "Section 10.1, The ward fund, settled — cut to post length",
   } as Sourced<string>,
-  /** §7.1.1 Pillar 3, Tier 1 proof point — the card under the post. */
+  /** Section 3.7, the Tier 2 proof point under the post. */
   card: {
     value: {
-      kicker: "CIDP III — Tier 1",
-      headline: "Over 61% of rural Mombasa households still walk more than 5 km for water in dry seasons",
+      kicker: "Controller of Budget — Tier 2",
+      headline: "98% of Mombasa's unpaid county bills are more than three years old, the highest share in Kenya",
     },
-    source: "§7.1.1 [CHECK REF] Pillar 3 — Mombasa County Integrated Development Plan proof point",
+    source: "Section 3.7 — pending bills, as reported from the Controller of Budget",
   } as Sourced<{ kicker: string; headline: string }>,
   /** No comment copy exists anywhere in the proposal. */
   commentPreview: { gap: "Comment preview" } as Fillable<string>,
@@ -192,15 +193,15 @@ export const FACEBOOK = {
 
 export const X_POST = {
   timestamp: "4h",
-  /** §7.1.1 Pillar 1, evidence lines, cut to post length. */
+  /** Section 10.1 Pillar 3, evidence lines, cut to post length. */
   body: {
     value:
-      "Mvita NG-CDF: the Auditor-General's opinion for every year, 2013–2025, published in full.\n\nMombasa County: KSh 1.3 billion in pending bills at FY2020/21 (Controller of Budget).\n\nThe record is public. Read it.",
-    source: "§10.1 Pillar 1 — the NG-CDF opinions are quoted as each report states them once retrieved; the pending-bills figure is Tier 1",
+      "Mombasa County: KSh 3.8 billion in pending bills at 30 June 2026, and an overdraft to pay June's salaries.\n\nPay the oldest bills first, and publish the list.\n\nThe record is public. Read it.",
+    source: "Section 3.7 — pending bills and the overdraft, Tier 3, as reported from the Controller of Budget",
   } as Sourced<string>,
   mediaLabel: {
-    value: "Auditor-General — Mvita NG-CDF audit opinions, 2013–2025",
-    source: "§7.1.1 [CHECK REF] Pillar 1 — Tier 1 proof point",
+    value: "Controller of Budget — Mombasa pending bills, FY2025/26",
+    source: "Section 3.7 — proof point",
   } as Sourced<string>,
 } as const;
 
@@ -212,38 +213,38 @@ export const INSTAGRAM = {
   location: "Mombasa County",
   timestamp: "6 hours ago",
   slideCount: 3,
-  /** §8.3.1 Pillar B, core theme, cut to caption length. */
+  /** Section 10.1 Pillar 1, cut to caption length. */
   caption: {
     value:
-      "Ksh 85 per kilo floor price for ndengu. County aggregation cold-storage hubs. Solar borehole irrigation. Livestock feed reserves.",
-    source: "§8.3.1 [CHECK REF] Pillar B — The Agrarian & Household Wealth Engine, core theme",
+      "A jerrican from a vendor costs KSh 30. At a county source, KSh 5. Water at the tap, a price ceiling at county kiosks, and the losses published every quarter.",
+    source: "Section 10.1 Pillar 1, Water at the tap; prices from Section 3.1 (Tier 2)",
   } as Sourced<string>,
   captionTitle: {
-    value: "Ũtonga wa Mĩsyĩ na Mĩũnda",
-    source: "§8.3.1 [CHECK REF] Pillar B — Kiswahili pillar name, verbatim",
+    value: "Maji Mferejini",
+    source: "Pillar 1 name in Kiswahili, pending native-speaker review",
   } as Sourced<string>,
   cardHeadline: {
-    value: "Ksh 85 / kg",
-    source: "§8.3.1 [CHECK REF] Pillar B — guaranteed minimum floor price for ndengu",
+    value: "KSh 30 vs KSh 5",
+    source: "Section 3.1 — a 20-litre jerrican, vendor against county source (Tier 2)",
   } as Sourced<string>,
   cardSub: {
-    value: "Guaranteed ndengu floor price",
-    source: "§8.3.1 [CHECK REF] Pillar B — core theme",
+    value: "One jerrican, two prices",
+    source: "Section 10.1 Pillar 1",
   } as Sourced<string>,
 } as const;
 
 export const TIKTOK = {
   tabs: ["Following", "For You"],
   activeTab: "For You",
-  /** §8.3.1 Pillar D, core theme, cut to caption length. */
+  /** Section 10.1 Pillar 2, cut to caption length. */
   caption: {
     value:
-      "Zero-interest equipment loans. Fee waivers for artisan TVET courses. Boda boda dignity.",
-    source: "§8.3.1 [CHECK REF] Pillar D — The Youth Enterprise & TVET Frontier, core theme",
+      "The port moves the country's cargo. More of its value should stay in Mombasa, as jobs for the young people who live beside it.",
+    source: "Section 10.1 Pillar 2, Jobs that stay in Mombasa",
   } as Sourced<string>,
   overlayTitle: {
-    value: "Mwanya wa Mwanake na Wathi",
-    source: "§8.3.1 [CHECK REF] Pillar D — Kiswahili pillar name, verbatim",
+    value: "Kazi Zibaki Mombasa",
+    source: "Pillar 2 name in Kiswahili, pending native-speaker review",
   } as Sourced<string>,
   /** A hashtag is new coinage, not a reshaping of existing copy. None exist in the proposal. */
   hashtags: { gap: "Hashtags" } as Fillable<string[]>,
@@ -252,23 +253,23 @@ export const TIKTOK = {
 } as const;
 
 export const YOUTUBE = {
-  /** §8.3.1 Pillar A, core theme, pulled into a title. */
+  /** Section 10.4, content type P2 ("He built it, go and see"), pulled into a title. */
   title: {
     value:
-      "The Integrity & Stewardship Ledger: 13 years of Mvita NG-CDF audits, opened up",
-    source: "§8.3.1 [CHECK REF] Pillar A — core theme and primary formats (documentary video case studies)",
+      "He built it, go and see: the Jomvu SEZ site, and the jobs it projects",
+    source: "Section 10.4 content type P2; the SEZ figures are Section 3.8 (Tier 2, a projection)",
   } as Sourced<string>,
   /** §2.6 — YouTube's stated role in the channel mix. */
   descriptionLine: {
-    value: "Long-form debates, church sermons and rally livestreams.",
+    value: "Long-form debates, site visits and rally livestreams.",
     source: "YouTube strategic role",
   } as Sourced<string>,
   duration: "18:24",
   publishedAgo: "2 days ago",
   subscribeLabel: "Subscribe",
   thumbnailKicker: {
-    value: "Every audit opinion, year by year",
-    source: "§15.1.2 Pillar A — core theme",
+    value: "What is there now, and what is promised",
+    source: "Section 10.4 content type P2",
   } as Sourced<string>,
 } as const;
 
@@ -311,9 +312,9 @@ export const USSD = {
 export type WhatsAppView = "lock" | "chat" | "status" | "channel";
 export const WHATSAPP_VIEWS: { id: WhatsAppView; label: string; summary: string }[] = [
   { id: "lock", label: "Lock screen", summary: "The lock screen of a ward captain's phone: the ward group, the pledge and a registration text waiting." },
-  { id: "chat", label: "Chat", summary: "A WhatsApp thread to the Mbitini ward captains carrying the ward pledge message and a voice note from Mr Shahbal." },
+  { id: "chat", label: "Chat", summary: "A WhatsApp thread to the Junda ward captains carrying the water pledge and a voice note from Mr Shahbal." },
   { id: "status", label: "Status", summary: "A WhatsApp Status carrying the campaign's slogan, in English and Kiswahili." },
-  { id: "channel", label: "Channel", summary: "A WhatsApp Channel post on the Ward Development Equalization Fund, the devolution-equity pillar." },
+  { id: "channel", label: "Channel", summary: "A WhatsApp Channel post on the ward development share, from the pillar on a county that pays its bills." },
 ];
 
 /**
@@ -357,7 +358,7 @@ export const WHATSAPP_CHANNEL = {
  *
  * The "after" is the ward pledge, verbatim. The "before" is NOT a real post: it is written for this
  * comparison to have the shape the finding describes ("a record of where he was, with no ward named
- * outside Mvita and no ask"), and it is labelled so wherever it is shown.
+ * outside the Island and no ask"), and it is labelled so wherever it is shown.
  */
 export const BEFORE_AFTER = {
   before: {
@@ -371,9 +372,9 @@ export const BEFORE_AFTER = {
     text: WHATSAPP.thread[0].text,
     note: "The campaign's ward pledge, word for word.",
     checks: {
-      segment: "Residents who want water",
-      ward: "Mbitini, Likoni",
-      pillar: "Fair devolution, water for all",
+      segment: "Women & household managers",
+      ward: "Junda, Kisauni",
+      pillar: "Water at the tap",
       ask: "Reply 1 to join",
     },
   },
@@ -392,16 +393,16 @@ export const DISCLOSURE =
 /** What each screen is, for assistive technology and for the caption under the rail. */
 export const CHANNEL_SUMMARY: Record<ChannelId, string> = {
   whatsapp:
-    "A WhatsApp thread to the Mbitini ward captains carrying the ward pledge message and a voice note from Mr Shahbal.",
+    "A WhatsApp thread to the Junda ward captains carrying the water pledge and a voice note from Mr Shahbal.",
   facebook:
-    "A Facebook page post on the Ward Development Equalization Fund, with the water-access proof point beneath it.",
+    "A Facebook page post on the ward development share, with the pending-bills proof point beneath it.",
   instagram:
-    "An Instagram carousel card on the guaranteed ndengu floor price, from the agrarian content pillar.",
+    "An Instagram carousel card on the price of a jerrican, from the water pillar.",
   tiktok:
-    "A vertical TikTok clip on youth enterprise and TVET, from the youth content pillar.",
+    "A vertical TikTok clip on port jobs for young people, from the jobs pillar.",
   youtube:
-    "A YouTube feature on the Mvita NG-CDF audit record, from the integrity content pillar.",
-  x: "An X post contrasting the Mvita NG-CDF audit record with county pending bills.",
+    "A YouTube feature from the Jomvu SEZ site, the builder's proof.",
+  x: "An X post on the county's pending bills and the salary overdraft.",
   ussd:
     "The zero-rated USSD menu on a feature phone — the channel that reaches the offline majority.",
 };

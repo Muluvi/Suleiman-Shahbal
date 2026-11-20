@@ -99,8 +99,9 @@ export function assertExportIntegrity(exports: Record<string, ExportChart> = ANA
     if (chart.id !== id) {
       throw new Error(`Analysis export integrity failure: ${id} declares id "${chart.id}".`);
     }
-    if (chart.values.length === 0) {
-      throw new Error(`Analysis export integrity failure: ${id} carries no values.`);
+    // An empty export is allowed only when it names its gap in a note (scripts/verify-analysis-exports.mjs).
+    if (chart.values.length === 0 && !(chart.notes ?? []).some((n) => /data needed|not in hand|named gap/i.test(n))) {
+      throw new Error(`Analysis export integrity failure: ${id} carries no values and names no gap.`);
     }
     for (const v of chart.values) {
       if (!METHODS.has(v.method)) {

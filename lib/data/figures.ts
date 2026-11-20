@@ -476,6 +476,7 @@ target("target.contact-universe.standard", 150_000, "count", "Realistic Phase 3 
 target("target.contact-universe.premium", 250_000, "count", "Realistic Phase 3 contact universe at Level 3.", { source: T_FIREFLY });
 target("target.content.first", 100, "count", "Pieces of content approved and scheduled in Phase 0.", { source: T_FIREFLY });
 target("target.captains", 300, "count", "Ward captains, 10 per ward: a campaign-owned recommendation.", { source: T_CAMPAIGN });
+target("target.coordinators", 30, "count", "Ward coordinators, one per ward: a campaign-owned recommendation.", { source: T_CAMPAIGN });
 target("target.captains.pool", 170, "count", "Of the 300 captains, those recommended for the pool's 17 wards: campaign-owned.", { source: T_CAMPAIGN });
 target("target.ambassadors", 600, "count", "M-Pesa 'Economic Ambassadors', 20 per ward: a campaign-owned recommendation.", { source: T_CAMPAIGN });
 target("target.stage-champions", 900, "count", "Boda-boda and tuk-tuk Stage Champions, 30 per ward: a campaign-owned recommendation.", { source: T_CAMPAIGN });

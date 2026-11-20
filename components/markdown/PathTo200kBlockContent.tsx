@@ -2,7 +2,7 @@
 
 import { LazyMount } from "../LazyMount";
 import { ProvenanceLine } from "./ProvenanceLine";
-import { ALL_WARDS, MWINGI_BLOC_TOTAL, CONSTITUENCIES } from "../../data/ward-register";
+import { ALL_WARDS, POOL_TOTAL, CONSTITUENCIES } from "../../data/ward-register";
 import { IEBC_WARD_REGISTER } from "../../data/sources";
 import type { Provenance } from "../../data/types";
 import PathTo200kChart, { type PathPoint } from "../charts/PathTo200kChart";
@@ -10,16 +10,15 @@ import { fmt, val } from "../../lib/data/read";
 
 const WIN_THRESHOLD = val("benchmark"); // the 2022 winning total, rounded for KPI-setting (registry: benchmark)
 const PROVENANCE: Provenance = { source: IEBC_WARD_REGISTER, granularity: "ward" };
+const POOL_BALLOTS = Math.round((POOL_TOTAL * val("turnout.constant")) / 100);
 
 const CONSTITUENCY_COLORS: Record<string, string> = {
-  "kitui-central": "#0056a8",
-  "kitui-south": "#e31d2b",
-  "mwingi-central": "#0891b2",
-  "mwingi-north": "#22d3ee",
-  "kitui-east": "#b45309",
-  "kitui-west": "#15803d",
-  "mwingi-west": "#6d28d9",
-  "kitui-rural": "#8295a9",
+  kisauni: "#e31d2b",
+  nyali: "#0891b2",
+  changamwe: "#b45309",
+  mvita: "#0056a8",
+  jomvu: "#15803d",
+  likoni: "#6d28d9",
 };
 
 const SORTED = [...ALL_WARDS].sort((a, b) => b.voters - a.voters);
@@ -45,9 +44,10 @@ export function PathTo200kBlockContent() {
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
         All 30 wards, ranked descending by register size (bars, coloured by constituency) with the cumulative running
-        total (line) against the ~{fmt("benchmark")}-vote benchmark. <strong className="text-ink">The three the north mainland
-        constituencies alone total {MWINGI_BLOC_TOTAL.toLocaleString()}</strong> — the threshold is reachable from
-        that bloc on its own, a real targeting finding.
+        total (line) against the ~{fmt("benchmark")}-vote benchmark. <strong className="text-ink">The close-contest belt
+        (Kisauni, Nyali, Changamwe) holds {POOL_TOTAL.toLocaleString()} registered voters</strong>, but at the 2022
+        turnout of {fmt("turnout.constant")}% that is only about {POOL_BALLOTS.toLocaleString()} ballots: the register is
+        not the vote, and turnout decides whether the belt can carry the number.
       </p>
 
       <div className="flex flex-wrap gap-x-3 gap-y-1 mb-3 pl-4">

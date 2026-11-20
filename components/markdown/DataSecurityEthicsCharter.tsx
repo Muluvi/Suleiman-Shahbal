@@ -195,7 +195,7 @@ export function DataSecurityEthicsCharter() {
       <div className="p-3 bg-paper/60 border-t border-line t-small text-muted flex items-center justify-between px-4 font-semibold">
         <span className="flex items-center gap-1">
           <Scale size={12} className="text-accent" />
-          <span>Legal Doctrine: High ethical standards protect Mr Shahbal&apos;s brand as a disciplined economist while eliminating regulatory liability under the ODPC and IEBC.</span>
+          <span>Legal Doctrine: High ethical standards protect Mr Shahbal&apos;s brand as a builder who keeps his word, while eliminating regulatory liability under the ODPC and IEBC.</span>
         </span>
       </div>
     </div>

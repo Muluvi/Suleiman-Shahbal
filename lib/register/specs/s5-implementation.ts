@@ -79,8 +79,8 @@ export const FIG_5_2: FigureSpec = {
 
 const WEEKS = [
   { when: "Week 1", title: "The presence audit", body: "Ninety days of his channels; the Page-or-profile question; 2FA applied by your team." },
-  { when: "Weeks 1–2", title: "Foundations", body: "Capability map, compliance review commissioned, Kiswahili reviewer confirmed; the six profile fixes shipped." },
-  { when: "Weeks 2–6", title: "First directed cycles", body: `The weekly brief from Week 2; output weighted ${fmt("effort.p-1.mwingi")}% the north mainland, ${fmt("effort.p-1.arid")}% arid belt, ${fmt("effort.p-1.anchor")}% anchor, ${fmt("effort.p-1.rotating")}% testing; SMS opt-in drive.` },
+  { when: "Weeks 1–2", title: "Foundations", body: "Capability map, compliance review commissioned, Kiswahili reviewer confirmed; the six profile checks shipped." },
+  { when: "Weeks 2–6", title: "First directed cycles", body: `The weekly brief from Week 2; output weighted ${fmt("effort.p-1.mwingi")}% the north mainland, ${fmt("effort.p-1.arid")}% the west mainland, ${fmt("effort.p-1.anchor")}% the Island, ${fmt("effort.p-1.rotating")}% Likoni and testing; SMS opt-in drive.` },
   { when: "Weeks 6–8", title: "Consolidation", body: "Coalition roundtables; ward champions in the highest-priority wards." },
 ];
 
@@ -89,7 +89,7 @@ export const FIG_5_3: FigureSpec = {
   section: "4.2.1",
   title: "The first week measures, and nothing is committed against the diagnosis until it has",
   question: "What happens in the first four weeks?",
-  takeaway: "Week 1 is the audit; the brief starts in Week 2, weighted to the pool, and the six fixes ship by the end of it.",
+  takeaway: "Week 1 is the audit; the brief starts in Week 2, weighted to the pool, and the six profile checks ship by the end of it.",
   sources: [PROPOSAL, { name: "The audit runs on his Insights export, Week 1", tier: null, state: "target" }],
   chart: {
     type: "composite",
@@ -208,8 +208,8 @@ const CADENCE: [string, string[]][] = [
 ];
 const LEVELS: [string, string, string, string][] = [
   ["Presence audit", "Once, at start", "Refreshed monthly", "Refreshed fortnightly"],
-  ["Wards with reach reporting", "12 decisive", "All 40", "All 40 + diaspora"],
-  ["Wards with active SMS/USSD", "Partial", "All 40", "All 40 + diaspora"],
+  ["Wards with reach reporting", "12 decisive", "All 30", "All 30 + diaspora"],
+  ["Wards with active SMS/USSD", "Partial", "All 30", "All 30 + diaspora"],
   ["Creative testing", "Monthly", "Weekly", "Weekly"],
   ["Predictive scoring and attribution", "No", "Yes", "Yes"],
   ["Phase 3 contact universe", `≈${fmt("target.contact-universe.lean")}`, `≈${fmt("target.contact-universe.standard")}`, `≈${fmt("target.contact-universe.premium")}`],

@@ -3,13 +3,13 @@ import type { Transition, Variants } from "motion/react";
 /**
  * ===========================================================================
  * MOTION TOKEN LAYER — CAMPAIGN STRATEGY & DIGITAL ARCHITECTURE
- * Hon. Dr. Benson Suleiman Shahbal, PhD | Mombasa County Gubernatorial Proposal
+ * Hon. Suleiman Shahbal | Mombasa County Gubernatorial Proposal
  * Firefly Management | Presentation Layer Only
  * ===========================================================================
  *
  * THE PERFORMANCE THESIS & BUDGET:
- * 73.8% of Mombasa County is offline (CA/KNBS 2023/24).
- * The reader is Mr Shahbal — an economist reviewing this on a phone over a mobile
+ * About half of Mombasa County is not online (CA/KNBS 2023/24).
+ * The reader is Mr Shahbal — a businessman reviewing this on a phone over a mobile
  * data connection. Performance is the design's strongest argument, not an afterthought.
  * Motion is an information device, never an ambient effect or decorative gimmick.
  *

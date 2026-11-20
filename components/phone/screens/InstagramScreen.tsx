@@ -12,7 +12,7 @@ import { CountUp } from "../../premium/CountUp";
  * social ("1080x1080 square carousel cards"). Not a Story, not a Reel: a Reel here would be the
  * TikTok screen twice, and neither format is named in the proposal.
  *
- * The card carries §8.3.1 Pillar B — the guaranteed Ksh 85/kg ndengu floor price — with the
+ * The card carries Pillar 1 — the price of a jerrican, vendor against county source — with the
  * pillar's own Kiswahili name.
  *
  * Living detail: the carousel dots advancing.

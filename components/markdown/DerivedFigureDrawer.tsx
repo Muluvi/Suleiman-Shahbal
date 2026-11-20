@@ -10,9 +10,9 @@ const WORKINGS: Record<string, { title: string; inputs: string[]; result: string
   "win-threshold": {
     title: `How the ~${fmt("benchmark")}-vote benchmark is derived`,
     inputs: [
-      `2022 winning total, Mombasa Governor (Malombe, The New Democrats) — Section 2.2: ${fmt("result.2022.gov.nassir")} votes`,
+      `2022 winning total, Mombasa Governor (Nassir, ODM) — Section 2.2: ${fmt("result.2022.gov.nassir")} votes`,
       `Registered voters, Mombasa County, 2022 — Section 2.1: ${fmt("register.2022")}`,
-      "Certified 2022 turnout, IEBC Form 37C — Section 2.1: 61.7%",
+      `2022 governor election turnout, as declared — Section 2.1: ${fmt("turnout.2022")}%`,
     ],
     result: `${fmt("result.2022.gov.nassir")} actual winning votes, rounded up to an approximate working target of ${fmt("benchmark")} for KPI-setting.`,
   },

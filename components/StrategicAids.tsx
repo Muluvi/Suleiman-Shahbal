@@ -394,8 +394,8 @@ export function ToneVoiceSlider() {
 
 // 7. Interactive Slogan Builder
 export function SloganBuilder() {
-  const pillars = ["Mbeu Nsya", "Kazi Bora", "Governor Economist", "Transparency", "Equity"];
-  const [selectedPillars, setSelectedPillars] = useState<string[]>(["Mbeu Nsya", "Kazi Bora"]);
+  const pillars = ["Mjenzi", "Maji Mferejini", "Kazi Zibaki Mombasa", "Transparency", "Equity"];
+  const [selectedPillars, setSelectedPillars] = useState<string[]>(["Mjenzi", "Maji Mferejini"]);
 
   const handleToggle = (pill: string) => {
     if (selectedPillars.includes(pill)) {
@@ -471,8 +471,8 @@ export function SMSFeedbackVisualizer() {
 // 9. Interactive Community Forum Scheduler
 export function CommunityScheduler() {
   const events = [
-    { title: "Jomvu Cooperative Assembly", date: "Sept 12, 2026", time: "10:00 AM", location: "Kabati Market Square" },
-    { title: "Kisauni Town Hall Gathering", date: "Sept 18, 2026", time: "2:00 PM", location: "the north mainland Town Council" }
+    { title: "Jomvu Traders' Assembly", date: "Jan 16, 2027", time: "10:00 AM", location: "Mikindani Market" },
+    { title: "Kisauni Residents' Town Hall", date: "Jan 23, 2027", time: "2:00 PM", location: "Bamburi Social Hall" }
   ];
 
   return (
@@ -499,20 +499,14 @@ export function CommunityScheduler() {
   );
 }
 
-// A helper Brand Umbrella logo matching the split colors of the brand identity kit
+// The campaign mark: three rising blocks, the builder's skyline, in the brand's two colours.
 export function BrandUmbrella({ size = 48, className = "" }: { size?: number; className?: string }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 120 120" fill="none" className={`shrink-0 select-none drop-shadow-sm filter ${className}`}>
-      {/* Left Canopy Segment (Royal Blue #00209f) */}
-      <path d="M60 20 C30 20 16 42 12 58 C24 53 42 53 60 58 Z" fill="#00209f" />
-      {/* Right Canopy Segment (Bright Red #e31d2b) */}
-      <path d="M60 20 C90 20 104 42 108 58 C96 53 78 53 60 58 Z" fill="#e31d2b" />
-      {/* Center Division Line */}
-      <path d="M60 20 V58" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-      {/* Top Pinnacle Pointer (Bright Red) */}
-      <path d="M57 11 H63 L60 20 Z" fill="#e31d2b" />
-      {/* J-Hook handle (Royal Blue) */}
-      <path d="M60 58 V92 C60 99 51 99 51 92" stroke="#00209f" strokeWidth="6" strokeLinecap="round" fill="none" />
+    <svg width={size} height={size} viewBox="0 0 120 120" fill="none" className={`shrink-0 select-none drop-shadow-sm filter ${className}`} aria-hidden="true">
+      <rect x="22" y="62" width="20" height="34" rx="3" fill="#00209f" />
+      <rect x="50" y="44" width="20" height="52" rx="3" fill="#e31d2b" />
+      <rect x="78" y="24" width="20" height="72" rx="3" fill="#00209f" />
+      <path d="M14 100 H106" stroke="#00209f" strokeWidth="6" strokeLinecap="round" />
     </svg>
   );
 }

@@ -53,7 +53,7 @@ export function ConstituencyWeightBlockContent() {
           <tbody>
             {CHART_DATA.map((d) => (
               <tr key={d.id} className="border-t border-line/40">
-                <td className={`py-2 pr-3 font-bold ${d.id === "kitui-central" ? "text-accent" : "text-ink"}`}>{d.name}</td>
+                <td className={`py-2 pr-3 font-bold ${d.id === "kisauni" || d.id === "nyali" || d.id === "changamwe" ? "text-accent" : "text-ink"}`}>{d.name}</td>
                 <td className="py-2 pr-3 text-ink/80">{d.voters.toLocaleString()}</td>
                 <td className="py-2 text-ink/80">{d.share}</td>
               </tr>

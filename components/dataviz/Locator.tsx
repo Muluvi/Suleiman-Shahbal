@@ -5,7 +5,7 @@ import { BOX, COUNTY } from "../../lib/premium/county";
  * visual is about filled and the rest drawn faint. Server-rendered SVG, so it costs no script and
  * reads the same in print and with JavaScript off.
  *
- * `wards` takes ward slugs ("kyuso") or tile ids ("ward.timbwani").
+ * `wards` takes ward slugs ("junda") or tile ids ("ward.timbwani").
  */
 export function WardLocator({
   wards,

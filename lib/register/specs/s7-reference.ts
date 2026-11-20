@@ -142,7 +142,7 @@ const group = (n: number) => n.toLocaleString("en-GB");
 const FIG_CONSTITUENCY_POWER: FigureSpec = {
   id: "constituency-power",
   section: "reference",
-  title: `Four of the eight constituencies hold ${group(BIG4_TOTAL)} voters, ${share(BIG4_TOTAL)}% of the county, across ${BIG4_WARDS} wards`,
+  title: `Four of the six constituencies hold ${group(BIG4_TOTAL)} voters, ${share(BIG4_TOTAL)}% of the county, across ${BIG4_WARDS} wards`,
   question: "Registered voters per constituency, largest first, with ward count and average ward size",
   takeaway: `The "Big 4" (${BIG4.map((c) => c.name).join(", ")}) are where the register is; read with the ward map, they are where the effort is weighed.`,
   sources: [{ name: figure("register.2022").source ?? "IEBC", tier: "T1" }],
@@ -159,11 +159,11 @@ const FIG_LANGUAGE_MAP: FigureSpec = {
     {
       type: "composite",
       parts: [
-        { heading: "Estimated primary reach, by language", chart: { type: "bars", bars: LANGUAGES.map((l) => ({ label: l.name, value: l.share, state: "modelled" as const, display: `~${l.share}%` })), unit: "%" } },
+        { heading: "Share of published content, by language (target)", chart: { type: "bars", bars: LANGUAGES.map((l) => ({ label: l.name, value: l.share, state: "modelled" as const, display: `~${l.share}%` })), unit: "%" } },
         { heading: "Who each language reaches, and through which channels", chart: { type: "cards", columns: 3, cards: LANGUAGES.map((l) => ({ kicker: `~${l.share}%`, title: l.name, body: `Audiences: ${l.audiences.join(" · ")}. Channels: ${l.channels.join(" · ")}.`, meta: l.objective })) } },
       ],
     },
-    keys(["Language", "Estimated primary reach, %", "Audiences", "Channels", "Objective"]),
+    keys(["Language", "Share of published content, % (target)", "Audiences", "Channels", "Objective"]),
     LANGUAGES.map((l) => ({ cells: cellsOf([l.name, String(l.share), l.audiences.join(" · "), l.channels.join(" · "), l.objective]) })),
     ["Political bulk SMS is English or Kiswahili only (Communications Authority); Kiswahili travels by voice note and radio."],
   ),

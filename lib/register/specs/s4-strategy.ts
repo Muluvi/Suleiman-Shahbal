@@ -181,7 +181,7 @@ export const FIG_4_5: FigureSpec = {
   takeaway: "Two fields on a Thursday post and a language rule change the week; who takes the photograph and who presses publish do not.",
   sources: [{ name: "An illustrative week; checked against his actual week in Week 1", tier: "T3" }, { name: "The briefed week: this plan", tier: null, state: "target" }],
   chart: { type: "calendar", days: WEEK, pillars: TYPES },
-  notes: ["Two rules on top: at least two of the seven originate in a ward of the close-contest belt, and every one leads in Kiswahili."],
+  notes: ["Two rules on top: at least two of the seven originate in a ward of the close-contest belt, and at least five are Kiswahili-first."],
   columns: [{ key: "day", label: "Day" }, { key: "pillar", label: "Content type" }, { key: "after", label: "After" }, { key: "now", label: "Now" }],
   rows: WEEK.map((d) => ({ cells: { day: d.day, pillar: d.pillar ? `${CONTENT_TYPES[d.pillar - 1].code} · ${TYPES[d.pillar - 1]}` : "Unchanged", after: d.after, now: d.now } })),
 };

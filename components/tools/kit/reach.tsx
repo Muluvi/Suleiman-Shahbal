@@ -114,14 +114,14 @@ export function MessageMatrix({ segments, channels }: { segments: string[][]; ch
 /* ------------------------------------------------------------------ Issue-to-Message Matcher */
 
 const KEYWORDS: Record<string, string[]> = {
-  "Water and drought": ["water", "borehole", "pans", "drought"],
+  "Water at the tap": ["water", "maji", "tap", "kiosk", "jerrican", "mowasco", "mwache"],
   "County finance and accountability": ["budget", "audit", "fiscal", "debt", "salaries", "wastage"],
-  "Farming and food security": ["ndengu", "farm", "harvest", "livestock", "feed", "veterinary", "storage"],
+  "Jobs and the port": ["port", "jobs", "kazi", "sez", "jomvu", "dock", "container", "sgr"],
   "Household economics and poverty": ["poverty", "capital", "loans", "table-banking", "msme", "permit"],
   "How county money is split between wards": ["ward", "allocation", "formula"],
   "Youth, jobs and registration": ["youth", "boda", "licences", "tvet", "innovation"],
-  "Mui Basin coal": ["coal", "mui"],
-  "Record and delivery": ["cdf", "hansard", "record", "project log"],
+  "Pending bills and suppliers": ["pending", "bills", "suppliers", "overdraft", "arrears"],
+  "Record and delivery": ["bank", "eala", "record", "built", "site"],
 };
 
 export function IssueMatcher({ issues, segments, notes }: { issues: IssueRow[]; segments: string[][]; notes: string[] }) {

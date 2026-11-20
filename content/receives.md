@@ -169,7 +169,7 @@ Nine dependencies. Three of them gate everything else:
 
 The remaining six: about **three hours** of candidate time per week; daily ground-team photo
 and video uploads; current ward-level registration data from the IEBC published file; access to
-his business and EALA record (Section 6.1); sign-off on the engagement level; and the The New Democrats' 2027 nomination
+his business and EALA record (Section 6.1); sign-off on the engagement level; and The New Democrats' 2027 nomination
 rules or NEC resolution as soon as the party issues them.
 ```
 

@@ -150,7 +150,7 @@ function Scale({ b, c, room }: { b: Extract<Block, { kind: "scale" }>; c: Ctx; r
 function Receipt({ b, c }: { b: Extract<Block, { kind: "receipt" }>; c: Ctx }) {
   return (
     <Col style={{ alignSelf: "center", width: c.dense ? "100%" : "86%", padding: (c.dense ? 20 : 36) * c.s, backgroundColor: C.card, fontFamily: "Mono", color: C.ink, boxShadow: "0 12px 30px rgba(21,31,62,0.18)" }}>
-      <div style={{ display: "flex", justifyContent: "center", fontSize: 34 * c.s, fontWeight: 500, paddingBottom: 16 * c.s, borderBottom: `${3 * c.s}px dashed ${C.ink}` }}>KITUI COUNTY · PER RESIDENT</div>
+      <div style={{ display: "flex", justifyContent: "center", fontSize: 34 * c.s, fontWeight: 500, paddingBottom: 16 * c.s, borderBottom: `${3 * c.s}px dashed ${C.ink}` }}>MOMBASA COUNTY · PER RESIDENT</div>
       {b.lines.map((l, i) => (
         <Row key={i} style={{ justifyContent: "space-between", paddingTop: (c.dense ? 8 : 16) * c.s, fontSize: (c.dense ? MIN : 30) * c.s }}>
           <Col><div style={{ display: "flex" }}>{c.dense ? `${l.label} (${l.note.startsWith("calculated") ? "calculated" : l.note})` : l.label}</div>{c.dense ? null : <div style={{ display: "flex", fontSize: MIN * c.s, color: C.muted }}>{l.note}</div>}</Col>

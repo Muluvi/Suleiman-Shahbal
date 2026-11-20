@@ -9,13 +9,13 @@ import { SaveImage } from "../../visual/SaveImage";
 
 /* ------------------------------------------------------------------ USSD Flow Builder */
 
-type Opt = { key: string; kikamba: string; english: string; does: string };
+type Opt = { key: string; kiswahili: string; english: string; does: string };
 
 export function UssdBuilder({ header, menu }: { header: string; menu: Opt[] }) {
   const [head, setHead] = useState(header);
   const [opts, setOpts] = useState<Opt[]>(menu);
-  const [lang, setLang] = useState<"both" | "kikamba" | "english">("both");
-  const line = (o: Opt) => `${o.key}. ${lang === "english" || !o.kikamba ? o.english : lang === "kikamba" ? o.kikamba : `${o.kikamba} / ${o.english}`}`;
+  const [lang, setLang] = useState<"both" | "kiswahili" | "english">("both");
+  const line = (o: Opt) => `${o.key}. ${lang === "english" || !o.kiswahili ? o.english : lang === "kiswahili" ? o.kiswahili : `${o.kiswahili} / ${o.english}`}`;
   const screen = [head, ...opts.map(line)].join("\n");
   const len = [...screen].length;
   const set = (i: number, k: keyof Opt, v: string) => setOpts(opts.map((o, j) => (j === i ? { ...o, [k]: v } : o)));
@@ -30,14 +30,14 @@ export function UssdBuilder({ header, menu }: { header: string; menu: Opt[] }) {
             {opts.map((o, i) => (
               <div key={i} className="grid grid-cols-[2.5rem_1fr_1fr_auto] items-end gap-2">
                 <input aria-label="Key" className="plat-input" value={o.key} onChange={(e) => set(i, "key", e.target.value)} />
-                <input aria-label="Kiswahili" className="plat-input" value={o.kikamba} placeholder="Kiswahili" onChange={(e) => set(i, "kikamba", e.target.value)} />
+                <input aria-label="Kiswahili" className="plat-input" value={o.kiswahili} placeholder="Kiswahili" onChange={(e) => set(i, "kiswahili", e.target.value)} />
                 <input aria-label="English" className="plat-input" value={o.english} placeholder="English" onChange={(e) => set(i, "english", e.target.value)} />
                 <button type="button" className="plat-btn plat-btn-sm" aria-label={`Remove option ${o.key}`} onClick={() => setOpts(opts.filter((_, j) => j !== i))}>✕</button>
               </div>
             ))}
           </div>
-          <button type="button" className="plat-btn plat-btn-sm mt-3" onClick={() => setOpts([...opts, { key: String(opts.length + 1), kikamba: "", english: "", does: "" }])}>Add an option</button>
-          <div className="mt-4"><Select label="Menu language" value={lang} onChange={setLang} options={[{ value: "both", label: "Kiswahili / English" }, { value: "kikamba", label: "Kiswahili" }, { value: "english", label: "English" }]} /></div>
+          <button type="button" className="plat-btn plat-btn-sm mt-3" onClick={() => setOpts([...opts, { key: String(opts.length + 1), kiswahili: "", english: "", does: "" }])}>Add an option</button>
+          <div className="mt-4"><Select label="Menu language" value={lang} onChange={setLang} options={[{ value: "both", label: "Kiswahili / English" }, { value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }]} /></div>
         </Card>
         <div>
           <div className="mx-auto w-64 rounded-[2rem] bg-[#222] p-4 shadow-lg">
@@ -61,7 +61,7 @@ export function UssdBuilder({ header, menu }: { header: string; menu: Opt[] }) {
 
 export function Compliance({ smsLimit }: { smsLimit: number }) {
   const [text, setText] = useState("");
-  const [lang, setLang] = useState<"english" | "kiswahili" | "kikamba">("kiswahili");
+  const [lang, setLang] = useState<"english" | "kiswahili" | "sheng">("kiswahili");
   const [send, setSend] = useState("");
   const [lodged, setLodged] = useState("");
   const [authorised, setAuthorised] = useState(false);
@@ -72,7 +72,7 @@ export function Compliance({ smsLimit }: { smsLimit: number }) {
   const hour = sendAt ? sendAt.getHours() + sendAt.getMinutes() / 60 : null;
   const checks = [
     { ok: [...text].length > 0 && [...text].length <= smsLimit, label: `Length: ${[...text].length} of ${smsLimit} characters`, rule: "One SMS, no split messages" },
-    { ok: lang !== "kikamba", label: lang === "kikamba" ? "Kiswahili is not sent as SMS" : "English or Kiswahili", rule: "SMS carries English and Kiswahili; Kiswahili goes by voice note and radio" },
+    { ok: lang !== "sheng", label: lang === "sheng" ? "Sheng is not sent as SMS" : "English or Kiswahili", rule: "SMS carries English and Kiswahili; Sheng goes by voice note and radio" },
     { ok: /\bSTOP\b/i.test(text), label: /\bSTOP\b/i.test(text) ? "Opt-out included" : "No opt-out found (add \"STOP\" and how to send it)", rule: "Every message carries a clear opt-out" },
     { ok: hoursAhead !== null && hoursAhead >= 48, label: hoursAhead === null ? "Enter the lodging and sending times" : `Lodged ${Math.floor(hoursAhead)} hours before sending`, rule: "Lodged with the operator 48 hours ahead" },
     { ok: hour !== null && hour >= 7 && hour < 19, label: hour === null ? "Enter the sending time" : `Sends at ${sendAt!.toTimeString().slice(0, 5)}`, rule: "Sending window 7am to 7pm (a 2020 draft proposed 8am to 6pm: verify which is in force)" },
@@ -85,7 +85,7 @@ export function Compliance({ smsLimit }: { smsLimit: number }) {
       <Card>
         <label className="plat-label block">Message<textarea className="plat-input mt-1 block min-h-24 w-full" value={text} onChange={(e) => setText(e.target.value)} /></label>
         <div className="mt-3 grid gap-4 sm:grid-cols-3">
-          <Select label="Language" value={lang} onChange={setLang} options={[{ value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }, { value: "kikamba", label: "Kiswahili" }]} />
+          <Select label="Language" value={lang} onChange={setLang} options={[{ value: "kiswahili", label: "Kiswahili" }, { value: "english", label: "English" }, { value: "sheng", label: "Sheng" }]} />
           <label className="plat-label block">Lodged with the operator<input className="plat-input mt-1 block w-full" type="datetime-local" value={lodged} onChange={(e) => setLodged(e.target.value)} /></label>
           <label className="plat-label block">Planned send<input className="plat-input mt-1 block w-full" type="datetime-local" value={send} onChange={(e) => setSend(e.target.value)} /></label>
         </div>

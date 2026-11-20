@@ -2,9 +2,9 @@
   {
     "id": "fig-cover-map",
     "section": "Cover",
-    "title": "Half the register, 55.0%, lives where he has never held office",
-    "question": "Where does the electorate sit, and where has he held office?",
-    "takeaway": "The 353,090-voter pool in the north mainland and Changamwe is the ground the nomination is won or lost on; Mvita, which he has represented since 2013, is 18.53% of the register."
+    "title": "More than half the register, 55.0%, lives where the 2022 race was decided by under 2,000 votes",
+    "question": "Where does the electorate sit, and where was the last race closest?",
+    "takeaway": "The 353,090-voter pool in Kisauni, Nyali and Changamwe is the ground the race is won or lost on; the Island, the incumbent's strongest ground, is 18.53% of the register."
   },
   {
     "id": "fig-cover-spine",
@@ -242,7 +242,7 @@
     "section": "4.2.1",
     "title": "The first week measures, and nothing is committed against the diagnosis until it has",
     "question": "What happens in the first four weeks?",
-    "takeaway": "Week 1 is the audit; the brief starts in Week 2, weighted to the pool, and the six fixes ship by the end of it."
+    "takeaway": "Week 1 is the audit; the brief starts in Week 2, weighted to the pool, and the six profile checks ship by the end of it."
   },
   {
     "id": "fig-5-4-phases",
@@ -303,7 +303,7 @@
   {
     "id": "fig-5-2-3-ussd-menu",
     "section": "4.5.9",
-    "title": "Six options on any phone, and the third puts the tracker in reach of a feature phone in Mutha",
+    "title": "Six options on any phone, and the third puts the tracker in reach of a feature phone in Likoni",
     "question": "What does the USSD menu offer?",
     "takeaway": "Dial the shortcode, read the plan, register, report an issue, volunteer or opt in, with no internet and close to no cost."
   },
@@ -333,7 +333,7 @@
     "section": "reference",
     "title": "Six ways of cutting the same electorate, and two of them decide the channel plan",
     "question": "This plan's Mombasa County audience architecture overview",
-    "takeaway": "Connectivity and language are the two facets the rest of the proposal turns on: 73.8% offline sets the channel mix, ~76% Kiswahili sets the language mix. The 73.8% / 26.2% split is the CA/KNBS 2023/24 rate, which supersedes the 2019 census's 86.4% / 13.6%."
+    "takeaway": "Connectivity and turnout are the two facets the rest of the proposal turns on: 46.9% online sets the channel mix (CA/KNBS 2023/24, Tier 1), and a 2022 turnout of about a third sets the task. No published study gives Mombasa's home-language shares, so none is printed."
   },
   {
     "id": "visit-loop",
@@ -368,14 +368,14 @@
     "section": "reference",
     "title": "Six segments, six messages, and a named evidence source behind every one",
     "question": "The message-by-demographic-segment matrix — segment, tailored message and Kiswahili framing, verifiable evidence",
-    "takeaway": "The evidence column is not decoration: the approval gateway makes a primary citation mandatory at drafting, and this matrix is where each segment's citation is named. The Kiswahili framings are transcribed exactly, diacritics included."
+    "takeaway": "The evidence column is not decoration: the approval gateway makes a primary citation mandatory at drafting, and this matrix is where each segment's citation is named. The Kiswahili lines are drafts until the native-speaker reviewer signs them off."
   },
   {
     "id": "message-by-channel",
     "section": "reference",
     "title": "Five channels, each with its own register and its own proof",
     "question": "The message-by-channel matrix — channel and reach, format and linguistic style, evidential proof points",
-    "takeaway": "Reach is shown only where a source supports it: the SMS layer (phone owners not online) and the online audience, both read from the registry. Radio, caravans and church have no measured reach in Mombasa. The channels overlap and must not be added."
+    "takeaway": "Reach is shown only where a source supports it: the SMS layer (phone owners not online) and the online audience, both read from the registry. Radio, the stages and faith networks have no measured reach in Mombasa. The channels overlap and must not be added."
   },
   {
     "id": "escalation-ladder",
@@ -562,9 +562,9 @@
   {
     "id": "language-map",
     "section": "reference",
-    "title": "Three languages, and three quarters of the county reachable in only one of them",
-    "question": "Estimated primary reach per language, as this plan states it",
-    "takeaway": "The three shares are stated in this plan without a citation and sum to 100%, so they describe who speaks what (a language map, unconfirmed), not a target. The content target is the 50 / 30 / 20 mix in this plan; bulk SMS carries Kiswahili and English only."
+    "title": "Kiswahili first, English for policy, Sheng and the Mijikenda languages where they are spoken",
+    "question": "The share of published content per language: the this plan target",
+    "takeaway": "These are targets for what the campaign publishes, not a measure of who speaks what: no published study gives Mombasa's home-language shares. Bulk SMS carries Kiswahili and English only."
   },
   {
     "id": "language-deployment",
@@ -576,7 +576,7 @@
   {
     "id": "constituency-power",
     "section": "reference",
-    "title": "Four of the eight constituencies hold 473,267 voters, 73.73% of the county, across 22 wards",
+    "title": "Four of the six constituencies hold 473,267 voters, 73.73% of the county, across 22 wards",
     "question": "Registered voters per constituency, largest first, with ward count and average ward size",
     "takeaway": "The \"Big 4\" (Kisauni, Nyali, Mvita, Likoni) are where the register is; read with the ward map, they are where the effort is weighed."
   }

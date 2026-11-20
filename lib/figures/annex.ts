@@ -25,12 +25,12 @@ const PLACEMENT_STATIONS = RADIO_STATIONS.filter((s) => /^Priority/.test(s.postu
 /* ------------------------------------------------------------------ §3.4 the audience overview */
 
 export const AUDIENCE_FACETS = [
-  { label: "Geographic locus", items: ["Rural: 95.2%", "Urban: 4.8%"] },
-  { label: "Age demographic", items: ["Youth (18–35): ~44%", "Mid/senior (36+): 56%"] },
-  { label: "Connectivity status", items: ["Offline: 73.8%", "Online: 26.2%"] },
-  { label: "Primary language", items: ["Kiswahili: ~76%", "Kiswahili: ~16%", "English: ~8%"] },
-  { label: "Livelihood clusters", items: ["Dryland agrarian", "Pastoral / livestock", "Informal / bodaboda"] },
-  { label: "Diaspora matrix", items: ["Nairobi / Mombasa", "Remittance leverage", "Family opinion shapers"] },
+  { label: "Geographic locus", items: ["Urban: the whole county", `${regFmt("census.density")} people / km²`] },
+  { label: "Age demographic", items: [`Aged 15–34: ${regFmt("census.age.15-34.share")}%`, `Aged 35+: ${regFmt("census.age.35-59.share")}% + ${regFmt("census.age.60-plus.share")}%`] },
+  { label: "Connectivity status", items: [`Online: ${regFmt("ict.internet")}%`, `Not online: ${regFmt("ict.offline")}%`] },
+  { label: "Primary language", items: ["Kiswahili: the common language", "English: business and professionals", "Sheng: the young, informally"] },
+  { label: "Livelihood clusters", items: ["Port, transport & logistics", "Trade & small business", "Informal / boda-boda & tuk-tuk"] },
+  { label: "Turnout", items: [`2022 governor election: ${regFmt("turnout.2022")}%`, `Abstained: ${regFmt("abstained.2022")}`] },
 ];
 
 export const AUDIENCE_SERIES: FigureSeries = {
@@ -39,56 +39,25 @@ export const AUDIENCE_SERIES: FigureSeries = {
   measure: "§11's Mombasa County audience architecture overview",
   points: [],
   note:
-    "Connectivity and language are the two facets the rest of the proposal turns on: 73.8% offline " +
-    "sets the channel mix, ~76% Kiswahili sets the language mix. The 73.8% / 26.2% split is the " +
-    "CA/KNBS 2023/24 rate, which supersedes the 2019 census's 86.4% / 13.6%.",
+    `Connectivity and turnout are the two facets the rest of the proposal turns on: ${regFmt("ict.internet")}% online ` +
+    "sets the channel mix (CA/KNBS 2023/24, Tier 1), and a 2022 turnout of about a third sets the task. " +
+    "No published study gives Mombasa's home-language shares, so none is printed.",
 };
 
 /* ------------------------------------------------------------------ §4.5 the segments */
 
+const sized = (id: Parameters<typeof segment>[0]) => {
+  const s = segment(id);
+  return s.size ? `${sizeText(s)} — ${shareText(s)}` : `Not sized: ${s.notSized?.context()}`;
+};
+
 export const AUDIENCE_SEGMENTS: string[][] = [
-  [
-    "1. Rural smallholders (agrarian core)",
-    `${sizeText(segment("agrarian"))} — ${shareText(segment("agrarian"))}`,
-    "Tier 1 KNBS/IEBC",
-    "Coast radio & offline SMS",
-    "Guaranteed minimum returns & sand dams",
-  ],
-  [
-    "2. Agro-pastoralists (arid borderlands)",
-    `Not sized: ${segment("pastoralist").notSized?.context()}`,
-    "No published count",
-    "Vernacular radio & market days",
-    "Livestock off-take & border security support",
-  ],
-  [
-    "3. Youth cohort (ages 18–35)",
-    `${sizeText(segment("youth"))} — ${shareText(segment("youth"))}`,
-    "Tier 1 KNBS/IEBC",
-    "TikTok, Meta, WhatsApp & sports",
-    "Youth enterprise fund, TVET grants, no harassment",
-  ],
-  [
-    "4. Urban MSMEs & informal traders",
-    `${sizeText(segment("msme"))} — ${shareText(segment("msme"))}`,
-    "Tier 1 KNBS 2019",
-    "Geofenced digital & trader barazas",
-    "Single business permit, 24-hour lit market stalls",
-  ],
-  [
-    "5. Formal professionals & civil servants",
-    `Not sized: ${segment("professionals").notSized?.context()}`,
-    "No published count",
-    "X, TV, LinkedIn, union synods",
-    "Meritocracy, reliable medicine & pension flow",
-  ],
-  [
-    "6. Out-of-county Coast diaspora",
-    `Not sized: ${segment("diaspora").notSized?.context()}`,
-    "No published count",
-    "Nairobi/coast ads & town halls",
-    "Remittance relief & audited fiscal prudence",
-  ],
+  ["1. The young mainland voter (18–34)", sized("youth"), "Tier 1 KNBS/IEBC, derived", "TikTok, Instagram, WhatsApp & the stages", "Jobs with an employer's name, TVET places"],
+  ["2. Port, transport & logistics workers", sized("agrarian"), "No published count", "Drive-time radio & workplace visits", "The port's value kept in Mombasa: the SEZ"],
+  ["3. Traders & small businesses", sized("msme"), "No published count", "Market walks, traders' associations, WhatsApp", "Single permit, bills paid oldest first"],
+  ["4. Women & household managers", sized("pastoralist"), "Tier 1 KNBS (residents)", "WhatsApp voice notes, chamas, SMS", "Water at the county's price, hours published"],
+  ["5. Professionals & the public service", sized("professionals"), "No published count", "X, LinkedIn, talk radio, unions", "Salaries on time, a professional public service"],
+  ["6. The 2022 abstainers", sized("diaspora"), "Tier 2, calculated", "Ward captains, SMS & USSD", "Every promise with a date and a way to check it"],
 ];
 
 /* ------------------------------------------------------------------ §3.2.3 the visit loop */
@@ -134,7 +103,7 @@ export const PROVENANCE_MANDATE: string[][] = [
   [
     "3. Geographic unit",
     "Exact administrative boundary to which the data applies",
-    'e.g. "Countywide", "Kisauni", "Kyuso Ward"',
+    'e.g. "Countywide", "Kisauni", "Junda Ward"',
   ],
 ];
 
@@ -226,34 +195,34 @@ export const PROTOCOL_SERIES: FigureSeries = {
 
 export const MESSAGE_BY_SEGMENT: string[][] = [
   [
-    "1. Smallholder crop farmers — not sized: voters by livelihood are not published",
-    '"Never sell Ndengu at Ksh 40 again." · County guaranteed aggregation minimum floor price (Ksh 85/kg) plus local storage · Kiswahili: "Uithio wa Ndengu na Mbemba"',
-    "KNBS agrarian data: Mombasa farmers lose ~68% of value to middlemen during peak harvest · pilot Mvita Farmers SACCO",
+    `1. The young mainland voter (18–34) — ${shareText(segment("youth"))}, ${sizeText(segment("youth"))}`,
+    '"Kazi zibaki Mombasa." Jobs with an employer\'s name on them, TVET places, and a quarterly jobs report · Kiswahili and Sheng',
+    `The Jomvu SEZ: ${regFmt("record.sez.jobs")} direct jobs projected by the promoters (Tier 2, a projection) · ${regFmt("ict.mombasa.youth")}% of young people online`,
   ],
   [
-    `2. Agro-pastoralists & herders (the north mainland/South) — not sized: ${segment("pastoralist").notSized?.context()}`,
-    '"Water pans, livestock feed reserves, and border security lighting." · Decentralised veterinary cold-chain · Kiswahili: "Kithima kya Kyalo na Syana"',
-    "National Drought Management Authority reports: livestock mortality drops 45% with localised water points",
+    "2. Port, transport & logistics workers — not sized: voters by occupation are not published",
+    '"The port\'s value should stay in Mombasa." · The SEZ shown on site · Kiswahili',
+    `The Jomvu SEZ agreement, KSh ${regFmt("record.sez.ksh", "bn")}bn, ${regFmt("record.sez.acres")} acres (Tier 2)`,
   ],
   [
-    `3. Youth hustlers & boda operators (18–35) — ${shareText(segment("youth"))}, ${sizeText(segment("youth"))}`,
-    '"The Youth Innovation & Enterprise Fund: zero-interest equipment loans." · Free driving licences & digital hubs · Kiswahili: "Wathi wa Mwanya kwa Mwanake"',
-    "Mvita NG-CDF data: over 4,200 youth sponsored with NITA/TVET technical bursaries",
+    "3. Traders & small businesses — not sized: voters by occupation are not published",
+    '"Pay the oldest bills first, and publish the list." · A single business permit · Kiswahili; English for associations',
+    `KSh ${regFmt("budget.pending-bills.2026", "bn")}bn in pending bills, ${regFmt("budget.pending-bills.aged")}% older than three years (Controller of Budget, as reported)`,
   ],
   [
-    `4. Rural women, caregivers & chamas — women are ${regFmt("census.female.share")}% of residents (2019 Census); voters by sex are not published`,
-    '"Clean water within 1 km and stocked maternity dispensaries in every sub-location." · Ksh 50,000 table-banking seed capital · Kiswahili: "Mumo kwa Aka na Syana"',
-    "Mvita project log: 84 functional solar boreholes built with clean water tariffs · Ksh 120M disbursed to women CBOs",
+    `4. Women & household managers — women are ${regFmt("census.female.share")}% of residents (2019 Census); voters by sex are not published`,
+    '"Maji mferejini." Water at the county\'s price at county kiosks, hours published ward by ward · Kiswahili voice notes',
+    `A jerrican costs KSh ${regFmt("price.water.vendor")} from a vendor, KSh ${regFmt("price.water.county")} at a county source (Tier 2) · ${regFmt("water.supply.share")}% of demand supplied`,
   ],
   [
-    `5. Urban MSMEs, traders & market stall keepers — ${shareText(segment("msme"))}, ${sizeText(segment("msme"))}`,
-    '"Single Business Permit reform and 0% harassment of mama mbogas." · Modern solar market shades & drainage · Kiswahili: "Biashara Nzeo na Kazi"',
-    "Parliamentary Hansard: Mr Shahbal's defence of MSME tax relief in the Finance Bill 2024 · Mombasa Market Vendor Council log",
+    "5. Professionals & the public service — not sized: headcounts are not published",
+    '"Salaries and deductions paid on time." · A professional County Public Service Board · English and Kiswahili',
+    `A KSh ${regFmt("budget.overdraft.2026-06", "m")}m overdraft to pay June 2026 salaries (Controller of Budget, as reported)`,
   ],
   [
-    "6. Teachers, civil servants & elite professionals — not sized: headcounts are not published",
-    '"Timely county salaries, meritocratic promotions, and NHIF/SHIF hospital cover." · Strict adherence to SRC salary codes',
-    "Auditor-General & CRA data: Mr Shahbal's published fiscal blueprints on county debt relief",
+    `6. The 2022 abstainers — ${sizeText(segment("diaspora"))}`,
+    '"Every promise with a date, and a way to check it." · The visit, then the verification · Kiswahili',
+    `${regFmt("turnout.2022")}% turnout in the 2022 governor election (Tier 2) · the service-delivery tracker`,
   ],
 ];
 
@@ -265,36 +234,36 @@ export const SEGMENT_MESSAGE_SERIES: FigureSeries = {
   note:
     "The evidence column is not decoration: §15.1.2's approval gateway makes a primary citation " +
     "mandatory at drafting, and this matrix is where each segment's citation is named. The Kiswahili " +
-    "framings are transcribed exactly, diacritics included.",
+    "lines are drafts until the native-speaker reviewer signs them off.",
 };
 
 /* ------------------------------------------------------------------ §C.2 message by channel */
 
 export const MESSAGE_BY_CHANNEL: string[][] = [
   [
-    `1. Kiswahili vernacular radio (${PLACEMENT_STATIONS}) — reach not measured`,
-    "45-second testimonials and live studio debates · conversational, authentic, culturally grounded Kiswahili with elder idioms",
-    "Auditor-General clean audit certificates · concrete CDF school and water case studies, with GPS location names",
+    `1. Kiswahili radio (${PLACEMENT_STATIONS}) — reach not measured`,
+    "45-second testimonials and live call-in debates · conversational Mombasa Kiswahili",
+    "The SEZ site, the pending-bills schedule and the water figures, each with its source named on air",
   ],
   [
     `2. Direct 2G bulk SMS & USSD — up to ${regFmt("reach.sms-only")} phone owners not online`,
-    '160-character hyper-local alerts · "Tseikuru: Mr Shahbal will publish the needs-weighted formula for ward water funds before any allocation"',
-    "The published, needs-weighted ward allocation formula · free USSD code to read the manifesto",
+    '160-character hyper-local alerts · "Junda: Mr Shahbal will publish every ward\'s water hours and the jerrican price, every quarter"',
+    "The ward-by-ward water record · free USSD code to read the plan",
   ],
   [
-    "3. Market caravans & barazas — reach not measured",
-    "High-energy PA speeches and jingles · rhythmic Kiswahili music, local merchant endorsements, candidate Q&A",
-    "Physical display of project photobooks and contractor logs · live testimony from beneficiaries",
+    "3. Stages, markets & barazas — reach not measured",
+    "Short PA speeches and jingles · Kiswahili music, trader and stage-chair endorsements, candidate Q&A",
+    "Site photobooks from the SEZ and the bank · live testimony from residents",
   ],
   [
     `4. WhatsApp & social video (Meta, TikTok, X) — about ${regFmt("reach.smartphone")} voters online`,
-    "30-second TikTok clips and infographic cards · visual, fast-paced, urban Sheng/English highlighting national economic policy",
-    "Side-by-side graphical comparison of CDF budgets against county wastage · National Assembly Hansard clips",
+    "30-second TikTok clips and infographic cards · Kiswahili and Sheng for the young, English for professionals",
+    "Side-by-side cards: what the county owes, what it spends, what reaches the tap",
   ],
   [
-    "5. Church synods & pastoral — reach not measured",
-    "Reverent 3-minute fellowship speech · biblical stewardship themes (Luke 16:10 — 'Faithful in small, faithful in much')",
-    "Values of servant leadership, integrity, non-violent politics and youth moral mentorship",
+    "5. Mosques, churches & community — reach not measured",
+    "Programming and community forums on water, health and jobs; no partisan message from the pulpit",
+    "Values of service, integrity, non-violent politics and youth mentorship",
   ],
 ];
 
@@ -305,7 +274,7 @@ export const CHANNEL_MESSAGE_SERIES: FigureSeries = {
   points: [],
   note:
     "Reach is shown only where a source supports it: the SMS layer (phone owners not online) and " +
-    "the online audience, both read from the registry. Radio, caravans and church have no measured " +
+    "the online audience, both read from the registry. Radio, the stages and faith networks have no measured " +
     "reach in Mombasa. The channels overlap and must not be added.",
 };
 

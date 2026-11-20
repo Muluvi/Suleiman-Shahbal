@@ -2,7 +2,7 @@
  * The data the planning tools read, assembled once on the server from the site's own records.
  *
  * Every number here is read from a file the rest of the site already uses and the content guards
- * already check: the IEBC public pack (data/kitui-public.generated.json), the ward tiles and
+ * already check: the IEBC public pack (data/mombasa-public.generated.json), the ward tiles and
  * register (lib/geo/wards.ts), the polling-station list, the county projects export, the 2019
  * census export and the figure registry (lib/data/figures.ts). Nothing is typed in here, so a team
  * edit to a figure reaches every tool on the next build.
@@ -11,18 +11,18 @@ import { FIGURES, slugOf } from "../data/figures";
 import { formatFigure } from "../data/format";
 import { WARD_TILES, type ZoneId } from "../geo/wards";
 import { PUBLIC_WARDS, PUBLIC_CONSTITUENCIES } from "../public-data";
-import stations from "../../data/kitui-stations.generated.json";
+import stations from "../../data/mombasa-stations.generated.json";
 import projectsByWard from "../../data/analysis/projects-by-ward.json";
 import census from "../../data/analysis/census-subcounty.json";
 import issueEvidence from "../../data/analysis/issue-evidence.json";
 
-export type FigureView = { id: string; value: number | null; display: string; tier: string | null; state: string; source: string | null; asOf: string | null; note: string | null; unit: string };
+export type FigureView = { id: string; value: number | null; display: string; tier: string | null; state: string; source: string | null; asOf: string | null; note: string | null; unit: string; closesWith: string | null };
 
 /** One registry figure, as a tool shows it: value, printed form and provenance. */
 export function fig(id: string): FigureView {
   const f = FIGURES[id];
   if (!f) throw new Error(`tools: no figure ${id}`);
-  return { id, value: f.value, display: formatFigure(f), tier: f.tier, state: f.state, source: f.source, asOf: f.asOf ?? null, note: f.note ?? null, unit: f.unit };
+  return { id, value: f.value, display: formatFigure(f), tier: f.tier, state: f.state, source: f.source, asOf: f.asOf ?? null, note: f.note ?? null, unit: f.unit, closesWith: f.closesWith ?? null };
 }
 export const figs = (ids: string[]) => Object.fromEntries(ids.map((id) => [id, fig(id)])) as Record<string, FigureView>;
 

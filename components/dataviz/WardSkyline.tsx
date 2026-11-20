@@ -73,7 +73,7 @@ export function WardSkyline() {
           })}
         </svg>
         <p className="sk__legend">
-          <span className="sk__key sk__key--pool" aria-hidden="true" /> never held office <span className="sk__key" aria-hidden="true" /> other wards · tallest: {fmt(`ward.${tallest[0]}`)} voters
+          <span className="sk__key sk__key--pool" aria-hidden="true" /> close-contest belt <span className="sk__key" aria-hidden="true" /> other wards · tallest: {fmt(`ward.${tallest[0]}`)} voters
         </p>
       </div>
     </ExportableVisual>

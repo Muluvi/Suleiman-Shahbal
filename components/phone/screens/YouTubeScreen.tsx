@@ -22,7 +22,7 @@ import { CountUp } from "../../premium/CountUp";
 
 /**
  * YouTube — §2.6's home for "long-form debates, church sermons and rally livestreams", carrying
- * §8.3.1 Pillar A: the documentary case study on thirteen years of clean NG-CDF audits.
+ * Content type P2: the documentary from the Jomvu SEZ site, the builder's proof.
  *
  * Living detail: the playhead moving along the scrubber.
  */

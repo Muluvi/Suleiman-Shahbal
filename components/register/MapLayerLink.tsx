@@ -2,7 +2,7 @@
 
 /**
  * Pre-selects the ward map's layer from the address: "#ward-map-footprint" opens the one layered
- * ward map (fig-3-2-register-map, How Mombasa voted) on its "where he has held office" layer. Without
+ * ward map (fig-3-2-register-map, How Mombasa voted) on its "where the 2022 race was closest" layer. Without
  * JavaScript the link still lands on the map, on its default layer, with every layer one tap away.
  */
 import { useEffect } from "react";

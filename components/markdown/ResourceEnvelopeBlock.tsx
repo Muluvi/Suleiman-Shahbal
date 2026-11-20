@@ -16,8 +16,8 @@ const ResourceEnvelopeChart = dynamic(() => import("../charts/ResourceEnvelopeCh
   loading: () => <ChartFallback shape="bars" />,
 });
 
-// Section 2.5, from the data layer: the CFSP FY2026/27 envelope and its three parts. The parts sum to
-// KSh 0.01bn more than the published total; that rounding gap is shown, not absorbed.
+// Section 1.5, from the data layer: the FY2025/26 budget and its three parts. The third part is the
+// remainder (grants, loans and balances brought forward), so the parts sum to the total by construction.
 const bn = (id: string) => (FIGURES[id].value ?? 0) / 1e9;
 const EQUITABLE = bn("budget.equitable");
 const OWN_SOURCE = bn("budget.osr");
@@ -27,9 +27,9 @@ const STATED_TOTAL = bn("budget.total");
 
 const DATA: WaterfallStep[] = [
   { name: "Equitable share", base: 0, value: EQUITABLE, display: `KSh${formatFigure(FIGURES["budget.equitable"], "bn")}bn (${formatFigure(FIGURES["budget.equitable.share"])}%)`, color: "var(--accent-solid)" },
-  { name: "Own-source revenue", base: EQUITABLE, value: OWN_SOURCE, display: `KSh${formatFigure(FIGURES["budget.osr"], "bn")}bn in the Paper; KSh${formatFigure(FIGURES["budget.osr.revised"], "bn")}bn as revised by the Assembly`, color: "var(--color-accent, var(--accent))" },
-  { name: "Grants", base: EQUITABLE + OWN_SOURCE, value: GRANTS, display: `KSh${formatFigure(FIGURES["budget.grants"], "bn")}bn (${formatFigure(FIGURES["budget.grants.share"])}%)`, color: "var(--rival-solid)" },
-  { name: "Published total", base: 0, value: STATED_TOTAL, display: `KSh${formatFigure(FIGURES["budget.total"], "bn")}bn, as published`, color: "var(--color-ink)", isTotal: true },
+  { name: "Own-source revenue", base: EQUITABLE, value: OWN_SOURCE, display: `KSh${formatFigure(FIGURES["budget.osr"], "bn")}bn (${formatFigure(FIGURES["budget.osr.share"])}%)`, color: "var(--color-accent, var(--accent))" },
+  { name: "Grants, loans and balances", base: EQUITABLE + OWN_SOURCE, value: GRANTS, display: `KSh${formatFigure(FIGURES["budget.grants"], "bn")}bn (${formatFigure(FIGURES["budget.grants.share"])}%)`, color: "var(--rival-solid)" },
+  { name: "Published total", base: 0, value: STATED_TOTAL, display: `KSh${formatFigure(FIGURES["budget.total"], "bn")}bn, as reported`, color: "var(--color-ink)", isTotal: true },
 ];
 
 export function ResourceEnvelopeBlock() {
@@ -37,10 +37,10 @@ export function ResourceEnvelopeBlock() {
     <div className="not-prose bg-card border border-line rounded-2xl p-4 sm:p-5 shadow-sm my-6 print-avoid-break">
       <div className="flex items-center gap-2 mb-1">
         <span className="w-1.5 h-6 bg-accent rounded-full shrink-0" />
-        <h4 className="font-serif text-sm font-bold text-ink">FY2026/27 Resource Envelope — KSh{formatFigure(FIGURES["budget.total"], "bn")}bn</h4>
+        <h4 className="font-serif text-sm font-bold text-ink">FY2025/26 County Budget — KSh{formatFigure(FIGURES["budget.total"], "bn")}bn</h4>
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
-        Split into its three published components, as the Fiscal Strategy Paper states them.
+        Split into its three parts, as the Controller of Budget&rsquo;s review is reported (Tier 3). The third part is the remainder, so it is calculated.
       </p>
       <div className="h-64 w-full t-micro">
         <LazyMount minHeight={256} className="h-full">
@@ -48,10 +48,10 @@ export function ResourceEnvelopeBlock() {
         </LazyMount>
       </div>
       <p className="t-label text-muted/80 leading-normal mt-3 italic border-t border-line/40 pt-2 font-medium">
-        The three components sum to KSh{COMPONENT_SUM.toFixed(2)}bn, KSh{(COMPONENT_SUM - STATED_TOTAL).toFixed(2)}bn above the published
-        KSh{STATED_TOTAL.toFixed(2)}bn total. That gap is rounding in the source document, shown here rather than reconciled.
+        The three parts sum to KSh{COMPONENT_SUM.toFixed(2)}bn against a reported total of KSh{STATED_TOTAL.toFixed(2)}bn. Own-source
+        revenue is a larger share of the budget in Mombasa than in almost any other county.
       </p>
-      <SourceLine sources={["Mombasa County Fiscal Strategy Paper, FY2026/27"]} />
+      <SourceLine sources={["Controller of Budget, FY2025/26 county budget implementation review (Mombasa), as reported"]} />
     </div>
   );
 }

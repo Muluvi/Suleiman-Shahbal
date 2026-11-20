@@ -10,7 +10,7 @@ import { WardLocator } from "./Locator";
  *
  * No up or down arrows: a movement needs a second year of ward registers, and none is published
  * (the July 2026 total is county-wide only). The table says where each ward stands, not where it is
- * going. Pool wards, where he has never held office, carry a mark.
+ * going. Wards in the close-contest belt carry a mark.
  *
  * The first twelve show; the other twenty-eight are one tap away, in the HTML for find-in-page,
  * print and a reader without script.
@@ -35,7 +35,7 @@ export function WardLeague() {
         <span className="lg__ward">{r.name}</span>
         <span className="lg__con">
           {r.constituencyName}
-          {r.pool ? <span className="lg__pool"> · never held office</span> : null}
+          {r.pool ? <span className="lg__pool"> · close-contest belt</span> : null}
         </span>
       </span>
       <span className="lg__bar" aria-hidden="true">
@@ -50,14 +50,14 @@ export function WardLeague() {
     <ExportableVisual
       id="ward-league"
       title={`The league table: twelve wards hold ${topShare.display} of the register`}
-      note="The 30 wards ranked by registered voters, with the gap to the ward above. A mark shows the wards where he has never held office."
+      note="The 30 wards ranked by registered voters, with the gap to the ward above. A mark shows the wards in the close-contest belt."
       figures={[register, wardFig, topShare]}
       card={{ type: "ranked", params: { measure: "voters" } }}
     >
       <div className="lg__head">
         <WardLocator wards={top.map((r) => r.id)} label="Map of Mombasa: the twelve largest wards highlighted" size={112} />
         <p className="lg__legend">
-          <span className="lg__key lg__key--pool" aria-hidden="true" /> never held office · the bar runs from zero to the largest ward
+          <span className="lg__key lg__key--pool" aria-hidden="true" /> close-contest belt · the bar runs from zero to the largest ward
         </p>
       </div>
       <div className="lg__cols" aria-hidden="true">

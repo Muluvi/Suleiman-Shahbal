@@ -75,7 +75,7 @@ const DESCRIPTION =
  * shown to whoever was sent the link, which is not the same thing as being indexed.
  */
 const OG_IMAGE = {
-  url: '/og/kitui-2027.png',
+  url: '/og/mombasa-2027.png',
   width: 1200,
   height: 630,
   alt: 'Mombasa 2027 — The campaign’s data, analysis and plan. Built for Mr Shahbal and his team. Firefly Management, September 2026, revised November 2026. Open to view.',

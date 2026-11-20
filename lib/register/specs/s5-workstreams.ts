@@ -53,12 +53,12 @@ export const FIG_FIELD_LOOP: FigureSpec = {
 };
 
 /** The USSD menu: data/ussd-specimen.ts, the one definition. */
-const MENU = USSD_MENU.map((o) => ({ n: Number(o.key), label: o.kikamba ?? o.english, shown: o.kikamba ? o.english : "Language", issue: o.does }));
+const MENU = USSD_MENU.map((o) => ({ n: Number(o.key), label: o.kiswahili ?? o.english, shown: o.kiswahili ? o.english : "Language", issue: o.does }));
 
 export const FIG_USSD_MENU: FigureSpec = {
   id: "fig-5-2-3-ussd-menu",
   section: "4.5.9",
-  title: `${CountWord(USSD_MENU.length)} options on any phone, and the third puts the tracker in reach of a feature phone in Mutha`,
+  title: `${CountWord(USSD_MENU.length)} options on any phone, and the third puts the tracker in reach of a feature phone in Likoni`,
   question: "What does the USSD menu offer?",
   takeaway: "Dial the shortcode, read the plan, register, report an issue, volunteer or opt in, with no internet and close to no cost.",
   sources: [PROPOSAL],
@@ -67,8 +67,8 @@ export const FIG_USSD_MENU: FigureSpec = {
     "Menu labels in Kiswahili are pending the Kiswahili reviewer's sign-off.",
     "The Section 19.3 charter requires a data opt-out the voter can reach from the menu; its position is set when the shortcode is provisioned.",
   ],
-  columns: [{ key: "n", label: "Option", numeric: true }, { key: "kikamba", label: "Kiswahili" }, { key: "english", label: "English" }, { key: "does", label: "What it does" }],
-  rows: MENU.map((m) => ({ cells: { n: m.n, kikamba: m.label, english: m.shown, does: m.issue } })),
+  columns: [{ key: "n", label: "Option", numeric: true }, { key: "kiswahili", label: "Kiswahili" }, { key: "english", label: "English" }, { key: "does", label: "What it does" }],
+  rows: MENU.map((m) => ({ cells: { n: m.n, kiswahili: m.label, english: m.shown, does: m.issue } })),
 };
 
 /* ------------------------------------------------------------------ fig-5-2-4-stack */
@@ -86,7 +86,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "2. Supporter CRM and voter database",
     "Custom PostgreSQL with a Hasura / Directus admin UI, or a CiviCRM instance",
-    "The single source of truth for supporters: profiles, 40-ward linkages, demographic classes, volunteer skills, delegate tracking, contact history",
+    "The single source of truth for supporters: profiles, 30-ward linkages, demographic classes, volunteer skills, delegate tracking, contact history",
     "Encrypted names, phone numbers (AES-256), constituency, ward and polling-station IDs, gender, age cohort, livelihood, consent timestamps, interaction logs",
     "CRITICAL: the core store of personal data. Row-level security, MFA for every operator, role-based access, daily encrypted off-site backups, audit log of every query",
     "Architecture: custom PostgreSQL or open-source CiviCRM",
@@ -94,7 +94,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "3. Publishing and listening suite",
     "Buffer / Hootsuite Enterprise to publish; Brand24 / Talkwalker to listen",
-    "Scheduling across Facebook, X, Instagram, TikTok and YouTube; 24/7 monitoring of Coast and national political keywords (\"Suleiman Shahbal\", \"Mombasa Governor 2027\", \"Mvita CDF\", \"The New Democrats Primaries\", \"Kalonzo Musyoka\"), flagging local issues in real time",
+    "Scheduling across Facebook, X, Instagram, TikTok and YouTube; 24/7 monitoring of Coast and national political keywords (\"Suleiman Shahbal\", \"Mombasa Governor 2027\", \"Jomvu SEZ\", \"maji Mombasa\", \"The New Democrats\"), flagging local issues in real time",
     "Public posts, comments, engagement metrics, sentiment scores, influencer handles, public reach",
     "LOW TO MODERATE: public posts and aggregated sentiment only; compliant with Section 15.3.4 provided no profile is scraped or merged into voter records without consent",
     "The software subscription",
@@ -110,7 +110,7 @@ const STACK: [string, string, string, string, string, string][] = [
   [
     "5. Public service-delivery tracker",
     "Next.js web platform with an interactive GIS ward map, on Vercel / Cloudflare edge hosting",
-    "The public evidence engine: 13 years of Mvita NG-CDF project records (schools, boreholes, dispensaries, bursary audits) and a \"Mombasa Economic Blueprint\" where citizens track proposed ward investments for the 2027–2032 term",
+    "The public evidence engine: the builder's record (the SEZ, the bank, EALA), ward water hours and prices reported by residents, and a \"Mombasa Blueprint\" where citizens track proposed ward investments for the 2027–2032 term",
     "Public infrastructure records, project GPS coordinates, photos and video, completion certificates, public feedback forms",
     "LOW: public government and policy data; feedback forms collect consented contact details under an explicit privacy policy",
     "Design mockups and public domain registration",

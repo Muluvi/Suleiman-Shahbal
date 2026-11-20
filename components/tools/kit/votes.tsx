@@ -78,7 +78,7 @@ export function PriorityScorer({ wards }: { wards: ToolWard[] }) {
         <p className="font-semibold text-ink">Weights (they are rescaled to add up to 100)</p>
         <div className="mt-3 grid gap-4 sm:grid-cols-2">
           <Slider label="Size of the register" value={w.size} onChange={(v) => setW({ ...w, size: v })} min={0} max={100} />
-          <Slider label="In the pool (never held office)" value={w.pool} onChange={(v) => setW({ ...w, pool: v })} min={0} max={100} />
+          <Slider label="In the close-contest belt" value={w.pool} onChange={(v) => setW({ ...w, pool: v })} min={0} max={100} />
           <Slider label="Voters per polling station" value={w.perStation} onChange={(v) => setW({ ...w, perStation: v })} min={0} max={100} hint="More voters at each station: more reached per visit" />
           <Slider label="Fewer county projects per 1,000 voters" value={w.underServed} onChange={(v) => setW({ ...w, underServed: v })} min={0} max={100} hint="From the county's own scorecard, itemised projects only" />
         </div>

@@ -18,35 +18,33 @@ import { regFmt } from "./from-registry.ts";
  */
 export const BYPASS_PILLARS = [
   {
-    label: "Faith-based, diocesan and community radio",
-    summary: "Neutral and church-owned stations \u2014 Wikwatyo, Mang'elete, County FM",
+    label: "Faith-based and community radio, for programming",
+    summary: "Radio Rahma, Radio Salaam, Baraka FM — programming partners, never paid political placement",
     detail:
-      "Direct media buying and civic issue programming on Radio Wikwatyo (Seventh-Day Adventist, Mombasa), " +
-      "County FM and Mang'elete. These stations hold the highest qualitative credibility among rural women, " +
-      "church elders and farming chamas; strictly neutral and immune to commercial political vetoes.",
+      "Civic programming on water, health and jobs with Radio Rahma, Radio Salaam and Baraka FM (Catholic " +
+      "Archdiocese of Mombasa). These stations carry high trust among women, elders and faith communities; " +
+      "the campaign offers residents' call-ins and expert segments, with no candidate named and no paid political message.",
   },
   {
     label: `Direct 2G bulk SMS and USSD, to up to ${regFmt("reach.sms-only")} phone owners not online`,
     summary: "Zero-rated interactive USSD gateway (*[shortcode]#)",
     detail:
-      "Deployment of the 2G SMS Engine (1.5M messages) and the zero-rated USSD gateway (*[shortcode]#) via " +
-      "Africa's Talking. Bypasses radio entirely by landing 160-character localised policy alerts directly " +
-      "onto voters' feature phones within minutes.",
+      "Deployment of the SMS engine and the zero-rated USSD gateway (*[shortcode]#) through a licensed " +
+      "aggregator. Bypasses radio entirely by landing 160-character ward alerts directly onto voters' " +
+      "phones within minutes.",
   },
   {
-    label: "8-sub-county mobile PA sound truck and caravan fleet",
-    summary: "High-density market centre caravans",
+    label: "The stages, markets and PA caravans",
+    summary: "Boda-boda and tuk-tuk stages and the big markets",
     detail:
-      "Daily deployment of 8 branded sound PA caravans across all major market centres \u2014 Nguni, Tseikuru, " +
-      "Mutomo, Kabati, Migwani, Ikutha. Broadcasts 90-second benga audio jingles, verified candidate policy " +
-      "addresses and live Q&A sessions directly to market crowds.",
+      "PA caravans and stage champions at Kongowea, Marikiti, Majengo, Mtopanga, Chaani and the Likoni ferry " +
+      "approaches. Short Kiswahili jingles, verified policy addresses and live Q&A directly with the crowd.",
   },
   {
-    label: "Ward captain megaphone and WhatsApp audio network",
-    summary: "Grassroots baraza audio \u2014 pre-loaded megaphones and WhatsApp voice",
+    label: "Ward captain WhatsApp audio network",
+    summary: "Ward captains' WhatsApp voice notes and estate groups",
     detail:
-      "400 ward captains equipped with high-output portable megaphones and pre-loaded USB memory sticks " +
-      "containing 45-second Kiswahili policy tracks. Direct dispatch of Kiswahili audio notes across 180+ local " +
-      "WhatsApp groups for organic peer-to-peer sharing among teachers, youth and traders.",
+      `${regFmt("target.captains")} ward captains with pre-loaded 45-second Kiswahili audio tracks, dispatched across ` +
+      "estate, chama, stage and residents' WhatsApp groups for peer-to-peer sharing among youth, traders and households.",
   },
 ];

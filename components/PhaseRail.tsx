@@ -39,7 +39,7 @@ const DETAIL: Record<string, PhaseDetail> = {
     highlights: [
       "Week 1 competitive digital baseline audit",
       "The ward-level record tests the central hypothesis before effort is committed",
-      "Geofenced reach into the north mainland and the arid belt",
+      "Geofenced reach into the close-contest belt: Kisauni, Nyali and Changamwe",
     ],
   },
   "0": {
@@ -58,14 +58,14 @@ const DETAIL: Record<string, PhaseDetail> = {
       "Daily multilingual content on a structured calendar",
       "Weekly Facebook Live town halls, Thursdays 19:00–20:00 EAT",
       "SMS programme scales to all 30 wards",
-      "Zone allocation 25% Anchor / 25% the north mainland / 30% Arid Belt / 20% rotating",
+      "Zone allocation 20% the Island / 35% north mainland / 25% west mainland / 20% Likoni and rotating",
     ],
   },
   "2": {
     id: "2",
     objective: "Move preference, ward by ward, on the issues each ward actually raises.",
     highlights: [
-      "Ward-specific ads — water in Ikutha, mango prices in Jomvu, market fees in Kisauni",
+      "Ward-specific ads — water hours in Junda, port jobs in Changamwe, market fees in Majengo",
       "Disclosed partnerships with Mombasa influencers and community leaders",
       "Diaspora webinars every three weeks across the 26-country footprint",
       "Vision video and digital manifesto with KSL and plain-language versions",

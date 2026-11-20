@@ -1,17 +1,10 @@
 /**
- * §7.3 [CHECK REF] — which language reaches which voters, on which channel, and the one rail it cannot use.
+ * §12.4 — which language reaches which voters, on which channel.
  *
- * WHAT THESE FIGURES REPLACE. Three box-drawing blocks stating one language map at three levels of
- * detail: a compressed banner at §7.3 [CHECK REF], the full matrix at §3.6.1, and a channel-by-channel
- * allocation at §3.6.1. The banner and the matrix are the same table — same three languages, same
- * 76/16/8 shares, same audiences, same channels — so the banner is a summary of the thing eleven
- * lines below it. Rule 1a retires both once a figure carries the fuller one's facts.
- *
- * C-21, SETTLED (November 2026). §12.4 once listed "2G Bulk SMS & USSD" among Kiswahili's channels,
- * against §15.3.3, which states at Tier 1 (Communications Authority) that bulk political SMS is
- * restricted to English or Kiswahili and that an operator may refuse a non-compliant message
- * outright. The law decides it: Kiswahili's channel list drops bulk SMS, and the SMS rail stays
- * 80% Kiswahili, 20% English. The decision and its reason are logged in docs/DISPUTES-RESOLVED.md.
+ * No published survey gives Mombasa's home-language shares, so the "share" here is the published
+ * content mix the campaign targets (§12.4's donut), labelled as a target, not as a measurement of
+ * who speaks what. Bulk political SMS carries Kiswahili and English only (§15.3.3); Sheng and the
+ * Mijikenda languages never go by bulk SMS.
  */
 import type { FigurePoint, FigureSeries } from "./types";
 import type { Source } from "../../data/types";
@@ -21,14 +14,14 @@ import type { Source } from "../../data/types";
  * measurement — so they are Tier 3 and say so, rather than borrowing the register's authority.
  */
 const LANGUAGE_REACH: Source = {
-  name: "Stated in §12.4 as an estimated primary reach — source needed",
+  name: "The campaign's published content mix, §12.4 (a target, not a measurement)",
   publicationDate: "2026",
   tier: 3,
 };
 
 export type LanguageRow = {
   name: string;
-  /** Estimated primary reach, as §3.6.1 states it. */
+  /** Share of published content, the §12.4 target. */
   share: number;
   audiences: string[];
   channels: string[];
@@ -39,54 +32,31 @@ export type LanguageRow = {
 export const LANGUAGES: LanguageRow[] = [
   {
     name: "Kiswahili",
-    share: 76,
-    audiences: [
-      "Rural smallholder farmers (32.8%)",
-      "Women chamas and rural mothers (52.1%)",
-      "Village elders and clan leaders",
-      "Agro-pastoralists (the north mainland and South)",
-    ],
-    // C2 / C-21, settled (November 2026): bulk political SMS cannot carry Kiswahili (Communications
-    // Authority rule, Tier 1; GSM-7 cannot encode ĩ or ũ), so Kiswahili's list keeps USSD and drops
-    // bulk SMS, as §12.4's own "one channel consequence" and §15.3.3 state.
-    channels: ["Vernacular radio (Musyi, Wikwatyo)", "USSD menus and WhatsApp voice notes", "Baraza PA addresses", "Megaphone audio clips"],
-    objective: "Establish emotional affinity, cultural authenticity and unshakeable community stewardship trust.",
-  },
-  {
-    name: "Kiswahili (and Sheng)",
-    share: 16,
-    audiences: [
-      "Urban MSMEs, mama mbogas and traders",
-      "Boda boda riders and hustlers (43.9%)",
-      "Inter-county commuters and transporters",
-      "Semi-urban youth cohorts",
-    ],
-    channels: ["Market PA sound trucks", "TikTok and Reels video", "WhatsApp group flyers", "Open-air town rallies"],
-    objective: "Communicate everyday economic solidarity, commercial dynamism and hustle dignity.",
+    share: 60,
+    audiences: ["Every ward and every age", "Women's groups and chamas", "Traders and port workers", "Elders and faith communities"],
+    channels: ["Kiswahili radio (Pwani FM, Radio Citizen, Radio Maisha)", "SMS, USSD and WhatsApp voice notes", "The stages and barazas", "Ward captains' audio clips"],
+    objective: "The language of trust, argument and mobilisation in Mombasa: every line checked by a native speaker from Mombasa.",
   },
   {
     name: "English",
-    share: 8,
-    audiences: [
-      "Teachers, doctors and civil servants",
-      "National press bureau chiefs",
-      "Professional and corporate diaspora",
-      "Judicial, EACC and regulatory bodies",
-    ],
-    channels: [
-      "60-page main manifesto",
-      "Statutory IEBC filings",
-      "LinkedIn and X longform",
-      "National TV interviews (Citizen, KTN, NTV)",
-    ],
-    objective: "Project technocratic competence, statutory legal precision and national economic policy leadership.",
+    share: 25,
+    audiences: ["Professionals and the public service", "The national press", "Business associations", "Regulators and the courts"],
+    channels: ["The full policy platform", "Statutory IEBC filings", "LinkedIn and X longform", "National TV interviews"],
+    objective: "Policy precision and the national conversation about the port and the county's finances.",
+  },
+  {
+    name: "Sheng and Mijikenda languages",
+    share: 15,
+    audiences: ["The young, online and at the stages", "Older mainland households (Digo, Giriama and others)"],
+    channels: ["TikTok and Instagram video (Sheng)", "Radio Kaya spots and in person (Mijikenda)", "Never bulk SMS"],
+    objective: "Meet the young and the mainland's older households in the language they use at home.",
   },
 ];
 
 export const LANGUAGE_SPLIT: FigureSeries = {
   id: "language-map",
-  headline: "Three languages, and three quarters of the county reachable in only one of them",
-  measure: "Estimated primary reach per language, as §12.4 states it",
+  headline: "Kiswahili first, English for policy, Sheng and the Mijikenda languages where they are spoken",
+  measure: "The share of published content per language: the §12.4 target",
   points: LANGUAGES.map<FigurePoint>((l) => ({
     label: l.name,
     value: l.share,
@@ -100,9 +70,8 @@ export const LANGUAGE_SPLIT: FigureSeries = {
     conflicts: l.conflicts,
   })),
   note:
-    "The three shares are stated in §12.4 without a citation and sum to 100%, so they describe who " +
-    "speaks what (a language map, unconfirmed), not a target. The content target is the 50 / 30 / 20 mix " +
-    "in §12.4; bulk SMS carries Kiswahili and English only (§15.3.3).",
+    "These are targets for what the campaign publishes, not a measure of who speaks what: no published " +
+    "study gives Mombasa's home-language shares. Bulk SMS carries Kiswahili and English only (§15.3.3).",
 };
 
 /** §3.6.1's channel-by-channel allocation, whose SMS row is the version C-21 points at. */
@@ -117,48 +86,42 @@ export type DeploymentRow = {
 
 export const LANGUAGE_DEPLOYMENT: DeploymentRow[] = [
   {
-    medium: "Vernacular radio spots",
-    primary: { language: "Kiswahili", share: 100 },
-    secondary: [],
-    note: "None — zero English or Swahili intrusion on spots.",
+    medium: "Radio spots",
+    primary: { language: "Kiswahili", share: 90 },
+    secondary: [{ language: "Mijikenda languages (Radio Kaya)", share: 10 }],
   },
   {
     medium: "Direct 2G bulk SMS",
     primary: { language: "Kiswahili", share: 80 },
     secondary: [{ language: "English", share: 20 }],
-    note: "Kiswahili rural, English for urban centres and youth boda. Kiswahili is allocated none of this rail, as the Communications Authority's bulk SMS rule requires.",
+    note: "Kiswahili and English only, as the Communications Authority's bulk SMS rule requires.",
   },
   {
     medium: "USSD menu system",
     primary: { language: "Kiswahili", share: 50 },
-    secondary: [{ language: "Kiswahili", share: 50 }],
-    note: "Toggle via option 0 on the USSD menu. USSD is not restricted: the channel rules name USSD menu text as a place Kiswahili belongs.",
+    secondary: [{ language: "English", share: 50 }],
+    note: "Toggle via option 6 on the USSD menu.",
   },
   {
-    medium: "Baraza print collateral",
+    medium: "Print collateral",
     primary: { language: "Kiswahili", share: 70 },
-    secondary: [{ language: "Kiswahili and English", share: 30 }],
-    note: "Executive summaries in the secondary languages.",
+    secondary: [{ language: "English", share: 30 }],
+    note: "Bilingual: Kiswahili on the main spread, English on the back.",
   },
   {
-    medium: "Sound PA truck jingles",
+    medium: "Stage and PA jingles",
     primary: { language: "Kiswahili", share: 85 },
-    secondary: [{ language: "Swahili / Sheng", share: 15 }],
-    note: "The Swahili share is for urban market stops.",
+    secondary: [{ language: "Sheng", share: 15 }],
   },
   {
     medium: "TikTok and Reels video",
-    primary: { language: "Swahili / Sheng", share: 50 },
-    secondary: [
-      { language: "English", share: 35 },
-      { language: "Kiswahili punchlines", share: 15 },
-    ],
+    primary: { language: "Kiswahili and Sheng", share: 70 },
+    secondary: [{ language: "English", share: 30 }],
   },
   {
-    medium: "Formal policy manifesto",
+    medium: "Formal policy platform",
     primary: { language: "English", share: 100 },
     secondary: [],
-    note: "Abridged 12-page summaries in Kiswahili and Swahili.",
+    note: "An abridged Kiswahili summary accompanies it.",
   },
 ];
-

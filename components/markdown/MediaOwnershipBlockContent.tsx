@@ -15,8 +15,8 @@ import MediaOwnershipChart, { type StationBar } from "../charts/MediaOwnershipCh
  * theme set the lightness. See --align-a/b/c in app/globals.css.
  */
 function alignmentColor(alignment: string): string {
-  if (alignment.includes("politically affiliated")) return "var(--align-a)";
-  if (alignment.includes("Kalonzo")) return "var(--align-b)";
+  if (/Royal Media|Standard Group/.test(alignment)) return "var(--align-a)";
+  if (/Islamic|Catholic|Community/i.test(alignment)) return "var(--align-b)";
   return "var(--align-c)";
 }
 
@@ -29,10 +29,9 @@ const CHART_DATA: StationBar[] = RADIO_STATIONS.map((s) => ({
 }));
 
 /**
- * Media ownership map (§3.7.1). The strategic point: the highest-reach
- * stations on §3.7.1's own reading are controlled by political owners or the party gatekeeper,
- * not by the campaign. Reach is a qualitative 1–3 read, never a measured listenership figure —
- * see the Data Gaps Register for that gap.
+ * Media ownership map (§4.2). The strategic point: the widest-reach stations are commercial and
+ * take paid placement; the faith and community stations carry programming only. Reach is a
+ * qualitative 1–3 read, never a measured listenership figure — see the Data Gaps Register.
  */
 export function MediaOwnershipBlockContent() {
   return (
@@ -42,9 +41,9 @@ export function MediaOwnershipBlockContent() {
         <h4 className="font-serif text-sm font-bold text-ink">Media Ownership Map — Reach vs. Alignment</h4>
       </div>
       <p className="t-small text-muted mb-3 leading-relaxed pl-4">
-        Reach is a qualitative reading of Section 1.2&apos;s own &quot;Campaign posture&quot; column, not a measured
-        listenership figure — none was supplied by the research pass (Data Gaps Register). Ownership associations are
-        Tier 2/3 and labelled individually below.
+        Reach is a qualitative reading of each station&apos;s footprint (national, Coast-wide or community), not a
+        measured listenership figure: no Coast audience share is in hand (Data Gaps Register). Ownership associations
+        are Tier 2/3 and labelled individually below.
       </p>
 
       <div className="w-full t-micro mb-4">

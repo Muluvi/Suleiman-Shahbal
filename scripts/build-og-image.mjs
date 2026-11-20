@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * The WhatsApp preview card: public/og/kitui-2027.png, 1200x630.
+ * The WhatsApp preview card: public/og/mombasa-2027.png, 1200x630.
  *
  * WHY IT EXISTS. `twitter:card` was set to `summary_large_image` with no `og:image` behind it, so
  * every share of this link — and this proposal is a link-only document that will be opened from a
@@ -34,7 +34,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "public", "og", "kitui-2027.png");
+const OUT = path.join(ROOT, "public", "og", "mombasa-2027.png");
 
 async function loadPlaywright() {
   try {
@@ -121,16 +121,15 @@ const CARD = `<!doctype html>
   <div class="glow"></div>
   <div class="body">
     <div class="mark">
-      <!-- The The New Democrats umbrella, the same path the site header draws. -->
+      <!-- The campaign mark, the same blocks the site header draws. -->
       <svg width="56" height="56" viewBox="0 0 120 120" fill="none">
-        <path d="M60 20 C30 20 16 42 12 58 C24 53 42 53 60 58 Z" fill="#00209f"/>
-        <path d="M60 20 C90 20 104 42 108 58 C96 53 78 53 60 58 Z" fill="#e31d2b"/>
-        <path d="M60 20 V58" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-        <path d="M57 11 H63 L60 20 Z" fill="#e31d2b"/>
-        <path d="M60 58 V92 C60 99 51 99 51 92" stroke="#6f8cff" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <rect x="22" y="62" width="20" height="34" rx="3" fill="#6f8cff"/>
+        <rect x="50" y="44" width="20" height="52" rx="3" fill="#e31d2b"/>
+        <rect x="78" y="24" width="20" height="72" rx="3" fill="#6f8cff"/>
+        <path d="M14 100 H106" stroke="#6f8cff" stroke-width="6" stroke-linecap="round"/>
       </svg>
       <div>
-        <div class="who">Hon. Dr. Benson Suleiman Shahbal</div>
+        <div class="who">Hon. Suleiman Shahbal</div>
         <div class="where">Mombasa County &mdash; 2027</div>
       </div>
     </div>
@@ -161,4 +160,4 @@ await page.screenshot({ path: OUT });
 await browser.close();
 
 const { size } = fs.statSync(OUT);
-console.log(`build-og-image: wrote public/og/kitui-2027.png (1200x630, ${(size / 1024).toFixed(1)} kB)`);
+console.log(`build-og-image: wrote public/og/mombasa-2027.png (1200x630, ${(size / 1024).toFixed(1)} kB)`);

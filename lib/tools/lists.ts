@@ -7,18 +7,17 @@ import { RACE_CALENDAR } from "../public-data";
 
 /** The Fact Card Generator's figures: a plain label and the registry id it reads. */
 export const FACTS: [string, string][] = [
-  ["Registered voters in Mombasa, 2022", "register.2022"], ["Registered voters, July 2026 (reported)", "register.2026"], ["New voters in the April 2026 registration drive", "register.2026.ecvr-drive"],
-  ["Polling stations, 2022", "register.polling-stations"], ["Turnout in the 2022 governor race", "turnout.2022"], ["Valid votes for governor, 2022", "result.2022.gov.valid"],
+  ["Registered voters in Mombasa, 2022", "register.2022"], ["Polling stations, 2022", "register.polling-stations"], ["Turnout in the 2022 governor race", "turnout.2022"],
+  ["Valid votes for governor, 2022", "result.2022.gov.valid"], ["The 2022 winning total for governor", "result.2022.gov.nassir"], ["Registered voters who cast no governor vote, 2022", "abstained.2022"],
+  ["Suleiman Shahbal's votes for governor, 2013", "result.2013.gov.shahbal"], ["Suleiman Shahbal's votes for governor, 2017", "result.2017.gov.shahbal"],
   ["Mombasa's population, 2019 census", "census.population"], ["Households, 2019 census", "census.households"], ["Median age in Mombasa", "census.median-age"],
-  ["Residents aged 15 to 34", "census.age.15-34.share"], ["Residents in poverty", "poverty.2021"], ["People in poverty", "poverty.2021.people"],
-  ["Residents using the internet", "ict.internet"], ["Residents who own a mobile phone", "ict.phone"],
-  ["People with at least a basic drinking-water service", "water.basic.kdhs"], ["Residents relying on untreated surface water", "water.surface"], ["Water points not working, July 2025", "water.points.down.share"], ["Water points assessed, July 2025", "water.points.total"],
-  ["County resource envelope, FY2026/27", "budget.total"], ["Equitable share from the national government", "budget.equitable"], ["County's own-source revenue, FY2026/27", "budget.osr"],
-  ["Development budget spent, Q1 2025/26", "budget.absorption.q1"], ["Uncollected county rates and rents (Auditor-General)", "audit.uncollected"], ["Unconfirmed cash balances (Auditor-General)", "audit.cash"], ["County pending bills, FY2020/21", "budget.pending-bills.2021"],
-  ["Average goat price, July 2025", "price.goat"], ["Average maize price per kg, July 2025", "price.maize"], ["Goats in Mombasa", "livestock.goats"], ["Cattle in Mombasa", "livestock.cattle"], ["Livestock-keeping households", "livestock.households"],
-  ["Infant deaths per 1,000 live births", "health.imr"], ["Under-five deaths per 1,000 live births", "health.u5mr"], ["Children stunted", "health.stunting"], ["Births in a health facility", "health.facility-births"],
-  ["Projects itemised in the county scorecard", "scorecard.itemised"], ["Projects the county scorecard claims", "scorecard.claimed"], ["Cost of the itemised projects", "scorecard.itemised.ksh"], ["Boreholes the county says it drilled", "scorecard.boreholes.drilled"],
-  ["Mvita NG-CDF bursary recipients", "record.bursary.recipients"], ["Mvita NG-CDF bursaries, total", "record.bursary.ksh"],
+  ["Residents aged 15 to 34", "census.age.15-34.share"], ["People per square kilometre", "census.density"], ["Residents in poverty, 2021", "poverty.2021"],
+  ["Residents using the internet", "ict.internet"], ["Young people using the internet", "ict.mombasa.youth"],
+  ["Water Mombasa needs each day (m³)", "water.demand"], ["Water Mombasa receives each day (m³)", "water.supply"], ["Water lost before it is paid for", "water.nrw"],
+  ["A 20-litre jerrican from a vendor (KSh)", "price.water.vendor"], ["A 20-litre jerrican at a county source (KSh)", "price.water.county"], ["Mwache Dam, share complete", "water.mwache.complete"],
+  ["County budget, FY2025/26", "budget.total"], ["Equitable share from the national government", "budget.equitable"], ["County's own-source revenue, FY2025/26", "budget.osr"],
+  ["County pending bills, 30 June 2026", "budget.pending-bills.2026"], ["Pending bills older than three years", "budget.pending-bills.aged"], ["Overdraft to pay June 2026 salaries", "budget.overdraft.2026-06"],
+  ["Jomvu SEZ agreement (KSh)", "record.sez.ksh"], ["Jomvu SEZ, direct jobs projected", "record.sez.jobs"], ["Year Gulf African Bank was founded", "record.gab.founded"],
 ];
 
 const NOMINATION_WANTED = /Governor|financing account|authorised persons for campaign|expenditure report|Public officers/i;

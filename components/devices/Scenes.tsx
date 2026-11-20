@@ -51,7 +51,7 @@ const TICKERS: Record<string, { id: string; label: string }[]> = {
   ],
   needs: [
     { id: "poverty.2021", label: "in poverty" },
-    { id: "water.points.down.share", label: "water points not working" },
+    { id: "water.nrw", label: "of water lost before it is paid for" },
     { id: "ict.offline", label: "of residents offline" },
     { id: "census.population", label: "people, 2019 census" },
   ],
@@ -68,8 +68,8 @@ export function ChapterTicker({ chapter }: { chapter: keyof typeof TICKERS }) {
 export function TvNews() {
   const figs = [
     resolveFigure({ id: "register.2022", label: "registered voters, 2022" }),
-    resolveFigure({ id: "budget.pending-bills.2021", label: "county pending bills, FY2020/21", mod: "bn", prefix: "KSh ", suffix: "bn" }),
-    resolveFigure({ id: "water.points.down.share", label: "of water points not working" }),
+    resolveFigure({ id: "budget.pending-bills.2026", label: "county pending bills, June 2026", mod: "bn", prefix: "KSh ", suffix: "bn" }),
+    resolveFigure({ id: "water.nrw", label: "of water lost before it is paid for" }),
   ];
   return (
     <ExportableVisual
@@ -199,7 +199,7 @@ export function PrintPieces() {
           <div className="pr__ussd">
             <span className="pr__k">No internet? Dial {USSD_SHORTCODE_PLACEHOLDER}</span>
             {USSD_MENU.slice(0, 5).map((o) => (
-              <span key={o.key}>{o.key}. {o.kikamba ?? o.english}</span>
+              <span key={o.key}>{o.key}. {o.kiswahili ?? o.english}</span>
             ))}
           </div>
         </article>

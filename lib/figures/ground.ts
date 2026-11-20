@@ -7,14 +7,11 @@
  *
  * THE FOUR-HOUR CYCLE IS THE CLAIM THIS CHAPTER RESTS ON, and it is the one thing the ASCII did
  * well: a running clock down the left margin, so a reader could see that the whole loop — ground
- * report, triage, three assets produced in three languages, geofenced deployment — fits inside a
- * morning. The figure keeps the clock for that reason, as a monospaced offset in front of each
+ * report, triage, three assets produced, geofenced deployment — fits inside a morning. The figure keeps the clock for that reason, as a monospaced offset in front of each
  * stage rather than a label beside it.
  *
- * ONE NUMBER IN IT IS WORTH READING TWICE. The T+04:00 row pushes bulk SMS to "14,000 consented
- * voters in Tseikuru/Kyuso" — consented, at a moment when §5.1's KPI ladder is still building
- * towards 120,000 by Phase 3. It is transcribed as stated; whether the list exists yet is §5.1's
- * question, not this figure's.
+ * Every SMS in the loop goes to consented contacts only; whether a ward's list exists yet is
+ * §5.1's question, not this figure's.
  */
 import type { FigureSeries } from "./types";
 import { regFmt } from "./from-registry.ts";
@@ -25,8 +22,8 @@ export const FIELD_LOOP_TIERS = [
   {
     label: "Inbound intelligence pipeline",
     items: [
-      "40 ward coordinators",
-      "400 ward captains",
+      `${regFmt("target.coordinators")} ward coordinators`,
+      `${regFmt("target.captains")} ward captains`,
       "Market day pulse reports",
     ],
   },
@@ -51,7 +48,7 @@ export const FIELD_LOOP_TIERS = [
       `${regFmt("target.stage-champions")} bodaboda stage champions`,
       "Matatu / sacco commuter routes",
       "M-Pesa kiosk economic desks",
-      "Weekly open-air market caravans",
+      "Market caravans: Kongowea, Marikiti, Majengo",
     ],
   },
 ];
@@ -120,9 +117,9 @@ export const OPERATING_RHYTHM: string[][] = [
   [
     "Daily · 18:00–18:45",
     "Daily field pulse ingestion",
-    "Aggregate 40 ward coordinator reports, flag hot-spots, evaluate SMS quotas",
+    `Aggregate ${regFmt("target.coordinators")} ward coordinator reports, flag hot-spots, evaluate SMS quotas`,
     "Field Operations Director",
-    "8 constituency coordinators, data analyst",
+    "6 constituency coordinators, data analyst",
   ],
   [
     "Weekly · Monday 09:00–11:30",
@@ -141,16 +138,16 @@ export const OPERATING_RHYTHM: string[][] = [
   [
     "Weekly · Sunday 17:00–18:00",
     "Faith & community review",
-    "Review Sunday church visits, clergy synod feedback, prayer network alignment",
-    "Religious Affairs Director",
-    "Church liaison officers",
+    "Review the week's mosque, church and community visits, and feedback from faith leaders",
+    "Faith & Community Liaison",
+    "Mosque and church liaison officers",
   ],
   [
     "Monthly · 1st Saturday 10:00–14:00",
     "All-wards field leadership baraza",
     "In-person strategic review, voter sign-up audit, training and stipend disbursement",
     "Campaign Manager",
-    "40 ward coordinators, 8 constituency leads, DPO",
+    `${regFmt("target.coordinators")} ward coordinators, 6 constituency leads, DPO`,
   ],
   [
     "Monthly · last day of month",

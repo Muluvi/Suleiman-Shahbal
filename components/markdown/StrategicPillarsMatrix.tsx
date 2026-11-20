@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Building2, BarChart3, Languages, CheckSquare, ShieldCheck, ArrowRight, Sparkles, FileCheck2 } from "lucide-react";
+import { Building2, BarChart3, Droplets, Languages, CheckSquare, ShieldCheck, ArrowRight, Sparkles, FileCheck2 } from "lucide-react";
 import { fmt } from "../../lib/data/read";
 
 interface StrategicPillar {
@@ -20,46 +20,46 @@ const STRATEGIC_PILLARS: StrategicPillar[] = [
   {
     id: "pillar1",
     num: "01",
-    title: "Fiscal Accountability & Devolution",
-    subtitle: "Public Finance Governance & Equitable Ward Share",
-    icon: Building2,
-    corePremise: "Translates parliamentary leadership in national budget appropriations into a transparent manifesto for Mombasa's 30 wards, showing line-by-line management of the KSh 13.79B county resource envelope.",
-    tangibleProofPoint: "KSh 1.339B own-source revenue optimization model & published ward allocation formula.",
-    deliveryFormat: "Ward-by-ward budget allocation sheets, Kiswahili vernacular explainers, and open expenditure tables.",
-    verificationAudit: "Pre-allocation public disclosure matched against post-expenditure Auditor General queries."
+    title: "Water at the Tap",
+    subtitle: "The Last Mile, a Price Ceiling and Published Losses",
+    icon: Droplets,
+    corePremise: `Mombasa receives about ${fmt("water.supply.share")}% of the water it needs and loses ${fmt("water.nrw")}% of what it buys. Mwache Dam arrives in the next term whoever governs; the pillar is getting it into the estates.`,
+    tangibleProofPoint: `A jerrican is KSh ${fmt("price.water.vendor")} from a vendor against KSh ${fmt("price.water.county")} at a county source (Tier 2): a public price ceiling at county kiosks.`,
+    deliveryFormat: "Ward-by-ward water hours, Kiswahili voice notes, and residents' reports on the consented line.",
+    verificationAudit: "Hours of supply and the share of water lost, published every quarter against the utility's own records."
   },
   {
     id: "pillar2",
     num: "02",
-    title: "Data-Driven Civic Engagement",
-    subtitle: "Track Record Visualization & Evidence Maps",
+    title: "Jobs that Stay in Mombasa",
+    subtitle: "The Port's Value, Kept in the County",
     icon: BarChart3,
-    corePremise: "Transforms dense county documentation into clear visual graphics, ward maps, and before-and-after project comparisons that ordinary citizens can instantly understand and interrogate.",
-    tangibleProofPoint: `${fmt("record.bursary.recipients")} bursary beneficiaries (KSh ${fmt("record.bursary.ksh", "m")}M) and evaluated NG-CDF projects certified as best in Eastern Region.`,
-    deliveryFormat: "Interactive infographics, mobile-first ward cartograms, and before/after project cards.",
-    verificationAudit: "Public register of all school classrooms, bursary disbursements, and water points."
+    corePremise: "The port moves the country's cargo; more of its value should stay in Mombasa as jobs for the young people who live beside it.",
+    tangibleProofPoint: `The Jomvu SEZ: KSh ${fmt("record.sez.ksh", "bn")}bn, ${fmt("record.sez.acres")} acres, ${fmt("record.sez.jobs")} direct jobs projected by the promoters (Tier 2, a projection).`,
+    deliveryFormat: "Site visits filmed on the ground, short vertical video in Kiswahili and Sheng, and the stages.",
+    verificationAudit: "Jobs that exist, reported quarter by quarter against the projection."
   },
   {
     id: "pillar3",
     num: "03",
-    title: "Policy-to-People Translation",
-    subtitle: "Linguistic & Cultural Vernacular Localization",
-    icon: Languages,
-    corePremise: "Converts complex technical topics (climate adaptation, water pipeline financing, agricultural value chains) into culturally resonant Kiswahili idioms, proverbs, and audio voice notes.",
-    tangibleProofPoint: "Kiswahili audio briefs ('Kĩla kĩndũ kĩ na thayũ, ĩtina nĩ kũmenya') and 60-second animated explainers.",
-    deliveryFormat: "WhatsApp voice notes from Mr Shahbal, weekly radio barazas, and grassroots chama toolkits.",
-    verificationAudit: "Certified by native-speaker linguist with zero identity-based wedge targeting."
+    title: "A County that Pays its Bills",
+    subtitle: "Fiscal Accountability and the Ward Development Share",
+    icon: Building2,
+    corePremise: `A county that owes KSh ${fmt("budget.pending-bills.2026", "bn")}bn, ${fmt("budget.pending-bills.aged")}% of its bills older than three years, and borrows to pay salaries. The pillar pays the oldest bills first and publishes the list.`,
+    tangibleProofPoint: `A ward development share of KSh ${fmt("policy.ward-fund", "m")}m per ward, every year, across the 30 wards.`,
+    deliveryFormat: "A published pending-bills schedule, ward development sheets, and explainers for traders owed by the county.",
+    verificationAudit: "The schedule matched against the Controller of Budget and Auditor-General reports."
   },
   {
     id: "pillar4",
     num: "04",
     title: "Verification & Follow-Through",
-    subtitle: "The M&E Signature Differentiator",
+    subtitle: "The Builder's Signature",
     icon: CheckSquare,
-    corePremise: "The single pillar that sets Mr Shahbal apart: publishing what was promised, then systematically publishing whether it actually happened. An evaluator who measures outcomes.",
+    corePremise: "What sets a builder apart: publishing what was promised, then publishing whether it happened. Every commitment carries a date and a place a voter can visit.",
     tangibleProofPoint: "Public Service-Delivery Tracker (Chapter 15) operational on USSD, SMS, WhatsApp, and Web.",
     deliveryFormat: "Quarterly evidence scorecards, live issue resolution registers, and transparent ad-spend ledger.",
-    verificationAudit: "Independent verification through Evaluation Society of Kenya standards."
+    verificationAudit: "Each commitment revisited twelve weeks on: delivered, delayed or not done."
   }
 ];
 
@@ -179,7 +179,7 @@ export function StrategicPillarsMatrix() {
       <div className="p-3 bg-paper/60 border-t border-line t-small text-muted flex items-center justify-between px-4 font-semibold">
         <span className="flex items-center gap-1">
           <ArrowRight size={12} className="text-accent" />
-          <span>Underlying Campaign Doctrine: &ldquo;Mombasa has resources. What it has lacked is leadership that understands how to use them — and the discipline to prove it did.&rdquo;</span>
+          <span>Underlying Campaign Doctrine: &ldquo;Mombasa does not lack plans. What it has lacked is a governor who finishes what he starts, and shows the work.&rdquo;</span>
         </span>
       </div>
     </div>

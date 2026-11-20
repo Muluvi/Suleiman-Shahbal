@@ -8,6 +8,7 @@ import { ClaimBadge } from "./ClaimBadge";
 import { TierBadge } from "./TierBadge";
 import { DURATION } from "../../lib/motion";
 import { figure } from "../../lib/data/figures";
+import { fmt } from "../../lib/data/read";
 import { CountWord } from "../../lib/count-word";
 import { segment, shareText, sizeText, type Segment } from "../../data/segments";
 
@@ -49,88 +50,76 @@ interface AudienceSegment {
 
 const AUDIENCE_SEGMENTS: AudienceSegment[] = [
   {
-    id: "agrarian",
-    index: 1,
-    name: "Rural agrarian & smallholder baseline",
-    shortName: "Rural agrarian",
-    sizing: sizingOf("agrarian"),
-    connectivity: "73.8% offline countywide (CA/KNBS 2023/24). 2G feature-phone dominance, high evening vernacular radio listenership.",
-    geographicBase: "Rural belts across Mvita, Jomvu, Likoni, Kisauni, Kisauni and Likoni — 36 non-urban wards.",
-    coreAnxiety:
-      "Persistent seasonal crop failure, unmitigated drought shocks, exploitative middlemen for green grams and pigeon peas, erratic subsidised seed and fertiliser distribution.",
-    valueProposition:
-      "Public finance expertise as a guarantee of guaranteed minimum returns, county-backed cold storage and aggregate marketing boards, and decentralised solar-powered sand dam and borehole expansion.",
-    channels: ["Coast vernacular radio, 06:00–08:30 and 19:00–21:30", "Localised bulk SMS in Kiswahili", "Market-day barazas", "Church fellowships and SACCO meetings"],
-  },
-  {
-    id: "pastoralist",
-    index: 2,
-    name: "Agro-pastoralist & arid-zone livestock keepers",
-    shortName: "Agro-pastoralist",
-    sizing: sizingOf("pastoralist"),
-    connectivity: "Highly dispersed. Intermittent 2G coverage, heavy battery and solar radio listenership.",
-    geographicBase: "Kisauni, Kisauni, Changamwe and Likoni borderlands.",
-    coreAnxiety:
-      "Banditry along the Tana River and Garissa borders, pasture depletion, no county livestock off-take during drought, disease outbreaks, predatory livestock buyers.",
-    valueProposition:
-      "County-financed livestock vaccination corridors, modern abattoir facilities in the north mainland and Mutomo, and assertive security coordination backed by parliamentary budgeting influence.",
-    channels: ["Vernacular radio pastoralist segments", "Weekly livestock market hubs", "Clan elders and grazing committee chairs"],
-  },
-  {
     id: "youth",
-    index: 3,
-    name: "Youth cohort, ages 18–35",
-    shortName: "Youth 18–35",
+    index: 1,
+    name: "The young mainland voter, ages 18–34",
+    shortName: "Youth 18–34",
     sizing: sizingOf("youth"),
-    connectivity: "~70%+ smartphone adoption within the cohort. WhatsApp, TikTok, Facebook Mobile, YouTube.",
-    geographicBase: "Peri-urban corridors — Mombasa Township, the Kwa Vonza university belt, Kisauni town, Mutonguni, Kabati — and rural trading centres.",
-    coreAnxiety:
-      "Chronic un- and under-employment, predatory digital lending apps, arbitrary county revenue enforcement against bodaboda riders and kiosks, no startup capital.",
-    valueProposition:
-      "Dismantling the handouts model in favour of an institutionalised County Youth Enterprise & Innovation Fund, TVET scholarship vouchers, and zero-rating of small informal trade licences.",
-    channels: ["Meta and TikTok short-form video", "WhatsApp audio and graphic forwards", "Bodaboda stage associations", "University and college student unions"],
+    connectivity: `${fmt("ict.mombasa.youth")}% of Mombasa's young people use the internet (CA/KNBS 2023/24). TikTok, Instagram and WhatsApp.`,
+    geographicBase: "The dense mainland estates of Kisauni (Junda, Mjambere, Bamburi, Shanzu), Likoni (Timbwani, Bofu) and Jomvu (Mikindani, Miritini).",
+    coreAnxiety: "No work, insecurity and drugs in the estates, harassment by county enforcement.",
+    valueProposition: "Jobs with an employer's name on them (the SEZ, port-linked industry), TVET places, and a quarterly jobs report he can be held to.",
+    channels: ["TikTok and Instagram short video", "WhatsApp forwards", "Boda-boda and tuk-tuk stages", "Football tournaments, TUM and TVET colleges"],
+  },
+  {
+    id: "agrarian",
+    index: 2,
+    name: "Port, transport & logistics workers",
+    shortName: "Port and transport",
+    sizing: sizingOf("agrarian"),
+    connectivity: "Smartphones common; long shifts, so drive-time radio and WhatsApp groups carry more than long video.",
+    geographicBase: "Changamwe (Port Reitz, Kipevu, Airport, Chaani) and Jomvu, along the port, the container depots and the Nairobi road.",
+    coreAnxiety: "Cargo and jobs moved inland with the SGR; casual work without security.",
+    valueProposition: "The port's value kept in Mombasa: the Jomvu SEZ, reported as a projection until the jobs exist.",
+    channels: ["Kiswahili radio at drive time", "Workplace and stage visits", "WhatsApp groups", "Consented SMS"],
   },
   {
     id: "msme",
-    index: 4,
-    name: "Urban & peri-urban informal commerce",
-    shortName: "Urban commerce",
+    index: 3,
+    name: "Traders & small businesses",
+    shortName: "Traders",
     sizing: sizingOf("msme"),
-    connectivity: "~45%–55% smartphone connectivity. Constant WhatsApp business use, daily county revenue contact.",
-    geographicBase: "Mombasa Township, Kisauni town, Kwa Vonza/Yatta, Mutomo, Matinyani and Nguutani.",
-    coreAnxiety:
-      "Excessive cess without basic market infrastructure, arbitrary harassment by county enforcement, market fires with no response.",
-    valueProposition:
-      "The Economist's Business Charter — a single unified business permit, 24-hour solar-lit and secured markets, modern sanitation, and predictable county tax codes.",
-    channels: ["Business-district walk-throughs", "Trader association meetings", "KNCCI Mombasa chapter", "Market-day PA activations"],
+    connectivity: "Constant WhatsApp business use and daily contact with county revenue officers.",
+    geographicBase: "Kongowea (Nyali), Marikiti, Majengo and the CBD (Mvita), and the trading strips of every estate.",
+    coreAnxiety: "Fees without services, the county's unpaid bills to suppliers, market sanitation and fire safety.",
+    valueProposition: "A single business permit, a public pending-bills schedule paid oldest first, and a builder who has run businesses himself.",
+    channels: ["Market walk-throughs", "Traders' associations and the KNCCI Mombasa chapter", "Geofenced ads at the markets", "Midday business radio"],
+  },
+  {
+    id: "pastoralist",
+    index: 4,
+    name: "Women & household managers",
+    shortName: "Women",
+    sizing: sizingOf("pastoralist"),
+    connectivity: "WhatsApp voice notes travel furthest; chamas and faith networks carry the rest.",
+    geographicBase: "Every ward; most active in chamas, women's groups and faith networks.",
+    coreAnxiety: "The price of water and the hours it runs; health care; school costs.",
+    valueProposition: "Water at the county's price at county kiosks, hours of supply published ward by ward.",
+    channels: ["WhatsApp voice notes", "Women's groups and chamas", "Consented SMS", "Faith-based radio programming on water and health"],
   },
   {
     id: "professionals",
     index: 5,
-    name: "Formal professionals, civil servants & educators",
+    name: "Professionals & the public service",
     shortName: "Professionals",
     sizing: sizingOf("professionals"),
-    connectivity: ">90% smartphone and laptop connectivity. Active on X, Facebook, LinkedIn and professional WhatsApp groups.",
-    geographicBase: "Concentrated in Mombasa town, the north mainland town and county administrative centres.",
-    coreAnxiety:
-      "Delayed statutory deductions, stalled promotions, poor hospital drug supplies undermining medical practice, politicised public service appointments.",
-    valueProposition:
-      "Meritocratic public service administration, on-time payment of county health workers, professionalisation of the County Public Service Board, and governance free from cronyism.",
-    channels: ["Policy whitepapers", "LinkedIn and Facebook thought leadership", "Union delegation briefings"],
+    connectivity: "Smartphone and laptop connected. Active on X, LinkedIn and professional WhatsApp groups.",
+    geographicBase: "The Island, Nyali and Tudor; county and national offices; Coast General.",
+    coreAnxiety: "Late salaries (the county borrowed to pay June 2026 salaries), stalled promotions, drug shortages.",
+    valueProposition: "Salaries and statutory deductions paid on time, and a professional County Public Service Board.",
+    channels: ["Policy briefs", "LinkedIn and X", "Television and talk radio", "Union branches and professional associations"],
   },
   {
     id: "diaspora",
     index: 6,
-    name: "Out-of-county Coast diaspora",
-    shortName: "Diaspora",
+    name: "The 2022 abstainers",
+    shortName: "2022 abstainers",
     sizing: sizingOf("diaspora"),
-    connectivity: ">95% internet and smartphone connected. Active on X, Facebook, WhatsApp, YouTube and national podcasts.",
-    geographicBase: "Nairobi, the Coast and nationwide, plus the 26 countries IEBC is opening to diaspora registration.",
-    coreAnxiety:
-      "Inefficient county spending that leaves rural parents and siblings in perpetual poverty, requiring continuous emergency bailouts from the diaspora.",
-    valueProposition:
-      "Mr Shahbal as the diaspora's trusted steward — an economist who will manage county funds with audited transparency and create an enabling environment for diaspora investment.",
-    channels: ["Nairobi and Coast geotargeted ads", "Diaspora town halls", "National podcasts"],
+    connectivity: "Everywhere and every kind of phone: reached by people they know before any channel.",
+    geographicBase: "Every ward; turnout was lowest in Jomvu and Changamwe on the day (Tier 2, The Star).",
+    coreAnxiety: "Voting changes nothing.",
+    valueProposition: "Every promise with a date and a way to check it, and a reason to vote on general-election day, when the governor's race is on the same ballot as the president's.",
+    channels: ["Ward captains, door to door", "Consented SMS and USSD", "Radio", "The stages"],
   },
 ];
 

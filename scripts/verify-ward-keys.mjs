@@ -1,20 +1,14 @@
 #!/usr/bin/env node
 /**
  * Build guard: data/geo/ward-keys.json still joins the register and the boundary file, ward for
- * ward (KITUI-OPEN-DATA-BRIEF.md, WP1).
- *
- * The key table is what lets any ward-level source (the scorecard's ward text today; health
- * facilities and census rows later) land on the right ward. If the register or the polygons
- * change and the table does not, a join quietly drops or misplaces a ward. This makes that loud.
+ * ward.
  *
  * It checks, with no download:
- *   - exactly the register's 40 wards, each once, in its own constituency, slug as slugOf();
- *   - each wardcode exists in public/geo/kitui-wards.topo.json under the same name and
+ *   - exactly the register's 30 wards, each once, in its own constituency, slug as slugOf();
+ *   - each wardcode exists in public/geo/mombasa-wards.topo.json under the same ward and
  *     constituency, and no two wards share one;
- *   - each open-admin-data code is present, unique and inside Kitui (KE015);
  *   - no alias resolves to two wards in one constituency, or repeats a ward's own name;
- *   - every ward names one of Kitui's 18 KNBS census sub-counties (Stage 15's overlay), with
- *     shares that sum to 1, largest first, and the named sub-county holding the largest share.
+ *   - every ward names one of Mombasa's six KNBS census sub-counties, with shares that sum to 1.
  *
  * Rebuild the table with `node scripts/build-ward-keys.mjs`. Runs as part of `npm run verify`.
  */
@@ -27,18 +21,14 @@ const read = (...p) => JSON.parse(fs.readFileSync(path.join(ROOT, ...p), "utf8")
 
 const keys = read("data", "geo", "ward-keys.json");
 const register = read("data", "ward-register.json");
-const topo = read("public", "geo", "kitui-wards.topo.json");
+const topo = read("public", "geo", "mombasa-wards.topo.json");
 
 const slugOf = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const fold = (s) => s.toLowerCase().replace(/[^a-z/]/g, "");
 
-/** Kitui's 18 sub-counties in the KNBS 2019 census, with their KNBS codes (1501–1518). */
-const KNBS_SUBCOUNTIES = {
-  IKUTHA: "1501", KATULANI: "1502", KISASI: "1503", "KITUI CENTRAL": "1504", "KITUI WEST": "1505",
-  KYUSO: "1506", "LOWER YATTA": "1507", MATINYANI: "1508", MIGWANI: "1509", MUMONI: "1510",
-  MUTITU: "1511", "MUTITU NORTH": "1512", MUTOMO: "1513", "MWINGI CENTRAL": "1514",
-  "MWINGI EAST": "1515", NZAMBANI: "1516", THAGICU: "1517", TSEIKURU: "1518",
-};
+/** Mombasa's six sub-counties in the KNBS 2019 census, with their KNBS codes. */
+const KNBS_SUBCOUNTIES = { CHANGAMWE: "0101", JOMVU: "0102", KISAUNI: "0103", NYALI: "0104", LIKONI: "0105", MVITA: "0106" };
+const key = (s) => s.toLowerCase().replace(/[^a-z]/g, "");
 
 const errors = [];
 const fail = (msg) => errors.push(msg);
@@ -53,21 +43,20 @@ for (const rw of registerWards) {
 }
 
 const polygons = new Map(topo.objects.wards.geometries.map((g) => [g.properties.wardcode, g.properties]));
-const seen = { slug: new Set(), wardcode: new Set(), open_admin_id: new Set() };
+const seen = { slug: new Set(), wardcode: new Set() };
 for (const k of keys.wards) {
   if (k.slug !== slugOf(k.name)) fail(`${k.name}: slug "${k.slug}", expected "${slugOf(k.name)}"`);
-  for (const field of ["slug", "wardcode", "open_admin_id"]) {
+  for (const field of ["slug", "wardcode"]) {
     if (!k[field]) fail(`${k.name}: no ${field}`);
     else if (seen[field].has(k[field])) fail(`${k.name}: ${field} "${k[field]}" used twice`);
     else seen[field].add(k[field]);
   }
   const p = polygons.get(k.wardcode);
   if (!p) fail(`${k.name}: wardcode ${k.wardcode} is not in the boundary file`);
-  else if (p.ward !== k.name || p.constituency !== k.constituency) {
+  else if (key(p.ward) !== key(k.name) || key(p.constituency) !== key(k.constituency)) {
     fail(`${k.name}: wardcode ${k.wardcode} is "${p.ward}" (${p.constituency}) in the boundary file`);
   }
-  if (k.open_admin_id && !k.open_admin_id.startsWith("KE015")) fail(`${k.name}: open_admin_id ${k.open_admin_id} is outside Kitui`);
-  if (KNBS_SUBCOUNTIES[k.knbs_subcounty] === undefined) fail(`${k.name}: knbs_subcounty "${k.knbs_subcounty}" is not a Kitui census sub-county`);
+  if (KNBS_SUBCOUNTIES[k.knbs_subcounty] === undefined) fail(`${k.name}: knbs_subcounty "${k.knbs_subcounty}" is not a Mombasa census sub-county`);
   else if (k.knbs_code !== KNBS_SUBCOUNTIES[k.knbs_subcounty]) fail(`${k.name}: knbs_code ${k.knbs_code} is not ${k.knbs_subcounty}'s`);
   if (typeof k.knbs_split !== "boolean") fail(`${k.name}: knbs_split is not set`);
   const shares = k.knbs_shares ?? [];
@@ -102,6 +91,6 @@ if (errors.length > 0) {
 const aliasCount = keys.wards.reduce((n, k) => n + k.aliases.length, 0);
 console.log(
   `Ward key check passed: ${keys.wards.length} wards join the register and the boundary file one to one, ` +
-  `${seen.open_admin_id.size} open-admin-data codes, ${aliasCount} aliases with no collisions, ` +
+  `${aliasCount} aliases with no collisions, ` +
   `${keys.wards.filter((k) => k.knbs_split).length} wards split between census sub-counties.`
 );

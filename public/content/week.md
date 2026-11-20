@@ -32,7 +32,7 @@ The current pattern, as observed from the public page, is a daily record of wher
 id: fig-4-5-calendar
 ```
 
-**Two rules on top.** At least two of the seven originate in a ward inside the deficit pool. At least five are Kiswahili-first. Both rules are set by the Week 1 audit rather than by preference, and both are checked in the Monday review.
+**Two rules on top.** At least two of the seven originate in a ward of the close-contest belt. At least five are Kiswahili-first. Both rules are set by the Week 1 audit rather than by preference, and both are checked in the Monday review.
 
 ```visual
 {"kind":"contrast","left":{"title":"What changed","items":[{"label":"two fields on a Thursday post, and a language rule."}]},"right":{"title":"What did not change","items":[{"label":"who takes the photograph, who writes the caption, and who presses publish."}]}}

@@ -137,11 +137,11 @@ export const COLLECTIONS: Collection[] = [
       { key: "language", label: "Language", type: "select", options: LANGUAGES, required: true, list: true },
       { key: "assignee", label: "Assigned to (role)", type: "text", maxLength: 80, list: true },
       { key: "status", label: "Status", type: "select", options: ["Draft", "Approved", "Published"], required: true, list: true },
-      { key: "kikambaReviewed", label: "Reviewed by the native Kiswahili speaker", type: "boolean" },
+      { key: "kiswahiliReviewed", label: "Reviewed by the native Kiswahili speaker", type: "boolean" },
     ],
     rules: [
       (r) =>
-        r.language === "Kiswahili" && (r.status === "Approved" || r.status === "Published") && r.kikambaReviewed !== true
+        r.language === "Kiswahili" && (r.status === "Approved" || r.status === "Published") && r.kiswahiliReviewed !== true
           ? "Kiswahili content is approved only after the native Kiswahili speaker has reviewed it. Tick the review box first."
           : null,
     ],

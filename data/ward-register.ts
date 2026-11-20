@@ -1,7 +1,6 @@
-// Complete 2022 IEBC ward register — all 30 wards across the 8 constituencies. Source: IEBC,
+// Complete 2022 IEBC ward register — all 30 wards across the 6 constituencies. Source: IEBC,
 // "Registered Voters per County Assembly Ward", https://www.iebc.or.ke/docs/rov_per_caw.pdf.
-// Tier 1, ward-level. Superseded lib/ward-data.ts, which only itemised 13 of the 30 wards —
-// every consumer of ward data now reads from here.
+// Tier 1, ward-level. Every consumer of ward data reads from here.
 //
 // The raw figures live in ./ward-register.json rather than inline in this file so that
 // scripts/verify-ward-register.mjs (a plain Node script, run as an npm `prebuild` step) can
@@ -60,7 +59,7 @@ function assertWardRegisterIntegrity(): void {
   }
 
   const wardCount = CONSTITUENCIES.reduce((sum, c) => sum + c.wards.length, 0);
-  if (wardCount !== 40) {
+  if (wardCount !== 30) {
     throw new Error(`Ward register integrity failure: expected 30 wards, found ${wardCount}.`);
   }
 }
@@ -69,13 +68,15 @@ assertWardRegisterIntegrity();
 export const TOTAL_WARDS = CONSTITUENCIES.reduce((sum, c) => sum + c.wards.length, 0);
 
 /** All 30 wards flattened, each tagged with its constituency — the shape the Phase 6 "Path to
- * 200,000" chart sorts and accumulates. */
+ * the benchmark" chart sorts and accumulates. */
 export const ALL_WARDS: { constituencyId: string; constituencyName: string; name: string; voters: number }[] =
   CONSTITUENCIES.flatMap((c) => c.wards.map((w) => ({ constituencyId: c.id, constituencyName: c.name, name: w.name, voters: w.voters })));
 
-/** Constituencies sorted by register size, descending — Mvita (77,764) is largest. */
+/** Constituencies sorted by register size, descending — Kisauni is largest. */
 export const CONSTITUENCIES_BY_SIZE = [...CONSTITUENCIES].sort((a, b) => b.voters - a.voters);
 
-/** The three the north mainland constituencies alone (§3.4.2 caption: they total 200,198 — the win
- * threshold is reachable from that bloc on its own). */
-export const MWINGI_BLOC_TOTAL = CONSTITUENCIES.filter((c) => c.id.startsWith("mwingi-")).reduce((sum, c) => sum + c.voters, 0);
+/** The close-contest belt: the three constituencies decided by fewer than 2,000 votes in 2022. */
+export const POOL_CONSTITUENCY_IDS = new Set(["kisauni", "nyali", "changamwe"]);
+
+/** The belt's register total, from the register. */
+export const POOL_TOTAL = CONSTITUENCIES.filter((c) => POOL_CONSTITUENCY_IDS.has(c.id)).reduce((sum, c) => sum + c.voters, 0);

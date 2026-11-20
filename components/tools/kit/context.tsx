@@ -30,10 +30,10 @@ export function CountyMoney({ f, population }: { f: Record<string, FigureView>; 
       <div className="flex justify-end print:hidden"><SaveImage card={{ type: "receipt" }} title="County money per resident" /></div>
       <Card><Select label="Show money as" value={per} onChange={setPer} options={[{ value: "total", label: "Totals" }, { value: "resident", label: "Per resident (2019 census population)" }]} /></Card>
       <Stats>
-        <Stat label="Resource envelope, FY2026/27" value={show(total)} note={tierText(f["budget.total"].tier)} />
-        <Stat label="Development spent, Q1 2025/26" value={pct(v("budget.absorption.q1"), 0)} tone="warn" note="Controller of Budget" />
-        <Stat label="Audit queries, FY2023/24" value={show(audits.reduce((s, a) => s + v(a.id), 0))} note="Four lines, Auditor-General" />
-        <Stat label="Pending bills, FY2020/21" value={show(v("budget.pending-bills.2021"))} note="Controller of Budget" />
+        <Stat label="County budget, FY2025/26" value={show(total)} note={tierText(f["budget.total"].tier)} />
+        <Stat label="Pending bills, 30 June 2026" value={show(v("budget.pending-bills.2026"))} tone="warn" note="Controller of Budget, as reported" />
+        <Stat label="Pending bills older than three years" value={pct(v("budget.pending-bills.aged"), 0)} tone="warn" note="Highest share in Kenya" />
+        <Stat label="Overdraft for June 2026 salaries" value={show(v("budget.overdraft.2026-06"))} note="Controller of Budget, as reported" />
       </Stats>
       <Card>
         <p className="font-semibold text-ink">Where the KSh {(total / 1e9).toFixed(2)} billion comes from</p>
@@ -42,24 +42,24 @@ export function CountyMoney({ f, population }: { f: Record<string, FigureView>; 
         </div>
         <ul className="mt-3 space-y-2 text-[0.9rem]">{parts.map((p) => <li key={p.id}><span className="flex justify-between gap-3"><span className="text-ink">{p.label}</span><span className="font-mono">{show(v(p.id))} · {pct((v(p.id) / total) * 100)}</span></span><span className="text-[0.78rem] text-muted">{prov(f[p.id])}</span></li>)}</ul>
       </Card>
-      <Table rows={audits} rowKey={(a) => a.id} caption="What the Auditor-General queried, FY2023/24" cols={[
+      <Table rows={audits} rowKey={(a) => a.id} caption="What the Auditor-General queried (itemised report to be retrieved)" cols={[
         { key: "l", label: "Query", render: (a) => a.label },
-        { key: "v", label: "Amount", num: true, render: (a) => show(v(a.id)) },
-        { key: "b", label: "", render: (a) => <span className="block w-28"><Bar value={v(a.id)} max={Math.max(...audits.map((x) => v(x.id)))} tone="gold" /></span> },
+        { key: "v", label: "Amount", num: true, render: (a) => (f[a.id].value === null ? "Data needed" : show(v(a.id))) },
+        { key: "b", label: "", render: (a) => (f[a.id].value === null ? <span className="text-[0.78rem] text-muted">{f[a.id].closesWith ?? "The Auditor-General's report"}</span> : <span className="block w-28"><Bar value={v(a.id)} max={Math.max(1, ...audits.map((x) => v(x.id)))} tone="gold" /></span>) },
       ]} />
       <Card>
         <p className="font-semibold text-ink">Talking points, with their limits</p>
         <ul className="mt-2 list-disc space-y-2 pl-5 text-[0.9rem] text-ink">
-          <li>Of every KSh 100 in the envelope, about KSh {Math.round((v("budget.osr") / total) * 100)} is raised by the county itself; the rest comes from Nairobi. <span className="text-muted">({prov(f["budget.osr"])})</span></li>
-          <li>In the first quarter of 2025/26 the county spent {pct(v("budget.absorption.q1"), 0)} of its development budget. <span className="text-muted">(One quarter is not a year: quote it with its quarter.)</span></li>
-          <li>The contested pending bills reported for FY2021/22 and FY2022/23, {ksh(v("audit.pending.contested"))}, are a different measure from the FY2020/21 figure. <Badge tone="gold">{tierText(f["audit.pending.contested"].tier)}</Badge> <span className="text-muted">Quote either with its year, never both as one.</span></li>
+          <li>Of every KSh 100 in the budget, about KSh {Math.round((v("budget.osr") / total) * 100)} is raised by the county itself, one of the highest shares in Kenya. <span className="text-muted">({prov(f["budget.osr"])})</span></li>
+          <li>{pct(v("budget.pending-bills.aged"), 0)} of the county&rsquo;s pending bills are more than three years old. <Badge tone="gold">{tierText(f["budget.pending-bills.aged"].tier)}</Badge></li>
+          <li>The {ksh(v("budget.pending-bills.2021"))} reported in 2024 and the {ksh(v("budget.pending-bills.2026"))} at June 2026 are from different reviews. <span className="text-muted">Quote either with its date, never both as one.</span></li>
         </ul>
       </Card>
     </div>
   );
 }
 
-/* ------------------------------------------------------------------ Drought and Livelihood Watch */
+/* ------------------------------------------------------------------ Water Watch */
 
 export function WaterWatch({ f, sections }: { f: Record<string, FigureView>; sections: { title: string; items: { id: string; label: string; unit?: string }[] }[] }) {
   const fmtV = (id: string, unit?: string) => `${unit === "KSh" ? "KSh " : ""}${f[id].display}${f[id].unit === "percent" ? "%" : ""}${unit && unit !== "KSh" ? ` ${unit}` : ""}`;

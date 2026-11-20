@@ -16,41 +16,41 @@ interface ServiceReport {
 
 const SAMPLE_REPORTS: ServiceReport[] = [
   {
-    refNumber: "KT-SAMPLE-A",
-    ward: "Kyuso",
+    refNumber: "MSA-SAMPLE-A",
+    ward: "Junda",
     constituency: "Kisauni",
     category: "Water Infrastructure",
-    issue: "Solar-powered borehole pump reported as failed; households walking to the river to fetch water.",
+    issue: "Piped water has not run in the estate for nine days; households buying from vendors at KSh 30 a jerrican.",
     channel: "USSD",
     status: "Raised with County",
-    outcomeNote: "Formal query submitted to County Water Chief Officer; Ward Coordinator verifying solar inverter warranty."
+    outcomeNote: "Formal query submitted to MOWASCO and the County Water Chief Officer; Ward Coordinator logging daily hours of supply."
   },
   {
-    refNumber: "KT-SAMPLE-B",
-    ward: "Mutomo",
-    constituency: "Changamwe",
+    refNumber: "MSA-SAMPLE-B",
+    ward: "Timbwani",
+    constituency: "Likoni",
     category: "Health Clinic",
-    issue: "Mutomo Sub-County Hospital maternity wing lacks standby generator during frequent grid blackouts.",
+    issue: "Likoni Sub-County Hospital pharmacy out of essential drugs for three weeks; patients sent to buy outside.",
     channel: "SMS",
     status: "Escalated",
-    outcomeNote: "Mr Shahbal raised on parliamentary committee record regarding unspent county emergency health reserves."
+    outcomeNote: "Raised with the County Health Executive and the Health Committee of the County Assembly."
   },
   {
-    refNumber: "KT-SAMPLE-C",
-    ward: "Township",
+    refNumber: "MSA-SAMPLE-C",
+    ward: "Majengo",
     constituency: "Mvita",
     category: "Market Sanitation",
-    issue: "Kalundu Market solid waste accumulation blocking drainage channels before onset of short rains.",
+    issue: "Solid waste at the Majengo market blocking drainage channels before the long rains.",
     channel: "WhatsApp",
     status: "Resolved / Audited",
-    outcomeNote: "Municipal cleanup completed following public petition; audited by volunteer youth champions."
+    outcomeNote: "Cleanup completed following a traders' petition; checked by volunteer youth champions."
   },
   {
-    refNumber: "KT-SAMPLE-D",
-    ward: "Waita",
-    constituency: "Kisauni",
+    refNumber: "MSA-SAMPLE-D",
+    ward: "Mikindani",
+    constituency: "Jomvu",
     category: "Feeder Roads",
-    issue: "Waita-Kavuvwani culvert washed away during March 2026 floods; agricultural produce trucks cut off.",
+    issue: "Estate access road flooded and impassable after heavy rain; matatus and tuk-tuks rerouted.",
     channel: "Ward Champion",
     status: "Under Verification",
     outcomeNote: "GPS coordinates and photo verification logged into citizen evidence register."
@@ -61,8 +61,8 @@ export function PublicServiceDeliveryTracker() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [isSimulatingSubmission, setIsSimulatingSubmission] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
-  const [generatedRef, setGeneratedRef] = useState("KT-SAMPLE-E");
-  const [wardInput, setWardInput] = useState("Kisauni");
+  const [generatedRef, setGeneratedRef] = useState("MSA-SAMPLE-E");
+  const [wardInput, setWardInput] = useState("Junda");
   const [issueInput, setIssueInput] = useState("");
 
   const filteredReports = selectedCategory === "All"
@@ -73,7 +73,7 @@ export function PublicServiceDeliveryTracker() {
     e.preventDefault();
     if (!issueInput.trim()) return;
     setIsSimulatingSubmission(true);
-    const newRef = `KT-2026-0${Math.floor(Math.random() * 800) + 100}`;
+    const newRef = `MSA-2026-0${Math.floor(Math.random() * 800) + 100}`;
     setGeneratedRef(newRef);
     setTimeout(() => {
       setIsSimulatingSubmission(false);
@@ -231,17 +231,17 @@ export function PublicServiceDeliveryTracker() {
               onChange={(e) => setWardInput(e.target.value)}
               className="p-2 bg-card border border-line rounded-lg t-label font-semibold text-ink"
             >
-              <option value="Kisauni">Kisauni Ward</option>
-              <option value="Mutomo">Mutomo Ward</option>
-              <option value="Mombasa Township">Mombasa Township Ward</option>
-              <option value="Kyuso">Kyuso Ward</option>
-              <option value="Ikutha">Ikutha Ward</option>
+              <option value="Junda">Junda Ward</option>
+              <option value="Timbwani">Timbwani Ward</option>
+              <option value="Majengo">Majengo Ward</option>
+              <option value="Mikindani">Mikindani Ward</option>
+              <option value="Port Reitz">Port Reitz Ward</option>
             </select>
 
             <input
               type="text"
               aria-label="The ward issue being reported"
-              placeholder="e.g. Broken solar borehole pump at Kavuvwani market"
+              placeholder="e.g. No piped water in the estate since Monday"
               value={issueInput}
               onChange={(e) => setIssueInput(e.target.value)}
               className="sm:col-span-2 p-2 bg-card border border-line rounded-lg t-label text-ink placeholder:text-muted"

@@ -3,124 +3,80 @@
 import React, { useState } from "react";
 import { Target, MapPin, TrendingDown, AlertTriangle, Radio } from "lucide-react";
 
-import { ALL_WARDS, CONSTITUENCIES, COUNTY_TOTAL_WARDS, MWINGI_BLOC_TOTAL } from "../../data/ward-register";
+import { ALL_WARDS, COUNTY_TOTAL_WARDS, POOL_CONSTITUENCY_IDS, POOL_TOTAL } from "../../data/ward-register";
+import { val } from "../../lib/data/read";
 import { TierBadge } from "./TierBadge";
 
 /**
- * §3.4 — recognition deficit mapped against voter concentration.
+ * §6.2 — where the 2022 race was closest, mapped against voter concentration.
  *
  * WHAT THIS DELIBERATELY DOES NOT SHOW: any measure of opinion. Firefly works from existing
- * records only, and §3.10 records ward-level recognition as unmeasured. An earlier version of this component
- * carried per-ward polling-baseline percentages; they were
- * invented, and they are gone.
- *
- * What replaces them is what §3.4 actually asserts: a STRUCTURAL recognition status per
- * constituency — home anchor, neighbouring belt, or critical deficit — derived from where
- * Mr Shahbal has held office, not from any survey. The ward list is the top 12 by register,
- * computed from data/ward-register.json rather than typed in; §3.4's own table is that same
- * top 12, so the two cannot drift apart.
+ * records only, and ward-level preference is unmeasured. What it shows is STRUCTURAL: the 2022
+ * governor margin in each constituency (as reported, Tier 2), and the register. The ward list is
+ * the top 12 by register, computed from data/ward-register.json rather than typed in.
  */
 
-type RecognitionStatus = "anchor" | "belt" | "moderate" | "deficit";
+type ContestStatus = "belt" | "west" | "south" | "island";
 
-/**
- * FOUR grades, not three, because §3.4's cross-match table used four.
- *
- * The block this panel retired distinguished MODERATE/HIGH (Neighboring belt) — Mutonguni and
- * Kauwi in Jomvu — from a plain MODERATE (University/Peri-urban) for Kwa Vonza/Yatta in
- * Likoni. An earlier version of this panel called both of them "Neighbouring belt", which
- * would have made the retirement a quiet loss of a distinction the document drew deliberately:
- * Kwa Vonza/Yatta's recall is a campus-town effect, not a border effect.
- */
-const STATUS_META: Record<RecognitionStatus, { label: string; note: string; className: string; dot: string }> = {
-  anchor: {
-    label: "Home anchor",
-    note: "13 consecutive years as MP. High brand saturation.",
-    className: "border-emerald-500/25 bg-emerald-500/[0.04]",
-    dot: "bg-emerald-500",
-  },
+const STATUS_META: Record<ContestStatus, { label: string; note: string; className: string; dot: string }> = {
   belt: {
-    label: "Moderate / high",
-    note: "Neighbouring belt — contiguous with the home constituency.",
-    className: "border-lime-600/25 bg-lime-600/[0.04]",
-    dot: "bg-lime-600",
-  },
-  moderate: {
-    label: "Moderate",
-    note: "University and peri-urban population, not a border effect.",
-    className: "border-amber-500/25 bg-amber-500/[0.04]",
-    dot: "bg-amber-500",
-  },
-  deficit: {
-    label: "Never held office",
-    note: "Out-of-constituency. Lower recall here is the hypothesis Week 1 tests.",
+    label: "Close contest",
+    note: "Decided by fewer than 2,000 votes in 2022.",
     className: "border-rose-500/25 bg-rose-500/[0.04]",
     dot: "bg-rose-500",
   },
+  west: {
+    label: "West mainland",
+    note: "A wider 2022 lead; the SEZ and the port's workforce.",
+    className: "border-amber-500/25 bg-amber-500/[0.04]",
+    dot: "bg-amber-500",
+  },
+  south: {
+    label: "Rotating",
+    note: "Likoni, across the ferry: a rotating share of effort and the ward tests.",
+    className: "border-lime-600/25 bg-lime-600/[0.04]",
+    dot: "bg-lime-600",
+  },
+  island: {
+    label: "Incumbent's strongest",
+    note: "The widest 2022 lead; contested to hold the lead down, not to carry it.",
+    className: "border-emerald-500/25 bg-emerald-500/[0.04]",
+    dot: "bg-emerald-500",
+  },
 };
 
-/** Per §3.4: the anchor is Mvita, Jomvu is the neighbouring belt and Likoni
- *  the peri-urban moderate; the north mainland (all three), Changamwe and Likoni are the deficit zones. */
-const STATUS_BY_CONSTITUENCY: Record<string, RecognitionStatus> = {
-  "kitui-central": "anchor",
-  "kitui-west": "belt",
-  "kitui-rural": "moderate",
-  "mwingi-north": "deficit",
-  "mwingi-central": "deficit",
-  "mwingi-west": "deficit",
-  "kitui-south": "deficit",
-  "kitui-east": "deficit",
+const STATUS_BY_CONSTITUENCY: Record<string, ContestStatus> = {
+  kisauni: "belt",
+  nyali: "belt",
+  changamwe: "belt",
+  jomvu: "west",
+  likoni: "south",
+  mvita: "island",
 };
 
-/**
- * The qualifier §3.4 printed against each ward, where it printed one more specific than its
- * constituency's.
- *
- * Tseikuru and Kyuso are both Kisauni and both critical deficits, and the table gave them
- * different reasons — Tseikuru is the party's own base in the north, Kyuso simply out of
- * constituency. A grade per constituency cannot carry that, so the ward carries it.
- */
-const WARD_QUALIFIER: Record<string, string> = {
-  Kyuso: "Out-of-constituency.",
-  Tseikuru: "Party base, north.",
-  Mumoni: "Out-of-constituency.",
-  Athi: "Deep south belt.",
-  "Ikanga/Kyatune": "Deep south belt.",
-};
+/** The 2022 governor margin in each constituency (Tier 2), read from the registry. */
+const MARGIN = (id: string) => val(`result.2022.gov.${id}.margin`);
 
-const KITUI_SOUTH_TOTAL = CONSTITUENCIES.find((c) => c.id === "kitui-south")?.voters ?? 0;
-
-/** §3.4's "Total Decisive Deficit Pool" — the north mainland bloc plus Changamwe, both from the register. */
-const DEFICIT_POOL = MWINGI_BLOC_TOTAL + KITUI_SOUTH_TOTAL;
-const DEFICIT_POOL_SHARE = (DEFICIT_POOL / COUNTY_TOTAL_WARDS) * 100;
-const POOL_CONSTITUENCIES = new Set(["mwingi-north", "mwingi-central", "mwingi-west", "kitui-south"]);
-const POOL_WARD_COUNT = ALL_WARDS.filter((w) => POOL_CONSTITUENCIES.has(w.constituencyId)).length;
+const POOL_SHARE = (POOL_TOTAL / COUNTY_TOTAL_WARDS) * 100;
+const POOL_WARD_COUNT = ALL_WARDS.filter((w) => POOL_CONSTITUENCY_IDS.has(w.constituencyId)).length;
+const DIGITAL_POOL = val("effort.digital.pool");
 
 const DECISIVE_WARDS = [...ALL_WARDS]
   .sort((a, b) => b.voters - a.voters)
   .slice(0, 12)
-  .map((w, i) => ({ ...w, rank: i + 1, status: STATUS_BY_CONSTITUENCY[w.constituencyId] ?? "deficit" }));
+  .map((w, i) => ({ ...w, rank: i + 1, status: STATUS_BY_CONSTITUENCY[w.constituencyId] ?? "south" }));
 
-const DEFICIT_IN_TOP_8 = DECISIVE_WARDS.filter((w) => w.rank <= 8 && w.status === "deficit");
-const DEFICIT_IN_TOP_8_VOTERS = DEFICIT_IN_TOP_8.reduce((sum, w) => sum + w.voters, 0);
-
-/**
- * The overlap §3.4 actually claimed, which is not the one §3.10 summarised.
- *
- * The retired cross-match block closed on "5 of the Top 11 Wards (Kyuso, Tseikuru, Mumoni, Athi,
- * Ikanga) … 83,496 Voters", and against the register that is exactly right. The §3.10 summary
- * table said "5 of top 8", which is not: Ikanga/Kyatune ranks 11th. C-5 is settled for the register:
- * 5 of the top 11, of which 4 sit in the top 8, and both windows are computed here.
- */
-const DEFICIT_IN_TOP_11 = DECISIVE_WARDS.filter((w) => w.rank <= 11 && w.status === "deficit");
-const DEFICIT_IN_TOP_11_VOTERS = DEFICIT_IN_TOP_11.reduce((sum, w) => sum + w.voters, 0);
+const BELT_IN_TOP_8 = DECISIVE_WARDS.filter((w) => w.rank <= 8 && w.status === "belt");
+const BELT_IN_TOP_8_VOTERS = BELT_IN_TOP_8.reduce((sum, w) => sum + w.voters, 0);
+const BELT_IN_TOP_12 = DECISIVE_WARDS.filter((w) => w.status === "belt");
+const BELT_IN_TOP_12_VOTERS = BELT_IN_TOP_12.reduce((sum, w) => sum + w.voters, 0);
 
 const fmt = (n: number) => n.toLocaleString("en-KE");
 
 export function RecognitionDeficitOverlay() {
-  const [filterMode, setFilterMode] = useState<"all" | "deficitOnly">("all");
-  const displayed = filterMode === "all" ? DECISIVE_WARDS : DECISIVE_WARDS.filter((w) => w.status === "deficit");
-  const deficitCount = DECISIVE_WARDS.filter((w) => w.status === "deficit").length;
+  const [filterMode, setFilterMode] = useState<"all" | "beltOnly">("all");
+  const displayed = filterMode === "all" ? DECISIVE_WARDS : DECISIVE_WARDS.filter((w) => w.status === "belt");
+  const beltCount = BELT_IN_TOP_12.length;
 
   return (
     <div className="my-6 sm:my-8 bg-card border border-line rounded-2xl shadow-sm overflow-hidden not-prose">
@@ -132,12 +88,12 @@ export function RecognitionDeficitOverlay() {
           <div>
             <div className="flex items-center gap-2 flex-wrap">
               <span className="t-label font-extrabold text-accent bg-accent/10 px-2 py-0.5 rounded">
-                Recognition deficit
+                Close contest
               </span>
-              <TierBadge tier={1} compact />
+              <TierBadge tier={2} compact />
             </div>
             <h3 className="font-serif text-base sm:text-lg font-bold text-ink mt-1">
-              The decisive wards are the deficit wards
+              The largest wards are where the last race was closest
             </h3>
           </div>
         </div>
@@ -153,25 +109,25 @@ export function RecognitionDeficitOverlay() {
             Top 12
           </button>
           <button
-            onClick={() => setFilterMode("deficitOnly")}
-            aria-pressed={filterMode === "deficitOnly"}
+            onClick={() => setFilterMode("beltOnly")}
+            aria-pressed={filterMode === "beltOnly"}
             className={`px-3 py-2 min-h-[2.75rem] min-w-[2.75rem] inline-flex items-center justify-center rounded-lg t-small font-bold transition-colors cursor-pointer ${
- filterMode === "deficitOnly" ? "bg-accent-solid text-on-accent" : "text-muted hover:text-ink"
+ filterMode === "beltOnly" ? "bg-accent-solid text-on-accent" : "text-muted hover:text-ink"
             }`}
           >
-            Deficit only ({deficitCount})
+            Close contest ({beltCount})
           </button>
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line border-b border-line bg-card">
         <div className="p-4 sm:p-4">
-          <div className="t-label font-black text-muted">Decisive deficit pool</div>
+          <div className="t-label font-black text-muted">Close-contest belt</div>
           <div className="font-serif text-xl sm:text-2xl font-bold text-ink mt-0.5 tabular-nums">
-            {fmt(DEFICIT_POOL)}
+            {fmt(POOL_TOTAL)}
           </div>
           <div className="t-small text-muted mt-0.5 tabular-nums">
-            {DEFICIT_POOL_SHARE.toFixed(2)}% of the county register
+            {POOL_SHARE.toFixed(2)}% of the county register
           </div>
         </div>
         <div className="p-4 sm:p-4">
@@ -179,12 +135,12 @@ export function RecognitionDeficitOverlay() {
           <div className="font-serif text-xl sm:text-2xl font-bold text-ink mt-0.5 tabular-nums">
             {POOL_WARD_COUNT} of {ALL_WARDS.length}
           </div>
-          <div className="t-small text-muted mt-0.5">Wards where he has never held office</div>
+          <div className="t-small text-muted mt-0.5">Wards in Kisauni, Nyali and Changamwe</div>
         </div>
         <div className="p-4 sm:p-4">
           <div className="t-label font-black text-muted">Phase −1 geofenced spend</div>
-          <div className="font-serif text-xl sm:text-2xl font-bold text-accent mt-0.5 tabular-nums">65%</div>
-          <div className="t-small text-muted mt-0.5">the north mainland (all three) + Changamwe</div>
+          <div className="font-serif text-xl sm:text-2xl font-bold text-accent mt-0.5 tabular-nums">{DIGITAL_POOL}%</div>
+          <div className="t-small text-muted mt-0.5">of digital reach effort, to the belt</div>
         </div>
       </div>
 
@@ -215,11 +171,8 @@ export function RecognitionDeficitOverlay() {
               <div className="flex items-start gap-1 mt-2 pt-3 border-t border-line/40">
                 <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-1 ${meta.dot}`} aria-hidden="true" />
                 <span className="t-label font-black text-ink shrink-0">{meta.label}</span>
-                {/* No truncation on the qualifier: it is the reason, and §3.4 gave a different one
-                    to two wards in the same constituency. Clipping it would erase the distinction. */}
                 <span className="t-label text-muted">
-                  — {WARD_QUALIFIER[w.name] ? `${WARD_QUALIFIER[w.name]} ` : ""}
-                  {meta.note}
+                  — {meta.note} 2022 lead in {w.constituencyName}: {fmt(MARGIN(w.constituencyId))} votes.
                 </span>
               </div>
             </div>
@@ -231,25 +184,24 @@ export function RecognitionDeficitOverlay() {
         <p className="t-small text-muted font-medium flex items-start gap-1">
           <TrendingDown size={12} className="text-rose-500 shrink-0 mt-0.5" aria-hidden="true" />
           <span>
-            {DEFICIT_IN_TOP_8.length} of the top 8 wards countywide —{" "}
-            {DEFICIT_IN_TOP_8.map((w) => w.name).join(", ")} — sit in the deepest recognition deficit territory,{" "}
-            <span className="tabular-nums">{fmt(DEFICIT_IN_TOP_8_VOTERS)}</span> voters between them. Widen the window
-            by three places and it is{" "}
+            {BELT_IN_TOP_8.length} of the top 8 wards countywide —{" "}
+            {BELT_IN_TOP_8.map((w) => w.name).join(", ")} — sit in the close-contest belt,{" "}
+            <span className="tabular-nums">{fmt(BELT_IN_TOP_8_VOTERS)}</span> voters between them. Across the top 12 it is{" "}
             <strong className="font-semibold text-ink">
-              {DEFICIT_IN_TOP_11.length} of the top 11 — {DEFICIT_IN_TOP_11.map((w) => w.name).join(", ")}
+              {BELT_IN_TOP_12.length} of 12 — {BELT_IN_TOP_12.map((w) => w.name).join(", ")}
             </strong>
-            , <span className="tabular-nums">{fmt(DEFICIT_IN_TOP_11_VOTERS)}</span> voters.
+            , <span className="tabular-nums">{fmt(BELT_IN_TOP_12_VOTERS)}</span> voters.
           </span>
         </p>
         <p className="t-small text-muted font-medium pl-[1.125rem]">
-          Either way, the wards that decide the election are the wards where Mr Shahbal is least known.
+          Either way, the wards that decide the election are the wards where the last race was closest, and where turnout will decide the next one.
         </p>
         <p className="t-small text-muted flex items-start gap-1">
           <AlertTriangle size={12} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
           <span>
-            Recognition status here is <strong>structural</strong> — derived from where Mr Shahbal has held office, not
-            from any measure of opinion. §7.3 records ward-level recognition as unmeasured; the IEBC&rsquo;s ward-level
-            results are the official record the analysis reads next.
+            The status here is <strong>structural</strong> — derived from the 2022 constituency margins as reported, not
+            from any measure of opinion. Ward-level preference is unmeasured; the IEBC&rsquo;s Forms 37A and 37B are the
+            official record the analysis reads next.
           </span>
         </p>
         <p className="t-small text-muted flex items-start gap-1">

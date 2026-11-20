@@ -7,24 +7,18 @@ import { MapPin, Radio, Compass, TrendingUp, Percent, AlertTriangle } from "luci
 import { CONSTITUENCIES, COUNTY_TOTAL_WARDS } from "../../data/ward-register";
 import { TierBadge } from "./TierBadge";
 import { DURATION } from "../../lib/motion";
-import { fmt as reg } from "../../lib/data/read";
+import { fmt as reg, val } from "../../lib/data/read";
 
 /**
- * §3.5 zone model, bound to the verified IEBC register.
+ * §1.2 zone model, bound to the verified IEBC register.
  *
  * Every registered-voter figure below is DERIVED from data/ward-register.json at module load,
- * never typed in. That register is Tier 1 and is checked for internal consistency both by
- * scripts/verify-ward-register.mjs (prebuild) and by data/ward-register.ts at import time, so
- * a figure shown here cannot drift from the source without failing the build.
+ * never typed in. Population, density and household figures are read from the registry (KNBS 2019
+ * census); phase weightings are read from the effort figures (Section 12.1).
  *
- * Population, density and household figures are quoted from §3.5.1–1.4.3, which
- * sources them to the 2019 KNBS census. Phase weightings are quoted from §3.5.4.
- *
- * One honest wrinkle the UI has to carry rather than smooth over: §3.5 groups the county by
- * SUB-COUNTY (Mvita, Katulani, Migwani …) while the IEBC register is published by
- * CONSTITUENCY. The two do not nest. So the zones map onto whole constituencies here, and
- * Likoni — which §3.5's three zones do not name at all — is surfaced as unassigned rather
- * than quietly folded into a neighbour to make the totals look tidy.
+ * In Mombasa the census sub-counties and the IEBC constituencies are the same six areas, so the
+ * zones nest exactly. Likoni, across the ferry, is in none of the three zones: it takes a rotating
+ * share of effort and is surfaced as such rather than folded into a neighbour.
  */
 
 const byId = (id: string) => CONSTITUENCIES.find((c) => c.id === id);
@@ -57,57 +51,62 @@ interface GeographicZone {
   primaryStrategicImperative: string;
 }
 
+const density = (ids: string[]) => {
+  const pop = ids.reduce((n, id) => n + val(`sub.${id}.population`), 0);
+  const area = ids.reduce((n, id) => n + val(`sub.${id}.population`) / val(`sub.${id}.density`), 0);
+  return `~${Math.round(pop / area).toLocaleString("en-KE")} persons / km²`;
+};
+
 const GEOGRAPHIC_ZONES: GeographicZone[] = [
   {
     id: "anchor",
-    name: "The Urban & Central Anchor",
-    subCounties: "Mvita · Jomvu · Katulani",
-    constituencyIds: ["kitui-central", "kitui-west"],
+    name: "The Island",
+    subCounties: "Mvita",
+    constituencyIds: ["mvita"],
     population: reg("zone.anchor.population"),
-    popShare: "19.7%",
-    density: "~190 persons / km²",
+    popShare: `${reg("zone.anchor.share")}%`,
+    density: density(["mvita"]),
     households: reg("zone.anchor.households"),
-    nominationWeight: 20,
-    generalWeight: 25,
-    connectivityProfile: "Highest in the county — the urban core is where the connected minority is concentrated.",
+    nominationWeight: val("effort.p-1.anchor"),
+    generalWeight: val("effort.p3.anchor"),
+    connectivityProfile: "The CBD, Old Town and the public service: the best connected and the most networked part of the county.",
     primaryStrategicImperative:
-      "Consolidate the home base early and intensely. This is the only zone where Mr Shahbal starts with a structural advantage, and in a countywide nomination contest consolidating a base is cheaper than converting a stranger.",
+      "The incumbent's widest 2022 lead. Contested to hold that lead down, not to carry it: traders owed by the county, the public service paid late, and a candidate whose own roots are on the Island.",
   },
   {
     id: "mwingi",
-    name: "The Northern Block — the north mainland",
-    subCounties: "Kisauni · Kyuso · Mumoni · Tseikuru",
-    constituencyIds: ["mwingi-north", "mwingi-west", "mwingi-central"],
+    name: "The North Mainland",
+    subCounties: "Kisauni · Nyali",
+    constituencyIds: ["kisauni", "nyali"],
     population: reg("zone.mwingi.population"),
-    popShare: "22.5%",
-    density: "~53 persons / km²",
+    popShare: `${reg("zone.mwingi.share")}%`,
+    density: density(["kisauni", "nyali"]),
     households: reg("zone.mwingi.households"),
-    nominationWeight: 35,
-    generalWeight: 25,
-    connectivityProfile: "Low to medium. Kiswahili radio and SMS carry the load; USSD reaches the rest.",
+    nominationWeight: val("effort.p-1.mwingi"),
+    generalWeight: val("effort.p3.mwingi"),
+    connectivityProfile: "Mixed: young and online in the estates, with WhatsApp and the stages carrying more than paid digital.",
     primaryStrategicImperative:
-      "Nearly a quarter of the county, and where a Mvita MP is structurally least known. Messaging must assure northern voters that devolved funds will be distributed equitably per ward — a commitment Mr Shahbal can make credibly, because he can publish the allocation methodology and then evaluate against it.",
+      "The largest block in the county, and each constituency decided by about a thousand votes in 2022. Water at the tap and jobs for the young lead here; the ward captains and the turnout operation concentrate here.",
   },
   {
     id: "arid-belt",
-    name: "The Arid & Resource Belt",
-    subCounties: "Mutomo · Ikutha · the north mainland East · Mutitu · Migwani",
-    constituencyIds: ["kitui-south", "kitui-east"],
+    name: "The West Mainland",
+    subCounties: "Changamwe · Jomvu",
+    constituencyIds: ["changamwe", "jomvu"],
     population: reg("zone.arid.population"),
-    popShare: "36.6%",
-    density: "~19 persons / km²",
+    popShare: `${reg("zone.arid.share")}%`,
+    density: density(["changamwe", "jomvu"]),
     households: reg("zone.arid.households"),
-    nominationWeight: 30,
-    generalWeight: 35,
-    connectivityProfile:
-      "Ultra-low. Ikutha sits at 9 persons/km² — digital-only reach here is not a strategy, it is an assumption.",
+    nominationWeight: val("effort.p-1.arid"),
+    generalWeight: val("effort.p3.arid"),
+    connectivityProfile: "The port's workforce: long shifts, drive-time radio and WhatsApp groups.",
     primaryStrategicImperative:
-      "Over a third of the county. Framing centres on transformative infrastructure — water pipelines, road networks, and responsible management of mineral resource wealth for local benefit. This is where SMS and USSD do the heavy lifting.",
+      "The port, the container depots and the Jomvu SEZ site. Changamwe was decided by under 2,000 votes in 2022, and turnout was lowest here: the SEZ is shown as proof, its jobs reported as a projection until they exist.",
   },
 ];
 
-/** §3.5.4's fourth row: held back for testing rather than allocated to a zone. */
-const ROTATING_WEIGHT = { nomination: 15, general: 15 };
+/** The fourth row of the effort weighting: Likoni and rotating ward tests. */
+const ROTATING_WEIGHT = { nomination: val("effort.p-1.rotating"), general: val("effort.p3.rotating") };
 
 const ZONE_REGISTERS = Object.fromEntries(
   GEOGRAPHIC_ZONES.map((z) => [z.id, zoneRegister(z.constituencyIds)])
@@ -266,9 +265,9 @@ export function GeographicZoneMatrix() {
         <p className="t-small text-muted font-medium flex items-start gap-1">
           <Percent size={12} className="text-accent shrink-0 mt-0.5" aria-hidden="true" />
           <span>
-            Phase −1 deliberately over-indexes on the north mainland and the arid belt relative to population share, because the
-            nomination deficit is a recognition deficit concentrated outside the home base. A further{" "}
-            {ROTATING_WEIGHT.nomination}% is held back for rotating tests. Weightings are reviewed monthly and
+            Phase −1 deliberately over-indexes on the north and west mainland relative to population share, because the
+            close-contest belt is where turnout decides the race. A further{" "}
+            {ROTATING_WEIGHT.nomination}% goes to Likoni and rotating ward tests. Weightings are reviewed monthly and
             reallocated.
           </span>
         </p>
@@ -276,11 +275,10 @@ export function GeographicZoneMatrix() {
           <p className="t-small text-muted flex items-start gap-1">
             <AlertTriangle size={12} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
             <span>
-              Section 5.3 groups the county by sub-county; the IEBC register is published by constituency, and the two do
-              not nest. Zone totals above sum whole constituencies.{" "}
+              Mombasa&rsquo;s sub-counties and constituencies are the same six areas, so the zones nest exactly.{" "}
               {UNASSIGNED.map((c) => `${c.name} (${fmt(c.voters)})`).join(", ")}{" "}
-              {UNASSIGNED.length === 1 ? "is" : "are"} not named in any of the three zones and{" "}
-              {UNASSIGNED.length === 1 ? "is" : "are"} excluded rather than assigned by assumption.
+              {UNASSIGNED.length === 1 ? "is" : "are"} in none of the three zones and{" "}
+              {UNASSIGNED.length === 1 ? "takes" : "take"} the rotating share of effort.
             </span>
           </p>
         )}

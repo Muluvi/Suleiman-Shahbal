@@ -48,7 +48,7 @@ import { UssdHandset } from "../phone/UssdHandset";
  */
 
 export function FeaturePhoneSpecimen() {
-  const [lang, setLang] = useState<SpecimenLanguage>("kikamba");
+  const [lang, setLang] = useState<SpecimenLanguage>("kiswahili");
   const [specimenIndex, setSpecimenIndex] = useState(0);
   const [optionNote, setOptionNote] = useState("");
   const panelId = useId();
@@ -121,9 +121,9 @@ export function FeaturePhoneSpecimen() {
                 <li key={o.key} className="t-small text-ink leading-snug flex gap-2">
                   <span className="font-mono font-bold text-accent shrink-0">{o.key}.</span>
                   <span>
-                    {o.kikamba && <span className="font-semibold">{o.kikamba}</span>}
-                    {o.kikamba && <span className="text-muted"> / </span>}
-                    <span className={o.kikamba ? "text-muted" : "font-semibold"}>{o.english}</span>
+                    {o.kiswahili && <span className="font-semibold">{o.kiswahili}</span>}
+                    {o.kiswahili && <span className="text-muted"> / </span>}
+                    <span className={o.kiswahili ? "text-muted" : "font-semibold"}>{o.english}</span>
                     {o.crossReference && (
                       <span className="t-micro text-muted"> — {o.crossReference}</span>
                     )}

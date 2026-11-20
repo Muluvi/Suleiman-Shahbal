@@ -64,9 +64,9 @@ export const PRODUCTION_SERIES: FigureSeries = {
 
 export const FORMAT_SPECS: string[][] = [
   [
-    "1. Kiswahili vernacular radio spots (Musyi / Mbaitu)",
+    "1. Kiswahili radio spots (Pwani FM / Radio Maisha)",
     "45-second pre-recorded audio spots · 15-second sponsor time-check bumpers · 60-second studio live-read endorsements",
-    "Pure Kiswahili (Mombasa and the north mainland dialects). Real farmer and elder voice testimonials; zero abrasive partisan attacks.",
+    "Plain coastal Kiswahili, understood from Old Town to Mikindani. Real resident, trader and elder voice testimonials; zero abrasive partisan attacks.",
   ],
   [
     "2. Direct 2G bulk SMS & USSD portal",
@@ -129,7 +129,7 @@ export const WEEKLY_CYCLE: string[][] = [
   ],
   [
     "Thursday",
-    "Dispatch of physical print collateral to 8 sub-counties · early flighting of market-day radio spots (Musyi/Mbaitu)",
+    "Dispatch of physical print collateral to 6 sub-counties · early flighting of weekend radio spots (Pwani FM / Radio Maisha)",
     "Printed packages on the morning courier · radio ads live for Friday markets",
   ],
   [
@@ -226,8 +226,8 @@ export const ASSET_LIBRARY = {
     {
       label: "03_AUDIO_BROADCAST_VAULT/",
       children: [
-        "Radio_45s_Spots_Master_WAV/ (Musyi, County FM, Wikwatyo)",
-        "Sound_Truck_Jingles_&_Benga_Anthems/",
+        "Radio_45s_Spots_Master_WAV/ (Pwani FM, Radio Citizen, Radio Maisha)",
+        "Sound_Truck_Jingles_&_Taarab_Bango_Anthems/",
         "Megaphone_Audio_Clips_for_Boda_Marshals/",
       ],
     },

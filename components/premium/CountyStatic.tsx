@@ -8,7 +8,7 @@ import { WeaveDefs } from "./weave";
  * (visual-first pass, October 2026): WebGL is on the brief's reject list, and the scene cost
  * ≈ 300 kB of script on the first screen of a phone on slow 4G.
  *
- *   held    Mvita, where he has held office: accent blue
+ *   held    Mvita, the incumbent's strongest ground in 2022: accent blue
  *   pool    Kisauni, West, Central and Changamwe: laterite, woven
  *   other   neutral
  *

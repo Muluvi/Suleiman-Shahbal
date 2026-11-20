@@ -18,67 +18,67 @@ interface PersuasionTheme {
 const PERSUASION_THEMES: PersuasionTheme[] = [
   {
     id: "water",
-    themeTitle: "Water Security & Infrastructure",
+    themeTitle: "Water at the Tap",
     icon: Droplet,
     principles: [
       {
         name: "Loss Aversion",
-        description: "Losses are felt 2x more intensely than equivalent gains.",
-        scriptFraming: `“Approximately ${fmt("water.surface")} people in Mombasa still depend on surface water for drinking. Every dry season costs our families more than permanent boreholes would.”`
+        description: "Losses are felt more intensely than equivalent gains.",
+        scriptFraming: `“A jerrican is KSh ${fmt("price.water.county")} at a county source and KSh ${fmt("price.water.vendor")} from a vendor. Every dry tap is money out of your pocket.”`
       },
       {
         name: "Social Proof",
         description: "People take cues from the verified actions of their peers.",
-        scriptFraming: "“Families across Likoni and Kisauni are signing the sand dam resolution. Add your household.”"
+        scriptFraming: "“Residents across Junda and Bamburi are logging their water hours every week. Add your household's.”"
       },
       {
         name: "Verification Bias",
-        description: "Claims that can be independently audited are trusted 3x more.",
-        scriptFraming: "“We will publish every borehole location, contractor cost, and completion date. Dial *384# to check the verified status of the water point nearest your home.”"
+        description: "Claims that can be independently checked are trusted more.",
+        scriptFraming: "“We will publish every ward's water hours and the price at every county kiosk, every quarter. Dial the campaign shortcode to check yours.”"
       }
     ]
   },
   {
     id: "fiscal",
-    themeTitle: "Fiscal Discipline & County Budget",
+    themeTitle: "A County that Pays its Bills",
     icon: Coins,
     principles: [
       {
         name: "Anchoring Effect",
         description: "The initial figure establishes the psychological baseline.",
-        scriptFraming: "“Mombasa County will receive KSh 13.79 billion this financial year. Do you know where it goes? Mr Shahbal will publish every single shilling.”"
+        scriptFraming: `“Mombasa County ran a KSh ${fmt("budget.total", "bn")} billion budget last year, and still borrowed to pay June's salaries. Mr Shahbal will publish where every shilling goes.”`
       },
       {
         name: "Loss Aversion",
-        description: "Frame corruption and leakages as direct personal deprivation.",
-        scriptFraming: "“Every shilling lost in pending bills is a dispensary not built, a nurse not hired, and a rural feeder road left impassable.”"
+        description: "Frame unpaid bills as direct personal deprivation.",
+        scriptFraming: `“${fmt("budget.pending-bills.aged")}% of the county's unpaid bills are more than three years old. Every one is a trader, a supplier or a contractor in Mombasa waiting to be paid.”`
       },
       {
         name: "Messenger Effect",
         description: "The authority of the messenger validates the policy claim.",
-        scriptFraming: "“He was certified as having the best evaluated constituency in the Eastern region by the Ministry of Finance. He does not just spend — he measures.”"
+        scriptFraming: "“He founded a bank and chairs an investment group. He knows what an unpaid invoice does to a small firm.”"
       }
     ]
   },
   {
     id: "youth",
-    themeTitle: "Youth Employment & TVET",
+    themeTitle: "Jobs that Stay in Mombasa",
     icon: GraduationCap,
     principles: [
       {
         name: "Commitment Device",
-        description: "Small public commitments drastically increase voter turnout.",
-        scriptFraming: "“Pledge to register to vote today, and Mr Shahbal pledges a quarterly county jobs and procurement audit. Hold him to it.”"
+        description: "Small public commitments increase voter turnout.",
+        scriptFraming: "“Pledge to register to vote today, and Mr Shahbal pledges a quarterly county jobs report. Hold him to it.”"
       },
       {
         name: "Messenger Effect",
-        description: "Direct peers resonate higher than political speeches.",
-        scriptFraming: "“A SEKU engineering graduate shares how transparent county digital innovation hubs would have transformed their job search.”"
+        description: "Direct peers resonate more than political speeches.",
+        scriptFraming: "“A Technical University of Mombasa graduate from Mikindani on what port-linked jobs in Jomvu would mean for her estate.”"
       },
       {
         name: "Scarcity & Urgency",
         description: "Limited-time windows prompt immediate action.",
-        scriptFraming: "“The voter registration window closes before the nomination list is finalized. Secure your voice before the deadline.”"
+        scriptFraming: "“Voter registration closes before the election calendar runs out. Secure your voice before the deadline.”"
       }
     ]
   },
@@ -89,18 +89,18 @@ const PERSUASION_THEMES: PersuasionTheme[] = [
     principles: [
       {
         name: "Loss Aversion",
-        description: "Contrast local poverty against national benchmarks as a policy choice.",
-        scriptFraming: "“55.2% of Mombasa lived in poverty in 2021 (KNBS). That is a policy choice, not a fact of nature.”"
+        description: "Contrast local poverty against the county's wealth as a policy choice.",
+        scriptFraming: `“${fmt("poverty.2021")}% of Mombasa lived in poverty in 2021 (KNBS), in the county that runs Kenya's main port. That is a policy choice, not a fact of nature.”`
       },
       {
         name: "Messenger Effect (Chama Leaders)",
-        description: "Grassroots women chairladies validating indigenous economy.",
-        scriptFraming: "“A table-banking chairlady speaks on poultry income — a sector in over 90% of Mombasa households that county budgets have completely ignored.”"
+        description: "Grassroots women's group chairs validating the household economy.",
+        scriptFraming: "“A chama chair in Likoni on what the price of water and the ferry queue cost her members every week.”"
       },
       {
         name: "Verification Bias",
-        description: `Empirical proof of ${fmt("record.bursary.recipients")} bursary disbursements.`,
-        scriptFraming: `“KSh ${fmt("record.bursary.ksh", "m")} million directly disbursed to ${fmt("record.bursary.recipients")} students in Mvita. Scrutinize the published beneficiary register.”`
+        description: "Proof that can be visited, not just read.",
+        scriptFraming: `“The Jomvu SEZ: ${fmt("record.sez.acres")} acres, signed in September 2026. Go and see what is there now, and hold the ${fmt("record.sez.jobs")} projected jobs to account.”`
       }
     ]
   }

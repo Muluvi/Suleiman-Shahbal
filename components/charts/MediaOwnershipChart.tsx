@@ -16,7 +16,7 @@ export interface StationBar {
 }
 
 /**
- * §3.7.1 — the Kamba-language radio landscape, as position rather than length.
+ * §4.2 — the Coast radio landscape, as position rather than length.
  *
  * This was a horizontal bar chart whose own axis label read "Reach (qualitative read, not
  * measured)". Drawing a qualitative 1–3 tier as a continuous bar length asserts a precision the
@@ -26,15 +26,15 @@ export interface StationBar {
  * A station has two attributes that matter and neither is continuous: how far it reaches, and
  * whose it is. So it becomes a matrix. Tier is a row; alignment is a column; each station is a
  * chip in a cell. Nothing about the layout implies a measured quantity, and the strategic finding
- * — that the highest-reach stations sit with political owners or the party gatekeeper — becomes visible as
- * a cluster in the top-left rather than something the reader has to assemble from bar lengths.
+ * — that the widest-reach stations are commercial, and the faith and community stations are for
+ * programming only — is visible as columns rather than assembled from bar lengths.
  */
 
 /** Ordered so the axis reads from most to least useful to this campaign. */
 const ALIGNMENTS = [
-  { key: "affiliated", label: "Politically affiliated", match: (a: string) => a.includes("politically affiliated") },
-  { key: "kalonzo", label: "Party gatekeeper", match: (a: string) => a.includes("Kalonzo") },
-  { key: "other", label: "Commercial / independent", match: () => true },
+  { key: "commercial", label: "Commercial: paid placement", match: (a: string) => /Royal Media|Standard Group/.test(a) },
+  { key: "faith", label: "Faith & community: programming only", match: (a: string) => /Islamic|Catholic|Community/i.test(a) },
+  { key: "other", label: "State broadcaster", match: () => true },
 ] as const;
 
 const TIERS = [

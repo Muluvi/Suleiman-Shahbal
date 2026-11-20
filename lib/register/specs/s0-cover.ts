@@ -1,5 +1,5 @@
 /**
- * The cover: where the electorate sits and where he has held office, the four cover figures, and
+ * The cover: where the electorate sits and where the last race was closest, the four cover figures, and
  * the spine of the argument.
  */
 import { WARD_TILES } from "../../geo/wards.ts";
@@ -29,27 +29,27 @@ export function tileColumns(layers: TileLayerId[]) {
   ];
 }
 
-const FOOTPRINT_LABEL: Record<string, string> = { Held: "Held office", Pool: "The pool: never held office", "—": "Never held office, outside the pool" };
+const FOOTPRINT_LABEL: Record<string, string> = { Pool: "The pool: decided by under 2,000 votes in 2022", "—": "Decided by more, outside the pool" };
 
 export const FIG_COVER_MAP: FigureSpec = {
   id: "fig-cover-map",
   section: "Cover",
-  title: `Half the register, ${fmt("pool.share")}%, lives where he has never held office`,
-  question: "Where does the electorate sit, and where has he held office?",
-  takeaway: `The ${fmt("pool")}-voter pool in the north mainland and Changamwe is the ground the nomination is won or lost on; Mvita, which he has represented since 2013, is ${fmt("con.mvita.share")}% of the register.`,
-  sources: [src("register.2022"), src("register.2026"), { name: "Parliament of Kenya record", tier: "T1" }, { name: "The pool: a sum of the four constituencies, derived", tier: "T1", state: "modelled" }],
+  title: `More than half the register, ${fmt("pool.share")}%, lives where the 2022 race was decided by under 2,000 votes`,
+  question: "Where does the electorate sit, and where was the last race closest?",
+  takeaway: `The ${fmt("pool")}-voter pool in Kisauni, Nyali and Changamwe is the ground the race is won or lost on; the Island, the incumbent's strongest ground, is ${fmt("con.mvita.share")}% of the register.`,
+  sources: [src("register.2022"), src("result.2022.gov.kisauni.margin"), { name: "The pool: a sum of the three constituencies, derived", tier: "T1", state: "modelled" }],
   chart: {
     type: "composite",
     parts: [
-      { heading: "Where he has held office, ward by ward", chart: { type: "tilemap", layers: ["footprint"], initial: "footprint", showWardList: false } },
+      { heading: "Where the 2022 race was closest, ward by ward", chart: { type: "tilemap", layers: ["footprint"], initial: "footprint", showWardList: false } },
       {
         heading: "Four figures",
         chart: {
           type: "stats",
           items: [
-            { value: fmt("register.2022"), label: `registered voters, 2022 (IEBC); ${fmt("register.2026")} reported for July 2026, unconfirmed`, state: "sourced", countTo: F("register.2022").value ?? undefined },
-            { value: `≈${fmt("benchmark")}–${fmt("benchmark.2026-equivalent.rounded")}`, label: "votes to win: the 2022 winner's share, carried to the 2026 register", state: "modelled" },
-            { value: `${fmt("pool.share")}%`, label: "of the register in the north mainland and Changamwe, furthest from his base", state: "modelled" },
+            { value: fmt("register.2022"), label: "registered voters, 2022 (IEBC); the 2026 register is not yet published", state: "sourced", countTo: F("register.2022").value ?? undefined },
+            { value: `≈${fmt("benchmark")}`, label: `votes to win: the 2022 winning total, rounded; ${fmt("benchmark.high")} won in 2017`, state: "modelled" },
+            { value: `${fmt("pool.share")}%`, label: "of the register in Kisauni, Nyali and Changamwe, the close-contest belt", state: "modelled" },
             { value: fmt("register.polling-stations"), label: "polling stations across the 30 wards (IEBC 2022)", state: "sourced" },
           ],
         },

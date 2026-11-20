@@ -35,7 +35,7 @@ type Screen =
 
 /** The lines a screen shows, in a language. Kiswahili has no approved copy yet. */
 function linesOf(screen: Screen, lang: SpecimenLanguage): string[] {
-  const pick = (o: (typeof USSD_MENU)[number]) => (lang === "kikamba" ? o.kikamba ?? o.english : o.english);
+  const pick = (o: (typeof USSD_MENU)[number]) => (lang === "english" ? o.english : o.kiswahili ?? o.english);
   switch (screen.kind) {
     case "idle":
       return [screen.typed || "Dial the campaign code", "", "then press Call"];
@@ -100,7 +100,7 @@ export function UssdHandset({ lang, onDescribe }: { lang: SpecimenLanguage; onDe
       else if (s.kind === "menu") {
         // Option 6 switches the menu language. Kiswahili has no approved copy, so it toggles
         // between the two the menu is written in.
-        if (k === "6") setSwitched({ under: lang, to: menuLang === "kikamba" ? "english" : "kikamba" });
+        if (k === "6") setSwitched({ under: lang, to: menuLang === "english" ? "kiswahili" : "english" });
         else if (USSD_MENU.some((o) => o.key === k)) setScreen({ kind: "option", key: k });
       } else if (s.kind === "option" && k === "0") setScreen({ kind: "menu" });
     },

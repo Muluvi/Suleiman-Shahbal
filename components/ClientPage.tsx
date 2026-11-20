@@ -103,13 +103,13 @@ interface ClientPageProps {
  */
 const ALWAYS_OPEN: ReadonlySet<string> = new Set(["welcome", "brief", "ask"]);
 
-const WiperUmbrellaLogo = () => (
-  <svg width="38" height="38" viewBox="0 0 120 120" fill="none" className="shrink-0 select-none">
-    <path d="M60 20 C30 20 16 42 12 58 C24 53 42 53 60 58 Z" fill="#00209f" />
-    <path d="M60 20 C90 20 104 42 108 58 C96 53 78 53 60 58 Z" fill="#e31d2b" />
-    <path d="M60 20 V58" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-    <path d="M57 11 H63 L60 20 Z" fill="#e31d2b" />
-    <path d="M60 58 V92 C60 99 51 99 51 92" stroke="#00209f" strokeWidth="6" strokeLinecap="round" fill="none" />
+/** The campaign mark: three rising blocks, the builder's skyline. Original, typographic-free. */
+const CampaignMark = () => (
+  <svg width="38" height="38" viewBox="0 0 120 120" fill="none" className="shrink-0 select-none" aria-hidden="true">
+    <rect x="22" y="62" width="20" height="34" rx="3" fill="#00209f" />
+    <rect x="50" y="44" width="20" height="52" rx="3" fill="#e31d2b" />
+    <rect x="78" y="24" width="20" height="72" rx="3" fill="#00209f" />
+    <path d="M14 100 H106" stroke="#00209f" strokeWidth="6" strokeLinecap="round" />
   </svg>
 );
 
@@ -143,7 +143,7 @@ export function ClientPage({ sections, documents, wordCounts, visibleWordCounts,
 
   // The Brief/Full reading mode was removed in October 2026; this clears the preference it stored.
   // It can be deleted after 2026-12-31.
-  useEffect(() => { try { window.localStorage.removeItem("kitui2027:reading-mode"); } catch { /* storage blocked */ } }, []);
+  useEffect(() => { try { window.localStorage.removeItem("mombasa2027:reading-mode"); } catch { /* storage blocked */ } }, []);
 
   // Offline reading for the team (public/sw.js): what a phone has read reopens on a weak signal.
   // Production only, so a development server is never answered from a stale cache.
@@ -460,7 +460,7 @@ export function ClientPage({ sections, documents, wordCounts, visibleWordCounts,
           <CoverHero
             byline={
               <p className="pf-byline">
-                <WiperUmbrellaLogo />
+                <CampaignMark />
                 <span>
                   <strong>Hon. Dr. Benson Suleiman Shahbal</strong>
                   <span>Mombasa 2027 — strategy and direction</span>
@@ -511,7 +511,7 @@ export function ClientPage({ sections, documents, wordCounts, visibleWordCounts,
               const digest = digestMode && !ALWAYS_OPEN.has(item.id) ? digests?.[item.id] : undefined;
               const isOpen = !digest || opened.has(item.id);
               // The analysis in four steps (the winning number, where the votes are, the routes, and
-              // where he has held office), told once over a pinned county. It opens the Analysis
+              // where the 2022 race was closest), told once over a pinned county. It opens the Analysis
               // stage, unfolded (flow pass, WP3): in the summary layer it sits under the digest, like
               // the workstream map, not behind the chapter's fold. On the streamed flow it (≈ 2,300
               // nodes, four figures) mounts as the reader approaches it, not in the first hydration;

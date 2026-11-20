@@ -26,7 +26,7 @@ export function ServiceTrackerPhoneMockup() {
           Public Service Delivery Tracker Handset
         </h3>
         <p className="t-body text-sm text-muted mt-1">
-          Simulating how a Mombasa voter logs a public infrastructure breakdown (water boreholes, clinic
+          Simulating how a Mombasa voter logs a public infrastructure breakdown (water points, clinic
           drug stockouts, road washouts) across smartphone WhatsApp, offline 2G USSD, and automated SMS.
         </p>
 
@@ -50,7 +50,7 @@ export function ServiceTrackerPhoneMockup() {
                 channel === "ussd" ? "bg-accent-solid text-on-accent" : "hover:text-ink"
               }`}
             >
-              2G USSD (*384*27#)
+              2G USSD (*[shortcode]#)
             </button>
             <button
               type="button"
@@ -133,7 +133,7 @@ export function ServiceTrackerPhoneMockup() {
               /* 2G Feature Phone Screen Content */
               <div className="space-y-2 text-left">
                 <div className="font-bold text-[0.6875rem] border-b border-[#12210b]/30 pb-0.5">
-                  USSD: *384*27#
+                  USSD: *[shortcode]#
                 </div>
                 {ussdStep === 1 && (
                   <div className="space-y-1 text-[0.625rem]">
@@ -154,23 +154,23 @@ export function ServiceTrackerPhoneMockup() {
                 {ussdStep === 2 && (
                   <div className="space-y-1 text-[0.625rem]">
                     <div>SELECT WARD:</div>
-                    <div>1. Mutomo Ward</div>
-                    <div>2. Kyuso Ward</div>
-                    <div>3. Township Ward</div>
-                    <div>4. Athi Ward</div>
+                    <div>1. Junda Ward</div>
+                    <div>2. Timbwani Ward</div>
+                    <div>3. Majengo Ward</div>
+                    <div>4. Mikindani Ward</div>
                     <button
                       type="button"
                       onClick={() => setUssdStep(3)}
                       className="w-full py-0.5 mt-2 bg-[#12210b] text-[#b9cf9c] font-bold rounded text-center block"
                     >
-                      SEND [1] (MUTOMO)
+                      SEND [1] (JUNDA)
                     </button>
                   </div>
                 )}
                 {ussdStep === 3 && (
                   <div className="space-y-1 text-[0.625rem]">
                     <div className="font-bold">REPORT RECEIVED!</div>
-                    <div>Ticket #KT-2027-0482</div> {/* verify-figures-ignore: mock ticket id */}
+                    <div>Ticket #MSA-2027-0482</div> {/* verify-figures-ignore: mock ticket id */}
                     <div>Issue: Mutomo Borehole</div>
                     <div>Sent to Sub-County Water Office. Free SMS update incoming.</div>
                     <button
@@ -192,7 +192,7 @@ export function ServiceTrackerPhoneMockup() {
                     <div className="px-3 py-3 bg-[#1f2c34] flex items-center justify-between border-b border-white/5">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-white text-xs">
-                          KT
+                          MSA
                         </div>
                         <div>
                           <div className="flex items-center gap-1 text-xs font-bold leading-tight text-white">
@@ -222,12 +222,12 @@ export function ServiceTrackerPhoneMockup() {
                       <div className="max-w-[85%] ml-auto bg-[#005c4b] rounded-xl rounded-tr-xs p-3 shadow-xs text-white">
                         {/* Simulated Photo Thumbnail */}
                         <div className="w-full h-24 rounded-lg bg-slate-800/80 mb-1 flex flex-col items-center justify-center border border-white/10 text-slate-300">
-                          <MombasaIcon name="borehole" size={24} aria-hidden="true" />
-                          <span className="text-[0.59375rem] font-mono mt-1 text-slate-300">borehole_pump_mutomo.jpg</span>
+                          <MombasaIcon name="jerrycan" size={24} aria-hidden="true" />
+                          <span className="text-[0.59375rem] font-mono mt-1 text-slate-300">dry_kiosk_junda.jpg</span>
                         </div>
                         <p className="text-[0.6875rem] leading-relaxed">
-                          Mutomo Ward, Kanziko junction solar pump broken since Tuesday. 400 cattle and 2 primary schools
-                          stranded without water.
+                          Junda Ward, the county water kiosk by the stage has been dry since Tuesday. Families buying
+                          from vendors at three times the price.
                         </p>
                         <span className="text-[0.5625rem] text-emerald-200 block text-right mt-1">11:43 AM ✓✓</span>
                       </div>
@@ -235,11 +235,11 @@ export function ServiceTrackerPhoneMockup() {
                       {/* Bot Ticket Confirmation */}
                       <div className="max-w-[85%] bg-[#1f2c34] rounded-xl rounded-tl-xs p-3 shadow-xs text-slate-200 border-l-2 border-emerald-500">
                         <div className="flex items-center justify-between text-[0.625rem] font-mono text-emerald-400 font-bold mb-1">
-                          <span>TICKET #KT-2027-0482</span> {/* verify-figures-ignore: mock ticket id */}
+                          <span>TICKET #MSA-2027-0482</span> {/* verify-figures-ignore: mock ticket id */}
                           <span className="bg-emerald-500/20 px-2 py-0.2 rounded text-[0.53125rem]">LOGGED</span>
                         </div>
                         <p className="text-[0.65625rem] leading-relaxed text-slate-300">
-                          Issue registered & geolocated (-1.842°, 38.214°). Escalated to Changamwe Sub-County Water Desk.
+                          Issue registered & geolocated (-4.006°, 39.703°). Escalated to the Kisauni Sub-County Water Desk.
                         </p>
                         <div className="mt-2 pt-2 border-t border-white/10 text-[0.59375rem] text-slate-400 flex items-center justify-between">
                           <span>SMS status code: TRACK 0482</span>
@@ -264,7 +264,7 @@ export function ServiceTrackerPhoneMockup() {
                   <div className="flex-1 flex flex-col justify-center items-center p-4 bg-slate-950">
                     <div className="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl text-center">
                       <div className="text-[0.6875rem] font-mono font-bold text-sky-400 uppercase tracking-wider mb-2">
-                        USSD Gateway • *384*27#
+                        USSD Gateway • *[shortcode]#
                       </div>
                       <div className="p-3 bg-black/60 rounded-xl font-mono text-xs text-slate-200 text-left space-y-1">
                         <div className="text-sky-300 font-bold">KITUI COUNTY SERVICE TRACKER</div>
@@ -312,10 +312,10 @@ export function ServiceTrackerPhoneMockup() {
 
                       <div className="max-w-[85%] bg-slate-800 border border-slate-700 text-slate-200 p-3 rounded-xl rounded-tl-xs">
                         <div className="text-[0.59375rem] font-mono text-emerald-400 font-bold mb-1">
-                          STATUS UPDATE: TICKET #KT-2027-0482
+                          STATUS UPDATE: TICKET #MSA-2027-0482
                         </div>
                         <p className="text-[0.6875rem] leading-relaxed">
-                          Mutomo Borehole: Replacement pump seals & technician dispatched from Mombasa Town depot. Arrival
+                          Junda Kiosk: MOWASCO valve crew dispatched from the Mombasa depot. Supply
                           expected today 16:30 EAT. Ward Champion on site.
                         </p>
                         <span className="text-[0.5625rem] text-slate-400 block text-right mt-1">14:11</span>
@@ -333,7 +333,7 @@ export function ServiceTrackerPhoneMockup() {
       <div className="mt-6 pt-4 border-t border-line text-xs text-muted flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-sky-500" />
-          <span>Integrated with 40 Ward Coordinator Terminals</span>
+          <span>Integrated with 30 Ward Coordinator Terminals</span>
         </div>
         <span className="font-mono text-[0.6875rem] text-muted/80">Average response SLA: &lt; 4 Hours</span>
       </div>

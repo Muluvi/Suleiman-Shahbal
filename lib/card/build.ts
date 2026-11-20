@@ -118,10 +118,10 @@ function bigNumber(p: Params): CardModel | null {
 
 const STAT_SETS: Record<string, { title: string; path: string; ids: [string, string][] }> = {
   county: { title: "Mombasa at a glance", path: "/mombasa", ids: [["census.population", "people, 2019 census"], ["census.households", "households"], ["register.2022", "registered voters, 2022"], ["register.polling-stations", "polling stations"], ["poverty.2021", "in poverty, 2021"], ["ict.offline", "of residents offline"]] },
-  case: { title: "The case on one screen", path: "/brief", ids: [["pool", "registered voters where he has never held office"], ["pool.share", "of the county's register"], ["benchmark", "votes to win (benchmark)"], ["turnout.2022", "turnout, 2022"]] },
+  case: { title: "The case on one screen", path: "/brief", ids: [["pool", "registered voters in the close-contest belt"], ["pool.share", "of the county's register"], ["benchmark", "votes to win (benchmark)"], ["turnout.2022", "turnout, 2022"]] },
   news: { title: "How Mombasa gets its news", path: "/news", ids: [["ict.internet", "use the internet"], ["ict.offline", "are offline"], ["ict.phone", "own a mobile phone"], ["ict.mombasa.youth", "of young people use the internet"]] },
-  money: { title: "The county's money", path: "/tools/county-money", ids: [["budget.total", "budget envelope, FY2026/27"], ["budget.equitable", "equitable share"], ["budget.osr", "own-source revenue"], ["budget.pending-bills.2021", "pending bills, FY2020/21"]] },
-  welcome: { title: "What's inside the platform", path: "/welcome", ids: [["register.2022", "registered voters in the data"], ["register.polling-stations", "polling stations, searchable"], ["scorecard.itemised", "county projects, itemised"], ["census.population", "people in the census data"]] },
+  money: { title: "The county's money", path: "/tools/county-money", ids: [["budget.total", "budget, FY2025/26"], ["budget.equitable", "equitable share"], ["budget.osr", "own-source revenue"], ["budget.pending-bills.2026", "pending bills, June 2026"]] },
+  welcome: { title: "What's inside the platform", path: "/welcome", ids: [["register.2022", "registered voters in the data"], ["register.polling-stations", "polling stations, searchable"], ["result.2022.gov.valid", "valid votes for governor, 2022"], ["census.population", "people in the census data"]] },
 };
 function statGrid(p: Params): CardModel | null {
   const set = STAT_SETS[p.set ?? "county"];
@@ -186,8 +186,8 @@ function map(p: Params): CardModel | null {
     const pool = resolveFigure({ id: "pool", label: "registered voters in the pool" });
     const share = resolveFigure({ id: "pool.share", label: "of the register" });
     return {
-      type: "map", kicker: "Mombasa Map Studio", path: "/tools/map-studio", title: layer === "pool" ? "Where he has never held office" : "Three regions, and a ward in none",
-      blocks: [{ kind: "map", fills, legend: layer === "pool" ? [{ color: C_EARTH, label: "never held office" }] : [{ color: "#1e49ce", label: "anchor" }, { color: "#b0451a", label: "the north mainland" }, { color: "#09672e", label: "arid belt" }, { color: "#dcd7cd", label: "in no zone" }], side: layer === "pool" ? [{ value: pool.display, label: "registered voters" }, { value: share.display, label: "of the county" }] : undefined }],
+      type: "map", kicker: "Mombasa Map Studio", path: "/tools/map-studio", title: layer === "pool" ? "Where the 2022 race was closest" : "Three regions, and Likoni rotating",
+      blocks: [{ kind: "map", fills, legend: layer === "pool" ? [{ color: C_EARTH, label: "close-contest belt" }] : [{ color: "#1e49ce", label: "the Island" }, { color: "#b0451a", label: "north mainland" }, { color: "#09672e", label: "west mainland" }, { color: "#dcd7cd", label: "Likoni (rotating)" }], side: layer === "pool" ? [{ value: pool.display, label: "registered voters" }, { value: share.display, label: "of the county" }] : undefined }],
       figures: [REGISTER_FIG(), pool, share],
     };
   }
@@ -313,7 +313,7 @@ function fact(p: Params): CardModel | null {
   const known = FACTS.find(([, fid]) => fid === id);
   let f: ResolvedFigure;
   try { f = resolveFigure({ id, label: known?.[0] ?? p.label ?? id }); } catch { return null; }
-  if (id === "pool") f = { ...f, label: "registered voters live where Mr Shahbal has never held office" };
+  if (id === "pool") f = { ...f, label: "registered voters live in the three constituencies decided by under 2,000 votes in 2022" };
   const derived = !f.source || f.source.startsWith("Derived in");
   const fromRegister = /^(pool|pareto|con\.|ward\.|path\.|register|bloc|east-south|zone)/.test(id);
   const figs = derived && fromRegister ? [f, REGISTER_FIG()] : [f];
@@ -350,7 +350,7 @@ async function week(p: Params): Promise<CardModel> {
     return [s.name, s.frequency?.match(/^[\d.]+/)?.[0] ?? "not published", share, String(k)];
   });
   const shares = Object.values(RADIO_SHARE).map((id) => resolveFigure({ id, label: "listener share" }));
-  return { type: "week", kicker: "Radio Planner", path: "/tools/radio", title: "The week's radio spots, station by station", blocks: [{ kind: "grid", columns: ["Station", "Frequency", "Listeners", "Spots"], rows }], figures: shares, source: `Source: ${sourceLine(shares).replace(/^Source: /, "")} Spots: ${p.spots ? "the sender's plan" : "the Radio Planner's starting plan"}.` };
+  return { type: "week", kicker: "Radio Planner", path: "/tools/radio", title: "The week's radio spots, station by station", blocks: [{ kind: "grid", columns: ["Station", "Frequency", "Listeners", "Spots"], rows }], figures: shares, source: `Source: station ownership from public records (Tier 2); no Coast listener share is in hand. Spots: ${p.spots ? "the sender's plan" : "the Radio Planner's starting plan"}.` };
 }
 
 function roster(p: Params): CardModel {

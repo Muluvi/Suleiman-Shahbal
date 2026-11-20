@@ -213,7 +213,7 @@ export function ReachSplit() {
             proposed tree rather than a live number.
           </p>
           <p className="t-label text-ink leading-relaxed font-medium mb-3">
-            Option 3 matters most. A constituent in Mutha reports a broken water point from a
+            Option 3 matters most. A constituent in Likoni reports a dry water kiosk from a
             feature phone; the report enters a public register; the campaign follows up and
             publishes the outcome. That is the M&amp;E credential operating in public, before the
             election, on the cheapest possible technology.
