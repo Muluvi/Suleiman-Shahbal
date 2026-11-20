@@ -80,7 +80,7 @@ export function ActOpener({ act, portrait, id }: { act: FlowAct; index?: number;
         <CountyStatic id={`${id}-county`} quiet />
       </div>
       <div className="pf-act__portrait">
-        <Portrait id={portrait} sizes="(min-width: 1024px) 40vw, 86vw" />
+        <Portrait id={portrait} sizes="(min-width: 1024px) 46vw, 70vw" />
       </div>
       <div className="pf-act__copy">
         <p className="pf-act__count">
