@@ -40,17 +40,6 @@ export type { Granularity, Provenance, Source, Tier };
  */
 export type FigureKind = "official" | "calculated" | "modelled" | "reported" | "illustrative";
 
-export const KIND_LABEL: Record<FigureKind, string> = {
-  official: "Official",
-  reported: "Reported",
-  calculated: "Calculated",
-  modelled: "Modelled",
-  illustrative: "Illustrative",
-};
-
-/** Kinds that must never be drawn as a precise measurement (Phase 7, and the handbook's rule). */
-export const IMPRECISE_KINDS: ReadonlySet<FigureKind> = new Set<FigureKind>(["modelled", "illustrative"]);
-
 export interface FigureValue<T = number> {
   value: T;
   /** "voters", "%", "pts", "KSh bn", "wards". Empty string for a bare count. */
@@ -89,13 +78,6 @@ export interface FigureSeries {
   note?: string;
 }
 
-/** Every distinct conflict id touching a series or any of its points. */
-export function conflictsOf(series: FigureSeries): string[] {
-  const ids = new Set(series.conflicts ?? []);
-  for (const p of series.points) for (const c of p.conflicts ?? []) ids.add(c);
-  return [...ids].sort();
-}
-
 /** The dominant tier of a series: the WEAKEST tier any of its points rests on. */
 export function tierOf(series: FigureSeries): Tier {
   return series.points.reduce<Tier>((worst, p) => (p.tier > worst ? p.tier : worst), 1);
@@ -111,9 +93,4 @@ export function sourcesOf(series: FigureSeries): Source[] {
   const seen = new Map<string, Source>();
   for (const p of series.points) if (!seen.has(p.source.name)) seen.set(p.source.name, p.source);
   return [...seen.values()];
-}
-
-/** True when any point may not be drawn as a precise measurement. */
-export function isImprecise(series: FigureSeries): boolean {
-  return series.points.some((p) => IMPRECISE_KINDS.has(p.kind));
 }

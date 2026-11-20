@@ -54,7 +54,11 @@ The Coast's four counties need about **512,000 m³** of water a day and receive 
 
 Mombasa runs Coast General Teaching and Referral Hospital, the referral hospital for the whole coast, and a network of sub-county hospitals. The FY2025/26 budget estimates gave health **KSh 4.75 billion** of 14.6 billion, the largest single share, including a Level 4 hospital at Kongowea and the refurbishment of Likoni Sub-County Hospital (Tier 2, Eastleigh Voice). The outcomes, from KDHS 2022 (Tier 1): **14%** of children under five are stunted (Kenya 18%), **96%** of births have a skilled attendant, **93%** of young children are fully vaccinated, and **50** children in every thousand die before age five. Only **47%** of residents have basic sanitation. In 2025 Mombasa carried **98** of Kenya's 226 Mpox cases, most of them in Nyali and Changamwe (Tier 2).
 
-**What residents asked for.** At the hearings for the county's 2026/27 development plan, health was the issue raised most (**18%** of issues), ahead of water and sanitation (13%), roads and drainage (12%), street lighting (11%) and education (10%) (Tier 1, ADP 2026/27). Health is the first priority in more wards than any other issue; each ward's own ask is in its Ward Dossier.
+**What residents asked for.** Health is the first priority in more wards than any other issue (Tier 1, ADP 2026/27); each ward's own ask is in its Ward Dossier.
+
+```figure
+id: fig-2-10-hearings
+```
 
 **What it means for the campaign.** Health is where the county spends most, so it is where a delivery candidate is judged on what the money buys: drugs on the shelf, staff on duty, and the referral hospital's queue.
 

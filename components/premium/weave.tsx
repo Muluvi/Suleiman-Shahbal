@@ -25,23 +25,3 @@ export function WeaveDefs({ id, color = "currentColor", opacity = 1, size = 7 }:
     </pattern>
   );
 }
-
-/** The same weave as a CSS background image, for surfaces that are not SVG. */
-export function weaveDataUri(color: string, opacity: number, tile = 14): string {
-  // A square cell rotated 45 degrees repeats every cell * sqrt(2) along both axes, so a cell of
-  // tile / sqrt(2) makes the background tile seamless at exactly `tile` pixels.
-  const s = tile / Math.SQRT2;
-  const h = s / 2;
-  const t = s * 0.36;
-  const f = (n: number) => n.toFixed(3);
-  const svg =
-    `<svg xmlns='http://www.w3.org/2000/svg' width='${tile}' height='${tile}'>` +
-    `<defs><pattern id='w' patternUnits='userSpaceOnUse' width='${f(s)}' height='${f(s)}' patternTransform='rotate(45)'>` +
-    `<g fill='${color}' fill-opacity='${opacity}'>` +
-    `<rect x='${f(h / 2 - t / 2)}' y='0.3' width='${f(t)}' height='${f(h - 0.6)}' rx='${f(t / 2)}'/>` +
-    `<rect x='${f(h + h / 2 - t / 2)}' y='${f(h + 0.3)}' width='${f(t)}' height='${f(h - 0.6)}' rx='${f(t / 2)}'/>` +
-    `<rect x='${f(h + 0.3)}' y='${f(h / 2 - t / 2)}' width='${f(h - 0.6)}' height='${f(t)}' rx='${f(t / 2)}' fill-opacity='0.6'/>` +
-    `<rect x='0.3' y='${f(h + h / 2 - t / 2)}' width='${f(h - 0.6)}' height='${f(t)}' rx='${f(t / 2)}' fill-opacity='0.6'/>` +
-    `</g></pattern></defs><rect width='${tile}' height='${tile}' fill='url(%23w)'/></svg>`;
-  return `url("data:image/svg+xml,${svg.replace(/</g, "%3C").replace(/>/g, "%3E").replace(/"/g, "'")}")`;
-}

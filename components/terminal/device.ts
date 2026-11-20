@@ -19,7 +19,6 @@ export const BODY_H = SCREEN_H + BEZEL_TOP + BEZEL_BOTTOM; // 586
 /** Concentric radii: Screen radius matches body minus inner bezel distance */
 export const BODY_RADIUS = 28;
 export const SCREEN_RADIUS = 10;
-export const CORNER_BUMPER_RADIUS = 18;
 
 /** Physical thickness for 3D preserve-3d rails */
 export const THICKNESS = 22;

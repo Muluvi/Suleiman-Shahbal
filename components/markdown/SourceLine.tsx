@@ -3,14 +3,14 @@ import { Database } from "lucide-react";
 // The five sources the proposal itself cites for hard data (see Appendix B: Source Notes).
 // A provenance line only ever names one of these, mechanically detected from text the source
 // markdown already contains — never inferred or invented.
-export const KNOWN_SOURCES = ["KNBS", "IEBC", "CA", "KIPPRA", "NDMA"] as const;
+export const KNOWN_SOURCES = ["KNBS", "IEBC", "CA", "KIPPRA", "WASREB"] as const;
 
 const SOURCE_PATTERNS: Record<(typeof KNOWN_SOURCES)[number], RegExp> = {
   KNBS: /\bKNBS\b/,
   IEBC: /\bIEBC\b/,
   CA: /\bCA\b(?!\w)/, // Communications Authority — short token, so require it stand alone
   KIPPRA: /\bKIPPRA\b/,
-  NDMA: /\bNDMA\b/,
+  WASREB: /\bWASREB\b/,
 };
 
 export function detectSources(text: string): string[] {

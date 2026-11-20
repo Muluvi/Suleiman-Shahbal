@@ -568,7 +568,7 @@ for (const [id, unit, closes] of [
   ["health.typhoid.2024", "count", "Mombasa County Department of Health, disease surveillance, 2024"],
   ["literacy.county", "percent", "KNBS county literacy table (2019 Census or KDHS 2022)"],
   ["scorecard.claimed", "count", "Mombasa County Government's own published delivery scorecard or annual progress report"],
-  ["scorecard.itemised", "count", "Mombasa County Annual Development Plan and progress report: itemised projects with cost and ward"],
+  ["scorecard.itemised", "count", "Mombasa County Annual Progress Report: itemised projects with cost, ward and status (the ADP 2026/27, now in hand, plans projects but does not report delivery by ward)"],
   ["scorecard.attributed.ksh", "ksh", "Mombasa County progress report: itemised spend by constituency"],
   ["radio.rahma", "percent", "KARF or GeoPoll audience report, Coast region: Radio Rahma share"],
   ["radio.salaam", "percent", "KARF or GeoPoll audience report, Coast region: Radio Salaam share"],
@@ -605,8 +605,11 @@ sourced("health.mpox.2025", 98, "count", "T2", "Citizen Digital and The Standard
 sourced("health.mpox.kenya.2025", 226, "count", "T2", "Citizen Digital, 11 July 2025", { asOf: "2025-07" });
 sourced("edu.none.women.adult", 7, "percent", "T1", KDHS, { decimals: 0, note: "Women 15–49 with no formal education." });
 sourced("edu.none.men.adult", 3, "percent", "T1", KDHS, { decimals: 0, note: "Men 15–49 with no formal education." });
-sourced("ict.phone.adult", 97.1, "percent", "T2", "Kenya Food Systems Dashboard (Ministry of Agriculture), from KDHS 2022", { decimals: 1, asOf: "2022", note: "Adults owning a mobile phone, Mombasa. The split by sex is in the CA's analytical report on ICT in KDHS 2022." });
-modelled("reach.phone.adult", Math.round((v("register.2022") * 97.1) / 100 / 1000) * 1000, "voters", "Adult phone ownership (97.1%) applied to the 2022 register, rounded: the voters a phone channel can reach in principle.", { tier: "T2" });
+// 97.1% is the share of Mombasa HOUSEHOLDS with a mobile phone (KDHS 2022 county table), not of
+// adults: a household with one handset counts once. Adult ownership stays a named gap.
+sourced("ict.phone.household", 97.1, "percent", "T2", "KDHS 2022 county table of household mobile phone ownership, as published by Nairobi Business Monthly (25 May 2025) and the Kenya Food Systems Dashboard", { decimals: 1, asOf: "2022", note: "Households owning at least one mobile phone, Mombasa; fourth-highest county (Kenya 94%)." });
+needed("ict.phone.adult", "percent", `${GDS_M}: adult phone ownership (individuals, not households)`);
+needed("reach.phone.adult", "voters", `${GDS_M}: adult phone ownership, applied to the register`);
 
 // ---- jobs
 sourced("unemployment.youth.county", 44, "percent", "T2", "The Star (13 February 2025) and The Standard (11 December 2025), citing local labour assessments", { decimals: 0, note: "Youth unemployment in Mombasa: almost double the national average." });
@@ -654,6 +657,15 @@ sourced("record.gab.incorporated", 2006, "year", "T1", "Gulf African Bank, corpo
 sourced("record.eala.elected", 2022, "year", "T2", "People Daily, 17 November 2022", { note: "Elected to EALA by Parliament on 17 November 2022; chair of the Communication, Trade and Investment Committee from 30 January 2023 (The Star)." });
 sourced("record.kncci.award", 2023, "year", "T2", "The Star, Citizen Digital and The Standard, December 2023", { note: "KNCCI Distinguished Honorary Award, Mombasa Business Awards, Sarova Whitesands." });
 sourced("party.tnd.registered", 2012, "year", "T2", "TransTally party profile (Registrar of Political Parties register)", { note: "The New Democrats: certificate issued 9 May 2012; symbol a bridge; colours red, brown and blue; slogan 'Together We Can'." });
+// The county assembly and the six MPs elected in 2022, from the IEBC declarations as listed by
+// Mzalendo (data/ward-results-2022.ts holds the ward-by-ward table these counts come from).
+const MZ = "Mzalendo, Mombasa county profile (IEBC declarations, 2022)";
+sourced("mca.2022.seats", 30, "count", "T2", MZ, { asOf: "2022-08", note: "Elected ward seats in the County Assembly." });
+sourced("mca.2022.odm", 23, "count", "T2", MZ, { asOf: "2022-08", note: "Ward seats won by ODM." });
+sourced("mca.2022.uda", 4, "count", "T2", MZ, { asOf: "2022-08", note: "Junda, Mtopanga, Tudor and Kongowea." });
+sourced("mca.2022.independent", 2, "count", "T2", MZ, { asOf: "2022-08", note: "Airport and Chaani." });
+sourced("mca.2022.wdm", 1, "count", "T2", MZ, { asOf: "2022-08", note: "Mwakirunge." });
+sourced("mp.2022.odm", 5, "count", "T2", MZ, { asOf: "2022-08", note: "Of six constituencies; Nyali went to UDA." });
 sourced("party.mca.claim", 24, "count", "T3", "Suleiman Shahbal, interview, 3 October 2026, as reported by People Daily", { asOf: "2026-10", note: "His claim that 24 of Mombasa's 30 elected MCAs want to work with his party. A claim, not a count." });
 
 // The scorecard projects by ward (analysis Stage 14) carry no Mombasa rows until a county project

@@ -94,7 +94,11 @@ items:
 
 Mombasa runs Coast General Teaching and Referral Hospital, the referral hospital for the whole coast, and a network of sub-county hospitals. The FY2025/26 budget estimates gave health **KSh {{budget.health.2025-26|bn}} billion** of {{budget.estimates.2025-26|bn}} billion, the largest single share, including a Level 4 hospital at Kongowea and the refurbishment of Likoni Sub-County Hospital (Tier 2, Eastleigh Voice). The outcomes, from KDHS 2022 (Tier 1): **{{health.stunting}}%** of children under five are stunted (Kenya {{health.stunting.kenya}}%), **{{health.skilled-birth}}%** of births have a skilled attendant, **{{health.vaccinated}}%** of young children are fully vaccinated, and **{{health.u5-mortality}}** children in every thousand die before age five. Only **{{health.sanitation.basic}}%** of residents have basic sanitation. In 2025 Mombasa carried **{{health.mpox.2025}}** of Kenya's {{health.mpox.kenya.2025}} Mpox cases, most of them in Nyali and Changamwe (Tier 2).
 
-**What residents asked for.** At the hearings for the county's 2026/27 development plan, health was the issue raised most (**{{adp.issues.health}}%** of issues), ahead of water and sanitation ({{adp.issues.water}}%), roads and drainage ({{adp.issues.roads}}%), street lighting ({{adp.issues.lighting}}%) and education ({{adp.issues.education}}%) (Tier 1, ADP 2026/27). Health is the first priority in more wards than any other issue; each ward's own ask is in its Ward Dossier.
+**What residents asked for.** Health is the first priority in more wards than any other issue (Tier 1, ADP 2026/27); each ward's own ask is in its Ward Dossier.
+
+```figure
+id: fig-2-10-hearings
+```
 
 **What it means for the campaign.** Health is where the county spends most, so it is where a delivery candidate is judged on what the money buys: drugs on the shelf, staff on duty, and the referral hospital's queue.
 

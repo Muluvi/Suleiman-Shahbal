@@ -13,16 +13,6 @@ import type { ChannelId } from "../../lib/phone-showcase";
 
 const S = { width: 16, height: 16, viewBox: "0 0 24 24", "aria-hidden": true as const };
 
-export const BRAND_COLOR: Record<ChannelId, string> = {
-  whatsapp: "#25D366",
-  facebook: "#1877F2",
-  instagram: "#DD2A7B",
-  tiktok: "#FE2C55",
-  youtube: "#FF0000",
-  x: "#0F1419",
-  ussd: "#4E6178",
-};
-
 function WhatsAppMark() {
   return (
     <svg {...S} fill="currentColor">

@@ -5,7 +5,7 @@
 import { FIGURES } from "../../data/figures.ts";
 import { formatFigure, type FormatMod } from "../../data/format.ts";
 import type { Figure } from "../../data/schema.ts";
-import type { Bar, CellState, SourceRef } from "../types.ts";
+import type { Bar, SourceRef } from "../types.ts";
 
 export function F(id: string): Figure {
   const f = FIGURES[id];
@@ -30,8 +30,6 @@ export function src(id: string, name?: string): SourceRef {
   const f = F(id);
   return { name: name ?? f.source ?? `[DATA NEEDED — ${f.closesWith ?? "source"}]`, tier: f.tier, state: f.state === "sourced" ? undefined : f.state };
 }
-
-export const stateOf = (id: string): CellState => F(id).state;
 
 /** A bar read straight off a figure. */
 export function bar(id: string, label: string, extra: Partial<Bar> = {}): Bar {

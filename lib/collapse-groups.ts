@@ -365,11 +365,6 @@ export type DuplicateDeclaration = {
 
 const DUPLICATES = (duplicatesFile as { duplicates: DuplicateDeclaration[] }).duplicates;
 
-/** The declarations whose second copy lives in this chapter. */
-export function duplicatesIn(chapter: string): DuplicateDeclaration[] {
-  return DUPLICATES.filter((d) => d.duplicate.chapter === chapter);
-}
-
 /**
  * The declaration whose duplicate paragraph starts with this text, if any.
  *

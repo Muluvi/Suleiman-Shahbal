@@ -16,7 +16,6 @@
 // §5.6.1 in this repository marks NW-04 as "Confirm w/ party" instead, which is the
 // awaiting-decision state rather than the unmeasured one. The repository is the source of truth,
 // so that is what is encoded here, and the difference is flagged rather than smoothed over.
-import type { ClaimStatus } from "../components/markdown/ClaimBadge";
 import { fmt, val } from "../lib/data/read.ts";
 import { withTeamEdits } from "../lib/data/team-overlay.ts";
 
@@ -41,13 +40,6 @@ export interface Kpi {
   method: string;
   owner: string;
   cadence: string;
-}
-
-/** Which provenance badge a baseline earns. Keeps the mapping in one place. */
-export function baselineStatus(b: Baseline): ClaimStatus {
-  if (b.kind === "unmeasured") return "unmeasured";
-  if (b.kind === "awaiting") return "awaiting";
-  return "verified";
 }
 
 /**

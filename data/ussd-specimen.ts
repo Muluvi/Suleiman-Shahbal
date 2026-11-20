@@ -1,4 +1,3 @@
-import { val } from "../lib/data/read.ts";
 // §5.2.3.3's USSD menu and §5.2.3.3's SMS layer, as data for the feature-phone specimen.
 //
 // Two rules govern this file, and they are the reason it is data rather than copy inside a
@@ -137,6 +136,3 @@ export const SMS_SPECIMENS: SmsSpecimen[] = [
       "Voting is tomorrow. Polls open 6am, close 5pm. Find your polling station on your ID slip. Every vote in this ward counts. Reply STOP to opt out.",
   } as SmsSpecimen,
 ];
-
-/** §5.2.3.3's consented-contact target at Phase 3. */
-export const CONSENTED_CONTACTS = val("target.sms");

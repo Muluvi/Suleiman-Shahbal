@@ -42,9 +42,13 @@ export const TOOL_WARDS: ToolWard[] = WARD_TILES.map((t) => {
   const slug = t.id.replace(/^ward\./, "");
   const p = PUBLIC_WARDS.find((w) => slugOf(w.name) === slug);
   if (!p) throw new Error(`tools: ward ${slug} is not in the IEBC public pack`);
+  // The density, equity and allocation tools divide by these, so a missing Gazette value would
+  // print NaN or a silently wrong share. Fail the build instead, naming the ward.
+  if (p.population == null || p.areaSqKm == null) throw new Error(`tools: ward ${p.name} has no Gazette population or area in data/public-2026-11`);
+  const population = p.population, areaSqKm = p.areaSqKm;
   return {
     id: slug, code: p.code, name: t.name, constituency: t.constituency, constituencyName: t.constituencyName, zone: t.zone, pool: POOL.has(t.constituency),
-    row: t.row, col: t.col, voters: p.voters, stations: p.stations, centres: p.centres, population: p.population, areaSqKm: p.areaSqKm,
+    row: t.row, col: t.col, voters: p.voters, stations: p.stations, centres: p.centres, population, areaSqKm,
     projects: projectCount(slug, "projects"), projectsKsh: Math.round(projectCount(slug, "ksh")),
   };
 });
@@ -83,10 +87,7 @@ export const CENSUS_SUBCOUNTIES: CensusRow[] = [...new Set(CV.map((v) => v.dims.
     electricityPct: cv(sc, "mains_electricity_pct") ?? null,
   }));
 export const CENSUS_COUNTY = { phonePct: cv("COUNTY", "phone_pct") ?? null, internetPct: cv("COUNTY", "internet_pct") ?? null, adults: cv("COUNTY", "aged_18_plus") ?? null };
-export const CENSUS_AGE_BANDS = CV.filter((v) => v.dims.measure === "age_band" && v.dims.subcounty === "COUNTY").map((v) => ({ band: v.dims.band as string, people: v.value }));
 
 export type IssueRow = { issue: string; score: number; tier: number; note: string };
 export const ISSUES: IssueRow[] = (issueEvidence as { values: { label: string; value: number; tier: number; note: string }[] }).values.map((v) => ({ issue: v.label, score: v.value, tier: v.tier, note: v.note }));
 export const ISSUE_NOTES: string[] = (issueEvidence as { notes: string[] }).notes;
-
-export const ZONE_LABEL: Record<ZoneId, string> = { anchor: "The Island (Mvita)", north: "North mainland (Kisauni, Nyali)", west: "West mainland (Changamwe, Jomvu)", none: "Likoni (in no zone)" };

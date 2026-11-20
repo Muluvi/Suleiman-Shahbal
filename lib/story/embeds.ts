@@ -76,5 +76,3 @@ export function chapterHands(tab: string): { id: string; label: string; kind: "t
   for (const [home, recs] of Object.entries(RECORD_HOMES)) if (home.startsWith(`${tab}-sec-`)) for (const r of recs) out.push({ id: home, label: COLLECTION_BY_ID[r]?.label ?? r, kind: "record" });
   return out;
 }
-
-export const ALL_EMBED_HOMES = [...new Set([...TOOL_META.map((t) => t.home), ...Object.keys(RECORD_HOMES), ...Object.keys(CHART_HOMES), ...Object.keys(PACK_HOMES), ...COUNTDOWN_HOMES, ...Object.keys(VISUAL_HOMES), FEED_HOME])];

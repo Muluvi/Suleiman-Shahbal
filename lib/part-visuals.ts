@@ -46,8 +46,6 @@ export function partVisual(id: string | null | undefined): PartVisualSpec | null
   return SPECS[id] ?? null;
 }
 
-export const PART_VISUAL_COUNT = Object.keys(SPECS).length;
-
 /**
  * What each visual is for, in one phrase.
  *

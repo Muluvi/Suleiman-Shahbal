@@ -19,10 +19,10 @@ export const FIG_2_1: FigureSpec = {
   section: "2.1",
   title: `${fmt("register.2022")} registered voters in six constituencies; Kisauni and Nyali hold two in five`,
   question: "How big is the register, and where is it?",
-  takeaway: `Mombasa had ${fmt("register.2022")} registered voters in 2022 at ${fmt("register.polling-stations")} polling stations. No 2026 Mombasa register figure is in hand, so the 2022 register is the base for every calculation.`,
+  takeaway: `Mombasa had ${fmt("register.2022")} registered voters in 2022 at ${fmt("register.polling-stations")} polling stations. The certified 2026 register is not yet published (about ${fmt("register.2026")} on the new registrations IEBC has reported), so the 2022 register is the base for every calculation.`,
   sources: [src("register.2022"), src("register.polling-stations")],
   chart: { type: "bars", bars: conBars, unit: "" },
-  notes: ["The ward sum and the county total agree exactly. The Mombasa row of the IEBC's 2026 ECVR annex replaces this base when it is published."],
+  notes: ["The ward sum and the county total agree exactly. The certified 2027 register replaces this base when IEBC gazettes it."],
   columns: [
     { key: "item", label: "Item" },
     { key: "voters", label: "Registered voters", numeric: true },
@@ -255,4 +255,35 @@ export const FIG_2_9: FigureSpec = {
   ],
 };
 
-export const S2: FigureSpec[] = [FIG_2_1, FIG_2_2, FIG_2_4, FIG_2_5, FIG_2_6, FIG_2_7, FIG_2_8, FIG_2_9];
+/* ------------------------------------------------------------------ fig-2-10-hearings */
+
+const HEARING_ISSUES = byValue([
+  bar("adp.issues.health", "Health services and facilities"),
+  bar("adp.issues.water", "Water and sanitation"),
+  bar("adp.issues.roads", "Roads, drainage and transport"),
+  bar("adp.issues.lighting", "Street lighting and security"),
+  bar("adp.issues.education", "Education"),
+  bar("adp.issues.waste", "Solid waste"),
+  bar("adp.issues.youth", "Youth"),
+  bar("adp.issues.markets", "Markets and trade"),
+]);
+const ADP_SRC = "County Government of Mombasa, ADP 2026/27, Section 3.17 (T1)";
+
+export const FIG_2_10: FigureSpec = {
+  id: "fig-2-10-hearings",
+  section: "3.3",
+  title: `Health was the issue residents raised most at the county's own planning hearings`,
+  question: "What did residents ask the county for?",
+  takeaway: `At the public hearings for the 2026/27 development plan, ${fmt("adp.issues.health")}% of the issues raised were about health, ahead of water and sanitation (${fmt("adp.issues.water")}%) and roads (${fmt("adp.issues.roads")}%).`,
+  sources: [src("adp.issues.health")],
+  chart: { type: "bars", bars: HEARING_ISSUES, unit: "%" },
+  notes: ["Shares of the issues raised at the hearings, as the county's plan reports them. Each ward's own top request is in its Ward Dossier."],
+  columns: [
+    { key: "issue", label: "Issue raised" },
+    { key: "share", label: "Share of issues (%)", numeric: true },
+    { key: "source", label: "Source" },
+  ],
+  rows: HEARING_ISSUES.map((b) => ({ cells: { issue: b.label, share: b.value, source: ADP_SRC } })),
+};
+
+export const S2: FigureSpec[] = [FIG_2_1, FIG_2_2, FIG_2_4, FIG_2_5, FIG_2_6, FIG_2_7, FIG_2_8, FIG_2_9, FIG_2_10];

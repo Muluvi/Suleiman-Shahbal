@@ -6,7 +6,7 @@ Gap,Closing document,Holder,Status,Where,Basis
 "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated","His public Facebook page, post count read on the Week 1 export",His team: the Week 1 export,Open,Section 6.4; Section 18.5; Data layer: channel.fb.posts,Sourced
 "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated","His public X profile, follower count read on the Week 1 export",His team: the Week 1 export,Open,Section 6.4; Data layer: channel.x.followers,Sourced
 "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",Mombasa County Government's own published delivery scorecard or annual progress report,County government or church offices,Open,Section 3.7; Data layer: scorecard.claimed,Sourced
-"For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",Mombasa County Annual Development Plan and progress report: itemised projects with cost and ward,County government or church offices,Open,Section 3.7; Data layer: scorecard.itemised,Sourced
+"For Mombasa no itemised register is in hand yet: projects claimed , projects itemised","Mombasa County Annual Progress Report: itemised projects with cost, ward and status (the ADP 2026/27, now in hand, plans projects but does not report delivery by ward)",County government or church offices,Open,Section 3.7; Data layer: scorecard.itemised,Sourced
 "Women are 49.5% of Mombasa's residents (Tier 1, KNBS 2019 Census); their share of the register is a named data gap ()","IEBC 2022 register by sex, Mombasa",IEBC,Open,Section 11.2; Data layer: register.women.share,Sourced
 audit.ifmis,"Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",County government or church offices,Open,Data layer: audit.ifmis,Sourced
 audit.transfers,"Office of the Auditor-General, Mombasa County Executive audit report: unsupported transfers",County government or church offices,Open,Data layer: audit.transfers,Sourced
@@ -26,5 +26,7 @@ kpis.nomination,"The New Democrats' nomination rules, once certified",The New De
 edu.none.men,KDHS 2022 Mombasa factsheet: men aged 6+ with no education,To be named,Open,Data layer: edu.none.men,Sourced
 disability.men,KDHS 2022 Mombasa factsheet: men 15+ with a disability,To be named,Open,Data layer: disability.men,Sourced
 disability.women,KDHS 2022 Mombasa factsheet: women 15+ with a disability,To be named,Open,Data layer: disability.women,Sourced
+ict.phone.adult,"County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership (individuals, not households)",KNBS,Open,Data layer: ict.phone.adult,Sourced
+reach.phone.adult,"County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership, applied to the register",KNBS,Open,Data layer: reach.phone.adult,Sourced
 Projects by ward,To be named,To be named,Open,Figure fig-3-12-projects,Sourced
 Spend by constituency,To be named,To be named,Open,Figure fig-3-12-projects,Sourced

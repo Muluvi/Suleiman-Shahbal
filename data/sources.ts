@@ -18,13 +18,6 @@ export const IEBC_WARD_REGISTER: Source = {
   tier: 1,
 };
 
-export const IEBC_2022_RESULTS: Source = {
-  name: "IEBC 2022 General Election declared results (Mombasa governor election of 29 August 2022)",
-  url: "https://www.iebc.or.ke",
-  publicationDate: "2022-08",
-  tier: 1,
-};
-
 export const IEBC_PRESIDENTIAL_34C_2022: Source = {
   name: "IEBC, Form 34C county summary, 2022 presidential election",
   url: "https://www.iebc.or.ke/uploads/resources/QLTlLJx0Vr.pdf",
@@ -35,13 +28,6 @@ export const IEBC_PRESIDENTIAL_34C_2022: Source = {
 export const KNBS_CENSUS_2019: Source = {
   name: "KNBS, 2019 Kenya Population and Housing Census",
   publicationDate: "2019",
-  tier: 1,
-};
-
-export const CONTROLLER_OF_BUDGET: Source = {
-  name: "Controller of Budget, County Governments Budget Implementation Review Report (Mombasa chapter)",
-  url: "https://cob.go.ke/",
-  publicationDate: "FY2024/25",
   tier: 1,
 };
 
@@ -60,18 +46,6 @@ export const AUDITOR_GENERAL_FY2023_24: Source = {
   // Opinion type is reported (qualified, FY2024/25); the report itself is to be retrieved.
 };
 
-export const NDMA_ALERT: Source = {
-  name: "Ministry of Water, Sanitation and Irrigation: statement to the Senate Committee on Lands, Environment and Natural Resources (18 June 2026)",
-  publicationDate: "2026-06",
-  tier: 1,
-};
-
-export const IPC_CLASSIFICATION: Source = {
-  name: "WASREB / Water Services Regulatory Board, Coast water service providers performance, FY2025/26, as reported",
-  publicationDate: "2026",
-  tier: 2,
-};
-
 export const COURT_OF_APPEAL_2018: Source = {
   name: "High Court at Mombasa, Hassan Omar Hassan & another v IEBC & 3 others [2018] KEHC 8291 (Election Petition 10 of 2017)",
   url: "https://new.kenyalaw.org/akn/ke/judgment/kehc/2018/8291/eng@2018-02-22",
@@ -86,76 +60,10 @@ export const HIGH_COURT_2013: Source = {
   tier: 1,
 };
 
-export const ORPP_WPF_RENAME: Source = {
-  name: "Kenya Gazette notice of 18 September 2026 on the officials of The New Democrats (Political Parties Act, s.20(1)(c)), as reported",
-  publicationDate: "2026-09",
-  tier: 2,
-};
-
-export const IEBC_ECVR_2026: Source = {
-  name: "IEBC — Enhanced Continuous Voter Registration press release (drive closed 28 April 2026)",
-  url: "https://www.iebc.or.ke/uploads/resources/9AOpepKtL9.pdf",
-  publicationDate: "2026-04",
-  tier: 1,
-  // The county-by-county breakdown is annexed to this release and is the Tier 1 replacement for
-  // the 2022 ward file. The Mombasa row is the highest-priority data request.
-};
-
-export const PARLIAMENT_MEMBER_RECORD: Source = {
-  name: "East African Legislative Assembly — Hon. Suleiman Shahbal, member record",
-  url: "https://www.eala.org",
-  publicationDate: "2026",
-  tier: 1,
-};
-
-export const KDHS_2022: Source = {
-  name: "KNBS, Kenya Demographic and Health Survey 2022, Mombasa factsheet",
-  publicationDate: "2022",
-  tier: 1,
-};
-
-export const NDMA_BULLETIN_FEB_2026: Source = {
-  name: "County Government of Mombasa, non-revenue water statement (100-day crackdown, 2025)",
-  publicationDate: "2025",
-  tier: 2,
-};
-
-export const CA_POLITICAL_MESSAGING_GUIDELINES: Source = {
-  name: "Communications Authority — guidelines on political bulk messages and political social media content",
-  url: "https://www.ca.go.ke/sites/default/files/2023-06/Guidelines-on-Prevention-of-Dissemination-of-Undesirable-Bulk-and-Premium-Rate-Political-Messages-and-Political-Social-Media-Content-Via-Electronic-Networks-1.pdf",
-  publicationDate: "2017",
-  tier: 1,
-  // The source for the two rules that reshape the SMS layer: English or Kiswahili only, and
-  // 48-hour advance lodging with the operator.
-};
-
-export const ODPC_ELECTORAL_GUIDANCE: Source = {
-  name: "ODPC — Guidance Note on Processing Personal Data for Electoral Purposes",
-  url: "https://www.odpc.go.ke/wp-content/uploads/2024/02/ODPC-Guidance-Notes-for-Electoral-Purposes.pdf",
-  publicationDate: "2024-02",
-  tier: 1,
-};
-
-export const ODPC_PUBLIC_SECTOR_GUIDANCE: Source = {
-  name: "ODPC — Guidance Note for the Public Sector (2025)",
-  url: "https://www.odpc.go.ke/wp-content/uploads/2025/11/ODPC-%E2%80%93-Guidance-Note-FOR-PUBLIC-SECTOR.pdf",
-  publicationDate: "2025-11",
-  tier: 1,
-  // Bars reuse of public-programme personal data for political mobilisation without explicit
-  // consent.
-};
-
 export const CA_KNBS_ICT_2023_24: Source = {
   name: "CA and KNBS, Analytical Report on ICT based on the 2023/24 Kenya Housing Survey",
   url: "https://www.ca.go.ke/sites/default/files/2025-08/ICT%20Analytical%20Report%20Based%20on%202023-2024%20Kenya%20Housing%20Survey_0.pdf",
   publicationDate: "2025-08",
-  tier: 1,
-};
-
-export const GAZETTE_12251: Source = {
-  name: "Kenya Gazette Notice 12251, 7 August 2026: contributions and spending limits for the 2027 General Election (county, constituency and ward schedules read via the TransTally mirror)",
-  url: "https://iebc.or.ke/resources/?Gazette_Notices=",
-  publicationDate: "2026-08",
   tier: 1,
 };
 
@@ -175,53 +83,10 @@ export const IEBC_REGISTER_2026_REPORTED: Source = {
   // Indicative only: the certified 2026 register is not published. See register.2026 in figures.ts.
 };
 
-export const THE_STAR: Source = {
-  name: "The Star",
-  publicationDate: "2022-08",
-  tier: 2,
-};
-
-export const STANDARD_NATION: Source = {
-  name: "The Standard / Nation",
-  publicationDate: "2022-08",
-  tier: 2,
-};
-
 export const MEDIA_2022_DECLARATION: Source = {
   name: "Media reporting of the IEBC declaration, Mombasa governor, 30 August 2022 (The Star; Standard; Capital FM; KNA)",
   publicationDate: "2022-08",
   tier: 2,
-};
-
-export const CBC_CECM_STATEMENT: Source = {
-  name: "Governor Abdulswamad Nassir, statements on Mombasa water supply (2025), as reported",
-  publicationDate: "2025",
-  tier: 2,
-};
-
-export const MEDIA_FLOODING_MARCH_2026: Source = {
-  name: "Kenyan media reporting on the Mombasa water deficit, 2026",
-  publicationDate: "2026",
-  tier: 2,
-};
-
-export const MEDIA_ABSORPTION_ALT: Source = {
-  name: "Nation, Controller of Budget findings on aged pending bills, 2026",
-  publicationDate: "2026",
-  tier: 2,
-};
-
-export const MEDIA_MUI_BASIN: Source = {
-  name: "Kenyan media reporting on the GulfCap–DP World Mombasa Special Economic Zone, Jomvu (July–September 2026)",
-  publicationDate: "2026-09",
-  tier: 2,
-};
-
-export const PETITION_12_2014: Source = {
-  name: "High Court at Mombasa, Election Petition 8 of 2013 (Shahbal v IEBC)",
-  url: "https://new.kenyalaw.org/akn/ke/judgment/kehc/2013/2189/eng@2013-09-27",
-  publicationDate: "2013",
-  tier: 1,
 };
 
 // ---- Tier 3 · Single-source / partisan -----------------------------------------------------

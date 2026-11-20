@@ -6,8 +6,6 @@
  * JavaScript the link still lands on the map, on its default layer, with every layer one tap away.
  */
 import { useEffect } from "react";
-
-export const WARD_MAP_ID = "fig-3-2-register-map";
 export const WARD_MAP_ROUTE = "votes";
 
 export function LayerFromHash({ id }: { id: string }) {

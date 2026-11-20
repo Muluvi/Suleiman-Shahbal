@@ -9,8 +9,6 @@
 // time — so any build that imports this module (which app/page.tsx does, transitively,
 // through WardCartogram and every Phase 6 chart) fails immediately if the register and its
 // totals are ever edited out of sync.
-import type { Provenance } from "./types";
-import { IEBC_WARD_REGISTER } from "./sources";
 import raw from "./ward-register.json";
 
 export interface Ward {
@@ -24,11 +22,6 @@ export interface Constituency {
   voters: number;
   wards: Ward[];
 }
-
-export const WARD_REGISTER_PROVENANCE: Provenance = {
-  source: IEBC_WARD_REGISTER,
-  granularity: "ward",
-};
 
 export const PRISON_VOTERS: number = raw.prisonVoters;
 export const COUNTY_TOTAL_WARDS: number = raw.countyTotalWards;
@@ -64,8 +57,6 @@ function assertWardRegisterIntegrity(): void {
   }
 }
 assertWardRegisterIntegrity();
-
-export const TOTAL_WARDS = CONSTITUENCIES.reduce((sum, c) => sum + c.wards.length, 0);
 
 /** All 30 wards flattened, each tagged with its constituency — the shape the Phase 6 "Path to
  * the benchmark" chart sorts and accumulates. */

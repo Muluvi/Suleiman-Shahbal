@@ -90,8 +90,3 @@ export function phaseWhen(p: Phase): string {
  * once today's date in Nairobi is after it. `today` is YYYY-MM-DD, or null before the browser has read it.
  */
 export const isPassed = (endIso: string, today: string | null): boolean => today !== null && endIso < today;
-
-export function phaseColor(id: string): string {
-  const phase = PHASES.find((p) => p.id === id);
-  return `var(${phase?.colorVar ?? "--color-accent"})`;
-}

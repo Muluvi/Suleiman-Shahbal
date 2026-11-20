@@ -3,8 +3,9 @@
  * Annual Development Plan 2026/27 (Section 3.16, "Synthesized Ranked Equitable Ward Based Project
  * Proposals"), compiled from the County Assembly's public participation. Tier 1: a county document.
  *
- * The ADP lists Miritini and Mikindani twice and gives no entry for Mkomani or Kadzandani; those
- * two wards carry null until the county's ward proposals (ADP Section 3.15) are read for them.
+ * The ADP lists Miritini and Mikindani twice and gives no ranked entry for Mkomani or Kadzandani.
+ * For those two the entry is the health request recorded for the ward at the plan's public
+ * participation, unranked.
  * The rank is the ADP's own order, kept as printed.
  */
 import type { Source } from "./types";
@@ -15,7 +16,9 @@ export const ADP_2026_27: Source = {
   tier: 1,
 };
 
-export type WardPriority = { rank: number; sector: string; ask: string };
+/** rank is the ADP's own order in Section 3.16; null means the request comes from the plan's
+ *  ward-by-ward public-participation record instead, where nothing is ranked. */
+export type WardPriority = { rank: number | null; sector: string; ask: string };
 
 export const WARD_PRIORITIES: Record<string, WardPriority | null> = {
   "Changamwe": { rank: 1, sector: "Health", ask: "Upgrade Magongo Health Centre and keep Chaani Hospital open around the clock." },
@@ -46,7 +49,7 @@ export const WARD_PRIORITIES: Record<string, WardPriority | null> = {
   "Timbwani": { rank: 28, sector: "Health", ask: "Finish Shika Adabu Dispensary with an ICU and staff." },
   "Shimanzi/Ganjoni": { rank: 29, sector: "Health", ask: "Stock Railway Dispensary with drugs." },
   "Shanzu": { rank: 30, sector: "Streetlights and roads", ask: "Streetlights for security, and cabro access roads." },
-  "Mkomani": null,
-  "Kadzandani": null,
+  "Mkomani": { rank: null, sector: "Health", ask: "Refurbish Maweni Dispensary to maternity level." },
+  "Kadzandani": { rank: null, sector: "Health", ask: "Specialised medical support for people with disabilities." },
 };
 
