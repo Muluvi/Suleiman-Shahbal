@@ -1,0 +1,13 @@
+{
+  "id": "projects-by-ward",
+  "title": "County projects by ward",
+  "description": "Itemised county projects whose place resolves to one ward. No Mombasa project register is in hand yet, so this export is empty until one is.",
+  "chart_type": "bar",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "Data needed: Mombasa County Annual Development Plan and progress report, itemised by ward."
+  ],
+  "values": []
+}

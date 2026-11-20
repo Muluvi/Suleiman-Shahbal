@@ -1,0 +1,71 @@
+{
+  "id": "scenario-benchmarks",
+  "title": "Scenario model: votes against the 2022 benchmark",
+  "description": "The benchmarks a 2027 tally is compared against, on the 2022 register.",
+  "chart_type": "distribution",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "Scenario model, not a forecast.",
+  "notes": [
+    "Scenario model, not a forecast.",
+    "Governor races are won by plurality. There is no threshold and these are not win probabilities.",
+    "A distribution of outcomes needs vote ranges for the other candidates, which this plan does not model."
+  ],
+  "values": [
+    {
+      "label": "2022 winning tally",
+      "value": 119083,
+      "unit": "votes",
+      "source_id": "S11",
+      "tier": 2,
+      "as_of": "2022-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "2017 winning tally (high turnout)",
+      "value": 221177,
+      "unit": "votes",
+      "source_id": "S13",
+      "tier": 1,
+      "as_of": "2017-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "His best tally (2013)",
+      "value": 94905,
+      "unit": "votes",
+      "source_id": "S14",
+      "tier": 1,
+      "as_of": "2013-03",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "His 2017 tally",
+      "value": 69515,
+      "unit": "votes",
+      "source_id": "S13",
+      "tier": 1,
+      "as_of": "2017-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "label": "Working benchmark",
+      "value": 120000,
+      "unit": "votes",
+      "source_id": "S1",
+      "tier": 1,
+      "as_of": "2026-11",
+      "method": "modelled",
+      "status": "placeholder",
+      "note": "119,083 rounded"
+    }
+  ]
+}

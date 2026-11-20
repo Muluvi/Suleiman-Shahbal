@@ -1,0 +1,71 @@
+{
+  "id": "results-2022-governor",
+  "title": "The 2022 governor result",
+  "description": "The benchmark every 2027 projection is measured against.",
+  "chart_type": "bar",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "Omar's runner-up total was published two ways: 98,105 (The Star, Capital FM) and 98,108 (The Standard, KNA, NTV). Both are shown; neither is preferred until Form 37C is cited.",
+    "Kenyan governor races are won by plurality. 119,083 is a benchmark, not a threshold.",
+    "The Mombasa governor poll was held on 29 August 2022, three weeks after the general election, after two postponements. Turnout was 34%."
+  ],
+  "values": [
+    {
+      "label": "Abdulswamad Nassir (winner)",
+      "value": 119083,
+      "unit": "votes",
+      "source_id": "S11",
+      "tier": 2,
+      "as_of": "2022-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": "ODM"
+    },
+    {
+      "label": "Hassan Omar (runner-up)",
+      "value": 98105,
+      "unit": "votes",
+      "source_id": "S11",
+      "tier": 2,
+      "as_of": "2022-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": "UDA. Disputed: two published totals, both kept"
+    },
+    {
+      "label": "Hassan Omar (runner-up)",
+      "value": 98108,
+      "unit": "votes",
+      "source_id": "S12",
+      "tier": 2,
+      "as_of": "2022-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": "The second published total"
+    },
+    {
+      "label": "Valid votes cast",
+      "value": 221148,
+      "unit": "votes",
+      "source_id": "S12",
+      "tier": 2,
+      "as_of": "2022-08",
+      "method": "official",
+      "status": "confirmed",
+      "note": "As announced by the returning officer"
+    },
+    {
+      "label": "Turnout (valid votes / register)",
+      "value": 34.5,
+      "unit": "percent",
+      "source_id": "S12",
+      "tier": 2,
+      "as_of": "2022-08",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "221,148 / 641,913"
+    }
+  ]
+}

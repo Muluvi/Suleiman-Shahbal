@@ -1,0 +1,70 @@
+{
+  "id": "county-finance-2026-27",
+  "title": "Mombasa County finances",
+  "description": "The resource envelope behind the delivery argument, FY2025/26, with the FY2026/27 equitable share.",
+  "chart_type": "bar",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "FY2025/26 approved supplementary budget, as reported from the Controller of Budget's review (Tier 3 until the CBIRR itself is cited).",
+    "The FY2026/27 Programme Based Budget is not yet in hand."
+  ],
+  "values": [
+    {
+      "label": "Total budget, FY2025/26 (approved supplementary)",
+      "value": 18.73,
+      "unit": "KSh bn",
+      "source_id": "S47",
+      "tier": 3,
+      "as_of": "2025-26",
+      "method": "official",
+      "status": "verify",
+      "note": "KSh 18.73 bn, of which KSh 5.62 bn development"
+    },
+    {
+      "label": "Equitable share, FY2025/26",
+      "value": 8.38,
+      "unit": "KSh bn",
+      "source_id": "S47",
+      "tier": 3,
+      "as_of": "2025-26",
+      "method": "official",
+      "status": "verify",
+      "note": ""
+    },
+    {
+      "label": "Own-source revenue, FY2025/26",
+      "value": 6.21,
+      "unit": "KSh bn",
+      "source_id": "S47",
+      "tier": 3,
+      "as_of": "2025-26",
+      "method": "official",
+      "status": "verify",
+      "note": "Including KSh 2.41 bn from county hospitals"
+    },
+    {
+      "label": "Equitable share, FY2026/27",
+      "value": 8.66,
+      "unit": "KSh bn",
+      "source_id": "S48",
+      "tier": 3,
+      "as_of": "2026-27",
+      "method": "official",
+      "status": "verify",
+      "note": ""
+    },
+    {
+      "label": "Pending bills, 30 June 2026",
+      "value": 3.8,
+      "unit": "KSh bn",
+      "source_id": "S47",
+      "tier": 3,
+      "as_of": "2026-06",
+      "method": "official",
+      "status": "verify",
+      "note": "Almost all owed by the executive"
+    }
+  ]
+}

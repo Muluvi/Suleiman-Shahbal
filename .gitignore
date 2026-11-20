@@ -1,8 +1,24 @@
 node_modules/
-build/
-dist/
+.next/
 coverage/
 .DS_Store
 *.log
 .env*
 !.env.example
+*.tsbuildinfo
+bun.lock
+bun.lockb
+
+# Analysis pipeline — never commit data or outputs (see analysis/CLAUDE.md)
+analysis/data/
+analysis/outputs/
+analysis/.venv/
+analysis/**/__pycache__/
+analysis/.pytest_cache/
+__pycache__/
+
+# Generated at build from data/analysis/ by scripts/copy-analysis.mjs (one editable copy)
+public/content/analysis/
+
+# The platform's development store (PLATFORM_STORE=local). Never committed.
+.platform-local/

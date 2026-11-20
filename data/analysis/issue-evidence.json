@@ -1,0 +1,103 @@
+{
+  "id": "issue-evidence",
+  "title": "Issues ranked by the evidence behind them",
+  "description": "How strong the public evidence is for each issue: not a measure of what voters say they care about.",
+  "chart_type": "bar",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "Ranks evidence strength: source tier, whether the indicator is quantified, and whether it is county-wide or localised.",
+    "This is NOT measured salience."
+  ],
+  "values": [
+    {
+      "label": "Water",
+      "value": 1.0,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 1,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "200,000 m³ a day needed against about 40,000 supplied; 60% lost before it reaches a tap"
+    },
+    {
+      "label": "County finance and pending bills",
+      "value": 1.0,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "KSh 4.4bn pending bills in 2024, 98% of them older than three years"
+    },
+    {
+      "label": "Jobs, the port and the economy",
+      "value": 0.8,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "Mombasa produces about 5.1% of national output; the GulfCap–DP World SEZ projects 7,972 direct jobs"
+    },
+    {
+      "label": "Youth and registration",
+      "value": 0.8,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 1,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "Median age 24.0; 59% of adults are 18–34"
+    },
+    {
+      "label": "How county money is split between wards",
+      "value": 0.6,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "The County Equitable Share Bill would have shared 30% of KSh 4bn equally across 30 wards; the governor rejected it"
+    },
+    {
+      "label": "Household economics and poverty",
+      "value": 0.6,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "31.8% overall poverty in 2021, 27.0% in 2022"
+    },
+    {
+      "label": "Health",
+      "value": 0.4,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 2,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "KSh 4.75bn health allocation in the FY2025/26 estimates; county health indicators to be read from KDHS 2022"
+    },
+    {
+      "label": "Record and delivery",
+      "value": 0.4,
+      "unit": "score 0-1",
+      "source_id": "S41",
+      "tier": 3,
+      "as_of": "2026",
+      "method": "calculated",
+      "status": "verify",
+      "note": "No itemised county project register is in hand"
+    }
+  ]
+}

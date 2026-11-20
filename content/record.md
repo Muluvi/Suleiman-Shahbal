@@ -1,0 +1,41 @@
+```lead
+Dr. Makali Mulu's record is strong and documented, but it is known mainly in Kitui Central. **{{pool.share}}%** of the register lives in the four constituencies where he has never held office.
+```
+
+Dr. Makali Mulu's record is strong and documented, but it is known mainly in Kitui Central. **{{pool.share}}%** of the register lives in the four constituencies where he has never held office. This chapter sets out the record, where he is known and where he is not, where party loyalty will not carry him, and what his channels show today.
+
+## 6.1 The public record
+
+```lead
+Hon. Dr. Benson Makali Mulu, PhD (Economics), CBS, has represented Kitui Central in the National Assembly since 2013 (Tier 1). He is a member of the Budget and Appropriations Committee (Tier 1), the committee that scrutinises the national estimates.
+```
+
+Hon. Dr. Benson Makali Mulu, PhD (Economics), CBS, has represented Kitui Central in the National Assembly since 2013 (Tier 1). He is a member of the Budget and Appropriations Committee (Tier 1), the committee that scrutinises the national estimates. Whether he has held a leadership position on it is confirmed from the National Assembly's committee membership records and Hansard; until it is, this plan describes him as a member.
+
+He is a specialist in project management, strategic planning and **monitoring and evaluation (M&E)**: a certified consultant in project management and M&E, a member of the Evaluation Society of Kenya, and an **M&E Champion designated by the Ministry of Finance**, after service with the United Nations in financial advisory and project management roles (Tier 1). Under his stewardship, Kitui Central was evaluated the **best constituency in the Eastern region for FY2014/15**, first of 71 constituencies in its peer group (Tier 1). This plan has attributed the evaluation to Ministry of Finance performance audits; the evaluation report itself, and the body that issued it, are to be cited before the line is published.
+
+The record below is what the public-finance message rests on. Each line names the document behind it, and the campaign uses each in one way.
+
+```figure
+id: fig-2-8-record
+```
+
+| Asset | The evidence | How we would use it |
+|---|---|---|
+| Economics and the national budget | PhD (Economics) (Tier 1); Budget and Appropriations Committee membership (Tier 1; any leadership role to be confirmed from the National Assembly's committee records) | A weekly "Dr. Mulu on Public Finance" explainer series |
+| **Monitoring and evaluation** | Certified consultant in project management and M&E (Tier 1); member, Evaluation Society of Kenya (ESK) (Tier 1); **designated M&E Champion by the Ministry of Finance** (Tier 1; the issuing letter or notice is to be cited) | The public service-delivery tracker (Section 15.1.1) |
+| International standing | United Nations project management and financial advisory roles (Tier 1) | Credibility with professional and diaspora networks |
+| Delivery in Kitui Central | KSh {{record.bursary.ksh|m}} million in educational bursaries to {{record.bursary.recipients}} students (Tier 1); **Kitui Central certified as the best-evaluated constituency in the Eastern region, FY2014/15**, first of 71 in its national peer group (Tier 1; the evaluating body's report is to be cited) | Ward-level proof points |
+| Length of service | 17 years in political leadership, 13 as Member of Parliament for Kitui Central (Tier 1); Commander of the Order of the Burning Spear (CBS) (Tier 1; the Kenya Gazette notice of the award is to be cited) | Steady, low-risk leadership, set against less-experienced candidates |
+| Existing web presence | The Kitui Central NG-CDF portal, established and active (Tier 1) | Integrated rather than duplicated |
+
+**The NG-CDF record, and its limits.** The constituency's NG-CDF site publishes project records, proposals, allocations and Project Implementation Status reports across its five wards: Mulango, Kyangwithya East, Kyangwithya West, Township and Miambani. The FY2026/27 allocation is **KSh {{ngcdf.allocation.2026}}** (Tier 1). A project is described as completed only where its implementation-status report says so.
+
+## 6.4 His channels
+
+```figure
+id: fig-2-9-channels
+```
+
+**The NG-CDF site is the most under-used asset in this list.** It is a public, constituency-run record of completed projects, and the first content type, "Where the money went" (Section 10.1), exists to put that record in front of voters who have never heard of him. The boundary in Section 19.2 applies: the **project record** is usable; the **beneficiary personal data** behind it is not.
+

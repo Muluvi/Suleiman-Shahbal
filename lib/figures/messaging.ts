@@ -1,0 +1,113 @@
+/**
+ * §7.1 [CHECK REF] — the central claim, the three languages it has to survive, and the three pillars under it.
+ *
+ * WHAT THIS REPLACES. Two box-drawing blocks eleven lines apart: a MESSAGE ARCHITECTURE HIERARCHY
+ * drawing the claim over three pillars, and a CENTRAL CAMPAIGN CLAIM & SLOGAN box giving the claim
+ * in English, Kikamba and Kiswahili with its primary evidence. They are two halves of one message
+ * house, and neither is complete without the other: the hierarchy states the pillars without the
+ * translations, the slogan box states the translations without the pillars.
+ *
+ * WHY THE TRANSLATIONS ARE THE POINT. §3.6.2 forbids machine translation of Kikamba outright and
+ * requires a named cultural sign-off for every vernacular line, and §3.6.1 puts 76% of the county's
+ * primary reach in Kikamba. A message house that drew the English claim large and left the Kikamba
+ * one in a footnote would invert the document's own argument about which version does the work. So
+ * all three sit at the same size, in the order the campaign speaks them.
+ *
+ * NOTHING IS TRANSLATED, SHORTENED OR RE-PUNCTUATED HERE. Every line is the block's, character for
+ * character, including the Kikamba orthography. A figure that quietly normalised a vernacular
+ * slogan would be doing the exact thing §3.6.2 exists to prevent.
+ */
+import type { FigureSeries } from "./types";
+
+/* ------------------------------------------------------------------ §3.6.2 cultural registers */
+
+/**
+ * Four technical terms, the literal translation that fails, and the approved Kikamba framing.
+ *
+ * THE ORTHOGRAPHY IS THE DATA. Every Kikamba string below carries its diacritics exactly as
+ * §3.6.2 prints them — ĩ and ũ are distinct letters, not decorated vowels, and §3.6.2's own second
+ * rule of engagement forbids machine translation precisely because automated handling destroys
+ * this. A figure that normalised them would be the failure the section warns about.
+ */
+export const CULTURAL_REGISTERS = [
+  {
+    term: "Fiscal Prudence & Integrity",
+    literal: "Kũũsũvĩa mbesa nesa",
+    literalWhy: "Too generic / bureaucratic",
+    approved: "Kĩtĩo kya Kũthũkũma na Moko Matheũ",
+    gloss: "The Honor of Public Service with Clean Hands",
+  },
+  {
+    term: "Household Economic Empowerment",
+    literal: "Kũnenga andũ mbesa",
+    literalWhy: "Sounds like handouts",
+    approved: "Ũtonga wa Mĩsyĩ na Mbũi Mĩĩtĩ",
+    gloss: "Sustainable Wealth Rooted in Household Farms",
+  },
+  {
+    term: "Devolution Equity & Ward Equalization",
+    literal: "Kũgawanya mbesa sya ward",
+    literalWhy: "Mechanical division",
+    approved: "Kĩla Kĩtheka na Mwanya Wayo: Mumo kwa Onthe",
+    gloss: "Every Ridge its Equal Share: Prosperity for All",
+  },
+  {
+    term: "Youth Technical & Vocational Training",
+    literal: "Masomo ma amwanake",
+    literalWhy: "Schooling only",
+    approved: "Wathi wa Mwanake: Moko ma Kũseũvya Wĩa",
+    gloss: "Youth Mastery: Practical Hands that Build Work",
+  },
+];
+
+export const REGISTERS_SERIES: FigureSeries = {
+  id: "cultural-registers",
+  headline: "Four terms where the literal translation loses the argument",
+  measure: "§12.5's proverbial framing protocol — the term, the translation that fails, and the approved idiom",
+  points: [],
+  note:
+    "Every Kikamba string is transcribed with its diacritics exactly as §12.5 prints them. ĩ and " +
+    "ũ are distinct letters rather than decorated vowels, and §12.5's own rules of engagement " +
+    "forbid machine translation of Kikamba for this reason.",
+};
+
+/* ------------------------------------------------------------------ §3.6.3 the QC gateway */
+
+export const QC_STAGES = [
+  {
+    title: "English master source drafting",
+    steps: [
+      "Policy team crafts the core English policy brief, Hansard citation or release.",
+      "Verified by the Legal & Economic Lead for empirical accuracy.",
+    ],
+  },
+  {
+    title: "Parallel adaptation — not literal translation",
+    steps: [
+      "Lead Kikamba writer drafts the culturally resonant vernacular version.",
+      "Swahili/Sheng specialist drafts the street-smart and market versions.",
+    ],
+  },
+  {
+    title: "Reverse-translation integrity audit",
+    steps: [
+      "An independent reviewer translates the vernacular draft back into English to verify that no policy commitments were distorted, inflated or omitted.",
+    ],
+  },
+  {
+    title: "Kikamba cultural sign-off and executive clearance",
+    steps: ["Final sign-off by the Campaign Manager before release to audio studio or print."],
+    emphasis:
+      "Mandatory sign-off authority for Kikamba copy: Lead Cultural & Vernacular Communications Advisor (native Kamba elder / senior vernacular broadcaster).",
+  },
+];
+
+export const QC_SERIES: FigureSeries = {
+  id: "qc-gateway",
+  headline: "Four gates between an English draft and a Kikamba broadcast",
+  measure: "§12.5's translation and quality-control gateway, in order",
+  points: [],
+  note:
+    "Numbered because it is a real sequence: the reverse-translation audit cannot run before the " +
+    "adaptation it audits exists, and the cultural sign-off is the last gate before release.",
+};

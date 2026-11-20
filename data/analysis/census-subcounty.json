@@ -1,0 +1,478 @@
+{
+  "id": "census-subcounty",
+  "title": "Mombasa by KNBS sub-county, 2019 census",
+  "description": "Population, adults, phone ownership, internet use and electric lighting for Mombasa's six census sub-counties, which share names and boundaries with its six constituencies.",
+  "chart_type": "table",
+  "generated": "2026-11-20",
+  "data_as_of": "2026-11-20",
+  "scenario_label": "",
+  "notes": [
+    "KNBS 2019 Kenya Population and Housing Census, read from the rKenyaCensus package (commit 6db00e5)."
+  ],
+  "values": [
+    {
+      "label": "Mombasa County: population",
+      "value": 1208333,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "COUNTY",
+        "code": "001",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Mombasa County: aged 18+",
+      "value": 756906,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "calculated",
+      "status": "placeholder",
+      "note": "Sum of single years 18 to 100+, Vol. III Table 2.3.",
+      "dims": {
+        "subcounty": "COUNTY",
+        "code": "001",
+        "measure": "aged_18_plus"
+      }
+    },
+    {
+      "label": "Mombasa County: owns a mobile phone",
+      "value": 61.8,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "COUNTY",
+        "code": "001",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Mombasa County: used the internet",
+      "value": 39.2,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "COUNTY",
+        "code": "001",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Mombasa County: mains electric lighting",
+      "value": 85.9,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "COUNTY",
+        "code": "001",
+        "measure": "electric_pct"
+      }
+    },
+    {
+      "label": "Changamwe: population",
+      "value": 131882,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "CHANGAMWE",
+        "code": "",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Changamwe: owns a mobile phone",
+      "value": 65.3,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "CHANGAMWE",
+        "code": "",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Changamwe: used the internet",
+      "value": 39.9,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "CHANGAMWE",
+        "code": "",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Changamwe: mains electric lighting",
+      "value": 87.7,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "CHANGAMWE",
+        "code": "",
+        "measure": "electric_pct"
+      }
+    },
+    {
+      "label": "Jomvu: population",
+      "value": 163415,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "JOMVU",
+        "code": "",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Jomvu: owns a mobile phone",
+      "value": 59.1,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "JOMVU",
+        "code": "",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Jomvu: used the internet",
+      "value": 32.2,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "JOMVU",
+        "code": "",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Jomvu: mains electric lighting",
+      "value": 81.0,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "JOMVU",
+        "code": "",
+        "measure": "electric_pct"
+      }
+    },
+    {
+      "label": "Kisauni: population",
+      "value": 291930,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "KISAUNI",
+        "code": "",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Kisauni: owns a mobile phone",
+      "value": 58.7,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "KISAUNI",
+        "code": "",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Kisauni: used the internet",
+      "value": 35.6,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "KISAUNI",
+        "code": "",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Kisauni: mains electric lighting",
+      "value": 82.8,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "KISAUNI",
+        "code": "",
+        "measure": "electric_pct"
+      }
+    },
+    {
+      "label": "Likoni: population",
+      "value": 250358,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "LIKONI",
+        "code": "",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Likoni: owns a mobile phone",
+      "value": 58.9,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "LIKONI",
+        "code": "",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Likoni: used the internet",
+      "value": 33.0,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "LIKONI",
+        "code": "",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Likoni: mains electric lighting",
+      "value": 87.2,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "LIKONI",
+        "code": "",
+        "measure": "electric_pct"
+      }
+    },
+    {
+      "label": "Mvita: population",
+      "value": 154171,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "MVITA",
+        "code": "",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Mvita: owns a mobile phone",
+      "value": 66.4,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "MVITA",
+        "code": "",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Mvita: used the internet",
+      "value": 55.2,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "MVITA",
+        "code": "",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Mvita: mains electric lighting",
+      "value": 91.1,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "MVITA",
+        "code": "",
+        "measure": "electric_pct"
+      }
+    },
+    {
+      "label": "Nyali: population",
+      "value": 216577,
+      "unit": "people",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. I Table 2.5.",
+      "dims": {
+        "subcounty": "NYALI",
+        "code": "",
+        "measure": "population"
+      }
+    },
+    {
+      "label": "Nyali: owns a mobile phone",
+      "value": 65.7,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.32, persons aged 3+.",
+      "dims": {
+        "subcounty": "NYALI",
+        "code": "",
+        "measure": "phone_pct"
+      }
+    },
+    {
+      "label": "Nyali: used the internet",
+      "value": 44.9,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.33, persons aged 3+.",
+      "dims": {
+        "subcounty": "NYALI",
+        "code": "",
+        "measure": "internet_pct"
+      }
+    },
+    {
+      "label": "Nyali: mains electric lighting",
+      "value": 87.9,
+      "unit": "percent",
+      "source_id": "S72",
+      "tier": 1,
+      "as_of": "2019",
+      "method": "official",
+      "status": "confirmed",
+      "note": "Vol. IV Table 2.19, conventional households.",
+      "dims": {
+        "subcounty": "NYALI",
+        "code": "",
+        "measure": "electric_pct"
+      }
+    }
+  ]
+}
