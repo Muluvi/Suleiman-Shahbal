@@ -230,7 +230,7 @@ substantive error, not a cosmetic one.
 #### The case
 
 ```visual
-{"kind":"stats","preset":"people","items":[{"value":"11.3","label":"women aged 6+ with no education","tier":1,"body":"KDHS 2022: women aged six and over in Mombasa with no schooling. The figure for men is still to be read off the same KDHS report ([DATA NEEDED — KDHS 2022 Mombasa factsheet: men aged 6+ with no education])."},{"value":"53.1%","label":"outside the internet-using population","tier":1,"body":"**53.1% are outside the internet-using population** (CA/KNBS 2023/24)"}],"body":"Kenyans with disabilities are a substantial constituency systematically under-served by campaign communication in every cycle. The share of Mombasa's adults with a disability is a named data gap ([DATA NEEDED — KDHS 2022 Mombasa factsheet: men 15+ with a disability] for men, [DATA NEEDED — KDHS 2022 Mombasa factsheet: women 15+ with a disability] for women; KDHS 2022 Mombasa factsheet). Low bandwidth is itself an accessibility constraint"}
+{"kind":"stats","preset":"people","items":[{"value":"11.3","label":"women aged 6+ with no education","tier":1,"body":"KDHS 2022: women aged six and over in Mombasa with no schooling. Among adults aged 15 to 49 the shares are 7% of women and 3% of men."},{"value":"53.1%","label":"outside the internet-using population","tier":1,"body":"**53.1% are outside the internet-using population** (CA/KNBS 2023/24)"}],"body":"Kenyans with disabilities are a substantial constituency systematically under-served by campaign communication in every cycle. The share of Mombasa's adults with a disability is a named data gap ([DATA NEEDED — KDHS 2022 Mombasa factsheet: men 15+ with a disability] for men, [DATA NEEDED — KDHS 2022 Mombasa factsheet: women 15+ with a disability] for women; KDHS 2022 Mombasa factsheet). Low bandwidth is itself an accessibility constraint"}
 ```
 
 A campaign built on transparency that publishes only in dense written English
@@ -284,7 +284,7 @@ Paid media on the platforms that reach the connected minority, and earned media 
 **Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else.
 ```
 
-**Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else. Placement is a relationship business the campaign already has. The team prepares the briefing notes, the debate preparation and the evidence pack behind each pitch, from the evidence on Firefly's platform. The radio plan runs through Pwani FM, Radio Citizen and Radio Maisha, with programming partnerships on Radio Rahma, Radio Salaam and Baraka FM, on the ownership map in Section 4.2.
+**Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else. Placement is a relationship business the campaign already has. The team prepares the briefing notes, the debate preparation and the evidence pack behind each pitch, from the evidence on Firefly's platform. The radio plan runs through Bahari FM, Radio Citizen and Radio Maisha, with programming partnerships on Radio Rahma, Radio Salaam and Baraka FM, on the ownership map in Section 4.2.
 
 #### The journalist relationship programme
 

@@ -74,7 +74,7 @@ items:
 ## 3.2 The deficit, the dam and the pipeline
 
 ```lead
-Mwache Dam is to add **{{water.mwache}} m³** a day for Mombasa and Kwale. It was **{{water.mwache.complete}}%** complete in August 2026, but its treatment plant only starts in December 2026: treated Mwache water is unlikely to reach Mombasa taps before the August 2027 election (Tier 1 and Tier 2).
+Mwache Dam is to add **{{water.mwache}} m³** a day for Mombasa and Kwale. The dam alone costs about **US${{water.mwache.cost.usd-m}} million** (Tier 1, World Bank). It was **{{water.mwache.complete}}%** complete in August 2026, but its treatment plant only starts in December 2026: treated Mwache water is unlikely to reach Mombasa taps before the August 2027 election (Tier 1 and Tier 2).
 ```
 
 The Coast's four counties need about **{{water.coast.demand}} m³** of water a day and receive about **{{water.coast.supply}} m³**, a deficit of **{{water.coast.deficit}} m³** (Tier 1, Water CS Eric Mugaa to the Senate Committee on Lands, Environment and Natural Resources, 18 June 2026). Two national projects are meant to close Mombasa's share of it:
@@ -92,7 +92,9 @@ items:
 
 ## 3.3 Health
 
-Mombasa runs Coast General Teaching and Referral Hospital, the referral hospital for the whole coast, and a network of sub-county hospitals. The FY2025/26 budget estimates gave health **KSh {{budget.health.2025-26|bn}} billion** of {{budget.estimates.2025-26|bn}} billion, the largest single share, including a Level 4 hospital at Kongowea and the refurbishment of Likoni Sub-County Hospital (Tier 2, Eastleigh Voice). County health outcome indicators (stunting, facility births, access to care) are to be read from the KDHS 2022 Mombasa factsheet; until then they are named data gaps: stunting **{{health.stunting}}**.
+Mombasa runs Coast General Teaching and Referral Hospital, the referral hospital for the whole coast, and a network of sub-county hospitals. The FY2025/26 budget estimates gave health **KSh {{budget.health.2025-26|bn}} billion** of {{budget.estimates.2025-26|bn}} billion, the largest single share, including a Level 4 hospital at Kongowea and the refurbishment of Likoni Sub-County Hospital (Tier 2, Eastleigh Voice). The outcomes, from KDHS 2022 (Tier 1): **{{health.stunting}}%** of children under five are stunted (Kenya {{health.stunting.kenya}}%), **{{health.skilled-birth}}%** of births have a skilled attendant, **{{health.vaccinated}}%** of young children are fully vaccinated, and **{{health.u5-mortality}}** children in every thousand die before age five. Only **{{health.sanitation.basic}}%** of residents have basic sanitation. In 2025 Mombasa carried **{{health.mpox.2025}}** of Kenya's {{health.mpox.kenya.2025}} Mpox cases, most of them in Nyali and Changamwe (Tier 2).
+
+**What residents asked for.** At the hearings for the county's 2026/27 development plan, health was the issue raised most (**{{adp.issues.health}}%** of issues), ahead of water and sanitation ({{adp.issues.water}}%), roads and drainage ({{adp.issues.roads}}%), street lighting ({{adp.issues.lighting}}%) and education ({{adp.issues.education}}%) (Tier 1, ADP 2026/27). Health is the first priority in more wards than any other issue; each ward's own ask is in its Ward Dossier.
 
 **What it means for the campaign.** Health is where the county spends most, so it is where a delivery candidate is judged on what the money buys: drugs on the shelf, staff on duty, and the referral hospital's queue.
 
@@ -104,7 +106,7 @@ Mombasa's geography is its traffic: one bridge to the north, one causeway to the
 
 ## 3.5 Jobs, the port and the young
 
-Six adults in ten in Mombasa are aged 18 to 34 (**{{census.adults.18-34.share}}%**, Tier 1, KNBS 2019 Census), and **{{ict.mombasa.youth}}%** of its young people use the internet (Tier 1, CA/KNBS 2023/24). The county economy is services-led, with services at **{{gva.services}}%** of its output (Tier 1, KNBS Gross County Product). A county youth unemployment rate is a named data gap: {{unemployment.youth.county}}.
+Six adults in ten in Mombasa are aged 18 to 34 (**{{census.adults.18-34.share}}%**, Tier 1, KNBS 2019 Census), and **{{ict.mombasa.youth}}%** of its young people use the internet (Tier 1, CA/KNBS 2023/24). The county economy is services-led, with services at **{{gva.services}}%** of its output (Tier 1, KNBS Gross County Product). Youth unemployment is put at **{{unemployment.youth.county}}%**, almost double the national rate (Tier 2, local labour assessments reported by The Star and The Standard). In 2022 the governor himself, then Mvita MP, counted **{{unemployment.youth.nassir.jobless}}** unemployed young people out of {{unemployment.youth.nassir.youth}} ({{unemployment.youth.nassir.share}}%, Tier 2): the campaign holds him to his own number.
 
 **What it means for the campaign.** The port employs, but the jobs young people talk about are the ones that left with the cargo after the SGR began to move it inland. A jobs promise in Mombasa has to name the employer, and Section 3.8 does.
 

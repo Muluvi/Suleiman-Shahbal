@@ -324,7 +324,7 @@ items:
   - value: "{{edu.none.women}}"
     label: "women aged 6+ with no education"
     tier: 1
-    body: "KDHS 2022: women aged six and over in Mombasa with no schooling. The figure for men is still to be read off the same KDHS report ({{edu.none.men}})."
+    body: "KDHS 2022: women aged six and over in Mombasa with no schooling. Among adults aged 15 to 49 the shares are {{edu.none.women.adult}}% of women and {{edu.none.men.adult}}% of men."
   - value: "{{ict.offline}}%"
     label: "outside the internet-using population"
     tier: 1
@@ -402,7 +402,7 @@ Paid media on the platforms that reach the connected minority, and earned media 
 **Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else.
 ```
 
-**Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else. Placement is a relationship business the campaign already has. The team prepares the briefing notes, the debate preparation and the evidence pack behind each pitch, from the evidence on Firefly's platform. The radio plan runs through Pwani FM, Radio Citizen and Radio Maisha, with programming partnerships on Radio Rahma, Radio Salaam and Baraka FM, on the ownership map in Section 4.2.
+**Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else. Placement is a relationship business the campaign already has. The team prepares the briefing notes, the debate preparation and the evidence pack behind each pitch, from the evidence on Firefly's platform. The radio plan runs through Bahari FM, Radio Citizen and Radio Maisha, with programming partnerships on Radio Rahma, Radio Salaam and Baraka FM, on the ownership map in Section 4.2.
 
 #### The journalist relationship programme
 

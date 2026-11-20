@@ -32,7 +32,7 @@ import { USSD_HEADER, USSD_MENU as USSD_SPEC, menuLine } from "../data/ussd-spec
 
 const CONNECTED = Number(formatFigure(FIGURES["ict.internet"]));
 const OFFLINE = Number(formatFigure(FIGURES["ict.offline"]));
-/** Adults own phones at about three in four (KDHS 2022), so most of the offline side still has a handset. */
+/** Nearly every adult owns a phone (KDHS 2022), so most of the offline side still has a handset. */
 const ADULT_PHONE = formatFigure(FIGURES["ict.phone.adult"]);
 
 /** The USSD menu as the handset prints it, from data/ussd-specimen.ts (the one definition). */
@@ -167,8 +167,8 @@ export function ReachSplit() {
             ))}
           </ul>
           <p className="t-small text-muted mt-2 leading-snug">
-            Most of them still have a handset: {ADULT_PHONE}% of adults own a phone (KDHS 2022, via the County Gender Data
-            Sheet, October 2025), so SMS and USSD reach most of this side.
+            Most of them still have a handset: {ADULT_PHONE}% of adults own a phone (KDHS 2022, via the
+            Kenya Food Systems Dashboard), so SMS and USSD reach most of this side.
           </p>
         </div>
       </div>

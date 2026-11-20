@@ -168,7 +168,7 @@ export const FIG_2_7: FigureSpec = {
   section: "4.2",
   title: "Paid placement goes to the commercial stations; the faith stations are partners for programming, never for advertising",
   question: "Who owns the airwaves, and where do we place vs partner?",
-  takeaway: "Pwani FM, Radio Citizen and Radio Maisha carry the campaign's paid placements; Radio Rahma, Radio Salaam and Baraka FM carry community programming on water, health and jobs.",
+  takeaway: "Bahari FM, Radio Citizen and Radio Maisha carry the campaign's paid placements; Radio Rahma, Radio Salaam and Baraka FM carry community programming on water, health and jobs.",
   sources: [{ name: "Corporate and denominational ownership records", tier: "T2" }, { name: "Community station ownership, to be checked against the CA licensing register", tier: "T3" }],
   chart: { type: "network", owners: OWNERS, stations: STATIONS.map((s) => ({ name: s.name, owner: OWNER_OF(s.alignment).id, posture: postureOf(s.posture) })) },
   notes: ["Solid link: paid or secondary placement. Dashed link and outline: programming partnership only, no paid placement.", "No Coast audience share is in hand; the record that would close it is a KARF or GeoPoll report."],

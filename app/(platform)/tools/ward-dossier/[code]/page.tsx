@@ -7,6 +7,7 @@ import { ToolLimits } from "@/components/tools/public/ToolLimits";
 import { PUBLIC_SOURCES, PUBLIC_WARDS } from "@/lib/public-data";
 import { SaveImage } from "@/components/visual/SaveImage";
 import { wardOgImage } from "@/lib/card/og";
+import { ADP_2026_27, WARD_PRIORITIES } from "@/data/ward-priorities";
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
@@ -28,12 +29,18 @@ export default async function Page({ params }: { params: Promise<{ code: string 
   const peers = PUBLIC_WARDS.filter((w) => w.constituencyCode === ward.constituencyCode).sort((a, b) => b.voters - a.voters);
   const peerTotal = peers.reduce((a, w) => a + w.voters, 0);
   const prev = PUBLIC_WARDS[i - 1], next = PUBLIC_WARDS[i + 1];
+  const priority = WARD_PRIORITIES[ward.name];
   const stats = [["Registered voters, 2022", n(ward.voters)], ["Polling stations", n(ward.stations)], ["Registration centres", n(ward.centres)], ["Average voters per station", n(Math.round(ward.voters / ward.stations))], ["Population (Gazette)", n(ward.population)], ["Area, sq km (Gazette)", ward.areaSqKm.toLocaleString("en-KE")], ["Share of constituency voters", `${((ward.voters / peerTotal) * 100).toFixed(1)}%`]];
   return <>
     <p className="mb-3 text-[0.85rem]"><Link className="underline" href="/tools/ward-dossier">All wards</Link></p>
     <PageHead kicker={`${ward.constituency} constituency`} title={`${ward.name} ward`} />
     <div className="mb-4 flex justify-end print:hidden"><SaveImage card={{ type: "ward", params: { ward: code } }} title={`${ward.name} ward profile`} /></div>
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">{stats.map(([l, v]) => <div key={l} className="plat-card p-4"><p className="text-[0.8rem] text-muted">{l}</p><p className="mt-1 font-mono text-xl text-ink">{v}</p></div>)}</div>
+    <section className="mt-8"><h2 className="font-serif text-2xl text-ink">What the ward asked the county for</h2>
+      {priority ? <div className="plat-card mt-3 p-4"><p className="text-[0.8rem] text-muted">{priority.sector} · ranked {priority.rank} of the plan&apos;s ward priorities</p><p className="mt-1 text-ink">{priority.ask}</p></div>
+        : <p className="mt-3 text-[0.9rem] text-muted">The county&apos;s ranked list gives no priority for this ward; its proposals are in Section 3.15 of the plan.</p>}
+      <p className="mt-2 text-[0.8rem] text-muted">Source: {ADP_2026_27.name}. Tier 1.</p>
+    </section>
     <section className="mt-8"><h2 className="font-serif text-2xl text-ink">Compared with {ward.constituency}</h2>
       <ul className="mt-3 space-y-2">{peers.map((w) => <li key={w.code}><Link href={`/tools/ward-dossier/${w.code}`} className={`block text-[0.9rem] ${w.code === code ? "font-semibold text-ink" : "text-muted"}`}><span className="flex justify-between gap-3"><span>{w.name}</span><span className="font-mono">{n(w.voters)}</span></span><span className="mt-1 block h-2 rounded-full bg-accent-solid" style={{ width: `${(w.voters / peers[0].voters) * 100}%`, opacity: w.code === code ? 1 : 0.35 }} /></Link></li>)}</ul>
     </section>

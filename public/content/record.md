@@ -24,9 +24,9 @@ id: fig-2-8-record
 |---|---|---|
 | **The Jomvu SEZ** | A KSh 12 billion agreement between GulfCap, DP World and the county for a 535-acre zone in Jomvu, signed at State House on 8 September 2026; 7,972 direct jobs projected (Tier 2) | A public jobs tracker: the projection beside the jobs actually created, updated every quarter (Section 15.1.1) |
 | **A bank built from nothing** | Founded Gulf African Bank in 2008, Kenya's first Islamic bank (Tier 2) | Proof he can build an institution that lasts, and a link to the Muslim community on substance rather than identity |
-| Regional standing | EALA member; chair, Communication, Trade and Investment Committee (Tier 2; the EALA record is to be cited) | Trade and investment credibility with traders, the port and the diaspora |
+| Regional standing | Elected to EALA by Parliament on 17 November 2022; chair of the Communication, Trade and Investment Committee since January 2023; presented the committee's oversight report on the EAC civil aviation agency (June 2023) (Tier 2: The Star, People Daily, New Times; Hansard at eala.org) | Trade and investment credibility with traders, the port and the diaspora |
 | Persistence in Mombasa politics | Second in 2013 with 94,905 votes and in 2017 with 69,515 (Tier 1); stood down in 2022 (Tier 2) | A candidate who has kept coming back to Mombasa, set against the charge that he is only a businessman |
-| Recognition | Pwani Golden Awards, Entrepreneur of the Year 2024; KNCCI Distinguished Honorary Award 2023 (Tier 3, as listed publicly; to be confirmed) | Secondary only |
+| Recognition | KNCCI Distinguished Honorary Award, Mombasa Business Awards, December 2023 (Tier 2: The Star, Citizen, The Standard); Pwani Golden Awards, Entrepreneur of the Year 2024 (Tier 3, listed publicly, no report found; to be confirmed) | The KNCCI award, from the Mombasa business community, is quoted; the second is not until it is confirmed |
 
 **The record, and its limits.** Business success is not county delivery, and his opponents will say so. The record is used to make one claim only: that he has built things that are still standing and can be visited. Every line above is checked against its Tier 1 document before it goes into broadcast copy.
 

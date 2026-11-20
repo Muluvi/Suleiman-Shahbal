@@ -443,7 +443,7 @@ export function SloganBuilder() {
 export function SMSFeedbackVisualizer() {
   const logs = [
     { sender: "+254 712 *** 324", text: "When is the next baraza in Changamwe? We want to ask about the water hours in Chaani.", time: "10:14 AM" },
-    { sender: "+254 723 *** 892", text: "Heard the radio spot on Pwani FM yesterday. Publishing the pending bills sounds right.", time: "11:02 AM" }
+    { sender: "+254 723 *** 892", text: "Heard the radio spot on Bahari FM yesterday. Publishing the pending bills sounds right.", time: "11:02 AM" }
   ];
 
   return (

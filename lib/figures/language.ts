@@ -34,7 +34,7 @@ export const LANGUAGES: LanguageRow[] = [
     name: "Kiswahili",
     share: 60,
     audiences: ["Every ward and every age", "Women's groups and chamas", "Traders and port workers", "Elders and faith communities"],
-    channels: ["Kiswahili radio (Pwani FM, Radio Citizen, Radio Maisha)", "SMS, USSD and WhatsApp voice notes", "The stages and barazas", "Ward captains' audio clips"],
+    channels: ["Kiswahili radio (Bahari FM, Radio Citizen, Radio Maisha)", "SMS, USSD and WhatsApp voice notes", "The stages and barazas", "Ward captains' audio clips"],
     objective: "The language of trust, argument and mobilisation in Mombasa: every line checked by a native speaker from Mombasa.",
   },
   {
