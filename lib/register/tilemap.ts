@@ -44,13 +44,13 @@ const seqInk = (s: number) => (s >= 3 ? "var(--seq-ink-dark)" : "var(--seq-ink-l
 const POOL = new Set(["kisauni", "nyali", "changamwe"]);
 // The 2022 governor margins by constituency (Section 2.4), in votes: the closest three are the pool.
 const MARGIN: Record<string, string> = Object.fromEntries(["changamwe", "jomvu", "kisauni", "nyali", "mvita", "likoni"].map((c) => [c, formatFigure(FIGURES[`result.2022.gov.${c}.margin`])]));
-const ZONE_FILL = { anchor: "var(--zone-a)", mwingi: "var(--zone-b)", arid: "var(--zone-c)" } as const;
-const ZONE_NAME = { anchor: "The Island (Mvita)", mwingi: "The north mainland (Kisauni, Nyali)", arid: "The west mainland (Changamwe, Jomvu)", none: "Likoni, rotating" };
+const ZONE_FILL = { anchor: "var(--zone-a)", north: "var(--zone-b)", west: "var(--zone-c)" } as const;
+const ZONE_NAME = { anchor: "The Island (Mvita)", north: "The north mainland (Kisauni, Nyali)", west: "The west mainland (Changamwe, Jomvu)", none: "Likoni, rotating" };
 
 const EFFORT: Record<string, number> = {
   anchor: FIGURES["effort.p-1.anchor"].value ?? 0,
-  mwingi: FIGURES["effort.p-1.mwingi"].value ?? 0,
-  arid: FIGURES["effort.p-1.arid"].value ?? 0,
+  north: FIGURES["effort.p-1.north"].value ?? 0,
+  west: FIGURES["effort.p-1.west"].value ?? 0,
 };
 const effortStep = (v: number) => (v >= 35 ? 5 : v >= 30 ? 4 : v >= 25 ? 3 : 2);
 
@@ -118,14 +118,14 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
     state: "sourced",
     legend: [
       { label: ZONE_NAME.anchor, fill: ZONE_FILL.anchor },
-      { label: ZONE_NAME.mwingi, fill: ZONE_FILL.mwingi },
-      { label: ZONE_NAME.arid, fill: ZONE_FILL.arid },
+      { label: ZONE_NAME.north, fill: ZONE_FILL.north },
+      { label: ZONE_NAME.west, fill: ZONE_FILL.west },
       { label: "Likoni: rotating", fill: "transparent", dashed: true },
     ],
     style: (t) =>
       t.zone === "none"
         ? { fill: "transparent", ink: "var(--muted)", label: "none", dashed: true }
-        : { fill: ZONE_FILL[t.zone], ink: "#ffffff", label: t.zone === "anchor" ? "I" : t.zone === "mwingi" ? "N" : "W" },
+        : { fill: ZONE_FILL[t.zone], ink: "#ffffff", label: t.zone === "anchor" ? "I" : t.zone === "north" ? "N" : "W" },
   },
   effort: {
     id: "effort",
@@ -135,8 +135,8 @@ export const LAYERS: Record<TileLayerId, TileLayer> = {
     tier: null,
     state: "target",
     legend: [
-      { label: `${EFFORT.mwingi}% north mainland`, fill: `var(--seq-${effortStep(EFFORT.mwingi)})`, hatch: true },
-      { label: `${EFFORT.arid}% west mainland`, fill: `var(--seq-${effortStep(EFFORT.arid)})`, hatch: true },
+      { label: `${EFFORT.north}% north mainland`, fill: `var(--seq-${effortStep(EFFORT.north)})`, hatch: true },
+      { label: `${EFFORT.west}% west mainland`, fill: `var(--seq-${effortStep(EFFORT.west)})`, hatch: true },
       { label: `${EFFORT.anchor}% Island`, fill: `var(--seq-${effortStep(EFFORT.anchor)})`, hatch: true },
       { label: "Likoni and rotating", fill: "transparent", dashed: true },
     ],

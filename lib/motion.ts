@@ -147,7 +147,7 @@ export const STAGGER = {
   normal: 0.05,
   /** Loose spacing for complex cards (60ms). */
   loose: 0.06,
-  /** Rapid swarm for the 40 ward tiles (30ms). */
+  /** Rapid swarm for the 30 ward tiles (30ms). */
   swarm: 0.03,
 } as const;
 

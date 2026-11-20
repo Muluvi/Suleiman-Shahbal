@@ -34,7 +34,7 @@ export function ChannelMix({ rows, county, latest }: { rows: CensusRow[]; county
         { key: "off", label: "Radio/in person", num: true, render: (m) => pct(m.offline) },
         { key: "lead", label: "Lead channel", render: (m) => (m.offline >= Math.max(m.online, m.smsOnly) ? <Badge tone="gold">Radio, in person</Badge> : m.smsOnly >= m.online ? <Badge>SMS, USSD</Badge> : <Badge tone="accent">Digital</Badge>) },
       ]} />
-      <Note>Sub-counties are KNBS administrative units and do not map one-to-one onto the eight constituencies. A share is of adults living there, not of registered voters.</Note>
+      <Note>Sub-counties are KNBS administrative units and coincide with the six constituencies in Mombasa. A share is of adults living there, not of registered voters.</Note>
       <ToolActions filename="channel-mix.csv" rows={() => [["Sub-county", "Adults", "Online %", "SMS/USSD only %", "No phone %"], ...mix.map((m) => [m.r.subcounty, m.r.adults, m.online.toFixed(1), m.smsOnly.toFixed(1), m.offline.toFixed(1)])]} link={false}  card={{ type: "pictogram", params: { set: "offline" } }} />
     </div>
   );

@@ -35,7 +35,7 @@ jobs:
             for source in \
               "https://www.iebc.or.ke/" \
               "https://www.cob.go.ke/" \
-              "https://news.google.com/rss/search?q=Kitui+governor+2027&hl=en-KE&gl=KE&ceid=KE:en"; do
+              "https://news.google.com/rss/search?q=Mombasa+governor+2027&hl=en-KE&gl=KE&ceid=KE:en"; do
               printf '## %s\n\n' "$source"
               printf -- '- status: verify\n- retrieved: %s\n- source: %s\n\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$source"
               source_file="$(mktemp)"

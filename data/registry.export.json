@@ -1013,17 +1013,7 @@
    "note": "Share of communications effort to the Island (Mvita)."
   },
   {
-   "id": "effort.p-1.arid",
-   "value": 25,
-   "unit": "percent",
-   "tier": null,
-   "state": "target",
-   "source": "Firefly's target, this plan",
-   "asOf": null,
-   "note": "Share of communications effort to the west mainland (Changamwe, Jomvu)."
-  },
-  {
-   "id": "effort.p-1.mwingi",
+   "id": "effort.p-1.north",
    "value": 40,
    "unit": "percent",
    "tier": null,
@@ -1043,6 +1033,16 @@
    "note": "Share of communications effort to Likoni and to rotating ward tests."
   },
   {
+   "id": "effort.p-1.west",
+   "value": 25,
+   "unit": "percent",
+   "tier": null,
+   "state": "target",
+   "source": "Firefly's target, this plan",
+   "asOf": null,
+   "note": "Share of communications effort to the west mainland (Changamwe, Jomvu)."
+  },
+  {
    "id": "effort.p12.anchor",
    "value": 20,
    "unit": "percent",
@@ -1053,17 +1053,7 @@
    "note": "Share of communications effort to the Island (Mvita)."
   },
   {
-   "id": "effort.p12.arid",
-   "value": 25,
-   "unit": "percent",
-   "tier": null,
-   "state": "target",
-   "source": "Firefly's target, this plan",
-   "asOf": null,
-   "note": "Share of communications effort to the west mainland (Changamwe, Jomvu)."
-  },
-  {
-   "id": "effort.p12.mwingi",
+   "id": "effort.p12.north",
    "value": 35,
    "unit": "percent",
    "tier": null,
@@ -1083,6 +1073,16 @@
    "note": "Share of communications effort to Likoni and to rotating ward tests."
   },
   {
+   "id": "effort.p12.west",
+   "value": 25,
+   "unit": "percent",
+   "tier": null,
+   "state": "target",
+   "source": "Firefly's target, this plan",
+   "asOf": null,
+   "note": "Share of communications effort to the west mainland (Changamwe, Jomvu)."
+  },
+  {
    "id": "effort.p3.anchor",
    "value": 20,
    "unit": "percent",
@@ -1093,17 +1093,7 @@
    "note": "Share of communications effort to the Island (Mvita)."
   },
   {
-   "id": "effort.p3.arid",
-   "value": 25,
-   "unit": "percent",
-   "tier": null,
-   "state": "target",
-   "source": "Firefly's target, this plan",
-   "asOf": null,
-   "note": "Share of communications effort to the west mainland (Changamwe, Jomvu)."
-  },
-  {
-   "id": "effort.p3.mwingi",
+   "id": "effort.p3.north",
    "value": 35,
    "unit": "percent",
    "tier": null,
@@ -1121,6 +1111,16 @@
    "source": "Firefly's target, this plan",
    "asOf": null,
    "note": "Share of communications effort to Likoni and to rotating ward tests."
+  },
+  {
+   "id": "effort.p3.west",
+   "value": 25,
+   "unit": "percent",
+   "tier": null,
+   "state": "target",
+   "source": "Firefly's target, this plan",
+   "asOf": null,
+   "note": "Share of communications effort to the west mainland (Changamwe, Jomvu)."
   },
   {
    "id": "effort.sms.pool",
@@ -2285,7 +2285,7 @@
   {
    "id": "record.gab.founded",
    "value": 2008,
-   "unit": "count",
+   "unit": "year",
    "tier": "T2",
    "state": "sourced",
    "source": "Wikipedia and The Standard, on Gulf African Bank",
@@ -4053,47 +4053,7 @@
    "note": "Zone population / county."
   },
   {
-   "id": "zone.arid.households",
-   "value": 99653,
-   "unit": "households",
-   "tier": "T1",
-   "state": "modelled",
-   "source": "Derived in lib/data/figures.ts",
-   "asOf": null,
-   "note": "Sum of the west mainland's sub-counties."
-  },
-  {
-   "id": "zone.arid.population",
-   "value": 295297,
-   "unit": "people",
-   "tier": "T1",
-   "state": "modelled",
-   "source": "Derived in lib/data/figures.ts",
-   "asOf": null,
-   "note": "Sum of the west mainland's sub-counties: changamwe, jomvu."
-  },
-  {
-   "id": "zone.arid.register.share",
-   "value": 26.272407631563777,
-   "unit": "percent",
-   "tier": "T1",
-   "state": "modelled",
-   "source": "Derived in lib/data/figures.ts",
-   "asOf": null,
-   "note": "Changamwe + Jomvu / 2022 register."
-  },
-  {
-   "id": "zone.arid.share",
-   "value": 24.43837915541494,
-   "unit": "percent",
-   "tier": "T1",
-   "state": "modelled",
-   "source": "Derived in lib/data/figures.ts",
-   "asOf": null,
-   "note": "Zone population / county."
-  },
-  {
-   "id": "zone.mwingi.households",
+   "id": "zone.north.households",
    "value": 157930,
    "unit": "households",
    "tier": "T1",
@@ -4103,7 +4063,7 @@
    "note": "Sum of the north mainland's sub-counties."
   },
   {
-   "id": "zone.mwingi.population",
+   "id": "zone.north.population",
    "value": 508507,
    "unit": "people",
    "tier": "T1",
@@ -4113,7 +4073,7 @@
    "note": "Sum of the north mainland's sub-counties: kisauni, nyali."
   },
   {
-   "id": "zone.mwingi.register.share",
+   "id": "zone.north.register.share",
    "value": 40.430556788848335,
    "unit": "percent",
    "tier": "T1",
@@ -4123,8 +4083,48 @@
    "note": "Kisauni + Nyali / 2022 register."
   },
   {
-   "id": "zone.mwingi.share",
+   "id": "zone.north.share",
    "value": 42.08334954023435,
+   "unit": "percent",
+   "tier": "T1",
+   "state": "modelled",
+   "source": "Derived in lib/data/figures.ts",
+   "asOf": null,
+   "note": "Zone population / county."
+  },
+  {
+   "id": "zone.west.households",
+   "value": 99653,
+   "unit": "households",
+   "tier": "T1",
+   "state": "modelled",
+   "source": "Derived in lib/data/figures.ts",
+   "asOf": null,
+   "note": "Sum of the west mainland's sub-counties."
+  },
+  {
+   "id": "zone.west.population",
+   "value": 295297,
+   "unit": "people",
+   "tier": "T1",
+   "state": "modelled",
+   "source": "Derived in lib/data/figures.ts",
+   "asOf": null,
+   "note": "Sum of the west mainland's sub-counties: changamwe, jomvu."
+  },
+  {
+   "id": "zone.west.register.share",
+   "value": 26.272407631563777,
+   "unit": "percent",
+   "tier": "T1",
+   "state": "modelled",
+   "source": "Derived in lib/data/figures.ts",
+   "asOf": null,
+   "note": "Changamwe + Jomvu / 2022 register."
+  },
+  {
+   "id": "zone.west.share",
+   "value": 24.43837915541494,
    "unit": "percent",
    "tier": "T1",
    "state": "modelled",

@@ -18,7 +18,7 @@ export interface Problem {
 
 const STATES = ["sourced", "modelled", "needed", "target"] as const;
 const TIERS = ["T1", "T2", "T3"] as const;
-const UNITS = ["voters", "votes", "people", "households", "count", "percent", "ksh", "km2", "per-km2", "persons"] as const;
+const UNITS = ["voters", "votes", "people", "households", "count", "percent", "ksh", "km2", "per-km2", "persons", "year"] as const;
 
 /** Every rule a single figure must satisfy (the per-figure half of check-figures.ts). */
 export function figureProblems(id: string, f: Figure): Problem[] {
@@ -76,7 +76,7 @@ export function wardRegisterProblems(register: WardRegister): Problem[] {
     });
   }
   const wardCount = register.constituencies.reduce((sum, c) => sum + c.wards.length, 0);
-  if (wardCount !== 40) out.push({ rule: `Expected 30 wards across 8 constituencies, found ${wardCount}.`, plain: "Mombasa has 30 wards; none can be added or removed here." });
-  if (register.constituencies.length !== 8) out.push({ rule: `Expected 8 constituencies, found ${register.constituencies.length}.`, plain: "Mombasa has 8 constituencies; none can be added or removed here." });
+  if (wardCount !== 30) out.push({ rule: `Expected 30 wards across 6 constituencies, found ${wardCount}.`, plain: "Mombasa has 30 wards; none can be added or removed here." });
+  if (register.constituencies.length !== 6) out.push({ rule: `Expected 6 constituencies, found ${register.constituencies.length}.`, plain: "Mombasa has 6 constituencies; none can be added or removed here." });
   return out;
 }

@@ -22,7 +22,7 @@ import type { FigureSeries } from "./types";
 export const DATA_LAYER_TIERS = [
   {
     label: "Ingestion & capture",
-    items: ["Offline SMS / USSD", "400 ward captains", "WhatsApp / webforms", "Event registration"],
+    items: ["Offline SMS / USSD", "300 ward captains", "WhatsApp / webforms", "Event registration"],
   },
   {
     label: "Processing & validation",

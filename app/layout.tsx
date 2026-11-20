@@ -57,7 +57,7 @@ export const viewport: Viewport = {
 
 const TITLE = 'Mombasa 2027 — The campaign’s data, analysis and plan';
 const DESCRIPTION =
-  'Built by Firefly Management for Hon. Dr. Benson Suleiman Shahbal, MP for Mvita and gubernatorial aspirant, Mombasa County, and for his team. Open to view; the team signs in to edit.';
+  'Built by Firefly Management for Hon. Suleiman Shahbal, gubernatorial aspirant, Mombasa County, and for his team. Open to view; the team signs in to edit.';
 
 /**
  * The share card, and why there is one.

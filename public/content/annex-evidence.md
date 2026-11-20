@@ -112,7 +112,7 @@ Every figure in the store, 417 in all: 182 read off a named document, 128 modell
 | The Standard, KNA and NTV, 30 August 2022 | Tier 2 | Not stated | `result.2022.gov.omar.media` 98,108 |
 | The Standard, on the County Equitable Share Bill (2025) | Tier 2 | Not stated | `budget.ward-dev` KSh 4,000,000,000 |
 | The Star, 30 August 2022 | Tier 2 | Not stated | `result.2022.gov.awiti` 875; `result.2022.gov.kingi` 712 |
-| Wikipedia and The Standard, on Gulf African Bank | Tier 2 | Not stated | `record.gab.founded` 2,008 |
+| Wikipedia and The Standard, on Gulf African Bank | Tier 2 | Not stated | `record.gab.founded` 2008 |
 | Controller of Budget, FY2025/26 county budget implementation review (Mombasa), as reported by Business Radar | Tier 3 | 2025-26, 2026-06 | `budget.total` KSh 18,730,000,000; `budget.development` KSh 5,620,000,000; `budget.equitable` KSh 8,380,000,000; `budget.osr` KSh 6,210,000,000; `budget.overdraft.2026-06` KSh 620,520,000; `budget.pending-bills.2026` KSh 3,800,000,000 |
 | Mombasa County budget, FY2026/27 (equitable share per the County Allocation of Revenue Act 2026, as reported) | Tier 3 | 2026-27 | `budget.equitable.2026-27` KSh 8,660,000,000 |
 
@@ -213,19 +213,19 @@ Every figure in the store, 417 in all: 182 read off a named document, 128 modell
 | `zone.anchor.population` | 154,171 | Tier 1 | Sum of the Island's sub-counties: mvita. |
 | `zone.anchor.households` | 38,710 | Tier 1 | Sum of the Island's sub-counties. |
 | `zone.anchor.share` | 12.8% | Tier 1 | Zone population / county. |
-| `zone.mwingi.population` | 508,507 | Tier 1 | Sum of the north mainland's sub-counties: kisauni, nyali. |
-| `zone.mwingi.households` | 157,930 | Tier 1 | Sum of the north mainland's sub-counties. |
-| `zone.mwingi.share` | 42.1% | Tier 1 | Zone population / county. |
-| `zone.arid.population` | 295,297 | Tier 1 | Sum of the west mainland's sub-counties: changamwe, jomvu. |
-| `zone.arid.households` | 99,653 | Tier 1 | Sum of the west mainland's sub-counties. |
-| `zone.arid.share` | 24.4% | Tier 1 | Zone population / county. |
+| `zone.north.population` | 508,507 | Tier 1 | Sum of the north mainland's sub-counties: kisauni, nyali. |
+| `zone.north.households` | 157,930 | Tier 1 | Sum of the north mainland's sub-counties. |
+| `zone.north.share` | 42.1% | Tier 1 | Zone population / county. |
+| `zone.west.population` | 295,297 | Tier 1 | Sum of the west mainland's sub-counties: changamwe, jomvu. |
+| `zone.west.households` | 99,653 | Tier 1 | Sum of the west mainland's sub-counties. |
+| `zone.west.share` | 24.4% | Tier 1 | Zone population / county. |
 | `zones.population` | 957,975 | Tier 1 | The three zones together. |
 | `zones.share` | 79.3% | Tier 1 | The three zones / county. |
 | `zones.excluded` | 250,000 | Tier 1 | Residents in no zone (Likoni, the rotating constituency), rounded to the nearest 10,000. |
 | `zones.excluded.share` | 20.7% | Tier 1 | Likoni / county: 100 less the three zones' share. |
 | `zone.anchor.register.share` | 18.5% | Tier 1 | Mvita / 2022 register. |
-| `zone.mwingi.register.share` | 40.4% | Tier 1 | Kisauni + Nyali / 2022 register. |
-| `zone.arid.register.share` | 26.3% | Tier 1 | Changamwe + Jomvu / 2022 register. |
+| `zone.north.register.share` | 40.4% | Tier 1 | Kisauni + Nyali / 2022 register. |
+| `zone.west.register.share` | 26.3% | Tier 1 | Changamwe + Jomvu / 2022 register. |
 | `ict.offline` | 53.1% | Tier 1 | 100% less 46.9% internet use. |
 | `reach.smartphone` | 301,057 | Tier 1 | 46.9% internet use applied to the register in use. |
 | `reach.sms-only` | 95,645 | Tier 2 | 61.8% phone ownership less 46.9% internet use, on the register in use. Mixes a 2019 and a 2023/24 rate: an estimate. |
@@ -294,16 +294,16 @@ Every figure in the store, 417 in all: 182 read off a named document, 128 modell
 | `target.whatsapp-groups` | 180 | Community WhatsApp groups monitored by the 30 ward monitoring assistants. |
 | `target.polling-agents` | 1,041 | One trained agent per polling station: a campaign-owned requirement. |
 | `effort.p-1.anchor` | 20% | Share of communications effort to the Island (Mvita). |
-| `effort.p-1.mwingi` | 40% | Share of communications effort to the north mainland (Kisauni, Nyali). |
-| `effort.p-1.arid` | 25% | Share of communications effort to the west mainland (Changamwe, Jomvu). |
+| `effort.p-1.north` | 40% | Share of communications effort to the north mainland (Kisauni, Nyali). |
+| `effort.p-1.west` | 25% | Share of communications effort to the west mainland (Changamwe, Jomvu). |
 | `effort.p-1.rotating` | 15% | Share of communications effort to Likoni and to rotating ward tests. |
 | `effort.p12.anchor` | 20% | Share of communications effort to the Island (Mvita). |
-| `effort.p12.mwingi` | 35% | Share of communications effort to the north mainland (Kisauni, Nyali). |
-| `effort.p12.arid` | 25% | Share of communications effort to the west mainland (Changamwe, Jomvu). |
+| `effort.p12.north` | 35% | Share of communications effort to the north mainland (Kisauni, Nyali). |
+| `effort.p12.west` | 25% | Share of communications effort to the west mainland (Changamwe, Jomvu). |
 | `effort.p12.rotating` | 20% | Share of communications effort to Likoni and to rotating ward tests. |
 | `effort.p3.anchor` | 20% | Share of communications effort to the Island (Mvita). |
-| `effort.p3.mwingi` | 35% | Share of communications effort to the north mainland (Kisauni, Nyali). |
-| `effort.p3.arid` | 25% | Share of communications effort to the west mainland (Changamwe, Jomvu). |
+| `effort.p3.north` | 35% | Share of communications effort to the north mainland (Kisauni, Nyali). |
+| `effort.p3.west` | 25% | Share of communications effort to the west mainland (Changamwe, Jomvu). |
 | `effort.p3.rotating` | 20% | Share of communications effort to Likoni and to rotating ward tests. |
 | `channel.radio.conventional` | 20% | Coast radio in Kiswahili (Rahma, Salaam, Pwani FM, Baraka FM): share of effort in the conventional pitch, as Firefly characterises it. |
 | `channel.radio.rebalanced` | 28% | Coast radio in Kiswahili (Rahma, Salaam, Pwani FM, Baraka FM): share of effort, rebalanced. |

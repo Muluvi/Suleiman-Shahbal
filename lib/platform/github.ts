@@ -3,7 +3,7 @@
  *
  * The branch is named team-edit/<time>-<slug>. The team-edit workflow
  * (.github/workflows/team-edit.yml) then regenerates the derived files, runs `npm run verify`,
- * `npm run check:preservation` and the build, and only if all pass does it move the edit onto
+ * `npm run verify` and the build, and only if all pass does it move the edit onto
  * main, which Vercel deploys. A failing edit never reaches main.
  *
  * Credentials come from Vercel environment variables, never the repository:

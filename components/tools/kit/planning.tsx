@@ -47,7 +47,7 @@ export function WardCompare({ wards, total }: { wards: ToolWard[]; total: number
 /* ------------------------------------------------------------------ Constituency Scorecard */
 
 export function ConstituencyScorecard({ cons, total }: { cons: ToolConstituency[]; total: number }) {
-  const zone = { anchor: "The Island", mwingi: "North mainland", arid: "West mainland", none: "Likoni (rotating)" } as const;
+  const zone = { anchor: "The Island", north: "North mainland", west: "West mainland", none: "Likoni (rotating)" } as const;
   // The carousel set: one image per constituency, largest first, each numbered on the image only.
   const order = [...cons].sort((a, b) => b.voters - a.voters);
   const [slide, setSlide] = useState(1);
@@ -86,17 +86,17 @@ export function ConstituencyScorecard({ cons, total }: { cons: ToolConstituency[
 
 /* ------------------------------------------------------------------ Zone Effort Planner */
 
-export function ZoneEffort({ shares, phases }: { shares: { anchor: number; mwingi: number; arid: number; rural: number }; phases: { id: string; label: string; anchor: number; mwingi: number; arid: number; rotating: number }[] }) {
+export function ZoneEffort({ shares, phases }: { shares: { anchor: number; north: number; west: number; rural: number }; phases: { id: string; label: string; anchor: number; north: number; west: number; rotating: number }[] }) {
   const [phase, setPhase] = useState(phases[0].id);
   const p = phases.find((x) => x.id === phase) ?? phases[0];
-  const [e, setE] = useState({ anchor: p.anchor, mwingi: p.mwingi, arid: p.arid, rotating: p.rotating });
-  const sum = e.anchor + e.mwingi + e.arid + e.rotating;
-  const zones: { id: "anchor" | "mwingi" | "arid"; label: string }[] = [{ id: "anchor", label: "The Island: Mvita" }, { id: "mwingi", label: "North mainland: Kisauni, Nyali" }, { id: "arid", label: "West mainland: Changamwe, Jomvu" }];
+  const [e, setE] = useState({ anchor: p.anchor, north: p.north, west: p.west, rotating: p.rotating });
+  const sum = e.anchor + e.north + e.west + e.rotating;
+  const zones: { id: "anchor" | "north" | "west"; label: string }[] = [{ id: "anchor", label: "The Island: Mvita" }, { id: "north", label: "North mainland: Kisauni, Nyali" }, { id: "west", label: "West mainland: Changamwe, Jomvu" }];
   return (
     <div className="space-y-4">
       <div className="flex justify-end print:hidden"><SaveImage card={{ type: "map", params: { layer: "zones" } }} title="The three zones" /></div>
       <Card>
-        <Select label="Start from the plan's weighting for" value={phase} onChange={(v) => { setPhase(v); const q = phases.find((x) => x.id === v)!; setE({ anchor: q.anchor, mwingi: q.mwingi, arid: q.arid, rotating: q.rotating }); }} options={phases.map((x) => ({ value: x.id, label: x.label }))} />
+        <Select label="Start from the plan's weighting for" value={phase} onChange={(v) => { setPhase(v); const q = phases.find((x) => x.id === v)!; setE({ anchor: q.anchor, north: q.north, west: q.west, rotating: q.rotating }); }} options={phases.map((x) => ({ value: x.id, label: x.label }))} />
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {zones.map((z) => <Slider key={z.id} label={z.label} value={e[z.id]} onChange={(v) => setE({ ...e, [z.id]: v })} min={0} max={70} suffix="%" />)}
           <Slider label="Rotating test wards (Likoni and others)" value={e.rotating} onChange={(v) => setE({ ...e, rotating: v })} min={0} max={50} suffix="%" />

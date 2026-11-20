@@ -1041,7 +1041,7 @@ function Network({ chart, title }: { chart: Extract<ChartSpec, { type: "network"
       {chart.stations.map((s, i) => {
         const y = top + i * rowH + rowH / 2;
         const owner = chart.owners.find((o) => o.id === s.owner)?.name ?? "";
-        const word = s.posture === "placement" ? "place" : s.posture === "monitoring" ? "monitor" : "secondary";
+        const word = s.posture === "placement" ? "place" : s.posture === "monitoring" ? "programmes" : "secondary";
         const cls = s.posture === "placement" ? "is-place" : s.posture === "monitoring" ? "is-monitor" : "is-secondary";
         return (
           <g key={s.name} className={`kx-net__station ${cls}`} tabIndex={0} role="img" aria-label={`${s.name}, owned by ${owner}: ${word}`}>

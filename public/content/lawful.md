@@ -93,7 +93,7 @@ published charter plus a retained audit trail is an answer, not a denial.
 
 <!-- keep -->
 > ### DIGITAL ETHICS & DATA CHARTER
-> **Kwĩyumya kwa Ũthaithi — Ahadi Yetu ya Uwazi — Our Commitment to Integrity**
+> **Ahadi Yetu ya Uwazi — Our Commitment to Integrity**
 >
 > **1. No fabricated engagement.**
 > This campaign does not and will not use bot accounts, sockpuppet or fake

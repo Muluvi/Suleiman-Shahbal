@@ -72,7 +72,7 @@ id: fig-5-5-cadence
 ```
 
 **Recommendation: Level 2 (Standard).** Level 1 instruments only the twelve decisive wards, which
-leaves the recognition deficit measured at county level — the one place this campaign cannot afford
+leaves turnout in the close-contest belt measured at county level — the one place this campaign cannot afford
 to be blind. Level 3 is defensible, but it refreshes the read faster than a nomination sprint can
 act on it. Standard is the level at which all 30 wards carry both reach reporting and an active SMS
 and USSD layer, and reaching the close-contest belt and the 2022 abstainers is the whole argument.

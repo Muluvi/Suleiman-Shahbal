@@ -58,7 +58,7 @@ export function CoverHero({ byline, children }: { byline?: ReactNode; children?:
               <span className="pf-line"><span>The campaign&rsquo;s data, analysis and plan, in one place</span></span>
             </h1>
             <p className="pf-hero__sub">
-              Built by Firefly Management for Hon. Dr. Benson Suleiman Shahbal, MP for Mvita and gubernatorial aspirant, Mombasa County, and for his team.
+              Built by Firefly Management for Hon. Suleiman Shahbal, gubernatorial aspirant, Mombasa County, and for his team.
             </p>
             {children && <div className="pf-hero__controls">{children}</div>}
           </div>

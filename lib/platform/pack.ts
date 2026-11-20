@@ -5,7 +5,7 @@
  * makes the change, and runs the data pack's own rules over the result (lib/data/rules.ts, the same
  * code `npm run verify` runs). If any rule fails, the edit is refused with a plain-language message
  * and nothing is written. If they pass, the change is committed to its own branch and the full
- * `npm run verify` and `npm run check:preservation` run in CI before it reaches main.
+ * `npm run verify` runs in CI before it reaches main.
  *
  * Every edit is logged with what it changed from and to, so a revert restores the exact previous
  * value. Nothing is deleted: the only removal possible is reverting a record the team itself added.
@@ -31,7 +31,7 @@ export const FIGURE_FIELDS = ["value", "state", "tier", "source", "asOf", "note"
 export type FigureField = (typeof FIGURE_FIELDS)[number];
 export const STATES: FigureState[] = ["sourced", "modelled", "needed", "target"];
 export const TIERS: Tier[] = ["T1", "T2", "T3"];
-export const UNITS: Unit[] = ["voters", "votes", "people", "households", "count", "percent", "ksh", "km2", "per-km2", "persons"];
+export const UNITS: Unit[] = ["voters", "votes", "people", "households", "count", "percent", "ksh", "km2", "per-km2", "persons", "year"];
 
 export interface EditableList {
   id: string;

@@ -1,6 +1,6 @@
 # Keeping the data current
 
-**Dr. Mulu's team updates the data on the site, not in GitHub.** Team members sign in at `/team/login`
+**Mr Shahbal's team updates the data on the site, not in GitHub.** Team members sign in at `/team/login`
 and use the data editor (`/team/data`) for figures, the ward register, the strategy lists and the
 analysis values, and the workspace (`/workspace`) for the day-to-day records: the weekly brief, the
 content calendar, the dispatch log, the KPI tracker and the rest. Nobody on the team needs the

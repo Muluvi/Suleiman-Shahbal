@@ -1,74 +1,61 @@
 /**
- * §7.1 [CHECK REF] — the central claim, the three languages it has to survive, and the three pillars under it.
+ * §12.5 — the cultural registers, and the quality gate every Kiswahili line passes.
  *
- * WHAT THIS REPLACES. Two box-drawing blocks eleven lines apart: a MESSAGE ARCHITECTURE HIERARCHY
- * drawing the claim over three pillars, and a CENTRAL CAMPAIGN CLAIM & SLOGAN box giving the claim
- * in English, Kiswahili with its primary evidence. They are two halves of one message
- * house, and neither is complete without the other: the hierarchy states the pillars without the
- * translations, the slogan box states the translations without the pillars.
+ * WHY THE TRANSLATIONS ARE THE POINT. §12.5 forbids machine translation outright and requires a
+ * named native-speaker sign-off for every Kiswahili line. Mombasa Kiswahili (Kimvita) differs from
+ * the Kiswahili of the national news, and a phrase that sounds like Nairobi or like a government
+ * circular loses the listener.
  *
- * WHY THE TRANSLATIONS ARE THE POINT. §3.6.2 forbids machine translation of Kiswahili outright and
- * requires a named cultural sign-off for every vernacular line, and §3.6.1 puts 76% of the county's
- * primary reach in Kiswahili. A message house that drew the English claim large and left the Kiswahili
- * one in a footnote would invert the document's own argument about which version does the work. So
- * all three sit at the same size, in the order the campaign speaks them.
- *
- * NOTHING IS TRANSLATED, SHORTENED OR RE-PUNCTUATED HERE. Every line is the block's, character for
- * character, including the Kiswahili orthography. A figure that quietly normalised a vernacular
- * slogan would be doing the exact thing §3.6.2 exists to prevent.
+ * THE KISWAHILI LINES BELOW ARE DRAFTS. They are the plan's working framings, and the native-speaker
+ * reviewer signs off or replaces each before anything publishes.
  */
 import type { FigureSeries } from "./types";
 
 /* ------------------------------------------------------------------ §3.6.2 cultural registers */
 
 /**
- * Four technical terms, the literal translation that fails, and the approved Kiswahili framing.
- *
- * THE ORTHOGRAPHY IS THE DATA. Every Kiswahili string below carries its diacritics exactly as
- * §3.6.2 prints them — ĩ and ũ are distinct letters, not decorated vowels, and §3.6.2's own second
- * rule of engagement forbids machine translation precisely because automated handling destroys
- * this. A figure that normalised them would be the failure the section warns about.
+ * Four technical terms, the literal translation that fails, and the working Kiswahili framing.
+ * Drafts, pending the native-speaker reviewer's sign-off.
  */
 export const CULTURAL_REGISTERS = [
   {
     term: "Fiscal Prudence & Integrity",
-    literal: "Kũũsũvĩa mbesa nesa",
-    literalWhy: "Too generic / bureaucratic",
-    approved: "Kĩtĩo kya Kũthũkũma na Moko Matheũ",
-    gloss: "The Honor of Public Service with Clean Hands",
+    literal: "Busara ya kifedha",
+    literalWhy: "Too bureaucratic: sounds like a government circular",
+    approved: "Kila shilingi ina hesabu yake",
+    gloss: "Every shilling has its account",
   },
   {
     term: "Household Economic Empowerment",
-    literal: "Kũnenga andũ mbesa",
+    literal: "Kuwapa watu pesa",
     literalWhy: "Sounds like handouts",
-    approved: "Ũtonga wa Mĩsyĩ na Mbũi Mĩĩtĩ",
-    gloss: "Sustainable Wealth Rooted in Household Farms",
+    approved: "Riziki ya kila nyumba",
+    gloss: "A livelihood for every household",
   },
   {
     term: "Devolution Equity & Ward Equalization",
-    literal: "Kũgawanya mbesa sya ward",
+    literal: "Kugawanya pesa za wodi",
     literalWhy: "Mechanical division",
-    approved: "Kĩla Kĩtheka na Mwanya Wayo: Mumo kwa Onthe",
-    gloss: "Every Ridge its Equal Share: Prosperity for All",
+    approved: "Kila mtaa na haki yake",
+    gloss: "Every estate its fair share",
   },
   {
     term: "Youth Technical & Vocational Training",
-    literal: "Masomo ma amwanake",
+    literal: "Masomo ya vijana",
     literalWhy: "Schooling only",
-    approved: "Wathi wa Mwanake: Moko ma Kũseũvya Wĩa",
-    gloss: "Youth Mastery: Practical Hands that Build Work",
+    approved: "Mikono ya vijana, kazi ya Mombasa",
+    gloss: "Young hands, Mombasa's work",
   },
 ];
 
 export const REGISTERS_SERIES: FigureSeries = {
   id: "cultural-registers",
   headline: "Four terms where the literal translation loses the argument",
-  measure: "§12.5's proverbial framing protocol — the term, the translation that fails, and the approved idiom",
+  measure: "§12.5's framing protocol — the term, the translation that fails, and the working idiom",
   points: [],
   note:
-    "Every Kiswahili string is transcribed with its diacritics exactly as §12.5 prints them. ĩ and " +
-    "ũ are distinct letters rather than decorated vowels, and §12.5's own rules of engagement " +
-    "forbid machine translation of Kiswahili for this reason.",
+    "The working framings are drafts in plain coastal Kiswahili; §12.5's rules of engagement forbid " +
+    "machine translation, and the native-speaker reviewer signs off every line before it publishes.",
 };
 
 /* ------------------------------------------------------------------ §3.6.3 the QC gateway */

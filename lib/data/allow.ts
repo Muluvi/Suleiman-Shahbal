@@ -10,7 +10,7 @@ export const ALLOW: RegExp[] = [
   /Article 180\(7\)/, // a constitutional citation
   /KECA 460|KEHC 2189|KEHC 8291/, // law-report citations
   /Gazette Notice 1\d{4}|GN 1\d{4}|Notice 13501|\(GN 13501\)/, // gazette notice numbers
-  /fewer than 2,000 votes|under 1,000 each|about a thousand votes/, // thresholds describing a margin, not data
+  /(?:fewer than|under) 2,000 votes|under 1,000 each|about a thousand votes/, // thresholds describing a margin, not data
   /the 1,041 stations/, // restated with its token in Section 2.1
   /about 3,000 acres/, // the public Dongo Kundu zone, a description not a campaign figure
   /per 1,000\b|1,000 reached/, // the unit of a rate, not a count

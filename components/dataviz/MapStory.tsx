@@ -37,7 +37,7 @@ function Legend({ layer }: { layer: StoryStep["layer"] }) {
   if (layer === "zones")
     return (
       <p className="ms__legend">
-        <span className="ms-key ms-z--anchor" /> the Island <span className="ms-key ms-z--mwingi" /> north mainland <span className="ms-key ms-z--arid" /> west mainland <span className="ms-key ms-z--none" /> Likoni (rotating)
+        <span className="ms-key ms-z--anchor" /> the Island <span className="ms-key ms-z--north" /> north mainland <span className="ms-key ms-z--west" /> west mainland <span className="ms-key ms-z--none" /> Likoni (rotating)
       </p>
     );
   if (layer === "pool")

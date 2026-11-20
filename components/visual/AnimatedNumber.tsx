@@ -9,7 +9,7 @@ interface AnimatedNumberProps extends NumberFormat {
   spring?: keyof typeof SPRING;
   /**
    * Overrides the text a screen reader and a printer receive. Use it where the figure needs
-   * units spelling out — "13.79 billion Kenyan shillings" rather than "KSh 13.79bn".
+   * units spelling out — "18.73 billion Kenyan shillings" rather than "KSh 18.73bn".
    */
   label?: string;
 }
@@ -27,7 +27,7 @@ interface AnimatedNumberProps extends NumberFormat {
  * is now one node per figure.
  *
  * WIDTH IS STILL RESERVED, in `ch` against the final string rather than by a second copy of it.
- * "KSh 13.79bn" is wider than "KSh 0.00bn", and without a reservation every figure on the page
+ * "KSh 18.73bn" is wider than "KSh 0.00bn", and without a reservation every figure on the page
  * nudges its neighbours for the length of its own count — which is precisely the layout shift the
  * performance budget is measured on. Measured CLS before and after this change: 0.
  *

@@ -12,11 +12,8 @@
  * into a slide or a screenshot is exactly how an unprovisioned shortcode gets printed on a flyer.
  * The root carries no digits, ever.
  *
- * THE FORMAT TABLE IS WHERE C-21 SHOWS ITS TEETH AGAIN, and this time the document gets it right:
- * §4.5.2's SMS row says "Kiswahili or English only (CA rule)" and specifies GSM-7 encoding with no
- * accented unicode — which is the same constraint from the other end, since Kiswahili orthography
- * needs ĩ and ũ. Two independent reasons the bulk SMS rail cannot carry Kiswahili, stated here and
- * contradicted in §3.6.1.
+ * THE FORMAT TABLE CARRIES THE SMS RULE: Kiswahili or English only (CA rule), single-part GSM-7
+ * text with no accented unicode. Plain Kiswahili fits GSM-7, so in Mombasa the rule costs nothing.
  */
 import { CONTENT_TYPES } from "../../data/message-architecture.ts";
 import { PLAN_ITEMS, USSD_MENU as USSD_SPEC, menuLine } from "../../data/ussd-specimen.ts";
@@ -92,13 +89,12 @@ export const FORMAT_SPECS: string[][] = [
 
 export const FORMAT_SERIES: FigureSeries = {
   id: "format-specs",
-  headline: "Five channels, and only one of them may carry Kiswahili text",
+  headline: "Five channels, each with its own format and language rule",
   measure: "§15.1.2's production format specifications — channel, technical specification, language and creative treatment",
   points: [],
   note:
-    "The SMS row states the constraint twice over: “Kiswahili or English only (CA rule)”, and " +
-    "GSM-7 encoding with no accented unicode — which rules out the ĩ and ũ Kiswahili orthography " +
-    "needs. Kiswahili travels by radio, voice notes and USSD instead (§12.4).",
+    "The SMS row states the rule: “Kiswahili or English only (CA rule)”, single-part GSM-7 text. " +
+    "Plain Kiswahili fits GSM-7; Sheng and the Mijikenda languages travel by voice note and radio instead (§12.4).",
 };
 
 /* ------------------------------------------------------------------ §4.5.2 the USSD menu */

@@ -302,7 +302,7 @@ const HEADING_INSERTS: Record<string, React.ReactNode> = {
   ),
   "needs-sec-3-8": <SezPanel />,
   // The showcase makes the argument; the reach block puts the modelled numbers under it, including
-  // the one the showcase cannot show — that the largest addressable layer cannot carry Kiswahili.
+  // the one the showcase cannot show — that the largest addressable layer is reached off the internet.
   "news-sec-4-1": <ChannelReachBlock />,
   "news-sec-4-2": <MediaOwnershipBlock />,
   // One handset, the campaign on all seven channels, ending on the USSD dialog that reaches more
@@ -312,8 +312,8 @@ const HEADING_INSERTS: Record<string, React.ReactNode> = {
   // ---- Part II: his standing ----------------------------------------------------------------
   "record-sec-6-1": (
     <SectionPortrait id="gesture-explaining" kicker="Candidate profile">
-      Member for Mvita since 2013, and a member of the National Assembly&rsquo;s Budget and
-      Appropriations Committee.
+      Founder of Gulf African Bank, chairman of GulfCap, a Member of the East African
+      Legislative Assembly, and twice runner-up for governor of Mombasa.
     </SectionPortrait>
   ),
   "known-sec-6-2": <RecognitionDeficitOverlay />,

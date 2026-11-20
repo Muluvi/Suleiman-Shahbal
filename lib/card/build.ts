@@ -181,7 +181,7 @@ function ranked(p: Params): CardModel | null {
 function map(p: Params): CardModel | null {
   const layer = p.layer ?? "voters";
   if (layer === "zones" || layer === "pool") {
-    const zoneColor: Record<string, string> = { anchor: "#1e49ce", mwingi: "#b0451a", arid: "#09672e", none: "#dcd7cd" };
+    const zoneColor: Record<string, string> = { anchor: "#1e49ce", north: "#b0451a", west: "#09672e", none: "#dcd7cd" };
     const fills = Object.fromEntries(TOOL_WARDS.map((w) => [`ward.${w.id}`, layer === "pool" ? (w.pool ? C_EARTH : "#dcd7cd") : zoneColor[w.zone]]));
     const pool = resolveFigure({ id: "pool", label: "registered voters in the pool" });
     const share = resolveFigure({ id: "pool.share", label: "of the register" });
@@ -384,7 +384,7 @@ function carousel(p: Params): CardModel | null {
   const cons = [...TOOL_CONSTITUENCIES].sort((a, b) => b.voters - a.voters);
   const i = Math.max(1, Math.min(cons.length, Number(p.i) || 1));
   const card = report({ con: cons[i - 1].id });
-  return card ? { ...card, type: "carousel", page: `${i}/${cons.length}`, kicker: "The eight constituencies" } : null;
+  return card ? { ...card, type: "carousel", page: `${i}/${cons.length}`, kicker: "The six constituencies" } : null;
 }
 
 export async function buildCard(type: CardType, p: Params): Promise<CardModel | null> {

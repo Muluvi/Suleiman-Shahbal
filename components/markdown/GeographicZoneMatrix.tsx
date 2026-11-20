@@ -74,31 +74,31 @@ const GEOGRAPHIC_ZONES: GeographicZone[] = [
       "The incumbent's widest 2022 lead. Contested to hold that lead down, not to carry it: traders owed by the county, the public service paid late, and a candidate whose own roots are on the Island.",
   },
   {
-    id: "mwingi",
+    id: "north",
     name: "The North Mainland",
     subCounties: "Kisauni · Nyali",
     constituencyIds: ["kisauni", "nyali"],
-    population: reg("zone.mwingi.population"),
-    popShare: `${reg("zone.mwingi.share")}%`,
+    population: reg("zone.north.population"),
+    popShare: `${reg("zone.north.share")}%`,
     density: density(["kisauni", "nyali"]),
-    households: reg("zone.mwingi.households"),
-    nominationWeight: val("effort.p-1.mwingi"),
-    generalWeight: val("effort.p3.mwingi"),
+    households: reg("zone.north.households"),
+    nominationWeight: val("effort.p-1.north"),
+    generalWeight: val("effort.p3.north"),
     connectivityProfile: "Mixed: young and online in the estates, with WhatsApp and the stages carrying more than paid digital.",
     primaryStrategicImperative:
       "The largest block in the county, and each constituency decided by about a thousand votes in 2022. Water at the tap and jobs for the young lead here; the ward captains and the turnout operation concentrate here.",
   },
   {
-    id: "arid-belt",
+    id: "west",
     name: "The West Mainland",
     subCounties: "Changamwe · Jomvu",
     constituencyIds: ["changamwe", "jomvu"],
-    population: reg("zone.arid.population"),
-    popShare: `${reg("zone.arid.share")}%`,
+    population: reg("zone.west.population"),
+    popShare: `${reg("zone.west.share")}%`,
     density: density(["changamwe", "jomvu"]),
-    households: reg("zone.arid.households"),
-    nominationWeight: val("effort.p-1.arid"),
-    generalWeight: val("effort.p3.arid"),
+    households: reg("zone.west.households"),
+    nominationWeight: val("effort.p-1.west"),
+    generalWeight: val("effort.p3.west"),
     connectivityProfile: "The port's workforce: long shifts, drive-time radio and WhatsApp groups.",
     primaryStrategicImperative:
       "The port, the container depots and the Jomvu SEZ site. Changamwe was decided by under 2,000 votes in 2022, and turnout was lowest here: the SEZ is shown as proof, its jobs reported as a projection until they exist.",
@@ -118,7 +118,7 @@ const UNASSIGNED = CONSTITUENCIES.filter((c) => !ASSIGNED.includes(c.id));
 const fmt = (n: number) => n.toLocaleString("en-KE");
 
 export function GeographicZoneMatrix() {
-  const [selectedZoneId, setSelectedZoneId] = useState<string>("mwingi");
+  const [selectedZoneId, setSelectedZoneId] = useState<string>("north");
   const currentZone = GEOGRAPHIC_ZONES.find((z) => z.id === selectedZoneId) ?? GEOGRAPHIC_ZONES[0];
   const register = ZONE_REGISTERS[currentZone.id];
   const shareOfRegister = (register.voters / COUNTY_TOTAL_WARDS) * 100;

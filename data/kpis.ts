@@ -61,12 +61,12 @@ export function baselineStatus(b: Baseline): ClaimStatus {
 export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "code", [
   {
     code: "NW-01",
-    title: "Reach share in the deficit pool",
+    title: "Reach share in the close-contest belt",
     definition:
-      "Share of his total reach landing in Kisauni, West, Central and Changamwe, the four constituencies where he has never held office.",
+      "Share of his total reach landing in Kisauni, Nyali and Changamwe, the three constituencies decided by under 2,000 votes in 2022.",
     baseline: { kind: "unmeasured", note: "Not yet measured (Week 1 export)" },
-    target: "≥ 51.7%, the pool's share of the register",
-    targetValue: 51.7,
+    target: `≥ ${fmt("pool.share")}%, the pool's share of the register`,
+    targetValue: val("pool.share"),
     unit: "percent",
     method: "Meta Insights reach by city, mapped to sub-county",
     owner: "Campaign analyst",
@@ -76,7 +76,7 @@ export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "cod
     code: "NW-02",
     title: "Followers located in the north mainland",
     definition:
-      "Share of his followers whose location is in Kisauni, Central or West, the proxy for being known where he is not yet known.",
+      "Share of his followers whose location is in Kisauni or Nyali, the largest block in the county.",
     baseline: { kind: "unmeasured", note: "Not yet measured (Week 1 export)" },
     target: "A stated monthly gain on the Week 1 baseline",
     targetValue: null,
@@ -89,10 +89,10 @@ export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "cod
     code: "NW-03",
     title: "Consented contacts in the pool",
     definition:
-      "Share of the consented SMS/USSD list registered in the 21 wards of the deficit pool.",
+      "Share of the consented SMS/USSD list registered in the 17 wards of the close-contest belt.",
     baseline: { kind: "unmeasured", note: "Not yet measured (the list starts at Week 2)" },
-    target: "≥ 51.7%, the pool's share of the register",
-    targetValue: 51.7,
+    target: `≥ ${fmt("pool.share")}%, the pool's share of the register`,
+    targetValue: val("pool.share"),
     unit: "percent",
     method: "The team's dispatch and consent logs, on the platform",
     owner: "Campaign offline-layer operator",
@@ -102,10 +102,10 @@ export const NOMINATION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.nomination", "cod
     code: "NW-04",
     title: "Branch Exec Endorsement Rate",
     definition:
-      "Verified, signed support pledges from Sub-County The New Democrats Executive Branch Committees.",
+      "Verified, signed support pledges from The New Democrats' sub-county branch committees.",
     baseline: { kind: "awaiting", note: "Confirm w/ party (Week 1)" },
-    target: "8 / 8 Sub-County Branches",
-    targetValue: 8,
+    target: "6 / 6 Sub-County Branches",
+    targetValue: 6,
     unit: "count",
     method: "Formal written branch caucus endorsement resolutions",
     owner: "Political Affairs Director",
@@ -181,16 +181,15 @@ export const GENERAL_ELECTION_KPIS: Kpi[] = withTeamEdits<Kpi>("kpis.general-ele
 ]);
 
 /**
- * The recognition indicators (Measuring success, "Recognition where he is least known"): R-01 to
- * R-05. They sit beside the two scorecards, not inside them: the nomination scorecard holds four
+ * The reach indicators (Measuring success): R-01 to R-05. They sit beside the two scorecards, not inside them: the nomination scorecard holds four
  * (NOMINATION_KPIS), the general-election scorecard five (GENERAL_ELECTION_KPIS), and these five
- * measure recognition where Mr Shahbal is least known. Any sentence that counts them reads this list
+ * measure reach in the close-contest belt. Any sentence that counts them reads this list
  * (consolidation pass, Step 1: docs/consolidation-2026-11/DECISIONS.md D1.5).
  */
 export const RECOGNITION_INDICATORS = [
-  { code: "R-01", title: "Followers located in Kisauni, Central and West" },
+  { code: "R-01", title: "Followers located in Kisauni and Nyali" },
   { code: "R-02", title: "Share of total reach landing in the pool" },
-  { code: "R-03", title: "Shares per 1,000 reached, deficit wards only" },
-  { code: "R-04", title: "Consented contacts in the 21 wards of the pool, and their share of the list" },
+  { code: "R-03", title: "Shares per 1,000 reached, belt wards only" },
+  { code: "R-04", title: "Consented contacts in the 17 wards of the pool, and their share of the list" },
   { code: "R-05", title: "Kiswahili-first share of weekly output, and its engagement on reach" },
 ] as const;

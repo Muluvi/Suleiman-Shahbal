@@ -2,7 +2,7 @@
  * The 30 wards as tiles. Schematic, not to scale.
  *
  * The map is a tile map by choice: every ward the same size, because Mwakirunge (42.4 km²) and Magogoni (1.0 km²) differ
- * in area by more than forty times and a choropleth would let the empty north of Kisauni outshout
+ * in area by many times and a choropleth would let the open north of Kisauni outshout
  * the dense Island. Real ward polygons do exist (public/geo/mombasa-wards.topo.json); they are used
  * only where geography itself is the point, in CountyStatic.
  *
@@ -14,9 +14,9 @@
 import register from "../../data/ward-register.json" with { type: "json" };
 import { slugOf } from "../data/figures.ts";
 
-/** Internal zone ids keep the platform's names: anchor = the Island, mwingi = the north mainland,
- * arid = the west mainland, none = Likoni (rotating). */
-export type ZoneId = "anchor" | "mwingi" | "arid" | "none";
+/** Internal zone ids: anchor = the Island, north = the north mainland,
+ * west = the west mainland, none = Likoni (rotating). */
+export type ZoneId = "anchor" | "north" | "west" | "none";
 
 export interface WardTile {
   id: string;
@@ -31,10 +31,10 @@ export interface WardTile {
 
 /** Block origin (row, col) and width in tiles, per constituency. The grid is 6 columns by 8 rows. */
 const BLOCKS: Record<string, { row: number; col: number; width: number; zone: ZoneId }> = {
-  kisauni: { row: 0, col: 2, width: 4, zone: "mwingi" },
-  nyali: { row: 2, col: 3, width: 3, zone: "mwingi" },
-  jomvu: { row: 2, col: 0, width: 2, zone: "arid" },
-  changamwe: { row: 4, col: 0, width: 2, zone: "arid" },
+  kisauni: { row: 0, col: 2, width: 4, zone: "north" },
+  nyali: { row: 2, col: 3, width: 3, zone: "north" },
+  jomvu: { row: 2, col: 0, width: 2, zone: "west" },
+  changamwe: { row: 4, col: 0, width: 2, zone: "west" },
   mvita: { row: 4, col: 2, width: 3, zone: "anchor" },
   likoni: { row: 6, col: 2, width: 3, zone: "none" },
 };

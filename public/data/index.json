@@ -86,7 +86,7 @@
   {
     "id": "fig-2-8-record",
     "section": "6.1",
-    "title": "A builder's record: a bank in 2,008, two governor's races, and a KSh 12bn industrial zone",
+    "title": "A builder's record: a bank in 2008, two governor's races, and a KSh 12bn industrial zone",
     "question": "What has he actually done?",
     "takeaway": "His distinguishing proof is things built that voters can visit; the SEZ jobs figure is a projection until the jobs exist."
   },
@@ -389,14 +389,14 @@
     "section": "reference",
     "title": "Three statutes, and a signature count worked to its stricter reading",
     "question": "The statutory compliance architecture",
-    "takeaway": "The endorsement count was stated two ways, 500 per sub-county (4,000) or 500 from at least 5 of the 8 (500 in total). A paper short of the statutory count is rejected and a surplus is not, so the campaign works to 4,000; the statutory figure is confirmed with counsel before filing."
+    "takeaway": "The endorsement count can be read two ways, 500 per sub-county (3,000) or 500 from a majority of the six. A paper short of the statutory count is rejected and a surplus is not, so the campaign works to 3,000; the statutory figure is confirmed with counsel before filing."
   },
   {
     "id": "iebc-clearance",
     "section": "reference",
-    "title": "Seven clearances at five different stages, and one the campaign will not yet claim",
+    "title": "Seven clearances, none claimed until the paper is in hand",
     "question": "This plan's IEBC statutory nomination clearance checklist — dimension, statutory standard, current status",
-    "takeaway": "The status column is the point: two Verified, one Active, one Scheduled, one Pending the filing window, one Operationalized — and one that reads “[Requires legal confirmation]”, the document declining to claim a deadline it has not confirmed."
+    "takeaway": "The status column is the point: nothing is marked verified until the certificate is in hand. Four are to be confirmed in Week 1, one is scheduled, one is pending the filing window, and one reads “[Requires legal confirmation]”: the document declining to claim what it has not confirmed."
   },
   {
     "id": "liability-matrix",
@@ -457,9 +457,9 @@
   {
     "id": "format-specs",
     "section": "reference",
-    "title": "Five channels, and only one of them may carry Kiswahili text",
+    "title": "Five channels, each with its own format and language rule",
     "question": "The production format specifications — channel, technical specification, language and creative treatment",
-    "takeaway": "The SMS row states the constraint twice over: “Kiswahili or English only (CA rule)”, and GSM-7 encoding with no accented unicode — which rules out the ĩ and ũ Kiswahili orthography needs. Kiswahili travels by radio, voice notes and USSD instead."
+    "takeaway": "The SMS row states the rule: “Kiswahili or English only (CA rule)”, single-part GSM-7 text. Plain Kiswahili fits GSM-7; Sheng and the Mijikenda languages travel by voice note and radio instead."
   },
   {
     "id": "weekly-cycle",
@@ -549,8 +549,8 @@
     "id": "cultural-registers",
     "section": "reference",
     "title": "Four terms where the literal translation loses the argument",
-    "question": "The proverbial framing protocol — the term, the translation that fails, and the approved idiom",
-    "takeaway": "Every Kiswahili string is transcribed with its diacritics exactly as this plan prints them. ĩ and ũ are distinct letters rather than decorated vowels, and this plan's own rules of engagement forbid machine translation of Kiswahili for this reason."
+    "question": "The framing protocol — the term, the translation that fails, and the working idiom",
+    "takeaway": "The working framings are drafts in plain coastal Kiswahili; the rules of engagement forbid machine translation, and the native-speaker reviewer signs off every line before it publishes."
   },
   {
     "id": "qc-gateway",

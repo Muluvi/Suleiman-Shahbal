@@ -10,7 +10,7 @@ Mr Shahbal's record is a businessman's: a bank founded, a group built, and a Spe
 Hon. Suleiman Shahbal is a Member of the East African Legislative Assembly, where he chairs the Communication, Trade and Investment Committee, and the founder and chairman of the GulfCap Group (Tier 1 and Tier 2).
 ```
 
-Hon. Suleiman Shahbal, born in Mombasa in 1960, is a Member of the East African Legislative Assembly (EALA), where he chairs the **Communication, Trade and Investment Committee** (Tier 2, Citizen Digital, February 2023; the EALA committee record is the Tier 1 document to cite). He is the founder and chairman of the **GulfCap Group**, with interests in finance, real estate, energy and hospitality, and founded **Gulf African Bank in 2,008**, Kenya's first Islamic bank (Tier 2). In 2018 he was appointed to a national government role; the gazette notice is to be cited before it is used.
+Hon. Suleiman Shahbal, born in Mombasa in 1960, is a Member of the East African Legislative Assembly (EALA), where he chairs the **Communication, Trade and Investment Committee** (Tier 2, Citizen Digital, February 2023; the EALA committee record is the Tier 1 document to cite). He is the founder and chairman of the **GulfCap Group**, with interests in finance, real estate, energy and hospitality, and founded **Gulf African Bank in 2008**, Kenya's first Islamic bank (Tier 2). In 2018 he was appointed to a national government role; the gazette notice is to be cited before it is used.
 
 He has stood for governor of Mombasa twice: in **2013** on the Wiper ticket (94,905 votes, second) and in **2017** on the Jubilee ticket (69,515 votes, second) (Tier 1, as recited by the election courts). In 2022 he sought the ODM ticket and stood down in favour of Abdulswamad Nassir. In September 2026 he left ODM and announced that he would contest in 2027 on a new vehicle, **The New Democrats** (Tier 2, Nation; Section 6.3).
 
@@ -23,7 +23,7 @@ id: fig-2-8-record
 | Asset | The evidence | How we would use it |
 |---|---|---|
 | **The Jomvu SEZ** | A KSh 12 billion agreement between GulfCap, DP World and the county for a 535-acre zone in Jomvu, signed at State House on 8 September 2026; 7,972 direct jobs projected (Tier 2) | A public jobs tracker: the projection beside the jobs actually created, updated every quarter (Section 15.1.1) |
-| **A bank built from nothing** | Founded Gulf African Bank in 2,008, Kenya's first Islamic bank (Tier 2) | Proof he can build an institution that lasts, and a link to the Muslim community on substance rather than identity |
+| **A bank built from nothing** | Founded Gulf African Bank in 2008, Kenya's first Islamic bank (Tier 2) | Proof he can build an institution that lasts, and a link to the Muslim community on substance rather than identity |
 | Regional standing | EALA member; chair, Communication, Trade and Investment Committee (Tier 2; the EALA record is to be cited) | Trade and investment credibility with traders, the port and the diaspora |
 | Persistence in Mombasa politics | Second in 2013 with 94,905 votes and in 2017 with 69,515 (Tier 1); stood down in 2022 (Tier 2) | A candidate who has kept coming back to Mombasa, set against the charge that he is only a businessman |
 | Recognition | Pwani Golden Awards, Entrepreneur of the Year 2024; KNCCI Distinguished Honorary Award 2023 (Tier 3, as listed publicly; to be confirmed) | Secondary only |

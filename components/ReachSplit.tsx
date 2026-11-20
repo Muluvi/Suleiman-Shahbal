@@ -16,7 +16,7 @@ import { USSD_HEADER, USSD_MENU as USSD_SPEC, menuLine } from "../data/ussd-spec
 /**
  * M3 — the county's central division, and the tool that addresses the larger side of it.
  *
- * "73.8% of your voters cannot see any of this" is the strongest argument in the document for
+ * "About half of your voters are not online" is the strongest argument in the document for
  * hiring a team that plans for both tiers, and it was a sentence in §3.6.
  *
  * The split is the site's ONE masked reveal: a clip-path wipe, because a wipe divides. Spending

@@ -6,7 +6,7 @@ import { useReducedMotionSafe } from "../../hooks/use-reduced-motion-safe";
 
 /**
  * One number inside a printed string: "KSh 11.64bn" is prefix "KSh ", number "11.64", suffix // verify-figures-ignore
- * "bn". Anything with two numbers in it ("200,000–225,000", "1 of 3") is not counted at all:
+ * "bn". Anything with two numbers in it ("120,000–221,177", "1 of 3") is not counted at all:
  * counting one of them would put a false pair on screen for a moment.
  */
 const SINGLE = /^([^\d]*?)(\d[\d,]*(?:\.\d+)?)([^\d]*)$/;

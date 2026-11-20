@@ -22,5 +22,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `Ward register integrity check passed: 40 wards across 8 constituencies sum to ${register.countyTotalWards} (${register.countyTotalWithPrisons} including ${register.prisonVoters} prison voters).`
+  `Ward register integrity check passed: 30 wards across 6 constituencies sum to ${register.countyTotalWards} (${register.countyTotalWithPrisons} including ${register.prisonVoters} prison voters).`
 );

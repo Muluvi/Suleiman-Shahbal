@@ -255,7 +255,7 @@ export function MobileTOCModal({
                 <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted" aria-hidden="true" />
                 <input
                   type="text"
-                  placeholder="Search sections (e.g., Nomination, Radio, 40 Wards, SMS)..."
+                  placeholder="Search sections (e.g., Nomination, Radio, 30 Wards, SMS)..."
                   aria-label="Search sections by title or part"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

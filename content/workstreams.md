@@ -37,7 +37,7 @@ kind: checklist
 title: "Digital infrastructure, brand and civic content"
 items:
   - label: "Web management and digital architecture"
-    body: "Development and deployment of a high-performance campaign web portal hosting the manifesto, tracking media appearances, and capturing volunteer data. Lightweight, rapid-loading frameworks so the site is usable on 3G and on feature-phone browsers — non-negotiable in a county where {{ict.offline}}% are not online (CA/KNBS 2023/24). **WCAG 2.1 AA compliance from build, not retrofitted** (Section 15.1.4). Search engine optimisation for \"Mombasa Governor 2027\", \"Mombasa development\" and related terms. A \"Meet Mr Shahbal\" page with biography, EALA record, builder's records and vision for Mombasa. **Audit before build:** an existing Mombasa Central NG-CDF web presence is already live. Phase 0 audits and integrates it rather than duplicating it."
+    body: "Development and deployment of a high-performance campaign web portal hosting the manifesto, tracking media appearances, and capturing volunteer data. Lightweight, rapid-loading frameworks so the site is usable on 3G and on feature-phone browsers — non-negotiable in a county where {{ict.offline}}% are not online (CA/KNBS 2023/24). **WCAG 2.1 AA compliance from build, not retrofitted** (Section 15.1.4). Search engine optimisation for \"Mombasa Governor 2027\", \"Mombasa development\" and related terms. A \"Meet Mr Shahbal\" page with biography, EALA record, builder's records and vision for Mombasa. **Audit before build:** any existing web presence of his is audited in Phase 0 and integrated rather than duplicated."
   - label: "Brand management"
     body: "Core messaging matrix ensuring consistency across broadcast, print and digital. Dynamic digital press kits for media houses and influencers — approved biographies, high-resolution assets, policy briefs (Section 15.2.2). Daily management of Facebook, X, Instagram, TikTok, YouTube and WhatsApp stays with your team, which publishes and holds the credentials (Section 13.2); the team sets the standard in its weekly brief. Community management: your team responds to comments, DMs and mentions within **2 hours** during peak periods."
   - label: "Civic content and visual data"
@@ -402,7 +402,7 @@ Paid media on the platforms that reach the connected minority, and earned media 
 **Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else.
 ```
 
-**Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else. Placement is a relationship business the campaign already has. The team prepares the briefing notes, the debate preparation and the evidence pack behind each pitch, from the evidence on Firefly's platform. The radio plan runs through Musyi, County FM and Wikwatyo, on the ownership map in Section 4.2.
+**Owner: your team and the campaign, to the team's brief.** Paid and owned media reach the connected minority; earned media, especially radio, reaches everyone else. Placement is a relationship business the campaign already has. The team prepares the briefing notes, the debate preparation and the evidence pack behind each pitch, from the evidence on Firefly's platform. The radio plan runs through Pwani FM, Radio Citizen and Radio Maisha, with programming partnerships on Radio Rahma, Radio Salaam and Baraka FM, on the ownership map in Section 4.2.
 
 #### The journalist relationship programme
 
@@ -523,10 +523,10 @@ Four workstreams that reach voters off the internet: ground-digital integration,
 ### 15.3.1 Workstream 7 — Ground-digital integration
 
 ```lead
-**Owner: the campaign.** Field intelligence captured by the 40 Ward Coordinators directly dictates the daily digital and radio advertising content; the team reads what comes back in the platform's field log, which Firefly built as the reporting template.
+**Owner: the campaign.** Field intelligence captured by the 30 Ward Coordinators directly dictates the daily digital and radio advertising content; the team reads what comes back in the platform's field log, which Firefly built as the reporting template.
 ```
 
-**Owner: the campaign.** The 40 ward coordinators are the campaign's people. A campaign that runs field organising and digital messaging separately will fail in a county where {{ict.offline}}% of residents are offline (CA/KNBS 2023/24), so the two run as one loop. Field intelligence captured by the 40 Ward Coordinators directly dictates the daily digital and radio advertising content; the team reads what comes back in the platform's field log, which Firefly built as the reporting template. In the other direction, field captains turn the digital and radio messages into talking points, flyers and audio notes, carried through local transport and trade networks.
+**Owner: the campaign.** The 40 ward coordinators are the campaign's people. A campaign that runs field organising and digital messaging separately will fail in a county where {{ict.offline}}% of residents are offline (CA/KNBS 2023/24), so the two run as one loop. Field intelligence captured by the 30 Ward Coordinators directly dictates the daily digital and radio advertising content; the team reads what comes back in the platform's field log, which Firefly built as the reporting template. In the other direction, field captains turn the digital and radio messages into talking points, flyers and audio notes, carried through local transport and trade networks.
 
 ```figure
 id: field-loop
@@ -985,7 +985,7 @@ To track offline-to-digital and physical engagement, four mechanisms bridge the 
 |---|---|---|---|
 | Share of voice | % of Mombasa gubernatorial mentions about Mr Shahbal | 30–40% for leader | ≥ 50% |
 | Net sentiment | (Positive − negative) / total | +20 to +30 | ≥ +40 |
-| **Reach share in the deficit pool** | Share of his reach landing in Kisauni, Nyali and Changamwe (R-02, Section 18.3) | — | **≥ {{pool.share}}%, the pool's share of the register** |
+| **Reach share in the close-contest belt** | Share of his reach landing in Kisauni, Nyali and Changamwe (R-02, Section 18.3) | — | **≥ {{pool.share}}%, the pool's share of the register** |
 | Voter registration lift | Increase in target wards from campaign drives | 5–10% | ≥ 10% |
 | Digital-to-offline conversion | % of engagers attending or volunteering | 5–15% | ≥ 10% |
 | GOTV contact rate | % of target voters reached | 60–80% | ≥ 70% |

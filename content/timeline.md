@@ -39,7 +39,7 @@ items:
     body: "- **The account-security baseline, specified and applied by your team**: hardware-key\n  2FA for the candidate and all admins in week one. Firefly holds none of the accounts;\n  the credentials never leave the campaign\n- The capability map and the written standard (Section 17.5)\n- Commission the Section 19.2 compliance review — **start the clock early, it\n  is the long-lead item**\n- Confirm the Kiswahili reviewer"
   - when: "Weeks 2–6"
     label: "the first directed cycles"
-    body: "- The weekly brief issued from Week 2; your team's daily multilingual output weighted\n  {{effort.p-1.mwingi}}% north mainland / {{effort.p-1.arid}}% west mainland / {{effort.p-1.anchor}}% Island / {{effort.p-1.rotating}}% Likoni and testing\n- **Immediate SMS opt-in drive** — the consented list is the phase's most\n  durable asset and compounds into every later phase\n- Two flagship videos: the vision piece, and one built entirely around the\n  verification credential\n- Facebook Live town halls weekly from Week 3\n- Kiswahili voice-note series from Mr Shahbal — one per week, distributed by\n  WhatsApp and ward networks\n- Earned media push: Tier C expert placements on county fiscal management\n  (Section 15.2.2), plus priority-station radio\n- Publish the Digital Ethics and Data Charter — a news moment in its own right during a nomination contest"
+    body: "- The weekly brief issued from Week 2; your team's daily multilingual output weighted\n  {{effort.p-1.north}}% north mainland / {{effort.p-1.west}}% west mainland / {{effort.p-1.anchor}}% Island / {{effort.p-1.rotating}}% Likoni and testing\n- **Immediate SMS opt-in drive** — the consented list is the phase's most\n  durable asset and compounds into every later phase\n- Two flagship videos: the vision piece, and one built entirely around the\n  verification credential\n- Facebook Live town halls weekly from Week 3\n- Kiswahili voice-note series from Mr Shahbal — one per week, distributed by\n  WhatsApp and ward networks\n- Earned media push: Tier C expert placements on county fiscal management\n  (Section 15.2.2), plus priority-station radio\n- Publish the Digital Ethics and Data Charter — a news moment in its own right during a nomination contest"
 ```
 
 The directed cycles that start in Weeks 2–4 run on to Week 6; the consolidation that follows is part of Phase 0 (Section 14.2).
@@ -77,7 +77,7 @@ items:
   - when: "Weeks 6–8"
     label: "consolidation: coalition roundtables with professional associations; ward champion recruitment begins in the 17 wards of the close-contest belt"
   - when: "Weeks 7–8"
-    label: "the campaign recruits ward digital champions to reach **all 30 wards** (campaign-owned, Section 13.3); the strategy core delivers the mandatory data-handling training, logged in the workspace (Firefly hosts the platform it is logged on); establish WhatsApp reporting structures. Recruitment priority: Mwingi Central, Mutomo, Mombasa Central"
+    label: "the campaign recruits ward digital champions to reach **all 30 wards** (campaign-owned, Section 13.3); the strategy core delivers the mandatory data-handling training, logged in the workspace (Firefly hosts the platform it is logged on); establish WhatsApp reporting structures. Recruitment priority: Kisauni, Nyali and Changamwe"
   - when: "By Week 10"
     label: "Service-delivery tracker built and tested (Section 15.1.1)"
 ```
@@ -90,7 +90,7 @@ items:
   - label: "Baseline metrics recorded across reach, engagement and sentiment"
   - label: "Website live, WCAG 2.1 AA audited, with volunteer forms"
   - label: "USSD code live across all networks"
-  - label: "40 ward digital champions onboarded and data-trained"
+  - label: "30 ward digital champions onboarded and data-trained"
   - label: "First {{target.content.first}} pieces of content approved and scheduled"
   - label: "**Section 19.2 compliance opinion received**"
 ```

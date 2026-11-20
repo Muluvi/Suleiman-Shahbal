@@ -27,7 +27,8 @@ export type Unit =
   | "ksh"
   | "km2"
   | "per-km2"
-  | "persons";
+  | "persons"
+  | "year";
 
 /** A second published value for the same quantity, kept because the sources disagree. */
 export interface AltValue {

@@ -1,6 +1,6 @@
 # Comprehensive Campaign Strategy & Digital Architecture: Master Design
 
-This document details the master strategic architecture for the gubernatorial campaign of Hon. Dr. Benson Makali Mulu, mapping all 20+ sections and subsections onto the six active navigation groups of the portal. Every title has been rigorously tested to exclude vague industry jargon and ensure professional, objective, and plain English descriptions.
+This document details the master strategic architecture for the gubernatorial campaign of Hon. Dr. Benson Suleiman Shahbal, mapping all 20+ sections and subsections onto the six active navigation groups of the portal. Every title has been rigorously tested to exclude vague industry jargon and ensure professional, objective, and plain English descriptions.
 
 ---
 
@@ -9,13 +9,13 @@ This document details the master strategic architecture for the gubernatorial ca
 ### Section 1: Campaign Executive Summary
 *   **Proposed Title**: Digital Campaign Management and Devolved Coordination
 *   **Argument**: The governorship is secured by coordinating decentralized local campaign units and executing micro-targeted digital messaging, rather than relying on standard, centralized social media broadcasts.
-*   **Evidence**: Historical county-level communication budgets, rural vs. urban internet access statistics, and the regional split of Kitui County.
+*   **Evidence**: Historical county-level communication budgets, rural vs. urban internet access statistics, and the regional split of Mombasa County.
 *   **Cross-References Satisfied**: Resolves references in Section 1.1, Section 1.2, and Section 1.3.
 
 #### 1.1 Primary Contest Timeline
 *   **Proposed Title**: Focus on the Party Nomination Selection Process
 *   **Argument**: The primary tactical priority is securing the party nomination by the end of 2026, as the general election cannot be contested without first winning this intra-party selection.
-*   **Evidence**: Internal Wiper Party voter polling, nomination registration lists, and historical party primary turnout figures.
+*   **Evidence**: Internal The New Democrats Party voter polling, nomination registration lists, and historical party primary turnout figures.
 *   **Cross-References Satisfied**: None.
 
 #### 1.2 Strategy Deliverables
@@ -41,7 +41,7 @@ This document details the master strategic architecture for the gubernatorial ca
 ### Section 1A: The Party Nomination Contest
 *   **Proposed Title**: Nomination Selection Process and Voter Delegate Targets
 *   **Argument**: Securing the party nomination requires a targeted outreach program focusing on registered party delegates and primary voters in high-density strongholds.
-*   **Evidence**: Wiper Party delegate lists (2022-2026) and regional primary turnout data.
+*   **Evidence**: The New Democrats Party delegate lists (2022-2026) and regional primary turnout data.
 *   **Cross-References Satisfied**: Satisfies references in Section 1.1 and Section 20.
 
 ---
@@ -51,7 +51,7 @@ This document details the master strategic architecture for the gubernatorial ca
 #### 2.1 Candidate Profile
 *   **Proposed Title**: Candidate Qualifications, Governance Record, and Monitoring Experience
 *   **Argument**: The candidate's past performance as a Member of Parliament and Ministry of Finance official establishes a credible profile of fiscal discipline and structural accountability.
-*   **Evidence**: Ministry of Finance performance reviews, National Government Constituencies Development Fund (NG-CDF) audit reports certifying Kitui Central as the best-evaluated constituency in the Eastern region (FY2014/15).
+*   **Evidence**: Ministry of Finance performance reviews, National Government Constituencies Development Fund (NG-CDF) audit reports certifying Mvita as the best-evaluated constituency in the Eastern region (FY2014/15).
 *   **Cross-References Satisfied**: None.
 
 #### 2.2 The Competitive Field
@@ -62,7 +62,7 @@ This document details the master strategic architecture for the gubernatorial ca
 
 #### 2.3 The 2022 Baseline
 *   **Proposed Title**: Electoral History and Win Thresholds for the 2027 Cycle
-*   **Argument**: Winning the Kitui governorship requires securing an absolute minimum of 200,000 verified votes, which serves as the quantitative target for all mobilization plans.
+*   **Argument**: Winning the Mombasa governorship requires securing an absolute minimum of 200,000 verified votes, which serves as the quantitative target for all mobilization plans.
 *   **Evidence**: Independent Electoral and Boundaries Commission (IEBC) certified gubernatorial results from the 2022 general election.
 *   **Cross-References Satisfied**: Satisfies references in Section 1.3, Section 3, and Section 20.
 
@@ -72,9 +72,9 @@ This document details the master strategic architecture for the gubernatorial ca
 *   **Evidence**: Fourth Schedule of the Constitution of Kenya (2010) and County Governments Act (2012).
 *   **Cross-References Satisfied**: None.
 
-#### 2.5 Kitui's Demographic, Economic, and Digital Landscape
+#### 2.5 Mombasa's Demographic, Economic, and Digital Landscape
 *   **Proposed Title**: Local Demographics, Income Levels, and Phone Access
-*   **Argument**: Campaign communication must prioritize offline and low-bandwidth channels because 95% of Kitui's population is rural and only 42.9% own mobile devices.
+*   **Argument**: Campaign communication must prioritize offline and low-bandwidth channels because 95% of Mombasa's population is rural and only 42.9% own mobile devices.
 *   **Evidence**: Kenya National Bureau of Statistics (KNBS) 2019 Census, Communications Authority (CA) mobile penetration statistics, and NDMA county economic profiles.
 *   **Cross-References Satisfied**: Satisfies references in Section 1.3 and Section 9B.
 
@@ -87,13 +87,13 @@ This document details the master strategic architecture for the gubernatorial ca
 #### 2.7 County Fiscal Record and Audit Queries
 *   **Proposed Title**: Financial Performance Audits and Pending County Debt
 *   **Argument**: Publicizing the current administration's financial audit queries and multi-billion shilling pending bills establishes a clear, evidence-based case for transition.
-*   **Evidence**: Office of the Auditor-General (OAG) annual reports for Kitui County Government (FY2020/21 through FY2023/24).
+*   **Evidence**: Office of the Auditor-General (OAG) annual reports for Mombasa County Government (FY2020/21 through FY2023/24).
 *   **Cross-References Satisfied**: None.
 
 #### 2.8 Drought, Food Security, and Climate Volatility
 *   **Proposed Title**: Climate Volatility, Food Security, and Rural Economic Risk
 *   **Argument**: Environmental pressures require a campaign narrative centered on drought-resilient agriculture, water infrastructure devises, and emergency relief monitoring.
-*   **Evidence**: National Drought Management Authority (NDMA) Kitui 2025/2026 bulletins, IPC food security classification data, and regional rainfall patterns.
+*   **Evidence**: National Drought Management Authority (NDMA) Mombasa 2025/2026 bulletins, IPC food security classification data, and regional rainfall patterns.
 *   **Cross-References Satisfied**: None.
 
 #### 2.9 The Mui Basin Coal Question
@@ -132,8 +132,8 @@ This document details the master strategic architecture for the gubernatorial ca
 
 #### 5.1 Devolved Funding and Devolution
 *   **Proposed Title**: Devolution Stance and Fiscal Audit Accountability
-*   **Argument**: Devolved funding must prioritize local ward-level development projects over high-overhead administrative offices in Kitui Town.
-*   **Evidence**: Kitui County budget allocation sheets, administrative overhead reports, and ward-level spending data.
+*   **Argument**: Devolved funding must prioritize local ward-level development projects over high-overhead administrative offices in Mombasa Town.
+*   **Evidence**: Mombasa County budget allocation sheets, administrative overhead reports, and ward-level spending data.
 *   **Cross-References Satisfied**: None.
 
 #### 5.2 Devolved Consultation and Participation
@@ -167,19 +167,19 @@ This document details the master strategic architecture for the gubernatorial ca
 ### Section 7: Geographic & Regional Dynamics
 
 #### 7.1 The Urban & Central Anchor
-*   **Proposed Title**: High-Density Areas: Kitui Central and Kitui West Wards
+*   **Proposed Title**: High-Density Areas: Mvita and Jomvu Wards
 *   **Argument**: Securing the high-density urban wards requires a policy narrative focused on small-business trading licenses, town infrastructure, and youth vocational training.
 *   **Evidence**: Ward-level registration numbers, urban household income surveys, and municipal budget drafts.
 *   **Cross-References Satisfied**: None.
 
 #### 7.2 The Northern Block
-*   **Proposed Title**: Regional Dynamics of the Northern Sub-Counties (Mwingi Region)
+*   **Proposed Title**: Regional Dynamics of the Northern Sub-Counties (the north mainland Region)
 *   **Argument**: Campaigning in the Northern sub-counties requires addressing historical resource allocation complaints and proposing dedicated infrastructural investment.
-*   **Evidence**: Sub-county allocation formulas, historical election margins in Mwingi North, Central, and West, and rural infrastructure audits.
+*   **Evidence**: Sub-county allocation formulas, historical election margins in Kisauni, Central, and West, and rural infrastructure audits.
 *   **Cross-References Satisfied**: None.
 
 #### 7.3 The Arid & Resource Belt
-*   **Proposed Title**: Resource Allocations in the Arid Lowlands (Kitui South and East)
+*   **Proposed Title**: Resource Allocations in the Arid Lowlands (Changamwe and East)
 *   **Argument**: Low-density agrarian and pastoralist wards require a messaging focus on water point infrastructure, drought relief oversight, and protection of natural resource holdings.
 *   **Evidence**: Soil moisture indexes, water point maps, local land registries, and household water usage data.
 *   **Cross-References Satisfied**: None.
@@ -430,13 +430,13 @@ This document details the master strategic architecture for the gubernatorial ca
 
 #### 9B.1 Strategic Value of the Offline Majority
 *   **Proposed Title**: Political Importance of Rural and Low-Connectivity Voter Segments
-*   **Argument**: Over 90% of the active voter base in Kitui lives outside major urban centers, making low-connectivity communication essential to win.
+*   **Argument**: Over 90% of the active voter base in Mombasa lives outside major urban centers, making low-connectivity communication essential to win.
 *   **Evidence**: IEBC sub-county voter registers and rural-urban population ratios.
 *   **Cross-References Satisfied**: None.
 
 #### 9B.2 Direct SMS Notification Protocols
 *   **Proposed Title**: Implementation Standards for Direct SMS Outreach
-*   **Argument**: Bulk SMS messaging must be personalized, translated into local languages (Kamba/Kiswahili), and targeted to specific wards to ensure trust.
+*   **Argument**: Bulk SMS messaging must be personalized, translated into local languages (Coast/Kiswahili), and targeted to specific wards to ensure trust.
 *   **Evidence**: SMS response rates and open-rate metrics across different formatting tests.
 *   **Cross-References Satisfied**: None.
 
@@ -669,7 +669,7 @@ This document details the master strategic architecture for the gubernatorial ca
 *   **Cross-References Satisfied**: None.
 
 #### 15.5 Current Competitor Strategic Positions
-*   **Proposed Title**: Strategic Assessment of Major Candidates in Kitui
+*   **Proposed Title**: Strategic Assessment of Major Candidates in Mombasa
 *   **Argument**: Customizing regional campaign messages requires a continuous, granular assessment of competitor policy positions and voter bases.
 *   **Evidence**: Direct competitors' manifestos, policy announcements, and public polling results.
 *   **Cross-References Satisfied**: None.
@@ -749,7 +749,7 @@ This document details the master strategic architecture for the gubernatorial ca
 ### Section 17: Digital Media Platforms and Messaging Deliverables
 *   **Proposed Title**: Social Media Outreach and Platform-Specific Content Rules
 *   **Argument**: Paid and organic social media content must be tailored to the distinct user demographics and formats of major regional networks.
-*   **Evidence**: Facebook, WhatsApp, TikTok, X, and Instagram audience demographics for Kitui County (2025/2026).
+*   **Evidence**: Facebook, WhatsApp, TikTok, X, and Instagram audience demographics for Mombasa County (2025/2026).
 *   **Cross-References Satisfied**: Satisfies references in Section 1.3 and Section 18.
 
 ---
@@ -802,7 +802,7 @@ This document details the master strategic architecture for the gubernatorial ca
 
 ### Section 18: Multilingual Communication and Local Languages
 *   **Proposed Title**: Multilingual Content and Local Language Outreach Strategy
-*   **Argument**: Reaching agricultural and rural voter segments requires translating all policy sheets, SMS broadcasts, and pre-recorded audio into local Kikamba and Kiswahili.
+*   **Argument**: Reaching agricultural and rural voter segments requires translating all policy sheets, SMS broadcasts, and pre-recorded audio into local Kiswahili.
 *   **Evidence**: Sub-county literacy rates, regional language surveys, and local comprehension data.
 *   **Cross-References Satisfied**: Satisfies references in Section 2.5 and Section 17.
 
@@ -844,7 +844,7 @@ This document details the master strategic architecture for the gubernatorial ca
 
 ---
 
-### Section 19A: The Kitui Focus Group and Messaging Lab
+### Section 19A: The Mombasa Focus Group and Messaging Lab
 
 #### 19A.1 Testing Messaging Performance
 *   **Proposed Title**: Limitations of Static Analytics in Regional Voter Messaging
@@ -934,7 +934,7 @@ This document details the master strategic architecture for the gubernatorial ca
 
 #### Phase -1: Nomination Sprint (August–September 2026)
 *   **Proposed Title**: Phase -1: Primary Nomination Mobilization Strategy
-*   **Argument**: The immediate strategic focus must be securing the Wiper party nomination by identifying and registering supporter delegates in our core strongholds.
+*   **Argument**: The immediate strategic focus must be securing the The New Democrats party nomination by identifying and registering supporter delegates in our core strongholds.
 *   **Evidence**: Party register databases and regional delegate listings.
 *   **Cross-References Satisfied**: None.
 
@@ -1014,7 +1014,7 @@ This document details the master strategic architecture for the gubernatorial ca
 
 ### Section 23: Strategic Commitments and Call to Action
 *   **Proposed Title**: Summary of Campaign Objectives and Commitments
-*   **Argument**: This proposal outlines a practical, secure, and data-driven strategy to secure the Kitui governorship by executing targeted voter outreach and maintaining strict compliance.
+*   **Argument**: This proposal outlines a practical, secure, and data-driven strategy to secure the Mombasa governorship by executing targeted voter outreach and maintaining strict compliance.
 *   **Evidence**: Absolute win threshold of 200,000 votes, the gazetted 2026/2027 electoral calendar, and historical phase mobilization curves.
 *   **Cross-References Satisfied**: None.
 

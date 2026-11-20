@@ -45,22 +45,22 @@ The indicators are read on a fixed rhythm, and each reading has a consequence:
 ## 18.3 Recognition where he is least known
 
 ```lead
-**R-02 is the indicator this engagement lives or dies on.** It is the only one fully inside the direction layer's control, it moves weekly, and it is the direct test of the recognition thesis in Section 7.1.
+**R-02 is the indicator this engagement lives or dies on.** It is the only one fully inside the direction layer's control, it moves weekly, and it is the direct test of the turnout thesis in Section 7.1.
 ```
 
 <!-- keep -->
 **Followers are not the target. Being present in Kisauni, Nyali and Changamwe is.**
 
-Section 18.4 sets out why vanity metrics are left out. These five recognition indicators, R-01 to R-05, replace them; they sit beside the two scorecards above, the four nomination indicators and the five general-election ones. Every
+Section 18.4 sets out why vanity metrics are left out. These five reach indicators, R-01 to R-05, replace them; they sit beside the two scorecards above, the four nomination indicators and the five general-election ones. Every
 one is measured where Mr Shahbal is least known, and every one is read from his own channels or from
 the team's dispatch log on Firefly's platform.
 
 ```visual
-{"kind":"cards","preset":"indicator","items":[{"title":"Followers located in Kisauni, Nyali and Changamwe","chips":["R-01"],"head":{"label":"Target","text":"A stated monthly gain on the Week 1 baseline"},"fields":[{"label":"Method","text":"Meta follower city breakdown mapped to sub-county, monthly (NW-02 above)"},{"label":"Baseline","text":"Set in Week 1"}]},{"title":"Share of total reach landing in the 353,090-voter pool","chips":["R-02"],"head":{"label":"Target","text":"≥ 55.0%, the pool's own share of the register"},"fields":[{"label":"Method","text":"Meta city breakdown mapped to sub-county, weekly"},{"label":"Baseline","text":"Set in Week 1"}]},{"title":"Shares per 1,000 reached, deficit wards only","chips":["R-03"],"head":{"label":"Target","text":"Set against the measured Week 1 figure, as a stated point gain"},"fields":[{"label":"Method","text":"Post-level export, weekly"},{"label":"Baseline","text":"Set in Week 1"}]},{"title":"Consented contacts in the 21 wards of the pool, and their share of the list","chips":["R-04"],"head":{"label":"Target","text":"Deficit-ward share of the list ≥ deficit-ward share of the register"},"fields":[{"label":"Method","text":"The team's dispatch log on Firefly's platform"},{"label":"Baseline","text":"0"}]},{"title":"Kiswahili-first share of weekly output, and its engagement on reach","chips":["R-05"],"head":{"label":"Target","text":"≥ 5 of 7 weekly posts Kiswahili-first (Section 12.6)"},"fields":[{"label":"Method","text":"Post coding, weekly (Section 18.5)"},{"label":"Baseline","text":"Set in Week 1"}]}]}
+{"kind":"cards","preset":"indicator","items":[{"title":"Followers located in Kisauni, Nyali and Changamwe","chips":["R-01"],"head":{"label":"Target","text":"A stated monthly gain on the Week 1 baseline"},"fields":[{"label":"Method","text":"Meta follower city breakdown mapped to sub-county, monthly (NW-02 above)"},{"label":"Baseline","text":"Set in Week 1"}]},{"title":"Share of total reach landing in the 353,090-voter pool","chips":["R-02"],"head":{"label":"Target","text":"≥ 55.0%, the pool's own share of the register"},"fields":[{"label":"Method","text":"Meta city breakdown mapped to sub-county, weekly"},{"label":"Baseline","text":"Set in Week 1"}]},{"title":"Shares per 1,000 reached, deficit wards only","chips":["R-03"],"head":{"label":"Target","text":"Set against the measured Week 1 figure, as a stated point gain"},"fields":[{"label":"Method","text":"Post-level export, weekly"},{"label":"Baseline","text":"Set in Week 1"}]},{"title":"Consented contacts in the 17 wards of the pool, and their share of the list","chips":["R-04"],"head":{"label":"Target","text":"Deficit-ward share of the list ≥ deficit-ward share of the register"},"fields":[{"label":"Method","text":"The team's dispatch log on Firefly's platform"},{"label":"Baseline","text":"0"}]},{"title":"Kiswahili-first share of weekly output, and its engagement on reach","chips":["R-05"],"head":{"label":"Target","text":"≥ 5 of 7 weekly posts Kiswahili-first (Section 12.6)"},"fields":[{"label":"Method","text":"Post coding, weekly (Section 18.5)"},{"label":"Baseline","text":"Set in Week 1"}]}]}
 ```
 
 **R-02 is the indicator this engagement lives or dies on.** It is the only one fully inside the
-direction layer's control, it moves weekly, and it is the direct test of the recognition thesis in
+direction layer's control, it moves weekly, and it is the direct test of the turnout thesis in
 Section 7.1. If reach share in the pool does not rise, the briefs are wrong and the monthly
 review says so.
 
@@ -84,16 +84,16 @@ The first work of the engagement: ninety days of Mr Shahbal's own channels, meas
 #### The measurement set
 
 ```visual
-{"kind":"checklist","items":[{"label":"Audience","body":"Followers by city and country; by age band and sex; growth curve over 12 months","fields":[{"label":"Why this one","text":"The decisive test. Follower geography checks the recognition thesis against his own asset."}]},{"label":"Reach","body":"Daily reach, organic against paid; reach by city mapped to sub-county; reach per post; reach as a share of followers","fields":[{"label":"Why this one","text":"Reach by city is the only routinely available proxy for ward-level penetration."}]},{"label":"Engagement","body":"Reactions, comments and shares per post; engagement rate **on reach, not on followers**; shares per 1,000 reached; distinct commenting accounts, and the share of all comments from the top 50","fields":[{"label":"Why this one","text":"Rate on reach is the honest denominator. Share rate is the persuasion proxy — a share puts his name inside a network he does not own."}]},{"label":"Content","body":"Every post coded on four axes: pillar, language, format, and whether it carries a commitment, a date, a ward name or a call to action","fields":[{"label":"Why this one","text":"Turns [DATA NEEDED — His public Facebook page, post count read on the Week 1 export] posts (Tier 3, unconfirmed) from an archive into a distribution. Without coding there is nothing to compare."}]},{"label":"Video","text":"3-second and 30-second views, average watch time, completion rate","fields":[{"label":"Why this one","text":"Decides whether long flagship video is the right commitment or the wrong one."}]},{"label":"Cadence","text":"Posts per day, hour of day, day of week","fields":[{"label":"Why this one","text":"Establishes what the team's current capacity actually is, before any brief assumes more of it."}]},{"label":"Paid","body":"Meta Ad Library and Google Ads Transparency Centre, for Mr Shahbal","fields":[{"label":"Why this one","text":"Public, needs no access from anyone, and is the only paid-advertising signal that exists."}]},{"label":"Other platforms","body":"X: his public profile, followers [DATA NEEDED — His public X profile, follower count read on the Week 1 export], read on the Week 1 export. TikTok, Instagram, YouTube and any WhatsApp Channel or Business number: recorded in the Week 1 audit where they exist.","fields":[{"label":"Why this one","text":"Not estimated, per Annex A."}]}]}
+{"kind":"checklist","items":[{"label":"Audience","body":"Followers by city and country; by age band and sex; growth curve over 12 months","fields":[{"label":"Why this one","text":"The decisive test. Follower geography checks the turnout thesis against his own asset."}]},{"label":"Reach","body":"Daily reach, organic against paid; reach by city mapped to sub-county; reach per post; reach as a share of followers","fields":[{"label":"Why this one","text":"Reach by city is the only routinely available proxy for ward-level penetration."}]},{"label":"Engagement","body":"Reactions, comments and shares per post; engagement rate **on reach, not on followers**; shares per 1,000 reached; distinct commenting accounts, and the share of all comments from the top 50","fields":[{"label":"Why this one","text":"Rate on reach is the honest denominator. Share rate is the persuasion proxy — a share puts his name inside a network he does not own."}]},{"label":"Content","body":"Every post coded on four axes: pillar, language, format, and whether it carries a commitment, a date, a ward name or a call to action","fields":[{"label":"Why this one","text":"Turns [DATA NEEDED — His public Facebook page, post count read on the Week 1 export] posts (Tier 3, unconfirmed) from an archive into a distribution. Without coding there is nothing to compare."}]},{"label":"Video","text":"3-second and 30-second views, average watch time, completion rate","fields":[{"label":"Why this one","text":"Decides whether long flagship video is the right commitment or the wrong one."}]},{"label":"Cadence","text":"Posts per day, hour of day, day of week","fields":[{"label":"Why this one","text":"Establishes what the team's current capacity actually is, before any brief assumes more of it."}]},{"label":"Paid","body":"Meta Ad Library and Google Ads Transparency Centre, for Mr Shahbal","fields":[{"label":"Why this one","text":"Public, needs no access from anyone, and is the only paid-advertising signal that exists."}]},{"label":"Other platforms","body":"X: his public profile, followers [DATA NEEDED — His public X profile, follower count read on the Week 1 export], read on the Week 1 export. TikTok, Instagram, YouTube and any WhatsApp Channel or Business number: recorded in the Week 1 audit where they exist.","fields":[{"label":"Why this one","text":"Not estimated, per Annex A."}]}]}
 ```
 
 #### The window
 
 ```lead
-**Ninety days: 18 June to 16 September 2026.** It is the longest window Meta exports at post level without gaps.
+**Ninety days: the ninety days before Week 1 begins.** It is the longest window Meta exports at post level without gaps.
 ```
 
-**Ninety days: 18 June to 16 September 2026.** Two reasons, and neither of them is convenience.
+**Ninety days: the ninety days before Week 1 begins.** Two reasons, and neither of them is convenience.
 
 1.  It is the longest window Meta exports at post level without gaps.
 2.  It is long enough to show cadence and short enough to describe the team working today rather
@@ -105,7 +105,7 @@ cheap and stable, and a ninety-day slice of it says nothing.
 #### Why this comes first
 
 ```lead
-What it has never been asked is the only question that matters in a countywide name-recognition contest: **how much of this reach lands where he is not yet known?**
+What it has never been asked is the only question that matters in a race decided by turnout: **how much of this reach lands in the close-contest belt, and does it move anyone to vote?**
 ```
 
 Every other analysis in this document is about Mombasa — the register, the census, the results, the
@@ -113,11 +113,11 @@ county's finances. This one is about the only communications asset Mr Shahbal ac
 
 A verified Facebook presence, roughly [DATA NEEDED — His public Facebook page, follower count read on the Week 1 export] followers and [DATA NEEDED — His public Facebook page, post count read on the Week 1 export] posts is not a standing start. It is
 an operating channel with a record, and that record can be read. What it has never been asked is the
-only question that matters in a countywide name-recognition contest: **how much of this reach lands
-where he is not yet known?**
+only question that matters in a race decided by turnout: **how much of this reach lands in the
+close-contest belt, and does it move anyone to vote?**
 
 Section 6.2 establishes that **353,090 registered voters — 55.0% of the county register** — sit
-where he has never held office. Section 4.3 establishes that in-county digital reach has a
+in the three constituencies decided by under 2,000 votes in 2022. Section 4.3 establishes that in-county digital reach has a
 ceiling of about 301,057 voters. Put together, those two figures make one measurement decisive:
 the share of existing reach that lands inside the pool. Nothing in the public record answers
 it. The Week 1 audit does.

@@ -315,11 +315,11 @@ for (const [id, pop, hh, area] of SUBCOUNTIES) {
 }
 const zoneSum = (ids: string[], field: string) => ids.reduce((n, id) => n + v(`sub.${id}.${field}`), 0);
 // Three zones, and Likoni rotating: the Island (Mvita), the north mainland (Kisauni, Nyali) and the
-// west mainland (Changamwe, Jomvu). Internal ids keep the platform's names: anchor, mwingi, arid.
+// west mainland (Changamwe, Jomvu). Internal ids: anchor, north, west.
 const ZONES: [string, string[], string][] = [
   ["anchor", ["mvita"], "the Island"],
-  ["mwingi", ["kisauni", "nyali"], "the north mainland"],
-  ["arid", ["changamwe", "jomvu"], "the west mainland"],
+  ["north", ["kisauni", "nyali"], "the north mainland"],
+  ["west", ["changamwe", "jomvu"], "the west mainland"],
 ];
 for (const [zone, ids, label] of ZONES) {
   modelled(`zone.${zone}.population`, zoneSum(ids, "population"), "people", `Sum of ${label}'s sub-counties: ${ids.join(", ")}.`);
@@ -331,8 +331,8 @@ modelled("zones.share", pct(v("zones.population"), v("census.population")), "per
 modelled("zones.excluded", Math.round((v("census.population") - v("zones.population")) / 1e4) * 1e4, "people", "Residents in no zone (Likoni, the rotating constituency), rounded to the nearest 10,000.");
 modelled("zones.excluded.share", 100 - v("zones.share"), "percent", "Likoni / county: 100 less the three zones' share.");
 modelled("zone.anchor.register.share", pct(v("con.mvita"), v("register.2022")), "percent", "Mvita / 2022 register.");
-modelled("zone.mwingi.register.share", pct(v("bloc.north"), v("register.2022")), "percent", "Kisauni + Nyali / 2022 register.");
-modelled("zone.arid.register.share", pct(v("bloc.west"), v("register.2022")), "percent", "Changamwe + Jomvu / 2022 register.");
+modelled("zone.north.register.share", pct(v("bloc.north"), v("register.2022")), "percent", "Kisauni + Nyali / 2022 register.");
+modelled("zone.west.register.share", pct(v("bloc.west"), v("register.2022")), "percent", "Changamwe + Jomvu / 2022 register.");
 
 // ---- connectivity (Section 4). CA/KNBS 2023/24 is current; 2019 is comparison only.
 const CA_2024 = CA_KNBS_ICT_2023_24.name;
@@ -433,7 +433,7 @@ sourced("record.sez.ksh", 12e9, "ksh", "T2", SEZ, { decimals: 0, note: "More tha
 sourced("record.sez.acres", 535, "count", "T2", SEZ, { note: "Acres, in Jomvu." });
 sourced("record.sez.jobs", 7_972, "count", "T2", SEZ, { note: "Direct jobs projected by the promoters. A projection, not a count." });
 sourced("record.sez.firms", 67, "count", "T2", SEZ, { note: "Companies confirmed before construction, as the promoters report." });
-sourced("record.gab.founded", 2008, "count", "T2", "Wikipedia and The Standard, on Gulf African Bank", { note: "Year he founded Gulf African Bank, Kenya's first Islamic bank." });
+sourced("record.gab.founded", 2008, "year", "T2", "Wikipedia and The Standard, on Gulf African Bank", { note: "Year he founded Gulf African Bank, Kenya's first Islamic bank." });
 needed("channel.fb.followers", "count", "His public Facebook page, follower count read on the Week 1 export");
 needed("channel.fb.posts", "count", "His public Facebook page, post count read on the Week 1 export");
 needed("channel.x.followers", "count", "His public X profile, follower count read on the Week 1 export");
@@ -485,16 +485,16 @@ target("target.whatsapp-groups", 180, "count", "Community WhatsApp groups monito
 target("target.polling-agents", 1_041, "count", "One trained agent per polling station: a campaign-owned requirement.", { source: T_CAMPAIGN });
 
 // ---- Firefly's effort weighting by zone (Section 11): shares of communications effort, by phase.
-// anchor = the Island, mwingi = the north mainland, arid = the west mainland, rotating = Likoni and testing.
+// anchor = the Island, north = the north mainland, west = the west mainland, rotating = Likoni and testing.
 const EFFORT: [string, number, number, number, number][] = [
   ["p-1", 20, 40, 25, 15],
   ["p12", 20, 35, 25, 20],
   ["p3", 20, 35, 25, 20],
 ];
-for (const [phase, anchor, mwingi, arid, rotating] of EFFORT) {
+for (const [phase, anchor, north, west, rotating] of EFFORT) {
   target(`effort.${phase}.anchor`, anchor, "percent", "Share of communications effort to the Island (Mvita).", { source: T_FIREFLY, decimals: 0 });
-  target(`effort.${phase}.mwingi`, mwingi, "percent", "Share of communications effort to the north mainland (Kisauni, Nyali).", { source: T_FIREFLY, decimals: 0 });
-  target(`effort.${phase}.arid`, arid, "percent", "Share of communications effort to the west mainland (Changamwe, Jomvu).", { source: T_FIREFLY, decimals: 0 });
+  target(`effort.${phase}.north`, north, "percent", "Share of communications effort to the north mainland (Kisauni, Nyali).", { source: T_FIREFLY, decimals: 0 });
+  target(`effort.${phase}.west`, west, "percent", "Share of communications effort to the west mainland (Changamwe, Jomvu).", { source: T_FIREFLY, decimals: 0 });
   target(`effort.${phase}.rotating`, rotating, "percent", "Share of communications effort to Likoni and to rotating ward tests.", { source: T_FIREFLY, decimals: 0 });
 }
 // Where communications effort goes by channel (Section 12): the conventional pitch as Firefly

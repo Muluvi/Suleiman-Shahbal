@@ -9,7 +9,7 @@ import { WeaveDefs } from "./weave";
  * ≈ 300 kB of script on the first screen of a phone on slow 4G.
  *
  *   held    Mvita, the incumbent's strongest ground in 2022: accent blue
- *   pool    Kisauni, West, Central and Changamwe: laterite, woven
+ *   pool    Kisauni, Nyali and Changamwe: laterite, woven
  *   other   neutral
  *
  * `state="tiles"` draws the same wards at their tile-map positions: the end state of the morph.

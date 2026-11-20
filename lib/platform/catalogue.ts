@@ -134,7 +134,7 @@ export function packDatasets(): Dataset[] {
   return [
     figuresDataset(),
     make("wards", "Registered voters by ward", "Electorate", "IEBC 2022 register, all 30 wards.", WARD_ROWS.map(({ id, ...w }) => ({ ...w, figure: id })), { voters: "Registered voters" }),
-    make("constituencies", "Registered voters by constituency", "Electorate", "IEBC 2022 register, the eight constituencies.", CONSTITUENCIES.map((c) => ({ name: c.name, voters: c.voters, wards: c.wards.length })), { voters: "Registered voters", wards: "Wards" }),
+    make("constituencies", "Registered voters by constituency", "Electorate", "IEBC 2022 register, the six constituencies.", CONSTITUENCIES.map((c) => ({ name: c.name, voters: c.voters, wards: c.wards.length })), { voters: "Registered voters", wards: "Wards" }),
     make("electoral-history", "Election results since 2013", "Electorate", "Mombasa races in the record, as the story cites them.", ELECTORAL_HISTORY),
     make("projects", "County projects, itemised", "County records", "Every project in the county's Three-Year Scorecard, placed on wards where the printed place allows.", PROJECTS.map(({ provenance, ...p }) => ({ ...p, tier: tierWord(provenance.tier), as_of: provenance.as_of })), { amount: "Cost (KSh)", asPrinted: "As printed" }),
     ...analysisDatasets(),

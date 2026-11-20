@@ -15,7 +15,7 @@ import { IllustrativeTag } from "./premium/IllustrativeTag";
 // 3. Interactive Audio Summary Player with dynamic wave animation
 export function AudioSummaryPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [language, setLanguage] = useState<"en" | "kik">("en");
+  const [language, setLanguage] = useState<"en" | "sw">("en");
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -60,9 +60,9 @@ export function AudioSummaryPlayer() {
           English Audio
         </button>
         <button
-          onClick={() => setLanguage("kik")}
+          onClick={() => setLanguage("sw")}
           className={`flex-1 t-small font-bold py-2 rounded-lg border transition-all ${
- language === "kik" ? "bg-gold-solid text-on-gold border-gold-solid" : "bg-card text-muted border-line"
+ language === "sw" ? "bg-gold-solid text-on-gold border-gold-solid" : "bg-card text-muted border-line"
           }`}
         >
           Kiswahili Summary
@@ -204,11 +204,11 @@ export function FlywheelSchematic() {
 
 // 1. Interactive Messaging Playground (Language Tabs)
 export function MessagingPlayground() {
-  const [lang, setLang] = useState<"en" | "kik" | "sw">("en");
+  const [lang, setLang] = useState<"en" | "sw" | "sh">("en");
   const messages = {
-    en: { slogan: "Sustainable Growth & Dev", copy: "Building a transparent, data-driven local treasury to empower Mvita businesses." },
-    kik: { slogan: "Mbeu Nsya na Maendeeo", copy: "Kuseuvya mitalo ya mbeo nzao ila yithataa muingi wa Mombasa na biashara kwoo." },
-    sw: { slogan: "Maendeleo Mapya Mombasa", copy: "Kukuza mifumo ya wazi ya hazina ili kuwezesha biashara ndogo ndogo Mombasa." }
+    en: { slogan: "The Builder. He Finishes What He Starts.", copy: "Water at the tap, jobs that stay in Mombasa, and a county that pays its bills." },
+    sw: { slogan: "Mjenzi. Anayemaliza Anachoanza.", copy: "Maji mferejini, kazi zibaki Mombasa, na kaunti inayolipa madeni yake." },
+    sh: { slogan: "Mjenzi, si Maneno", copy: "Ameshajenga, check mwenyewe. Sasa ni time ya mtaa wako." }
   };
 
   return (
@@ -219,12 +219,12 @@ export function MessagingPlayground() {
         {Object.keys(messages).map((l) => (
           <button
             key={l}
-            onClick={() => setLang(l as "en" | "kik" | "sw")}
+            onClick={() => setLang(l as "en" | "sw" | "sh")}
             className={`flex-1 min-h-[2.75rem] t-label font-black py-2 rounded-lg border transition-all cursor-pointer ${
  lang === l ? "bg-accent-solid border-accent-solid text-on-accent" : "bg-paper border-line text-muted"
             }`}
           >
-            {l === "en" ? "English" : l === "kik" ? "Kiswahili" : "Swahili"}
+            {l === "en" ? "English" : l === "sw" ? "Kiswahili" : "Sheng"}
           </button>
         ))}
       </div>
@@ -275,7 +275,7 @@ export function MediaPlaybackMockup() {
           {playing ? <Pause size={20} aria-hidden="true" /> : <Play size={20} aria-hidden="true" className="ml-0.5" />}
         </button>
         <span className="absolute bottom-2 left-3 t-micro font-black uppercase text-accent bg-card px-2 py-0.5 rounded border border-line">
-          Vernacular Radio Broadcast Player
+          Kiswahili Radio Broadcast Player
         </span>
       </div>
       <div className="mt-3 flex justify-between items-center t-label font-bold text-ink">
@@ -295,25 +295,25 @@ export function ToneVoiceSlider() {
       return {
         type: "Authoritative & Technical",
         accent: "text-accent",
-        sloganEnglish: "Statutory fiscal prudence secures Mombasa's long-term sovereign growth index.",
-        sloganKiswahili: "Uthyuilo wa mbesa sya nthi syavinya nikuatitye uiilu wa utonga wiulu wa Mombasa.",
-        focus: "SME licensing transparency, own-source revenue compliance, institutional audit accountability."
+        sloganEnglish: "Every county shilling published, and every pending bill paid, oldest first.",
+        sloganKiswahili: "Kila shilingi ya kaunti itachapishwa, na kila deni litalipwa kuanzia la zamani zaidi.",
+        focus: "Pending-bills schedule, own-source revenue, the Auditor-General's record, the single business permit."
       };
     } else if (val < 70) {
       return {
         type: "Balanced Competence",
         accent: "text-gold",
-        sloganEnglish: "A realistic economic blueprint designed to build SME wealth and secure local cooperatives.",
-        sloganKiswahili: "Mbeu Nsya na kazi bora yaseitwe niguo kuongelea utonga wa masoko na makooperativi ala masumbikikae.",
-        focus: "Combining digital cloud databases with offline SMS networks to support municipal market growth."
+        sloganEnglish: "Water at the tap, jobs that stay in Mombasa, and a county that pays its bills.",
+        sloganKiswahili: "Maji mferejini, kazi zibaki Mombasa, na kaunti inayolipa madeni yake.",
+        focus: "The three pillars together: the SEZ as proof, the water record as the test, the tracker as the follow-through."
       };
     } else {
       return {
         type: "Empathetic & Grassroots",
         accent: "text-emerald-500",
-        sloganEnglish: "Livelihoods first: supporting local farmers and ensuring access to co-op development resources.",
-        sloganKiswahili: "Uimi mbeu, mbesa mufuko: kuseovya kiko kya uimi niguo kuetee mwananchi mbesa na kazi bora.",
-        focus: "Direct market assemblies, radio baraza syncs, physical brochures, localized cooperative alignments."
+        sloganEnglish: "He built it; come and see. Next, he builds for your estate.",
+        sloganKiswahili: "Amejenga; njoo uone. Sasa atajenga kwa mtaa wako.",
+        focus: "Stage and market visits, radio call-ins, WhatsApp voice notes, chamas and residents' associations."
       };
     }
   };
@@ -442,8 +442,8 @@ export function SloganBuilder() {
 // 8. Grassroots Feedback Visualizer (SMS feed logs)
 export function SMSFeedbackVisualizer() {
   const logs = [
-    { sender: "+254 712 *** 324", text: "When is the next market Baraza in Changamwe? We need details on the local co-op loans.", time: "10:14 AM" },
-    { sender: "+254 723 *** 892", text: "Loved the radio spot on Kiswahili yesterday, the economic blueprint sounds realistic.", time: "11:02 AM" }
+    { sender: "+254 712 *** 324", text: "When is the next baraza in Changamwe? We want to ask about the water hours in Chaani.", time: "10:14 AM" },
+    { sender: "+254 723 *** 892", text: "Heard the radio spot on Pwani FM yesterday. Publishing the pending bills sounds right.", time: "11:02 AM" }
   ];
 
   return (

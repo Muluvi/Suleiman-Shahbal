@@ -45,16 +45,16 @@ export const FIG_4_1: FigureSpec = {
 
 /* ------------------------------------------------------------------ fig-4-2-effort */
 
-const ZONE_ROWS = [["anchor", "The Island (Mvita)"], ["mwingi", "North mainland (Kisauni, Nyali)"], ["arid", "West mainland (Changamwe, Jomvu)"], ["rotating", "Likoni and rotating tests"]] as const;
+const ZONE_ROWS = [["anchor", "The Island (Mvita)"], ["north", "North mainland (Kisauni, Nyali)"], ["west", "West mainland (Changamwe, Jomvu)"], ["rotating", "Likoni and rotating tests"]] as const;
 const PHASES = [["p-1", "Phase −1 (nomination)"], ["p12", "Phases 1–2"], ["p3", "Phase 3 (GOTV)"]] as const;
 
 export const FIG_4_2: FigureSpec = {
   id: "fig-4-2-effort",
   section: "3.3.1",
-  title: `In Phase −1, ${num("effort.p-1.mwingi") + num("effort.p-1.arid")}% of the effort goes to the mainland belt, above its share of residents`,
+  title: `In Phase −1, ${num("effort.p-1.north") + num("effort.p-1.west")}% of the effort goes to the mainland belt, above its share of residents`,
   question: "Where does the effort go in Phase −1?",
   takeaway: `The weighting over-indexes on the close-contest belt on the working hypothesis that his gap there is turnout and machinery; ${fmt("effort.digital.pool")}% of digital reach effort is geofenced to it.`,
-  sources: [T_FIREFLY, src("zone.mwingi.share")],
+  sources: [T_FIREFLY, src("zone.north.share")],
   chart: {
     type: "composite",
     parts: [

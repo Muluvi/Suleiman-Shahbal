@@ -171,7 +171,7 @@ export function ServiceTrackerPhoneMockup() {
                   <div className="space-y-1 text-[0.625rem]">
                     <div className="font-bold">REPORT RECEIVED!</div>
                     <div>Ticket #MSA-2027-0482</div> {/* verify-figures-ignore: mock ticket id */}
-                    <div>Issue: Mutomo Borehole</div>
+                    <div>Issue: Junda Water Kiosk</div>
                     <div>Sent to Sub-County Water Office. Free SMS update incoming.</div>
                     <button
                       type="button"

@@ -80,7 +80,7 @@ export const FIG_5_2: FigureSpec = {
 const WEEKS = [
   { when: "Week 1", title: "The presence audit", body: "Ninety days of his channels; the Page-or-profile question; 2FA applied by your team." },
   { when: "Weeks 1–2", title: "Foundations", body: "Capability map, compliance review commissioned, Kiswahili reviewer confirmed; the six profile checks shipped." },
-  { when: "Weeks 2–6", title: "First directed cycles", body: `The weekly brief from Week 2; output weighted ${fmt("effort.p-1.mwingi")}% the north mainland, ${fmt("effort.p-1.arid")}% the west mainland, ${fmt("effort.p-1.anchor")}% the Island, ${fmt("effort.p-1.rotating")}% Likoni and testing; SMS opt-in drive.` },
+  { when: "Weeks 2–6", title: "First directed cycles", body: `The weekly brief from Week 2; output weighted ${fmt("effort.p-1.north")}% the north mainland, ${fmt("effort.p-1.west")}% the west mainland, ${fmt("effort.p-1.anchor")}% the Island, ${fmt("effort.p-1.rotating")}% Likoni and testing; SMS opt-in drive.` },
   { when: "Weeks 6–8", title: "Consolidation", body: "Coalition roundtables; ward champions in the highest-priority wards." },
 ];
 

@@ -230,8 +230,8 @@ export const FIG_3_6: FigureSpec = {
 
 const ZONES = [
   { label: "The Island (Mvita)", pop: "zone.anchor.share", reg: "zone.anchor.register.share" },
-  { label: "The north mainland (Kisauni, Nyali)", pop: "zone.mwingi.share", reg: "zone.mwingi.register.share" },
-  { label: "The west mainland (Changamwe, Jomvu)", pop: "zone.arid.share", reg: "zone.arid.register.share" },
+  { label: "The north mainland (Kisauni, Nyali)", pop: "zone.north.share", reg: "zone.north.register.share" },
+  { label: "The west mainland (Changamwe, Jomvu)", pop: "zone.west.share", reg: "zone.west.register.share" },
   { label: "Likoni: rotating", pop: "zones.excluded.share", reg: "con.likoni.share" },
 ];
 const one = (id: string) => Math.round(num(id) * 10) / 10;

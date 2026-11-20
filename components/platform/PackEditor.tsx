@@ -27,7 +27,7 @@ export interface PackEditorData {
 const TABS = ["Figures", "Register", "Strategy lists", "Analysis"] as const;
 const STATES: FigureState[] = ["sourced", "modelled", "needed", "target"];
 const TIER_WORD: Record<string, string> = { T1: "Official", T2: "Reported", T3: "Unconfirmed" };
-const UNITS: Unit[] = ["voters", "votes", "people", "households", "count", "percent", "ksh", "km2", "per-km2", "persons"];
+const UNITS: Unit[] = ["voters", "votes", "people", "households", "count", "percent", "ksh", "km2", "per-km2", "persons", "year"];
 
 function useSubmit() {
   const router = useRouter();

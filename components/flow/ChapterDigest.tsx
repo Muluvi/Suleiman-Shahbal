@@ -58,7 +58,7 @@ export function ChapterDigest({
   onToggle: () => void;
   onStep: (id: string) => void;
 }) {
-  const [ref, inView] = useInView<HTMLDivElement>({ amount: 0.25, margin: "-6% 0px" });
+  const [ref, inView] = useInView<HTMLDivElement>({ amount: 0.25, margin: "-6% 0px" }); // verify-figures-ignore
   const shown = steps.slice(0, MAX_STEPS);
   const more = steps.length - shown.length;
   const hands = chapterHands(tabId);

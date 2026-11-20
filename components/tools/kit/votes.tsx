@@ -110,7 +110,7 @@ export function MapStudio({ wards }: { wards: ToolWard[] }) {
   const q = (v: number) => Math.min(4, Math.floor((sorted.filter((s) => s < v).length / wards.length) * 5));
   const rows = Math.max(...wards.map((x) => x.row)) + 1;
   const cur = wards.find((x) => x.id === sel);
-  const zoneFill = (x: ToolWard) => (x.zone === "anchor" ? "var(--accent-solid)" : x.zone === "mwingi" ? "var(--gold-solid)" : x.zone === "arid" ? "var(--phase-2, #7a5)" : "var(--line)");
+  const zoneFill = (x: ToolWard) => (x.zone === "anchor" ? "var(--accent-solid)" : x.zone === "north" ? "var(--gold-solid)" : x.zone === "west" ? "var(--phase-2, #7a5)" : "var(--line)");
   return (
     <div className="space-y-4">
       <div className="flex justify-end print:hidden"><SaveImage card={{ type: "map", params: { layer: layer === "zone" ? "zones" : layer } }} title="Mombasa Map Studio" /></div>
@@ -131,7 +131,7 @@ export function MapStudio({ wards }: { wards: ToolWard[] }) {
             );
           })}
         </div>
-        <Note>Schematic: every ward is one tile, placed inside its constituency block. {layer === "zone" ? "Blue: anchor zone. Gold: the north mainland. Green: arid belt. Grey: Likoni. A dashed outline marks the pool." : "Five shades, lightest to darkest, split the 30 wards into fifths by this layer."}</Note>
+        <Note>Schematic: every ward is one tile, placed inside its constituency block. {layer === "zone" ? "Blue: anchor zone. Gold: the north mainland. Green: west belt. Grey: Likoni. A dashed outline marks the pool." : "Five shades, lightest to darkest, split the 30 wards into fifths by this layer."}</Note>
       </Card>
       {cur && (
         <Card>

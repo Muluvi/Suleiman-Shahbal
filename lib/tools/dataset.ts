@@ -89,4 +89,4 @@ export type IssueRow = { issue: string; score: number; tier: number; note: strin
 export const ISSUES: IssueRow[] = (issueEvidence as { values: { label: string; value: number; tier: number; note: string }[] }).values.map((v) => ({ issue: v.label, score: v.value, tier: v.tier, note: v.note }));
 export const ISSUE_NOTES: string[] = (issueEvidence as { notes: string[] }).notes;
 
-export const ZONE_LABEL: Record<ZoneId, string> = { anchor: "Anchor (Mvita, Jomvu)", mwingi: "the north mainland (North, West, Central)", arid: "Arid belt (Changamwe, Likoni)", none: "Likoni (in no zone)" };
+export const ZONE_LABEL: Record<ZoneId, string> = { anchor: "The Island (Mvita)", north: "North mainland (Kisauni, Nyali)", west: "West mainland (Changamwe, Jomvu)", none: "Likoni (in no zone)" };

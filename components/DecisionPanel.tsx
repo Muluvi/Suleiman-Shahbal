@@ -75,8 +75,8 @@ export function DecisionPanel() {
             <div className="t-label font-black text-accent">The recommendation</div>
             <div className="font-sans text-xl font-bold text-ink mt-1">Tier 2 — Standard</div>
             <p className="t-label text-muted leading-relaxed mt-2">
-              Tier 1 concentrates spend where Mr Shahbal is already strong and leaves the recognition
-              deficit untouched. Tier 3 is defensible but presses against a statutory ceiling that must
+              Tier 1 concentrates effort where Mr Shahbal is already strong and leaves the turnout gap in
+              the close-contest belt untouched. Tier 3 is defensible but presses against a statutory ceiling that must
               also cover transport, venues and personnel across {fmt("census.area")} square kilometres.
             </p>
           </div>

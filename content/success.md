@@ -54,13 +54,13 @@ items:
 ## 18.3 Recognition where he is least known
 
 ```lead
-**R-02 is the indicator this engagement lives or dies on.** It is the only one fully inside the direction layer's control, it moves weekly, and it is the direct test of the recognition thesis in Section 7.1.
+**R-02 is the indicator this engagement lives or dies on.** It is the only one fully inside the direction layer's control, it moves weekly, and it is the direct test of the turnout thesis in Section 7.1.
 ```
 
 <!-- keep -->
 **Followers are not the target. Being present in Kisauni, Nyali and Changamwe is.**
 
-Section 18.4 sets out why vanity metrics are left out. These five recognition indicators, R-01 to R-05, replace them; they sit beside the two scorecards above, the four nomination indicators and the five general-election ones. Every
+Section 18.4 sets out why vanity metrics are left out. These five reach indicators, R-01 to R-05, replace them; they sit beside the two scorecards above, the four nomination indicators and the five general-election ones. Every
 one is measured where Mr Shahbal is least known, and every one is read from his own channels or from
 the team's dispatch log on Firefly's platform.
 
@@ -86,7 +86,7 @@ items:
     fields:
       - { label: "Method", text: "Post-level export, weekly" }
       - { label: "Baseline", text: "Set in Week 1" }
-  - title: "Consented contacts in the 21 wards of the pool, and their share of the list"
+  - title: "Consented contacts in the 17 wards of the pool, and their share of the list"
     chips: ["R-04"]
     head: { label: "Target", text: "Deficit-ward share of the list ≥ deficit-ward share of the register" }
     fields:
@@ -101,7 +101,7 @@ items:
 ```
 
 **R-02 is the indicator this engagement lives or dies on.** It is the only one fully inside the
-direction layer's control, it moves weekly, and it is the direct test of the recognition thesis in
+direction layer's control, it moves weekly, and it is the direct test of the turnout thesis in
 Section 7.1. If reach share in the pool does not rise, the briefs are wrong and the monthly
 review says so.
 
@@ -141,7 +141,7 @@ items:
   - label: "Audience"
     body: "Followers by city and country; by age band and sex; growth curve over 12 months"
     fields:
-      - { label: "Why this one", text: "The decisive test. Follower geography checks the recognition thesis against his own asset." }
+      - { label: "Why this one", text: "The decisive test. Follower geography checks the turnout thesis against his own asset." }
   - label: "Reach"
     body: "Daily reach, organic against paid; reach by city mapped to sub-county; reach per post; reach as a share of followers"
     fields:
@@ -175,10 +175,10 @@ items:
 #### The window
 
 ```lead
-**Ninety days: 18 June to 16 September 2026.** It is the longest window Meta exports at post level without gaps.
+**Ninety days: the ninety days before Week 1 begins.** It is the longest window Meta exports at post level without gaps.
 ```
 
-**Ninety days: 18 June to 16 September 2026.** Two reasons, and neither of them is convenience.
+**Ninety days: the ninety days before Week 1 begins.** Two reasons, and neither of them is convenience.
 
 1.  It is the longest window Meta exports at post level without gaps.
 2.  It is long enough to show cadence and short enough to describe the team working today rather
@@ -190,7 +190,7 @@ cheap and stable, and a ninety-day slice of it says nothing.
 #### Why this comes first
 
 ```lead
-What it has never been asked is the only question that matters in a countywide name-recognition contest: **how much of this reach lands where he is not yet known?**
+What it has never been asked is the only question that matters in a race decided by turnout: **how much of this reach lands in the close-contest belt, and does it move anyone to vote?**
 ```
 
 Every other analysis in this document is about Mombasa — the register, the census, the results, the
@@ -198,11 +198,11 @@ county's finances. This one is about the only communications asset Mr Shahbal ac
 
 A verified Facebook presence, roughly {{channel.fb.followers}} followers and {{channel.fb.posts}} posts is not a standing start. It is
 an operating channel with a record, and that record can be read. What it has never been asked is the
-only question that matters in a countywide name-recognition contest: **how much of this reach lands
-where he is not yet known?**
+only question that matters in a race decided by turnout: **how much of this reach lands in the
+close-contest belt, and does it move anyone to vote?**
 
 Section 6.2 establishes that **{{pool}} registered voters — {{pool.share}}% of the county register** — sit
-where he has never held office. Section 4.3 establishes that in-county digital reach has a
+in the three constituencies decided by under 2,000 votes in 2022. Section 4.3 establishes that in-county digital reach has a
 ceiling of about {{reach.smartphone}} voters. Put together, those two figures make one measurement decisive:
 the share of existing reach that lands inside the pool. Nothing in the public record answers
 it. The Week 1 audit does.

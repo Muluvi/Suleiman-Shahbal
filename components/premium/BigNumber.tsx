@@ -15,7 +15,7 @@ export function BigNumber({
   tone = "ink",
   size = "lg",
 }: {
-  /** The number exactly as printed, e.g. "605,703", "51.7%", "≈200,000–225,000", "Both". */
+  /** The number exactly as printed, e.g. "641,913", "55.0%", "≈120,000", "Both". */
   value: string;
   unit?: string;
   context: string;

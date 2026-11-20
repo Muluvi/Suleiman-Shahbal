@@ -5,17 +5,15 @@
  * clearance checklist, a DPA and Election Offences matrix, an org chart, a roles and ownership
  * matrix, and the reporting line between the existing team and Firefly.
  *
- * C-22, SETTLED (November 2026). The endorsement requirement was stated two ways: 500 signatures
- * per sub-county (4,000 across eight) and 500 from at least 5 of the 8 sub-counties (500 in total).
- * A nomination paper short of the statutory count is rejected; one with more signatures than the
- * law needs is not. So the campaign works to the stricter reading, 500 from each of the eight, and
- * the Field Ops roll (250 per ward, 10,000 in all) already clears it. The statutory figure itself
+ * C-22, SETTLED (November 2026). The endorsement requirement can be read two ways: 500 signatures
+ * per sub-county (3,000 across six) or 500 from a majority of the sub-counties. A nomination paper
+ * short of the statutory count is rejected; one with more signatures than the law needs is not. So
+ * the campaign works to the stricter reading, 500 from each of the six, and the Field Ops roll
+ * (250 per ward, 7,500 in all) already clears it. The statutory figure itself
  * is still to be confirmed against the Elections Act regulations, and row 6 says so.
  *
- * §5.3.5's STATUS COLUMN IS THE OTHER THING WORTH KEEPING EXACTLY. Seven clearances, and they are
- * at five different stages: Verified, Pending Filing Window, Active/Current, Scheduled,
- * Operationalized, and one that reads "[Requires Legal Confirmation]". That last one is the
- * document declining to claim a deadline it has not confirmed, and it prints as it stands.
+ * §5.3.5's STATUS COLUMN IS THE OTHER THING WORTH KEEPING EXACTLY. Nothing about the candidate is
+ * marked verified until the document is in hand.
  */
 import type { FigureSeries } from "./types";
 
@@ -30,7 +28,7 @@ export const COMPLIANCE_TIERS = [
       "Kenya Revenue Authority (KRA) tax compliance certificate",
       "Directorate of Criminal Investigations (DCI) police clearance certificate",
       "Higher Education Loans Board (HELB) clearance certificate",
-      "500 registered voter nomination endorsement signatures from each of the 8 sub-counties (4,000; the stricter reading)",
+      "500 registered voter nomination endorsement signatures from each of the 6 sub-counties (3,000; the stricter reading)",
     ],
   },
   {
@@ -58,9 +56,9 @@ export const COMPLIANCE_SERIES: FigureSeries = {
   measure: "§19.4's statutory compliance architecture",
   points: [],
   note:
-    "The endorsement count was stated two ways, 500 per sub-county (4,000) or 500 from at least " +
-    "5 of the 8 (500 in total). A paper short of the statutory count is rejected and a surplus is " +
-    "not, so the campaign works to 4,000; the statutory figure is confirmed with counsel before filing.",
+    "The endorsement count can be read two ways, 500 per sub-county (3,000) or 500 from a majority " +
+    "of the six. A paper short of the statutory count is rejected and a surplus is not, so the " +
+    "campaign works to 3,000; the statutory figure is confirmed with counsel before filing.",
 };
 
 /* ------------------------------------------------------------------ §5.3.5 the clearances */
@@ -69,7 +67,7 @@ export const IEBC_CLEARANCES: string[][] = [
   [
     "1. Academic degree requirement",
     "Bachelor's degree from a recognised university (Article 180(2) and Elections Act s.22). CUE recognition letter.",
-    "Verified: Ph.D. in Economics, valid Master's and Bachelor's from the University of Nairobi.",
+    "To be confirmed in Week 1: his degree certificates and the CUE recognition letter, copied to counsel.",
   ],
   [
     "2. Chapter Six integrity clearance",
@@ -79,7 +77,7 @@ export const IEBC_CLEARANCES: string[][] = [
   [
     "3. Tax compliance certificate (TCC)",
     "Valid tax compliance certificate issued by the Kenya Revenue Authority.",
-    "Active / current: annual KRA clearance renewed annually.",
+    "To be confirmed: the current KRA certificate, renewed before the nomination window.",
   ],
   [
     "4. Police clearance certificate (CID/DCI)",
@@ -89,29 +87,29 @@ export const IEBC_CLEARANCES: string[][] = [
   [
     "5. HELB clearance certificate",
     "Certificate of compliance from the Higher Education Loans Board.",
-    "Verified: clear record with no outstanding student debt arrears.",
+    "To be confirmed: the HELB certificate of compliance.",
   ],
   [
     "6. Voter nomination endorsement roll",
-    "500 registered voter signatures from each of the 8 sub-counties, 4,000 in all: the stricter of the two readings the document gave (Elections Act regulations; to be confirmed with counsel).",
-    "Operationalized: Field Ops registering 250 signatures per ward — a 10,000 total buffer roll, clearing either reading.",
+    "500 registered voter signatures from each of the 6 sub-counties, 3,000 in all: the stricter of the two readings (Elections Act regulations; to be confirmed with counsel).",
+    "Planned: Field Ops registering 250 signatures per ward — a 7,500 total buffer roll, clearing either reading.",
   ],
   [
     "7. Party nomination / direct ticket seal",
-    "Certificate of nomination issued by The New Democrats Patriotic Front NEC/NEB.",
+    "Certificate of nomination issued by The New Democrats' National Executive Council or elections board.",
     "[Requires legal confirmation]: exact internal party dispute filing timelines and gazette deadlines.",
   ],
 ];
 
 export const CLEARANCE_SERIES: FigureSeries = {
   id: "iebc-clearance",
-  headline: "Seven clearances at five different stages, and one the campaign will not yet claim",
+  headline: "Seven clearances, none claimed until the paper is in hand",
   measure: "§19.4's IEBC statutory nomination clearance checklist — dimension, statutory standard, current status",
   points: [],
   note:
-    "The status column is the point: two Verified, one Active, one Scheduled, one Pending the " +
-    "filing window, one Operationalized — and one that reads “[Requires legal confirmation]”, " +
-    "the document declining to claim a deadline it has not confirmed.",
+    "The status column is the point: nothing is marked verified until the certificate is in hand. " +
+    "Four are to be confirmed in Week 1, one is scheduled, one is pending the filing window, and one " +
+    "reads “[Requires legal confirmation]”: the document declining to claim what it has not confirmed.",
 };
 
 /* ------------------------------------------------------------------ §5.3.5 the liability matrix */
@@ -192,7 +190,7 @@ export const ROLE_OWNERSHIP: string[][] = [
   ],
   [
     "3. Field Operations & Ground Logistics Lead",
-    "Operational leadership of 8 constituency leads and 40 ward coordinators · market day caravan routes, baraza scheduling and volunteer deployment logistics",
+    "Operational leadership of 6 constituency leads and 30 ward coordinators · market day caravan routes, baraza scheduling and volunteer deployment logistics",
     "Sound truck & PA rig rentals · event staging & marquee company · boda boda stage champions · transport & fuel fleet SACCOs",
   ],
   [

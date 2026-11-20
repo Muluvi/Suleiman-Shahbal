@@ -52,14 +52,14 @@ export const CHANNEL_LABELS: Record<ChannelId, string> = {
 
 /**
  * Derived from the candidate's name and office as the proposal states them
- * ("Hon. Suleiman Shahbal, former Member of the East African Legislative Assembly").
+ * ("Hon. Suleiman Shahbal, Member of the East African Legislative Assembly").
  * Identity, not a claim — no account is asserted to exist; the handle is the one the Week 1
  * channel audit confirms, and stays a placeholder until then.
  */
 export const IDENTITY = {
   displayName: "Suleiman Shahbal",
   fullName: "Hon. Suleiman Shahbal",
-  office: "Former Member, EALA",
+  office: "Member, EALA",
   handle: "@ShahbalForMombasa",
   pageName: "Suleiman Shahbal — Mombasa 2027",
   channelName: "Suleiman Shahbal",
@@ -140,7 +140,7 @@ export const WHATSAPP = {
   contactStatus: "10 Ward Captains",
   dateDivider: "TODAY",
   /**
-   * §8.8.2's four-hour loop describes exactly this dispatch: a localized pledge, then a 45-second
+   * The four-hour field loop describes exactly this dispatch: a localized pledge, then a 45-second
    * audio note voiced by Mr Shahbal, pushed to Ward Captains for peer forwarding. The resident's
    * reply is the single character the SMS sample itself asks for.
    */
@@ -164,7 +164,7 @@ export const WHATSAPP = {
       kind: "voice",
       duration: "0:45",
       time: "07:15",
-      source: "§8.8.2 [CHECK REF] — 45-second audio note voiced by Mr Shahbal, pushed via WhatsApp",
+      source: "Section 15.3 — a short audio note voiced by Mr Shahbal, pushed via WhatsApp",
     },
   ] satisfies WhatsAppMessage[],
   composerPlaceholder: "Message",

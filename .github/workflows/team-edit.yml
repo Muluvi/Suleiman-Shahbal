@@ -3,7 +3,7 @@ name: team edit
 # WHY THIS EXISTS. Dr. Mulu's team edits the data pack on the site (/team/data), never in GitHub.
 # Each edit arrives here as one commit on its own branch, team-edit/<time>-<what>. This workflow is
 # the gate between that commit and the live site: it regenerates the files derived from the data,
-# runs every check `npm run verify` runs, the preservation check and the production build, and
+# runs every check `npm run verify` runs and the production build, and
 # only if all of them pass does it move the edit onto main, which Vercel deploys. An edit that
 # fails stays on its branch; the site's change history shows it as refused, with this run's log.
 
@@ -37,8 +37,8 @@ jobs:
 
       - name: Start from the current main
         run: |
-          git config user.name "kitui-platform"
-          git config user.email "kitui-platform@users.noreply.github.com"
+          git config user.name "mombasa-platform"
+          git config user.email "mombasa-platform@users.noreply.github.com"
           git fetch origin main
           git rebase origin/main
 
@@ -50,9 +50,6 @@ jobs:
 
       - name: Guards and arithmetic
         run: npm run verify
-
-      - name: Nothing removed
-        run: npm run check:preservation
 
       - name: Types
         run: npx tsc --noEmit

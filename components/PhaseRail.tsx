@@ -35,7 +35,7 @@ const DETAIL: Record<string, PhaseDetail> = {
   neg1: {
     id: "neg1",
     objective:
-      "Close the recognition gap outside Mvita ahead of The New Democrats flagbearer decision, which party sources indicate is intended to conclude within the final quarter of 2026.",
+      "Build reach and a ground machine in the close-contest belt ahead of The New Democrats' membership-list deadline of 23 March 2027.",
     highlights: [
       "Week 1 competitive digital baseline audit",
       "The ward-level record tests the central hypothesis before effort is committed",

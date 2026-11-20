@@ -1,3 +1,4 @@
+import { CANONICAL_ORIGIN } from "../site";
 import type { ReactNode } from "react";
 import { CoalitionPath, MapStudio, ParetoWards, PriorityScorer, RegisterGrowth, YouthVoters } from "@/components/tools/kit/votes";
 import { ChannelMix, IssueMatcher, MessageMatrix, OfflineWaterline, WardEquity } from "@/components/tools/kit/reach";
@@ -89,7 +90,7 @@ export const TOOLS: Record<string, Tool> = {
     title: "Channel Mix by Sub-county", lead: "Where the message has to travel by radio and in person, and where SMS or digital can carry it.",
     render: () => <ChannelMix rows={CENSUS_SUBCOUNTIES} county={CENSUS_COUNTY} latest={{ internet: v("ict.internet"), phone: v("ict.phone") }} />,
     does: "For each sub-county, adults are split into online (internet use), phone but not online (phone ownership less internet use) and no phone, from the 2019 census. The modelled option scales each sub-county by the change in the county rates to 2023/24.",
-    doesNot: ["Sub-counties do not map one-to-one onto constituencies.", "Radio listenership by sub-county is not measured, so the radio share is everyone without a phone, not a listener count."],
+    doesNot: ["In Mombasa the census sub-counties and the constituencies are the same six areas.", "Radio listenership by sub-county is not measured, so the radio share is everyone without a phone, not a listener count."],
     sources: [CENSUS, ICT],
   },
   "offline-waterline": {
@@ -163,8 +164,8 @@ export const TOOLS: Record<string, Tool> = {
     sources: [REGISTER, STATIONS, SCORECARD],
   },
   "zone-effort": {
-    title: "Zone Effort Planner", lead: "Split communications effort across the anchor, the north mainland and the arid belt, against where the voters are.",
-    render: () => <ZoneEffort shares={{ anchor: zoneShare("anchor"), mwingi: zoneShare("mwingi"), arid: zoneShare("arid"), rural: zoneShare("none") }} phases={[{ id: "p-1", label: "The nomination sprint" }, { id: "p12", label: "Awareness and persuasion" }, { id: "p3", label: "Mobilisation and turnout" }].map((p) => ({ ...p, anchor: v(`effort.${p.id}.anchor`), mwingi: v(`effort.${p.id}.mwingi`), arid: v(`effort.${p.id}.arid`), rotating: v(`effort.${p.id}.rotating`) }))} />,
+    title: "Zone Effort Planner", lead: "Split communications effort across the anchor, the north mainland and the west belt, against where the voters are.",
+    render: () => <ZoneEffort shares={{ anchor: zoneShare("anchor"), north: zoneShare("north"), west: zoneShare("west"), rural: zoneShare("none") }} phases={[{ id: "p-1", label: "The nomination sprint" }, { id: "p12", label: "Awareness and persuasion" }, { id: "p3", label: "Mobilisation and turnout" }].map((p) => ({ ...p, anchor: v(`effort.${p.id}.anchor`), north: v(`effort.${p.id}.north`), west: v(`effort.${p.id}.west`), rotating: v(`effort.${p.id}.rotating`) }))} />,
     does: "Compares each zone's share of effort with its share of the 2022 register. The starting weights are the plan's own, by phase.",
     doesNot: ["Effort is a share of the team's work, not money.", "Likoni is in no zone; the plan carries it in the rotating share."],
     sources: [REGISTER, PROPOSAL],
@@ -238,7 +239,7 @@ export const TOOLS: Record<string, Tool> = {
   },
   links: {
     title: "Ward Link and QR Builder", lead: "A trackable link and QR code for each ward.",
-    render: () => <LinkBuilder wards={TOOL_WARDS} base="https://dr-makali-digital-campaign.vercel.app/" />,
+    render: () => <LinkBuilder wards={TOOL_WARDS} base={`${CANONICAL_ORIGIN}/`} />,
     does: "Adds the channel, the ward and a campaign tag to any web address, and draws a QR code for each.",
     doesNot: ["It records nothing about the people who open the links.", "Counting visits needs analytics on the page the link opens."],
     sources: [REGISTER],

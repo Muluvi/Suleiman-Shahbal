@@ -8,7 +8,7 @@
  * a boarding pass or a poster, the link on a share image. It never uses VERCEL_URL, because a
  * per-deployment hostname changes on every push and a printed code must keep working.
  */
-export const PRODUCTION_ORIGIN = "https://dr-makali-digital-campaign.vercel.app";
+export const PRODUCTION_ORIGIN = "https://suleiman-shahbal.vercel.app";
 
 export const SITE_ORIGIN =
   process.env.NEXT_PUBLIC_SITE_ORIGIN ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : PRODUCTION_ORIGIN);

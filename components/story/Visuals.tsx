@@ -72,9 +72,9 @@ function Shell({ kicker, title, icon: Icon, children, tone = "accent", className
 /* ------------------------------------------------------------------ 9.1 the claim, and what proves it */
 
 const PROOF: { step: string; text: string; to: string; where: string }[] = [
-  { step: "The premise", text: "Mombasa voters are ready for a leader who understands economics, respects public money, communicates with clarity and respect — and is willing to be measured.", to: "position-sec-9-1", where: "9.1" },
-  { step: "What makes it his", text: "A specialist in verifying whether public expenditure delivers what it promised.", to: "record-sec-6-1", where: "6.1" },
-  { step: "The gap it answers", text: "Unconfirmed balances, pending bills and low development absorption, in the county's own audit record.", to: "spend-sec-3-7", where: "3.7" },
+  { step: "The premise", text: "Mombasa voters have heard promises; they are ready for a governor who finishes what he starts — water at the tap, jobs that stay, bills paid — and is willing to be measured.", to: "position-sec-9-1", where: "9.1" },
+  { step: "What makes it his", text: "A builder's record voters can visit: a bank founded, an investment group run, and the Jomvu SEZ signed.", to: "record-sec-6-1", where: "6.1" },
+  { step: "The gap it answers", text: "Water that does not reach the tap, and pending bills most of which are more than three years old, in the county's own record.", to: "spend-sec-3-7", where: "3.7" },
   { step: "Made visible every day", text: "A public service-delivery tracker: a line on a CV becomes a daily, public demonstration of accountability.", to: "workstreams-sec-15-1-1", where: "15.1.1" },
 ];
 
@@ -234,21 +234,21 @@ export function RoleLens() {
 /* ------------------------------------------------------------------ 12.4 which language goes where */
 
 const LANGS = [
-  { id: "Kiswahili", share: 50, does: "WhatsApp, TikTok, Facebook grassroots, voice notes, radio, USSD — not bulk SMS" },
-  { id: "Kiswahili", share: 30, does: "General social, national reach, SMS" },
-  { id: "English", share: 20, does: "Policy documents, website, X, YouTube, national media" },
+  { id: "Kiswahili", share: 60, does: "WhatsApp, voice notes, radio, USSD, SMS, TikTok, Facebook, the stages" },
+  { id: "English", share: 25, does: "Policy documents, website, X, YouTube, national media, SMS" },
+  { id: "Sheng and Mijikenda", share: 15, does: "TikTok and youth video (Sheng); Radio Kaya and in person (Mijikenda) — not bulk SMS" },
 ];
 const CHANNELS: { id: string; langs: string[]; rule?: string }[] = [
   { id: "WhatsApp", langs: ["Kiswahili"] },
-  { id: "Voice notes", langs: ["Kiswahili"] },
-  { id: "Radio", langs: ["Kiswahili"] },
-  { id: "USSD", langs: ["Kiswahili"] },
-  { id: "TikTok", langs: ["Kiswahili"] },
-  { id: "Facebook", langs: ["Kiswahili", "Kiswahili"] },
-  { id: "Bulk SMS", langs: ["Kiswahili", "English"], rule: "Bulk political SMS cannot be sent in Kiswahili (Section 15.3.3)." },
-  { id: "Website", langs: ["English"] },
+  { id: "Voice notes", langs: ["Kiswahili", "Sheng and Mijikenda"] },
+  { id: "Radio", langs: ["Kiswahili", "Sheng and Mijikenda"] },
+  { id: "USSD", langs: ["Kiswahili", "English"] },
+  { id: "TikTok", langs: ["Kiswahili", "Sheng and Mijikenda"] },
+  { id: "Facebook", langs: ["Kiswahili", "English"] },
+  { id: "Bulk SMS", langs: ["Kiswahili", "English"], rule: "Bulk political SMS carries Kiswahili and English only (Section 15.3.3); Sheng and the Mijikenda languages go by voice note or radio." },
+  { id: "Website", langs: ["English", "Kiswahili"] },
   { id: "X", langs: ["English"] },
-  { id: "YouTube", langs: ["English"] },
+  { id: "YouTube", langs: ["English", "Kiswahili"] },
   { id: "National media", langs: ["English", "Kiswahili"] },
 ];
 
@@ -264,7 +264,7 @@ export function LanguagePicker() {
         {LANGS.map((l, i) => {
           const on = c.langs.includes(l.id);
           return (
-            <li key={l.id} data-on={on ? "true" : "false"} style={{ "--i": i, "--w": l.share / 50 } as React.CSSProperties}>
+            <li key={l.id} data-on={on ? "true" : "false"} style={{ "--i": i, "--w": l.share / 60 } as React.CSSProperties}>
               <span className="sx-langs__name">{on ? <Check size={14} aria-hidden="true" /> : <span className="sx-langs__x" aria-hidden="true">·</span>}{l.id}</span>
               <span className="sx-langs__track"><span className="sx-langs__fill" /></span>
               <span className="sx-langs__share">{l.share}%</span>

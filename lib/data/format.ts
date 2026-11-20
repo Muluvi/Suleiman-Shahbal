@@ -37,6 +37,8 @@ export function formatFigure(f: Figure, mod: FormatMod = ""): string {
   }
   if (f.value === null) return `[DATA NEEDED — ${f.closesWith ?? "source"}]`;
   let v = f.value;
+  // A calendar year prints as written: 2008, not 2,008.
+  if (f.unit === "year") return String(v);
   // A shilling amount prints whole unless it is being scaled to billions.
   let d = f.unit === "ksh" ? 0 : defaultDecimals(f);
   if (mod === "bn") { v = v / 1e9; d = f.decimals ?? 2; }

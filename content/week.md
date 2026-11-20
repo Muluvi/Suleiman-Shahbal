@@ -48,7 +48,7 @@ id: fig-5-7-approval
 
 ## 12.6 A week of publishing, before and after
 
-{{pool.share}}% of the register lives where he has never held office (Section 6.2), and nothing published so far argues his case there.
+{{pool.share}}% of the register lives in the three constituencies decided by under 2,000 votes in 2022 (Section 6.2), and nothing published so far argues his case there.
 
 **Same week. Same events. Same team. Different structure.**
 

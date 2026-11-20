@@ -41,7 +41,7 @@ export const DEFINITIONS: Record<string, string> = {
   "ussd database": "Offline text-based digital voter registration system designed to reach citizens without internet.",
   "aircover": "Continuous community FM radio broadcasting synchronized with SMS networks.",
   "consensus strategy": "Direct delegate alignment to secure 75%+ endorsements without ballot splits.",
-  "delegate nominations": "The New Democrats nomination delegates representing forty constituencies across Mombasa."
+  "delegate nominations": "The New Democrats' nomination delegates from the six constituencies of Mombasa."
 };
 
 const termsUnion = Object.keys(DEFINITIONS).join("|");
