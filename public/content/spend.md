@@ -14,6 +14,10 @@ Mombasa carried **KSh 4.4 billion** in pending bills in 2024, the third-highest 
 
 **Where the money went in FY2025/26.** Wages took **55.1%** of revenue against a legal ceiling of 35%, and only **45.8%** of the development budget was spent: KSh 2.57bn, down from KSh 3.43bn the year before (Controller of Budget, Tier 3, as reported).
 
+**The county's own books.** By its own count the county owed **KSh 3.75bn** in pending bills on 1 July 2025, of which KSh 1.29bn is unpaid salary arrears and statutory deductions; **82%** of the stock dates from before FY2024/25. Its plan for FY2025/26 set aside KSh 400m to pay them; the approved budget gave KSh 119m. In FY2024/25 it received KSh 14.80bn of the KSh 17.36bn it budgeted (85%) (Tier 1, ADP 2026/27).
+
+**The plan the county cannot pay for.** The 2026/27 development plan costs its departments' projects at **KSh 13.76bn** and expects **KSh 4.76bn** to pay for them: a gap of **KSh 9.00bn**, or **65%** unfunded, before a single ward project or flagship is counted. The flagships add **KSh 55.1bn** across 20 projects; 16 of them depend on the Mombasa Investment Corporation finding an investor. The one industrial project under way, the Miritini aggregation centre, is 35% complete, KSh 106m spent of KSh 500m (Tier 1, ADP 2026/27).
+
 **How money is split between wards.** The County Assembly passed a County Equitable Share Bill that would have shared 30% of the roughly **KSh 4 billion** annual development budget equally across the 30 wards; Speaker Aharub Khatri criticised the governor for rejecting it, and an audit found stalled projects and growing pending bills (Tier 2, The Standard). A ward-by-ward record of county spending is not yet in hand.
 
 #### The county's project record: what is in hand

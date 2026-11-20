@@ -23,14 +23,14 @@ const allegianceOf = (alignment: string): Allegiance =>
   /State-owned/.test(alignment) ? "Public / State" : /Royal Media|Standard Group/.test(alignment) ? "Commercial" : "Faith / Community";
 
 const SLOT: Record<string, string> = {
-  "Pwani FM": "Morning drive and evening talk",
+  "Bahari FM": "Morning drive and evening talk",
   "Radio Citizen": "Morning drive and county news",
   "Radio Maisha": "Morning drive and call-in shows",
   "Radio Rahma": "Community programming on water, health and jobs",
   "Radio Salaam": "Community programming on water, health and jobs",
   "Baraka FM": "Community programming on water, health and jobs",
   "Radio Kaya": "Mainland community features",
-  "KBC Pwani": "Civic education and debates",
+  "Pwani FM": "Civic education and debates",
 };
 
 /** Read from data/media-ownership.ts: no frequency or audience share is printed until a source gives one. */

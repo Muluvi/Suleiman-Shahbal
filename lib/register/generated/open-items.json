@@ -1,29 +1,7 @@
 [
   {
     "kind": "data",
-    "gap": "County health outcome indicators (stunting, facility births, access to care) are to be read from the KDHS 2022 Mombasa factsheet; until…",
-    "closes": "KDHS 2022 Mombasa factsheet: stunting",
-    "holder": "To be named",
-    "status": "Open",
-    "where": [
-      "Section 3.3",
-      "Data layer: health.stunting"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "A county youth unemployment rate is a named data gap",
-    "closes": "KNBS Quarterly Labour Force Survey county tables, Mombasa",
-    "holder": "KNBS",
-    "status": "Open",
-    "where": [
-      "Section 3.5",
-      "Data layer: unemployment.youth.county"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "No published audience share for Mombasa is in hand: Radio Rahma , Pwani FM , Baraka FM",
+    "gap": "Station-by-station shares for Mombasa are not published openly: Radio Rahma , Bahari FM , Baraka FM",
     "closes": "KARF or GeoPoll audience report, Coast region: Radio Rahma share",
     "holder": "Audience-research publishers",
     "status": "Open",
@@ -34,18 +12,18 @@
   },
   {
     "kind": "data",
-    "gap": "No published audience share for Mombasa is in hand: Radio Rahma , Pwani FM , Baraka FM",
-    "closes": "KARF or GeoPoll audience report, Coast region: Pwani FM share",
+    "gap": "Station-by-station shares for Mombasa are not published openly: Radio Rahma , Bahari FM , Baraka FM",
+    "closes": "KARF or GeoPoll audience report, Coast region: Bahari FM share",
     "holder": "Audience-research publishers",
     "status": "Open",
     "where": [
       "Section 4.2",
-      "Data layer: radio.pwani"
+      "Data layer: radio.bahari"
     ]
   },
   {
     "kind": "data",
-    "gap": "No published audience share for Mombasa is in hand: Radio Rahma , Pwani FM , Baraka FM",
+    "gap": "Station-by-station shares for Mombasa are not published openly: Radio Rahma , Bahari FM , Baraka FM",
     "closes": "KARF or GeoPoll audience report, Coast region: Baraka FM share",
     "holder": "Audience-research publishers",
     "status": "Open",
@@ -124,16 +102,6 @@
   },
   {
     "kind": "data",
-    "gap": "result.2022.womanrep.zamzam",
-    "closes": "IEBC Form 38C or the gazette notice, Mombasa Woman Representative 2022",
-    "holder": "IEBC",
-    "status": "Open",
-    "where": [
-      "Data layer: result.2022.womanrep.zamzam"
-    ]
-  },
-  {
-    "kind": "data",
     "gap": "audit.ifmis",
     "closes": "Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",
     "holder": "County government or church offices",
@@ -174,16 +142,6 @@
   },
   {
     "kind": "data",
-    "gap": "ict.phone.adult",
-    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership by sex",
-    "holder": "KNBS",
-    "status": "Open",
-    "where": [
-      "Data layer: ict.phone.adult"
-    ]
-  },
-  {
-    "kind": "data",
     "gap": "ict.phone.adult.men",
     "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: men 18+ owning a phone",
     "holder": "KNBS",
@@ -200,16 +158,6 @@
     "status": "Open",
     "where": [
       "Data layer: ict.phone.adult.women"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "reach.phone.adult",
-    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership, applied to the register",
-    "holder": "KNBS",
-    "status": "Open",
-    "where": [
-      "Data layer: reach.phone.adult"
     ]
   },
   {

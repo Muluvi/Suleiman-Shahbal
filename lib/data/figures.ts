@@ -185,7 +185,13 @@ modelled("result.2022.gov.omar.by-constituency", BY_CON_2022.reduce((s, [, , o])
 modelled("result.2022.gov.likoni.margin", v("result.2022.gov.likoni.nassir") - v("result.2022.gov.likoni.omar"), "votes", "Nassir less Omar in Likoni.", { tier: "T2" });
 
 sourced("result.2022.senate.faki", 113_694, "votes", "T2", "IEBC declaration as gazetted (Gazette 9955), via Mzalendo", { note: "Mohamed Faki, ODM." });
-needed("result.2022.womanrep.zamzam", "votes", "IEBC Form 38C or the gazette notice, Mombasa Woman Representative 2022");
+// The Woman Representative race was held on 9 August 2022, with the presidential vote; the governor's
+// race was postponed to 29 August. Comparing the two shows how many voters the postponement lost.
+sourced("result.2022.womanrep.zamzam", 116_008, "votes", "T1", "IEBC declaration, Kenya Gazette Notice 9951 (2022), via Mzalendo", { asOf: "2022-08", note: "Zamzam Mohamed Chimba, ODM, elected Woman Representative." });
+sourced("result.2022.womanrep.barayan", 83_115, "votes", "T2", "Equal Politics 2022 results tracker", { asOf: "2022-08", note: "Fatma Barayan, second." });
+sourced("result.2022.womanrep.abdalla", 35_640, "votes", "T2", "Equal Politics 2022 results tracker", { asOf: "2022-08", note: "Amina Abdalla, third." });
+modelled("result.2022.womanrep.total", 116_008 + 83_115 + 35_640, "votes", "The three Woman Representative candidates' votes, 9 August 2022.", { tier: "T2" });
+modelled("turnout.postponement.lost", v("result.2022.womanrep.total") - v("result.2022.gov.valid"), "votes", "Woman Representative votes on 9 August less valid governor votes on 29 August 2022: the voters the postponement lost, at least.", { tier: "T2" });
 
 sourced("result.2017.gov.joho", 221_177, "votes", "T1", HC_2018, { asOf: "2017-08", note: "Hassan Joho, ODM, as recited by the election court." });
 sourced("result.2017.gov.shahbal", 69_515, "votes", "T1", HC_2018, { asOf: "2017-08", note: "Suleiman Shahbal, Jubilee." });
@@ -556,21 +562,17 @@ const GDS_M = "County Gender Data Sheet: Mombasa (KNBS and UN Women), if publish
 for (const [id, unit, closes] of [
   ["population.2030", "people", "KNBS county population projection, Mombasa, 2030"],
   ["register.women.share", "percent", "IEBC 2022 register by sex, Mombasa"],
-  ["ict.phone.adult", "percent", `${GDS_M}: adult phone ownership by sex`],
   ["ict.phone.adult.men", "percent", `${GDS_M}: men 18+ owning a phone`],
   ["ict.phone.adult.women", "percent", `${GDS_M}: women 18+ owning a phone`],
-  ["reach.phone.adult", "voters", `${GDS_M}: adult phone ownership, applied to the register`],
-  ["health.stunting", "percent", "KDHS 2022 Mombasa factsheet: stunting"],
   ["health.typhoid.2025", "count", "Mombasa County Department of Health, disease surveillance, 2025"],
   ["health.typhoid.2024", "count", "Mombasa County Department of Health, disease surveillance, 2024"],
   ["literacy.county", "percent", "KNBS county literacy table (2019 Census or KDHS 2022)"],
-  ["unemployment.youth.county", "percent", "KNBS Quarterly Labour Force Survey county tables, Mombasa"],
   ["scorecard.claimed", "count", "Mombasa County Government's own published delivery scorecard or annual progress report"],
   ["scorecard.itemised", "count", "Mombasa County Annual Development Plan and progress report: itemised projects with cost and ward"],
   ["scorecard.attributed.ksh", "ksh", "Mombasa County progress report: itemised spend by constituency"],
   ["radio.rahma", "percent", "KARF or GeoPoll audience report, Coast region: Radio Rahma share"],
   ["radio.salaam", "percent", "KARF or GeoPoll audience report, Coast region: Radio Salaam share"],
-  ["radio.pwani", "percent", "KARF or GeoPoll audience report, Coast region: Pwani FM share"],
+  ["radio.bahari", "percent", "KARF or GeoPoll audience report, Coast region: Bahari FM share"],
   ["radio.baraka", "percent", "KARF or GeoPoll audience report, Coast region: Baraka FM share"],
   ["radio.citizen", "percent", "KARF or GeoPoll audience report, Coast region: Radio Citizen share"],
   ["radio.kaya", "percent", "KARF or GeoPoll audience report, Coast region: Radio Kaya share"],
@@ -587,6 +589,72 @@ sourced("water.safe.2009", 73.9, "percent", "T1", "Commission on Revenue Allocat
 sourced("water.safe.2019", 56.6, "percent", "T1", "Commission on Revenue Allocation, Kenya County Fact Sheets (3rd ed.), from the 2009 and 2019 censuses", { decimals: 1, note: "Households with safe drinking water, 2019: 24th of 47." });
 sourced("edu.none.women", 11.3, "percent", "T1", "KNBS and ICF, KDHS 2022 Volume 1 (erratum, January 2024), female schooling by county", { decimals: 1, note: "Women aged 6+ with no education, Mombasa; 14.2% have more than secondary." });
 sourced("radio.coast.weekly", 73, "percent", "T1", "Communications Authority, Audience Measurement and Industry Trends Report Q2 FY2023/24", { decimals: 0, note: "Share of Coast residents who listen to radio." });
+
+const ADP = "County Government of Mombasa, Annual Development Plan 2026/27";
+const KDHS = "KNBS and ICF, KDHS 2022 Key Indicators, county table";
+// ---- health and people: KDHS 2022, Mombasa column
+sourced("health.stunting", 14, "percent", "T1", KDHS, { decimals: 0, note: "Children under five who are stunted. Kenya: 18%." });
+sourced("health.stunting.kenya", 18, "percent", "T2", "Amref Health Africa, citing KDHS 2022", { decimals: 0 });
+sourced("health.sanitation.basic", 47, "percent", "T1", KDHS, { decimals: 0, note: "Household population with at least basic sanitation." });
+sourced("health.fuel.clean", 42, "percent", "T1", KDHS, { decimals: 0, note: "Household population relying on clean cooking fuels and technologies." });
+sourced("health.teen-pregnancy", 9, "percent", "T1", KDHS, { decimals: 0, note: "Women 15–19 who have ever been pregnant. Kenya: 15%." });
+sourced("health.vaccinated", 93, "percent", "T1", KDHS, { decimals: 0, note: "Children 12–23 months with all basic vaccinations." });
+sourced("health.skilled-birth", 96, "percent", "T1", KDHS, { decimals: 0, note: "Births attended by a skilled provider." });
+sourced("health.u5-mortality", 50, "count", "T1", KDHS, { note: "Deaths before age five per 1,000 live births (the ten years before KDHS 2022)." });
+sourced("health.mpox.2025", 98, "count", "T2", "Citizen Digital and The Standard, 11 July 2025", { asOf: "2025-07", note: "Mombasa's Mpox cases, of 226 in Kenya, with two deaths; most in Nyali and Changamwe." });
+sourced("health.mpox.kenya.2025", 226, "count", "T2", "Citizen Digital, 11 July 2025", { asOf: "2025-07" });
+sourced("edu.none.women.adult", 7, "percent", "T1", KDHS, { decimals: 0, note: "Women 15–49 with no formal education." });
+sourced("edu.none.men.adult", 3, "percent", "T1", KDHS, { decimals: 0, note: "Men 15–49 with no formal education." });
+sourced("ict.phone.adult", 97.1, "percent", "T2", "Kenya Food Systems Dashboard (Ministry of Agriculture), from KDHS 2022", { decimals: 1, asOf: "2022", note: "Adults owning a mobile phone, Mombasa. The split by sex is in the CA's analytical report on ICT in KDHS 2022." });
+modelled("reach.phone.adult", Math.round((v("register.2022") * 97.1) / 100 / 1000) * 1000, "voters", "Adult phone ownership (97.1%) applied to the 2022 register, rounded: the voters a phone channel can reach in principle.", { tier: "T2" });
+
+// ---- jobs
+sourced("unemployment.youth.county", 44, "percent", "T2", "The Star (13 February 2025) and The Standard (11 December 2025), citing local labour assessments", { decimals: 0, note: "Youth unemployment in Mombasa: almost double the national average." });
+sourced("unemployment.youth.nassir.jobless", 163_208, "people", "T2", "Abdulswamad Nassir, then Mvita MP, as reported by The Star, 1 June 2022", { asOf: "2022-06", note: "The governor's own count of unemployed young people in Mombasa, before he was elected." });
+sourced("unemployment.youth.nassir.youth", 347_250, "people", "T2", "Abdulswamad Nassir, then Mvita MP, as reported by The Star, 1 June 2022", { asOf: "2022-06" });
+modelled("unemployment.youth.nassir.share", pct(163_208, 347_250), "percent", "The governor's own 2022 figures: 163,208 of 347,250 young people.", { decimals: 0, tier: "T2" });
+
+// ---- the county's own plan: ADP 2026/27
+sourced("budget.pending-bills.2025-07", 3_750_112_058, "ksh", "T1", ADP, { asOf: "2025-07", decimals: 2, note: "Pending bills at 1 July 2025, Table 2.4: development KSh 1.31bn, goods and services KSh 1.14bn, salary arrears and statutory deductions KSh 1.29bn, tax KSh 8.8m." });
+sourced("budget.pending-bills.inherited", 3_085_971_108, "ksh", "T1", ADP, { asOf: "2025-07", decimals: 2, note: "The part of the 1 July 2025 stock carried from FY2023/24 and earlier." });
+modelled("budget.pending-bills.inherited.share", pct(3_085_971_108, 3_750_112_058), "percent", "Bills from before FY2024/25 / the stock at 1 July 2025.", { decimals: 0 });
+sourced("budget.pending-bills.salary", 1_289_516_702, "ksh", "T1", ADP, { asOf: "2025-07", decimals: 2, note: "Unpaid salary arrears and statutory deductions owed to staff and to statutory bodies." });
+sourced("budget.pending-bills.service.plan", 400e6, "ksh", "T1", ADP, { asOf: "2025-26", decimals: 0, note: "What the FY2025/26 plan set aside to pay pending bills." });
+sourced("budget.pending-bills.service.budget", 119.3e6, "ksh", "T1", ADP, { asOf: "2025-26", decimals: 1, note: "What the approved FY2025/26 budget actually allocated." });
+sourced("budget.revenue.2024-25.budget", 17.36e9, "ksh", "T1", ADP, { asOf: "2024-25", decimals: 2 });
+sourced("budget.revenue.2024-25.actual", 14_798_536_568, "ksh", "T1", ADP, { asOf: "2024-25", decimals: 2, note: "Revenue actually received in FY2024/25, Table 2.2." });
+modelled("budget.revenue.2024-25.share", pct(14_798_536_568, 17.36e9), "percent", "Revenue received / revenue budgeted, FY2024/25.", { decimals: 0 });
+sourced("adp.requirement", 13_760_950_000, "ksh", "T1", ADP, { asOf: "2026-27", decimals: 2, note: "Cost of the departments' costed projects for FY2026/27, Table 4.2; health KSh 4.36bn is the largest." });
+sourced("adp.funded", 4_760_706_012, "ksh", "T1", ADP, { asOf: "2026-27", decimals: 2, note: "Estimated revenue available for them, Table 4.4." });
+sourced("adp.gap", 9_000_243_988, "ksh", "T1", ADP, { asOf: "2026-27", decimals: 2, note: "The resource gap, before ward-based and flagship projects (Table 4.4)." });
+modelled("adp.gap.share", pct(9_000_243_988, 13_760_950_000), "percent", "Unfunded share of the costed plan.", { decimals: 0 });
+sourced("adp.revenue.2026-27", 15.5e9, "ksh", "T1", ADP, { asOf: "2026-27", decimals: 1, note: "Projected FY2026/27 revenue: equitable share KSh 8.38bn, grants KSh 1.3bn, own-source KSh 5.82bn (Table 4.3)." });
+sourced("adp.osr.2026-27", 5_816_614_719, "ksh", "T1", ADP, { asOf: "2026-27", decimals: 2 });
+// Flagships, ADP Section 3.14: twenty projects, seventeen costed. Sixteen are to be delivered through
+// the Mombasa Investment Corporation and are measured first by whether an investor is secured.
+const FLAGSHIP_KSH = [15e9, 6.2e9, 1e9, 4e9, 1e9, 10e9, 0.5e9, 10e9, 2e9, 1e9, 1.5e9, 0.5e9, 0.3e9, 1e9, 0.5e9, 0.5e9, 0.07e9];
+modelled("adp.flagship.ksh", FLAGSHIP_KSH.reduce((a, b) => a + b, 0), "ksh", "The seventeen costed flagship projects in ADP 2026/27 Section 3.14 added up; three more are 'to be confirmed' or donor-funded.", { decimals: 1, source: ADP });
+sourced("adp.flagship.count", 20, "count", "T1", ADP, { note: "Flagship projects listed for 2023–2027." });
+sourced("adp.flagship.investor", 16, "count", "T1", ADP, { note: "Flagships to be delivered through the Mombasa Investment Corporation, measured first by 'investor secured'." });
+sourced("adp.flagship.industrial-park", 15e9, "ksh", "T1", ADP, { decimals: 0, note: "Mombasa Industrial Park, Jomvu: the largest flagship." });
+sourced("adp.aggregation.complete", 35, "percent", "T1", ADP, { decimals: 0, note: "County aggregation centre and industrial park, Miritini: 35% complete; KSh 106m spent of KSh 500m planned (Table 2.6)." });
+sourced("adp.aggregation.spent", 106e6, "ksh", "T1", ADP, { decimals: 0 });
+sourced("adp.aggregation.plan", 500e6, "ksh", "T1", ADP, { decimals: 0 });
+// What residents raised at the ADP 2026/27 public hearings, share of issues (Section 3.17).
+for (const [id, value] of [["health", 18], ["water", 13], ["roads", 12], ["lighting", 11], ["education", 10], ["waste", 8], ["youth", 7], ["markets", 6]] as [string, number][])
+  sourced(`adp.issues.${id}`, value, "percent", "T1", ADP, { decimals: 0, note: "Share of issues raised at the ADP 2026/27 public hearings." });
+sourced("adp.wards.ranked", 30, "count", "T1", ADP, { note: "Ranked ward priorities in Section 3.16: 30 entries covering 28 wards (Miritini and Mikindani appear twice; Mkomani and Kadzandani are missing)." });
+
+// ---- water: the dam's cost from the funder
+sourced("water.mwache.cost.usd-m", 266.76, "count", "T1", "World Bank, Implementation Status and Results Report, Coastal Region Water Security and Climate Resilience Project (P145559), December 2024", { decimals: 2, note: "US$ million: Component 1, Mwache Dam and related infrastructure. The whole Mwache water project, with treatment plant and transmission, is about €490m (EIB)." });
+
+// ---- the candidate and his party
+sourced("record.born", 1960, "year", "T2", "Wikipedia, Suleiman Shahbal", { note: "Born 6 September 1960 in Mombasa." });
+sourced("record.gab.incorporated", 2006, "year", "T1", "Gulf African Bank, corporate history", { note: "Incorporated 9 August 2006; opened 8 January 2008 as Kenya's first fully fledged Islamic bank." });
+sourced("record.eala.elected", 2022, "year", "T2", "People Daily, 17 November 2022", { note: "Elected to EALA by Parliament on 17 November 2022; chair of the Communication, Trade and Investment Committee from 30 January 2023 (The Star)." });
+sourced("record.kncci.award", 2023, "year", "T2", "The Star, Citizen Digital and The Standard, December 2023", { note: "KNCCI Distinguished Honorary Award, Mombasa Business Awards, Sarova Whitesands." });
+sourced("party.tnd.registered", 2012, "year", "T2", "TransTally party profile (Registrar of Political Parties register)", { note: "The New Democrats: certificate issued 9 May 2012; symbol a bridge; colours red, brown and blue; slogan 'Together We Can'." });
+sourced("party.mca.claim", 24, "count", "T3", "Suleiman Shahbal, interview, 3 October 2026, as reported by People Daily", { asOf: "2026-10", note: "His claim that 24 of Mombasa's 30 elected MCAs want to work with his party. A claim, not a count." });
 
 // The scorecard projects by ward (analysis Stage 14) carry no Mombasa rows until a county project
 // register is in hand; the loop stays so a register dropped into the export flows straight through.

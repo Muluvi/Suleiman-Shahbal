@@ -61,7 +61,7 @@ items:
   - label: "**Faith broadcasters carry trust as well as reach**:"
     text: "Islamic stations such as **Radio Rahma** and **Radio Salaam**, and the Catholic **Baraka FM**. They are approached for community and service-delivery programming, never for partisan placement."
   - label: "**National commercial stations broadcast in Kiswahili on the coast**:"
-    text: "**Pwani FM** and **Radio Citizen** (Royal Media Services) and **Radio Maisha** (Standard Group). These are the paid placement targets."
+    text: "**Bahari FM** and **Radio Citizen** (Royal Media Services) and **Radio Maisha** (Standard Group). These are the paid placement targets."
   - label: "**No Mombasa station's political ownership is assumed**:"
     text: "Ownership is mapped from the Communications Authority's register of licensees and company records before any booking, and every station's posture is recorded in `data/media-ownership.ts`."
 ```
@@ -70,18 +70,18 @@ items:
 
 | Station | Language | Ownership association | Campaign posture |
 |---|---|---|---|
-| **Pwani FM** | Kiswahili | Royal Media Services | **Priority — commercial, coast-wide reach** |
+| **Bahari FM** | Kiswahili | Royal Media Services | **Priority — commercial, coast-wide reach** |
 | **Radio Citizen** | Kiswahili | Royal Media Services | **Priority — national reach, strong at the coast** |
 | **Radio Maisha** | Kiswahili | Standard Group | Priority — commercial |
 | **Radio Rahma** | Kiswahili | Islamic community broadcaster | Community and service-delivery programming; no partisan placement |
 | **Radio Salaam** | Kiswahili | Islamic broadcaster | As above |
 | **Baraka FM** | Kiswahili | Catholic Archdiocese of Mombasa | As above |
 | **Radio Kaya** | Mijikenda languages | Community broadcaster | Secondary — the Mijikenda audience on the mainland |
-| **KBC Pwani** | Kiswahili | Public broadcaster | Institutional coverage |
+| **Pwani FM** | Kiswahili | Kenya Broadcasting Corporation (public broadcaster) | Institutional coverage and civic programming |
 
-**What it means for the campaign:** the paid radio plan runs through Pwani FM, Radio Citizen and Radio Maisha; the faith stations are partners for programming on water, health and jobs, where trust matters more than reach.
+**What it means for the campaign:** the paid radio plan runs through Bahari FM, Radio Citizen and Radio Maisha; the faith stations are partners for programming on water, health and jobs, where trust matters more than reach.
 
-> **Listenership.** No published audience share for Mombasa is in hand: Radio Rahma {{radio.rahma}}, Pwani FM {{radio.pwani}}, Baraka FM {{radio.baraka}}. The record that would close it is a KARF or GeoPoll audience report for the Coast. Until then the stations are ranked by reach as their owners describe it, and no booking is sized on a share.
+> **Listenership.** Station-by-station shares for Mombasa are not published openly: Radio Rahma {{radio.rahma}}, Bahari FM {{radio.bahari}}, Baraka FM {{radio.baraka}}. What is public: {{radio.coast.weekly}}% of Coast residents listen to radio (Tier 1, Communications Authority); Radio Kaya and Msenangu FM led the Coast's vernacular stations in 2024 (Tier 2, GeoPoll), and Bahari FM led the Coast in a separate 2025 tracker (Tier 2). The record that would close it is a KARF or GeoPoll audience report for the Coast. Until then the stations are ranked by reach as their owners describe it, and no booking is sized on a share.
 
 Ownership associations are publicly reported rather than certified, and ownership changes. The certifiable records are the Communications Authority's register of broadcast licensees and the Business Registration Service's company records.
 
@@ -147,7 +147,7 @@ items:
   - title: "Kiswahili radio"
     fields:
       - { label: "Reach", text: "no Coast audience share is in hand (Section 4.2); stations are ranked by their own reach claims until a KARF or GeoPoll report is." }
-      - { label: "The stations", text: "*   *Pwani FM and Radio Citizen (Royal Media Services):* coast-wide reach in Kiswahili. **Priority placement.**\n    *   *Radio Maisha (Standard Group):* commercial, Kiswahili. **Priority placement.**\n    *   *Radio Rahma, Radio Salaam and Baraka FM:* faith broadcasters; programming on water, health and jobs, never partisan placement." }
+      - { label: "The stations", text: "*   *Bahari FM and Radio Citizen (Royal Media Services):* coast-wide reach in Kiswahili. **Priority placement.**\n    *   *Radio Maisha (Standard Group):* commercial, Kiswahili. **Priority placement.**\n    *   *Radio Rahma, Radio Salaam and Baraka FM:* faith broadcasters; programming on water, health and jobs, never partisan placement." }
       - { label: null, text: "**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   *Morning interviews:* studio interviews with Mr Shahbal in the weeks a policy is launched.\n    *   *Kiswahili spots and testimonials:* 45-second stories from traders in Kongowea, water vendors' customers in Mikindani and young people in Kisauni, on what his plan changes for them." }
   - title: "SMS and USSD"
     head: { label: "Reach", text: "{{ict.phone}}% of residents owned a mobile phone in 2019 (Tier 1); a feature phone is enough for SMS and USSD." }
