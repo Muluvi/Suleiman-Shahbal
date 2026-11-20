@@ -372,14 +372,15 @@
   z-index: 2;
   bottom: 0;
   right: -4vw;
-  height: 64svh;
-  aspect-ratio: 971 / 1600;
+  width: max-content;
+  height: min(64svh, 55vw);
+  background: radial-gradient(ellipse at 55% 76%, color-mix(in oklch, var(--pf-accent) 19%, transparent), transparent 68%);
   transform: translate3d(0, calc(var(--p, 0) * 60%), 0);
   opacity: clamp(0, calc(1 - (var(--p, 0) - 0.08) * 5), 1);
   pointer-events: none;
 }
 .pf-hero[data-story="true"] .pf-hero__portrait { will-change: transform, opacity; }
-.pf-hero__portrait img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+.pf-hero__portrait img { display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: bottom; filter: drop-shadow(0 1.25rem 1.75rem rgb(0 0 0 / 18%)); }
 
 .pf-hero__copy {
   position: relative;
@@ -508,7 +509,7 @@
   .pf-hero__portrait {
     left: 29vw;
     right: auto;
-    height: 84svh;
+    height: min(78svh, 48vw);
     transform: translate3d(0, calc(var(--p, 0) * 8%), 0);
     opacity: clamp(0.18, calc(1 - (var(--p, 0) - 0.35) * 2.2), 1);
   }
@@ -623,11 +624,12 @@
   z-index: 2;
   right: -6vw;
   bottom: 0;
-  height: 66svh;
-  aspect-ratio: 1055 / 1600;
+  width: max-content;
+  height: min(66svh, 52vw);
+  background: radial-gradient(ellipse at 55% 78%, color-mix(in oklch, var(--pf-earth) 17%, transparent), transparent 68%);
   transform: translate3d(0, calc(var(--t, 0) * -4vh), 0);
 }
-.pf-act__portrait img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+.pf-act__portrait img { display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: bottom; filter: drop-shadow(0 1.25rem 1.75rem rgb(0 0 0 / 18%)); }
 .pf-act__copy { position: relative; z-index: 3; margin-top: 0.75rem; max-width: 22rem; }
 .pf-act__count { font: 600 0.8125rem/1.2 var(--pf-display); color: var(--pf-muted); }
 .pf-act__title {
@@ -649,7 +651,7 @@
   .pf-act { align-content: center; padding: 0 var(--pf-gutter); grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
   .pf-act__numeral { position: absolute; left: 44%; top: 50%; translate: 0 -50%; font-size: clamp(12rem, 18vw, 17rem); }
   .pf-act__copy { max-width: 36rem; margin-top: 0; }
-  .pf-act__portrait { right: 4vw; height: 90svh; }
+  .pf-act__portrait { right: 4vw; height: min(78svh, 44vw); }
   .pf-act__county { right: 0; width: 46vw; top: 5%; }
 }
 
@@ -1695,7 +1697,7 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
   .pf-hero__title { max-width: 11ch; font-size: clamp(2.25rem, 12vw, 3.35rem); line-height: .94; }
   .pf-hero__sub { max-width: 32ch; margin-top: 0.75rem; font-size: 1rem; line-height: 1.45; }
   .pf-seal { margin-bottom: 1rem; font-size: 0.6875rem; }
-  .pf-hero__portrait { right: -12vw; height: 54svh; max-width: 78vw; }
+  .pf-hero__portrait { right: -12vw; height: min(46svh, 52vw); }
   /* Below the subtitle and left of the portrait, so no line of copy sits on a ward fill. */
   .pf-hero__county > svg { inset: 44% 30% 8% 0; width: 70%; height: 48%; }
   .pf-hero__steps { left: var(--pf-gutter); right: var(--pf-gutter); bottom: calc(var(--pf-dock-h) + 1rem + env(safe-area-inset-bottom)); }
@@ -1707,7 +1709,7 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
   .pf-bn__label, .pf-bn__note { max-width: 34ch; }
   .pf-act { min-width: 0; padding: 3.5rem var(--pf-gutter) 2rem; }
   .pf-act__copy, .pf-act__title, .pf-act__dek { max-width: 100%; }
-  .pf-act__portrait { max-width: 72vw; }
+  .pf-act__portrait { right: -8vw; height: min(48svh, 68vw); }
   .pf-fig--hero { padding: 1.5rem 1rem 1.5rem; }
   .pf-fig__title { font-size: clamp(1.35rem, 6vw, 1.8rem); line-height: 1.08; }
   .pf-fig__body, .pf-fig__takeaway { max-width: 100%; }
@@ -1719,6 +1721,7 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
 
 @media (max-width: 380px) {
   :root { --pf-gutter: 0.875rem; }
+  .pf-hero__portrait { right: -8vw; height: min(42svh, 54vw); }
   .pf-hero__title { font-size: clamp(2rem, 11.5vw, 2.8rem); }
   .pf-hero__sub { font-size: .95rem; }
   .pf-step { font-size: 0.8125rem; }

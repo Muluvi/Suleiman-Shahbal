@@ -44,7 +44,7 @@ export function CoverHero({ byline, children }: { byline?: ReactNode; children?:
           </div>
 
           <div className="pf-hero__portrait">
-            <Portrait id="hero-clasped-hands" sizes="(min-width: 1024px) 34vw, 78vw" priority />
+            <Portrait id="hero-clasped-hands" sizes="(min-width: 1024px) 50vw, 56vw" priority />
           </div>
 
           <div className="pf-hero__copy">
