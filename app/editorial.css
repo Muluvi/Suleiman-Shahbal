@@ -1056,13 +1056,18 @@
 
 /* Keep long-form reading comfortably narrow while giving figures room to breathe. */
 .flow-body .prose {
-  max-width: 66ch;
+  max-width: 68ch;
   margin-inline: auto;
   font-size: clamp(1.0625rem, 1rem + 0.22vw, 1.1875rem);
-  line-height: 1.62;
+  line-height: 1.68;
   text-wrap: pretty;
   }
 .flow-body .prose :is(h1, h2, h3, h4) { text-wrap: balance; }
+.flow-body .prose p:not(.not-prose *) { margin-block: 0 1.2em; }
+.flow-body .prose :is(h2, h3, h4):not(.not-prose *) { margin-block: 2.2em 0.7em; }
+.flow-body .prose :is(ul, ol):not(.not-prose *) { margin-block: 0.8em 1.4em; }
+.flow-body .prose :is(li, li p):not(.not-prose *) { line-height: 1.62; }
+.flow-body .prose :is(li + li):not(.not-prose *) { margin-top: 0.35em; }
 @media (min-width: 640px) { .pf-shell { padding-inline: 2rem; } }
 @media (min-width: 1024px) { .pf-shell { padding-inline: 3.5rem; } }
 /* D-07: the dock's band is reserved at the end of the document. */

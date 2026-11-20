@@ -2309,8 +2309,16 @@ button, a, input, select, textarea, [role="button"], .cursor-pointer {
   /* Vertical rhythm. Every margin under .prose is a multiple of this, so spacing is one
      decision rather than a per-element guess — and the reading-density control below moves the
      whole document by changing the multiplier, not by restating each rule. */
-  --rhythm: 0.5rem;
+  --rhythm: 0.625rem;
   --rhythm-scale: 1;
+
+  /* Semantic reading-surface tokens keep long-form pages consistent across routes. */
+  --surface-canvas: #f7f5f0;
+  --surface-paper: #fffefa;
+  --text-primary: #18201f;
+  --text-secondary: #56605d;
+  --text-tertiary: #737a76;
+  --border-subtle: rgb(24 32 31 / 12%);
 
   /* Fluid type. Rebased to 16px at 360px viewport, interpolating to 1280px desktop.
      The three steps below body were each a notch lower than this document can carry. Its
@@ -2335,8 +2343,8 @@ button, a, input, select, textarea, [role="button"], .cursor-pointer {
   --fs-display:  clamp(2.25rem, 1.50rem + 4.5vw,  4.5rem);   /* 36 → 72px */
 
   /* Page gutter and the gap between sections, both fluid on the same interval. */
-  --gutter: clamp(0.875rem, 0.55rem + 1.5vw, 2.5rem);
-  --section-gap: clamp(1.75rem, 1.1rem + 2.6vw, 3.5rem);
+  --gutter: clamp(1rem, 0.65rem + 1.7vw, 2.5rem);
+  --section-gap: clamp(2rem, 1.25rem + 2.8vw, 4rem);
 
   /* Comfortable line length for running prose. Wide elements (tables, ASCII figures, charts)
      opt out via .prose-wide so they still use the full shell width. */
