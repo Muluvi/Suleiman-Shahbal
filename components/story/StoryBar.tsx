@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { BookOpen, ChevronRight, Compass, Database, LogIn, PenLine, Sparkles, Table2, Users, X } from "lucide-react";
 import { useChromeVisible } from "../../hooks/use-chrome-visible";
 import { TOOL_META } from "@/lib/tools/meta";
@@ -35,8 +36,9 @@ export function StoryBar({ onJump }: { onJump: (sectionId: string) => void }) {
     <>
       <header className="sx-bar-top print:hidden" data-hidden={visible || sheet ? "false" : "true"}>
         <div className="sx-brand">
-          <a href="#section-welcome" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-            <b>Mombasa 2027</b>
+          <a className="sx-brand__identity" href="#section-welcome" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} aria-label="The New Democrats — Mombasa 2027">
+            <span className="sx-brand__emblem"><Image src="/brand/tnd-logo.png" alt="" width={32} height={42} /></span>
+            <span className="sx-brand__name"><b>The New Democrats</b><small>Mombasa 2027 · Together We Can</small></span>
           </a>
           {live?.lastChange ? (
             <button type="button" className="sx-brand__live" data-tour="live" onClick={() => onJump(FEED_HOME)}>

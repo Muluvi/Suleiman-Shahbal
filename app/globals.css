@@ -2122,16 +2122,16 @@ span[data-fold-body][hidden] { display: inline-block; }
   --paper: oklch(0.972 0.012 85); /* warm paper, a faint sisal tint */
   --card: oklch(1 0 0);
   --line: oklch(0.88 0.015 85);
-  --accent: oklch(0.43 0.20 265); /* Wiper royal blue, deep: text and stroke, 7.9:1 on paper */
-  --accent-solid: oklch(0.47 0.21 265); /* as a fill: 7.3:1 against --on-accent */
+  --accent: #0B3C75;
+  --accent-solid: #0B3C75;
   --on-accent: oklch(1 0 0);
   /* The field. Cooler hue, a third of the chroma: a rival's 37.4% must never look more
      energetic than the campaign's own 22.1%. Distinct from accent for a deuteranope too,
      because the separation is lightness and chroma, not just hue. */
   --rival: oklch(0.49 0.045 205);
   --rival-solid: oklch(0.50 0.04 205); /* 5.9:1 against white */
-  --gold: oklch(0.50 0.15 40);    /* laterite, darker: the pool, the gap. 5.9:1 on paper */
-  --gold-solid: oklch(0.53 0.15 40); /* as a fill: white sits on it at 5.7:1 */
+  --gold: #C41E3A;
+  --gold-solid: #C41E3A;
   --on-gold: oklch(1 0 0);
   --align-a: #b3121e;   /* alignment category A — 7.1:1 on white */
   --align-b: #8a4a06;   /* alignment category B — 7.0:1 on white */
@@ -2196,13 +2196,13 @@ span[data-fold-body][hidden] { display: inline-block; }
   --paper: oklch(0.16 0.03 262); /* deep indigo-black, not pure black */
   --card: oklch(0.205 0.032 262); /* one step lighter than the ground */
   --line: oklch(0.31 0.03 262);
-  --accent: oklch(0.74 0.14 262); /* Wiper royal blue, bright enough for text: 7.7:1 on card */
-  --accent-solid: oklch(0.50 0.20 265); /* the fill stays dark in both themes; white sits on it at 6.3:1 */
+  --accent: #79B6F2;
+  --accent-solid: #0B3C75;
   --on-accent: oklch(1 0 0);
   --rival: oklch(0.74 0.04 200);
   --rival-solid: oklch(0.50 0.04 205);
-  --gold: oklch(0.74 0.13 45);    /* laterite: text and stroke, 7.4:1 on card */
-  --gold-solid: oklch(0.53 0.15 40); /* the fill stays dark in both themes; white sits on it at 5.7:1 */
+  --gold: #FF7788;
+  --gold-solid: #9E1830;
   --on-gold: oklch(1 0 0);
   --align-a: #ff6b73;   /* the same three categories, lifted to read on the dark ground */
   --align-b: #f0a742;

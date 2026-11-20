@@ -50,14 +50,14 @@ export const viewport: Viewport = {
   maximumScale: 5,
   viewportFit: 'cover',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f9f5ed' },
-    { media: '(prefers-color-scheme: dark)', color: '#060d1a' },
+    { media: '(prefers-color-scheme: light)', color: '#FCFAFA' },
+    { media: '(prefers-color-scheme: dark)', color: '#081839' },
   ],
 };
 
-const TITLE = 'Mombasa 2027 — The campaign’s data, analysis and plan';
+const TITLE = 'Mombasa 2027 — The New Democrats';
 const DESCRIPTION =
-  'Built by Firefly Management for Hon. Suleiman Shahbal, gubernatorial aspirant, Mombasa County, and for his team. Open to view; the team signs in to edit.';
+  'The campaign data, analysis and plan platform for Hon. Suleiman Shahbal’s 2027 bid for Governor of Mombasa, presented in The New Democrats brand.';
 
 /**
  * The share card, and why there is one.
