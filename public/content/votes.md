@@ -30,7 +30,9 @@ Abdulswamad Nassir won 2022 with **119,083 votes** against Hassan Omar's **98,10
 *   **Governor, 2017:** Hassan Joho (ODM) was re-elected with **221,177 votes**; Suleiman Shahbal (Jubilee) was second with **69,515** and Hassan Omar (Wiper) third with **43,787** (Tier 1, as recited in *Hassan Omar Hassan v IEBC* [2018] KEHC 8291). The election court upheld the result.
 *   **Governor, 2022:** Abdulswamad Nassir (ODM) won with **119,083 votes** of 221,148 valid votes; Hassan Omar (UDA) was runner-up with **98,105** (Tier 2). A second published total of 98,108 is a media variant; Form 37C settles it. The other five candidates received under 1,000 each, led by Hezron Awiti (VDP) with 875. Mr Shahbal sought the ODM ticket and stepped down in Nassir's favour.
 *   **President, 2022 (Mombasa):** Raila Odinga took **58.07%** and William Ruto **41.00%**; George Wajackoyah 0.76% and David Mwaure 0.17% (Tier 1, IEBC Form 34C county summary). Vote totals are to be read from the same form.
-*   **Senator, 2022:** Mohamed Faki (ODM) won with **113,694 votes** (Tier 2, IEBC declaration as gazetted, via Mzalendo). The Woman Representative total is a named data gap.
+*   **Senator, 2022:** Mohamed Faki (ODM) won with **113,694 votes** (Tier 2, IEBC declaration as gazetted, via Mzalendo).
+*   **Woman Representative, 2022:** Zamzam Mohamed (ODM) won with **116,008 votes** (Tier 1, the gazetted IEBC declaration).
+*   **National Assembly and County Assembly, 2022:** ODM won **5** of the six constituencies (UDA took Nyali) and **23** of the 30 ward seats; UDA won 4 wards, independents 2 and WDM 1 (Tier 2, IEBC declarations via Mzalendo). Each ward's member and votes are in its Ward Dossier. Mr Shahbal says 24 of the 30 elected MCAs want to work with his party (Tier 3, his own claim).
 *   **Ward and polling-station results:** the constituency and polling-station forms for the 2013, 2017 and 2022 governor races (IEBC Forms 37B and 37A) are public records, not yet in hand. Section 6.2 needs them to test where his own vote came from, ward by ward.
 
 ```figure

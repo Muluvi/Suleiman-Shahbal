@@ -81,7 +81,7 @@
   {
     "kind": "data",
     "gap": "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",
-    "closes": "Mombasa County Annual Development Plan and progress report: itemised projects with cost and ward",
+    "closes": "Mombasa County Annual Progress Report: itemised projects with cost, ward and status (the ADP 2026/27, now in hand, plans projects but does not report delivery by ward)",
     "holder": "County government or church offices",
     "status": "Open",
     "where": [
@@ -278,6 +278,26 @@
     "status": "Open",
     "where": [
       "Data layer: disability.women"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "ict.phone.adult",
+    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership (individuals, not households)",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: ict.phone.adult"
+    ]
+  },
+  {
+    "kind": "data",
+    "gap": "reach.phone.adult",
+    "closes": "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership, applied to the register",
+    "holder": "KNBS",
+    "status": "Open",
+    "where": [
+      "Data layer: reach.phone.adult"
     ]
   },
   {

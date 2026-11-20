@@ -42,9 +42,13 @@ export const TOOL_WARDS: ToolWard[] = WARD_TILES.map((t) => {
   const slug = t.id.replace(/^ward\./, "");
   const p = PUBLIC_WARDS.find((w) => slugOf(w.name) === slug);
   if (!p) throw new Error(`tools: ward ${slug} is not in the IEBC public pack`);
+  // The density, equity and allocation tools divide by these, so a missing Gazette value would
+  // print NaN or a silently wrong share. Fail the build instead, naming the ward.
+  if (p.population == null || p.areaSqKm == null) throw new Error(`tools: ward ${p.name} has no Gazette population or area in data/public-2026-11`);
+  const population = p.population, areaSqKm = p.areaSqKm;
   return {
     id: slug, code: p.code, name: t.name, constituency: t.constituency, constituencyName: t.constituencyName, zone: t.zone, pool: POOL.has(t.constituency),
-    row: t.row, col: t.col, voters: p.voters, stations: p.stations, centres: p.centres, population: p.population, areaSqKm: p.areaSqKm,
+    row: t.row, col: t.col, voters: p.voters, stations: p.stations, centres: p.centres, population, areaSqKm,
     projects: projectCount(slug, "projects"), projectsKsh: Math.round(projectCount(slug, "ksh")),
   };
 });

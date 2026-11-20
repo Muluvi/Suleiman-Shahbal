@@ -32,8 +32,8 @@ import { USSD_HEADER, USSD_MENU as USSD_SPEC, menuLine } from "../data/ussd-spec
 
 const CONNECTED = Number(formatFigure(FIGURES["ict.internet"]));
 const OFFLINE = Number(formatFigure(FIGURES["ict.offline"]));
-/** Nearly every adult owns a phone (KDHS 2022), so most of the offline side still has a handset. */
-const ADULT_PHONE = formatFigure(FIGURES["ict.phone.adult"]);
+/** Nearly every household has a phone (KDHS 2022), so most of the offline side can still be reached by SMS. */
+const HOUSEHOLD_PHONE = formatFigure(FIGURES["ict.phone.household"]);
 
 /** The USSD menu as the handset prints it, from data/ussd-specimen.ts (the one definition). */
 const USSD_MENU = [USSD_HEADER, ...USSD_SPEC.map(menuLine)];
@@ -167,8 +167,8 @@ export function ReachSplit() {
             ))}
           </ul>
           <p className="t-small text-muted mt-2 leading-snug">
-            Most of them still have a handset: {ADULT_PHONE}% of adults own a phone (KDHS 2022, via the
-            Kenya Food Systems Dashboard), so SMS and USSD reach most of this side.
+            Most of them can still be reached on a handset: {HOUSEHOLD_PHONE}% of households own a phone
+            (KDHS 2022), so SMS and USSD reach most of this side. Ownership by individual adults is a named gap.
           </p>
         </div>
       </div>

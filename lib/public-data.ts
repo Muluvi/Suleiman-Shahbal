@@ -4,7 +4,7 @@
  */
 import summary from "@/data/mombasa-public.generated.json";
 
-export type PublicWard = { code: string; name: string; constituencyCode: string; constituency: string; stations: number; centres: number; voters: number; population: number; areaSqKm: number; mcaLimit: number };
+export type PublicWard = { code: string; name: string; constituencyCode: string; constituency: string; stations: number; centres: number; voters: number; population: number | null; areaSqKm: number | null; mcaLimit: number | null };
 export type PublicConstituency = { code: string; name: string; wards: number; stations: number; centres: number; voters: number; mpLimit: number };
 export type CalendarEntry = { date: string; event: string; appliesTo: string; source: string };
 

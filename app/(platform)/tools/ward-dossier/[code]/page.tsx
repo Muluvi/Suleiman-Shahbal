@@ -8,6 +8,7 @@ import { PUBLIC_SOURCES, PUBLIC_WARDS } from "@/lib/public-data";
 import { SaveImage } from "@/components/visual/SaveImage";
 import { wardOgImage } from "@/lib/card/og";
 import { ADP_2026_27, WARD_PRIORITIES } from "@/data/ward-priorities";
+import { MCA_2022, MP_2022, MZALENDO_2022 } from "@/data/ward-results-2022";
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ code: str
   const image = { url: wardOgImage(code), width: 1080, height: 1080, alt: title };
   return { title, robots: { index: false, follow: false }, openGraph: { title, images: [image] }, twitter: { card: "summary_large_image", images: [image.url] } };
 }
-const n = (v: number) => v.toLocaleString("en-KE");
+/** A missing value is a named gap, never a crash: the pack keeps an untranscribed Gazette value as null. */
+const n = (v: number | null | undefined) => (v == null ? "Data needed" : v.toLocaleString("en-KE"));
 type Station = { code: string; centre: string; station: string; voters: number };
 
 export default async function Page({ params }: { params: Promise<{ code: string }> }) {
@@ -30,14 +32,26 @@ export default async function Page({ params }: { params: Promise<{ code: string 
   const peerTotal = peers.reduce((a, w) => a + w.voters, 0);
   const prev = PUBLIC_WARDS[i - 1], next = PUBLIC_WARDS[i + 1];
   const priority = WARD_PRIORITIES[ward.name];
-  const stats = [["Registered voters, 2022", n(ward.voters)], ["Polling stations", n(ward.stations)], ["Registration centres", n(ward.centres)], ["Average voters per station", n(Math.round(ward.voters / ward.stations))], ["Population (Gazette)", n(ward.population)], ["Area, sq km (Gazette)", ward.areaSqKm.toLocaleString("en-KE")], ["Share of constituency voters", `${((ward.voters / peerTotal) * 100).toFixed(1)}%`]];
+  const mca = MCA_2022[ward.name], mp = MP_2022[ward.constituency];
+  const stats = [["Registered voters, 2022", n(ward.voters)], ["Polling stations", n(ward.stations)], ["Registration centres", n(ward.centres)], ["Average voters per station", n(Math.round(ward.voters / ward.stations))], ["Population (Gazette)", n(ward.population)], ["Area, sq km (Gazette)", n(ward.areaSqKm)], ["MCA spending limit, 2027 (KSh)", n(ward.mcaLimit)], ["Share of constituency voters", `${((ward.voters / peerTotal) * 100).toFixed(1)}%`]];
   return <>
     <p className="mb-3 text-[0.85rem]"><Link className="underline" href="/tools/ward-dossier">All wards</Link></p>
     <PageHead kicker={`${ward.constituency} constituency`} title={`${ward.name} ward`} />
     <div className="mb-4 flex justify-end print:hidden"><SaveImage card={{ type: "ward", params: { ward: code } }} title={`${ward.name} ward profile`} /></div>
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">{stats.map(([l, v]) => <div key={l} className="plat-card p-4"><p className="text-[0.8rem] text-muted">{l}</p><p className="mt-1 font-mono text-xl text-ink">{v}</p></div>)}</div>
+    <section className="mt-8"><h2 className="font-serif text-2xl text-ink">Who holds it</h2>
+      <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        {[["Member of County Assembly, 2022", mca], [`MP for ${ward.constituency}, 2022`, mp]].map(([label, r]) => {
+          const seat = r as (typeof mca) | undefined;
+          return <div key={label as string} className="plat-card p-4"><p className="text-[0.8rem] text-muted">{label as string}</p>
+            {seat ? <><p className="mt-1 text-ink">{seat.holder} <span className="text-muted">· {seat.party}</span></p><p className="mt-1 font-mono text-[0.9rem] text-ink">{n(seat.votes)} votes</p></> : <p className="mt-1 text-muted">Data needed</p>}
+          </div>;
+        })}
+      </div>
+      <p className="mt-2 text-[0.8rem] text-muted">Source: {MZALENDO_2022.name}. Tier 2. Winners&apos; votes only; the full tallies are on the IEBC forms.</p>
+    </section>
     <section className="mt-8"><h2 className="font-serif text-2xl text-ink">What the ward asked the county for</h2>
-      {priority ? <div className="plat-card mt-3 p-4"><p className="text-[0.8rem] text-muted">{priority.sector} · ranked {priority.rank} of the plan&apos;s ward priorities</p><p className="mt-1 text-ink">{priority.ask}</p></div>
+      {priority ? <div className="plat-card mt-3 p-4"><p className="text-[0.8rem] text-muted">{priority.sector} · {priority.rank === null ? "a request recorded at the plan's public hearings (the plan's ranked list leaves this ward out)" : `ranked ${priority.rank} of the plan's ward priorities`}</p><p className="mt-1 text-ink">{priority.ask}</p></div>
         : <p className="mt-3 text-[0.9rem] text-muted">The county&apos;s ranked list gives no priority for this ward; its proposals are in Section 3.15 of the plan.</p>}
       <p className="mt-2 text-[0.8rem] text-muted">Source: {ADP_2026_27.name}. Tier 1.</p>
     </section>
