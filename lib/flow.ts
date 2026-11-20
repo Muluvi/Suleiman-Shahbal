@@ -58,18 +58,5 @@ export function opensAct(tabId: TabId): FlowAct | null {
   return ACT_BY_OPENER.get(tabId) ?? null;
 }
 
-const INDEX = new Map(FLOW_ORDER.map((id, i) => [id, i]));
-
-export function flowIndex(tabId: TabId): number {
-  return INDEX.get(tabId) ?? 0;
-}
-
-export function flowNext(tabId: TabId): TabId | null {
-  const i = INDEX.get(tabId);
-  return i === undefined || i >= FLOW_ORDER.length - 1 ? null : FLOW_ORDER[i + 1];
-}
-
-export const FLOW_LENGTH = FLOW_ORDER.length;
-
 /** SECTIONS, re-sorted into reading order. The metadata is unchanged; only the sequence moves. */
 export const FLOW_SECTIONS = FLOW_ORDER.map((id) => SECTIONS.find((s) => s.id === id)!).filter(Boolean);

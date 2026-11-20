@@ -136,7 +136,7 @@ export function InteractiveTable({ children }: { children: React.ReactNode }) {
     // one place that rule matters most — once it is a spreadsheet on someone's laptop,
     // the page's own source line is gone.
     const preamble = [
-      ["# Dr. Makali campaign platform — table export"],
+      ["# Mombasa 2027, Suleiman Shahbal campaign platform — table export"],
       [`# Retrieved: ${new Date().toISOString().slice(0, 10)}`],
       [`# Source page: ${typeof window !== "undefined" ? window.location.href : ""}`],
       ...(tableSources.length > 0 ? [[`# Source: ${tableSources.join(" | ")}`]] : []),
@@ -163,7 +163,7 @@ export function InteractiveTable({ children }: { children: React.ReactNode }) {
         ? slugForFile(window.location.pathname.replace(/^\/+|\/+$/g, "")) 
         : "";
     const stem = slugForFile(headers[0] ?? "table");
-    a.download = `makali-${page && page !== "table" ? `${page}-` : ""}${stem}.csv`;
+    a.download = `shahbal-${page && page !== "table" ? `${page}-` : ""}${stem}.csv`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

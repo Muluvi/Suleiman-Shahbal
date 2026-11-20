@@ -11,7 +11,6 @@ export type CalendarEntry = { date: string; event: string; appliesTo: string; so
 export const PUBLIC_RETRIEVED: string = summary.retrieved;
 export const PUBLIC_WARDS = summary.wards as PublicWard[];
 export const PUBLIC_CONSTITUENCIES = summary.constituencies as PublicConstituency[];
-export const COUNTY_LIMITS = summary.countyLimits as { office: string; limit: number }[];
 export const RACE_CALENDAR = summary.calendar as CalendarEntry[];
 export const countyTotals = PUBLIC_WARDS.reduce((t, w) => ({ stations: t.stations + w.stations, centres: t.centres + w.centres, voters: t.voters + w.voters }), { stations: 0, centres: 0, voters: 0 });
 

@@ -1,4 +1,4 @@
-import { AUDIT_QUERY_GAPS, FISCAL_PRESSURES, PENDING_BILLS_AGED_PCT, STALLED_HEALTH_PROJECTS_GAP } from "../../data/fiscal-audit";
+import { AUDIT_QUERIES, AUDIT_QUERY_GAPS, FISCAL_PRESSURES, PENDING_BILLS_AGED_PCT, STALLED_HEALTH_PROJECTS_GAP } from "../../data/fiscal-audit";
 import { TierBadge } from "./TierBadge";
 import { ProvenanceLine } from "./ProvenanceLine";
 
@@ -33,7 +33,7 @@ export function FiscalAuditPanel() {
             </tr>
           </thead>
           <tbody>
-            {FISCAL_PRESSURES.map((q, i) => (
+            {[...FISCAL_PRESSURES, ...AUDIT_QUERIES].map((q, i) => (
               <tr key={i} className="border-t border-line/40">
                 <td className="py-2 pr-3 font-bold text-ink">{q.label}</td>
                 <td className="py-2 pr-3 font-black text-ink">{formatKSh(q.value)}</td>
@@ -57,7 +57,7 @@ export function FiscalAuditPanel() {
         right of reply. {STALLED_HEALTH_PROJECTS_GAP}
       </p>
 
-      <ProvenanceLine provenance={FISCAL_PRESSURES.map((q) => q.provenance)} />
+      <ProvenanceLine provenance={[...FISCAL_PRESSURES, ...AUDIT_QUERIES].map((q) => q.provenance)} />
     </div>
   );
 }

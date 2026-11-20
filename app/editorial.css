@@ -9,7 +9,7 @@
  * validator in both themes (docs/rebuild/RECON.md §2.1 has the results).
  *
  * Roles:
- *   --accent / --accent-solid   Dr. Mulu. Used for him and nothing else.
+ *   --accent / --accent-solid   Mr Shahbal. Used for him and nothing else.
  *   --rival / --rival-solid     every other candidate, one neutral family.
  *   --zone-a/-b/-c              the three regions: orange, aqua, violet. Passes all-pairs CVD in
  *                               both modes; tiles always carry a text label as relief.
@@ -327,7 +327,6 @@
 }
 
 .pf-num { font-variant-numeric: lining-nums tabular-nums; }
-.pf-mono { font-family: var(--pf-mono); font-size: 0.86em; }
 
 /* ---------------------------------------------------------------- grain */
 /* A very fine film grain on the ground: static, one composited layer, off in print. */
@@ -364,7 +363,6 @@
 }
 .pf-hero__county { position: absolute; inset: 0; }
 .pf-hero__county > svg { position: absolute; inset: 22% 6% 4% 30%; width: 64%; height: 74%; }
-.pf-scene { position: absolute; inset: 0; }
 .pf-hero[data-story="true"] .pf-hero__static { display: none; }
 
 .pf-hero__portrait {
@@ -444,27 +442,6 @@
   bottom: calc(var(--pf-dock-h) + 1.75rem + env(safe-area-inset-bottom));
   pointer-events: none;
 }
-.pf-step {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 30rem;
-  padding: 1rem 1rem;
-  border-radius: 0.875rem;
-  border: 1px solid var(--pf-line);
-  background: var(--pf-glass);
-  backdrop-filter: blur(14px) saturate(1.3);
-  -webkit-backdrop-filter: blur(14px) saturate(1.3);
-  font: 400 0.9375rem/1.45 var(--pf-serif);
-  color: var(--pf-ink);
-  box-shadow: var(--pf-shadow);
-  will-change: opacity, transform;
-}
-.pf-step b { font-family: var(--pf-display); font-weight: 700; }
-.pf-step--1 { opacity: clamp(0, min(calc((var(--p, 0) - 0.03) * 22), calc((0.37 - var(--p, 0)) * 22)), 1); }
-.pf-step--2 { opacity: clamp(0, min(calc((var(--p, 0) - 0.42) * 22), calc((0.76 - var(--p, 0)) * 22)), 1); }
-.pf-step--3 { opacity: clamp(0, calc((var(--p, 0) - 0.8) * 16), 1); }
 
 .pf-hero__pick {
   position: absolute;
@@ -474,33 +451,6 @@
   left: auto;
   opacity: clamp(0, calc((var(--p, 0) - 0.3) * 8), 1);
 }
-.pf-pick {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2px 0.75rem;
-  max-width: 17rem;
-  padding: 0.75rem 0.75rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--pf-line);
-  background: var(--pf-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  font: 500 0.8125rem/1.35 var(--pf-display);
-  color: var(--pf-muted);
-}
-.pf-pick strong { color: var(--pf-ink); font-size: 0.9375rem; }
-.pf-pick > span, .pf-pick strong { grid-column: 1; }
-.pf-pick button {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  align-self: start;
-  width: 2.75rem;
-  height: 2.75rem;
-  margin: -0.5rem -0.5rem 0 0;
-  font-size: 1.25rem;
-  color: var(--pf-muted);
-}
-.pf-pick--hint { display: block; font-size: 0.78125rem; }
 
 @media (min-width: 1024px) {
   :root { --pf-gutter: 3rem; }
@@ -656,62 +606,6 @@
 }
 
 /* ---------------------------------------------------------------- figure v2 */
-.pf-fig {
-  position: relative;
-  padding: 1.5rem 1.25rem 1.25rem;
-  border-radius: 1.25rem;
-  border: 1px solid var(--pf-line);
-  background: var(--pf-raised);
-}
-.pf-fig--hero {
-  padding: 2rem 1.25rem 1.5rem;
-  border-radius: 1.75rem;
-  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--pf-accent) 18%, transparent), inset 0 40px 120px -60px var(--pf-accent-glow), var(--pf-shadow);
-}
-@media (min-width: 900px) { .pf-fig--hero { padding: 3rem 3.5rem 2.5rem; } }
-.pf-fig__head { max-width: 52rem; }
-.pf-fig__sec { font: 600 0.8125rem/1.2 var(--pf-display); color: var(--pf-accent); }
-.pf-fig__title {
-  margin-top: 0.5rem;
-  font: 600 clamp(1.5rem, 4.6vw, 2.35rem)/1.14 var(--pf-serif);
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
-.pf-fig--standard .pf-fig__title { font-size: 1.3rem; }
-.pf-fig__question { margin-top: 0.5rem; font: 500 0.9375rem/1.4 var(--pf-display); color: var(--pf-muted); }
-.pf-fig__body { margin-top: 1.5rem; }
-.pf-fig__note { margin-top: 0.75rem; max-width: 60ch; font: 400 0.84375rem/1.5 var(--pf-display); color: var(--pf-muted); }
-.pf-fig__takeaway {
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--pf-line);
-  max-width: 62ch;
-  font: 500 1.125rem/1.5 var(--pf-serif);
-  color: var(--pf-ink);
-}
-.pf-fig__foot { margin-top: 1rem; display: grid; gap: 0.75rem; }
-.pf-fig__sources { display: grid; gap: 0.5rem; font: 400 0.8125rem/1.45 var(--pf-display); color: var(--pf-muted); }
-.pf-fig__sources li { display: flex; gap: 0.5rem; align-items: flex-start; }
-.pf-fig__details summary {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  cursor: pointer;
-  font: 600 0.875rem/1 var(--pf-display);
-  color: var(--pf-accent);
-}
-.pf-fig__csv {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  min-height: 2.75rem;
-  font: 600 0.875rem/1.2 var(--pf-display);
-  color: var(--pf-accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.pf-fig__csv .pf-mono { color: var(--pf-muted); text-decoration: none; }
 
 /* ---- funnel v2 */
 .pf-defs { position: absolute; width: 0; height: 0; }
@@ -1039,7 +933,6 @@
   .pf-hero__stage { position: relative; height: auto; min-height: 0; }
   .pf-fn__tip { position: static; opacity: 1; transform: none; box-shadow: none; margin-top: 0.25rem; }
   .pf-fn__mark { transform: scaleX(var(--wa)) !important; }
-  .pf-scene { display: none !important; }
   .pf-hero[data-story="true"] .pf-hero__static { display: block; }
 }
 
@@ -1083,21 +976,11 @@
 html { scroll-padding-bottom: calc(var(--pf-dock-h) + 1.5rem); }
 
 /* Non-text blocks cap at a comfortable figure width; the hero figure and bleed blocks run full. */
-@media (min-width: 1024px) {
-  .flow-body .prose > :is(.not-prose, figure, table):not(.rf--hero):not(.pf-wide-block) { max-width: 58.75rem; }
-}
 
 /* Large screens (polish pass): the prose keeps its measure, and figures use the width. A figure
    breaks out of the 46rem reading column to 64rem, centred on it, so a chart on a 1440px laptop
    or a 4K monitor is drawn at the size its marks need instead of floating in a narrow column. */
 @media (min-width: 1440px) {
-  /* :is() carries the class specificity of the 1024px cap above, so this rule outranks it. */
-  .flow-body .prose > :is(figure.rf, figure.vz, figure.not-prose, figure):not(.rf--hero):not(.pf-wide-block) {
-    --pf-fig-w: min(64rem, calc(100vw - 2 * var(--pf-gutter)));
-    width: var(--pf-fig-w);
-    max-width: none;
-    margin-inline: calc((100% - var(--pf-fig-w)) / 2);
-  }
   /* The section's `content-visibility: auto` brings paint containment, which clips to its box:
      the reading column. The clip edge moves out by the breakout (9rem a side) so the figure is
      drawn whole, and the section keeps the rendering skip that makes this long page cheap. */
@@ -1139,11 +1022,6 @@ html { scroll-padding-bottom: calc(var(--pf-dock-h) + 1.5rem); }
 
 /* ---- D-18: the tracked-caps kicker above every block. Kickers keep their words and their
    position; they lose the shouting. */
-.flow-body :is(.uppercase, .pv__cap-text, .pv-kicker, .pv-head__kicker, .pv-chap__kind, .pv-mx__field dt, .pv-quad__tag),
-.pf-shell .rc-kicker {
-  text-transform: none !important;
-  letter-spacing: 0 !important;
-}
 .flow-body :is(.tracking-wide, .tracking-wider, .tracking-widest) { letter-spacing: 0.005em !important; }
 .flow-body .pv__cap-text { font-family: var(--pf-display) !important; font-weight: 600; }
 
@@ -1331,7 +1209,6 @@ html { scroll-padding-bottom: calc(var(--pf-dock-h) + 1.5rem); }
 }
 @media print {
   .pf-story__stage { position: static !important; height: 60vh !important; }
-  .pf-story .pf-scene { display: none; }
   .pf-story .pf-story__static { display: block !important; }
   .pf-story__steps { margin-top: 0 !important; }
   .pf-story__step { min-height: 0 !important; }
@@ -1527,82 +1404,9 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
 }
 
 /* ---------------------------------------------------------------- device stages (G-10) */
-/* A lit stage for a mockup: perspective, the shared pointer/scroll tilt, a sliding sheen. */
-.pf-tilt { position: relative; perspective: 1300px; }
-.pf-tilt__body { position: relative; transform-style: preserve-3d; will-change: transform; }
-.pf-tilt__sheen { position: absolute; inset: 0; z-index: 5; pointer-events: none; mix-blend-mode: screen; }
-.pf-tilt__shadow {
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: -0.875rem;
-  height: 1.625rem;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center, oklch(0.12 0.02 262 / 0.5) 0%, transparent 72%);
-  filter: blur(10px);
-  pointer-events: none;
-  z-index: -1;
-}
-/* The rugged slab: a lit top edge and a machined rim, depth by tone rather than a heavy shadow. */
-.pf-slab {
-  box-shadow:
-    inset 0 1px 0 oklch(1 0 0 / 0.14),
-    inset 0 -2px 3px oklch(0 0 0 / 0.55),
-    0 30px 60px -30px oklch(0.1 0.02 262 / 0.7);
-  background-image: linear-gradient(160deg, oklch(0.3 0.02 262), oklch(0.2 0.02 262) 45%, oklch(0.16 0.02 262));
-}
-.pf-glass-screen { position: relative; box-shadow: inset 0 2px 8px oklch(0 0 0 / 0.55); }
-
-/* The 2G handset: moulded plastic, a recessed LCD under glass, bevelled keys. */
-.pf-handset {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.75rem;
-  padding-bottom: 0.5rem;
-  background: linear-gradient(162deg, #353b45 0%, #1c2027 42%, #111418 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 1px 0 0 rgba(255, 255, 255, 0.06),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.65),
-    0 22px 36px -18px rgba(3, 8, 18, 0.7);
-}
-.pf-handset__ear { width: 2.375rem; height: 0.25rem; border-radius: 62.4375rem; background: #0c0e11; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08); }
-.pf-handset__screen {
-  position: relative;
-  overflow: hidden;
-  min-height: 8.75rem;
-  margin: 0 0.75rem;
-  padding: 0.5rem 0.5rem;
-  border-radius: 0.4375rem;
-  background: linear-gradient(180deg, #cfdcbf, #bccca7);
-  color: #12210b;
-  font-size: 0.53125rem;
-  line-height: 1.35;
-  box-shadow: inset 0 2px 5px rgba(18, 33, 11, 0.45), 0 0 0 3px #0c0e11, 0 0 0 4px rgba(255, 255, 255, 0.07);
-}
-.pf-handset__glass {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(125deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.06) 38%, transparent 40%);
-}
-.pf-handset__key {
-  display: block;
-  padding: 0.25rem 0;
-  border-radius: 0.375rem 0.375rem 0.5rem 0.5rem;
-  text-align: center;
-  font-size: 0.53125rem;
-  color: #a3abb8;
-  background: linear-gradient(180deg, #2f3540, #22272f);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 1.5px 0 #0b0d10;
-}
-.pf-handset__key.is-down { color: #fff; background: linear-gradient(180deg, #4b5568, #3a4252); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); }
 
 /* A screen that changes arrives with a short crossfade, as a display redraws. */
 @keyframes pf-xfade { from { opacity: 0; } to { opacity: 1; } }
-.pf-xfade { animation: pf-xfade 260ms var(--pf-ease-out) both; }
-@media (prefers-reduced-motion: reduce) { .pf-xfade { animation: none; } .pf-tilt__body { will-change: auto; } }
-@media print { .pf-tilt__sheen, .pf-tilt__shadow { display: none; } .pf-tilt__body { transform: none !important; } }
 
 /* ---------------------------------------------------------------- skeletons (G-11) */
 /* Shaped like what is coming; static and faint. A slow sheen crosses once a second and a half
@@ -1701,7 +1505,6 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
   /* Below the subtitle and left of the portrait, so no line of copy sits on a ward fill. */
   .pf-hero__county > svg { inset: 44% 30% 8% 0; width: 70%; height: 48%; }
   .pf-hero__steps { left: var(--pf-gutter); right: var(--pf-gutter); bottom: calc(var(--pf-dock-h) + 1rem + env(safe-area-inset-bottom)); }
-  .pf-step { max-width: none; padding: 0.75rem 0.75rem; font-size: 0.875rem; line-height: 1.38; }
   .pf-hero__pick { top: auto; right: var(--pf-gutter); bottom: calc(var(--pf-dock-h) + 0.875rem + env(safe-area-inset-bottom)); left: auto; max-width: min(17rem, calc(100vw - 2 * var(--pf-gutter))); }
   .pf-numbers { gap: 0; padding: 2rem var(--pf-gutter) 1rem; }
   .pf-bn { min-width: 0; padding: 1rem 0 1.25rem; }
@@ -1710,13 +1513,8 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
   .pf-act { min-width: 0; padding: 3.5rem var(--pf-gutter) 2rem; }
   .pf-act__copy, .pf-act__title, .pf-act__dek { max-width: 100%; }
   .pf-act__portrait { right: -8vw; height: min(48svh, 68vw); }
-  .pf-fig--hero { padding: 1.5rem 1rem 1.5rem; }
-  .pf-fig__title { font-size: clamp(1.35rem, 6vw, 1.8rem); line-height: 1.08; }
-  .pf-fig__body, .pf-fig__takeaway { max-width: 100%; }
   .pf-storyptr, .pf-idx__rail, .rf-csv { max-width: 100%; }
   .pf-storyptr { overflow-x: auto; overscroll-behavior-x: contain; }
-  .pf-fig :is(table, .rf-table, .rf-chart, svg) { max-width: 100%; }
-  .pf-page :is(.rf-table, .rf-chart) { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
 @media (max-width: 380px) {
@@ -1724,7 +1522,6 @@ html:not(.dark) .text-emerald-600 { color: #065f46 !important; }   /* 6.4:1 on e
   .pf-hero__portrait { right: -8vw; height: min(42svh, 54vw); }
   .pf-hero__title { font-size: clamp(2rem, 11.5vw, 2.8rem); }
   .pf-hero__sub { font-size: .95rem; }
-  .pf-step { font-size: 0.8125rem; }
 }
 
 @media (min-width: 1600px) {

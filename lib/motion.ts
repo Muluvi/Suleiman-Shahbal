@@ -98,14 +98,10 @@ import type { Transition, Variants } from "motion/react";
 /** Primary easing curve: Expo-out [0.16, 1.0, 0.3, 1.0]. Fast commit, long settle. */
 export const EASE_PRIMARY = [0.16, 1.0, 0.3, 1.0] as const;
 
-/** Emphasis easing curve: Anticipatory overshoot [0.34, 1.4, 0.64, 1.0] for threshold crossings. */
-export const EASE_EMPHASIS = [0.34, 1.4, 0.64, 1.0] as const;
-
 /** Canonical aliases ensuring zero regression across existing components */
 export const EASE_ENTRANCE = EASE_PRIMARY;
 export const EASE_OUT = [0.22, 1.0, 0.36, 1.0] as const;
 export const EASE_IN_OUT = [0.65, 0.0, 0.35, 1.0] as const;
-export const EASE_EMPHATIC = EASE_EMPHASIS;
 
 // ===========================================================================
 // Core Duration Tokens
@@ -194,16 +190,6 @@ export const reduced: Transition = { duration: 0.001 };
 /** Micro interaction feedback preserved under reduced motion for visual affordance (~80ms). */
 export const microReduced: Transition = { duration: 0.08, ease: EASE_OUT };
 
-// ===========================================================================
-// Variants (Degrading to Pure End-State)
-// ===========================================================================
-
-/** Static opacity floor; baseline fallback for all content. */
-export const fadeIn: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: entrance },
-};
-
 /** Restrained vertical rise: strictly 8px (never 24px+ floating card clichés). */
 export const riseIn: Variants = {
   hidden: { opacity: 0, y: 8 },
@@ -211,68 +197,12 @@ export const riseIn: Variants = {
 };
 export const fadeUp = riseIn;
 
-/** Restrained scale: 96% to 100% (never pops up from nothing). */
-export const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
-  visible: { opacity: 1, scale: 1, transition: entrance },
-};
-
-/** Lateral panel cross-transitions. */
-export const slideInX = (distance = 12): Variants => ({
-  hidden: { opacity: 0, x: distance },
-  visible: { opacity: 1, x: 0, transition: crossfade },
-  exit: { opacity: 0, x: -distance, transition: crossfade },
-});
-
-export const slideInY = (distance = 12): Variants => ({
-  hidden: { opacity: 0, y: distance },
-  visible: { opacity: 1, y: 0, transition: crossfade },
-  exit: { opacity: 0, y: -distance, transition: crossfade },
-});
-
-export const slideIn = (axis: "x" | "y" = "y", distance = 12): Variants =>
-  axis === "x" ? slideInX(distance) : slideInY(distance);
-
 /** Parent stagger container. */
 export const staggerContainer = (gap: number = STAGGER.normal, delay = 0): Variants => ({
   hidden: {},
   visible: { transition: { staggerChildren: gap, delayChildren: delay } },
 });
 export const cascade = staggerContainer;
-
-/** Distinct rotation axes for two-sided strategic decisions. */
-export const flipInY: Variants = {
-  hidden: { opacity: 0, rotateY: -14 },
-  visible: { opacity: 1, rotateY: 0, transition: entrance },
-};
-
-export const flipInX: Variants = {
-  hidden: { opacity: 0, rotateX: 14 },
-  visible: { opacity: 1, rotateX: 0, transition: entrance },
-};
-
-/** Bar and gauge reveal originating strictly from quantitative baseline. */
-export const growFromBaseline = (origin: "left" | "bottom" = "left"): Variants => ({
-  hidden: { scaleX: origin === "left" ? 0 : 1, scaleY: origin === "bottom" ? 0 : 1 },
-  visible: { scaleX: 1, scaleY: 1, transition: deliberate },
-});
-
-/**
- * Unmeasured metric baseline hatch drift.
- * Specifically honors "Awaiting campaign decision" and unmeasured baselines
- * by never asserting a false zero-bar.
- */
-export const unmeasuredTrack: Variants = {
-  hidden: { opacity: 0, backgroundPositionX: 0 },
-  visible: {
-    opacity: 1,
-    backgroundPositionX: 16,
-    transition: {
-      opacity: entrance,
-      backgroundPositionX: { duration: DURATION_TOKENS.deliberate, ease: EASE_OUT },
-    },
-  },
-};
 
 /** Inline SVG vector path draw using pathLength on compositor. */
 export const drawPath: Variants = {
@@ -282,12 +212,6 @@ export const drawPath: Variants = {
     opacity: 1,
     transition: { pathLength: deliberate, opacity: { duration: DURATION_TOKENS.fast } },
   },
-};
-
-/** Clip-path mask reveal keeping typography fully opaque and legible during wipe. */
-export const revealMask: Variants = {
-  hidden: { clipPath: "inset(0 100% 0 0)" },
-  visible: { clipPath: "inset(0 0% 0 0)", transition: deliberate },
 };
 
 /** Compositor-friendly height expansion using grid-template-rows (0fr -> 1fr). */

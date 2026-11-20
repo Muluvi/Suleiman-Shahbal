@@ -135,11 +135,6 @@ export function numericValues(chart: ExportChart): (ExportValue & { value: numbe
   return chart.values.filter((v): v is ExportValue & { value: number } => typeof v.value === "number");
 }
 
-/** True when any value in the chart is unconfirmed — drives the block-level warning. */
-export function hasUnverified(chart: ExportChart): boolean {
-  return chart.values.some((v) => v.status === "verify");
-}
-
 /** True when any value is modelled — drives the "modelled, not measured" label. */
 export function isModelled(chart: ExportChart): boolean {
   return chart.values.some((v) => v.method === "modelled");

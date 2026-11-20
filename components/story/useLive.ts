@@ -35,8 +35,6 @@ export function useLive(): { live: LiveSnapshot | null; ready: boolean } {
   return { live, ready };
 }
 
-export const announceLiveChange = () => window.dispatchEvent(new Event("live:changed"));
-
 /** "3 minutes ago", "yesterday", "12 Nov". */
 export function ago(iso: string | null): string {
   if (!iso) return "";

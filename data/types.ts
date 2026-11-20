@@ -5,7 +5,7 @@
 //
 // Scope note (read before adding a file here): this schema governs the NEW factual content
 // this pass adds — the ward register, the disputed figures, electoral history, fiscal/audit
-// record, drought and food security, Mui Basin, the nomination path, the spending ceiling,
+// record, water supply, the Jomvu SEZ, the nomination path, the spending ceiling,
 // media ownership, and the data-gaps register. It does not retrofit the
 // pre-existing prose in public/content/*.md or the illustrative UI widgets in
 // components/StrategicAids.tsx — see the PR description for why that is out of scope for this
@@ -13,7 +13,7 @@
 
 /**
  * Tier 1 — OFFICIAL: a named public institution (IEBC, KNBS, Controller of Budget,
- * Auditor-General, NDMA, Communications Authority, Kenya Law / courts, Kenya Gazette, county
+ * Auditor-General, WASREB, Communications Authority, Kenya Law / courts, Kenya Gazette, county
  * government).
  * Tier 2 — REPORTED: established media, not officially confirmed.
  * Tier 3 — SINGLE-SOURCE / PARTISAN: one local or partisan digital outlet only. Must always
@@ -25,7 +25,7 @@ export type Tier = 1 | 2 | 3;
 // 3's must say "Unconfirmed" outright, per the source-discipline rule that a Tier 3 claim is
 // never shown without a visible unconfirmed marker.
 export const TIER_META: Record<Tier, { label: string; short: string; description: string }> = {
-  1: { label: "Official", short: "Official", description: "Named public institution — IEBC, KNBS, Controller of Budget, Auditor-General, NDMA, Communications Authority, Kenya Law, Kenya Gazette, county government." },
+  1: { label: "Official", short: "Official", description: "Named public institution — IEBC, KNBS, Controller of Budget, Auditor-General, WASREB, Communications Authority, Kenya Law, Kenya Gazette, county government." },
   2: { label: "Reported", short: "Reported", description: "Established media, not officially confirmed." },
   3: { label: "Unconfirmed (single-source)", short: "Unconfirmed", description: "One local or partisan digital outlet only — unconfirmed." },
 };

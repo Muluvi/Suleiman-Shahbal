@@ -46,7 +46,7 @@
     "section": "2.1",
     "title": "641,913 registered voters in six constituencies; Kisauni and Nyali hold two in five",
     "question": "How big is the register, and where is it?",
-    "takeaway": "Mombasa had 641,913 registered voters in 2022 at 1,041 polling stations. No 2026 Mombasa register figure is in hand, so the 2022 register is the base for every calculation."
+    "takeaway": "Mombasa had 641,913 registered voters in 2022 at 1,041 polling stations. The certified 2026 register is not yet published (about 708,339 on the new registrations IEBC has reported), so the 2022 register is the base for every calculation."
   },
   {
     "id": "fig-2-2-results",
@@ -96,6 +96,13 @@
     "title": "His channels are read on the Week 1 export, not estimated",
     "question": "What does his presence look like?",
     "takeaway": "Every count on this figure is set in Week 1 from his own exports."
+  },
+  {
+    "id": "fig-2-10-hearings",
+    "section": "3.3",
+    "title": "Health was the issue residents raised most at the county's own planning hearings",
+    "question": "What did residents ask the county for?",
+    "takeaway": "At the public hearings for the 2026/27 development plan, 18% of the issues raised were about health, ahead of water and sanitation (13%) and roads (12%)."
   },
   {
     "id": "fig-3-1-funnel",

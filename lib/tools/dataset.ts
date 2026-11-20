@@ -83,10 +83,7 @@ export const CENSUS_SUBCOUNTIES: CensusRow[] = [...new Set(CV.map((v) => v.dims.
     electricityPct: cv(sc, "mains_electricity_pct") ?? null,
   }));
 export const CENSUS_COUNTY = { phonePct: cv("COUNTY", "phone_pct") ?? null, internetPct: cv("COUNTY", "internet_pct") ?? null, adults: cv("COUNTY", "aged_18_plus") ?? null };
-export const CENSUS_AGE_BANDS = CV.filter((v) => v.dims.measure === "age_band" && v.dims.subcounty === "COUNTY").map((v) => ({ band: v.dims.band as string, people: v.value }));
 
 export type IssueRow = { issue: string; score: number; tier: number; note: string };
 export const ISSUES: IssueRow[] = (issueEvidence as { values: { label: string; value: number; tier: number; note: string }[] }).values.map((v) => ({ issue: v.label, score: v.value, tier: v.tier, note: v.note }));
 export const ISSUE_NOTES: string[] = (issueEvidence as { notes: string[] }).notes;
-
-export const ZONE_LABEL: Record<ZoneId, string> = { anchor: "The Island (Mvita)", north: "North mainland (Kisauni, Nyali)", west: "West mainland (Changamwe, Jomvu)", none: "Likoni (in no zone)" };

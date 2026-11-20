@@ -16,6 +16,3 @@ export const ACT_PORTRAITS: PortraitId[] = [
   "gesture-explaining",
   "hero-clasped-hands",
 ];
-
-/** One numeral per act, for code that keys on act order. Never shown on screen (D4: no visible numbering). */
-export const ACT_ROMAN = ["I", "II", "III", "IV", "V", "VI"];

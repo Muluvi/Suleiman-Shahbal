@@ -10,26 +10,6 @@ import { type TabId } from "../../lib/heading-slug";
 import { StageBar } from "../flow/PartDots";
 
 /**
- * The navigation chrome (brief G-7): the dock and the kiondo progress spine.
- *
- * DOCK. One slim glass pill. The page RESERVES its space (bottom padding equal to its height plus
- * the safe-area inset, in app/premium.css), so the end of the document is never read through it,
- * and it steps away on the way down and returns on the way up, so the middle never is either
- * (D-07). What it names is decided by ClientPage's probe, not by an observer's last event (D-08).
- *
- * SPINE. One segment per act (the five stages after the Welcome, and the evidence shelf) on the
- * right edge of a wide screen, each as long as that act is on the page, measured from the act
- * openers themselves on every scroll frame, filling with the weave as the reader moves through
- * them. Every segment is a labelled button (hover and focus). Phones get the same targets in the
- * index instead.
- */
-export const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
-
-export function actNumeral(tab: TabId): string {
-  return ROMAN[FLOW_ACTS.indexOf(actOf(tab))] ?? "";
-}
-
-/**
  * One control per job (flow pass, WP7): the stage bar and the chapter's name open the index and
  * search; the chart icon opens every tool and record. The theme switch lives in the index sheet.
  */
