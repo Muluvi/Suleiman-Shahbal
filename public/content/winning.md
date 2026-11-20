@@ -4,7 +4,7 @@
 Governor Abdulswamad Nassir's 2022 winning total was 119,083 votes; this document rounds it to **120,000**. [CALC, not a forecast] It is a floor: on a general-election day with higher turnout, the 2017 winner received 221,177.
 ```
 
-*   **The electorate:** **641,913 voters** on the 2022 register (Section 2.1). No 2026 Mombasa figure is in hand, so every figure here uses the 2022 register and is a floor.
+*   **The electorate:** **641,913 voters** on the 2022 register (Section 2.1). The 2026 register is not yet certified (about 708,339 on reported new registrations), so every figure here uses the 2022 register and is a floor.
 *   **The benchmark: 120,000 votes.** Governor Abdulswamad Nassir's 2022 winning total was **119,083 votes** (Section 2.2). This document rounds it to **120,000** and uses that one figure as the benchmark everywhere: every route below, the digital ceiling in Section 4.3 and the objectives in Chapter 8 are measured against it.
 *   **[CALC, not a forecast] The high-turnout bracket.** In 2017, on general-election day, Hassan Joho won with **221,177** votes (Tier 1). The 2027 governor's race is on general-election day too. Treat 120,000 as the floor and 221,177 as what a high-turnout race could demand; the campaign plans to the floor and builds capacity toward the bracket.
 *   **The turnout rate: 34.5%.** The 2022 governor election turnout was **34.5%**: 221,148 valid votes of 641,913 registered (Tier 2, calculated from the declared result). Every calculation here carries that rate forward to 2027. It is the lowest rate on record, from an election held three weeks late; carrying it forward is a cautious assumption, and the scenario model brackets it at 34–55%.

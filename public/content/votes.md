@@ -14,7 +14,7 @@ Mombasa has **641,913** registered voters on the 2022 register, and Governor Nas
 id: fig-2-1-register
 ```
 
-**No 2026 figure yet.** The IEBC has run two enhanced registration drives in 2026, but the Mombasa row of the county annex is not in hand. Until it is, the 2022 register is the base for every calculation, and every ballot figure built on it is a floor: the register has only grown.
+**The 2026 register, indicative.** IEBC reported **15,140** new Mombasa voters from continuous registration to March 2026, then **51,286** in the ECVR drive of 30 March to 28 April 2026 (Tier 3, as reported). Added to 2022, that gives about **708,339** before deletions. The certified register is not yet published, so ward and constituency calculations still use 2022, and IEBC's own target for 2027 is 825,000 (Tier 2).
 
 **Why turnout was so low.** Mombasa's governor election did not happen on 9 August 2022. The IEBC suspended it the day before over a ballot-paper mix-up, rescheduled it, and held it on 29 August, three weeks after the presidential result was known (Tier 2, KNA and The Standard). Turnout fell to **34.5%**. In 2017, on the general-election day, Joho alone received 221,177 votes (Tier 1). The 2027 governor's race will be held on the same day as the presidential race, so 2022's turnout is a floor, not a forecast.
 
@@ -72,7 +72,7 @@ id: constituency-power
 ```
 
 ```visual
-{"kind":"bars","title":"The 2022 governor's race by constituency: Nassir's lead over Omar, in votes","source":"The Standard and KNA, 30 August 2022 (Tier 2); Likoni calculated","items":[{"label":"Nyali: 22,387 to 21,580","value":"807","tier":2},{"label":"Kisauni: 21,796 to 20,750","value":"1,046","tier":2},{"label":"Changamwe: 17,740 to 15,898","value":"1,842","tier":2},{"label":"Jomvu: 15,629 to 11,038","value":"4,591","tier":2},{"label":"Mvita: 24,106 to 19,086","value":"5,020","tier":2},{"label":"Likoni (calculated): 17,425 to 9,753","value":"7,672","tier":2}]}
+{"kind":"bars","title":"The 2022 governor's race by constituency: Nassir's lead over Omar, in votes","source":"The Standard and KNA, 30 August 2022 (Tier 2); Likoni calculated","items":[{"label":"Nyali: 22,387 to 21,580","value":"807","tier":2},{"label":"Kisauni: 21,796 to 20,750","value":"1,046","tier":2},{"label":"Changamwe: 17,740 to 15,898","value":"1,842","tier":2},{"label":"Jomvu: 15,629 to 11,038","value":"4,591","tier":2},{"label":"Mvita: 24,106 to 19,086","value":"5,020","tier":2},{"label":"Likoni: 17,425 to 9,756","value":"7,669","tier":2}]}
 ```
 
 *Five constituency tallies as reported by The Standard and KNA (Tier 2); Likoni is the county total less the five, so it is calculated.*
@@ -85,7 +85,7 @@ id: constituency-power
 
 1.  **The Big Four (73.73% of the county):** Kisauni, Nyali, Mvita and Likoni hold **473,267 registered voters** across 22 wards (calculated from IEBC's 2022 register, Tier 1). The candidate who leads in these four, or holds level in them, is in reach of the governorship.
 2.  **Kisauni (135,276 voters, Tier 1):** the largest constituency, with seven wards from Mwakirunge (6,423), the smallest in the county, to Junda (25,602) and Shanzu (25,510). It was decided by 1,046 votes in 2022.
-3.  **Likoni (94,764 voters, Tier 1):** holds the county's largest ward, **Timbwani (33,929)**, and the constituency where Nassir's lead was largest (7,672, calculated).
+3.  **Likoni (94,764 voters, Tier 1):** holds the county's largest ward, **Timbwani (33,929)**, and the constituency where Nassir's lead was largest (7,669, calculated).
 4.  **Mvita (118,974 voters, Tier 1):** the governor's former constituency and the county's commercial heart, holding **Majengo (31,772)**, the third-largest ward.
 
 ## B.1 The 30-ward register

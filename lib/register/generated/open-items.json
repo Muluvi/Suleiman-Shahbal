@@ -91,39 +91,6 @@
   },
   {
     "kind": "data",
-    "gap": "The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…",
-    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: the basis-for-qualification paragraphs",
-    "holder": "County government or church offices",
-    "status": "Open",
-    "where": [
-      "Section 3.7",
-      "Data layer: audit.cash"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…",
-    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: revenue arrears",
-    "holder": "County government or church offices",
-    "status": "Open",
-    "where": [
-      "Section 3.7",
-      "Data layer: audit.uncollected"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…",
-    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",
-    "holder": "County government or church offices",
-    "status": "Open",
-    "where": [
-      "Section 3.7",
-      "Data layer: audit.ifmis"
-    ]
-  },
-  {
-    "kind": "data",
     "gap": "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",
     "closes": "Mombasa County Government's own published delivery scorecard or annual progress report",
     "holder": "County government or church offices",
@@ -157,36 +124,6 @@
   },
   {
     "kind": "data",
-    "gap": "register.2026.ecvr-drive",
-    "closes": "IEBC ECVR county annex, Mombasa row (new registrations, 2026 drives)",
-    "holder": "IEBC",
-    "status": "Open",
-    "where": [
-      "Data layer: register.2026.ecvr-drive"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "register.2026.growth",
-    "closes": "IEBC 2026 register, Mombasa total, less the 2022 register",
-    "holder": "IEBC",
-    "status": "Open",
-    "where": [
-      "Data layer: register.2026.growth"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "register.2026.continuous",
-    "closes": "IEBC 2026 register, Mombasa total, less 2022 and the ECVR drive",
-    "holder": "IEBC",
-    "status": "Open",
-    "where": [
-      "Data layer: register.2026.continuous"
-    ]
-  },
-  {
-    "kind": "data",
     "gap": "result.2022.womanrep.zamzam",
     "closes": "IEBC Form 38C or the gazette notice, Mombasa Woman Representative 2022",
     "holder": "IEBC",
@@ -197,12 +134,12 @@
   },
   {
     "kind": "data",
-    "gap": "budget.absorption.q1",
-    "closes": "Controller of Budget, County Governments Budget Implementation Review Report (Mombasa chapter): Mombasa development absorption, latest quarter",
+    "gap": "audit.ifmis",
+    "closes": "Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",
     "holder": "County government or church offices",
     "status": "Open",
     "where": [
-      "Data layer: budget.absorption.q1"
+      "Data layer: audit.ifmis"
     ]
   },
   {
@@ -223,16 +160,6 @@
     "status": "Open",
     "where": [
       "Data layer: audit.pending.contested"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "population.2025",
-    "closes": "KNBS county population projection, Mombasa, 2025",
-    "holder": "KNBS",
-    "status": "Open",
-    "where": [
-      "Data layer: population.2025"
     ]
   },
   {
@@ -307,16 +234,6 @@
   },
   {
     "kind": "data",
-    "gap": "water.basic.kdhs",
-    "closes": "KDHS 2022 Mombasa factsheet: at least basic drinking water",
-    "holder": "To be named",
-    "status": "Open",
-    "where": [
-      "Data layer: water.basic.kdhs"
-    ]
-  },
-  {
-    "kind": "data",
     "gap": "literacy.county",
     "closes": "KNBS county literacy table (2019 Census or KDHS 2022)",
     "holder": "KNBS",
@@ -383,16 +300,6 @@
     "status": "Open",
     "where": [
       "Data layer: kpis.nomination"
-    ]
-  },
-  {
-    "kind": "data",
-    "gap": "edu.none.women",
-    "closes": "KDHS 2022 Mombasa factsheet: women aged 6+ with no education",
-    "holder": "To be named",
-    "status": "Open",
-    "where": [
-      "Data layer: edu.none.women"
     ]
   },
   {

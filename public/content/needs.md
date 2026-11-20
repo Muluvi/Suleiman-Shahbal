@@ -39,13 +39,13 @@ Mombasa needs about **200,000 m³** of water a day. It receives about **40,000 m
 ## 3.2 The deficit, the dam and the pipeline
 
 ```lead
-Mwache Dam is to add **186,000 m³** a day for Mombasa and Kwale. It was **86%** complete in June 2026 (Tier 1, the Water CS to the Senate).
+Mwache Dam is to add **186,000 m³** a day for Mombasa and Kwale. It was **90%** complete in August 2026, but its treatment plant only starts in December 2026: treated Mwache water is unlikely to reach Mombasa taps before the August 2027 election (Tier 1 and Tier 2).
 ```
 
 The Coast's four counties need about **512,000 m³** of water a day and receive about **185,000 m³**, a deficit of **327,000 m³** (Tier 1, Water CS Eric Mugaa to the Senate Committee on Lands, Environment and Natural Resources, 18 June 2026). Two national projects are meant to close Mombasa's share of it:
 
 ```visual
-{"kind":"timeline","items":[{"date":"June 2026","label":"Mwache Dam 86% complete","text":"Civil works due to finish by September 2026, impoundment from October 2026 (Tier 1)."},{"date":"When full","label":"+186,000 m³ a day","text":"Shared between Mombasa and Kwale: almost five times Mombasa's current supply (Tier 1)."},{"date":"Planned","label":"Mzima II pipeline","text":"A 220 km pipeline from Mzima Springs to Mazeras, 105,000 m³ a day for the Coast (Tier 2, Nation, 2026)."}]}
+{"kind":"timeline","items":[{"date":"August 2026","label":"Mwache Dam 90% complete","text":"Main structure finished by September 2026, impoundment from October 2026 (Tier 1)."},{"date":"December 2026","label":"Treatment plant works begin","text":"Without treatment, the dam's water cannot reach taps: the plant is the long pole, not the dam (Tier 2, CWWDA)."},{"date":"When full","label":"+186,000 m³ a day","text":"Shared between Mombasa and Kwale: almost five times Mombasa's current supply (Tier 1)."},{"date":"Planned","label":"Mzima II pipeline","text":"A 220 km pipeline from Mzima Springs to Mazeras, 105,000 m³ a day for the Coast (Tier 2, Nation, 2026)."}]}
 ```
 
 **What it means for the campaign.** The water arrives in the next term, whoever governs: the dam and the pipeline are national projects. What the county controls is the last mile: reticulation, kiosks, the vendors' price, and the 60% that leaks away. A governor elected in 2027 will be judged on whether the new water reaches the estates, not on whether the dam is finished. That is a delivery question, and the campaign answers it as one.

@@ -118,7 +118,7 @@ close-contest belt, and does it move anyone to vote?**
 
 Section 6.2 establishes that **353,090 registered voters — 55.0% of the county register** — sit
 in the three constituencies decided by under 2,000 votes in 2022. Section 4.3 establishes that in-county digital reach has a
-ceiling of about 301,057 voters. Put together, those two figures make one measurement decisive:
+ceiling of about 332,211 voters. Put together, those two figures make one measurement decisive:
 the share of existing reach that lands inside the pool. Nothing in the public record answers
 it. The Week 1 audit does.
 

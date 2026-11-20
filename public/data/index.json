@@ -142,9 +142,9 @@
   {
     "id": "fig-3-8-ceiling",
     "section": "2.9.3",
-    "title": "Digital can reach about 301,057 voters, 250.9% of the benchmark, but reach is not turnout",
+    "title": "Digital can reach about 332,211 voters, 276.8% of the benchmark, but reach is not turnout",
     "question": "What can digital physically reach?",
-    "takeaway": "Mombasa is half online, so digital reach is large; 340,856 registered voters are still not reachable online, and SMS, USSD, radio and the ground carry them."
+    "takeaway": "Mombasa is half online, so digital reach is large; 376,128 registered voters are still not reachable online, and SMS, USSD, radio and the ground carry them."
   },
   {
     "id": "fig-3-9-audit",
@@ -156,7 +156,7 @@
   {
     "id": "fig-3-10-gaps",
     "section": "2.11",
-    "title": "43 things no published source can tell the analysis, and none is estimated",
+    "title": "34 things no published source can tell the analysis, and none is estimated",
     "question": "What can't the data tell us yet, and what closes each gap?",
     "takeaway": "The analysis works from the register, declared totals and the 2022 constituency tallies, not from ward-level preference or ward returns not yet in hand."
   },

@@ -44,7 +44,7 @@ export function FigureTicker({ figures, label }: { figures: ResolvedFigure[]; la
 const TICKERS: Record<string, { id: string; label: string }[]> = {
   votes: [
     { id: "register.2022", label: "registered, 2022" },
-    { id: "register.2026", label: "registered, July 2026" },
+    { id: "register.2026", label: "registered, 2026 (indicative)" },
     { id: "register.polling-stations", label: "polling stations" },
     { id: "turnout.2022", label: "turnout, 2022" },
     { id: "benchmark", label: "votes to win (benchmark)" },

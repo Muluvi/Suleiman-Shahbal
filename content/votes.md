@@ -31,7 +31,7 @@ items:
 id: fig-2-1-register
 ```
 
-**No 2026 figure yet.** The IEBC has run two enhanced registration drives in 2026, but the Mombasa row of the county annex is not in hand. Until it is, the 2022 register is the base for every calculation, and every ballot figure built on it is a floor: the register has only grown.
+**The 2026 register, indicative.** IEBC reported **{{register.2026.continuous}}** new Mombasa voters from continuous registration to March 2026, then **{{register.2026.ecvr-drive}}** in the ECVR drive of 30 March to 28 April 2026 (Tier 3, as reported). Added to 2022, that gives about **{{register.2026}}** before deletions. The certified register is not yet published, so ward and constituency calculations still use 2022, and IEBC's own target for 2027 is {{register.2027.target}} (Tier 2).
 
 **Why turnout was so low.** Mombasa's governor election did not happen on 9 August 2022. The IEBC suspended it the day before over a ballot-paper mix-up, rescheduled it, and held it on 29 August, three weeks after the presidential result was known (Tier 2, KNA and The Standard). Turnout fell to **{{turnout.2022}}%**. In 2017, on the general-election day, Joho alone received {{result.2017.gov.joho}} votes (Tier 1). The 2027 governor's race will be held on the same day as the presidential race, so 2022's turnout is a floor, not a forecast.
 
@@ -123,7 +123,7 @@ items:
   - label: "Mvita: {{result.2022.gov.mvita.nassir}} to {{result.2022.gov.mvita.omar}}"
     value: "{{result.2022.gov.mvita.margin}}"
     tier: 2
-  - label: "Likoni (calculated): {{result.2022.gov.likoni.nassir}} to {{result.2022.gov.likoni.omar}}"
+  - label: "Likoni: {{result.2022.gov.likoni.nassir}} to {{result.2022.gov.likoni.omar}}"
     value: "{{result.2022.gov.likoni.margin}}"
     tier: 2
 ```

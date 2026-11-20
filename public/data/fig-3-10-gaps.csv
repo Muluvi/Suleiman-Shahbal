@@ -7,20 +7,13 @@ A county youth unemployment rate is a named data gap,"KNBS Quarterly Labour Forc
 "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated","His public Facebook page, follower count read on the Week 1 export",His team: the Week 1 export,Open,Section 6.4; Section 18.5; Data layer: channel.fb.followers,Sourced
 "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated","His public Facebook page, post count read on the Week 1 export",His team: the Week 1 export,Open,Section 6.4; Section 18.5; Data layer: channel.fb.posts,Sourced
 "Facebook followers , posts , X followers : each is read on the Week 1 export, never estimated","His public X profile, follower count read on the Week 1 export",His team: the Week 1 export,Open,Section 6.4; Data layer: channel.x.followers,Sourced
-"The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…","Office of the Auditor-General, Mombasa County Executive audit report: the basis-for-qualification paragraphs",County government or church offices,Open,Section 3.7; Data layer: audit.cash,Sourced
-"The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…","Office of the Auditor-General, Mombasa County Executive audit report: revenue arrears",County government or church offices,Open,Section 3.7; Data layer: audit.uncollected,Sourced
-"The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances , revenue arrears , payments…","Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",County government or church offices,Open,Section 3.7; Data layer: audit.ifmis,Sourced
 "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",Mombasa County Government's own published delivery scorecard or annual progress report,County government or church offices,Open,Section 3.7; Data layer: scorecard.claimed,Sourced
 "For Mombasa no itemised register is in hand yet: projects claimed , projects itemised",Mombasa County Annual Development Plan and progress report: itemised projects with cost and ward,County government or church offices,Open,Section 3.7; Data layer: scorecard.itemised,Sourced
 "Women are 49.5% of Mombasa's residents (Tier 1, KNBS 2019 Census); their share of the register is a named data gap ()","IEBC 2022 register by sex, Mombasa",IEBC,Open,Section 11.2; Data layer: register.women.share,Sourced
-register.2026.ecvr-drive,"IEBC ECVR county annex, Mombasa row (new registrations, 2026 drives)",IEBC,Open,Data layer: register.2026.ecvr-drive,Sourced
-register.2026.growth,"IEBC 2026 register, Mombasa total, less the 2022 register",IEBC,Open,Data layer: register.2026.growth,Sourced
-register.2026.continuous,"IEBC 2026 register, Mombasa total, less 2022 and the ECVR drive",IEBC,Open,Data layer: register.2026.continuous,Sourced
 result.2022.womanrep.zamzam,"IEBC Form 38C or the gazette notice, Mombasa Woman Representative 2022",IEBC,Open,Data layer: result.2022.womanrep.zamzam,Sourced
-budget.absorption.q1,"Controller of Budget, County Governments Budget Implementation Review Report (Mombasa chapter): Mombasa development absorption, latest quarter",County government or church offices,Open,Data layer: budget.absorption.q1,Sourced
+audit.ifmis,"Office of the Auditor-General, Mombasa County Executive audit report: payments outside IFMIS",County government or church offices,Open,Data layer: audit.ifmis,Sourced
 audit.transfers,"Office of the Auditor-General, Mombasa County Executive audit report: unsupported transfers",County government or church offices,Open,Data layer: audit.transfers,Sourced
 audit.pending.contested,"Office of the Auditor-General, Mombasa County Executive audit report: pending bills disputed by the auditor",County government or church offices,Open,Data layer: audit.pending.contested,Sourced
-population.2025,"KNBS county population projection, Mombasa, 2025",KNBS,Open,Data layer: population.2025,Sourced
 population.2030,"KNBS county population projection, Mombasa, 2030",KNBS,Open,Data layer: population.2030,Sourced
 ict.phone.adult,"County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership by sex",KNBS,Open,Data layer: ict.phone.adult,Sourced
 ict.phone.adult.men,"County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: men 18+ owning a phone",KNBS,Open,Data layer: ict.phone.adult.men,Sourced
@@ -28,7 +21,6 @@ ict.phone.adult.women,"County Gender Data Sheet: Mombasa (KNBS and UN Women), if
 reach.phone.adult,"County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet: adult phone ownership, applied to the register",KNBS,Open,Data layer: reach.phone.adult,Sourced
 health.typhoid.2025,"Mombasa County Department of Health, disease surveillance, 2025",County government or church offices,Open,Data layer: health.typhoid.2025,Sourced
 health.typhoid.2024,"Mombasa County Department of Health, disease surveillance, 2024",County government or church offices,Open,Data layer: health.typhoid.2024,Sourced
-water.basic.kdhs,KDHS 2022 Mombasa factsheet: at least basic drinking water,To be named,Open,Data layer: water.basic.kdhs,Sourced
 literacy.county,KNBS county literacy table (2019 Census or KDHS 2022),KNBS,Open,Data layer: literacy.county,Sourced
 scorecard.attributed.ksh,Mombasa County progress report: itemised spend by constituency,County government or church offices,Open,Data layer: scorecard.attributed.ksh,Sourced
 radio.salaam,"KARF or GeoPoll audience report, Coast region: Radio Salaam share",Audience-research publishers,Open,Data layer: radio.salaam,Sourced
@@ -36,7 +28,6 @@ radio.citizen,"KARF or GeoPoll audience report, Coast region: Radio Citizen shar
 radio.kaya,"KARF or GeoPoll audience report, Coast region: Radio Kaya share",Audience-research publishers,Open,Data layer: radio.kaya,Sourced
 boda.riders,"NTSA or county register of boda-boda and tuk-tuk operators, Mombasa",NTSA or the county transport department,Open,Data layer: boda.riders,Sourced
 kpis.nomination,"The New Democrats' nomination rules, once certified",The New Democrats Patriotic Front secretariat,Open,Data layer: kpis.nomination,Sourced
-edu.none.women,KDHS 2022 Mombasa factsheet: women aged 6+ with no education,To be named,Open,Data layer: edu.none.women,Sourced
 edu.none.men,KDHS 2022 Mombasa factsheet: men aged 6+ with no education,To be named,Open,Data layer: edu.none.men,Sourced
 disability.men,KDHS 2022 Mombasa factsheet: men 15+ with a disability,To be named,Open,Data layer: disability.men,Sourced
 disability.women,KDHS 2022 Mombasa factsheet: women 15+ with a disability,To be named,Open,Data layer: disability.women,Sourced

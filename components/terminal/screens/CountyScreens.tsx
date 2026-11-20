@@ -65,11 +65,11 @@ export function RegisterGrowthScreen(_: { data: WardPulseData }) {
       </div>
       <div className="grid grid-cols-2 gap-2">
         <Tile k="Polling stations" v={fmt("register.polling-stations")} note="2022 · Tier 1" />
-        <Tile k="Growth since 2022" v={fmt("register.2026.growth")} note="Data needed: IEBC 2026 register" />
-        <Tile k="2026 registration drive" v={fmt("register.2026.ecvr-drive")} note="Data needed: IEBC ECVR annex" />
+        <Tile k="Growth since 2022" v={fmt("register.2026.growth")} note="New voters since 2022 · Tier 3" />
+        <Tile k="2026 registration drive" v={fmt("register.2026.ecvr-drive")} note="ECVR Phase 1, Apr 2026 · Tier 3" />
         <Tile k="2022 turnout" v={`${fmt("turnout.2022")}%`} note="Governor race · Tier 2" tone="text-amber-400" />
       </div>
-      <p className="mt-3 text-slate-400" style={{ fontSize: "0.5625em" }}>The 2026 Mombasa register is not published yet; the 2022 register stands in.</p>
+      <p className="mt-3 text-slate-400" style={{ fontSize: "0.5625em" }}>The certified 2026 register is not published yet; new registrations are as IEBC reported them.</p>
     </div>
   );
 }

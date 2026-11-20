@@ -74,7 +74,7 @@ items:
 ## 3.2 The deficit, the dam and the pipeline
 
 ```lead
-Mwache Dam is to add **{{water.mwache}} m³** a day for Mombasa and Kwale. It was **{{water.mwache.complete}}%** complete in June 2026 (Tier 1, the Water CS to the Senate).
+Mwache Dam is to add **{{water.mwache}} m³** a day for Mombasa and Kwale. It was **{{water.mwache.complete}}%** complete in August 2026, but its treatment plant only starts in December 2026: treated Mwache water is unlikely to reach Mombasa taps before the August 2027 election (Tier 1 and Tier 2).
 ```
 
 The Coast's four counties need about **{{water.coast.demand}} m³** of water a day and receive about **{{water.coast.supply}} m³**, a deficit of **{{water.coast.deficit}} m³** (Tier 1, Water CS Eric Mugaa to the Senate Committee on Lands, Environment and Natural Resources, 18 June 2026). Two national projects are meant to close Mombasa's share of it:
@@ -82,7 +82,8 @@ The Coast's four counties need about **{{water.coast.demand}} m³** of water a d
 ```visual
 kind: timeline
 items:
-  - { date: "June 2026", label: "Mwache Dam {{water.mwache.complete}}% complete", text: "Civil works due to finish by September 2026, impoundment from October 2026 (Tier 1)." }
+  - { date: "August 2026", label: "Mwache Dam {{water.mwache.complete}}% complete", text: "Main structure finished by September 2026, impoundment from October 2026 (Tier 1)." }
+  - { date: "December 2026", label: "Treatment plant works begin", text: "Without treatment, the dam's water cannot reach taps: the plant is the long pole, not the dam (Tier 2, CWWDA)." }
   - { date: "When full", label: "+{{water.mwache}} m³ a day", text: "Shared between Mombasa and Kwale: almost five times Mombasa's current supply (Tier 1)." }
   - { date: "Planned", label: "Mzima II pipeline", text: "A 220 km pipeline from Mzima Springs to Mazeras, {{water.mzima2}} m³ a day for the Coast (Tier 2, Nation, 2026)." }
 ```

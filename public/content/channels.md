@@ -28,7 +28,7 @@ Phase −1 deliberately puts more effort into the north mainland and the belt th
 The rebalancing target is the share of communications effort each domain should carry: 70% offline and 30% digital, re-read at each monthly review.
 ```
 
-Digital can reach about 301,057 voters (Section 4.3), more than the benchmark, but reach is not turnout, and the voters who stayed home in 2022 are reached as much offline. So the weighting below is a **rebalancing target**: the direction of travel away from an all-digital pitch, argued from turnout. Mombasa keeps a larger digital share than a rural county would, because it is half online.
+Digital can reach about 332,211 voters (Section 4.3), more than the benchmark, but reach is not turnout, and the voters who stayed home in 2022 are reached as much offline. So the weighting below is a **rebalancing target**: the direction of travel away from an all-digital pitch, argued from turnout. Mombasa keeps a larger digital share than a rural county would, because it is half online.
 
 ```figure
 id: fig-4-6-channel-shift

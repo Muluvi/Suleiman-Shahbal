@@ -23,7 +23,9 @@ items:
     body: "Borrowed from KCB to pay staff (Tier 3, as reported)."
 ```
 
-**The audit record.** The Auditor-General gave the County Executive a qualified opinion for FY2024/25 and the County Assembly an unmodified one (Tier 3, as reported). The basis-for-qualification paragraphs are the Tier 1 record and are not yet in hand: unconfirmed balances {{audit.cash}}, revenue arrears {{audit.uncollected}}, payments outside IFMIS {{audit.ifmis}}.
+**The audit record.** The Auditor-General gave the County Executive a qualified opinion for FY2024/25 and the County Assembly an unmodified one (Tier 3, as reported). The queries, as reported from the Auditor-General's FY2024/25 summary (Tier 3): expenditure without supporting documents KSh {{audit.unsupported|m}}m, inaccuracies in the financial statements KSh {{audit.misstatement|m}}m, an unreconciled gap between the cash book and the bank of KSh {{audit.cash|m}}m, and contracts worth KSh {{audit.procurement|m}}m with procurement irregularities. Revenue owed to the county stood at KSh {{audit.uncollected|bn}}bn at 30 June 2026, 86% of it in unpaid land rates (Controller of Budget, Tier 3). Audit queries are questions the county must answer, not findings of theft.
+
+**Where the money went in FY2025/26.** Wages took **{{budget.wage-bill.share}}%** of revenue against a legal ceiling of 35%, and only **{{budget.absorption.q1}}%** of the development budget was spent: KSh {{budget.development.spent|bn}}bn, down from KSh {{budget.development.spent.prior|bn}}bn the year before (Controller of Budget, Tier 3, as reported).
 
 **How money is split between wards.** The County Assembly passed a County Equitable Share Bill that would have shared 30% of the roughly **KSh {{budget.ward-dev|bn}} billion** annual development budget equally across the 30 wards; Speaker Aharub Khatri criticised the governor for rejecting it, and an audit found stalled projects and growing pending bills (Tier 2, The Standard). A ward-by-ward record of county spending is not yet in hand.
 

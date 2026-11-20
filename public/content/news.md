@@ -1,8 +1,8 @@
 ```lead
-**46.9%** of Mombasa's residents use the internet, the fourth-highest share in Kenya. Digital can in principle reach about **301,057 voters** (modelled), more than the 120,000 benchmark, but reach is not votes: the 2022 race was lost by the side that did not turn its voters out.
+**46.9%** of Mombasa's residents use the internet, the fourth-highest share in Kenya. Digital can in principle reach about **332,211 voters** (modelled), more than the 120,000 benchmark, but reach is not votes: the 2022 race was lost by the side that did not turn its voters out.
 ```
 
-**46.9%** of Mombasa's residents use the internet (Tier 1, CA/KNBS 2023/24), the fourth-highest share in Kenya, and **70.4%** of its young people do. Digital can in principle reach about **301,057 voters** (modelled), more than the 120,000 benchmark. But reach is not votes, and in 2022 420,765 registered voters cast no valid governor vote. The election is reached online and won on the phone, on the radio, at the mosque and the church, and at the stage.
+**46.9%** of Mombasa's residents use the internet (Tier 1, CA/KNBS 2023/24), the fourth-highest share in Kenya, and **70.4%** of its young people do. Digital can in principle reach about **332,211 voters** (modelled), more than the 120,000 benchmark. But reach is not votes, and in 2022 420,765 registered voters cast no valid governor vote. The election is reached online and won on the phone, on the radio, at the mosque and the church, and at the stage.
 
 ## 4.1 Where people get information
 
@@ -63,10 +63,10 @@ Ownership associations are publicly reported rather than certified, and ownershi
 ## 4.3 What each channel can reach
 
 ```lead
-If the campaign reached every internet-connected voter in Mombasa, it would reach about **301,057 voters** (modelled), 250.9% of the 120,000 benchmark. Mombasa is one of the few counties where digital alone could, on paper, carry the number. It will not, because reach is not turnout.
+If the campaign reached every internet-connected voter in Mombasa, it would reach about **332,211 voters** (modelled), 276.8% of the 120,000 benchmark. Mombasa is one of the few counties where digital alone could, on paper, carry the number. It will not, because reach is not turnout.
 ```
 
-**The digital ceiling.** If the campaign reached every internet-connected voter in Mombasa, it would reach about **301,057 voters** (modelled: 46.9% internet use applied to the register in use), **250.9%** of the 120,000 benchmark (modelled). That is the difference from a rural county: online reach is large enough to matter on its own. But the voters it reaches are disproportionately on the Island and in Nyali, and young; the 2022 abstainers, and the estates on the west and south mainland, are reached as much by SMS, radio and people.
+**The digital ceiling.** If the campaign reached every internet-connected voter in Mombasa, it would reach about **332,211 voters** (modelled: 46.9% internet use applied to the register in use), **276.8%** of the 120,000 benchmark (modelled). That is the difference from a rural county: online reach is large enough to matter on its own. But the voters it reaches are disproportionately on the Island and in Nyali, and young; the 2022 abstainers, and the estates on the west and south mainland, are reached as much by SMS, radio and people.
 
 Digital use is concentrated on the Island, in Nyali and among young people. In-county users per platform are not published, so this section sizes what digital can reach from the published rates alone.
 
@@ -78,11 +78,11 @@ id: fig-3-8-ceiling
 
 | | Figure |
 |---|---|
-| Reachable by smartphone or data, in county | ~301,057 voters (modelled: 46.9% of the register in use) |
-| Share of the 120,000 benchmark digital could reach | **250.9%** (modelled), reach not votes |
-| Reachable by SMS only | ~95,645 voters (modelled: 61.8% phone ownership, 2019, less 46.9% internet use, 2023/24: an estimate that mixes years) |
-| Phone owners: the SMS and USSD layer | ~396,702 voters on the resident rate (modelled) |
-| No phone: radio or in person only | ~245,211 voters on the resident rate (modelled) |
+| Reachable by smartphone or data, in county | ~332,211 voters (modelled: 46.9% of the register in use) |
+| Share of the 120,000 benchmark digital could reach | **276.8%** (modelled), reach not votes |
+| Reachable by SMS only | ~105,543 voters (modelled: 61.8% phone ownership, 2019, less 46.9% internet use, 2023/24: an estimate that mixes years) |
+| Phone owners: the SMS and USSD layer | ~437,754 voters on the resident rate (modelled) |
+| No phone: radio or in person only | ~270,585 voters on the resident rate (modelled) |
 | Radio reach | No Coast audience share in hand; named data gap (Section 4.2) |
 
 ```visual
@@ -92,10 +92,10 @@ id: fig-3-8-ceiling
 ## 4.4 Reaching the voters who did not vote
 
 ```lead
-The election will be won or lost among the **420,765 registered voters who cast no valid governor vote in 2022** (calculated: the 2022 register less 221,148 valid votes), and the **340,856** not reachable online (modelled).
+The election will be won or lost among the **420,765 registered voters who cast no valid governor vote in 2022** (calculated: the 2022 register less 221,148 valid votes), and the **376,128** not reachable online (modelled).
 ```
 
-The election will be won or lost among the **420,765 registered voters who cast no valid governor vote in 2022** (calculated), and the **340,856 registered voters not reachable online** (modelled: the register in use less the 301,057 reachable by smartphone or data). They are reached by six channels together: SMS and USSD, Kiswahili radio, mobile-money agents, markets and stages, mosques and churches, and the ward captains.
+The election will be won or lost among the **420,765 registered voters who cast no valid governor vote in 2022** (calculated), and the **376,128 registered voters not reachable online** (modelled: the register in use less the 332,211 reachable by smartphone or data). They are reached by six channels together: SMS and USSD, Kiswahili radio, mobile-money agents, markets and stages, mosques and churches, and the ward captains.
 
 ```visual
 {"kind":"cards","preset":"channel","items":[{"title":"Kiswahili radio","fields":[{"label":"Reach","text":"no Coast audience share is in hand (Section 4.2); stations are ranked by their own reach claims until a KARF or GeoPoll report is."},{"label":"The stations","text":"*   *Pwani FM and Radio Citizen (Royal Media Services):* coast-wide reach in Kiswahili. **Priority placement.**\n    *   *Radio Maisha (Standard Group):* commercial, Kiswahili. **Priority placement.**\n    *   *Radio Rahma, Radio Salaam and Baraka FM:* faith broadcasters; programming on water, health and jobs, never partisan placement."},{"label":null,"text":"**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   *Morning interviews:* studio interviews with Mr Shahbal in the weeks a policy is launched.\n    *   *Kiswahili spots and testimonials:* 45-second stories from traders in Kongowea, water vendors' customers in Mikindani and young people in Kisauni, on what his plan changes for them."}]},{"title":"SMS and USSD","head":{"label":"Reach","text":"61.8% of residents owned a mobile phone in 2019 (Tier 1); a feature phone is enough for SMS and USSD."},"fields":[{"label":null,"text":"**What your team operates** (Section 15.3.3):\n*   *A free USSD menu (`*[shortcode]#`):* any feature phone can dial it to read Mr Shahbal's five-point plan in Kiswahili, register as a volunteer, find the nearest ward captain, or check where to vote.\n    *   *Ward-targeted SMS:* **Kiswahili or English** messages to consented supporters in specific wards, on the eve of events, and on election morning."}]},{"title":"Mobile-money agents","head":{"label":"Reach","text":"nationally there are 602,470 registered agents (March 2026, Tier 1, Section 4.1)."},"fields":[{"label":null,"text":"**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3):\n*   M-Pesa agents are trusted estate hubs. **Agent networks are regulated financial infrastructure**; Section 15.3.3 requires campaign counsel to review any commercial arrangement with them before recruitment."}]},{"title":"Markets, stages and the ferry","head":{"label":"Reach","text":"Kongowea, Marikiti and Majengo markets, the matatu and tuk-tuk stages, and the Likoni ferry approaches gather the county's working population every day. None is counted."},"fields":[{"label":null,"text":"**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3): two sound trucks with Kiswahili music and local young speakers at market entrances and stages, rotating by ward. Section 15.3.1 sets out how the ground team runs them."}]},{"title":"Mosques and churches","head":{"label":"Reach","text":"Friday prayers at the mosques of the Island, Kisauni and Likoni, and Sunday services across the mainland, are the largest regular gatherings in the county. Neither is counted."},"fields":[{"label":null,"text":"**What the campaign would run** (campaign-owned, outside this engagement, Section 13.3): visits that respect the place of worship: no campaigning inside, meetings with mosque and parish committees after prayers or service, and service-delivery forums the community hosts."}]}]}

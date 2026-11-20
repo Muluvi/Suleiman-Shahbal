@@ -24,7 +24,6 @@ import { FIGURE_EDITS, patchFigure } from "./team-overlay.ts";
 import {
   AUDITOR_GENERAL_FY2023_24,
   CA_KNBS_ICT_2023_24,
-  CONTROLLER_OF_BUDGET,
   COURT_OF_APPEAL_2018,
   FISCAL_STRATEGY_PAPER_FY2026_27,
   HIGH_COURT_2013,
@@ -100,10 +99,14 @@ modelled("register.2022.ward-mean", Math.round(v("register.2022") / WARD_COUNT),
 // No 2026 Mombasa register figure is in hand. The 2022 register stands in, so every "2026"
 // calculation below is a floor, and says so. When IEBC publishes the Mombasa row of the ECVR annex,
 // replace this one value and every dependent figure recomputes.
-modelled("register.2026", v("register.2022"), "voters", "No 2026 Mombasa register figure is in hand; the 2022 register stands in, so every 2026 calculation is a floor.", { source: IEBC_REGISTER_2026_REPORTED.name, tier: "T3" });
-needed("register.2026.ecvr-drive", "voters", "IEBC ECVR county annex, Mombasa row (new registrations, 2026 drives)");
-needed("register.2026.growth", "voters", "IEBC 2026 register, Mombasa total, less the 2022 register");
-needed("register.2026.continuous", "voters", "IEBC 2026 register, Mombasa total, less 2022 and the ECVR drive");
+// The 2026 register is not certified. New registrations are reported: the continuous registration
+// to March 2026 and the ECVR Phase 1 drive (30 March to 28 April 2026). The working 2026 register is
+// the 2022 register plus both, gross of deletions, so it is indicative, and says so.
+sourced("register.2026.continuous", 15_140, "voters", "T3", "IEBC Commissioner Alutalala Mukhwana, as reported by Breaking Kenya News, 25 March 2026", { asOf: "2026-03", note: "New Mombasa voters from continuous registration since 29 September 2025, third-highest county." });
+sourced("register.2026.ecvr-drive", 51_286, "voters", "T3", "IEBC ECVR Phase 1 county totals (1 May 2026), as reported by EverythingKE", { asOf: "2026-05", note: "New Mombasa voters in the 30-day ECVR drive, 30 March to 28 April 2026. Interim IEBC updates: 21,258 at 9 April; 41,444 plus 7,008 transfers later in April (KNA)." });
+modelled("register.2026.growth", v("register.2026.continuous") + v("register.2026.ecvr-drive"), "voters", "Continuous registration (15,140) plus the ECVR drive (51,286): new registrations reported since 2022, gross of deletions.", { tier: "T3" });
+modelled("register.2026", v("register.2022") + v("register.2026.growth"), "voters", "Indicative: the 2022 register plus the new registrations reported in 2025–26, before deletions and transfers out. Replace with the certified IEBC register when gazetted.", { source: IEBC_REGISTER_2026_REPORTED.name, tier: "T3" });
+sourced("register.2027.target", 825_000, "voters", "T2", "IEBC Mombasa, as reported by KNA (2026)", { note: "IEBC's Mombasa register target for 2027." });
 
 /* ------------------------------------------------------------------ groupings of the register */
 
@@ -176,8 +179,9 @@ for (const [id, n, o] of BY_CON_2022) {
   sourced(`result.2022.gov.${id}.omar`, o, "votes", "T2", "The Standard and KNA, 30 August 2022 (constituency tallies)", { asOf: "2022-08" });
   modelled(`result.2022.gov.${id}.margin`, n - o, "votes", "Nassir less Omar in the constituency.", { tier: "T2" });
 }
-modelled("result.2022.gov.likoni.nassir", v("result.2022.gov.nassir") - BY_CON_2022.reduce((s, [, n]) => s + n, 0), "votes", "County total less the five reported constituencies.", { tier: "T2" });
-modelled("result.2022.gov.likoni.omar", v("result.2022.gov.omar") - BY_CON_2022.reduce((s, [, , o]) => s + o, 0), "votes", "County total less the five reported constituencies.", { tier: "T2" });
+sourced("result.2022.gov.likoni.nassir", 17_425, "votes", "T2", "Kenya News Agency, 30 August 2022 (constituency tallies)", { asOf: "2022-08" });
+sourced("result.2022.gov.likoni.omar", 9_756, "votes", "T2", "Kenya News Agency, 30 August 2022 (constituency tallies)", { asOf: "2022-08" });
+modelled("result.2022.gov.omar.by-constituency", BY_CON_2022.reduce((s, [, , o]) => s + o, 0) + 9_756, "votes", "The six constituency tallies for Omar added up: 98,108, the second published total. Nassir's six add up exactly to his declared 119,083, so 98,105 is most likely a slip in the announcement. Form 37C confirms.", { tier: "T2" });
 modelled("result.2022.gov.likoni.margin", v("result.2022.gov.likoni.nassir") - v("result.2022.gov.likoni.omar"), "votes", "Nassir less Omar in Likoni.", { tier: "T2" });
 
 sourced("result.2022.senate.faki", 113_694, "votes", "T2", "IEBC declaration as gazetted (Gazette 9955), via Mzalendo", { note: "Mohamed Faki, ODM." });
@@ -395,14 +399,29 @@ sourced("budget.health.2025-26", 4.75e9, "ksh", "T2", "Eastleigh Voice, Mombasa 
 sourced("budget.overdraft.2026-06", 620.52e6, "ksh", "T3", BUDGET, { asOf: "2026-06", decimals: 2, note: "Overdraft from KCB to pay June 2026 salaries." });
 sourced("budget.ward-dev", 4e9, "ksh", "T2", "The Standard, on the County Equitable Share Bill (2025)", { decimals: 0, note: "The annual development budget the bill would have shared, 30% equally across the 30 wards." });
 
-const COB = CONTROLLER_OF_BUDGET.name;
 sourced("budget.pending-bills.2021", 4.4e9, "ksh", "T2", "Controller of Budget, as reported by AllAfrica (September 2024)", { asOf: "2024", decimals: 1, note: "Pending bills: third-highest of the 47 counties (KSh 2.7bn recurrent, KSh 1.7bn development)." });
 sourced("budget.pending-bills.2026", 3.8e9, "ksh", "T3", BUDGET, { asOf: "2026-06", decimals: 1, note: "Outstanding bills at 30 June 2026, almost all owed by the executive." });
 sourced("budget.pending-bills.aged", 98, "percent", "T2", "Nation, reporting the Controller of Budget (2026)", { decimals: 0, note: "Share of Mombasa's pending bills older than three years: the highest proportion in Kenya." });
-needed("budget.absorption.q1", "percent", `${COB}: Mombasa development absorption, latest quarter`);
+sourced("budget.absorption.q1", 45.75, "percent", "T3", BUDGET, { asOf: "2025-26", decimals: 1, note: "Development absorption for the full FY2025/26: KSh 2.57bn spent of the development budget, 25% less than the KSh 3.43bn spent in FY2024/25." });
+sourced("budget.development.spent", 2.57e9, "ksh", "T3", BUDGET, { asOf: "2025-26", decimals: 2 });
+sourced("budget.development.spent.prior", 3.43e9, "ksh", "T3", BUDGET, { asOf: "2024-25", decimals: 2 });
+sourced("budget.receipts", 15.79e9, "ksh", "T3", BUDGET, { asOf: "2025-26", decimals: 2 });
+sourced("budget.spent", 13.03e9, "ksh", "T3", BUDGET, { asOf: "2025-26", decimals: 2 });
+sourced("budget.osr.target", 8.39e9, "ksh", "T3", BUDGET, { asOf: "2025-26", decimals: 2 });
+modelled("budget.osr.achieved", pct(6.21e9, 8.39e9), "percent", "Own-source revenue collected / target, FY2025/26.", { decimals: 0, tier: "T3" });
+sourced("budget.wage-bill", 7.22e9, "ksh", "T3", BUDGET, { asOf: "2025-26", decimals: 2, note: "Employee costs, FY2025/26; health staff 51.94% of the wage bill." });
+sourced("budget.wage-bill.share", 55.14, "percent", "T3", BUDGET, { asOf: "2025-26", decimals: 1, note: "Employee costs as a share of revenue. The legal ceiling is 35%." });
+sourced("budget.bank-accounts", 101, "count", "T3", BUDGET, { asOf: "2025-26", note: "78 at commercial banks, 50 of them for health facilities." });
+sourced("budget.pending-bills.2025", 3.86e9, "ksh", "T2", "Controller of Budget FY2024/25 county review, as reported by Eastleigh Voice", { asOf: "2025-06", decimals: 2, note: "Down from KSh 4.44bn at June 2024." });
+sourced("budget.osr.treasury.2024-25", 4_880_829_952, "ksh", "T1", "Mombasa County Budget Review and Outlook Paper 2025", { asOf: "2024-25", decimals: 2, note: "The county treasury's own-source revenue for FY2024/25, 70% of its KSh 6.93bn target (the CoB counts hospital collections too, so reports KSh 5.13bn)." });
+sourced("budget.absorption.overall.2024-25", 78, "percent", "T1", "Mombasa County Budget Review and Outlook Paper 2025", { asOf: "2024-25", decimals: 0, note: "Overall budget absorption, FY2024/25 (74.5% in FY2023/24)." });
 const OAG = AUDITOR_GENERAL_FY2023_24.name;
-needed("audit.cash", "ksh", `${OAG}: the basis-for-qualification paragraphs`);
-needed("audit.uncollected", "ksh", `${OAG}: revenue arrears`);
+const OAG_SUM = "Auditor-General, Summary Report on County Governments FY2024/25 (Mombasa County Executive), as reported by Business Radar";
+sourced("audit.cash", 63.96e6, "ksh", "T3", OAG_SUM, { asOf: "2024-25", decimals: 2, note: "Unreconciled difference between the cash book and bank statements; a further KSh 1.06m of bank balances lacked supporting documents." });
+sourced("audit.uncollected", 13.68e9, "ksh", "T3", BUDGET, { asOf: "2026-06", decimals: 2, note: "Revenue owed to the county at 30 June 2026 (down from KSh 16.13bn): land rates KSh 11.82bn (86%), SHIF claims KSh 1.54bn, the defunct NHIF KSh 322.89m." });
+sourced("audit.unsupported", 414.33e6, "ksh", "T3", OAG_SUM, { asOf: "2024-25", decimals: 2, note: "Expenditure without supporting documents." });
+sourced("audit.misstatement", 112.94e6, "ksh", "T3", OAG_SUM, { asOf: "2024-25", decimals: 2, note: "Inaccuracies in the financial statements." });
+sourced("audit.procurement", 95.13e6, "ksh", "T3", OAG_SUM, { asOf: "2024-25", decimals: 2, note: "Contracts with procurement irregularities." });
 needed("audit.ifmis", "ksh", `${OAG}: payments outside IFMIS`);
 needed("audit.transfers", "ksh", `${OAG}: unsupported transfers`);
 needed("audit.pending.contested", "ksh", `${OAG}: pending bills disputed by the auditor`);
@@ -422,7 +441,12 @@ sourced("water.coast.demand", 512_000, "count", "T1", WATER_CS, { note: "Cubic m
 sourced("water.coast.supply", 185_000, "count", "T1", WATER_CS);
 sourced("water.coast.deficit", 327_000, "count", "T1", WATER_CS);
 sourced("water.mwache", 186_000, "count", "T1", WATER_CS, { note: "Cubic metres a day Mwache Dam will add for Mombasa and Kwale; 86% complete at June 2026, impoundment due from October 2026." });
-sourced("water.mwache.complete", 86, "percent", "T1", WATER_CS, { decimals: 0, asOf: "2026-06" });
+sourced("water.mwache.complete", 90, "percent", "T1", "Water CS Eric Mugaa, as reported by Kenya News Agency, 19 August 2026", { decimals: 0, asOf: "2026-08", note: "86% at June 2026 (CS to the Senate); main structure complete by September 2026 (Citizen)." });
+sourced("water.mwache.storage", 136e6, "count", "T2", "The Star, 27 March 2025", { note: "Cubic metres the reservoir will hold." });
+sourced("water.mwache.wtp.start", 2026, "year", "T2", "Coast Water Works Development Agency, Nation (2026)", { note: "The Mwache treatment plant contract is signed; works start December 2026, so treated water is unlikely to reach Mombasa before the August 2027 election." });
+sourced("water.mowasco.nrw", 49, "percent", "T2", "Nation, reporting the water regulator's FY2025/26 performance review (2026)", { decimals: 0, note: "Non-revenue water at Mombasa Water; the allowable threshold is 25%. The utility was once placed under a special regulatory regime." });
+sourced("water.mowasco.nrw.target", 39, "percent", "T1", "WASREB-approved MOWASSCO tariff, 2023/24 to 2025/26", { decimals: 0, note: "Regulator's NRW target for 2025/26 (45% → 42% → 39%); hours of supply target 12 a day; coverage target 58%." });
+sourced("water.mowasco.hours.target", 12, "count", "T1", "WASREB-approved MOWASSCO tariff, 2023/24 to 2025/26", { note: "Hours of supply a day, regulator's target for 2025/26." });
 sourced("water.mzima2", 105_000, "count", "T2", "Nation, on the Mzima II pipeline (2026)", { note: "Cubic metres a day the planned Sh51bn Mzima II pipeline would carry to the Coast." });
 sourced("price.water.vendor", 30, "ksh", "T2", WATER_GOV, { note: "Per 20-litre jerrican from vendors: KSh 30–40." });
 sourced("price.water.county", 5, "ksh", "T2", WATER_GOV, { note: "Per jerrican at county sources." });
@@ -530,7 +554,6 @@ target("policy.nrw.target", 30, "percent", "Non-revenue water by 2030: the count
 // shows "data needed" instead of a number, and the evidence table lists what would close each.
 const GDS_M = "County Gender Data Sheet: Mombasa (KNBS and UN Women), if published; otherwise KDHS 2022 Mombasa factsheet";
 for (const [id, unit, closes] of [
-  ["population.2025", "people", "KNBS county population projection, Mombasa, 2025"],
   ["population.2030", "people", "KNBS county population projection, Mombasa, 2030"],
   ["register.women.share", "percent", "IEBC 2022 register by sex, Mombasa"],
   ["ict.phone.adult", "percent", `${GDS_M}: adult phone ownership by sex`],
@@ -540,7 +563,6 @@ for (const [id, unit, closes] of [
   ["health.stunting", "percent", "KDHS 2022 Mombasa factsheet: stunting"],
   ["health.typhoid.2025", "count", "Mombasa County Department of Health, disease surveillance, 2025"],
   ["health.typhoid.2024", "count", "Mombasa County Department of Health, disease surveillance, 2024"],
-  ["water.basic.kdhs", "percent", "KDHS 2022 Mombasa factsheet: at least basic drinking water"],
   ["literacy.county", "percent", "KNBS county literacy table (2019 Census or KDHS 2022)"],
   ["unemployment.youth.county", "percent", "KNBS Quarterly Labour Force Survey county tables, Mombasa"],
   ["scorecard.claimed", "count", "Mombasa County Government's own published delivery scorecard or annual progress report"],
@@ -554,11 +576,17 @@ for (const [id, unit, closes] of [
   ["radio.kaya", "percent", "KARF or GeoPoll audience report, Coast region: Radio Kaya share"],
   ["boda.riders", "people", "NTSA or county register of boda-boda and tuk-tuk operators, Mombasa"],
   ["kpis.nomination", "count", "The New Democrats' nomination rules, once certified"],
-  ["edu.none.women", "percent", "KDHS 2022 Mombasa factsheet: women aged 6+ with no education"],
   ["edu.none.men", "percent", "KDHS 2022 Mombasa factsheet: men aged 6+ with no education"],
   ["disability.men", "percent", "KDHS 2022 Mombasa factsheet: men 15+ with a disability"],
   ["disability.women", "percent", "KDHS 2022 Mombasa factsheet: women 15+ with a disability"],
 ] as [string, Unit, string][]) needed(id, unit, closes);
+
+sourced("population.2025", 1_368_000, "people", "T2", "KNBS county population projection, as reported by Stats Kenya", { asOf: "2025", note: "1,208,333 at the 2019 census." });
+sourced("water.basic.kdhs", 52, "percent", "T1", "KNBS and ICF, KDHS 2022 Key Indicators, county table", { decimals: 0, note: "Household population with at least basic drinking water, Mombasa. Kenya 68%, urban Kenya 91%." });
+sourced("water.safe.2009", 73.9, "percent", "T1", "Commission on Revenue Allocation, Kenya County Fact Sheets (3rd ed.), from the 2009 and 2019 censuses", { decimals: 1, note: "Households with safe drinking water, 2009: 4th of 47." });
+sourced("water.safe.2019", 56.6, "percent", "T1", "Commission on Revenue Allocation, Kenya County Fact Sheets (3rd ed.), from the 2009 and 2019 censuses", { decimals: 1, note: "Households with safe drinking water, 2019: 24th of 47." });
+sourced("edu.none.women", 11.3, "percent", "T1", "KNBS and ICF, KDHS 2022 Volume 1 (erratum, January 2024), female schooling by county", { decimals: 1, note: "Women aged 6+ with no education, Mombasa; 14.2% have more than secondary." });
+sourced("radio.coast.weekly", 73, "percent", "T1", "Communications Authority, Audience Measurement and Industry Trends Report Q2 FY2023/24", { decimals: 0, note: "Share of Coast residents who listen to radio." });
 
 // The scorecard projects by ward (analysis Stage 14) carry no Mombasa rows until a county project
 // register is in hand; the loop stays so a register dropped into the export flows straight through.

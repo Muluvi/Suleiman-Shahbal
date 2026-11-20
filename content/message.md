@@ -42,7 +42,7 @@ items:
     fields:
       - { label: "How it is argued", text: "Mombasa receives about {{water.supply.share}}% of the water it needs and loses {{water.nrw}}% of what it buys (Section 3.1). Mwache Dam arrives in the next term whoever governs; the pillar is the last mile: reticulation into the estates, a public price ceiling at county kiosks, and the share of water lost, published every quarter, ward by ward." }
       - { label: "Narrative Statement", text: "*\"The dam is coming. The question is whether its water reaches your tap or the vendor's tank. Mr Shahbal will publish, every quarter, how many hours each ward had water and what a jerrican cost.\"*" }
-      - { label: "Proof Point", text: "The governor's own figures: {{water.demand}} m³ needed, {{water.supply}} m³ supplied, {{water.delivered}} m³ reaching residents (Tier 2); Mwache Dam {{water.mwache.complete}}% complete, +{{water.mwache}} m³ a day (Tier 1, the Water CS to the Senate)." }
+      - { label: "Proof Point", text: "The governor's own figures: {{water.demand}} m³ needed, {{water.supply}} m³ supplied, {{water.delivered}} m³ reaching residents (Tier 2); Mwache Dam {{water.mwache.complete}}% complete, +{{water.mwache}} m³ a day, but no treatment plant until works start in December 2026 (Tier 1 and 2)." }
   - title: "Pillar 2: Jobs that stay in Mombasa"
     fields:
       - { label: "How it is argued", text: "The port moves the country's cargo; the pillar is that more of its value should stay in the county. The Jomvu SEZ is the proof he can attract it: a signed agreement, a partner, a site and a projected number, reported as a projection until the jobs exist." }

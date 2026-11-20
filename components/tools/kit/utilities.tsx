@@ -235,7 +235,7 @@ export function AssumptionsPanel({ f, modelled, winnerShare }: { f: Record<strin
     <div className="space-y-4">
       <Card>
         <div className="grid gap-4 sm:grid-cols-2">
-          <Select label="Register" value={reg} onChange={setReg} options={[{ value: "2026", label: `July 2026, ${n0(v("register.2026"))} (reported, unconfirmed)` }, { value: "2022", label: `2022, ${n0(v("register.2022"))} (IEBC)` }]} />
+          <Select label="Register" value={reg} onChange={setReg} options={[{ value: "2026", label: `2026, ${n0(v("register.2026"))} (indicative, before deletions)` }, { value: "2022", label: `2022, ${n0(v("register.2022"))} (IEBC)` }]} />
           <Slider label="Turnout" value={t} onChange={setT} min={40} max={85} step={0.1} suffix="%" hint={`2022 certified: ${pct(v("turnout.2022"))}`} />
           <Slider label="Winner's share of valid votes" value={share} onChange={setShare} min={30} max={75} step={0.1} suffix="%" hint={`2022 winner: ${pct(winnerShare)}`} />
           <Slider label="Internet use" value={inet} onChange={setInet} min={10} max={70} step={0.1} suffix="%" hint={`CA/KNBS 2023/24: ${pct(v("ict.internet"))}`} />

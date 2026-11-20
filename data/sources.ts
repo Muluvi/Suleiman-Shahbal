@@ -169,10 +169,10 @@ export const KNBS_POVERTY_REPORT: Source = {
 };
 
 export const IEBC_REGISTER_2026_REPORTED: Source = {
-  name: "IEBC 2026 Mombasa register: not yet in hand",
+  name: "IEBC 2022 register plus 2025–26 new registrations as reported (indicative 2026 register)",
   publicationDate: "2026",
   tier: 3,
-  // No 2026 Mombasa register figure is used anywhere. The 2022 register is the working base.
+  // Indicative only: the certified 2026 register is not published. See register.2026 in figures.ts.
 };
 
 export const THE_STAR: Source = {

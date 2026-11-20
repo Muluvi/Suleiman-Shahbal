@@ -324,7 +324,7 @@ items:
   - value: "{{edu.none.women}}"
     label: "women aged 6+ with no education"
     tier: 1
-    body: "A named data gap: the KDHS 2022 Mombasa factsheet gives the share of women and men aged six and over with no education ({{edu.none.men}} for men)."
+    body: "KDHS 2022: women aged six and over in Mombasa with no schooling. The figure for men is still to be read off the same KDHS report ({{edu.none.men}})."
   - value: "{{ict.offline}}%"
     label: "outside the internet-using population"
     tier: 1
