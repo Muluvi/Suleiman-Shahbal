@@ -224,16 +224,6 @@
   },
   {
     "kind": "data",
-    "gap": "radio.kaya",
-    "closes": "KARF or GeoPoll audience report, Coast region: Radio Kaya share",
-    "holder": "Audience-research publishers",
-    "status": "Open",
-    "where": [
-      "Data layer: radio.kaya"
-    ]
-  },
-  {
-    "kind": "data",
     "gap": "boda.riders",
     "closes": "NTSA or county register of boda-boda and tuk-tuk operators, Mombasa",
     "holder": "NTSA or the county transport department",
