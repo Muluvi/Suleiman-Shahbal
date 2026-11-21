@@ -575,7 +575,6 @@ for (const [id, unit, closes] of [
   ["radio.bahari", "percent", "KARF or GeoPoll audience report, Coast region: Bahari FM share"],
   ["radio.baraka", "percent", "KARF or GeoPoll audience report, Coast region: Baraka FM share"],
   ["radio.citizen", "percent", "KARF or GeoPoll audience report, Coast region: Radio Citizen share"],
-  ["radio.kaya", "percent", "KARF or GeoPoll audience report, Coast region: Radio Kaya share"],
   ["boda.riders", "people", "NTSA or county register of boda-boda and tuk-tuk operators, Mombasa"],
   ["kpis.nomination", "count", "The New Democrats' nomination rules, once certified"],
   ["edu.none.men", "percent", "KDHS 2022 Mombasa factsheet: men aged 6+ with no education"],
@@ -602,6 +601,20 @@ sourced("health.vaccinated", 93, "percent", "T1", KDHS, { decimals: 0, note: "Ch
 sourced("health.skilled-birth", 96, "percent", "T1", KDHS, { decimals: 0, note: "Births attended by a skilled provider." });
 sourced("health.u5-mortality", 50, "count", "T1", KDHS, { note: "Deaths before age five per 1,000 live births (the ten years before KDHS 2022)." });
 sourced("health.mpox.2025", 98, "count", "T2", "Citizen Digital and The Standard, 11 July 2025", { asOf: "2025-07", note: "Mombasa's Mpox cases, of 226 in Kenya, with two deaths; most in Nyali and Changamwe." });
+sourced("health.mpox.2026", 70, "count", "T1", "WHO Kenya, Mpox situation report, week 23 of 2026 (Ministry of Health data)", { asOf: "2026-06", note: "Mombasa's Mpox cases in 2026, of 192 in Kenya: the highest-reporting county. Since July 2024 Mombasa has carried about 40% of Kenya's cases." });
+sourced("health.mpox.kenya.2026", 192, "count", "T1", "WHO Kenya, Mpox situation report, week 23 of 2026 (Ministry of Health data)", { asOf: "2026-06" });
+modelled("health.mpox.2026.share", pct(70, 192), "percent", "Mombasa's share of Kenya's 2026 Mpox cases.", { decimals: 1, tier: "T1" });
+sourced("radio.kaya", 7.3, "percent", "T2", "GeoPoll, Kenya audience measurement, January to December 2024", { asOf: "2024", decimals: 1, note: "Radio Kaya's market share at the Coast: the region's top vernacular station (Msenangu FM second). Bahari FM led the Coast's vernacular stations in a later tracker, September 2025 to February 2026 (Kenyans.co.ke)." });
+// The 2017 register by constituency, so the site can say where the register has grown.
+const REG17 = "IEBC registered voters per constituency, 2017 General Election (as listed by Infohub Kenya and The Star)";
+for (const [id, value] of [["changamwe", 86_331], ["jomvu", 69_307], ["kisauni", 126_151], ["nyali", 104_017], ["likoni", 87_326], ["mvita", 107_091]] as [string, number][])
+  sourced(`register.2017.${id}`, value, "voters", "T2", REG17, { asOf: "2017-08" });
+modelled("register.2017", 86_331 + 69_307 + 126_151 + 104_017 + 87_326 + 107_091, "voters", "The six 2017 constituency registers added up.", { tier: "T2" });
+modelled("register.growth.2017-22", v("register.2022") - v("register.2017"), "voters", "The 2022 register less the 2017 register.", { tier: "T2" });
+modelled("register.growth.2017-22.kisauni", v("con.kisauni") - v("register.2017.kisauni"), "voters", "Kisauni's register, 2022 less 2017.", { tier: "T2" });
+modelled("register.growth.2017-22.nyali", v("con.nyali") - v("register.2017.nyali"), "voters", "Nyali's register, 2022 less 2017.", { tier: "T2" });
+modelled("register.growth.2017-22.nyali.share", pct(v("con.nyali") - v("register.2017.nyali"), v("register.2017.nyali")), "percent", "Nyali's register growth, 2017 to 2022.", { decimals: 0, tier: "T2" });
+sourced("parties.nomination-rules", 105, "count", "T2", "IEBC announcement, as reported by The Standard and Kenyans.co.ke (2026)", { asOf: "2026", note: "Fully registered parties that filed certified nomination rules with IEBC for the 10 August 2027 election; IEBC then ran a 14-day legal review. The New Democrats is a fully registered party, so its rules are on file with IEBC." });
 sourced("health.mpox.kenya.2025", 226, "count", "T2", "Citizen Digital, 11 July 2025", { asOf: "2025-07" });
 sourced("edu.none.women.adult", 7, "percent", "T1", KDHS, { decimals: 0, note: "Women 15–49 with no formal education." });
 sourced("edu.none.men.adult", 3, "percent", "T1", KDHS, { decimals: 0, note: "Men 15–49 with no formal education." });
